@@ -2,10 +2,11 @@
 @mainpage OpenWSN Aircraft TSCH testbed
 
 @author Samuele Zoppi
+@author Mikhail Vilgelm
 
 These document includes the documentation to the main modifications performed on the OpenWSN firmware to enable it to run with Zolertia Z1 motes, and to be able to schedule the different motes over the TSCH time/hopping resources.
 
-For more detailed information, please, visit the following pages. 
+For more detailed information, please, visit the following pages.
 - Full documentation @ref LKN_contribution
 - List of LKN code modifications @ref LKN_code_edits
 
@@ -18,11 +19,11 @@ For more detailed information, please, visit the following pages.
 We apported several modification to the firmware, in order to program the Zolertia Z1 motes for our TSCH Airplane testbed.
 
 
----- 
+----
 @section Addr_edits Mote addressing
 In the function @ref idmanager_init we modify the address of the motes.
 
-The address of the device is set in this way: 
+The address of the device is set in this way:
 @snippet openstack/cross-layers/idmanager.c LKN-addr
 
 If the device is DAG-root, then the prefix of the device is set in the following way:
@@ -52,4 +53,14 @@ The scheduling of the network is computed by the DAG root. In the function @ref 
 
 @snippet openstack/02b-MAChigh/schedule.c LKN-DAG-scheduling
 
+=======
+----
+@section Serial_compression Serial compression
+"Compress" the packets on serial interface in order to enable forwarding the packets to the openvisualizer faster. The "compression" only forwards part of the pkt id and its payload to the openvisualizer. Serial drivers are modified: @ref openserial.c and @ref openserial.h
+
+@snippet drivers/common/openserial.c LKN-compression
+
+@snippet drivers/common/openserial.h LKN-compression
+
 */
+

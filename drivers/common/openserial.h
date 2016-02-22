@@ -56,6 +56,12 @@ enum {
 #define SERFRAME_PC2MOTE_TRIGGERSERIALECHO  ((uint8_t)'S')
 #define SERFRAME_PC2MOTE_COMMAND_GD         ((uint8_t)'G')
 
+/***** LKN *****/
+/// @lkn{mvilgelm} Enable packet compression: allows to send more packets to the PC.
+/// @internal [LKN-compression]
+#define ENABLE_PKT_COMPRESSION 0
+/// @internal [LKN-compression]
+
 //=========================== typedef =========================================
 
 enum {
