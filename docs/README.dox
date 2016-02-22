@@ -19,7 +19,7 @@ For more detailed information, please, visit the following pages.
 We apported several modification to the firmware, in order to program the Zolertia Z1 motes for our TSCH Airplane testbed.
 
 
-----
+=======
 @section Addr_edits Mote addressing
 In the function @ref idmanager_init we modify the address of the motes.
 
@@ -30,19 +30,25 @@ If the device is DAG-root, then the prefix of the device is set in the following
 @snippet openstack/cross-layers/idmanager.c/idmanager.c LKN-DAG-prefix
 
 
-----
+=======
 @section Radio_edits Changes in the Radio driver
 The radio was hardcoded set to 0. In our code we set the PA_LEVEL  in @ref radio_reset to 31.
 @snippet bsp/chips/cc2420/radio.c LKN-radio
 
 
-----
+=======
+@section Neighbor_edits Changes in the Neighbor table
+In our code we set the @ref MAXNUMNEIGHBORS to 12 to enable a larger network.
+@snippet openstack/02b-MAChigh/neighbors.h LKN-neighbor-table
+
+
+=======
 @section DAG_root DAG root setup
 We modified the define in @ref opendefs.h in order to enable the DAG root state from the firmware.
 @snippet inc/opendefs.h LKN-DAG-state
 
 
-----
+=======
 @section TSCH_scheduling TSCH scheduling
 We enabled a DAG root based scheduling by modifying the files @ref schedule.c and @ref schedule.h .
 
@@ -53,8 +59,8 @@ The scheduling of the network is computed by the DAG root. In the function @ref 
 
 @snippet openstack/02b-MAChigh/schedule.c LKN-DAG-scheduling
 
+
 =======
-----
 @section Serial_compression Serial compression
 "Compress" the packets on serial interface in order to enable forwarding the packets to the openvisualizer faster. The "compression" only forwards part of the pkt id and its payload to the openvisualizer. Serial drivers are modified: @ref openserial.c and @ref openserial.h
 
