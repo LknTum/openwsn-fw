@@ -27,7 +27,7 @@ The address of the device is set in this way:
 @snippet openstack/cross-layers/idmanager.c LKN-addr
 
 If the device is DAG-root, then the prefix of the device is set in the following way:
-@snippet openstack/cross-layers/idmanager.c/idmanager.c LKN-DAG-prefix
+@snippet openstack/cross-layers/idmanager.c LKN-DAG-prefix
 
 
 =======
@@ -59,6 +59,18 @@ The scheduling of the network is computed by the DAG root. In the function @ref 
 
 @snippet openstack/02b-MAChigh/schedule.c LKN-DAG-scheduling
 
+
+=======
+@section IE_processing IE processing
+In order to spread the DAG root scheduling over the whole network, we enabled the trasmission of link-specific address information and link settings.
+
+In particular, we modified the functions @ref processIE_prependSlotframeLinkIE, @ref processIE_retrieveSlotframeLinkIE in @ref processIE.c such that is possible to associate the address of a specific mote to the IE link scheduling parameter. Furthermore, the value of the SHARED flag is also transmitted and retrieved.
+
+In @ref processIE_prependSlotframeLinkIE, we enabled the transmission of the address and the link option parameters in this way:
+@snippet openstack/02b-MAChigh/processIE.c LKN-prepend-link-scheduling
+
+In @ref processIE_retrieveSlotframeLinkIE, the opposite mechanism is implemented and properly enables the receiver to store the information into the next active slot:
+@snippet openstack/02b-MAChigh/processIE.c LKN-retrieve-link-scheduling
 
 =======
 @section Serial_compression Serial compression
