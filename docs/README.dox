@@ -1,0 +1,51 @@
+/**
+@mainpage OpenWSN Aircraft TSCH testbed
+
+@author Samuele Zoppi
+
+These document includes the documentation to the main modifications performed on the OpenWSN firmware to enable it to run with Zolertia Z1 motes, and to be able to schedule the different motes over the TSCH time/hopping resources.
+
+For more detailed information, please, visit the following pages. 
+- Full documentation @ref LKN_contribution
+- List of LKN code modifications @ref LKN_code_edits
+
+*/
+
+/**
+@page LKN_contribution LKN contribution
+\tableofcontents
+
+We apported several modification to the firmware, in order to program the Zolertia Z1 motes for our TSCH Airplane testbed.
+
+
+---- 
+@section Addr_edits Mote addressing
+In the function @ref idmanager_init we modify the address of the motes.
+
+The address of the device is set in this way: 
+@snippet openstack/cross-layers/idmanager.c LKN-addr
+
+If the device is DAG-root, then the prefix of the device is set in the following way:
+@snippet openstack/cross-layers/idmanager.c/idmanager.c LKN-DAG-prefix
+
+
+----
+@section Radio_edits Changes in the Radio driver
+The radio was hardcoded set to 0. In our code we set the PA_LEVEL  in @ref radio_reset to 31.
+@snippet bsp/chips/cc2420/radio.c LKN-radio
+
+
+----
+@section DAG_root DAG root setup
+We modified the define in @ref opendefs.h in order to enable the DAG root state from the firmware.
+@snippet inc/opendefs.h LKN-DAG-state
+
+
+----
+@section TSCH_scheduling TSCH scheduling
+We enabled a DAG root based scheduling by modifying the files @ref schedule.c and @ref schedule.h .
+
+The setup applied in @ref schedule.h is:
+@snippet openstack/02b-MAChigh/schedule.h LKN-scheduling-setting
+
+*/
