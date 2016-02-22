@@ -1,0 +1,163 @@
+\hypertarget{structradiotimer__vars__t}{}\section{radiotimer\+\_\+vars\+\_\+t Struct Reference}
+\label{structradiotimer__vars__t}\index{radiotimer\+\_\+vars\+\_\+t@{radiotimer\+\_\+vars\+\_\+t}}
+
+
+derfmega-\/specific definition of the \char`\"{}radiotimer\char`\"{} bsp module.  
+
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__radiotimer_ga62b602325e65023c91b784f20cd2d6bc}{radiotimer\+\_\+compare\+\_\+cbt} \hyperlink{structradiotimer__vars__t_a660c7dbca1719cd868b78cfa4e7bd54d}{overflow\+\_\+cb}
+\item 
+\hyperlink{group__radiotimer_ga62b602325e65023c91b784f20cd2d6bc}{radiotimer\+\_\+compare\+\_\+cbt} \hyperlink{structradiotimer__vars__t_a2aa018ea64804baa337d825420f2f7d6}{compare\+\_\+cb}
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{structradiotimer__vars__t_a101d4ae629d79ffa06f34946194a0316}{overflow\+O\+Rcompare}
+\item 
+\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{structradiotimer__vars__t_a68270092a6680f89363231ec8d89867e}{current\+Slot\+Period}
+\item 
+\hyperlink{z1_2board__info_8h_ac16e02aadd749b2d27638bed1a805a59}{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} \hyperlink{structradiotimer__vars__t_a4c8bd90873d8abaa7275b110192a497c}{current\+Slot\+Period}
+\item 
+\hyperlink{group__radiotimer_ga62b602325e65023c91b784f20cd2d6bc}{radiotimer\+\_\+compare\+\_\+cbt} \hyperlink{structradiotimer__vars__t_a0ee5a190b5b75d3bb1fb7308aa52e78d}{overflow\+Cb}
+\item 
+\hyperlink{group__radiotimer_ga62b602325e65023c91b784f20cd2d6bc}{radiotimer\+\_\+compare\+\_\+cbt} \hyperlink{structradiotimer__vars__t_a7acaf4a34fe5cdb1411d3ff5fd07023c}{compare\+Cb}
+\item 
+\hyperlink{group__radiotimer_gac7da641d0774aa21bfabefd560e42acf}{radiotimer\+\_\+capture\+\_\+cbt} \hyperlink{structradiotimer__vars__t_a384be2c7f4649422003808180242d0a8}{start\+Frame\+Cb}
+\item 
+\hyperlink{group__radiotimer_gac7da641d0774aa21bfabefd560e42acf}{radiotimer\+\_\+capture\+\_\+cbt} \hyperlink{structradiotimer__vars__t_a20d98cd6adb6fb5b5e3aedeb01285c64}{end\+Frame\+Cb}
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{structradiotimer__vars__t_a8d1ed5d74c82ecbae008e5488aa3cdf7}{f\+\_\+\+S\+F\+Dreceived}
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{structradiotimer__vars__t_a2dbe4b80aec79063b57f370128a75ece}{period}
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{structradiotimer__vars__t_ac55ab32ed08087acbb5935eceb6fe03d}{counter\+\_\+slot\+\_\+val}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+derfmega-\/specific definition of the \char`\"{}radiotimer\char`\"{} bsp module. 
+
+Z1-\/specific definition of the \char`\"{}radiotimer\char`\"{} bsp module.
+
+L\+P\+C\+Xpresso-\/specific definition of the \char`\"{}radiotimer\char`\"{} bsp module. this timer uses 2 match (compare) registers and 1 capture register. The time counter is a free counter. The match register 0 is used to control time slot size, it is re-\/scheduled after every match. The second match register is used to schedule events within the slot. The capture register is used to capture counter value at different moments, e.\+g the first bit of a packet leaves the radio.
+
+W\+S\+N430v14-\/specific definition of the \char`\"{}radiotimer\char`\"{} bsp module.
+
+W\+S\+N430v13b-\/specific definition of the \char`\"{}radiotimer\char`\"{} bsp module.
+
+Telos\+B-\/specific definition of the \char`\"{}radiotimer\char`\"{} bsp module.
+
+G\+I\+N\+A-\/specific definition of the \char`\"{}radiotimer\char`\"{} bsp module.
+
+e\+Z430-\/\+R\+F2500-\/specific definition of the \char`\"{}radiotimer\char`\"{} bsp module.
+
+using the M\+AC timer with some trickery
+
+\begin{DoxyAuthor}{Author}
+Kevin Weekly June 2012.
+
+Chuang Qian \href{mailto:cqian@berkeley.edu}{\tt cqian@berkeley.\+edu}, April 2012.
+
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, February 2012.
+
+Xavi Vilajosana \href{mailto:xvilajosana@eecs.berkeley.edu}{\tt xvilajosana@eecs.\+berkeley.\+edu}, March 2012.
+
+Xavier Vilajosana \href{mailto:xvilajosana@eecs.berkeley.edu}{\tt xvilajosana@eecs.\+berkeley.\+edu}, May 2013. 
+\end{DoxyAuthor}
+
+
+Definition at line 29 of file radiotimer.\+c.
+
+
+
+\subsection{Member Data Documentation}
+\index{radiotimer\+\_\+vars\+\_\+t@{radiotimer\+\_\+vars\+\_\+t}!compare\+\_\+cb@{compare\+\_\+cb}}
+\index{compare\+\_\+cb@{compare\+\_\+cb}!radiotimer\+\_\+vars\+\_\+t@{radiotimer\+\_\+vars\+\_\+t}}
+\subsubsection[{\texorpdfstring{compare\+\_\+cb}{compare_cb}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf radiotimer\+\_\+compare\+\_\+cbt} radiotimer\+\_\+vars\+\_\+t\+::compare\+\_\+cb}\hypertarget{structradiotimer__vars__t_a2aa018ea64804baa337d825420f2f7d6}{}\label{structradiotimer__vars__t_a2aa018ea64804baa337d825420f2f7d6}
+
+
+Definition at line 31 of file radiotimer.\+c.
+
+\index{radiotimer\+\_\+vars\+\_\+t@{radiotimer\+\_\+vars\+\_\+t}!compare\+Cb@{compare\+Cb}}
+\index{compare\+Cb@{compare\+Cb}!radiotimer\+\_\+vars\+\_\+t@{radiotimer\+\_\+vars\+\_\+t}}
+\subsubsection[{\texorpdfstring{compare\+Cb}{compareCb}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf radiotimer\+\_\+compare\+\_\+cbt} radiotimer\+\_\+vars\+\_\+t\+::compare\+Cb}\hypertarget{structradiotimer__vars__t_a7acaf4a34fe5cdb1411d3ff5fd07023c}{}\label{structradiotimer__vars__t_a7acaf4a34fe5cdb1411d3ff5fd07023c}
+
+
+Definition at line 15 of file radiotimer.\+c.
+
+\index{radiotimer\+\_\+vars\+\_\+t@{radiotimer\+\_\+vars\+\_\+t}!counter\+\_\+slot\+\_\+val@{counter\+\_\+slot\+\_\+val}}
+\index{counter\+\_\+slot\+\_\+val@{counter\+\_\+slot\+\_\+val}!radiotimer\+\_\+vars\+\_\+t@{radiotimer\+\_\+vars\+\_\+t}}
+\subsubsection[{\texorpdfstring{counter\+\_\+slot\+\_\+val}{counter_slot_val}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} radiotimer\+\_\+vars\+\_\+t\+::counter\+\_\+slot\+\_\+val}\hypertarget{structradiotimer__vars__t_ac55ab32ed08087acbb5935eceb6fe03d}{}\label{structradiotimer__vars__t_ac55ab32ed08087acbb5935eceb6fe03d}
+
+
+Definition at line 25 of file radiotimer.\+c.
+
+\index{radiotimer\+\_\+vars\+\_\+t@{radiotimer\+\_\+vars\+\_\+t}!current\+Slot\+Period@{current\+Slot\+Period}}
+\index{current\+Slot\+Period@{current\+Slot\+Period}!radiotimer\+\_\+vars\+\_\+t@{radiotimer\+\_\+vars\+\_\+t}}
+\subsubsection[{\texorpdfstring{current\+Slot\+Period}{currentSlotPeriod}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\+\_\+t} radiotimer\+\_\+vars\+\_\+t\+::current\+Slot\+Period}\hypertarget{structradiotimer__vars__t_a68270092a6680f89363231ec8d89867e}{}\label{structradiotimer__vars__t_a68270092a6680f89363231ec8d89867e}
+
+
+Definition at line 33 of file radiotimer.\+c.
+
+\index{radiotimer\+\_\+vars\+\_\+t@{radiotimer\+\_\+vars\+\_\+t}!current\+Slot\+Period@{current\+Slot\+Period}}
+\index{current\+Slot\+Period@{current\+Slot\+Period}!radiotimer\+\_\+vars\+\_\+t@{radiotimer\+\_\+vars\+\_\+t}}
+\subsubsection[{\texorpdfstring{current\+Slot\+Period}{currentSlotPeriod}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} radiotimer\+\_\+vars\+\_\+t\+::current\+Slot\+Period}\hypertarget{structradiotimer__vars__t_a4c8bd90873d8abaa7275b110192a497c}{}\label{structradiotimer__vars__t_a4c8bd90873d8abaa7275b110192a497c}
+
+
+Definition at line 33 of file radiotimer.\+c.
+
+\index{radiotimer\+\_\+vars\+\_\+t@{radiotimer\+\_\+vars\+\_\+t}!end\+Frame\+Cb@{end\+Frame\+Cb}}
+\index{end\+Frame\+Cb@{end\+Frame\+Cb}!radiotimer\+\_\+vars\+\_\+t@{radiotimer\+\_\+vars\+\_\+t}}
+\subsubsection[{\texorpdfstring{end\+Frame\+Cb}{endFrameCb}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf radiotimer\+\_\+capture\+\_\+cbt} radiotimer\+\_\+vars\+\_\+t\+::end\+Frame\+Cb}\hypertarget{structradiotimer__vars__t_a20d98cd6adb6fb5b5e3aedeb01285c64}{}\label{structradiotimer__vars__t_a20d98cd6adb6fb5b5e3aedeb01285c64}
+
+
+Definition at line 17 of file radiotimer.\+c.
+
+\index{radiotimer\+\_\+vars\+\_\+t@{radiotimer\+\_\+vars\+\_\+t}!f\+\_\+\+S\+F\+Dreceived@{f\+\_\+\+S\+F\+Dreceived}}
+\index{f\+\_\+\+S\+F\+Dreceived@{f\+\_\+\+S\+F\+Dreceived}!radiotimer\+\_\+vars\+\_\+t@{radiotimer\+\_\+vars\+\_\+t}}
+\subsubsection[{\texorpdfstring{f\+\_\+\+S\+F\+Dreceived}{f_SFDreceived}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} radiotimer\+\_\+vars\+\_\+t\+::f\+\_\+\+S\+F\+Dreceived}\hypertarget{structradiotimer__vars__t_a8d1ed5d74c82ecbae008e5488aa3cdf7}{}\label{structradiotimer__vars__t_a8d1ed5d74c82ecbae008e5488aa3cdf7}
+
+
+Definition at line 18 of file radiotimer.\+c.
+
+\index{radiotimer\+\_\+vars\+\_\+t@{radiotimer\+\_\+vars\+\_\+t}!overflow\+\_\+cb@{overflow\+\_\+cb}}
+\index{overflow\+\_\+cb@{overflow\+\_\+cb}!radiotimer\+\_\+vars\+\_\+t@{radiotimer\+\_\+vars\+\_\+t}}
+\subsubsection[{\texorpdfstring{overflow\+\_\+cb}{overflow_cb}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf radiotimer\+\_\+compare\+\_\+cbt} radiotimer\+\_\+vars\+\_\+t\+::overflow\+\_\+cb}\hypertarget{structradiotimer__vars__t_a660c7dbca1719cd868b78cfa4e7bd54d}{}\label{structradiotimer__vars__t_a660c7dbca1719cd868b78cfa4e7bd54d}
+
+
+Definition at line 30 of file radiotimer.\+c.
+
+\index{radiotimer\+\_\+vars\+\_\+t@{radiotimer\+\_\+vars\+\_\+t}!overflow\+Cb@{overflow\+Cb}}
+\index{overflow\+Cb@{overflow\+Cb}!radiotimer\+\_\+vars\+\_\+t@{radiotimer\+\_\+vars\+\_\+t}}
+\subsubsection[{\texorpdfstring{overflow\+Cb}{overflowCb}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf radiotimer\+\_\+compare\+\_\+cbt} radiotimer\+\_\+vars\+\_\+t\+::overflow\+Cb}\hypertarget{structradiotimer__vars__t_a0ee5a190b5b75d3bb1fb7308aa52e78d}{}\label{structradiotimer__vars__t_a0ee5a190b5b75d3bb1fb7308aa52e78d}
+
+
+Definition at line 14 of file radiotimer.\+c.
+
+\index{radiotimer\+\_\+vars\+\_\+t@{radiotimer\+\_\+vars\+\_\+t}!overflow\+O\+Rcompare@{overflow\+O\+Rcompare}}
+\index{overflow\+O\+Rcompare@{overflow\+O\+Rcompare}!radiotimer\+\_\+vars\+\_\+t@{radiotimer\+\_\+vars\+\_\+t}}
+\subsubsection[{\texorpdfstring{overflow\+O\+Rcompare}{overflowORcompare}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} radiotimer\+\_\+vars\+\_\+t\+::overflow\+O\+Rcompare}\hypertarget{structradiotimer__vars__t_a101d4ae629d79ffa06f34946194a0316}{}\label{structradiotimer__vars__t_a101d4ae629d79ffa06f34946194a0316}
+
+
+Definition at line 32 of file radiotimer.\+c.
+
+\index{radiotimer\+\_\+vars\+\_\+t@{radiotimer\+\_\+vars\+\_\+t}!period@{period}}
+\index{period@{period}!radiotimer\+\_\+vars\+\_\+t@{radiotimer\+\_\+vars\+\_\+t}}
+\subsubsection[{\texorpdfstring{period}{period}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} radiotimer\+\_\+vars\+\_\+t\+::period}\hypertarget{structradiotimer__vars__t_a2dbe4b80aec79063b57f370128a75ece}{}\label{structradiotimer__vars__t_a2dbe4b80aec79063b57f370128a75ece}
+
+
+Definition at line 24 of file radiotimer.\+c.
+
+\index{radiotimer\+\_\+vars\+\_\+t@{radiotimer\+\_\+vars\+\_\+t}!start\+Frame\+Cb@{start\+Frame\+Cb}}
+\index{start\+Frame\+Cb@{start\+Frame\+Cb}!radiotimer\+\_\+vars\+\_\+t@{radiotimer\+\_\+vars\+\_\+t}}
+\subsubsection[{\texorpdfstring{start\+Frame\+Cb}{startFrameCb}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf radiotimer\+\_\+capture\+\_\+cbt} radiotimer\+\_\+vars\+\_\+t\+::start\+Frame\+Cb}\hypertarget{structradiotimer__vars__t_a384be2c7f4649422003808180242d0a8}{}\label{structradiotimer__vars__t_a384be2c7f4649422003808180242d0a8}
+
+
+Definition at line 16 of file radiotimer.\+c.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/agilefox/\hyperlink{agilefox_2radiotimer_8c}{radiotimer.\+c}\item 
+/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/samr21\+\_\+xpro/\hyperlink{radio__timer_8c}{radio\+\_\+timer.\+c}\end{DoxyCompactItemize}

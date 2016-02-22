@@ -1,0 +1,128 @@
+\hypertarget{cexample_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openapps/cexample/cexample.c File Reference}
+\label{cexample_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openapps/cexample/cexample.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openapps/cexample/cexample.\+c}}
+{\ttfamily \#include \char`\"{}opendefs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cexample.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}opencoap.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}opentimers.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}openqueue.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}packetfunctions.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}openserial.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}openrandom.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}scheduler.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}idmanager.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}I\+E\+E\+E802154\+E.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{cexample_8c_a702fb0a481a1d25a13f43978cbe80e4c}{C\+E\+X\+A\+M\+P\+L\+E\+P\+E\+R\+I\+OD}~10000
+\begin{DoxyCompactList}\small\item\em An example Co\+AP application. \end{DoxyCompactList}\item 
+\#define \hyperlink{cexample_8c_a4c47a18073a8af1e019092cc92590fb1}{P\+A\+Y\+L\+O\+A\+D\+L\+EN}~40
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{cexample_8c_a8ca05633cc4419f2097b863ffa990f4d}{cexample\+\_\+receive} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{structcoap__header__iht}{coap\+\_\+header\+\_\+iht} $\ast$coap\+\_\+header, \hyperlink{structcoap__option__iht}{coap\+\_\+option\+\_\+iht} $\ast$coap\+\_\+options)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{cexample_8c_aca4db34a2a0763c809f61c2f88e7981b}{cexample\+\_\+timer\+\_\+cb} (\hyperlink{group___open_timers_gae5ca9e65d270cdfa4bc74008d96d69ab}{opentimer\+\_\+id\+\_\+t} id)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{cexample_8c_a1816c470e22992931c3890de0297f3df}{cexample\+\_\+task\+\_\+cb} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{cexample_8c_ae26406492b246817011941a8a9d29394}{cexample\+\_\+send\+Done} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{disk_8c_ad018a3100b2dabad325a0800152db297}{error})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__cexample_ga45a5021989cde3d7f52964dba9c8f484}{cexample\+\_\+init} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{cexample_8c_a14ed6918a8c227ed4b95092bbbbe57ac}{cexample\+\_\+path0} \mbox{[}$\,$\mbox{]} = \char`\"{}ex\char`\"{}
+\item 
+\hyperlink{structcexample__vars__t}{cexample\+\_\+vars\+\_\+t} \hyperlink{cexample_8c_aa2e8ab1b5b4d88026056ee0e5817fd96}{cexample\+\_\+vars}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{cexample.\+c@{cexample.\+c}!C\+E\+X\+A\+M\+P\+L\+E\+P\+E\+R\+I\+OD@{C\+E\+X\+A\+M\+P\+L\+E\+P\+E\+R\+I\+OD}}
+\index{C\+E\+X\+A\+M\+P\+L\+E\+P\+E\+R\+I\+OD@{C\+E\+X\+A\+M\+P\+L\+E\+P\+E\+R\+I\+OD}!cexample.\+c@{cexample.\+c}}
+\subsubsection[{\texorpdfstring{C\+E\+X\+A\+M\+P\+L\+E\+P\+E\+R\+I\+OD}{CEXAMPLEPERIOD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+E\+X\+A\+M\+P\+L\+E\+P\+E\+R\+I\+OD~10000}\hypertarget{cexample_8c_a702fb0a481a1d25a13f43978cbe80e4c}{}\label{cexample_8c_a702fb0a481a1d25a13f43978cbe80e4c}
+
+
+An example Co\+AP application. 
+
+inter-\/packet period (in ms) 
+
+Definition at line 21 of file cexample.\+c.
+
+\index{cexample.\+c@{cexample.\+c}!P\+A\+Y\+L\+O\+A\+D\+L\+EN@{P\+A\+Y\+L\+O\+A\+D\+L\+EN}}
+\index{P\+A\+Y\+L\+O\+A\+D\+L\+EN@{P\+A\+Y\+L\+O\+A\+D\+L\+EN}!cexample.\+c@{cexample.\+c}}
+\subsubsection[{\texorpdfstring{P\+A\+Y\+L\+O\+A\+D\+L\+EN}{PAYLOADLEN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+A\+Y\+L\+O\+A\+D\+L\+EN~40}\hypertarget{cexample_8c_a4c47a18073a8af1e019092cc92590fb1}{}\label{cexample_8c_a4c47a18073a8af1e019092cc92590fb1}
+
+
+Definition at line 22 of file cexample.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{cexample.\+c@{cexample.\+c}!cexample\+\_\+receive@{cexample\+\_\+receive}}
+\index{cexample\+\_\+receive@{cexample\+\_\+receive}!cexample.\+c@{cexample.\+c}}
+\subsubsection[{\texorpdfstring{cexample\+\_\+receive(\+Open\+Queue\+Entry\+\_\+t $\ast$msg, coap\+\_\+header\+\_\+iht $\ast$coap\+\_\+header, coap\+\_\+option\+\_\+iht $\ast$coap\+\_\+options)}{cexample_receive(OpenQueueEntry_t *msg, coap_header_iht *coap_header, coap_option_iht *coap_options)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf owerror\+\_\+t} cexample\+\_\+receive (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg, }
+\item[{{\bf coap\+\_\+header\+\_\+iht} $\ast$}]{coap\+\_\+header, }
+\item[{{\bf coap\+\_\+option\+\_\+iht} $\ast$}]{coap\+\_\+options}
+\end{DoxyParamCaption}
+)}\hypertarget{cexample_8c_a8ca05633cc4419f2097b863ffa990f4d}{}\label{cexample_8c_a8ca05633cc4419f2097b863ffa990f4d}
+
+
+Definition at line 63 of file cexample.\+c.
+
+\index{cexample.\+c@{cexample.\+c}!cexample\+\_\+send\+Done@{cexample\+\_\+send\+Done}}
+\index{cexample\+\_\+send\+Done@{cexample\+\_\+send\+Done}!cexample.\+c@{cexample.\+c}}
+\subsubsection[{\texorpdfstring{cexample\+\_\+send\+Done(\+Open\+Queue\+Entry\+\_\+t $\ast$msg, owerror\+\_\+t error)}{cexample_sendDone(OpenQueueEntry_t *msg, owerror_t error)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} cexample\+\_\+send\+Done (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg, }
+\item[{{\bf owerror\+\_\+t}}]{error}
+\end{DoxyParamCaption}
+)}\hypertarget{cexample_8c_ae26406492b246817011941a8a9d29394}{}\label{cexample_8c_ae26406492b246817011941a8a9d29394}
+
+
+Definition at line 159 of file cexample.\+c.
+
+\index{cexample.\+c@{cexample.\+c}!cexample\+\_\+task\+\_\+cb@{cexample\+\_\+task\+\_\+cb}}
+\index{cexample\+\_\+task\+\_\+cb@{cexample\+\_\+task\+\_\+cb}!cexample.\+c@{cexample.\+c}}
+\subsubsection[{\texorpdfstring{cexample\+\_\+task\+\_\+cb(void)}{cexample_task_cb(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} cexample\+\_\+task\+\_\+cb (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{cexample_8c_a1816c470e22992931c3890de0297f3df}{}\label{cexample_8c_a1816c470e22992931c3890de0297f3df}
+
+
+Definition at line 75 of file cexample.\+c.
+
+\index{cexample.\+c@{cexample.\+c}!cexample\+\_\+timer\+\_\+cb@{cexample\+\_\+timer\+\_\+cb}}
+\index{cexample\+\_\+timer\+\_\+cb@{cexample\+\_\+timer\+\_\+cb}!cexample.\+c@{cexample.\+c}}
+\subsubsection[{\texorpdfstring{cexample\+\_\+timer\+\_\+cb(opentimer\+\_\+id\+\_\+t id)}{cexample_timer_cb(opentimer_id_t id)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} cexample\+\_\+timer\+\_\+cb (
+\begin{DoxyParamCaption}
+\item[{{\bf opentimer\+\_\+id\+\_\+t}}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{cexample_8c_aca4db34a2a0763c809f61c2f88e7981b}{}\label{cexample_8c_aca4db34a2a0763c809f61c2f88e7981b}
+
+
+Definition at line 71 of file cexample.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{cexample.\+c@{cexample.\+c}!cexample\+\_\+path0@{cexample\+\_\+path0}}
+\index{cexample\+\_\+path0@{cexample\+\_\+path0}!cexample.\+c@{cexample.\+c}}
+\subsubsection[{\texorpdfstring{cexample\+\_\+path0}{cexample_path0}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint8\+\_\+t} cexample\+\_\+path0\mbox{[}$\,$\mbox{]} = \char`\"{}ex\char`\"{}}\hypertarget{cexample_8c_a14ed6918a8c227ed4b95092bbbbe57ac}{}\label{cexample_8c_a14ed6918a8c227ed4b95092bbbbe57ac}
+
+
+Definition at line 24 of file cexample.\+c.
+
+\index{cexample.\+c@{cexample.\+c}!cexample\+\_\+vars@{cexample\+\_\+vars}}
+\index{cexample\+\_\+vars@{cexample\+\_\+vars}!cexample.\+c@{cexample.\+c}}
+\subsubsection[{\texorpdfstring{cexample\+\_\+vars}{cexample_vars}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cexample\+\_\+vars\+\_\+t} cexample\+\_\+vars}\hypertarget{cexample_8c_aa2e8ab1b5b4d88026056ee0e5817fd96}{}\label{cexample_8c_aa2e8ab1b5b4d88026056ee0e5817fd96}
+
+
+Definition at line 28 of file cexample.\+c.
+

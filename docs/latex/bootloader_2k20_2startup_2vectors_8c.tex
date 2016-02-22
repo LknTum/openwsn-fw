@@ -1,0 +1,141 @@
+\hypertarget{bootloader_2k20_2startup_2vectors_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bootloader/k20/startup/vectors.c File Reference}
+\label{bootloader_2k20_2startup_2vectors_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bootloader/k20/startup/vectors.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bootloader/k20/startup/vectors.\+c}}
+{\ttfamily \#include \char`\"{}derivative.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}user\+\_\+config.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structt_vector_table}{t\+Vector\+Table}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}($\ast$const \hyperlink{bootloader_2k20_2startup_2vectors_8c_afea04d3e8135767c03ce099f02e97437}{t\+Isr\+Func}) (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{bootloader_2k20_2startup_2vectors_8c_a420bc2c0015264c859d705dd98d08ffc}{U\+S\+B\+\_\+\+I\+SR} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{bootloader_2k20_2startup_2vectors_8c_a7b092ed3d9b2841c4d0c2858f9bad995}{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TA} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{bootloader_2k20_2startup_2vectors_8c_a9a226172ebe28c044394ae0445aba346}{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TD} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{bootloader_2k20_2startup_2vectors_8c_a4620361a0e74e7a19bf535bc7f9b87c0}{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TE} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{bootloader_2k20_2startup_2vectors_8c_a1291096ffdfeb4d928a6020b5e9a8ccc}{\+\_\+\+\_\+thumb\+\_\+startup} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{bootloader_2k20_2startup_2vectors_8c_a4fb0f39b79989e8b4e4f947bd1e393b7}{Cpu\+\_\+\+I\+N\+T\+\_\+\+N\+M\+I\+Interrupt} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{bootloader_2k20_2startup_2vectors_8c_ad7f3c7e6ba7043e3bbe62cf8ad4bea7f}{Cpu\+\_\+\+Interrupt} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{bootloader_2k20_2startup_2vectors_8c_ae2e480ec8ec59cde7970bbcff5dae4d2}{Cpu\+\_\+\+I\+N\+T\+\_\+\+Hard\+Fault\+Interrupt} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{bootloader_2k20_2startup_2vectors_8c_a2ffdba82a76f23d4dbfe372a5c56aab1}{\+\_\+\+\_\+\+S\+P\+\_\+\+I\+N\+IT} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\index{bootloader/k20/startup/vectors.\+c@{bootloader/k20/startup/vectors.\+c}!t\+Isr\+Func@{t\+Isr\+Func}}
+\index{t\+Isr\+Func@{t\+Isr\+Func}!bootloader/k20/startup/vectors.\+c@{bootloader/k20/startup/vectors.\+c}}
+\subsubsection[{\texorpdfstring{t\+Isr\+Func}{tIsrFunc}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf void}($\ast$const t\+Isr\+Func) ({\bf void})}\hypertarget{bootloader_2k20_2startup_2vectors_8c_afea04d3e8135767c03ce099f02e97437}{}\label{bootloader_2k20_2startup_2vectors_8c_afea04d3e8135767c03ce099f02e97437}
+
+
+Definition at line 5 of file vectors.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{bootloader/k20/startup/vectors.\+c@{bootloader/k20/startup/vectors.\+c}!\+\_\+\+\_\+thumb\+\_\+startup@{\+\_\+\+\_\+thumb\+\_\+startup}}
+\index{\+\_\+\+\_\+thumb\+\_\+startup@{\+\_\+\+\_\+thumb\+\_\+startup}!bootloader/k20/startup/vectors.\+c@{bootloader/k20/startup/vectors.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+thumb\+\_\+startup(void)}{__thumb_startup(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} \+\_\+\+\_\+thumb\+\_\+startup (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{bootloader_2k20_2startup_2vectors_8c_a1291096ffdfeb4d928a6020b5e9a8ccc}{}\label{bootloader_2k20_2startup_2vectors_8c_a1291096ffdfeb4d928a6020b5e9a8ccc}
+\index{bootloader/k20/startup/vectors.\+c@{bootloader/k20/startup/vectors.\+c}!Cpu\+\_\+\+I\+N\+T\+\_\+\+Hard\+Fault\+Interrupt@{Cpu\+\_\+\+I\+N\+T\+\_\+\+Hard\+Fault\+Interrupt}}
+\index{Cpu\+\_\+\+I\+N\+T\+\_\+\+Hard\+Fault\+Interrupt@{Cpu\+\_\+\+I\+N\+T\+\_\+\+Hard\+Fault\+Interrupt}!bootloader/k20/startup/vectors.\+c@{bootloader/k20/startup/vectors.\+c}}
+\subsubsection[{\texorpdfstring{Cpu\+\_\+\+I\+N\+T\+\_\+\+Hard\+Fault\+Interrupt()}{Cpu_INT_HardFaultInterrupt()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Cpu\+\_\+\+I\+N\+T\+\_\+\+Hard\+Fault\+Interrupt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{bootloader_2k20_2startup_2vectors_8c_ae2e480ec8ec59cde7970bbcff5dae4d2}{}\label{bootloader_2k20_2startup_2vectors_8c_ae2e480ec8ec59cde7970bbcff5dae4d2}
+
+
+Definition at line 65 of file vectors.\+c.
+
+\index{bootloader/k20/startup/vectors.\+c@{bootloader/k20/startup/vectors.\+c}!Cpu\+\_\+\+I\+N\+T\+\_\+\+N\+M\+I\+Interrupt@{Cpu\+\_\+\+I\+N\+T\+\_\+\+N\+M\+I\+Interrupt}}
+\index{Cpu\+\_\+\+I\+N\+T\+\_\+\+N\+M\+I\+Interrupt@{Cpu\+\_\+\+I\+N\+T\+\_\+\+N\+M\+I\+Interrupt}!bootloader/k20/startup/vectors.\+c@{bootloader/k20/startup/vectors.\+c}}
+\subsubsection[{\texorpdfstring{Cpu\+\_\+\+I\+N\+T\+\_\+\+N\+M\+I\+Interrupt(void)}{Cpu_INT_NMIInterrupt(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Cpu\+\_\+\+I\+N\+T\+\_\+\+N\+M\+I\+Interrupt (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{bootloader_2k20_2startup_2vectors_8c_a4fb0f39b79989e8b4e4f947bd1e393b7}{}\label{bootloader_2k20_2startup_2vectors_8c_a4fb0f39b79989e8b4e4f947bd1e393b7}
+
+
+Definition at line 52 of file vectors.\+c.
+
+\index{bootloader/k20/startup/vectors.\+c@{bootloader/k20/startup/vectors.\+c}!Cpu\+\_\+\+Interrupt@{Cpu\+\_\+\+Interrupt}}
+\index{Cpu\+\_\+\+Interrupt@{Cpu\+\_\+\+Interrupt}!bootloader/k20/startup/vectors.\+c@{bootloader/k20/startup/vectors.\+c}}
+\subsubsection[{\texorpdfstring{Cpu\+\_\+\+Interrupt(void)}{Cpu_Interrupt(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Cpu\+\_\+\+Interrupt (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{bootloader_2k20_2startup_2vectors_8c_ad7f3c7e6ba7043e3bbe62cf8ad4bea7f}{}\label{bootloader_2k20_2startup_2vectors_8c_ad7f3c7e6ba7043e3bbe62cf8ad4bea7f}
+
+
+Definition at line 57 of file vectors.\+c.
+
+\index{bootloader/k20/startup/vectors.\+c@{bootloader/k20/startup/vectors.\+c}!I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TA@{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TA}}
+\index{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TA@{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TA}!bootloader/k20/startup/vectors.\+c@{bootloader/k20/startup/vectors.\+c}}
+\subsubsection[{\texorpdfstring{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+T\+A()}{IRQ_ISR_PORTA()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TA (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{bootloader_2k20_2startup_2vectors_8c_a7b092ed3d9b2841c4d0c2858f9bad995}{}\label{bootloader_2k20_2startup_2vectors_8c_a7b092ed3d9b2841c4d0c2858f9bad995}
+
+
+Definition at line 819 of file main\+\_\+kinetis.\+c.
+
+\index{bootloader/k20/startup/vectors.\+c@{bootloader/k20/startup/vectors.\+c}!I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TD@{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TD}}
+\index{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TD@{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TD}!bootloader/k20/startup/vectors.\+c@{bootloader/k20/startup/vectors.\+c}}
+\subsubsection[{\texorpdfstring{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+T\+D()}{IRQ_ISR_PORTD()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TD (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{bootloader_2k20_2startup_2vectors_8c_a9a226172ebe28c044394ae0445aba346}{}\label{bootloader_2k20_2startup_2vectors_8c_a9a226172ebe28c044394ae0445aba346}
+
+
+Definition at line 912 of file main\+\_\+kinetis.\+c.
+
+\index{bootloader/k20/startup/vectors.\+c@{bootloader/k20/startup/vectors.\+c}!I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TE@{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TE}}
+\index{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TE@{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TE}!bootloader/k20/startup/vectors.\+c@{bootloader/k20/startup/vectors.\+c}}
+\subsubsection[{\texorpdfstring{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+T\+E()}{IRQ_ISR_PORTE()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TE (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{bootloader_2k20_2startup_2vectors_8c_a4620361a0e74e7a19bf535bc7f9b87c0}{}\label{bootloader_2k20_2startup_2vectors_8c_a4620361a0e74e7a19bf535bc7f9b87c0}
+
+
+Definition at line 942 of file main\+\_\+kinetis.\+c.
+
+\index{bootloader/k20/startup/vectors.\+c@{bootloader/k20/startup/vectors.\+c}!U\+S\+B\+\_\+\+I\+SR@{U\+S\+B\+\_\+\+I\+SR}}
+\index{U\+S\+B\+\_\+\+I\+SR@{U\+S\+B\+\_\+\+I\+SR}!bootloader/k20/startup/vectors.\+c@{bootloader/k20/startup/vectors.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+I\+S\+R()}{USB_ISR()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+S\+B\+\_\+\+I\+SR (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{bootloader_2k20_2startup_2vectors_8c_a420bc2c0015264c859d705dd98d08ffc}{}\label{bootloader_2k20_2startup_2vectors_8c_a420bc2c0015264c859d705dd98d08ffc}
+
+
+Definition at line 1733 of file usb\+\_\+dci\+\_\+kinetis.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{bootloader/k20/startup/vectors.\+c@{bootloader/k20/startup/vectors.\+c}!\+\_\+\+\_\+\+S\+P\+\_\+\+I\+N\+IT@{\+\_\+\+\_\+\+S\+P\+\_\+\+I\+N\+IT}}
+\index{\+\_\+\+\_\+\+S\+P\+\_\+\+I\+N\+IT@{\+\_\+\+\_\+\+S\+P\+\_\+\+I\+N\+IT}!bootloader/k20/startup/vectors.\+c@{bootloader/k20/startup/vectors.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+\+S\+P\+\_\+\+I\+N\+IT}{__SP_INIT}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} \+\_\+\+\_\+\+S\+P\+\_\+\+I\+N\+IT\mbox{[}$\,$\mbox{]}}\hypertarget{bootloader_2k20_2startup_2vectors_8c_a2ffdba82a76f23d4dbfe372a5c56aab1}{}\label{bootloader_2k20_2startup_2vectors_8c_a2ffdba82a76f23d4dbfe372a5c56aab1}

@@ -1,0 +1,87 @@
+\hypertarget{structieee802154__security__driver}{}\section{ieee802154\+\_\+security\+\_\+driver Struct Reference}
+\label{structieee802154__security__driver}\index{ieee802154\+\_\+security\+\_\+driver@{ieee802154\+\_\+security\+\_\+driver}}
+
+
+{\ttfamily \#include $<$ieee802154\+\_\+security\+\_\+driver.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}($\ast$ \hyperlink{structieee802154__security__driver_a7189635a857821803ce053824da4005a}{init} )(\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}($\ast$ \hyperlink{structieee802154__security__driver_a85cc01dd18837b7e3d78832cebf5db66}{prepend\+Auxiliary\+Security\+Header} )(\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}($\ast$ \hyperlink{structieee802154__security__driver_ae2f969f147c6871c1ddac56374fc9d9a}{retrieve\+Auxiliary\+Security\+Header} )(\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{structieee802154__header__iht}{ieee802154\+\_\+header\+\_\+iht} $\ast$tempheader)
+\item 
+\hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t}($\ast$ \hyperlink{structieee802154__security__driver_a469618342f4488905c0968e79947d9af}{outgoing\+Frame} )(\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg)
+\item 
+\hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t}($\ast$ \hyperlink{structieee802154__security__driver_ae822d5f1fa8ba504ae9b2f9909cfc7a4}{incoming\+Frame} )(\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg)
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}($\ast$ \hyperlink{structieee802154__security__driver_a3ef1593e809f0bed98a974192143b23d}{authentication\+Tag\+Len} )(\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t})
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}($\ast$ \hyperlink{structieee802154__security__driver_a0409cde0e8565436690f8346f94dac93}{auxiliary\+Header\+Len} )(\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} key\+Id\+Mode, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} frame\+Counter\+Suppression, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} frame\+Counter\+Size)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 39 of file ieee802154\+\_\+security\+\_\+driver.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\index{ieee802154\+\_\+security\+\_\+driver@{ieee802154\+\_\+security\+\_\+driver}!authentication\+Tag\+Len@{authentication\+Tag\+Len}}
+\index{authentication\+Tag\+Len@{authentication\+Tag\+Len}!ieee802154\+\_\+security\+\_\+driver@{ieee802154\+\_\+security\+\_\+driver}}
+\subsubsection[{\texorpdfstring{authentication\+Tag\+Len}{authenticationTagLen}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t}($\ast$  ieee802154\+\_\+security\+\_\+driver\+::authentication\+Tag\+Len) ({\bf uint8\+\_\+t})}\hypertarget{structieee802154__security__driver_a3ef1593e809f0bed98a974192143b23d}{}\label{structieee802154__security__driver_a3ef1593e809f0bed98a974192143b23d}
+
+
+Definition at line 51 of file ieee802154\+\_\+security\+\_\+driver.\+h.
+
+\index{ieee802154\+\_\+security\+\_\+driver@{ieee802154\+\_\+security\+\_\+driver}!auxiliary\+Header\+Len@{auxiliary\+Header\+Len}}
+\index{auxiliary\+Header\+Len@{auxiliary\+Header\+Len}!ieee802154\+\_\+security\+\_\+driver@{ieee802154\+\_\+security\+\_\+driver}}
+\subsubsection[{\texorpdfstring{auxiliary\+Header\+Len}{auxiliaryHeaderLen}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t}($\ast$  ieee802154\+\_\+security\+\_\+driver\+::auxiliary\+Header\+Len) ({\bf uint8\+\_\+t} key\+Id\+Mode, {\bf uint8\+\_\+t} frame\+Counter\+Suppression, {\bf uint8\+\_\+t} frame\+Counter\+Size)}\hypertarget{structieee802154__security__driver_a0409cde0e8565436690f8346f94dac93}{}\label{structieee802154__security__driver_a0409cde0e8565436690f8346f94dac93}
+
+
+Definition at line 53 of file ieee802154\+\_\+security\+\_\+driver.\+h.
+
+\index{ieee802154\+\_\+security\+\_\+driver@{ieee802154\+\_\+security\+\_\+driver}!incoming\+Frame@{incoming\+Frame}}
+\index{incoming\+Frame@{incoming\+Frame}!ieee802154\+\_\+security\+\_\+driver@{ieee802154\+\_\+security\+\_\+driver}}
+\subsubsection[{\texorpdfstring{incoming\+Frame}{incomingFrame}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf owerror\+\_\+t}($\ast$  ieee802154\+\_\+security\+\_\+driver\+::incoming\+Frame) ({\bf Open\+Queue\+Entry\+\_\+t} $\ast$msg)}\hypertarget{structieee802154__security__driver_ae822d5f1fa8ba504ae9b2f9909cfc7a4}{}\label{structieee802154__security__driver_ae822d5f1fa8ba504ae9b2f9909cfc7a4}
+
+
+Definition at line 49 of file ieee802154\+\_\+security\+\_\+driver.\+h.
+
+\index{ieee802154\+\_\+security\+\_\+driver@{ieee802154\+\_\+security\+\_\+driver}!init@{init}}
+\index{init@{init}!ieee802154\+\_\+security\+\_\+driver@{ieee802154\+\_\+security\+\_\+driver}}
+\subsubsection[{\texorpdfstring{init}{init}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void}($\ast$  ieee802154\+\_\+security\+\_\+driver\+::init) ({\bf void})}\hypertarget{structieee802154__security__driver_a7189635a857821803ce053824da4005a}{}\label{structieee802154__security__driver_a7189635a857821803ce053824da4005a}
+
+
+Definition at line 41 of file ieee802154\+\_\+security\+\_\+driver.\+h.
+
+\index{ieee802154\+\_\+security\+\_\+driver@{ieee802154\+\_\+security\+\_\+driver}!outgoing\+Frame@{outgoing\+Frame}}
+\index{outgoing\+Frame@{outgoing\+Frame}!ieee802154\+\_\+security\+\_\+driver@{ieee802154\+\_\+security\+\_\+driver}}
+\subsubsection[{\texorpdfstring{outgoing\+Frame}{outgoingFrame}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf owerror\+\_\+t}($\ast$  ieee802154\+\_\+security\+\_\+driver\+::outgoing\+Frame) ({\bf Open\+Queue\+Entry\+\_\+t} $\ast$msg)}\hypertarget{structieee802154__security__driver_a469618342f4488905c0968e79947d9af}{}\label{structieee802154__security__driver_a469618342f4488905c0968e79947d9af}
+
+
+Definition at line 47 of file ieee802154\+\_\+security\+\_\+driver.\+h.
+
+\index{ieee802154\+\_\+security\+\_\+driver@{ieee802154\+\_\+security\+\_\+driver}!prepend\+Auxiliary\+Security\+Header@{prepend\+Auxiliary\+Security\+Header}}
+\index{prepend\+Auxiliary\+Security\+Header@{prepend\+Auxiliary\+Security\+Header}!ieee802154\+\_\+security\+\_\+driver@{ieee802154\+\_\+security\+\_\+driver}}
+\subsubsection[{\texorpdfstring{prepend\+Auxiliary\+Security\+Header}{prependAuxiliarySecurityHeader}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void}($\ast$  ieee802154\+\_\+security\+\_\+driver\+::prepend\+Auxiliary\+Security\+Header) ({\bf Open\+Queue\+Entry\+\_\+t} $\ast$msg)}\hypertarget{structieee802154__security__driver_a85cc01dd18837b7e3d78832cebf5db66}{}\label{structieee802154__security__driver_a85cc01dd18837b7e3d78832cebf5db66}
+
+
+Definition at line 43 of file ieee802154\+\_\+security\+\_\+driver.\+h.
+
+\index{ieee802154\+\_\+security\+\_\+driver@{ieee802154\+\_\+security\+\_\+driver}!retrieve\+Auxiliary\+Security\+Header@{retrieve\+Auxiliary\+Security\+Header}}
+\index{retrieve\+Auxiliary\+Security\+Header@{retrieve\+Auxiliary\+Security\+Header}!ieee802154\+\_\+security\+\_\+driver@{ieee802154\+\_\+security\+\_\+driver}}
+\subsubsection[{\texorpdfstring{retrieve\+Auxiliary\+Security\+Header}{retrieveAuxiliarySecurityHeader}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void}($\ast$  ieee802154\+\_\+security\+\_\+driver\+::retrieve\+Auxiliary\+Security\+Header) ({\bf Open\+Queue\+Entry\+\_\+t} $\ast$msg, {\bf ieee802154\+\_\+header\+\_\+iht} $\ast$tempheader)}\hypertarget{structieee802154__security__driver_ae2f969f147c6871c1ddac56374fc9d9a}{}\label{structieee802154__security__driver_ae2f969f147c6871c1ddac56374fc9d9a}
+
+
+Definition at line 45 of file ieee802154\+\_\+security\+\_\+driver.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/02a-\/\+M\+A\+Clow/\hyperlink{ieee802154__security__driver_8h}{ieee802154\+\_\+security\+\_\+driver.\+h}\end{DoxyCompactItemize}

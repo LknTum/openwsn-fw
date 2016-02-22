@@ -1,0 +1,76 @@
+\hypertarget{bsp_2boards_2k20_2cpu_2vectors_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/k20/cpu/vectors.c File Reference}
+\label{bsp_2boards_2k20_2cpu_2vectors_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/k20/cpu/vectors.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/k20/cpu/vectors.\+c}}
+{\ttfamily \#include \char`\"{}vectors.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}isr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{bsp_2boards_2k20_2cpu_2vectors_8c_a408abadce8819633453c8ecba535caf8}{V\+E\+C\+T\+O\+R\+N\+UM}~($\ast$(volatile \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}$\ast$)(0x\+E000\+E\+D04))
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}($\ast$ \hyperlink{bsp_2boards_2k20_2cpu_2vectors_8c_aacf89b9df91a156ab1932e1977e2ccbe}{vector\+\_\+entry}) (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{bsp_2boards_2k20_2cpu_2vectors_8c_a21b45f39696aa220cffa15a81d32e1c9}{default\+\_\+isr} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{bsp_2boards_2k20_2cpu_2vectors_8c_aa0af0b6a43d281e0b35be5df1626991d}{abort\+\_\+isr} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{bsp_2boards_2k20_2cpu_2vectors_8c_af4fee4dbd70a510ce5e50c2a479e6c23}{hard\+\_\+fault\+\_\+handler\+\_\+c} (unsigned int $\ast$hardfault\+\_\+args)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{bsp/boards/k20/cpu/vectors.\+c@{bsp/boards/k20/cpu/vectors.\+c}!V\+E\+C\+T\+O\+R\+N\+UM@{V\+E\+C\+T\+O\+R\+N\+UM}}
+\index{V\+E\+C\+T\+O\+R\+N\+UM@{V\+E\+C\+T\+O\+R\+N\+UM}!bsp/boards/k20/cpu/vectors.\+c@{bsp/boards/k20/cpu/vectors.\+c}}
+\subsubsection[{\texorpdfstring{V\+E\+C\+T\+O\+R\+N\+UM}{VECTORNUM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+E\+C\+T\+O\+R\+N\+UM~($\ast$(volatile {\bf uint8\+\_\+t}$\ast$)(0x\+E000\+E\+D04))}\hypertarget{bsp_2boards_2k20_2cpu_2vectors_8c_a408abadce8819633453c8ecba535caf8}{}\label{bsp_2boards_2k20_2cpu_2vectors_8c_a408abadce8819633453c8ecba535caf8}
+
+
+\subsection{Typedef Documentation}
+\index{bsp/boards/k20/cpu/vectors.\+c@{bsp/boards/k20/cpu/vectors.\+c}!vector\+\_\+entry@{vector\+\_\+entry}}
+\index{vector\+\_\+entry@{vector\+\_\+entry}!bsp/boards/k20/cpu/vectors.\+c@{bsp/boards/k20/cpu/vectors.\+c}}
+\subsubsection[{\texorpdfstring{vector\+\_\+entry}{vector_entry}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf void}($\ast$ vector\+\_\+entry) ({\bf void})}\hypertarget{bsp_2boards_2k20_2cpu_2vectors_8c_aacf89b9df91a156ab1932e1977e2ccbe}{}\label{bsp_2boards_2k20_2cpu_2vectors_8c_aacf89b9df91a156ab1932e1977e2ccbe}
+
+
+Definition at line 14 of file vectors.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{bsp/boards/k20/cpu/vectors.\+c@{bsp/boards/k20/cpu/vectors.\+c}!abort\+\_\+isr@{abort\+\_\+isr}}
+\index{abort\+\_\+isr@{abort\+\_\+isr}!bsp/boards/k20/cpu/vectors.\+c@{bsp/boards/k20/cpu/vectors.\+c}}
+\subsubsection[{\texorpdfstring{abort\+\_\+isr(void)}{abort_isr(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} abort\+\_\+isr (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{bsp_2boards_2k20_2cpu_2vectors_8c_aa0af0b6a43d281e0b35be5df1626991d}{}\label{bsp_2boards_2k20_2cpu_2vectors_8c_aa0af0b6a43d281e0b35be5df1626991d}
+
+
+Definition at line 311 of file vectors.\+c.
+
+\index{bsp/boards/k20/cpu/vectors.\+c@{bsp/boards/k20/cpu/vectors.\+c}!default\+\_\+isr@{default\+\_\+isr}}
+\index{default\+\_\+isr@{default\+\_\+isr}!bsp/boards/k20/cpu/vectors.\+c@{bsp/boards/k20/cpu/vectors.\+c}}
+\subsubsection[{\texorpdfstring{default\+\_\+isr(void)}{default_isr(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} default\+\_\+isr (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{bsp_2boards_2k20_2cpu_2vectors_8c_a21b45f39696aa220cffa15a81d32e1c9}{}\label{bsp_2boards_2k20_2cpu_2vectors_8c_a21b45f39696aa220cffa15a81d32e1c9}
+
+
+Definition at line 296 of file vectors.\+c.
+
+\index{bsp/boards/k20/cpu/vectors.\+c@{bsp/boards/k20/cpu/vectors.\+c}!hard\+\_\+fault\+\_\+handler\+\_\+c@{hard\+\_\+fault\+\_\+handler\+\_\+c}}
+\index{hard\+\_\+fault\+\_\+handler\+\_\+c@{hard\+\_\+fault\+\_\+handler\+\_\+c}!bsp/boards/k20/cpu/vectors.\+c@{bsp/boards/k20/cpu/vectors.\+c}}
+\subsubsection[{\texorpdfstring{hard\+\_\+fault\+\_\+handler\+\_\+c(unsigned int $\ast$hardfault\+\_\+args)}{hard_fault_handler_c(unsigned int *hardfault_args)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} hard\+\_\+fault\+\_\+handler\+\_\+c (
+\begin{DoxyParamCaption}
+\item[{unsigned int $\ast$}]{hardfault\+\_\+args}
+\end{DoxyParamCaption}
+)}\hypertarget{bsp_2boards_2k20_2cpu_2vectors_8c_af4fee4dbd70a510ce5e50c2a479e6c23}{}\label{bsp_2boards_2k20_2cpu_2vectors_8c_af4fee4dbd70a510ce5e50c2a479e6c23}
+
+
+Definition at line 325 of file vectors.\+c.
+

@@ -1,0 +1,288 @@
+\hypertarget{z1_2i2c_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/z1/i2c.c File Reference}
+\label{z1_2i2c_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/z1/i2c.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/z1/i2c.\+c}}
+{\ttfamily \#include \char`\"{}msp430x26x.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}i2c.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{z1_2i2c_8c_a6c04a54e52e419eef01d7de003e69b75}{i2c\+\_\+init\+\_\+transmit} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} bus\+\_\+num, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} slave\+\_\+address)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{z1_2i2c_8c_ab2d7db5461c1567e12c0b2086ed5eda0}{i2c\+\_\+transmit} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} bus\+\_\+num, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} byte\+Count, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$field)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{z1_2i2c_8c_a04dd9ecbe927e1dd316b2a7687be0388}{i2c\+\_\+init\+\_\+receive} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} bus\+\_\+num, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} slave\+\_\+address)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{z1_2i2c_8c_ac9c7e8b51ec1a619d405c89e0560a0a6}{i2c\+\_\+receive} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} bus\+\_\+num, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} byte\+Count, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$field)
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{z1_2i2c_8c_a00fc1e1b089ad67acba2850e74813d98}{i2c\+\_\+busy} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} bus\+\_\+num)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i2_c_ga5730d9445429351b9f750084c5cb5aae}{i2c\+\_\+init} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i2_c_ga3d674f0d94dcf5c755869bc6762dafef}{i2c\+\_\+write\+\_\+register} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} bus\+\_\+num, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} slave\+\_\+addr, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} length, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$data)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i2_c_ga460462394097795883ce49312648f8a6}{i2c\+\_\+read\+\_\+registers} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} bus\+\_\+num, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} slave\+\_\+addr, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} reg\+\_\+addr, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} num\+Bytes, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$space\+To\+Write)
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{group___i2_c_ga8f793e884b17bebb70615748dbf6434a}{i2c\+\_\+slave\+\_\+present} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} bus\+\_\+num, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} slave\+\_\+address)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i2_c_gab51d1ed9826f852ce34df92b6ab3bab5}{isr\+\_\+i2c\+\_\+rx} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} bus\+\_\+num)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i2_c_gaec8c11d47885868ae7931ad990d5db74}{isr\+\_\+i2c\+\_\+tx} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} bus\+\_\+num)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>volatile \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\_t} $\ast$ \hyperlink{z1_2i2c_8c_a77bc9609fb269ec25d4e702525b8f941}{ctl0} \mbox{[}2\mbox{]}\\
+\>volatile \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\_t} $\ast$ \hyperlink{z1_2i2c_8c_aff09859755b91bd24180dac396acae51}{ctl1} \mbox{[}2\mbox{]}\\
+\>volatile \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\_t} $\ast$ \hyperlink{z1_2i2c_8c_a560a2eebdb758004723960a7396b4b52}{br0} \mbox{[}2\mbox{]}\\
+\>volatile \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\_t} $\ast$ \hyperlink{z1_2i2c_8c_a020fb721eecd761aff42e84d9a0078de}{br1} \mbox{[}2\mbox{]}\\
+\>volatile \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\_t} $\ast$ \hyperlink{z1_2i2c_8c_a0e54d9ea2e3bfc9c1c96db2b5dfd881f}{i2cie} \mbox{[}2\mbox{]}\\
+\>volatile \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\_t} $\ast$ \hyperlink{z1_2i2c_8c_a68ba768d8b35bb1023d2bd1024605510}{stat} \mbox{[}2\mbox{]}\\
+\>volatile \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\_t} $\ast$ \hyperlink{z1_2i2c_8c_a1516447e451c9d7b7faa91d54fdf0469}{txbuf} \mbox{[}2\mbox{]}\\
+\>volatile const \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\_t} $\ast$ \hyperlink{z1_2i2c_8c_ab49e2360f2f51e957ca2caff26725265}{rxbuf} \mbox{[}2\mbox{]}\\
+\>volatile unsigned short $\ast$ \hyperlink{z1_2i2c_8c_a2dcea56c9c1c37c7f87763810a8ea35e}{i2csa} \mbox{[}2\mbox{]}\\
+\>volatile \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\_t} $\ast$ \hyperlink{z1_2i2c_8c_a9f33b3195a1fecb0b114222456959431}{port} \mbox{[}2\mbox{]}\\
+\>volatile \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\_t} $\ast$ \hyperlink{z1_2i2c_8c_ad0f215f5ecf354343567d19a8dc48aef}{ie} \mbox{[}2\mbox{]}\\
+\>\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\_t} \hyperlink{z1_2i2c_8c_a396ae62a5f95cb620de2bd3a8e064836}{ierx} \mbox{[}2\mbox{]}\\
+\>\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\_t} \hyperlink{z1_2i2c_8c_a80ab0d4afa923e6170aeebf7f4d9c8b9}{ietx} \mbox{[}2\mbox{]}\\
+\>volatile \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\_t} $\ast$ \hyperlink{z1_2i2c_8c_aec5ea67d8a0b695bf1a03479adcd04d3}{iflag} \mbox{[}2\mbox{]}\\
+\>\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\_t} \hyperlink{z1_2i2c_8c_a23e7f33d2f40e09555f582af4a26fa05}{iflagrx} \mbox{[}2\mbox{]}\\
+\>\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\_t} \hyperlink{z1_2i2c_8c_a73d6500c11423bde4ecf42f5cce53191}{iflagtx} \mbox{[}2\mbox{]}\\
+\} \hyperlink{z1_2i2c_8c_a02ab1c0ecdccc447f4db108dbd4f478e}{i2c\_control}\\
+
+\end{tabbing}\begin{DoxyCompactList}\small\item\em Z1-\/specific definition of the \char`\"{}\+I2\+C\char`\"{} bsp module. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$ \hyperlink{z1_2i2c_8c_a091170c3f6c22f751c98f039875be97b}{T\+I\+\_\+transmit\+\_\+field}
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$ \hyperlink{z1_2i2c_8c_a776dbfe488a8536f08fe2744650595da}{T\+I\+\_\+receive\+\_\+field}
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{z1_2i2c_8c_aeed88751c92a0367707340861e4d77ca}{byte\+Ctr}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{z1/i2c.\+c@{z1/i2c.\+c}!i2c\+\_\+busy@{i2c\+\_\+busy}}
+\index{i2c\+\_\+busy@{i2c\+\_\+busy}!z1/i2c.\+c@{z1/i2c.\+c}}
+\subsubsection[{\texorpdfstring{i2c\+\_\+busy(uint8\+\_\+t bus\+\_\+num)}{i2c_busy(uint8_t bus_num)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} i2c\+\_\+busy (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{bus\+\_\+num}
+\end{DoxyParamCaption}
+)}\hypertarget{z1_2i2c_8c_a00fc1e1b089ad67acba2850e74813d98}{}\label{z1_2i2c_8c_a00fc1e1b089ad67acba2850e74813d98}
+This function is used to check if there is commuincation in progress. O\+UT\+: uint8\+\_\+t =$>$ 0\+: I2C bus is idle, 1\+: communication is in progress 
+
+Definition at line 256 of file i2c.\+c.
+
+\index{z1/i2c.\+c@{z1/i2c.\+c}!i2c\+\_\+init\+\_\+receive@{i2c\+\_\+init\+\_\+receive}}
+\index{i2c\+\_\+init\+\_\+receive@{i2c\+\_\+init\+\_\+receive}!z1/i2c.\+c@{z1/i2c.\+c}}
+\subsubsection[{\texorpdfstring{i2c\+\_\+init\+\_\+receive(uint8\+\_\+t bus\+\_\+num, uint8\+\_\+t slave\+\_\+address)}{i2c_init_receive(uint8_t bus_num, uint8_t slave_address)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} i2c\+\_\+init\+\_\+receive (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{bus\+\_\+num, }
+\item[{{\bf uint8\+\_\+t}}]{slave\+\_\+address}
+\end{DoxyParamCaption}
+)}\hypertarget{z1_2i2c_8c_a04dd9ecbe927e1dd316b2a7687be0388}{}\label{z1_2i2c_8c_a04dd9ecbe927e1dd316b2a7687be0388}
+This function initializes the U\+S\+CI module for master-\/receive operation.
+
+IN\+: uint8\+\_\+t slave\+\_\+address =$>$ Slave Address 
+
+Definition at line 215 of file i2c.\+c.
+
+\index{z1/i2c.\+c@{z1/i2c.\+c}!i2c\+\_\+init\+\_\+transmit@{i2c\+\_\+init\+\_\+transmit}}
+\index{i2c\+\_\+init\+\_\+transmit@{i2c\+\_\+init\+\_\+transmit}!z1/i2c.\+c@{z1/i2c.\+c}}
+\subsubsection[{\texorpdfstring{i2c\+\_\+init\+\_\+transmit(uint8\+\_\+t bus\+\_\+num, uint8\+\_\+t slave\+\_\+address)}{i2c_init_transmit(uint8_t bus_num, uint8_t slave_address)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} i2c\+\_\+init\+\_\+transmit (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{bus\+\_\+num, }
+\item[{{\bf uint8\+\_\+t}}]{slave\+\_\+address}
+\end{DoxyParamCaption}
+)}\hypertarget{z1_2i2c_8c_a6c04a54e52e419eef01d7de003e69b75}{}\label{z1_2i2c_8c_a6c04a54e52e419eef01d7de003e69b75}
+This function initializes the U\+S\+CI module for master-\/transmit operation.
+
+IN\+: uint8\+\_\+t slave\+\_\+address =$>$ Slave Address 
+
+Definition at line 185 of file i2c.\+c.
+
+\index{z1/i2c.\+c@{z1/i2c.\+c}!i2c\+\_\+receive@{i2c\+\_\+receive}}
+\index{i2c\+\_\+receive@{i2c\+\_\+receive}!z1/i2c.\+c@{z1/i2c.\+c}}
+\subsubsection[{\texorpdfstring{i2c\+\_\+receive(uint8\+\_\+t bus\+\_\+num, uint8\+\_\+t byte\+Count, uint8\+\_\+t $\ast$field)}{i2c_receive(uint8_t bus_num, uint8_t byteCount, uint8_t *field)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} i2c\+\_\+receive (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{bus\+\_\+num, }
+\item[{{\bf uint8\+\_\+t}}]{byte\+Count, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{field}
+\end{DoxyParamCaption}
+)}\hypertarget{z1_2i2c_8c_ac9c7e8b51ec1a619d405c89e0560a0a6}{}\label{z1_2i2c_8c_ac9c7e8b51ec1a619d405c89e0560a0a6}
+This function is used to start an I2C commuincation in master-\/receiver mode.
+
+IN\+: uint8\+\_\+t byte\+Count =$>$ number of bytes that should be read uint8\+\_\+t$\ast$ field =$>$ array variable used to store received data 
+
+Definition at line 234 of file i2c.\+c.
+
+\index{z1/i2c.\+c@{z1/i2c.\+c}!i2c\+\_\+transmit@{i2c\+\_\+transmit}}
+\index{i2c\+\_\+transmit@{i2c\+\_\+transmit}!z1/i2c.\+c@{z1/i2c.\+c}}
+\subsubsection[{\texorpdfstring{i2c\+\_\+transmit(uint8\+\_\+t bus\+\_\+num, uint8\+\_\+t byte\+Count, uint8\+\_\+t $\ast$field)}{i2c_transmit(uint8_t bus_num, uint8_t byteCount, uint8_t *field)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} i2c\+\_\+transmit (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{bus\+\_\+num, }
+\item[{{\bf uint8\+\_\+t}}]{byte\+Count, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{field}
+\end{DoxyParamCaption}
+)}\hypertarget{z1_2i2c_8c_ab2d7db5461c1567e12c0b2086ed5eda0}{}\label{z1_2i2c_8c_ab2d7db5461c1567e12c0b2086ed5eda0}
+This function is used to start an I2C commuincation in master-\/transmit mode.
+
+IN\+: uint8\+\_\+t byte\+Count =$>$ number of bytes that should be transmitted uint8\+\_\+t $\ast$field =$>$ array variable. Its content will be sent. 
+
+Definition at line 204 of file i2c.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{z1/i2c.\+c@{z1/i2c.\+c}!br0@{br0}}
+\index{br0@{br0}!z1/i2c.\+c@{z1/i2c.\+c}}
+\subsubsection[{\texorpdfstring{br0}{br0}}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf uint8\+\_\+t}$\ast$ br0\mbox{[}2\mbox{]}}\hypertarget{z1_2i2c_8c_a560a2eebdb758004723960a7396b4b52}{}\label{z1_2i2c_8c_a560a2eebdb758004723960a7396b4b52}
+
+
+Definition at line 25 of file i2c.\+c.
+
+\index{z1/i2c.\+c@{z1/i2c.\+c}!br1@{br1}}
+\index{br1@{br1}!z1/i2c.\+c@{z1/i2c.\+c}}
+\subsubsection[{\texorpdfstring{br1}{br1}}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf uint8\+\_\+t}$\ast$ br1\mbox{[}2\mbox{]}}\hypertarget{z1_2i2c_8c_a020fb721eecd761aff42e84d9a0078de}{}\label{z1_2i2c_8c_a020fb721eecd761aff42e84d9a0078de}
+
+
+Definition at line 26 of file i2c.\+c.
+
+\index{z1/i2c.\+c@{z1/i2c.\+c}!byte\+Ctr@{byte\+Ctr}}
+\index{byte\+Ctr@{byte\+Ctr}!z1/i2c.\+c@{z1/i2c.\+c}}
+\subsubsection[{\texorpdfstring{byte\+Ctr}{byteCtr}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} byte\+Ctr}\hypertarget{z1_2i2c_8c_aeed88751c92a0367707340861e4d77ca}{}\label{z1_2i2c_8c_aeed88751c92a0367707340861e4d77ca}
+
+
+Definition at line 46 of file i2c.\+c.
+
+\index{z1/i2c.\+c@{z1/i2c.\+c}!ctl0@{ctl0}}
+\index{ctl0@{ctl0}!z1/i2c.\+c@{z1/i2c.\+c}}
+\subsubsection[{\texorpdfstring{ctl0}{ctl0}}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf uint8\+\_\+t}$\ast$ ctl0\mbox{[}2\mbox{]}}\hypertarget{z1_2i2c_8c_a77bc9609fb269ec25d4e702525b8f941}{}\label{z1_2i2c_8c_a77bc9609fb269ec25d4e702525b8f941}
+
+
+Definition at line 23 of file i2c.\+c.
+
+\index{z1/i2c.\+c@{z1/i2c.\+c}!ctl1@{ctl1}}
+\index{ctl1@{ctl1}!z1/i2c.\+c@{z1/i2c.\+c}}
+\subsubsection[{\texorpdfstring{ctl1}{ctl1}}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf uint8\+\_\+t}$\ast$ ctl1\mbox{[}2\mbox{]}}\hypertarget{z1_2i2c_8c_aff09859755b91bd24180dac396acae51}{}\label{z1_2i2c_8c_aff09859755b91bd24180dac396acae51}
+
+
+Definition at line 24 of file i2c.\+c.
+
+\index{z1/i2c.\+c@{z1/i2c.\+c}!i2c\+\_\+control@{i2c\+\_\+control}}
+\index{i2c\+\_\+control@{i2c\+\_\+control}!z1/i2c.\+c@{z1/i2c.\+c}}
+\subsubsection[{\texorpdfstring{i2c\+\_\+control}{i2c_control}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   i2c\+\_\+control}\hypertarget{z1_2i2c_8c_a02ab1c0ecdccc447f4db108dbd4f478e}{}\label{z1_2i2c_8c_a02ab1c0ecdccc447f4db108dbd4f478e}
+
+
+Z1-\/specific definition of the \char`\"{}\+I2\+C\char`\"{} bsp module. 
+
+The driver for the I2C bus, initialy downloaded from Texas Instruments, were heavily modified since.
+
+\begin{DoxyAuthor}{Author}
+Uli Kretzschmar, Texas Instruments Deutschland GmbH, November 2007 
+
+Hoam Chung, June 2010. 
+
+Leo Keselman \href{mailto:lkeselman@berkeley.edu}{\tt lkeselman@berkeley.\+edu}, July 2010. 
+
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, August 2010. 
+
+Xavier Vilajosana \href{mailto:xvilajosana@eecs.berkeley.edu}{\tt xvilajosana@eecs.\+berkeley.\+edu}, May 2013. Table of control registers. 
+\end{DoxyAuthor}
+\index{z1/i2c.\+c@{z1/i2c.\+c}!i2cie@{i2cie}}
+\index{i2cie@{i2cie}!z1/i2c.\+c@{z1/i2c.\+c}}
+\subsubsection[{\texorpdfstring{i2cie}{i2cie}}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf uint8\+\_\+t}$\ast$ i2cie\mbox{[}2\mbox{]}}\hypertarget{z1_2i2c_8c_a0e54d9ea2e3bfc9c1c96db2b5dfd881f}{}\label{z1_2i2c_8c_a0e54d9ea2e3bfc9c1c96db2b5dfd881f}
+
+
+Definition at line 27 of file i2c.\+c.
+
+\index{z1/i2c.\+c@{z1/i2c.\+c}!i2csa@{i2csa}}
+\index{i2csa@{i2csa}!z1/i2c.\+c@{z1/i2c.\+c}}
+\subsubsection[{\texorpdfstring{i2csa}{i2csa}}]{\setlength{\rightskip}{0pt plus 5cm}volatile unsigned short$\ast$ i2csa\mbox{[}2\mbox{]}}\hypertarget{z1_2i2c_8c_a2dcea56c9c1c37c7f87763810a8ea35e}{}\label{z1_2i2c_8c_a2dcea56c9c1c37c7f87763810a8ea35e}
+
+
+Definition at line 31 of file i2c.\+c.
+
+\index{z1/i2c.\+c@{z1/i2c.\+c}!ie@{ie}}
+\index{ie@{ie}!z1/i2c.\+c@{z1/i2c.\+c}}
+\subsubsection[{\texorpdfstring{ie}{ie}}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf uint8\+\_\+t}$\ast$ ie\mbox{[}2\mbox{]}}\hypertarget{z1_2i2c_8c_ad0f215f5ecf354343567d19a8dc48aef}{}\label{z1_2i2c_8c_ad0f215f5ecf354343567d19a8dc48aef}
+
+
+Definition at line 35 of file i2c.\+c.
+
+\index{z1/i2c.\+c@{z1/i2c.\+c}!ierx@{ierx}}
+\index{ierx@{ierx}!z1/i2c.\+c@{z1/i2c.\+c}}
+\subsubsection[{\texorpdfstring{ierx}{ierx}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} ierx\mbox{[}2\mbox{]}}\hypertarget{z1_2i2c_8c_a396ae62a5f95cb620de2bd3a8e064836}{}\label{z1_2i2c_8c_a396ae62a5f95cb620de2bd3a8e064836}
+
+
+Definition at line 36 of file i2c.\+c.
+
+\index{z1/i2c.\+c@{z1/i2c.\+c}!ietx@{ietx}}
+\index{ietx@{ietx}!z1/i2c.\+c@{z1/i2c.\+c}}
+\subsubsection[{\texorpdfstring{ietx}{ietx}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} ietx\mbox{[}2\mbox{]}}\hypertarget{z1_2i2c_8c_a80ab0d4afa923e6170aeebf7f4d9c8b9}{}\label{z1_2i2c_8c_a80ab0d4afa923e6170aeebf7f4d9c8b9}
+
+
+Definition at line 37 of file i2c.\+c.
+
+\index{z1/i2c.\+c@{z1/i2c.\+c}!iflag@{iflag}}
+\index{iflag@{iflag}!z1/i2c.\+c@{z1/i2c.\+c}}
+\subsubsection[{\texorpdfstring{iflag}{iflag}}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf uint8\+\_\+t}$\ast$ iflag\mbox{[}2\mbox{]}}\hypertarget{z1_2i2c_8c_aec5ea67d8a0b695bf1a03479adcd04d3}{}\label{z1_2i2c_8c_aec5ea67d8a0b695bf1a03479adcd04d3}
+
+
+Definition at line 39 of file i2c.\+c.
+
+\index{z1/i2c.\+c@{z1/i2c.\+c}!iflagrx@{iflagrx}}
+\index{iflagrx@{iflagrx}!z1/i2c.\+c@{z1/i2c.\+c}}
+\subsubsection[{\texorpdfstring{iflagrx}{iflagrx}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} iflagrx\mbox{[}2\mbox{]}}\hypertarget{z1_2i2c_8c_a23e7f33d2f40e09555f582af4a26fa05}{}\label{z1_2i2c_8c_a23e7f33d2f40e09555f582af4a26fa05}
+
+
+Definition at line 40 of file i2c.\+c.
+
+\index{z1/i2c.\+c@{z1/i2c.\+c}!iflagtx@{iflagtx}}
+\index{iflagtx@{iflagtx}!z1/i2c.\+c@{z1/i2c.\+c}}
+\subsubsection[{\texorpdfstring{iflagtx}{iflagtx}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} iflagtx\mbox{[}2\mbox{]}}\hypertarget{z1_2i2c_8c_a73d6500c11423bde4ecf42f5cce53191}{}\label{z1_2i2c_8c_a73d6500c11423bde4ecf42f5cce53191}
+
+
+Definition at line 41 of file i2c.\+c.
+
+\index{z1/i2c.\+c@{z1/i2c.\+c}!port@{port}}
+\index{port@{port}!z1/i2c.\+c@{z1/i2c.\+c}}
+\subsubsection[{\texorpdfstring{port}{port}}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf uint8\+\_\+t}$\ast$ port\mbox{[}2\mbox{]}}\hypertarget{z1_2i2c_8c_a9f33b3195a1fecb0b114222456959431}{}\label{z1_2i2c_8c_a9f33b3195a1fecb0b114222456959431}
+
+
+Definition at line 33 of file i2c.\+c.
+
+\index{z1/i2c.\+c@{z1/i2c.\+c}!rxbuf@{rxbuf}}
+\index{rxbuf@{rxbuf}!z1/i2c.\+c@{z1/i2c.\+c}}
+\subsubsection[{\texorpdfstring{rxbuf}{rxbuf}}]{\setlength{\rightskip}{0pt plus 5cm}volatile const {\bf uint8\+\_\+t}$\ast$ rxbuf\mbox{[}2\mbox{]}}\hypertarget{z1_2i2c_8c_ab49e2360f2f51e957ca2caff26725265}{}\label{z1_2i2c_8c_ab49e2360f2f51e957ca2caff26725265}
+
+
+Definition at line 30 of file i2c.\+c.
+
+\index{z1/i2c.\+c@{z1/i2c.\+c}!stat@{stat}}
+\index{stat@{stat}!z1/i2c.\+c@{z1/i2c.\+c}}
+\subsubsection[{\texorpdfstring{stat}{stat}}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf uint8\+\_\+t}$\ast$ stat\mbox{[}2\mbox{]}}\hypertarget{z1_2i2c_8c_a68ba768d8b35bb1023d2bd1024605510}{}\label{z1_2i2c_8c_a68ba768d8b35bb1023d2bd1024605510}
+
+
+Definition at line 28 of file i2c.\+c.
+
+\index{z1/i2c.\+c@{z1/i2c.\+c}!T\+I\+\_\+receive\+\_\+field@{T\+I\+\_\+receive\+\_\+field}}
+\index{T\+I\+\_\+receive\+\_\+field@{T\+I\+\_\+receive\+\_\+field}!z1/i2c.\+c@{z1/i2c.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+\_\+receive\+\_\+field}{TI_receive_field}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t}$\ast$ T\+I\+\_\+receive\+\_\+field}\hypertarget{z1_2i2c_8c_a776dbfe488a8536f08fe2744650595da}{}\label{z1_2i2c_8c_a776dbfe488a8536f08fe2744650595da}
+
+
+Definition at line 45 of file i2c.\+c.
+
+\index{z1/i2c.\+c@{z1/i2c.\+c}!T\+I\+\_\+transmit\+\_\+field@{T\+I\+\_\+transmit\+\_\+field}}
+\index{T\+I\+\_\+transmit\+\_\+field@{T\+I\+\_\+transmit\+\_\+field}!z1/i2c.\+c@{z1/i2c.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+\_\+transmit\+\_\+field}{TI_transmit_field}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t}$\ast$ T\+I\+\_\+transmit\+\_\+field}\hypertarget{z1_2i2c_8c_a091170c3f6c22f751c98f039875be97b}{}\label{z1_2i2c_8c_a091170c3f6c22f751c98f039875be97b}
+
+
+Definition at line 44 of file i2c.\+c.
+
+\index{z1/i2c.\+c@{z1/i2c.\+c}!txbuf@{txbuf}}
+\index{txbuf@{txbuf}!z1/i2c.\+c@{z1/i2c.\+c}}
+\subsubsection[{\texorpdfstring{txbuf}{txbuf}}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf uint8\+\_\+t}$\ast$ txbuf\mbox{[}2\mbox{]}}\hypertarget{z1_2i2c_8c_a1516447e451c9d7b7faa91d54fdf0469}{}\label{z1_2i2c_8c_a1516447e451c9d7b7faa91d54fdf0469}
+
+
+Definition at line 29 of file i2c.\+c.
+

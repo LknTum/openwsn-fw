@@ -1,0 +1,100 @@
+\hypertarget{group__techo}{}\section{techo}
+\label{group__techo}\index{techo@{techo}}
+
+
+T\+CP Echo application.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__techo_ga7c68e1212de4939bceffd5329feafff1}{techo\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group__techo_ga616f0dcaca44162d6a8b0466891cf11e}{techo\+\_\+should\+Ilisten} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__techo_gaf2a0d94dcc4f719d7eeb11d67412e6ad}{techo\+\_\+receive} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__techo_ga77920a19728f549824d72b79c61cf664}{techo\+\_\+send\+Done} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{disk_8c_ad018a3100b2dabad325a0800152db297}{error})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__techo_gaab62fefb0961cacf5d0245ef48494666}{techo\+\_\+connect\+Done} (\hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{disk_8c_ad018a3100b2dabad325a0800152db297}{error})
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group__techo_ga58193890ff1d925fe56100a8ba7fa3c8}{techo\+\_\+debug\+Print} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+T\+CP Echo application. 
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, August 2010. 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\index{techo@{techo}!techo\+\_\+connect\+Done@{techo\+\_\+connect\+Done}}
+\index{techo\+\_\+connect\+Done@{techo\+\_\+connect\+Done}!techo@{techo}}
+\subsubsection[{\texorpdfstring{techo\+\_\+connect\+Done(owerror\+\_\+t error)}{techo_connectDone(owerror_t error)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} techo\+\_\+connect\+Done (
+\begin{DoxyParamCaption}
+\item[{{\bf owerror\+\_\+t}}]{error}
+\end{DoxyParamCaption}
+)}\hypertarget{group__techo_gaab62fefb0961cacf5d0245ef48494666}{}\label{group__techo_gaab62fefb0961cacf5d0245ef48494666}
+
+
+Definition at line 46 of file techo.\+c.
+
+\index{techo@{techo}!techo\+\_\+debug\+Print@{techo\+\_\+debug\+Print}}
+\index{techo\+\_\+debug\+Print@{techo\+\_\+debug\+Print}!techo@{techo}}
+\subsubsection[{\texorpdfstring{techo\+\_\+debug\+Print(void)}{techo_debugPrint(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} techo\+\_\+debug\+Print (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__techo_ga58193890ff1d925fe56100a8ba7fa3c8}{}\label{group__techo_ga58193890ff1d925fe56100a8ba7fa3c8}
+
+
+Definition at line 49 of file techo.\+c.
+
+\index{techo@{techo}!techo\+\_\+init@{techo\+\_\+init}}
+\index{techo\+\_\+init@{techo\+\_\+init}!techo@{techo}}
+\subsubsection[{\texorpdfstring{techo\+\_\+init(void)}{techo_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} techo\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__techo_ga7c68e1212de4939bceffd5329feafff1}{}\label{group__techo_ga7c68e1212de4939bceffd5329feafff1}
+
+
+Definition at line 13 of file techo.\+c.
+
+\index{techo@{techo}!techo\+\_\+receive@{techo\+\_\+receive}}
+\index{techo\+\_\+receive@{techo\+\_\+receive}!techo@{techo}}
+\subsubsection[{\texorpdfstring{techo\+\_\+receive(\+Open\+Queue\+Entry\+\_\+t $\ast$msg)}{techo_receive(OpenQueueEntry_t *msg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} techo\+\_\+receive (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{group__techo_gaf2a0d94dcc4f719d7eeb11d67412e6ad}{}\label{group__techo_gaf2a0d94dcc4f719d7eeb11d67412e6ad}
+
+
+Definition at line 20 of file techo.\+c.
+
+\index{techo@{techo}!techo\+\_\+send\+Done@{techo\+\_\+send\+Done}}
+\index{techo\+\_\+send\+Done@{techo\+\_\+send\+Done}!techo@{techo}}
+\subsubsection[{\texorpdfstring{techo\+\_\+send\+Done(\+Open\+Queue\+Entry\+\_\+t $\ast$msg, owerror\+\_\+t error)}{techo_sendDone(OpenQueueEntry_t *msg, owerror_t error)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} techo\+\_\+send\+Done (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg, }
+\item[{{\bf owerror\+\_\+t}}]{error}
+\end{DoxyParamCaption}
+)}\hypertarget{group__techo_ga77920a19728f549824d72b79c61cf664}{}\label{group__techo_ga77920a19728f549824d72b79c61cf664}
+
+
+Definition at line 34 of file techo.\+c.
+
+\index{techo@{techo}!techo\+\_\+should\+Ilisten@{techo\+\_\+should\+Ilisten}}
+\index{techo\+\_\+should\+Ilisten@{techo\+\_\+should\+Ilisten}!techo@{techo}}
+\subsubsection[{\texorpdfstring{techo\+\_\+should\+Ilisten(void)}{techo_shouldIlisten(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} techo\+\_\+should\+Ilisten (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__techo_ga616f0dcaca44162d6a8b0466891cf11e}{}\label{group__techo_ga616f0dcaca44162d6a8b0466891cf11e}
+
+
+Definition at line 16 of file techo.\+c.
+

@@ -1,0 +1,170 @@
+\hypertarget{openal__internal__common_8h}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/xpressohack/\+Open\+W\+S\+N\+\_\+\+O\+S/src/\+Open\+A\+L/internal/openal\+\_\+internal\+\_\+common.h File Reference}
+\label{openal__internal__common_8h}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/xpressohack/\+Open\+W\+S\+N\+\_\+\+O\+S/src/\+Open\+A\+L/internal/openal\+\_\+internal\+\_\+common.\+h@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/xpressohack/\+Open\+W\+S\+N\+\_\+\+O\+S/src/\+Open\+A\+L/internal/openal\+\_\+internal\+\_\+common.\+h}}
+{\ttfamily \#include \char`\"{}Free\+R\+T\+O\+S.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{openal__internal__common_8h_ac94fce83ea58f8eb7f0a05150d3f9003}{O\+P\+E\+N\+A\+L\+\_\+\+L\+IB}~\hyperlink{openal__app__manager_8h_a106af0e6c050fe0a1d2b604eb01150e5}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((section(\char`\"{}.open\+AL\char`\"{})))
+\item 
+\#define \hyperlink{openal__internal__common_8h_ab4ae27fa90e22639c55f19b45a288a65}{O\+P\+E\+N\+A\+L\+\_\+\+P\+U\+B\+D\+A\+TA}~\hyperlink{openal__app__manager_8h_a106af0e6c050fe0a1d2b604eb01150e5}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((section(\char`\"{}.open\+A\+L\+\_\+pubdata\char`\"{})))
+\item 
+\#define \hyperlink{openal__internal__common_8h_ab8068b5d76922102094cfc78dee62da4}{port\+R\+E\+S\+E\+T\+\_\+\+P\+R\+I\+V\+I\+L\+E\+GE}(x\+Running\+Privileged)~if( x\+Running\+Privileged != \hyperlink{projdefs_8h_af268cf937960eb029256bd9c4d949fbe}{pd\+T\+R\+UE} ) \+\_\+\+\_\+asm volatile ( \char`\"{} mrs r0, control \textbackslash{}n orr r0, \#1 \textbackslash{}n msr control, r0\char`\"{} \+:::\char`\"{}r0\char`\"{} )
+\item 
+\#define \hyperlink{openal__internal__common_8h_a73fc48f31af29526f4938fa16bc7f50b}{prv\+Is\+Privileged}()~(!(\+\_\+\+\_\+get\+\_\+\+C\+O\+N\+T\+R\+OL() \& 0x1))
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned int \hyperlink{openal__internal__common_8h_ac3df7cf3c8cb172a588adec881447d68}{U32}
+\item 
+typedef unsigned short \hyperlink{openal__internal__common_8h_adf928e51a60dba0df29d615401cc55a8}{U16}
+\item 
+typedef unsigned char \hyperlink{openal__internal__common_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8}
+\item 
+typedef unsigned char \hyperlink{openal__internal__common_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\+O\+OL}
+\item 
+typedef enum \hyperlink{openal__internal__common_8h_ae9359106fbf415b08abfac4a081b5a96}{openal\+\_\+error\+\_\+code\+\_\+t} \hyperlink{openal__internal__common_8h_ae0ade3cab709cda74bd8acc699d2a0da}{openal\+\_\+error\+\_\+code\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{openal__internal__common_8h_ae9359106fbf415b08abfac4a081b5a96}{openal\+\_\+error\+\_\+code\+\_\+t} \{ \\*
+\hyperlink{openal__internal__common_8h_ae9359106fbf415b08abfac4a081b5a96ac7f69f7c9e5aea9b8f54cf02870e2bf8}{S\+U\+C\+C\+E\+SS} = 0, 
+\hyperlink{openal__internal__common_8h_ae9359106fbf415b08abfac4a081b5a96a04f3ca555289f3e009949cf34f345b68}{I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+IN}, 
+\hyperlink{openal__internal__common_8h_ae9359106fbf415b08abfac4a081b5a96a946f6eff97a7e6db8d1dab6c0d0f5668}{P\+I\+N\+\_\+\+N\+O\+T\+\_\+\+C\+A\+P\+A\+B\+LE}, 
+\hyperlink{openal__internal__common_8h_ae9359106fbf415b08abfac4a081b5a96a8be44fbe6c26f7d9dbfef189087424ae}{P\+I\+N\+\_\+\+N\+O\+T\+\_\+\+O\+W\+N\+ER}, 
+\\*
+\hyperlink{openal__internal__common_8h_ae9359106fbf415b08abfac4a081b5a96a6b6973c6c4e6567ef0fe9c9e8df07be8}{P\+I\+N\+\_\+\+A\+C\+C\+E\+S\+S\+\_\+\+D\+E\+N\+I\+ED}, 
+\hyperlink{openal__internal__common_8h_ae9359106fbf415b08abfac4a081b5a96a3f837e17664f9022b54d6afe6d8af805}{U\+N\+K\+N\+O\+W\+N\+\_\+\+C\+A\+L\+L\+ER}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_i_a_r_2_m_s_p430_2portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\+B\+A\+S\+E\+\_\+\+T\+Y\+PE} \hyperlink{openal__internal__common_8h_ade98a07be00cd54c604c157f654f7bc4}{prv\+Raise\+Privilege} () \hyperlink{openal__app__manager_8h_a106af0e6c050fe0a1d2b604eb01150e5}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((naked))
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned long \hyperlink{openal__internal__common_8h_ae25b56d219db42d80cb1b247d78bf277}{f\+\_\+cpu\+\_\+awake}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}!O\+P\+E\+N\+A\+L\+\_\+\+L\+IB@{O\+P\+E\+N\+A\+L\+\_\+\+L\+IB}}
+\index{O\+P\+E\+N\+A\+L\+\_\+\+L\+IB@{O\+P\+E\+N\+A\+L\+\_\+\+L\+IB}!openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}}
+\subsubsection[{\texorpdfstring{O\+P\+E\+N\+A\+L\+\_\+\+L\+IB}{OPENAL_LIB}}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\+P\+E\+N\+A\+L\+\_\+\+L\+IB~{\bf \+\_\+\+\_\+attribute\+\_\+\+\_\+}((section(\char`\"{}.open\+AL\char`\"{})))}\hypertarget{openal__internal__common_8h_ac94fce83ea58f8eb7f0a05150d3f9003}{}\label{openal__internal__common_8h_ac94fce83ea58f8eb7f0a05150d3f9003}
+
+
+Definition at line 13 of file openal\+\_\+internal\+\_\+common.\+h.
+
+\index{openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}!O\+P\+E\+N\+A\+L\+\_\+\+P\+U\+B\+D\+A\+TA@{O\+P\+E\+N\+A\+L\+\_\+\+P\+U\+B\+D\+A\+TA}}
+\index{O\+P\+E\+N\+A\+L\+\_\+\+P\+U\+B\+D\+A\+TA@{O\+P\+E\+N\+A\+L\+\_\+\+P\+U\+B\+D\+A\+TA}!openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}}
+\subsubsection[{\texorpdfstring{O\+P\+E\+N\+A\+L\+\_\+\+P\+U\+B\+D\+A\+TA}{OPENAL_PUBDATA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\+P\+E\+N\+A\+L\+\_\+\+P\+U\+B\+D\+A\+TA~{\bf \+\_\+\+\_\+attribute\+\_\+\+\_\+}((section(\char`\"{}.open\+A\+L\+\_\+pubdata\char`\"{})))}\hypertarget{openal__internal__common_8h_ab4ae27fa90e22639c55f19b45a288a65}{}\label{openal__internal__common_8h_ab4ae27fa90e22639c55f19b45a288a65}
+
+
+Definition at line 14 of file openal\+\_\+internal\+\_\+common.\+h.
+
+\index{openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}!port\+R\+E\+S\+E\+T\+\_\+\+P\+R\+I\+V\+I\+L\+E\+GE@{port\+R\+E\+S\+E\+T\+\_\+\+P\+R\+I\+V\+I\+L\+E\+GE}}
+\index{port\+R\+E\+S\+E\+T\+\_\+\+P\+R\+I\+V\+I\+L\+E\+GE@{port\+R\+E\+S\+E\+T\+\_\+\+P\+R\+I\+V\+I\+L\+E\+GE}!openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}}
+\subsubsection[{\texorpdfstring{port\+R\+E\+S\+E\+T\+\_\+\+P\+R\+I\+V\+I\+L\+E\+GE}{portRESET_PRIVILEGE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define port\+R\+E\+S\+E\+T\+\_\+\+P\+R\+I\+V\+I\+L\+E\+GE(
+\begin{DoxyParamCaption}
+\item[{}]{x\+Running\+Privileged}
+\end{DoxyParamCaption}
+)~if( x\+Running\+Privileged != {\bf pd\+T\+R\+UE} ) \+\_\+\+\_\+asm volatile ( \char`\"{} mrs r0, control \textbackslash{}n orr r0, \#1 \textbackslash{}n msr control, r0\char`\"{} \+:::\char`\"{}r0\char`\"{} )}\hypertarget{openal__internal__common_8h_ab8068b5d76922102094cfc78dee62da4}{}\label{openal__internal__common_8h_ab8068b5d76922102094cfc78dee62da4}
+
+
+Definition at line 38 of file openal\+\_\+internal\+\_\+common.\+h.
+
+\index{openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}!prv\+Is\+Privileged@{prv\+Is\+Privileged}}
+\index{prv\+Is\+Privileged@{prv\+Is\+Privileged}!openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}}
+\subsubsection[{\texorpdfstring{prv\+Is\+Privileged}{prvIsPrivileged}}]{\setlength{\rightskip}{0pt plus 5cm}\#define prv\+Is\+Privileged(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~(!(\+\_\+\+\_\+get\+\_\+\+C\+O\+N\+T\+R\+OL() \& 0x1))}\hypertarget{openal__internal__common_8h_a73fc48f31af29526f4938fa16bc7f50b}{}\label{openal__internal__common_8h_a73fc48f31af29526f4938fa16bc7f50b}
+
+
+Definition at line 39 of file openal\+\_\+internal\+\_\+common.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\index{openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}!B\+O\+OL@{B\+O\+OL}}
+\index{B\+O\+OL@{B\+O\+OL}!openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}}
+\subsubsection[{\texorpdfstring{B\+O\+OL}{BOOL}}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf B\+O\+OL}}\hypertarget{openal__internal__common_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{}\label{openal__internal__common_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}
+
+
+Definition at line 21 of file openal\+\_\+internal\+\_\+common.\+h.
+
+\index{openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}!openal\+\_\+error\+\_\+code\+\_\+t@{openal\+\_\+error\+\_\+code\+\_\+t}}
+\index{openal\+\_\+error\+\_\+code\+\_\+t@{openal\+\_\+error\+\_\+code\+\_\+t}!openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}}
+\subsubsection[{\texorpdfstring{openal\+\_\+error\+\_\+code\+\_\+t}{openal_error_code_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf openal\+\_\+error\+\_\+code\+\_\+t} {\bf openal\+\_\+error\+\_\+code\+\_\+t}}\hypertarget{openal__internal__common_8h_ae0ade3cab709cda74bd8acc699d2a0da}{}\label{openal__internal__common_8h_ae0ade3cab709cda74bd8acc699d2a0da}
+\index{openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}!U16@{U16}}
+\index{U16@{U16}!openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}}
+\subsubsection[{\texorpdfstring{U16}{U16}}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned short {\bf U16}}\hypertarget{openal__internal__common_8h_adf928e51a60dba0df29d615401cc55a8}{}\label{openal__internal__common_8h_adf928e51a60dba0df29d615401cc55a8}
+
+
+Definition at line 19 of file openal\+\_\+internal\+\_\+common.\+h.
+
+\index{openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}!U32@{U32}}
+\index{U32@{U32}!openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}}
+\subsubsection[{\texorpdfstring{U32}{U32}}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf U32}}\hypertarget{openal__internal__common_8h_ac3df7cf3c8cb172a588adec881447d68}{}\label{openal__internal__common_8h_ac3df7cf3c8cb172a588adec881447d68}
+
+
+Definition at line 18 of file openal\+\_\+internal\+\_\+common.\+h.
+
+\index{openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}!U8@{U8}}
+\index{U8@{U8}!openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}}
+\subsubsection[{\texorpdfstring{U8}{U8}}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf U8}}\hypertarget{openal__internal__common_8h_a3cb25ca6f51f003950f9625ff05536fc}{}\label{openal__internal__common_8h_a3cb25ca6f51f003950f9625ff05536fc}
+
+
+Definition at line 20 of file openal\+\_\+internal\+\_\+common.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\index{openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}!openal\+\_\+error\+\_\+code\+\_\+t@{openal\+\_\+error\+\_\+code\+\_\+t}}
+\index{openal\+\_\+error\+\_\+code\+\_\+t@{openal\+\_\+error\+\_\+code\+\_\+t}!openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}}
+\subsubsection[{\texorpdfstring{openal\+\_\+error\+\_\+code\+\_\+t}{openal_error_code_t}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf openal\+\_\+error\+\_\+code\+\_\+t}}\hypertarget{openal__internal__common_8h_ae9359106fbf415b08abfac4a081b5a96}{}\label{openal__internal__common_8h_ae9359106fbf415b08abfac4a081b5a96}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+U\+C\+C\+E\+SS@{S\+U\+C\+C\+E\+SS}!openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}}\index{openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}!S\+U\+C\+C\+E\+SS@{S\+U\+C\+C\+E\+SS}}\item[{\em 
+S\+U\+C\+C\+E\+SS\hypertarget{openal__internal__common_8h_ae9359106fbf415b08abfac4a081b5a96ac7f69f7c9e5aea9b8f54cf02870e2bf8}{}\label{openal__internal__common_8h_ae9359106fbf415b08abfac4a081b5a96ac7f69f7c9e5aea9b8f54cf02870e2bf8}
+}]\index{I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+IN@{I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+IN}!openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}}\index{openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}!I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+IN@{I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+IN}}\item[{\em 
+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+IN\hypertarget{openal__internal__common_8h_ae9359106fbf415b08abfac4a081b5a96a04f3ca555289f3e009949cf34f345b68}{}\label{openal__internal__common_8h_ae9359106fbf415b08abfac4a081b5a96a04f3ca555289f3e009949cf34f345b68}
+}]\index{P\+I\+N\+\_\+\+N\+O\+T\+\_\+\+C\+A\+P\+A\+B\+LE@{P\+I\+N\+\_\+\+N\+O\+T\+\_\+\+C\+A\+P\+A\+B\+LE}!openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}}\index{openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}!P\+I\+N\+\_\+\+N\+O\+T\+\_\+\+C\+A\+P\+A\+B\+LE@{P\+I\+N\+\_\+\+N\+O\+T\+\_\+\+C\+A\+P\+A\+B\+LE}}\item[{\em 
+P\+I\+N\+\_\+\+N\+O\+T\+\_\+\+C\+A\+P\+A\+B\+LE\hypertarget{openal__internal__common_8h_ae9359106fbf415b08abfac4a081b5a96a946f6eff97a7e6db8d1dab6c0d0f5668}{}\label{openal__internal__common_8h_ae9359106fbf415b08abfac4a081b5a96a946f6eff97a7e6db8d1dab6c0d0f5668}
+}]\index{P\+I\+N\+\_\+\+N\+O\+T\+\_\+\+O\+W\+N\+ER@{P\+I\+N\+\_\+\+N\+O\+T\+\_\+\+O\+W\+N\+ER}!openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}}\index{openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}!P\+I\+N\+\_\+\+N\+O\+T\+\_\+\+O\+W\+N\+ER@{P\+I\+N\+\_\+\+N\+O\+T\+\_\+\+O\+W\+N\+ER}}\item[{\em 
+P\+I\+N\+\_\+\+N\+O\+T\+\_\+\+O\+W\+N\+ER\hypertarget{openal__internal__common_8h_ae9359106fbf415b08abfac4a081b5a96a8be44fbe6c26f7d9dbfef189087424ae}{}\label{openal__internal__common_8h_ae9359106fbf415b08abfac4a081b5a96a8be44fbe6c26f7d9dbfef189087424ae}
+}]\index{P\+I\+N\+\_\+\+A\+C\+C\+E\+S\+S\+\_\+\+D\+E\+N\+I\+ED@{P\+I\+N\+\_\+\+A\+C\+C\+E\+S\+S\+\_\+\+D\+E\+N\+I\+ED}!openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}}\index{openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}!P\+I\+N\+\_\+\+A\+C\+C\+E\+S\+S\+\_\+\+D\+E\+N\+I\+ED@{P\+I\+N\+\_\+\+A\+C\+C\+E\+S\+S\+\_\+\+D\+E\+N\+I\+ED}}\item[{\em 
+P\+I\+N\+\_\+\+A\+C\+C\+E\+S\+S\+\_\+\+D\+E\+N\+I\+ED\hypertarget{openal__internal__common_8h_ae9359106fbf415b08abfac4a081b5a96a6b6973c6c4e6567ef0fe9c9e8df07be8}{}\label{openal__internal__common_8h_ae9359106fbf415b08abfac4a081b5a96a6b6973c6c4e6567ef0fe9c9e8df07be8}
+}]\index{U\+N\+K\+N\+O\+W\+N\+\_\+\+C\+A\+L\+L\+ER@{U\+N\+K\+N\+O\+W\+N\+\_\+\+C\+A\+L\+L\+ER}!openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}}\index{openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}!U\+N\+K\+N\+O\+W\+N\+\_\+\+C\+A\+L\+L\+ER@{U\+N\+K\+N\+O\+W\+N\+\_\+\+C\+A\+L\+L\+ER}}\item[{\em 
+U\+N\+K\+N\+O\+W\+N\+\_\+\+C\+A\+L\+L\+ER\hypertarget{openal__internal__common_8h_ae9359106fbf415b08abfac4a081b5a96a3f837e17664f9022b54d6afe6d8af805}{}\label{openal__internal__common_8h_ae9359106fbf415b08abfac4a081b5a96a3f837e17664f9022b54d6afe6d8af805}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 23 of file openal\+\_\+internal\+\_\+common.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}!prv\+Raise\+Privilege@{prv\+Raise\+Privilege}}
+\index{prv\+Raise\+Privilege@{prv\+Raise\+Privilege}!openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}}
+\subsubsection[{\texorpdfstring{prv\+Raise\+Privilege() \+\_\+\+\_\+attribute\+\_\+\+\_\+((naked))}{prvRaisePrivilege() __attribute__((naked))}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+B\+A\+S\+E\+\_\+\+T\+Y\+PE} prv\+Raise\+Privilege (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{openal__internal__common_8h_ade98a07be00cd54c604c157f654f7bc4}{}\label{openal__internal__common_8h_ade98a07be00cd54c604c157f654f7bc4}
+
+
+\subsection{Variable Documentation}
+\index{openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}!f\+\_\+cpu\+\_\+awake@{f\+\_\+cpu\+\_\+awake}}
+\index{f\+\_\+cpu\+\_\+awake@{f\+\_\+cpu\+\_\+awake}!openal\+\_\+internal\+\_\+common.\+h@{openal\+\_\+internal\+\_\+common.\+h}}
+\subsubsection[{\texorpdfstring{f\+\_\+cpu\+\_\+awake}{f_cpu_awake}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long f\+\_\+cpu\+\_\+awake}\hypertarget{openal__internal__common_8h_ae25b56d219db42d80cb1b247d78bf277}{}\label{openal__internal__common_8h_ae25b56d219db42d80cb1b247d78bf277}
+
+
+Definition at line 26 of file main.\+c.
+

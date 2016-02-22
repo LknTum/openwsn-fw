@@ -45,7 +45,11 @@ We modified the define in @ref opendefs.h in order to enable the DAG root state 
 @section TSCH_scheduling TSCH scheduling
 We enabled a DAG root based scheduling by modifying the files @ref schedule.c and @ref schedule.h .
 
-The setup applied in @ref schedule.h is:
+The setup applied in @ref schedule.h by modifying the following frame parameters:
 @snippet openstack/02b-MAChigh/schedule.h LKN-scheduling-setting
+
+The scheduling of the network is computed by the DAG root. In the function @ref schedule_startDAGroot the scheduling is applied iteratively in this way:
+
+@snippet openstack/02b-MAChigh/schedule.c LKN-DAG-scheduling
 
 */

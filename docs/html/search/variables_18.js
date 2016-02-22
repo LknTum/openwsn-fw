@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['xblocksize',['xBlockSize',['../struct_a___b_l_o_c_k___l_i_n_k.html#ad5dcf5df03d8be6186c567be9e2c657b',1,'A_BLOCK_LINK']]],
+  ['xeventlistitem',['xEventListItem',['../structcor_co_routine_control_block.html#a105d316da0069f766acc3b210afed1b9',1,'corCoRoutineControlBlock::xEventListItem()'],['../structtsk_task_control_block.html#a1a1612b6081a13683808284d93a9b28f',1,'tskTaskControlBlock::xEventListItem()']]],
+  ['xfertyp',['XFERTYP',['../struct_s_d_h_c___mem_map.html#ad6c008e044af83f7411e51258f111c48',1,'SDHC_MemMap']]],
+  ['xgenericlistitem',['xGenericListItem',['../structcor_co_routine_control_block.html#aa2900494db8782eeb8ef12d482501406',1,'corCoRoutineControlBlock::xGenericListItem()'],['../structtsk_task_control_block.html#af331a67daadbafd0e66098e8111cfa4b',1,'tskTaskControlBlock::xGenericListItem()']]],
+  ['xhandle',['xHandle',['../structx_t_a_s_k___s_t_a_t_u_s.html#ac57f825f365c3c64bba827285fe3c2a0',1,'xTASK_STATUS']]],
+  ['xitemvalue',['xItemValue',['../structx_l_i_s_t___i_t_e_m.html#a943ec2a4a53818cbc380079cb33c8e59',1,'xLIST_ITEM::xItemValue()'],['../structx_m_i_n_i___l_i_s_t___i_t_e_m.html#a0d87493ffe2e7ff2e3218262e57826c9',1,'xMINI_LIST_ITEM::xItemValue()']]],
+  ['xlistend',['xListEnd',['../structx_l_i_s_t.html#a49ad62fa153126e27e273811167b336a',1,'xLIST']]],
+  ['xosc16m_5fbypass',['XOSC16M_BYPASS',['../structcc2420___m_a_i_n__reg__t.html#ace5da77e8fc9d86705cd6db2680ff631',1,'cc2420_MAIN_reg_t']]],
+  ['xosc16m_5fpd',['XOSC16M_PD',['../structcc2420___m_a_n_a_n_d__reg__t.html#a59782ff31c795916a56bba1f4b30243f',1,'cc2420_MANAND_reg_t::XOSC16M_PD()'],['../structcc2420___m_a_n_o_r__reg__t.html#a65b9c3b2a1362215e9d3045ed74dcd1d',1,'cc2420_MANOR_reg_t::XOSC16M_PD()']]],
+  ['xosc16m_5fstable',['xosc16m_stable',['../structcc2420__status__t.html#acbd70cdcf05944ea2b21b11b235d5d7a',1,'cc2420_status_t']]],
+  ['xosc_5fforce_5fon',['XOSC_FORCE_ON',['../structcc1101___m_c_s_m0__reg__t.html#a3705b849fe23ee3667ad3ae0336dae98',1,'cc1101_MCSM0_reg_t']]],
+  ['xoverflowcount',['xOverflowCount',['../structx_t_i_m_e___o_u_t.html#a9289c6f97096a9b3e3fc705d0bc5a160',1,'xTIME_OUT']]],
+  ['xregions',['xRegions',['../structx_t_a_s_k___p_a_r_a_m_e_t_e_r_s.html#ae8b97c6b7a344bf09b066b0844844d66',1,'xTASK_PARAMETERS']]],
+  ['xrxlock',['xRxLock',['../struct_queue_definition.html#acfda1aacb3043fab24087782f996dc8b',1,'QueueDefinition']]],
+  ['xsizeinbytes',['xSizeInBytes',['../struct_heap_region.html#a5933b0fd422e70a92ceef839b89a757f',1,'HeapRegion']]],
+  ['xtasknumber',['xTaskNumber',['../structx_t_a_s_k___s_t_a_t_u_s.html#acd44468ba37270b04f83d0833c098057',1,'xTASK_STATUS']]],
+  ['xtaskswaitingforbits',['xTasksWaitingForBits',['../structx_event_group_definition.html#a6570ba98d93dcba9cb03de0c62df9044',1,'xEventGroupDefinition']]],
+  ['xtaskswaitingtoreceive',['xTasksWaitingToReceive',['../struct_queue_definition.html#af6d61526f77beee659cd604a0c473359',1,'QueueDefinition']]],
+  ['xtaskswaitingtosend',['xTasksWaitingToSend',['../struct_queue_definition.html#aaab135c4345cb0393d6ff3cd5164c7b2',1,'QueueDefinition']]],
+  ['xtimeonentering',['xTimeOnEntering',['../structx_t_i_m_e___o_u_t.html#a3464939ca050f7bcc6ffe0d8d3766337',1,'xTIME_OUT']]],
+  ['xtxlock',['xTxLock',['../struct_queue_definition.html#a96013417532d70900fb608f5926d8043',1,'QueueDefinition']]],
+  ['xx',['XX',['../intersection_8c.html#a48b094ef95eb079a751b19eb7d16b46e',1,'intersection.c']]]
+];

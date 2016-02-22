@@ -1,0 +1,260 @@
+\hypertarget{group___open_timers}{}\section{Open\+Timers}
+\label{group___open_timers}\index{Open\+Timers@{Open\+Timers}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structopentimers__t}{opentimers\+\_\+t}
+\item 
+struct \hyperlink{structopentimers__vars__t}{opentimers\+\_\+vars\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___open_timers_gaacf8ae36c6e504e7361613a7d9a85d69}{M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+T\+I\+M\+E\+RS}~10
+\begin{DoxyCompactList}\small\item\em Maximum number of timers that can run concurrently. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___open_timers_ga9561941a53acd6abd5d0501eddefc2ad}{M\+A\+X\+\_\+\+T\+I\+C\+K\+S\+\_\+\+I\+N\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+C\+L\+O\+CK}~((\hyperlink{z1_2board__info_8h_abe66b9c1c60db84f2a99f2b827275f24}{P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH})0x\+F\+F\+F\+F\+F\+F\+F\+F)
+\item 
+\#define \hyperlink{group___open_timers_ga8093989c737905bbf51a411475ef88e7}{T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+T\+I\+M\+E\+R\+S\+\_\+\+E\+R\+R\+OR}~255
+\item 
+\#define \hyperlink{group___open_timers_gae5ca9e65d270cdfa4bc74008d96d69ab}{opentimer\+\_\+id\+\_\+t}~\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}($\ast$ \hyperlink{group___open_timers_ga93a6f1f7e03cd8ad88cbd9509db173cf}{opentimers\+\_\+cbt}) (\hyperlink{group___open_timers_gae5ca9e65d270cdfa4bc74008d96d69ab}{opentimer\+\_\+id\+\_\+t} id)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group___open_timers_ga66e6b1d10289945ae9284d769f136e59}{timer\+\_\+type\+\_\+t} \{ \hyperlink{group___open_timers_gga66e6b1d10289945ae9284d769f136e59a21b44bcff4202d25ac1a56331ab4f841}{T\+I\+M\+E\+R\+\_\+\+P\+E\+R\+I\+O\+D\+IC}, 
+\hyperlink{group___open_timers_gga66e6b1d10289945ae9284d769f136e59aea25032a4fb8ae276245050c0648327c}{T\+I\+M\+E\+R\+\_\+\+O\+N\+E\+S\+H\+OT}
+ \}
+\item 
+enum \hyperlink{group___open_timers_gad4702b7e72b77cd1d6cf3a63c0db9df8}{time\+\_\+type\+\_\+t} \{ \hyperlink{group___open_timers_ggad4702b7e72b77cd1d6cf3a63c0db9df8ab2234de0b81a6c02ab51dcfc63065bca}{T\+I\+M\+E\+\_\+\+MS}, 
+\hyperlink{group___open_timers_ggad4702b7e72b77cd1d6cf3a63c0db9df8a355f8cf3694e6ce36571b43db20b6717}{T\+I\+M\+E\+\_\+\+T\+I\+CS}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___open_timers_gaf3d3dd8b046f104fd2fc8c3ccc31a80c}{opentimers\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Initialize this module. \end{DoxyCompactList}\item 
+\hyperlink{group___open_timers_gae5ca9e65d270cdfa4bc74008d96d69ab}{opentimer\+\_\+id\+\_\+t} \hyperlink{group___open_timers_gaa66975435aec29368f203e1c07218a0d}{opentimers\+\_\+start} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} duration, \hyperlink{group___open_timers_ga66e6b1d10289945ae9284d769f136e59}{timer\+\_\+type\+\_\+t} type, \hyperlink{group___open_timers_gad4702b7e72b77cd1d6cf3a63c0db9df8}{time\+\_\+type\+\_\+t} timetype, \hyperlink{group___open_timers_ga93a6f1f7e03cd8ad88cbd9509db173cf}{opentimers\+\_\+cbt} \hyperlink{k20_2bsp_2sctimer_8c_a5771d3f574543a9990943a0fcb713929}{callback})
+\begin{DoxyCompactList}\small\item\em Start a timer. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___open_timers_gac160b81d1e558b7b11c95fe419ecf3ed}{opentimers\+\_\+set\+Period} (\hyperlink{group___open_timers_gae5ca9e65d270cdfa4bc74008d96d69ab}{opentimer\+\_\+id\+\_\+t} id, \hyperlink{group___open_timers_gad4702b7e72b77cd1d6cf3a63c0db9df8}{time\+\_\+type\+\_\+t} timetype, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} new\+Period)
+\begin{DoxyCompactList}\small\item\em Replace the period of a running timer. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___open_timers_ga1310b613ecc237238624df341c71bb7d}{opentimers\+\_\+stop} (\hyperlink{group___open_timers_gae5ca9e65d270cdfa4bc74008d96d69ab}{opentimer\+\_\+id\+\_\+t} id)
+\begin{DoxyCompactList}\small\item\em Stop a running timer. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___open_timers_gadd9e89367c4769f448443ad4910c7396}{opentimers\+\_\+restart} (\hyperlink{group___open_timers_gae5ca9e65d270cdfa4bc74008d96d69ab}{opentimer\+\_\+id\+\_\+t} id)
+\begin{DoxyCompactList}\small\item\em Restart a stop timer. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___open_timers_ga311e64b9f72f4cf7fc73109784a56e3a}{opentimers\+\_\+sleep\+Time\+Compesation} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} sleep\+Time)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\index{Open\+Timers@{Open\+Timers}!M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+T\+I\+M\+E\+RS@{M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+T\+I\+M\+E\+RS}}
+\index{M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+T\+I\+M\+E\+RS@{M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+T\+I\+M\+E\+RS}!Open\+Timers@{Open\+Timers}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+T\+I\+M\+E\+RS}{MAX_NUM_TIMERS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+T\+I\+M\+E\+RS~10}\hypertarget{group___open_timers_gaacf8ae36c6e504e7361613a7d9a85d69}{}\label{group___open_timers_gaacf8ae36c6e504e7361613a7d9a85d69}
+
+
+Maximum number of timers that can run concurrently. 
+
+
+
+Definition at line 22 of file opentimers.\+h.
+
+\index{Open\+Timers@{Open\+Timers}!M\+A\+X\+\_\+\+T\+I\+C\+K\+S\+\_\+\+I\+N\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+C\+L\+O\+CK@{M\+A\+X\+\_\+\+T\+I\+C\+K\+S\+\_\+\+I\+N\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+C\+L\+O\+CK}}
+\index{M\+A\+X\+\_\+\+T\+I\+C\+K\+S\+\_\+\+I\+N\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+C\+L\+O\+CK@{M\+A\+X\+\_\+\+T\+I\+C\+K\+S\+\_\+\+I\+N\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+C\+L\+O\+CK}!Open\+Timers@{Open\+Timers}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+T\+I\+C\+K\+S\+\_\+\+I\+N\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+C\+L\+O\+CK}{MAX_TICKS_IN_SINGLE_CLOCK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+T\+I\+C\+K\+S\+\_\+\+I\+N\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+C\+L\+O\+CK~(({\bf P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH})0x\+F\+F\+F\+F\+F\+F\+F\+F)}\hypertarget{group___open_timers_ga9561941a53acd6abd5d0501eddefc2ad}{}\label{group___open_timers_ga9561941a53acd6abd5d0501eddefc2ad}
+
+
+Definition at line 24 of file opentimers.\+h.
+
+\index{Open\+Timers@{Open\+Timers}!opentimer\+\_\+id\+\_\+t@{opentimer\+\_\+id\+\_\+t}}
+\index{opentimer\+\_\+id\+\_\+t@{opentimer\+\_\+id\+\_\+t}!Open\+Timers@{Open\+Timers}}
+\subsubsection[{\texorpdfstring{opentimer\+\_\+id\+\_\+t}{opentimer_id_t}}]{\setlength{\rightskip}{0pt plus 5cm}\#define opentimer\+\_\+id\+\_\+t~{\bf uint8\+\_\+t}}\hypertarget{group___open_timers_gae5ca9e65d270cdfa4bc74008d96d69ab}{}\label{group___open_timers_gae5ca9e65d270cdfa4bc74008d96d69ab}
+
+
+Definition at line 28 of file opentimers.\+h.
+
+\index{Open\+Timers@{Open\+Timers}!T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+T\+I\+M\+E\+R\+S\+\_\+\+E\+R\+R\+OR@{T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+T\+I\+M\+E\+R\+S\+\_\+\+E\+R\+R\+OR}}
+\index{T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+T\+I\+M\+E\+R\+S\+\_\+\+E\+R\+R\+OR@{T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+T\+I\+M\+E\+R\+S\+\_\+\+E\+R\+R\+OR}!Open\+Timers@{Open\+Timers}}
+\subsubsection[{\texorpdfstring{T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+T\+I\+M\+E\+R\+S\+\_\+\+E\+R\+R\+OR}{TOO_MANY_TIMERS_ERROR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+T\+I\+M\+E\+R\+S\+\_\+\+E\+R\+R\+OR~255}\hypertarget{group___open_timers_ga8093989c737905bbf51a411475ef88e7}{}\label{group___open_timers_ga8093989c737905bbf51a411475ef88e7}
+
+
+Definition at line 26 of file opentimers.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\index{Open\+Timers@{Open\+Timers}!opentimers\+\_\+cbt@{opentimers\+\_\+cbt}}
+\index{opentimers\+\_\+cbt@{opentimers\+\_\+cbt}!Open\+Timers@{Open\+Timers}}
+\subsubsection[{\texorpdfstring{opentimers\+\_\+cbt}{opentimers_cbt}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf void}($\ast$ opentimers\+\_\+cbt) ({\bf opentimer\+\_\+id\+\_\+t} id)}\hypertarget{group___open_timers_ga93a6f1f7e03cd8ad88cbd9509db173cf}{}\label{group___open_timers_ga93a6f1f7e03cd8ad88cbd9509db173cf}
+
+
+Definition at line 30 of file opentimers.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\index{Open\+Timers@{Open\+Timers}!time\+\_\+type\+\_\+t@{time\+\_\+type\+\_\+t}}
+\index{time\+\_\+type\+\_\+t@{time\+\_\+type\+\_\+t}!Open\+Timers@{Open\+Timers}}
+\subsubsection[{\texorpdfstring{time\+\_\+type\+\_\+t}{time_type_t}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf time\+\_\+type\+\_\+t}}\hypertarget{group___open_timers_gad4702b7e72b77cd1d6cf3a63c0db9df8}{}\label{group___open_timers_gad4702b7e72b77cd1d6cf3a63c0db9df8}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{T\+I\+M\+E\+\_\+\+MS@{T\+I\+M\+E\+\_\+\+MS}!Open\+Timers@{Open\+Timers}}\index{Open\+Timers@{Open\+Timers}!T\+I\+M\+E\+\_\+\+MS@{T\+I\+M\+E\+\_\+\+MS}}\item[{\em 
+T\+I\+M\+E\+\_\+\+MS\hypertarget{group___open_timers_ggad4702b7e72b77cd1d6cf3a63c0db9df8ab2234de0b81a6c02ab51dcfc63065bca}{}\label{group___open_timers_ggad4702b7e72b77cd1d6cf3a63c0db9df8ab2234de0b81a6c02ab51dcfc63065bca}
+}]\index{T\+I\+M\+E\+\_\+\+T\+I\+CS@{T\+I\+M\+E\+\_\+\+T\+I\+CS}!Open\+Timers@{Open\+Timers}}\index{Open\+Timers@{Open\+Timers}!T\+I\+M\+E\+\_\+\+T\+I\+CS@{T\+I\+M\+E\+\_\+\+T\+I\+CS}}\item[{\em 
+T\+I\+M\+E\+\_\+\+T\+I\+CS\hypertarget{group___open_timers_ggad4702b7e72b77cd1d6cf3a63c0db9df8a355f8cf3694e6ce36571b43db20b6717}{}\label{group___open_timers_ggad4702b7e72b77cd1d6cf3a63c0db9df8a355f8cf3694e6ce36571b43db20b6717}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 40 of file opentimers.\+h.
+
+\index{Open\+Timers@{Open\+Timers}!timer\+\_\+type\+\_\+t@{timer\+\_\+type\+\_\+t}}
+\index{timer\+\_\+type\+\_\+t@{timer\+\_\+type\+\_\+t}!Open\+Timers@{Open\+Timers}}
+\subsubsection[{\texorpdfstring{timer\+\_\+type\+\_\+t}{timer_type_t}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf timer\+\_\+type\+\_\+t}}\hypertarget{group___open_timers_ga66e6b1d10289945ae9284d769f136e59}{}\label{group___open_timers_ga66e6b1d10289945ae9284d769f136e59}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{T\+I\+M\+E\+R\+\_\+\+P\+E\+R\+I\+O\+D\+IC@{T\+I\+M\+E\+R\+\_\+\+P\+E\+R\+I\+O\+D\+IC}!Open\+Timers@{Open\+Timers}}\index{Open\+Timers@{Open\+Timers}!T\+I\+M\+E\+R\+\_\+\+P\+E\+R\+I\+O\+D\+IC@{T\+I\+M\+E\+R\+\_\+\+P\+E\+R\+I\+O\+D\+IC}}\item[{\em 
+T\+I\+M\+E\+R\+\_\+\+P\+E\+R\+I\+O\+D\+IC\hypertarget{group___open_timers_gga66e6b1d10289945ae9284d769f136e59a21b44bcff4202d25ac1a56331ab4f841}{}\label{group___open_timers_gga66e6b1d10289945ae9284d769f136e59a21b44bcff4202d25ac1a56331ab4f841}
+}]\index{T\+I\+M\+E\+R\+\_\+\+O\+N\+E\+S\+H\+OT@{T\+I\+M\+E\+R\+\_\+\+O\+N\+E\+S\+H\+OT}!Open\+Timers@{Open\+Timers}}\index{Open\+Timers@{Open\+Timers}!T\+I\+M\+E\+R\+\_\+\+O\+N\+E\+S\+H\+OT@{T\+I\+M\+E\+R\+\_\+\+O\+N\+E\+S\+H\+OT}}\item[{\em 
+T\+I\+M\+E\+R\+\_\+\+O\+N\+E\+S\+H\+OT\hypertarget{group___open_timers_gga66e6b1d10289945ae9284d769f136e59aea25032a4fb8ae276245050c0648327c}{}\label{group___open_timers_gga66e6b1d10289945ae9284d769f136e59aea25032a4fb8ae276245050c0648327c}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 34 of file opentimers.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{Open\+Timers@{Open\+Timers}!opentimers\+\_\+init@{opentimers\+\_\+init}}
+\index{opentimers\+\_\+init@{opentimers\+\_\+init}!Open\+Timers@{Open\+Timers}}
+\subsubsection[{\texorpdfstring{opentimers\+\_\+init(void)}{opentimers_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} opentimers\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___open_timers_gaf3d3dd8b046f104fd2fc8c3ccc31a80c}{}\label{group___open_timers_gaf3d3dd8b046f104fd2fc8c3ccc31a80c}
+
+
+Initialize this module. 
+
+Initializes data structures and hardware timer. 
+
+Definition at line 33 of file opentimers.\+c.
+
+\index{Open\+Timers@{Open\+Timers}!opentimers\+\_\+restart@{opentimers\+\_\+restart}}
+\index{opentimers\+\_\+restart@{opentimers\+\_\+restart}!Open\+Timers@{Open\+Timers}}
+\subsubsection[{\texorpdfstring{opentimers\+\_\+restart(opentimer\+\_\+id\+\_\+t id)}{opentimers_restart(opentimer_id_t id)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} opentimers\+\_\+restart (
+\begin{DoxyParamCaption}
+\item[{{\bf opentimer\+\_\+id\+\_\+t}}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{group___open_timers_gadd9e89367c4769f448443ad4910c7396}{}\label{group___open_timers_gadd9e89367c4769f448443ad4910c7396}
+
+
+Restart a stop timer. 
+
+Sets the timer to \char`\"{} running\char`\"{}. 
+
+Definition at line 183 of file opentimers.\+c.
+
+\index{Open\+Timers@{Open\+Timers}!opentimers\+\_\+set\+Period@{opentimers\+\_\+set\+Period}}
+\index{opentimers\+\_\+set\+Period@{opentimers\+\_\+set\+Period}!Open\+Timers@{Open\+Timers}}
+\subsubsection[{\texorpdfstring{opentimers\+\_\+set\+Period(opentimer\+\_\+id\+\_\+t id, time\+\_\+type\+\_\+t timetype, uint32\+\_\+t new\+Period)}{opentimers_setPeriod(opentimer_id_t id, time_type_t timetype, uint32_t newPeriod)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} opentimers\+\_\+set\+Period (
+\begin{DoxyParamCaption}
+\item[{{\bf opentimer\+\_\+id\+\_\+t}}]{id, }
+\item[{{\bf time\+\_\+type\+\_\+t}}]{timetype, }
+\item[{{\bf uint32\+\_\+t}}]{new\+Period}
+\end{DoxyParamCaption}
+)}\hypertarget{group___open_timers_gac160b81d1e558b7b11c95fe419ecf3ed}{}\label{group___open_timers_gac160b81d1e558b7b11c95fe419ecf3ed}
+
+
+Replace the period of a running timer. 
+
+
+
+Definition at line 141 of file opentimers.\+c.
+
+\index{Open\+Timers@{Open\+Timers}!opentimers\+\_\+sleep\+Time\+Compesation@{opentimers\+\_\+sleep\+Time\+Compesation}}
+\index{opentimers\+\_\+sleep\+Time\+Compesation@{opentimers\+\_\+sleep\+Time\+Compesation}!Open\+Timers@{Open\+Timers}}
+\subsubsection[{\texorpdfstring{opentimers\+\_\+sleep\+Time\+Compesation(uint16\+\_\+t sleep\+Time)}{opentimers_sleepTimeCompesation(uint16_t sleepTime)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} opentimers\+\_\+sleep\+Time\+Compesation (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t}}]{sleep\+Time}
+\end{DoxyParamCaption}
+)}\hypertarget{group___open_timers_ga311e64b9f72f4cf7fc73109784a56e3a}{}\label{group___open_timers_ga311e64b9f72f4cf7fc73109784a56e3a}
+
+
+Definition at line 284 of file opentimers.\+c.
+
+\index{Open\+Timers@{Open\+Timers}!opentimers\+\_\+start@{opentimers\+\_\+start}}
+\index{opentimers\+\_\+start@{opentimers\+\_\+start}!Open\+Timers@{Open\+Timers}}
+\subsubsection[{\texorpdfstring{opentimers\+\_\+start(uint32\+\_\+t duration, timer\+\_\+type\+\_\+t type, time\+\_\+type\+\_\+t timetype, opentimers\+\_\+cbt callback)}{opentimers_start(uint32_t duration, timer_type_t type, time_type_t timetype, opentimers_cbt callback)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf opentimer\+\_\+id\+\_\+t} opentimers\+\_\+start (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{duration, }
+\item[{{\bf timer\+\_\+type\+\_\+t}}]{type, }
+\item[{{\bf time\+\_\+type\+\_\+t}}]{timetype, }
+\item[{{\bf opentimers\+\_\+cbt}}]{callback}
+\end{DoxyParamCaption}
+)}\hypertarget{group___open_timers_gaa66975435aec29368f203e1c07218a0d}{}\label{group___open_timers_gaa66975435aec29368f203e1c07218a0d}
+
+
+Start a timer. 
+
+The timer works as follows\+:
+\begin{DoxyItemize}
+\item current\+Timeout is the number of ticks before the next timer expires.
+\item if a new timer is inserted, we check that it is not earlier than the soonest
+\item if it is earliest, replace it
+\item if not, insert it in the list
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em duration} & Number milli-\/seconds after which the timer will fire. \\
+\hline
+{\em type} & Type of timer\+:
+\begin{DoxyItemize}
+\item \hyperlink{group___open_timers_gga66e6b1d10289945ae9284d769f136e59a21b44bcff4202d25ac1a56331ab4f841}{T\+I\+M\+E\+R\+\_\+\+P\+E\+R\+I\+O\+D\+IC} for a periodic timer.
+\item \hyperlink{group___open_timers_gga66e6b1d10289945ae9284d769f136e59aea25032a4fb8ae276245050c0648327c}{T\+I\+M\+E\+R\+\_\+\+O\+N\+E\+S\+H\+OT} for a on-\/shot timer. 
+\end{DoxyItemize}\\
+\hline
+{\em timetype} & Units of the {\ttfamily duration}\+:
+\begin{DoxyItemize}
+\item \hyperlink{group___open_timers_ggad4702b7e72b77cd1d6cf3a63c0db9df8ab2234de0b81a6c02ab51dcfc63065bca}{T\+I\+M\+E\+\_\+\+MS} when {\ttfamily duration} is in ms.
+\item \hyperlink{group___open_timers_ggad4702b7e72b77cd1d6cf3a63c0db9df8a355f8cf3694e6ce36571b43db20b6717}{T\+I\+M\+E\+\_\+\+T\+I\+CS} when {\ttfamily duration} is in clock ticks. 
+\end{DoxyItemize}\\
+\hline
+{\em callback} & The function to call when the timer fires.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The id of the timer (which serves as a handler to stop it) if the timer could be started. 
+
+T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+T\+I\+M\+E\+R\+S\+\_\+\+E\+R\+R\+OR if the timer could N\+OT be started. 
+\end{DoxyReturn}
+
+
+Definition at line 73 of file opentimers.\+c.
+
+\index{Open\+Timers@{Open\+Timers}!opentimers\+\_\+stop@{opentimers\+\_\+stop}}
+\index{opentimers\+\_\+stop@{opentimers\+\_\+stop}!Open\+Timers@{Open\+Timers}}
+\subsubsection[{\texorpdfstring{opentimers\+\_\+stop(opentimer\+\_\+id\+\_\+t id)}{opentimers_stop(opentimer_id_t id)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} opentimers\+\_\+stop (
+\begin{DoxyParamCaption}
+\item[{{\bf opentimer\+\_\+id\+\_\+t}}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{group___open_timers_ga1310b613ecc237238624df341c71bb7d}{}\label{group___open_timers_ga1310b613ecc237238624df341c71bb7d}
+
+
+Stop a running timer. 
+
+Sets the timer to \char`\"{}not running\char`\"{}. the system recovers even if this was the next timer to expire. 
+
+Definition at line 174 of file opentimers.\+c.
+

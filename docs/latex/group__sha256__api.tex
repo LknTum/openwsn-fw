@@ -1,0 +1,95 @@
+\hypertarget{group__sha256__api}{}\section{Sha256\+\_\+api}
+\label{group__sha256__api}\index{Sha256\+\_\+api@{Sha256\+\_\+api}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{group__sha256__api_gaad9327a238461b7b6f526c0fa7b1ee29}{S\+H\+A256\+Init} (\hyperlink{structt_s_h_a256_state}{t\+S\+H\+A256\+State} $\ast$ps\+Md)
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{group__sha256__api_gac4fb1378376463e788e6193c60776eaf}{S\+H\+A256\+Process} (\hyperlink{structt_s_h_a256_state}{t\+S\+H\+A256\+State} $\ast$ps\+Md, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$ui8\+In, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+In\+Len)
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{group__sha256__api_ga9079ae928e86ec12db772516a5e55b4f}{S\+H\+A256\+Done} (\hyperlink{structt_s_h_a256_state}{t\+S\+H\+A256\+State} $\ast$ps\+Md, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$ui8\+Out)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{Sha256\+\_\+api@{Sha256\+\_\+api}!S\+H\+A256\+Done@{S\+H\+A256\+Done}}
+\index{S\+H\+A256\+Done@{S\+H\+A256\+Done}!Sha256\+\_\+api@{Sha256\+\_\+api}}
+\subsubsection[{\texorpdfstring{S\+H\+A256\+Done(t\+S\+H\+A256\+State $\ast$ps\+Md, uint8\+\_\+t $\ast$ui8\+Out)}{SHA256Done(tSHA256State *psMd, uint8_t *ui8Out)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} S\+H\+A256\+Done (
+\begin{DoxyParamCaption}
+\item[{{\bf t\+S\+H\+A256\+State} $\ast$}]{ps\+Md, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{ui8\+Out}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sha256__api_ga9079ae928e86ec12db772516a5e55b4f}{}\label{group__sha256__api_ga9079ae928e86ec12db772516a5e55b4f}
+S\+H\+A256\+Done function terminates hash session to get the digest. This function must be called only after \hyperlink{group__sha256__api_gac4fb1378376463e788e6193c60776eaf}{S\+H\+A256\+Process()}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ps\+Md} & is the pointer to hash state. \\
+\hline
+{\em ui8\+Out} & is the pointer to hash.\\
+\hline
+\end{DoxyParams}
+For the pointer to hash state parameter {\itshape ps\+Md} the calling function has to allocate the hash state structure and pass the pointer to the structure.
+
+\begin{DoxyReturn}{Returns}
+S\+H\+A256\+\_\+\+S\+U\+C\+C\+E\+SS if successful. 
+\end{DoxyReturn}
+
+
+Definition at line 219 of file sha256.\+c.
+
+\index{Sha256\+\_\+api@{Sha256\+\_\+api}!S\+H\+A256\+Init@{S\+H\+A256\+Init}}
+\index{S\+H\+A256\+Init@{S\+H\+A256\+Init}!Sha256\+\_\+api@{Sha256\+\_\+api}}
+\subsubsection[{\texorpdfstring{S\+H\+A256\+Init(t\+S\+H\+A256\+State $\ast$ps\+Md)}{SHA256Init(tSHA256State *psMd)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} S\+H\+A256\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf t\+S\+H\+A256\+State} $\ast$}]{ps\+Md}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sha256__api_gaad9327a238461b7b6f526c0fa7b1ee29}{}\label{group__sha256__api_gaad9327a238461b7b6f526c0fa7b1ee29}
+S\+H\+A256init initializes the hash state.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ps\+Md} & is the pointer to hash state you wish to initialize.\\
+\hline
+\end{DoxyParams}
+For the pointer to hash state parameter {\itshape ps\+Md} the calling function has to allocate the hash state structure and pass the pointer to the structure.
+
+\begin{DoxyReturn}{Returns}
+S\+H\+A256\+\_\+\+S\+U\+C\+C\+E\+SS if successful. 
+\end{DoxyReturn}
+
+
+Definition at line 66 of file sha256.\+c.
+
+\index{Sha256\+\_\+api@{Sha256\+\_\+api}!S\+H\+A256\+Process@{S\+H\+A256\+Process}}
+\index{S\+H\+A256\+Process@{S\+H\+A256\+Process}!Sha256\+\_\+api@{Sha256\+\_\+api}}
+\subsubsection[{\texorpdfstring{S\+H\+A256\+Process(t\+S\+H\+A256\+State $\ast$ps\+Md, uint8\+\_\+t $\ast$ui8\+In, uint32\+\_\+t ui32\+In\+Len)}{SHA256Process(tSHA256State *psMd, uint8_t *ui8In, uint32_t ui32InLen)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} S\+H\+A256\+Process (
+\begin{DoxyParamCaption}
+\item[{{\bf t\+S\+H\+A256\+State} $\ast$}]{ps\+Md, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{ui8\+In, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+In\+Len}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sha256__api_gac4fb1378376463e788e6193c60776eaf}{}\label{group__sha256__api_gac4fb1378376463e788e6193c60776eaf}
+S\+H\+A256\+Process processes a block of memory through the hash. This function must be called only after S\+H\+A256init().
+
+
+\begin{DoxyParams}{Parameters}
+{\em ps\+Md} & is the pointer to hash state. \\
+\hline
+{\em ui8\+In} & is the pointer to the data to hash. \\
+\hline
+{\em ui32\+In\+Len} & is the length of the data to hash ui8\+In bytes (octets).\\
+\hline
+\end{DoxyParams}
+For the pointer to hash state parameter {\itshape ps\+Md} the calling function must allocate the hash state structure and pass the pointer to the structure.
+
+\begin{DoxyReturn}{Returns}
+S\+H\+A256\+\_\+\+S\+U\+C\+C\+E\+SS if successful. 
+\end{DoxyReturn}
+
+
+Definition at line 95 of file sha256.\+c.
+

@@ -1,0 +1,100 @@
+\hypertarget{iap_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/xpressohack/iap.c File Reference}
+\label{iap_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/xpressohack/iap.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/xpressohack/iap.\+c}}
+{\ttfamily \#include \char`\"{}iap.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{iap_8c_a381a9caf5bf2ed4a883cddaf17eef87d}{I\+A\+P\+\_\+\+L\+O\+C\+A\+T\+I\+ON}~0x1\+F\+F\+F1\+F\+F1
+\begin{DoxyCompactList}\small\item\em I\+AP for L\+P\+C1768. provides functions to read U\+ID from L\+PC board. Thanks to K. Townsend (micro\+Builder.\+eu). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iap_8c_a60dbcbaca31779e508886cdfcf798693}{iap\+\_\+entry} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} param\+\_\+tab\mbox{[}$\,$\mbox{]}, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} result\+\_\+tab\mbox{[}$\,$\mbox{]})
+\item 
+\hyperlink{struct_i_a_p__return__t}{I\+A\+P\+\_\+return\+\_\+t} \hyperlink{iap_8c_a637fb4cc702831230e7e7a75f15f8c8d}{iap\+Read\+Serial\+Number} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_i_a_p__return__t}{I\+A\+P\+\_\+return\+\_\+t} \hyperlink{iap_8c_a1440a0170ab6fd3b4f3c783ab6721353}{iap\+\_\+return}
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{iap_8c_a0103ca10e22a2d4a583fc4d1a511b8f5}{param\+\_\+table} \mbox{[}5\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{iap.\+c@{iap.\+c}!I\+A\+P\+\_\+\+L\+O\+C\+A\+T\+I\+ON@{I\+A\+P\+\_\+\+L\+O\+C\+A\+T\+I\+ON}}
+\index{I\+A\+P\+\_\+\+L\+O\+C\+A\+T\+I\+ON@{I\+A\+P\+\_\+\+L\+O\+C\+A\+T\+I\+ON}!iap.\+c@{iap.\+c}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+L\+O\+C\+A\+T\+I\+ON}{IAP_LOCATION}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+L\+O\+C\+A\+T\+I\+ON~0x1\+F\+F\+F1\+F\+F1}\hypertarget{iap_8c_a381a9caf5bf2ed4a883cddaf17eef87d}{}\label{iap_8c_a381a9caf5bf2ed4a883cddaf17eef87d}
+
+
+I\+AP for L\+P\+C1768. provides functions to read U\+ID from L\+PC board. Thanks to K. Townsend (micro\+Builder.\+eu). 
+
+\begin{DoxyAuthor}{Author}
+Xavi Vilajosana \href{mailto:xvilajosana@eecs.berkeley.edu}{\tt xvilajosana@eecs.\+berkeley.\+edu}, March 2012. 
+\end{DoxyAuthor}
+
+
+Definition at line 9 of file iap.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{iap.\+c@{iap.\+c}!iap\+\_\+entry@{iap\+\_\+entry}}
+\index{iap\+\_\+entry@{iap\+\_\+entry}!iap.\+c@{iap.\+c}}
+\subsubsection[{\texorpdfstring{iap\+\_\+entry(uint32\+\_\+t param\+\_\+tab[], uint32\+\_\+t result\+\_\+tab[])}{iap_entry(uint32_t param_tab[], uint32_t result_tab[])}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} iap\+\_\+entry (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{param\+\_\+tab\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf uint32\+\_\+t}}]{result\+\_\+tab\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{iap_8c_a60dbcbaca31779e508886cdfcf798693}{}\label{iap_8c_a60dbcbaca31779e508886cdfcf798693}
+Sends the I\+AP command and stores the result 
+
+Definition at line 19 of file iap.\+c.
+
+\index{iap.\+c@{iap.\+c}!iap\+Read\+Serial\+Number@{iap\+Read\+Serial\+Number}}
+\index{iap\+Read\+Serial\+Number@{iap\+Read\+Serial\+Number}!iap.\+c@{iap.\+c}}
+\subsubsection[{\texorpdfstring{iap\+Read\+Serial\+Number(void)}{iapReadSerialNumber(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+A\+P\+\_\+return\+\_\+t} iap\+Read\+Serial\+Number (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iap_8c_a637fb4cc702831230e7e7a75f15f8c8d}{}\label{iap_8c_a637fb4cc702831230e7e7a75f15f8c8d}
+Returns the C\+PU\textquotesingle{}s unique 128-\/bit serial number (4 words long)\hypertarget{iap_8h_Example}{}\subsection{Example}\label{iap_8h_Example}
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "core/iap/iap.h"}
+
+\hyperlink{struct_i_a_p__return__t}{IAP\_return\_t} \hyperlink{iap_8c_a1440a0170ab6fd3b4f3c783ab6721353}{iap\_return};
+iap\_return = \hyperlink{iap_8c_a637fb4cc702831230e7e7a75f15f8c8d}{iapReadSerialNumber}();
+
+\textcolor{keywordflow}{if} (iap\_return.\hyperlink{struct_i_a_p__return__t_ac0a0c8d9daad36f4fc51fa53a8f25874}{ReturnCode} == 0)
+\{
+  \hyperlink{derivative_8h_a3cb9f0894fab1c8fbb0753c9c7c2a8d9}{printf}(\textcolor{stringliteral}{"Serial Number: %08X %08X %08X %08X %s"},
+          iap\_return.\hyperlink{struct_i_a_p__return__t_ae285765122962c9fa695178f7cce7c29}{Result}[0],
+          iap\_return.\hyperlink{struct_i_a_p__return__t_ae285765122962c9fa695178f7cce7c29}{Result}[1],
+          iap\_return.\hyperlink{struct_i_a_p__return__t_ae285765122962c9fa695178f7cce7c29}{Result}[2],
+          iap\_return.\hyperlink{struct_i_a_p__return__t_ae285765122962c9fa695178f7cce7c29}{Result}[3],
+          CFG\_PRINTF\_NEWLINE);
+\}
+\end{DoxyCode}
+ 
+
+Definition at line 50 of file iap.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{iap.\+c@{iap.\+c}!iap\+\_\+return@{iap\+\_\+return}}
+\index{iap\+\_\+return@{iap\+\_\+return}!iap.\+c@{iap.\+c}}
+\subsubsection[{\texorpdfstring{iap\+\_\+return}{iap_return}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+A\+P\+\_\+return\+\_\+t} iap\+\_\+return}\hypertarget{iap_8c_a1440a0170ab6fd3b4f3c783ab6721353}{}\label{iap_8c_a1440a0170ab6fd3b4f3c783ab6721353}
+
+
+Definition at line 11 of file iap.\+c.
+
+\index{iap.\+c@{iap.\+c}!param\+\_\+table@{param\+\_\+table}}
+\index{param\+\_\+table@{param\+\_\+table}!iap.\+c@{iap.\+c}}
+\subsubsection[{\texorpdfstring{param\+\_\+table}{param_table}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} param\+\_\+table\mbox{[}5\mbox{]}}\hypertarget{iap_8c_a0103ca10e22a2d4a583fc4d1a511b8f5}{}\label{iap_8c_a0103ca10e22a2d4a583fc4d1a511b8f5}
+
+
+Definition at line 12 of file iap.\+c.
+

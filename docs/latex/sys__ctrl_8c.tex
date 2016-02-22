@@ -1,0 +1,58 @@
+\hypertarget{sys__ctrl_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/source/sys\+\_\+ctrl.c File Reference}
+\label{sys__ctrl_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/source/sys\+\_\+ctrl.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/source/sys\+\_\+ctrl.\+c}}
+{\ttfamily \#include $<$headers/hw\+\_\+flash\+\_\+ctrl.\+h$>$}\\*
+{\ttfamily \#include $<$headers/hw\+\_\+ints.\+h$>$}\\*
+{\ttfamily \#include $<$headers/hw\+\_\+nvic.\+h$>$}\\*
+{\ttfamily \#include $<$headers/hw\+\_\+sys\+\_\+ctrl.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}cpu.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}debug.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}interrupt.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sys\+\_\+ctrl.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__sysctl__api_gac3a62817ec1b58938c9d0d7c26751155}{S\+Y\+S\+\_\+\+C\+T\+R\+L\+\_\+\+P\+E\+R\+I\+P\+H\+\_\+\+I\+N\+D\+EX}(a)~(((a) $>$$>$ 8) \& 0xf)
+\item 
+\#define \hyperlink{group__sysctl__api_ga54a2e4365938932a4352737c25dfe7b9}{S\+Y\+S\+\_\+\+C\+T\+R\+L\+\_\+\+P\+E\+R\+I\+P\+H\+\_\+\+M\+A\+S\+K\+B\+IT}(a)~(0x00000001 $<$$<$ ((a) \& 0xf))
+\item 
+\#define \hyperlink{group__sysctl__api_ga286bcc220f1f43c150144e1ec405b28b}{S\+Y\+S\+\_\+\+C\+T\+R\+L\+\_\+\+P\+E\+R\+I\+P\+H\+\_\+\+I\+N\+S\+T\+A\+N\+CE}(a)~((a) \& 0xf)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__sysctl__api_gacd8d6405b30a393cc4f014929468192d}{Sys\+Ctrl\+Clock\+Set} (\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} b\+External\+Osc32k, \hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} b\+Internal\+Osc, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Sys\+Div)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__sysctl__api_ga9ad809b6591f052d72dde7b1fb1f6eed}{Sys\+Ctrl\+Clock\+Get} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__sysctl__api_gafb4b4a106046eece490412f87e5ee715}{Sys\+Ctrl\+I\+O\+Clock\+Set} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+I\+O\+Div)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__sysctl__api_ga61cdfa03e9a592cfad5ef7ba81595046}{Sys\+Ctrl\+I\+O\+Clock\+Get} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__sysctl__api_ga2935eea51f978e58bd1230074806b3f4}{Sys\+Ctrl\+Reset} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__sysctl__api_ga9c7b12680aece3e39ef4735010da037c}{Sys\+Ctrl\+Sleep} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__sysctl__api_ga46e59afbf63e9e1eb2ae402ab64b3a89}{Sys\+Ctrl\+Deep\+Sleep} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group__sysctl__api_ga2fd54c94a7e62b284eb78ad680e59235}{Sys\+Ctrl\+Peripheral\+Present} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Peripheral)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__sysctl__api_ga8463c0e214a5afd26a6560d9927e84ff}{Sys\+Ctrl\+Peripheral\+Reset} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Peripheral)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__sysctl__api_ga707635f836e3eb681db0b8ab01ca6dd8}{Sys\+Ctrl\+Peripheral\+Enable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Peripheral)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__sysctl__api_gae122cc9e5d7dc0e66330a7685a0886ac}{Sys\+Ctrl\+Peripheral\+Disable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Peripheral)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__sysctl__api_gaeb5ea8d77481c835b1221f094b0ec850}{Sys\+Ctrl\+Peripheral\+Sleep\+Enable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Peripheral)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__sysctl__api_gace9d651e5b048b9727613b5c913d59c0}{Sys\+Ctrl\+Peripheral\+Sleep\+Disable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Peripheral)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__sysctl__api_gacfbf719733b43ee4bf0edccccb935cfc}{Sys\+Ctrl\+Peripheral\+Deep\+Sleep\+Enable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Peripheral)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__sysctl__api_ga674db307ff90822924fc19b79444049a}{Sys\+Ctrl\+Peripheral\+Deep\+Sleep\+Disable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Peripheral)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__sysctl__api_ga58c66b2a49a5650f87e99f74595669bb}{Sys\+Ctrl\+Power\+Mode\+Set} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Power\+Mode)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__sysctl__api_ga5a2c3a4f383f077ea617bb609e160a3c}{Sys\+Ctrl\+Power\+Mode\+Get} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__sysctl__api_gaa06fdb466c07780b7c28a30d68f6da73}{Sys\+Ctrl\+Clock\+Loss\+Detect\+Enable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}

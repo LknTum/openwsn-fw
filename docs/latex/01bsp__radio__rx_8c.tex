@@ -1,0 +1,236 @@
+\hypertarget{01bsp__radio__rx_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/common/01bsp\+\_\+radio\+\_\+rx/01bsp\+\_\+radio\+\_\+rx.c File Reference}
+\label{01bsp__radio__rx_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/common/01bsp\+\_\+radio\+\_\+rx/01bsp\+\_\+radio\+\_\+rx.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/common/01bsp\+\_\+radio\+\_\+rx/01bsp\+\_\+radio\+\_\+rx.\+c}}
+{\ttfamily \#include \char`\"{}stdint.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}string.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}radio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leds.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}uart.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapp__dbg__t}{app\+\_\+dbg\+\_\+t}
+\item 
+struct \hyperlink{structapp__vars__t}{app\+\_\+vars\+\_\+t}
+\begin{DoxyCompactList}\small\item\em This program shows the use of the \char`\"{}spi\char`\"{} bsp module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{01bsp__radio__rx_8c_ab23dc632cb92506d08a47330e5869366}{L\+E\+N\+G\+T\+H\+\_\+\+P\+A\+C\+K\+ET}~125+\hyperlink{group__radio_ga66b45cefa7e813509629dfff0680c50b}{L\+E\+N\+G\+T\+H\+\_\+\+C\+RC}
+\begin{DoxyCompactList}\small\item\em This program shows the use of the \char`\"{}radio\char`\"{} bsp module. \end{DoxyCompactList}\item 
+\#define \hyperlink{01bsp__radio__rx_8c_ace6a11e892466500d47d1f45f042bc53}{C\+H\+A\+N\+N\+EL}~11
+\begin{DoxyCompactList}\small\item\em 11 = 2.\+405\+G\+Hz \end{DoxyCompactList}\item 
+\#define \hyperlink{01bsp__radio__rx_8c_a0659bf652dc91608d99d86aadc095872}{L\+E\+N\+G\+T\+H\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+F\+R\+A\+ME}~8
+\begin{DoxyCompactList}\small\item\em length of the serial frame \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{01bsp__radio__rx_8c_a0b1e3c13007a39058f277605430bc9f4}{cb\+\_\+radio\+Timer\+Overflows} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{01bsp__radio__rx_8c_a3db71b3e7273bc8f676bbbbf3db43b65}{cb\+\_\+radio\+Timer\+Compare} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{01bsp__radio__rx_8c_a2830212fa3c73050b1ff654db6977bf2}{cb\+\_\+start\+Frame} (\hyperlink{z1_2board__info_8h_abe66b9c1c60db84f2a99f2b827275f24}{P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} timestamp)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{01bsp__radio__rx_8c_abe624f7205af06166711753bf5bcc5bf}{cb\+\_\+end\+Frame} (\hyperlink{z1_2board__info_8h_abe66b9c1c60db84f2a99f2b827275f24}{P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} timestamp)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{01bsp__radio__rx_8c_ac7259841fcc9a73b4039664d8e872df8}{cb\+\_\+uart\+Tx\+Done} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{01bsp__radio__rx_8c_ac74da9e3eaa937998301625d7acd206d}{cb\+\_\+uart\+Rx\+Cb} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+int \hyperlink{01bsp__radio__rx_8c_ad0caa506af897a3ebe6699aa0c0da367}{mote\+\_\+main} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em The program starts executing here. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structapp__dbg__t}{app\+\_\+dbg\+\_\+t} \hyperlink{01bsp__radio__rx_8c_a462568f64e17a76f796aa9c827311428}{app\+\_\+dbg}
+\item 
+\hyperlink{structapp__vars__t}{app\+\_\+vars\+\_\+t} \hyperlink{01bsp__radio__rx_8c_a8a1b0b7ccff92c7f1d8961997cd2c913}{app\+\_\+vars}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{01bsp\+\_\+radio\+\_\+rx.\+c@{01bsp\+\_\+radio\+\_\+rx.\+c}!C\+H\+A\+N\+N\+EL@{C\+H\+A\+N\+N\+EL}}
+\index{C\+H\+A\+N\+N\+EL@{C\+H\+A\+N\+N\+EL}!01bsp\+\_\+radio\+\_\+rx.\+c@{01bsp\+\_\+radio\+\_\+rx.\+c}}
+\subsubsection[{\texorpdfstring{C\+H\+A\+N\+N\+EL}{CHANNEL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+H\+A\+N\+N\+EL~11}\hypertarget{01bsp__radio__rx_8c_ace6a11e892466500d47d1f45f042bc53}{}\label{01bsp__radio__rx_8c_ace6a11e892466500d47d1f45f042bc53}
+
+
+11 = 2.\+405\+G\+Hz 
+
+
+
+Definition at line 75 of file 01bsp\+\_\+radio\+\_\+rx.\+c.
+
+\index{01bsp\+\_\+radio\+\_\+rx.\+c@{01bsp\+\_\+radio\+\_\+rx.\+c}!L\+E\+N\+G\+T\+H\+\_\+\+P\+A\+C\+K\+ET@{L\+E\+N\+G\+T\+H\+\_\+\+P\+A\+C\+K\+ET}}
+\index{L\+E\+N\+G\+T\+H\+\_\+\+P\+A\+C\+K\+ET@{L\+E\+N\+G\+T\+H\+\_\+\+P\+A\+C\+K\+ET}!01bsp\+\_\+radio\+\_\+rx.\+c@{01bsp\+\_\+radio\+\_\+rx.\+c}}
+\subsubsection[{\texorpdfstring{L\+E\+N\+G\+T\+H\+\_\+\+P\+A\+C\+K\+ET}{LENGTH_PACKET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+N\+G\+T\+H\+\_\+\+P\+A\+C\+K\+ET~125+{\bf L\+E\+N\+G\+T\+H\+\_\+\+C\+RC}}\hypertarget{01bsp__radio__rx_8c_ab23dc632cb92506d08a47330e5869366}{}\label{01bsp__radio__rx_8c_ab23dc632cb92506d08a47330e5869366}
+
+
+This program shows the use of the \char`\"{}radio\char`\"{} bsp module. 
+
+Since the bsp modules for different platforms have the same declaration, you can use this project with any platform.
+
+This application places the mote in receive mode, and prints, over the serial port, all information about the received packet. The frame printed over the serial port for each received packet is formatted as follows\+:
+\begin{DoxyItemize}
+\item \mbox{[}1B\mbox{]} the length of the packet, an unsigned integer
+\item \mbox{[}1B\mbox{]} the first byte of the packet, an unsigned integer
+\item \mbox{[}1B\mbox{]} the receive signal strength of tehe packet, an signed integer
+\item \mbox{[}1B\mbox{]} the link quality indicator, an unsigned integer
+\item \mbox{[}1B\mbox{]} whether the receive packet passed C\+RC (1) or not (0)
+\item \mbox{[}3B\mbox{]} closing flags, each of value 0xff
+\end{DoxyItemize}
+
+You can run the \hyperlink{01bsp__radio__rx_8py}{01bsp\+\_\+radio\+\_\+rx.\+py} script to listen to your mote and parse those serial frames. The application can connect directly to the mote\textquotesingle{}s serial port, or to its T\+CP port when running on the Io\+T-\/\+L\+AB platform.
+
+\subsubsection*{Example when running locally\+: }
+
+
+
+ $\vert$ . $\vert$ \+\_\+\+\_\+\+\_\+ \+\_\+\+\_\+\+\_\+ .\+\_\+ \+\_\+ $\vert$ $\vert$ $\vert$ $\vert$/ \+\_\+\+\_\+$>$$\vert$ \textbackslash{} $\vert$ $\vert$ $\vert$ $\vert$$\vert$ . \textbackslash{}/ .\+\_\+$>$$\vert$ \textquotesingle{} $\vert$$\vert$ $\vert$ $\vert$ $\vert$\+\_\+\+\_\+ $|$ $\vert$ `\+\_\+\+\_\+\+\_\+\textquotesingle{}$\vert$ \+\_\+/\+\_\+\+\_\+\+\_\+.$\vert$\+\_\+$\vert$\+\_\+$\vert$$\vert$\+\_\+\+\_\+/\+\_\+/ $<$\+\_\+\+\_\+\+\_\+/$\vert$\+\_\+\+\_\+$\vert$ $\vert$\+\_\+$\vert$ openwsn.\+org
+
+running Io\+T-\/l\+AB? (Y$\vert$N)\+: N name of serial port (e.\+g. C\+O\+M10)\+: C\+O\+M25 len=127 num=176 rssi=-\/43 lqi=107 crc=1 len=127 num=177 rssi=-\/43 lqi=107 crc=1 len=127 num=178 rssi=-\/43 lqi=106 crc=1 len=127 num=179 rssi=-\/43 lqi=107 crc=1 len=127 num=180 rssi=-\/43 lqi=108 crc=1 len=127 num=181 rssi=-\/43 lqi=107 crc=1 len=127 num=182 rssi=-\/43 lqi=107 crc=1 len=127 num=183 rssi=-\/43 lqi=107 crc=1
+
+\subsubsection*{Example when running on the Io\+T-\/\+L\+AB platform\+: }
+
+
+
+ $\vert$ . $\vert$ \+\_\+\+\_\+\+\_\+ \+\_\+\+\_\+\+\_\+ .\+\_\+ \+\_\+ $\vert$ $\vert$ $\vert$ $\vert$/ \+\_\+\+\_\+$>$$\vert$ \textbackslash{} $\vert$ $\vert$ $\vert$ $\vert$$\vert$ . \textbackslash{}/ .\+\_\+$>$$\vert$ \textquotesingle{} $\vert$$\vert$ $\vert$ $\vert$ $\vert$\+\_\+\+\_\+ $|$ $\vert$ `\+\_\+\+\_\+\+\_\+\textquotesingle{}$\vert$ \+\_\+/\+\_\+\+\_\+\+\_\+.$\vert$\+\_\+$\vert$\+\_\+$\vert$$\vert$\+\_\+\+\_\+/\+\_\+/ $<$\+\_\+\+\_\+\+\_\+/$\vert$\+\_\+\+\_\+$\vert$ $\vert$\+\_\+$\vert$ openwsn.\+org
+
+running Io\+T-\/l\+AB? (Y$\vert$N)\+: Y motename? (e.\+g. wsn430-\/35)\+: wsn430-\/35 len=17 num=84 rssi=-\/80 lqi=107 crc=1 len=17 num=84 rssi=-\/81 lqi=107 crc=1 len=17 num=84 rssi=-\/80 lqi=107 crc=1 len=17 num=84 rssi=-\/81 lqi=105 crc=1 len=17 num=84 rssi=-\/80 lqi=108 crc=1 len=17 num=84 rssi=-\/81 lqi=108 crc=1
+
+\begin{DoxyAuthor}{Author}
+Xavi Vilajosana \href{mailto:xvilajosana@eecs.berkeley.edu}{\tt xvilajosana@eecs.\+berkeley.\+edu}$>$, June 2012. 
+
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, August 2014.\+maximum length is 127 bytes 
+\end{DoxyAuthor}
+
+
+Definition at line 74 of file 01bsp\+\_\+radio\+\_\+rx.\+c.
+
+\index{01bsp\+\_\+radio\+\_\+rx.\+c@{01bsp\+\_\+radio\+\_\+rx.\+c}!L\+E\+N\+G\+T\+H\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+F\+R\+A\+ME@{L\+E\+N\+G\+T\+H\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+F\+R\+A\+ME}}
+\index{L\+E\+N\+G\+T\+H\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+F\+R\+A\+ME@{L\+E\+N\+G\+T\+H\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+F\+R\+A\+ME}!01bsp\+\_\+radio\+\_\+rx.\+c@{01bsp\+\_\+radio\+\_\+rx.\+c}}
+\subsubsection[{\texorpdfstring{L\+E\+N\+G\+T\+H\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+F\+R\+A\+ME}{LENGTH_SERIAL_FRAME}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+N\+G\+T\+H\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+F\+R\+A\+ME~8}\hypertarget{01bsp__radio__rx_8c_a0659bf652dc91608d99d86aadc095872}{}\label{01bsp__radio__rx_8c_a0659bf652dc91608d99d86aadc095872}
+
+
+length of the serial frame 
+
+
+
+Definition at line 76 of file 01bsp\+\_\+radio\+\_\+rx.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{01bsp\+\_\+radio\+\_\+rx.\+c@{01bsp\+\_\+radio\+\_\+rx.\+c}!cb\+\_\+end\+Frame@{cb\+\_\+end\+Frame}}
+\index{cb\+\_\+end\+Frame@{cb\+\_\+end\+Frame}!01bsp\+\_\+radio\+\_\+rx.\+c@{01bsp\+\_\+radio\+\_\+rx.\+c}}
+\subsubsection[{\texorpdfstring{cb\+\_\+end\+Frame(\+P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H timestamp)}{cb_endFrame(PORT_TIMER_WIDTH timestamp)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} cb\+\_\+end\+Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH}}]{timestamp}
+\end{DoxyParamCaption}
+)}\hypertarget{01bsp__radio__rx_8c_abe624f7205af06166711753bf5bcc5bf}{}\label{01bsp__radio__rx_8c_abe624f7205af06166711753bf5bcc5bf}
+
+
+Definition at line 212 of file 01bsp\+\_\+radio\+\_\+rx.\+c.
+
+\index{01bsp\+\_\+radio\+\_\+rx.\+c@{01bsp\+\_\+radio\+\_\+rx.\+c}!cb\+\_\+radio\+Timer\+Compare@{cb\+\_\+radio\+Timer\+Compare}}
+\index{cb\+\_\+radio\+Timer\+Compare@{cb\+\_\+radio\+Timer\+Compare}!01bsp\+\_\+radio\+\_\+rx.\+c@{01bsp\+\_\+radio\+\_\+rx.\+c}}
+\subsubsection[{\texorpdfstring{cb\+\_\+radio\+Timer\+Compare(void)}{cb_radioTimerCompare(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} cb\+\_\+radio\+Timer\+Compare (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{01bsp__radio__rx_8c_a3db71b3e7273bc8f676bbbbf3db43b65}{}\label{01bsp__radio__rx_8c_a3db71b3e7273bc8f676bbbbf3db43b65}
+
+
+Definition at line 198 of file 01bsp\+\_\+radio\+\_\+rx.\+c.
+
+\index{01bsp\+\_\+radio\+\_\+rx.\+c@{01bsp\+\_\+radio\+\_\+rx.\+c}!cb\+\_\+radio\+Timer\+Overflows@{cb\+\_\+radio\+Timer\+Overflows}}
+\index{cb\+\_\+radio\+Timer\+Overflows@{cb\+\_\+radio\+Timer\+Overflows}!01bsp\+\_\+radio\+\_\+rx.\+c@{01bsp\+\_\+radio\+\_\+rx.\+c}}
+\subsubsection[{\texorpdfstring{cb\+\_\+radio\+Timer\+Overflows(void)}{cb_radioTimerOverflows(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} cb\+\_\+radio\+Timer\+Overflows (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{01bsp__radio__rx_8c_a0b1e3c13007a39058f277605430bc9f4}{}\label{01bsp__radio__rx_8c_a0b1e3c13007a39058f277605430bc9f4}
+
+
+Definition at line 192 of file 01bsp\+\_\+radio\+\_\+rx.\+c.
+
+\index{01bsp\+\_\+radio\+\_\+rx.\+c@{01bsp\+\_\+radio\+\_\+rx.\+c}!cb\+\_\+start\+Frame@{cb\+\_\+start\+Frame}}
+\index{cb\+\_\+start\+Frame@{cb\+\_\+start\+Frame}!01bsp\+\_\+radio\+\_\+rx.\+c@{01bsp\+\_\+radio\+\_\+rx.\+c}}
+\subsubsection[{\texorpdfstring{cb\+\_\+start\+Frame(\+P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H timestamp)}{cb_startFrame(PORT_TIMER_WIDTH timestamp)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} cb\+\_\+start\+Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH}}]{timestamp}
+\end{DoxyParamCaption}
+)}\hypertarget{01bsp__radio__rx_8c_a2830212fa3c73050b1ff654db6977bf2}{}\label{01bsp__radio__rx_8c_a2830212fa3c73050b1ff654db6977bf2}
+
+
+Definition at line 206 of file 01bsp\+\_\+radio\+\_\+rx.\+c.
+
+\index{01bsp\+\_\+radio\+\_\+rx.\+c@{01bsp\+\_\+radio\+\_\+rx.\+c}!cb\+\_\+uart\+Rx\+Cb@{cb\+\_\+uart\+Rx\+Cb}}
+\index{cb\+\_\+uart\+Rx\+Cb@{cb\+\_\+uart\+Rx\+Cb}!01bsp\+\_\+radio\+\_\+rx.\+c@{01bsp\+\_\+radio\+\_\+rx.\+c}}
+\subsubsection[{\texorpdfstring{cb\+\_\+uart\+Rx\+Cb(void)}{cb_uartRxCb(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} cb\+\_\+uart\+Rx\+Cb (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{01bsp__radio__rx_8c_ac74da9e3eaa937998301625d7acd206d}{}\label{01bsp__radio__rx_8c_ac74da9e3eaa937998301625d7acd206d}
+
+
+Definition at line 254 of file 01bsp\+\_\+radio\+\_\+rx.\+c.
+
+\index{01bsp\+\_\+radio\+\_\+rx.\+c@{01bsp\+\_\+radio\+\_\+rx.\+c}!cb\+\_\+uart\+Tx\+Done@{cb\+\_\+uart\+Tx\+Done}}
+\index{cb\+\_\+uart\+Tx\+Done@{cb\+\_\+uart\+Tx\+Done}!01bsp\+\_\+radio\+\_\+rx.\+c@{01bsp\+\_\+radio\+\_\+rx.\+c}}
+\subsubsection[{\texorpdfstring{cb\+\_\+uart\+Tx\+Done(void)}{cb_uartTxDone(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} cb\+\_\+uart\+Tx\+Done (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{01bsp__radio__rx_8c_ac7259841fcc9a73b4039664d8e872df8}{}\label{01bsp__radio__rx_8c_ac7259841fcc9a73b4039664d8e872df8}
+
+
+Definition at line 240 of file 01bsp\+\_\+radio\+\_\+rx.\+c.
+
+\index{01bsp\+\_\+radio\+\_\+rx.\+c@{01bsp\+\_\+radio\+\_\+rx.\+c}!mote\+\_\+main@{mote\+\_\+main}}
+\index{mote\+\_\+main@{mote\+\_\+main}!01bsp\+\_\+radio\+\_\+rx.\+c@{01bsp\+\_\+radio\+\_\+rx.\+c}}
+\subsubsection[{\texorpdfstring{mote\+\_\+main(void)}{mote_main(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int mote\+\_\+main (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{01bsp__radio__rx_8c_ad0caa506af897a3ebe6699aa0c0da367}{}\label{01bsp__radio__rx_8c_ad0caa506af897a3ebe6699aa0c0da367}
+
+
+The program starts executing here. 
+
+Z1-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+W\+S\+N430v13b-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+Telos\+B-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+Python-\/based emulation of the mote\textquotesingle{}s power supply.
+
+iot-\/lab\+\_\+\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+iot-\/lab\+\_\+\+A8-\/\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+G\+I\+N\+A-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+e\+Z430-\/\+R\+F2500-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module. 
+
+Definition at line 123 of file 01bsp\+\_\+radio\+\_\+rx.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{01bsp\+\_\+radio\+\_\+rx.\+c@{01bsp\+\_\+radio\+\_\+rx.\+c}!app\+\_\+dbg@{app\+\_\+dbg}}
+\index{app\+\_\+dbg@{app\+\_\+dbg}!01bsp\+\_\+radio\+\_\+rx.\+c@{01bsp\+\_\+radio\+\_\+rx.\+c}}
+\subsubsection[{\texorpdfstring{app\+\_\+dbg}{app_dbg}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf app\+\_\+dbg\+\_\+t} app\+\_\+dbg}\hypertarget{01bsp__radio__rx_8c_a462568f64e17a76f796aa9c827311428}{}\label{01bsp__radio__rx_8c_a462568f64e17a76f796aa9c827311428}
+
+
+Definition at line 87 of file 01bsp\+\_\+radio\+\_\+rx.\+c.
+
+\index{01bsp\+\_\+radio\+\_\+rx.\+c@{01bsp\+\_\+radio\+\_\+rx.\+c}!app\+\_\+vars@{app\+\_\+vars}}
+\index{app\+\_\+vars@{app\+\_\+vars}!01bsp\+\_\+radio\+\_\+rx.\+c@{01bsp\+\_\+radio\+\_\+rx.\+c}}
+\subsubsection[{\texorpdfstring{app\+\_\+vars}{app_vars}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf app\+\_\+vars\+\_\+t} app\+\_\+vars}\hypertarget{01bsp__radio__rx_8c_a8a1b0b7ccff92c7f1d8961997cd2c913}{}\label{01bsp__radio__rx_8c_a8a1b0b7ccff92c7f1d8961997cd2c913}
+
+
+Definition at line 104 of file 01bsp\+\_\+radio\+\_\+rx.\+c.
+

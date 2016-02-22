@@ -1,0 +1,149 @@
+\hypertarget{test__imu_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/gina/old/test\+\_\+imu.c File Reference}
+\label{test__imu_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/gina/old/test\+\_\+imu.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/gina/old/test\+\_\+imu.\+c}}
+{\ttfamily \#include \char`\"{}msp430x26x.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stdint.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}opendefs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gyro.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}large\+\_\+range\+\_\+accel.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}magnetometer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sensitive\+\_\+accel\+\_\+temperature.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{test__imu_8c_a6288eba0f8e8ad3ab1544ad731eb7667}{main} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em This is a standalone test program for the L\+E\+Ds and 32k\+Hz crystal of the G\+I\+NA board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{test__imu_8c_a0b7376bd990c1c391e87f98cc294a416}{gyro\+\_\+data} \mbox{[}8\mbox{]}
+\begin{DoxyCompactList}\small\item\em This is a standalone test program to test all the I\+MU sensors on the G\+I\+N\+A2.\+2b/c board. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{test__imu_8c_ae00ee9ecb8963c7974221c898d43ae6a}{large\+\_\+range\+\_\+accel\+\_\+data} \mbox{[}6\mbox{]}
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{test__imu_8c_a3166c0ccc862fe8904488dc9275d6955}{magnetometer\+\_\+data} \mbox{[}6\mbox{]}
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{test__imu_8c_a72f691b745631ae8507d80426047ac8e}{sensitive\+\_\+accel\+\_\+temperature\+\_\+data} \mbox{[}10\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{test\+\_\+imu.\+c@{test\+\_\+imu.\+c}!main@{main}}
+\index{main@{main}!test\+\_\+imu.\+c@{test\+\_\+imu.\+c}}
+\subsubsection[{\texorpdfstring{main(void)}{main(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} main (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test__imu_8c_a6288eba0f8e8ad3ab1544ad731eb7667}{}\label{test__imu_8c_a6288eba0f8e8ad3ab1544ad731eb7667}
+
+
+This is a standalone test program for the L\+E\+Ds and 32k\+Hz crystal of the G\+I\+NA board. 
+
+\begin{DoxyNote}{Note}
+The term \char`\"{}crystal\char`\"{} is usually written \char`\"{}\+X\+T\+A\+L\char`\"{} by embedded geeks.
+\end{DoxyNote}
+Download the program to a G\+I\+NA board, run it, you should see the 4 L\+E\+Ds blinking in sequence with a 500ms period.
+
+The digital outputs are\+:
+\begin{DoxyItemize}
+\item P2.\+0\+: red L\+ED
+\item P2.\+1\+: green L\+ED
+\item P2.\+2\+: blue L\+ED
+\item P2.\+3\+: red L\+ED
+\end{DoxyItemize}
+
+The \char`\"{}inputs\char`\"{} are\+:
+\begin{DoxyItemize}
+\item X\+IN, X\+O\+UT\+: 32768\+Hz crystal oscillator
+\end{DoxyItemize}
+
+The debug pins are\+:
+\begin{DoxyItemize}
+\item P5.\+6 output the A\+C\+LK (should be 32768\+Hz)
+\item P1.\+1 toggles when interrupt T\+I\+M\+E\+R\+A0\+\_\+\+V\+E\+C\+T\+OR fires
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, February 2012 The program starts executing here.
+\end{DoxyAuthor}
+This is a standalone test program for the L\+E\+Ds and 32k\+Hz crystal of the G\+I\+NA board.
+
+The digital U\+A\+RT interface is\+:
+\begin{DoxyItemize}
+\item P3.\+7\+: A1\+\_\+\+S\+O\+M\+I\+\_\+\+RX
+\item P3.\+8\+: A1\+\_\+\+S\+O\+M\+I\+\_\+\+TX
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, February 2012 The program starts executing here. 
+\end{DoxyAuthor}
+
+
+Definition at line 46 of file test\+\_\+imu.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{test\+\_\+imu.\+c@{test\+\_\+imu.\+c}!gyro\+\_\+data@{gyro\+\_\+data}}
+\index{gyro\+\_\+data@{gyro\+\_\+data}!test\+\_\+imu.\+c@{test\+\_\+imu.\+c}}
+\subsubsection[{\texorpdfstring{gyro\+\_\+data}{gyro_data}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} gyro\+\_\+data\mbox{[}8\mbox{]}}\hypertarget{test__imu_8c_a0b7376bd990c1c391e87f98cc294a416}{}\label{test__imu_8c_a0b7376bd990c1c391e87f98cc294a416}
+
+
+This is a standalone test program to test all the I\+MU sensors on the G\+I\+N\+A2.\+2b/c board. 
+
+That is, the gyro, large range accel, magnetometer, sensitive accel, temperature.
+
+Download the program to a G\+I\+NA board, run it, and break after a few seconds at the line indicated in the code. Use the Watch Window to see the value of the variables T\+BC.
+
+The digital connection to the gyro, large range accel and magnetometeris is done through a two-\/wire I2C serial bus\+:
+\begin{DoxyItemize}
+\item P5.\+2\+: B1\+\_\+\+I2\+C\+\_\+\+S\+CL
+\item P5.\+1\+: B1\+\_\+\+I2\+C\+\_\+\+S\+DA
+\end{DoxyItemize}
+
+In addition\+:
+\begin{DoxyItemize}
+\item P1.\+5\+: interrupt pin from the gyro (not used)
+\item P1.\+7\+: interrupt pin from the large range accelerometer (not used)
+\item P5.\+4\+: output to configure the I2C mode of the large range accelerometer (keep high)
+\end{DoxyItemize}
+
+The debug pins are\+:
+\begin{DoxyItemize}
+\item P1.\+1\+: toggles at every measurement
+\item P1.\+2\+: on during initial configuration and pulses at a new measurement
+\item P1.\+3\+: toggles upon an U\+S\+C\+I\+A\+B1\+T\+X\+\_\+\+V\+E\+C\+T\+OR interrupt (in ti\+\_\+i2c.\+c)
+\item P1.\+4\+: toggles upon an U\+S\+C\+I\+A\+B1\+R\+X\+\_\+\+V\+E\+C\+T\+OR interrupt (in ti\+\_\+i2c.\+c)
+\end{DoxyItemize}
+
+Speed\+:
+\begin{DoxyItemize}
+\item one measurement every $\sim$1.29ms
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, August 2010 
+\end{DoxyAuthor}
+
+
+Definition at line 41 of file test\+\_\+imu.\+c.
+
+\index{test\+\_\+imu.\+c@{test\+\_\+imu.\+c}!large\+\_\+range\+\_\+accel\+\_\+data@{large\+\_\+range\+\_\+accel\+\_\+data}}
+\index{large\+\_\+range\+\_\+accel\+\_\+data@{large\+\_\+range\+\_\+accel\+\_\+data}!test\+\_\+imu.\+c@{test\+\_\+imu.\+c}}
+\subsubsection[{\texorpdfstring{large\+\_\+range\+\_\+accel\+\_\+data}{large_range_accel_data}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} large\+\_\+range\+\_\+accel\+\_\+data\mbox{[}6\mbox{]}}\hypertarget{test__imu_8c_ae00ee9ecb8963c7974221c898d43ae6a}{}\label{test__imu_8c_ae00ee9ecb8963c7974221c898d43ae6a}
+
+
+Definition at line 42 of file test\+\_\+imu.\+c.
+
+\index{test\+\_\+imu.\+c@{test\+\_\+imu.\+c}!magnetometer\+\_\+data@{magnetometer\+\_\+data}}
+\index{magnetometer\+\_\+data@{magnetometer\+\_\+data}!test\+\_\+imu.\+c@{test\+\_\+imu.\+c}}
+\subsubsection[{\texorpdfstring{magnetometer\+\_\+data}{magnetometer_data}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} magnetometer\+\_\+data\mbox{[}6\mbox{]}}\hypertarget{test__imu_8c_a3166c0ccc862fe8904488dc9275d6955}{}\label{test__imu_8c_a3166c0ccc862fe8904488dc9275d6955}
+
+
+Definition at line 43 of file test\+\_\+imu.\+c.
+
+\index{test\+\_\+imu.\+c@{test\+\_\+imu.\+c}!sensitive\+\_\+accel\+\_\+temperature\+\_\+data@{sensitive\+\_\+accel\+\_\+temperature\+\_\+data}}
+\index{sensitive\+\_\+accel\+\_\+temperature\+\_\+data@{sensitive\+\_\+accel\+\_\+temperature\+\_\+data}!test\+\_\+imu.\+c@{test\+\_\+imu.\+c}}
+\subsubsection[{\texorpdfstring{sensitive\+\_\+accel\+\_\+temperature\+\_\+data}{sensitive_accel_temperature_data}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} sensitive\+\_\+accel\+\_\+temperature\+\_\+data\mbox{[}10\mbox{]}}\hypertarget{test__imu_8c_a72f691b745631ae8507d80426047ac8e}{}\label{test__imu_8c_a72f691b745631ae8507d80426047ac8e}
+
+
+Definition at line 44 of file test\+\_\+imu.\+c.
+

@@ -1,0 +1,531 @@
+\hypertarget{group___neighbors}{}\section{Neighbors}
+\label{group___neighbors}\index{Neighbors@{Neighbors}}
+
+
+Implementation of neighbors.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structneighbor_row__t}{neighbor\+Row\+\_\+t}
+\item 
+struct \hyperlink{structdebug_neighbor_entry__t}{debug\+Neighbor\+Entry\+\_\+t}
+\item 
+struct \hyperlink{structnet_debug_neigbor_entry__t}{net\+Debug\+Neigbor\+Entry\+\_\+t}
+\item 
+struct \hyperlink{structneighbors__vars__t}{neighbors\+\_\+vars\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___neighbors_gaf83606573bb704d34705b540c226a0d9}{M\+A\+X\+N\+U\+M\+N\+E\+I\+G\+H\+B\+O\+RS}~10
+\item 
+\#define \hyperlink{group___neighbors_ga6a269e3fd9f5dc2fe01c351944352799}{M\+A\+X\+P\+R\+E\+F\+E\+R\+E\+N\+CE}~2
+\item 
+\#define \hyperlink{group___neighbors_ga2c403faa9006b83e020166536b480025}{B\+A\+D\+N\+E\+I\+G\+H\+B\+O\+R\+M\+A\+X\+R\+S\+SI}~-\/80
+\item 
+\#define \hyperlink{group___neighbors_ga6e36748acedcb5b5ca037ad19227aeec}{G\+O\+O\+D\+N\+E\+I\+G\+H\+B\+O\+R\+M\+I\+N\+R\+S\+SI}~-\/90
+\item 
+\#define \hyperlink{group___neighbors_ga756051d437b8e4198fe0432b5d73a48b}{S\+W\+I\+T\+C\+H\+S\+T\+A\+B\+I\+L\+I\+T\+Y\+T\+H\+R\+E\+S\+H\+O\+LD}~3
+\item 
+\#define \hyperlink{group___neighbors_ga4d2874b0e44346069a08e6cf15d85d87}{D\+E\+F\+A\+U\+L\+T\+L\+I\+N\+K\+C\+O\+ST}~15
+\item 
+\#define \hyperlink{group___neighbors_gaec4751ff896721a5a0fd70b841d09724}{M\+A\+X\+D\+A\+G\+R\+A\+NK}~0xffff
+\item 
+\#define \hyperlink{group___neighbors_gacc9a3232f2dca59348d8b536005a2f89}{D\+E\+F\+A\+U\+L\+T\+D\+A\+G\+R\+A\+NK}~\hyperlink{group___neighbors_gaec4751ff896721a5a0fd70b841d09724}{M\+A\+X\+D\+A\+G\+R\+A\+NK}
+\item 
+\#define \hyperlink{group___neighbors_gaa81003e9317e9cd007be68d37a09eb40}{M\+I\+N\+H\+O\+P\+R\+A\+N\+K\+I\+N\+C\+R\+E\+A\+SE}~256
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___neighbors_ga4e9c73e9e7ec8a90679bed5d18b593a7}{neighbors\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Initializes this module. \end{DoxyCompactList}\item 
+\hyperlink{opendefs_8h_a502861d0bb432f5702761bd854023e21}{dagrank\+\_\+t} \hyperlink{group___neighbors_gab749e7566b80148cd38495cd7bd62272}{neighbors\+\_\+get\+My\+D\+A\+Grank} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Retrieve this mote\textquotesingle{}s current D\+AG rank. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{group___neighbors_ga07d5dcae3e882a8a9a85997136952fcc}{neighbors\+\_\+get\+Num\+Neighbors} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Retrieve the number of neighbors this mote\textquotesingle{}s currently knows of. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group___neighbors_gaaa20cedbb0eb4d6fb9389ccb211a3903}{neighbors\+\_\+get\+Preferred\+Parent\+Eui64} (\hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$\hyperlink{samr21__xpro_201bsp__flash_201bsp__flash_8c_a1f7d4f7dc49d64e8ffe1ff2e385657e5}{address\+To\+Write})
+\begin{DoxyCompactList}\small\item\em Retrieve my preferred parent\textquotesingle{}s E\+U\+I64 address. \end{DoxyCompactList}\item 
+\hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$ \hyperlink{group___neighbors_gae741527ad75fcd31a5d7d6fc585174b2}{neighbors\+\_\+get\+K\+A\+Neighbor} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} ka\+Period)
+\begin{DoxyCompactList}\small\item\em Find neighbor to which to send KA. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___neighbors_gaa6ff67c38ad56955395d474be68a47e5}{neighbors\+\_\+set\+My\+D\+A\+Grank} (\hyperlink{opendefs_8h_a502861d0bb432f5702761bd854023e21}{dagrank\+\_\+t} rank)
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group___neighbors_gada9893dd745640061b063a06c67be154}{neighbors\+\_\+is\+Stable\+Neighbor} (\hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$address)
+\begin{DoxyCompactList}\small\item\em Indicate whether some neighbor is a stable neighbor. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group___neighbors_ga6811829f946d51d6e30b2f9f812df133}{neighbors\+\_\+is\+Preferred\+Parent} (\hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$address)
+\begin{DoxyCompactList}\small\item\em Indicate whether some neighbor is a preferred neighbor. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group___neighbors_ga3a84fbff4104444fdab844d9cbaa0c77}{neighbors\+\_\+is\+Neighbor\+With\+Lower\+D\+A\+Grank} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} index)
+\begin{DoxyCompactList}\small\item\em Indicate whether some neighbor has a lower D\+AG rank that me. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group___neighbors_gac13c1a5dda0cc06109b811f093b1a400}{neighbors\+\_\+is\+Neighbor\+With\+Higher\+D\+A\+Grank} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} index)
+\begin{DoxyCompactList}\small\item\em Indicate whether some neighbor has a lower D\+AG rank that me. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___neighbors_gaf6850dedabd52cdef3690aee1b1c554c}{neighbors\+\_\+indicate\+Rx} (\hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$l2\+\_\+src, \hyperlink{_p_e___types_8h_aef44329758059c91c76d334e8fc09700}{int8\+\_\+t} rssi, \hyperlink{structasn__t}{asn\+\_\+t} $\ast$asn\+Timestamp, \hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} join\+Prio\+Present, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} join\+Prio)
+\begin{DoxyCompactList}\small\item\em Indicate some (non-\/\+A\+CK) packet was received from a neighbor. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___neighbors_ga8379ad6d1816deed995c75033ffd740a}{neighbors\+\_\+indicate\+Tx} (\hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$dest, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} num\+Tx\+Attempts, \hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} was\+\_\+finally\+\_\+acked, \hyperlink{structasn__t}{asn\+\_\+t} $\ast$asn\+Timestamp)
+\begin{DoxyCompactList}\small\item\em Indicate some packet was sent to some neighbor. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___neighbors_gaa4e24acdf2f814068990c3e535a65164}{neighbors\+\_\+indicate\+Rx\+D\+IO} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Indicate I just received a R\+PL D\+IO from a neighbor. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___neighbors_ga1c1819e3a38fb549a91c495d658b260f}{neighbors\+\_\+get\+Neighbor} (\hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$address, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} addr\+\_\+type, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} index)
+\begin{DoxyCompactList}\small\item\em Write the 64-\/bit address of some neighbor to some location. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___neighbors_ga995345b6dec99e3e20ef4059ed59db34}{neighbors\+\_\+update\+My\+D\+A\+Grank\+And\+Neighbor\+Preference} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Update my D\+AG rank and neighbor preference. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___neighbors_ga3fa32881f8cf7afa1e5334cef8185957}{neighbors\+\_\+remove\+Old} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group___neighbors_ga85475c492d943f16dc6da4fea6683352}{debug\+Print\+\_\+neighbors} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Triggers this module to print status information, over serial. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of neighbors. 
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, August 2010 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\index{Neighbors@{Neighbors}!B\+A\+D\+N\+E\+I\+G\+H\+B\+O\+R\+M\+A\+X\+R\+S\+SI@{B\+A\+D\+N\+E\+I\+G\+H\+B\+O\+R\+M\+A\+X\+R\+S\+SI}}
+\index{B\+A\+D\+N\+E\+I\+G\+H\+B\+O\+R\+M\+A\+X\+R\+S\+SI@{B\+A\+D\+N\+E\+I\+G\+H\+B\+O\+R\+M\+A\+X\+R\+S\+SI}!Neighbors@{Neighbors}}
+\subsubsection[{\texorpdfstring{B\+A\+D\+N\+E\+I\+G\+H\+B\+O\+R\+M\+A\+X\+R\+S\+SI}{BADNEIGHBORMAXRSSI}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+A\+D\+N\+E\+I\+G\+H\+B\+O\+R\+M\+A\+X\+R\+S\+SI~-\/80}\hypertarget{group___neighbors_ga2c403faa9006b83e020166536b480025}{}\label{group___neighbors_ga2c403faa9006b83e020166536b480025}
+
+
+Definition at line 17 of file neighbors.\+h.
+
+\index{Neighbors@{Neighbors}!D\+E\+F\+A\+U\+L\+T\+D\+A\+G\+R\+A\+NK@{D\+E\+F\+A\+U\+L\+T\+D\+A\+G\+R\+A\+NK}}
+\index{D\+E\+F\+A\+U\+L\+T\+D\+A\+G\+R\+A\+NK@{D\+E\+F\+A\+U\+L\+T\+D\+A\+G\+R\+A\+NK}!Neighbors@{Neighbors}}
+\subsubsection[{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+D\+A\+G\+R\+A\+NK}{DEFAULTDAGRANK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+F\+A\+U\+L\+T\+D\+A\+G\+R\+A\+NK~{\bf M\+A\+X\+D\+A\+G\+R\+A\+NK}}\hypertarget{group___neighbors_gacc9a3232f2dca59348d8b536005a2f89}{}\label{group___neighbors_gacc9a3232f2dca59348d8b536005a2f89}
+
+
+Definition at line 23 of file neighbors.\+h.
+
+\index{Neighbors@{Neighbors}!D\+E\+F\+A\+U\+L\+T\+L\+I\+N\+K\+C\+O\+ST@{D\+E\+F\+A\+U\+L\+T\+L\+I\+N\+K\+C\+O\+ST}}
+\index{D\+E\+F\+A\+U\+L\+T\+L\+I\+N\+K\+C\+O\+ST@{D\+E\+F\+A\+U\+L\+T\+L\+I\+N\+K\+C\+O\+ST}!Neighbors@{Neighbors}}
+\subsubsection[{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+L\+I\+N\+K\+C\+O\+ST}{DEFAULTLINKCOST}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+F\+A\+U\+L\+T\+L\+I\+N\+K\+C\+O\+ST~15}\hypertarget{group___neighbors_ga4d2874b0e44346069a08e6cf15d85d87}{}\label{group___neighbors_ga4d2874b0e44346069a08e6cf15d85d87}
+
+
+Definition at line 20 of file neighbors.\+h.
+
+\index{Neighbors@{Neighbors}!G\+O\+O\+D\+N\+E\+I\+G\+H\+B\+O\+R\+M\+I\+N\+R\+S\+SI@{G\+O\+O\+D\+N\+E\+I\+G\+H\+B\+O\+R\+M\+I\+N\+R\+S\+SI}}
+\index{G\+O\+O\+D\+N\+E\+I\+G\+H\+B\+O\+R\+M\+I\+N\+R\+S\+SI@{G\+O\+O\+D\+N\+E\+I\+G\+H\+B\+O\+R\+M\+I\+N\+R\+S\+SI}!Neighbors@{Neighbors}}
+\subsubsection[{\texorpdfstring{G\+O\+O\+D\+N\+E\+I\+G\+H\+B\+O\+R\+M\+I\+N\+R\+S\+SI}{GOODNEIGHBORMINRSSI}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+O\+O\+D\+N\+E\+I\+G\+H\+B\+O\+R\+M\+I\+N\+R\+S\+SI~-\/90}\hypertarget{group___neighbors_ga6e36748acedcb5b5ca037ad19227aeec}{}\label{group___neighbors_ga6e36748acedcb5b5ca037ad19227aeec}
+
+
+Definition at line 18 of file neighbors.\+h.
+
+\index{Neighbors@{Neighbors}!M\+A\+X\+D\+A\+G\+R\+A\+NK@{M\+A\+X\+D\+A\+G\+R\+A\+NK}}
+\index{M\+A\+X\+D\+A\+G\+R\+A\+NK@{M\+A\+X\+D\+A\+G\+R\+A\+NK}!Neighbors@{Neighbors}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+D\+A\+G\+R\+A\+NK}{MAXDAGRANK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+D\+A\+G\+R\+A\+NK~0xffff}\hypertarget{group___neighbors_gaec4751ff896721a5a0fd70b841d09724}{}\label{group___neighbors_gaec4751ff896721a5a0fd70b841d09724}
+
+
+Definition at line 22 of file neighbors.\+h.
+
+\index{Neighbors@{Neighbors}!M\+A\+X\+N\+U\+M\+N\+E\+I\+G\+H\+B\+O\+RS@{M\+A\+X\+N\+U\+M\+N\+E\+I\+G\+H\+B\+O\+RS}}
+\index{M\+A\+X\+N\+U\+M\+N\+E\+I\+G\+H\+B\+O\+RS@{M\+A\+X\+N\+U\+M\+N\+E\+I\+G\+H\+B\+O\+RS}!Neighbors@{Neighbors}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+N\+U\+M\+N\+E\+I\+G\+H\+B\+O\+RS}{MAXNUMNEIGHBORS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+N\+U\+M\+N\+E\+I\+G\+H\+B\+O\+RS~10}\hypertarget{group___neighbors_gaf83606573bb704d34705b540c226a0d9}{}\label{group___neighbors_gaf83606573bb704d34705b540c226a0d9}
+
+
+Definition at line 15 of file neighbors.\+h.
+
+\index{Neighbors@{Neighbors}!M\+A\+X\+P\+R\+E\+F\+E\+R\+E\+N\+CE@{M\+A\+X\+P\+R\+E\+F\+E\+R\+E\+N\+CE}}
+\index{M\+A\+X\+P\+R\+E\+F\+E\+R\+E\+N\+CE@{M\+A\+X\+P\+R\+E\+F\+E\+R\+E\+N\+CE}!Neighbors@{Neighbors}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+P\+R\+E\+F\+E\+R\+E\+N\+CE}{MAXPREFERENCE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+P\+R\+E\+F\+E\+R\+E\+N\+CE~2}\hypertarget{group___neighbors_ga6a269e3fd9f5dc2fe01c351944352799}{}\label{group___neighbors_ga6a269e3fd9f5dc2fe01c351944352799}
+
+
+Definition at line 16 of file neighbors.\+h.
+
+\index{Neighbors@{Neighbors}!M\+I\+N\+H\+O\+P\+R\+A\+N\+K\+I\+N\+C\+R\+E\+A\+SE@{M\+I\+N\+H\+O\+P\+R\+A\+N\+K\+I\+N\+C\+R\+E\+A\+SE}}
+\index{M\+I\+N\+H\+O\+P\+R\+A\+N\+K\+I\+N\+C\+R\+E\+A\+SE@{M\+I\+N\+H\+O\+P\+R\+A\+N\+K\+I\+N\+C\+R\+E\+A\+SE}!Neighbors@{Neighbors}}
+\subsubsection[{\texorpdfstring{M\+I\+N\+H\+O\+P\+R\+A\+N\+K\+I\+N\+C\+R\+E\+A\+SE}{MINHOPRANKINCREASE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+I\+N\+H\+O\+P\+R\+A\+N\+K\+I\+N\+C\+R\+E\+A\+SE~256}\hypertarget{group___neighbors_gaa81003e9317e9cd007be68d37a09eb40}{}\label{group___neighbors_gaa81003e9317e9cd007be68d37a09eb40}
+
+
+Definition at line 24 of file neighbors.\+h.
+
+\index{Neighbors@{Neighbors}!S\+W\+I\+T\+C\+H\+S\+T\+A\+B\+I\+L\+I\+T\+Y\+T\+H\+R\+E\+S\+H\+O\+LD@{S\+W\+I\+T\+C\+H\+S\+T\+A\+B\+I\+L\+I\+T\+Y\+T\+H\+R\+E\+S\+H\+O\+LD}}
+\index{S\+W\+I\+T\+C\+H\+S\+T\+A\+B\+I\+L\+I\+T\+Y\+T\+H\+R\+E\+S\+H\+O\+LD@{S\+W\+I\+T\+C\+H\+S\+T\+A\+B\+I\+L\+I\+T\+Y\+T\+H\+R\+E\+S\+H\+O\+LD}!Neighbors@{Neighbors}}
+\subsubsection[{\texorpdfstring{S\+W\+I\+T\+C\+H\+S\+T\+A\+B\+I\+L\+I\+T\+Y\+T\+H\+R\+E\+S\+H\+O\+LD}{SWITCHSTABILITYTHRESHOLD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+W\+I\+T\+C\+H\+S\+T\+A\+B\+I\+L\+I\+T\+Y\+T\+H\+R\+E\+S\+H\+O\+LD~3}\hypertarget{group___neighbors_ga756051d437b8e4198fe0432b5d73a48b}{}\label{group___neighbors_ga756051d437b8e4198fe0432b5d73a48b}
+
+
+Definition at line 19 of file neighbors.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{Neighbors@{Neighbors}!debug\+Print\+\_\+neighbors@{debug\+Print\+\_\+neighbors}}
+\index{debug\+Print\+\_\+neighbors@{debug\+Print\+\_\+neighbors}!Neighbors@{Neighbors}}
+\subsubsection[{\texorpdfstring{debug\+Print\+\_\+neighbors(void)}{debugPrint_neighbors(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} debug\+Print\+\_\+neighbors (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___neighbors_ga85475c492d943f16dc6da4fea6683352}{}\label{group___neighbors_ga85475c492d943f16dc6da4fea6683352}
+
+
+Triggers this module to print status information, over serial. 
+
+debug\+Print\+\_\+$\ast$ functions are used by the openserial module to continuously print status information about several modules in the Open\+W\+SN stack.
+
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if this function printed something, F\+A\+L\+SE otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 591 of file neighbors.\+c.
+
+\index{Neighbors@{Neighbors}!neighbors\+\_\+get\+K\+A\+Neighbor@{neighbors\+\_\+get\+K\+A\+Neighbor}}
+\index{neighbors\+\_\+get\+K\+A\+Neighbor@{neighbors\+\_\+get\+K\+A\+Neighbor}!Neighbors@{Neighbors}}
+\subsubsection[{\texorpdfstring{neighbors\+\_\+get\+K\+A\+Neighbor(uint16\+\_\+t ka\+Period)}{neighbors_getKANeighbor(uint16_t kaPeriod)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf open\+\_\+addr\+\_\+t}$\ast$ neighbors\+\_\+get\+K\+A\+Neighbor (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t}}]{ka\+Period}
+\end{DoxyParamCaption}
+)}\hypertarget{group___neighbors_gae741527ad75fcd31a5d7d6fc585174b2}{}\label{group___neighbors_gae741527ad75fcd31a5d7d6fc585174b2}
+
+
+Find neighbor to which to send KA. 
+
+This function iterates through the neighbor table and identifies the neighbor we need to send a KA to, if any. This neighbor satisfies the following conditions\+:
+\begin{DoxyItemize}
+\item it is one of our preferred parents
+\item we haven\textquotesingle{}t heard it for over ka\+Period
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ka\+Period} & The maximum number of slots I\textquotesingle{}m allowed not to have heard it.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the neighbor\textquotesingle{}s address, or N\+U\+LL if no KA is needed. 
+\end{DoxyReturn}
+
+
+Definition at line 141 of file neighbors.\+c.
+
+\index{Neighbors@{Neighbors}!neighbors\+\_\+get\+My\+D\+A\+Grank@{neighbors\+\_\+get\+My\+D\+A\+Grank}}
+\index{neighbors\+\_\+get\+My\+D\+A\+Grank@{neighbors\+\_\+get\+My\+D\+A\+Grank}!Neighbors@{Neighbors}}
+\subsubsection[{\texorpdfstring{neighbors\+\_\+get\+My\+D\+A\+Grank(void)}{neighbors_getMyDAGrank(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf dagrank\+\_\+t} neighbors\+\_\+get\+My\+D\+A\+Grank (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___neighbors_gab749e7566b80148cd38495cd7bd62272}{}\label{group___neighbors_gab749e7566b80148cd38495cd7bd62272}
+
+
+Retrieve this mote\textquotesingle{}s current D\+AG rank. 
+
+\begin{DoxyReturn}{Returns}
+This mote\textquotesingle{}s current D\+AG rank. 
+\end{DoxyReturn}
+
+
+Definition at line 54 of file neighbors.\+c.
+
+\index{Neighbors@{Neighbors}!neighbors\+\_\+get\+Neighbor@{neighbors\+\_\+get\+Neighbor}}
+\index{neighbors\+\_\+get\+Neighbor@{neighbors\+\_\+get\+Neighbor}!Neighbors@{Neighbors}}
+\subsubsection[{\texorpdfstring{neighbors\+\_\+get\+Neighbor(open\+\_\+addr\+\_\+t $\ast$address, uint8\+\_\+t addr\+\_\+type, uint8\+\_\+t index)}{neighbors_getNeighbor(open_addr_t *address, uint8_t addr_type, uint8_t index)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} neighbors\+\_\+get\+Neighbor (
+\begin{DoxyParamCaption}
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{address, }
+\item[{{\bf uint8\+\_\+t}}]{addr\+\_\+type, }
+\item[{{\bf uint8\+\_\+t}}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{group___neighbors_ga1c1819e3a38fb549a91c495d658b260f}{}\label{group___neighbors_ga1c1819e3a38fb549a91c495d658b260f}
+
+
+Write the 64-\/bit address of some neighbor to some location. 
+
+
+
+Definition at line 476 of file neighbors.\+c.
+
+\index{Neighbors@{Neighbors}!neighbors\+\_\+get\+Num\+Neighbors@{neighbors\+\_\+get\+Num\+Neighbors}}
+\index{neighbors\+\_\+get\+Num\+Neighbors@{neighbors\+\_\+get\+Num\+Neighbors}!Neighbors@{Neighbors}}
+\subsubsection[{\texorpdfstring{neighbors\+\_\+get\+Num\+Neighbors(void)}{neighbors_getNumNeighbors(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} neighbors\+\_\+get\+Num\+Neighbors (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___neighbors_ga07d5dcae3e882a8a9a85997136952fcc}{}\label{group___neighbors_ga07d5dcae3e882a8a9a85997136952fcc}
+
+
+Retrieve the number of neighbors this mote\textquotesingle{}s currently knows of. 
+
+\begin{DoxyReturn}{Returns}
+The number of neighbors this mote\textquotesingle{}s currently knows of. 
+\end{DoxyReturn}
+
+
+Definition at line 63 of file neighbors.\+c.
+
+\index{Neighbors@{Neighbors}!neighbors\+\_\+get\+Preferred\+Parent\+Eui64@{neighbors\+\_\+get\+Preferred\+Parent\+Eui64}}
+\index{neighbors\+\_\+get\+Preferred\+Parent\+Eui64@{neighbors\+\_\+get\+Preferred\+Parent\+Eui64}!Neighbors@{Neighbors}}
+\subsubsection[{\texorpdfstring{neighbors\+\_\+get\+Preferred\+Parent\+Eui64(open\+\_\+addr\+\_\+t $\ast$address\+To\+Write)}{neighbors_getPreferredParentEui64(open_addr_t *addressToWrite)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} neighbors\+\_\+get\+Preferred\+Parent\+Eui64 (
+\begin{DoxyParamCaption}
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{address\+To\+Write}
+\end{DoxyParamCaption}
+)}\hypertarget{group___neighbors_gaaa20cedbb0eb4d6fb9389ccb211a3903}{}\label{group___neighbors_gaaa20cedbb0eb4d6fb9389ccb211a3903}
+
+
+Retrieve my preferred parent\textquotesingle{}s E\+U\+I64 address. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em address\+To\+Write} & Where to write the preferred parent\textquotesingle{}s address to. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 81 of file neighbors.\+c.
+
+\index{Neighbors@{Neighbors}!neighbors\+\_\+indicate\+Rx@{neighbors\+\_\+indicate\+Rx}}
+\index{neighbors\+\_\+indicate\+Rx@{neighbors\+\_\+indicate\+Rx}!Neighbors@{Neighbors}}
+\subsubsection[{\texorpdfstring{neighbors\+\_\+indicate\+Rx(open\+\_\+addr\+\_\+t $\ast$l2\+\_\+src, int8\+\_\+t rssi, asn\+\_\+t $\ast$asn\+Timestamp, bool join\+Prio\+Present, uint8\+\_\+t join\+Prio)}{neighbors_indicateRx(open_addr_t *l2_src, int8_t rssi, asn_t *asnTimestamp, bool joinPrioPresent, uint8_t joinPrio)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} neighbors\+\_\+indicate\+Rx (
+\begin{DoxyParamCaption}
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{l2\+\_\+src, }
+\item[{{\bf int8\+\_\+t}}]{rssi, }
+\item[{{\bf asn\+\_\+t} $\ast$}]{asn\+Ts, }
+\item[{{\bf bool}}]{join\+Prio\+Present, }
+\item[{{\bf uint8\+\_\+t}}]{join\+Prio}
+\end{DoxyParamCaption}
+)}\hypertarget{group___neighbors_gaf6850dedabd52cdef3690aee1b1c554c}{}\label{group___neighbors_gaf6850dedabd52cdef3690aee1b1c554c}
+
+
+Indicate some (non-\/\+A\+CK) packet was received from a neighbor. 
+
+This function should be called for each received (non-\/\+A\+CK) packet so neighbor statistics in the neighbor table can be updated.
+
+The fields which are updated are\+:
+\begin{DoxyItemize}
+\item num\+Rx
+\item rssi
+\item asn
+\item stable\+Neighbor
+\item switch\+Stability\+Counter
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em l2\+\_\+src} & M\+AC source address of the packet, i.\+e. the neighbor who sent the packet just received. \\
+\hline
+\mbox{\tt in}  & {\em rssi} & R\+S\+SI with which this packet was received. \\
+\hline
+\mbox{\tt in}  & {\em asn\+Ts} & A\+SN at which this packet was received. \\
+\hline
+\mbox{\tt in}  & {\em join\+Prio\+Present} & Whether a join priority was present in the received packet. \\
+\hline
+\mbox{\tt in}  & {\em join\+Prio} & The join priority present in the packet, if any. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 315 of file neighbors.\+c.
+
+\index{Neighbors@{Neighbors}!neighbors\+\_\+indicate\+Rx\+D\+IO@{neighbors\+\_\+indicate\+Rx\+D\+IO}}
+\index{neighbors\+\_\+indicate\+Rx\+D\+IO@{neighbors\+\_\+indicate\+Rx\+D\+IO}!Neighbors@{Neighbors}}
+\subsubsection[{\texorpdfstring{neighbors\+\_\+indicate\+Rx\+D\+I\+O(\+Open\+Queue\+Entry\+\_\+t $\ast$msg)}{neighbors_indicateRxDIO(OpenQueueEntry_t *msg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} neighbors\+\_\+indicate\+Rx\+D\+IO (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{group___neighbors_gaa4e24acdf2f814068990c3e535a65164}{}\label{group___neighbors_gaa4e24acdf2f814068990c3e535a65164}
+
+
+Indicate I just received a R\+PL D\+IO from a neighbor. 
+
+This function should be called for each received a D\+IO is received so neighbor routing information in the neighbor table can be updated.
+
+The fields which are updated are\+:
+\begin{DoxyItemize}
+\item D\+A\+Grank
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em msg} & The received message with msg-\/$>$payload pointing to the D\+IO header. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 436 of file neighbors.\+c.
+
+\index{Neighbors@{Neighbors}!neighbors\+\_\+indicate\+Tx@{neighbors\+\_\+indicate\+Tx}}
+\index{neighbors\+\_\+indicate\+Tx@{neighbors\+\_\+indicate\+Tx}!Neighbors@{Neighbors}}
+\subsubsection[{\texorpdfstring{neighbors\+\_\+indicate\+Tx(open\+\_\+addr\+\_\+t $\ast$dest, uint8\+\_\+t num\+Tx\+Attempts, bool was\+\_\+finally\+\_\+acked, asn\+\_\+t $\ast$asn\+Timestamp)}{neighbors_indicateTx(open_addr_t *dest, uint8_t numTxAttempts, bool was_finally_acked, asn_t *asnTimestamp)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} neighbors\+\_\+indicate\+Tx (
+\begin{DoxyParamCaption}
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{l2\+\_\+dest, }
+\item[{{\bf uint8\+\_\+t}}]{num\+Tx\+Attempts, }
+\item[{{\bf bool}}]{was\+\_\+finally\+\_\+acked, }
+\item[{{\bf asn\+\_\+t} $\ast$}]{asn\+Ts}
+\end{DoxyParamCaption}
+)}\hypertarget{group___neighbors_ga8379ad6d1816deed995c75033ffd740a}{}\label{group___neighbors_ga8379ad6d1816deed995c75033ffd740a}
+
+
+Indicate some packet was sent to some neighbor. 
+
+This function should be called for each transmitted (non-\/\+A\+CK) packet so neighbor statistics in the neighbor table can be updated.
+
+The fields which are updated are\+:
+\begin{DoxyItemize}
+\item num\+Tx
+\item num\+Tx\+A\+CK
+\item asn
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em l2\+\_\+dest} & M\+AC destination address of the packet, i.\+e. the neighbor who I just sent the packet to. \\
+\hline
+\mbox{\tt in}  & {\em num\+Tx\+Attempts} & Number of transmission attempts to this neighbor. \\
+\hline
+\mbox{\tt in}  & {\em was\+\_\+finally\+\_\+acked} & T\+R\+UE iff the packet was A\+CK\textquotesingle{}ed by the neighbor on final transmission attempt. \\
+\hline
+\mbox{\tt in}  & {\em asn\+Ts} & A\+SN of the last transmission attempt. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 392 of file neighbors.\+c.
+
+\index{Neighbors@{Neighbors}!neighbors\+\_\+init@{neighbors\+\_\+init}}
+\index{neighbors\+\_\+init@{neighbors\+\_\+init}!Neighbors@{Neighbors}}
+\subsubsection[{\texorpdfstring{neighbors\+\_\+init(void)}{neighbors_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} neighbors\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___neighbors_ga4e9c73e9e7ec8a90679bed5d18b593a7}{}\label{group___neighbors_ga4e9c73e9e7ec8a90679bed5d18b593a7}
+
+
+Initializes this module. 
+
+
+
+Definition at line 34 of file neighbors.\+c.
+
+\index{Neighbors@{Neighbors}!neighbors\+\_\+is\+Neighbor\+With\+Higher\+D\+A\+Grank@{neighbors\+\_\+is\+Neighbor\+With\+Higher\+D\+A\+Grank}}
+\index{neighbors\+\_\+is\+Neighbor\+With\+Higher\+D\+A\+Grank@{neighbors\+\_\+is\+Neighbor\+With\+Higher\+D\+A\+Grank}!Neighbors@{Neighbors}}
+\subsubsection[{\texorpdfstring{neighbors\+\_\+is\+Neighbor\+With\+Higher\+D\+A\+Grank(uint8\+\_\+t index)}{neighbors_isNeighborWithHigherDAGrank(uint8_t index)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} neighbors\+\_\+is\+Neighbor\+With\+Higher\+D\+A\+Grank (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{group___neighbors_gac13c1a5dda0cc06109b811f093b1a400}{}\label{group___neighbors_gac13c1a5dda0cc06109b811f093b1a400}
+
+
+Indicate whether some neighbor has a lower D\+AG rank that me. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em index} & The index of that neighbor in the neighbor table.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if that neighbor has a lower D\+AG rank than me, F\+A\+L\+SE otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 279 of file neighbors.\+c.
+
+\index{Neighbors@{Neighbors}!neighbors\+\_\+is\+Neighbor\+With\+Lower\+D\+A\+Grank@{neighbors\+\_\+is\+Neighbor\+With\+Lower\+D\+A\+Grank}}
+\index{neighbors\+\_\+is\+Neighbor\+With\+Lower\+D\+A\+Grank@{neighbors\+\_\+is\+Neighbor\+With\+Lower\+D\+A\+Grank}!Neighbors@{Neighbors}}
+\subsubsection[{\texorpdfstring{neighbors\+\_\+is\+Neighbor\+With\+Lower\+D\+A\+Grank(uint8\+\_\+t index)}{neighbors_isNeighborWithLowerDAGrank(uint8_t index)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} neighbors\+\_\+is\+Neighbor\+With\+Lower\+D\+A\+Grank (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{group___neighbors_ga3a84fbff4104444fdab844d9cbaa0c77}{}\label{group___neighbors_ga3a84fbff4104444fdab844d9cbaa0c77}
+
+
+Indicate whether some neighbor has a lower D\+AG rank that me. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em index} & The index of that neighbor in the neighbor table.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if that neighbor has a lower D\+AG rank than me, F\+A\+L\+SE otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 258 of file neighbors.\+c.
+
+\index{Neighbors@{Neighbors}!neighbors\+\_\+is\+Preferred\+Parent@{neighbors\+\_\+is\+Preferred\+Parent}}
+\index{neighbors\+\_\+is\+Preferred\+Parent@{neighbors\+\_\+is\+Preferred\+Parent}!Neighbors@{Neighbors}}
+\subsubsection[{\texorpdfstring{neighbors\+\_\+is\+Preferred\+Parent(open\+\_\+addr\+\_\+t $\ast$address)}{neighbors_isPreferredParent(open_addr_t *address)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} neighbors\+\_\+is\+Preferred\+Parent (
+\begin{DoxyParamCaption}
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{address}
+\end{DoxyParamCaption}
+)}\hypertarget{group___neighbors_ga6811829f946d51d6e30b2f9f812df133}{}\label{group___neighbors_ga6811829f946d51d6e30b2f9f812df133}
+
+
+Indicate whether some neighbor is a preferred neighbor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em address} & The E\+U\+I64 address of the neighbor.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if that neighbor is preferred, F\+A\+L\+SE otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 229 of file neighbors.\+c.
+
+\index{Neighbors@{Neighbors}!neighbors\+\_\+is\+Stable\+Neighbor@{neighbors\+\_\+is\+Stable\+Neighbor}}
+\index{neighbors\+\_\+is\+Stable\+Neighbor@{neighbors\+\_\+is\+Stable\+Neighbor}!Neighbors@{Neighbors}}
+\subsubsection[{\texorpdfstring{neighbors\+\_\+is\+Stable\+Neighbor(open\+\_\+addr\+\_\+t $\ast$address)}{neighbors_isStableNeighbor(open_addr_t *address)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} neighbors\+\_\+is\+Stable\+Neighbor (
+\begin{DoxyParamCaption}
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{address}
+\end{DoxyParamCaption}
+)}\hypertarget{group___neighbors_gada9893dd745640061b063a06c67be154}{}\label{group___neighbors_gada9893dd745640061b063a06c67be154}
+
+
+Indicate whether some neighbor is a stable neighbor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em address} & The address of the neighbor, a full 128-\/bit I\+Pv6 addres.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if that neighbor is stable, F\+A\+L\+SE otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 190 of file neighbors.\+c.
+
+\index{Neighbors@{Neighbors}!neighbors\+\_\+remove\+Old@{neighbors\+\_\+remove\+Old}}
+\index{neighbors\+\_\+remove\+Old@{neighbors\+\_\+remove\+Old}!Neighbors@{Neighbors}}
+\subsubsection[{\texorpdfstring{neighbors\+\_\+remove\+Old(void)}{neighbors_removeOld(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} neighbors\+\_\+remove\+Old (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___neighbors_ga3fa32881f8cf7afa1e5334cef8185957}{}\label{group___neighbors_ga3fa32881f8cf7afa1e5334cef8185957}
+
+
+Definition at line 567 of file neighbors.\+c.
+
+\index{Neighbors@{Neighbors}!neighbors\+\_\+set\+My\+D\+A\+Grank@{neighbors\+\_\+set\+My\+D\+A\+Grank}}
+\index{neighbors\+\_\+set\+My\+D\+A\+Grank@{neighbors\+\_\+set\+My\+D\+A\+Grank}!Neighbors@{Neighbors}}
+\subsubsection[{\texorpdfstring{neighbors\+\_\+set\+My\+D\+A\+Grank(dagrank\+\_\+t rank)}{neighbors_setMyDAGrank(dagrank_t rank)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} neighbors\+\_\+set\+My\+D\+A\+Grank (
+\begin{DoxyParamCaption}
+\item[{{\bf dagrank\+\_\+t}}]{rank}
+\end{DoxyParamCaption}
+)}\hypertarget{group___neighbors_gaa6ff67c38ad56955395d474be68a47e5}{}\label{group___neighbors_gaa6ff67c38ad56955395d474be68a47e5}
+
+
+Definition at line 492 of file neighbors.\+c.
+
+\index{Neighbors@{Neighbors}!neighbors\+\_\+update\+My\+D\+A\+Grank\+And\+Neighbor\+Preference@{neighbors\+\_\+update\+My\+D\+A\+Grank\+And\+Neighbor\+Preference}}
+\index{neighbors\+\_\+update\+My\+D\+A\+Grank\+And\+Neighbor\+Preference@{neighbors\+\_\+update\+My\+D\+A\+Grank\+And\+Neighbor\+Preference}!Neighbors@{Neighbors}}
+\subsubsection[{\texorpdfstring{neighbors\+\_\+update\+My\+D\+A\+Grank\+And\+Neighbor\+Preference(void)}{neighbors_updateMyDAGrankAndNeighborPreference(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} neighbors\+\_\+update\+My\+D\+A\+Grank\+And\+Neighbor\+Preference (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___neighbors_ga995345b6dec99e3e20ef4059ed59db34}{}\label{group___neighbors_ga995345b6dec99e3e20ef4059ed59db34}
+
+
+Update my D\+AG rank and neighbor preference. 
+
+Call this function whenever some data is changed that could cause this mote\textquotesingle{}s routing decisions to change. Examples are\+:
+\begin{DoxyItemize}
+\item I received a D\+IO which updated by neighbor table. If this D\+IO indicated a very low D\+A\+Grank, I may want to change by routing parent.
+\item I became a D\+A\+Groot, so my D\+A\+Grank should be 0. 
+\end{DoxyItemize}
+
+Definition at line 507 of file neighbors.\+c.
+

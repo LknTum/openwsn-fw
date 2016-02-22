@@ -1,0 +1,188 @@
+\hypertarget{group___open_udp}{}\section{Open\+Udp}
+\label{group___open_udp}\index{Open\+Udp@{Open\+Udp}}
+
+
+U\+DP implementation.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structudp__ht}{udp\+\_\+ht}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group___open_udp_ga90595692081cf39cd0ab9d42716d4357}{U\+D\+P\+\_\+enums} \{ \hyperlink{group___open_udp_gga90595692081cf39cd0ab9d42716d4357afe6291d4aed5acbe7fd687ac6ffd5850}{U\+D\+P\+\_\+\+ID} = 3, 
+\hyperlink{group___open_udp_gga90595692081cf39cd0ab9d42716d4357a023f62c28dc0309eefd1041049ef87b1}{U\+D\+P\+\_\+\+C\+H\+E\+C\+K\+S\+UM} = 2, 
+\hyperlink{group___open_udp_gga90595692081cf39cd0ab9d42716d4357ab67fc05e1ebad5885b7b2c6c6ddd20ee}{U\+D\+P\+\_\+\+P\+O\+R\+TS} = 0
+ \}
+\item 
+enum \hyperlink{group___open_udp_ga2930e96d6b2f1b8c7c38e6743e795a60}{U\+D\+P\+\_\+\+I\+D\+\_\+enums} \{ \hyperlink{group___open_udp_gga2930e96d6b2f1b8c7c38e6743e795a60ac75f32f33cd13e01c40f8c1d6a86dd05}{U\+D\+P\+\_\+\+I\+D\+\_\+\+D\+E\+F\+A\+U\+LT} = 0x1E
+ \}
+\item 
+enum \hyperlink{group___open_udp_ga21a554bc52e07e6f7be2bc4417fc28f3}{U\+D\+P\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+enums} \{ \hyperlink{group___open_udp_gga21a554bc52e07e6f7be2bc4417fc28f3afbf2e2e31a7a1a23bf7d126b07d43a5e}{U\+D\+P\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+I\+N\+L\+I\+NE} = 0, 
+\hyperlink{group___open_udp_gga21a554bc52e07e6f7be2bc4417fc28f3a17e25d12efc84c8e084143c678b26ab6}{U\+D\+P\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+E\+L\+I\+D\+ED} = 1
+ \}
+\item 
+enum \hyperlink{group___open_udp_gacb60c38958e033a846340c32e8921dd6}{U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+enums} \{ \hyperlink{group___open_udp_ggacb60c38958e033a846340c32e8921dd6a724a4a9e52d59b7f61a6d730f3f611e3}{U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+16b\+\_\+\+S\+R\+C\+\_\+16b\+\_\+\+D\+E\+S\+T\+\_\+\+I\+N\+L\+I\+NE} = 0, 
+\hyperlink{group___open_udp_ggacb60c38958e033a846340c32e8921dd6ab683c349dc91f91498b56f26c2e65d70}{U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+16b\+\_\+\+S\+R\+C\+\_\+8b\+\_\+\+D\+E\+S\+T\+\_\+\+I\+N\+L\+I\+NE} = 1, 
+\hyperlink{group___open_udp_ggacb60c38958e033a846340c32e8921dd6a70f324d04f019706e25a6a0bc409afc5}{U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+8b\+\_\+\+S\+R\+C\+\_\+16b\+\_\+\+D\+E\+S\+T\+\_\+\+I\+N\+L\+I\+NE} = 2, 
+\hyperlink{group___open_udp_ggacb60c38958e033a846340c32e8921dd6a999c5336cb433d4bb2f503dac77534a1}{U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+4b\+\_\+\+S\+R\+C\+\_\+4b\+\_\+\+D\+E\+S\+T\+\_\+\+I\+N\+L\+I\+NE} = 3
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___open_udp_ga450461228176c199d0e117a678c7f4ac}{openudp\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{group___open_udp_ga9e3ddc36106b92231cf7cfb3b5cabbd4}{openudp\+\_\+send} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___open_udp_ga30228c5d4c8404ec4125ca154badbe71}{openudp\+\_\+send\+Done} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{disk_8c_ad018a3100b2dabad325a0800152db297}{error})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___open_udp_gadeef7f3934e35ea47f1869a27252ac93}{openudp\+\_\+receive} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg)
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group___open_udp_ga43198de200180ae39edfdcd5faa7c400}{openudp\+\_\+debug\+Print} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+U\+DP implementation. 
+
+This implementation follows \href{http://tools.ietf.org/html/rfc768}{\tt http\+://tools.\+ietf.\+org/html/rfc768}.
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, August 2010 
+
+Ankur Mehta \href{mailto:mehtank@eecs.berkeley.edu}{\tt mehtank@eecs.\+berkeley.\+edu}, September 2010 
+\end{DoxyAuthor}
+
+
+\subsection{Enumeration Type Documentation}
+\index{Open\+Udp@{Open\+Udp}!U\+D\+P\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+enums@{U\+D\+P\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+enums}}
+\index{U\+D\+P\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+enums@{U\+D\+P\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+enums}!Open\+Udp@{Open\+Udp}}
+\subsubsection[{\texorpdfstring{U\+D\+P\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+enums}{UDP_CHECKSUM_enums}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf U\+D\+P\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+enums}}\hypertarget{group___open_udp_ga21a554bc52e07e6f7be2bc4417fc28f3}{}\label{group___open_udp_ga21a554bc52e07e6f7be2bc4417fc28f3}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{U\+D\+P\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+I\+N\+L\+I\+NE@{U\+D\+P\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+I\+N\+L\+I\+NE}!Open\+Udp@{Open\+Udp}}\index{Open\+Udp@{Open\+Udp}!U\+D\+P\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+I\+N\+L\+I\+NE@{U\+D\+P\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+I\+N\+L\+I\+NE}}\item[{\em 
+U\+D\+P\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+I\+N\+L\+I\+NE\hypertarget{group___open_udp_gga21a554bc52e07e6f7be2bc4417fc28f3afbf2e2e31a7a1a23bf7d126b07d43a5e}{}\label{group___open_udp_gga21a554bc52e07e6f7be2bc4417fc28f3afbf2e2e31a7a1a23bf7d126b07d43a5e}
+}]\index{U\+D\+P\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+E\+L\+I\+D\+ED@{U\+D\+P\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+E\+L\+I\+D\+ED}!Open\+Udp@{Open\+Udp}}\index{Open\+Udp@{Open\+Udp}!U\+D\+P\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+E\+L\+I\+D\+ED@{U\+D\+P\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+E\+L\+I\+D\+ED}}\item[{\em 
+U\+D\+P\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+E\+L\+I\+D\+ED\hypertarget{group___open_udp_gga21a554bc52e07e6f7be2bc4417fc28f3a17e25d12efc84c8e084143c678b26ab6}{}\label{group___open_udp_gga21a554bc52e07e6f7be2bc4417fc28f3a17e25d12efc84c8e084143c678b26ab6}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 23 of file openudp.\+h.
+
+\index{Open\+Udp@{Open\+Udp}!U\+D\+P\+\_\+enums@{U\+D\+P\+\_\+enums}}
+\index{U\+D\+P\+\_\+enums@{U\+D\+P\+\_\+enums}!Open\+Udp@{Open\+Udp}}
+\subsubsection[{\texorpdfstring{U\+D\+P\+\_\+enums}{UDP_enums}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf U\+D\+P\+\_\+enums}}\hypertarget{group___open_udp_ga90595692081cf39cd0ab9d42716d4357}{}\label{group___open_udp_ga90595692081cf39cd0ab9d42716d4357}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{U\+D\+P\+\_\+\+ID@{U\+D\+P\+\_\+\+ID}!Open\+Udp@{Open\+Udp}}\index{Open\+Udp@{Open\+Udp}!U\+D\+P\+\_\+\+ID@{U\+D\+P\+\_\+\+ID}}\item[{\em 
+U\+D\+P\+\_\+\+ID\hypertarget{group___open_udp_gga90595692081cf39cd0ab9d42716d4357afe6291d4aed5acbe7fd687ac6ffd5850}{}\label{group___open_udp_gga90595692081cf39cd0ab9d42716d4357afe6291d4aed5acbe7fd687ac6ffd5850}
+}]\index{U\+D\+P\+\_\+\+C\+H\+E\+C\+K\+S\+UM@{U\+D\+P\+\_\+\+C\+H\+E\+C\+K\+S\+UM}!Open\+Udp@{Open\+Udp}}\index{Open\+Udp@{Open\+Udp}!U\+D\+P\+\_\+\+C\+H\+E\+C\+K\+S\+UM@{U\+D\+P\+\_\+\+C\+H\+E\+C\+K\+S\+UM}}\item[{\em 
+U\+D\+P\+\_\+\+C\+H\+E\+C\+K\+S\+UM\hypertarget{group___open_udp_gga90595692081cf39cd0ab9d42716d4357a023f62c28dc0309eefd1041049ef87b1}{}\label{group___open_udp_gga90595692081cf39cd0ab9d42716d4357a023f62c28dc0309eefd1041049ef87b1}
+}]\index{U\+D\+P\+\_\+\+P\+O\+R\+TS@{U\+D\+P\+\_\+\+P\+O\+R\+TS}!Open\+Udp@{Open\+Udp}}\index{Open\+Udp@{Open\+Udp}!U\+D\+P\+\_\+\+P\+O\+R\+TS@{U\+D\+P\+\_\+\+P\+O\+R\+TS}}\item[{\em 
+U\+D\+P\+\_\+\+P\+O\+R\+TS\hypertarget{group___open_udp_gga90595692081cf39cd0ab9d42716d4357ab67fc05e1ebad5885b7b2c6c6ddd20ee}{}\label{group___open_udp_gga90595692081cf39cd0ab9d42716d4357ab67fc05e1ebad5885b7b2c6c6ddd20ee}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 13 of file openudp.\+h.
+
+\index{Open\+Udp@{Open\+Udp}!U\+D\+P\+\_\+\+I\+D\+\_\+enums@{U\+D\+P\+\_\+\+I\+D\+\_\+enums}}
+\index{U\+D\+P\+\_\+\+I\+D\+\_\+enums@{U\+D\+P\+\_\+\+I\+D\+\_\+enums}!Open\+Udp@{Open\+Udp}}
+\subsubsection[{\texorpdfstring{U\+D\+P\+\_\+\+I\+D\+\_\+enums}{UDP_ID_enums}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf U\+D\+P\+\_\+\+I\+D\+\_\+enums}}\hypertarget{group___open_udp_ga2930e96d6b2f1b8c7c38e6743e795a60}{}\label{group___open_udp_ga2930e96d6b2f1b8c7c38e6743e795a60}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{U\+D\+P\+\_\+\+I\+D\+\_\+\+D\+E\+F\+A\+U\+LT@{U\+D\+P\+\_\+\+I\+D\+\_\+\+D\+E\+F\+A\+U\+LT}!Open\+Udp@{Open\+Udp}}\index{Open\+Udp@{Open\+Udp}!U\+D\+P\+\_\+\+I\+D\+\_\+\+D\+E\+F\+A\+U\+LT@{U\+D\+P\+\_\+\+I\+D\+\_\+\+D\+E\+F\+A\+U\+LT}}\item[{\em 
+U\+D\+P\+\_\+\+I\+D\+\_\+\+D\+E\+F\+A\+U\+LT\hypertarget{group___open_udp_gga2930e96d6b2f1b8c7c38e6743e795a60ac75f32f33cd13e01c40f8c1d6a86dd05}{}\label{group___open_udp_gga2930e96d6b2f1b8c7c38e6743e795a60ac75f32f33cd13e01c40f8c1d6a86dd05}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 19 of file openudp.\+h.
+
+\index{Open\+Udp@{Open\+Udp}!U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+enums@{U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+enums}}
+\index{U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+enums@{U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+enums}!Open\+Udp@{Open\+Udp}}
+\subsubsection[{\texorpdfstring{U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+enums}{UDP_PORTS_enums}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+enums}}\hypertarget{group___open_udp_gacb60c38958e033a846340c32e8921dd6}{}\label{group___open_udp_gacb60c38958e033a846340c32e8921dd6}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+16b\+\_\+\+S\+R\+C\+\_\+16b\+\_\+\+D\+E\+S\+T\+\_\+\+I\+N\+L\+I\+NE@{U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+16b\+\_\+\+S\+R\+C\+\_\+16b\+\_\+\+D\+E\+S\+T\+\_\+\+I\+N\+L\+I\+NE}!Open\+Udp@{Open\+Udp}}\index{Open\+Udp@{Open\+Udp}!U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+16b\+\_\+\+S\+R\+C\+\_\+16b\+\_\+\+D\+E\+S\+T\+\_\+\+I\+N\+L\+I\+NE@{U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+16b\+\_\+\+S\+R\+C\+\_\+16b\+\_\+\+D\+E\+S\+T\+\_\+\+I\+N\+L\+I\+NE}}\item[{\em 
+U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+16b\+\_\+\+S\+R\+C\+\_\+16b\+\_\+\+D\+E\+S\+T\+\_\+\+I\+N\+L\+I\+NE\hypertarget{group___open_udp_ggacb60c38958e033a846340c32e8921dd6a724a4a9e52d59b7f61a6d730f3f611e3}{}\label{group___open_udp_ggacb60c38958e033a846340c32e8921dd6a724a4a9e52d59b7f61a6d730f3f611e3}
+}]\index{U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+16b\+\_\+\+S\+R\+C\+\_\+8b\+\_\+\+D\+E\+S\+T\+\_\+\+I\+N\+L\+I\+NE@{U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+16b\+\_\+\+S\+R\+C\+\_\+8b\+\_\+\+D\+E\+S\+T\+\_\+\+I\+N\+L\+I\+NE}!Open\+Udp@{Open\+Udp}}\index{Open\+Udp@{Open\+Udp}!U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+16b\+\_\+\+S\+R\+C\+\_\+8b\+\_\+\+D\+E\+S\+T\+\_\+\+I\+N\+L\+I\+NE@{U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+16b\+\_\+\+S\+R\+C\+\_\+8b\+\_\+\+D\+E\+S\+T\+\_\+\+I\+N\+L\+I\+NE}}\item[{\em 
+U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+16b\+\_\+\+S\+R\+C\+\_\+8b\+\_\+\+D\+E\+S\+T\+\_\+\+I\+N\+L\+I\+NE\hypertarget{group___open_udp_ggacb60c38958e033a846340c32e8921dd6ab683c349dc91f91498b56f26c2e65d70}{}\label{group___open_udp_ggacb60c38958e033a846340c32e8921dd6ab683c349dc91f91498b56f26c2e65d70}
+}]\index{U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+8b\+\_\+\+S\+R\+C\+\_\+16b\+\_\+\+D\+E\+S\+T\+\_\+\+I\+N\+L\+I\+NE@{U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+8b\+\_\+\+S\+R\+C\+\_\+16b\+\_\+\+D\+E\+S\+T\+\_\+\+I\+N\+L\+I\+NE}!Open\+Udp@{Open\+Udp}}\index{Open\+Udp@{Open\+Udp}!U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+8b\+\_\+\+S\+R\+C\+\_\+16b\+\_\+\+D\+E\+S\+T\+\_\+\+I\+N\+L\+I\+NE@{U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+8b\+\_\+\+S\+R\+C\+\_\+16b\+\_\+\+D\+E\+S\+T\+\_\+\+I\+N\+L\+I\+NE}}\item[{\em 
+U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+8b\+\_\+\+S\+R\+C\+\_\+16b\+\_\+\+D\+E\+S\+T\+\_\+\+I\+N\+L\+I\+NE\hypertarget{group___open_udp_ggacb60c38958e033a846340c32e8921dd6a70f324d04f019706e25a6a0bc409afc5}{}\label{group___open_udp_ggacb60c38958e033a846340c32e8921dd6a70f324d04f019706e25a6a0bc409afc5}
+}]\index{U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+4b\+\_\+\+S\+R\+C\+\_\+4b\+\_\+\+D\+E\+S\+T\+\_\+\+I\+N\+L\+I\+NE@{U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+4b\+\_\+\+S\+R\+C\+\_\+4b\+\_\+\+D\+E\+S\+T\+\_\+\+I\+N\+L\+I\+NE}!Open\+Udp@{Open\+Udp}}\index{Open\+Udp@{Open\+Udp}!U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+4b\+\_\+\+S\+R\+C\+\_\+4b\+\_\+\+D\+E\+S\+T\+\_\+\+I\+N\+L\+I\+NE@{U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+4b\+\_\+\+S\+R\+C\+\_\+4b\+\_\+\+D\+E\+S\+T\+\_\+\+I\+N\+L\+I\+NE}}\item[{\em 
+U\+D\+P\+\_\+\+P\+O\+R\+T\+S\+\_\+4b\+\_\+\+S\+R\+C\+\_\+4b\+\_\+\+D\+E\+S\+T\+\_\+\+I\+N\+L\+I\+NE\hypertarget{group___open_udp_ggacb60c38958e033a846340c32e8921dd6a999c5336cb433d4bb2f503dac77534a1}{}\label{group___open_udp_ggacb60c38958e033a846340c32e8921dd6a999c5336cb433d4bb2f503dac77534a1}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 28 of file openudp.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{Open\+Udp@{Open\+Udp}!openudp\+\_\+debug\+Print@{openudp\+\_\+debug\+Print}}
+\index{openudp\+\_\+debug\+Print@{openudp\+\_\+debug\+Print}!Open\+Udp@{Open\+Udp}}
+\subsubsection[{\texorpdfstring{openudp\+\_\+debug\+Print(void)}{openudp_debugPrint(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} openudp\+\_\+debug\+Print (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___open_udp_ga43198de200180ae39edfdcd5faa7c400}{}\label{group___open_udp_ga43198de200180ae39edfdcd5faa7c400}
+
+
+Definition at line 128 of file openudp.\+c.
+
+\index{Open\+Udp@{Open\+Udp}!openudp\+\_\+init@{openudp\+\_\+init}}
+\index{openudp\+\_\+init@{openudp\+\_\+init}!Open\+Udp@{Open\+Udp}}
+\subsubsection[{\texorpdfstring{openudp\+\_\+init(void)}{openudp_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} openudp\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___open_udp_ga450461228176c199d0e117a678c7f4ac}{}\label{group___open_udp_ga450461228176c199d0e117a678c7f4ac}
+
+
+Definition at line 19 of file openudp.\+c.
+
+\index{Open\+Udp@{Open\+Udp}!openudp\+\_\+receive@{openudp\+\_\+receive}}
+\index{openudp\+\_\+receive@{openudp\+\_\+receive}!Open\+Udp@{Open\+Udp}}
+\subsubsection[{\texorpdfstring{openudp\+\_\+receive(\+Open\+Queue\+Entry\+\_\+t $\ast$msg)}{openudp_receive(OpenQueueEntry_t *msg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} openudp\+\_\+receive (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{group___open_udp_gadeef7f3934e35ea47f1869a27252ac93}{}\label{group___open_udp_gadeef7f3934e35ea47f1869a27252ac93}
+
+
+Definition at line 59 of file openudp.\+c.
+
+\index{Open\+Udp@{Open\+Udp}!openudp\+\_\+send@{openudp\+\_\+send}}
+\index{openudp\+\_\+send@{openudp\+\_\+send}!Open\+Udp@{Open\+Udp}}
+\subsubsection[{\texorpdfstring{openudp\+\_\+send(\+Open\+Queue\+Entry\+\_\+t $\ast$msg)}{openudp_send(OpenQueueEntry_t *msg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf owerror\+\_\+t} openudp\+\_\+send (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{group___open_udp_ga9e3ddc36106b92231cf7cfb3b5cabbd4}{}\label{group___open_udp_ga9e3ddc36106b92231cf7cfb3b5cabbd4}
+
+
+Definition at line 22 of file openudp.\+c.
+
+\index{Open\+Udp@{Open\+Udp}!openudp\+\_\+send\+Done@{openudp\+\_\+send\+Done}}
+\index{openudp\+\_\+send\+Done@{openudp\+\_\+send\+Done}!Open\+Udp@{Open\+Udp}}
+\subsubsection[{\texorpdfstring{openudp\+\_\+send\+Done(\+Open\+Queue\+Entry\+\_\+t $\ast$msg, owerror\+\_\+t error)}{openudp_sendDone(OpenQueueEntry_t *msg, owerror_t error)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} openudp\+\_\+send\+Done (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg, }
+\item[{{\bf owerror\+\_\+t}}]{error}
+\end{DoxyParamCaption}
+)}\hypertarget{group___open_udp_ga30228c5d4c8404ec4125ca154badbe71}{}\label{group___open_udp_ga30228c5d4c8404ec4125ca154badbe71}
+
+
+Definition at line 35 of file openudp.\+c.
+

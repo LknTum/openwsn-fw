@@ -1,0 +1,147 @@
+\hypertarget{forwarding_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/03b-\/\+I\+Pv6/forwarding.c File Reference}
+\label{forwarding_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/03b-\/\+I\+Pv6/forwarding.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/03b-\/\+I\+Pv6/forwarding.\+c}}
+{\ttfamily \#include \char`\"{}opendefs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}forwarding.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}iphc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}openqueue.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}openserial.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}idmanager.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}packetfunctions.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}neighbors.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}icmpv6.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}icmpv6rpl.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}openudp.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}opentcp.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}debugpins.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}scheduler.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{forwarding_8c_a82f88a4fabd137f372435026ce7b1174}{forwarding\+\_\+get\+Next\+Hop} (\hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$destination128b, \hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$address\+To\+Write64b)
+\begin{DoxyCompactList}\small\item\em Retrieve the next hop\textquotesingle{}s address from routing table. \end{DoxyCompactList}\item 
+\hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{forwarding_8c_a9ac357d7bed85d9a17f633ac23c3a4ad}{forwarding\+\_\+send\+\_\+internal\+\_\+\+Routing\+Table} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{structipv6__header__iht}{ipv6\+\_\+header\+\_\+iht} $\ast$ipv6\+\_\+outer\+\_\+header, \hyperlink{structipv6__header__iht}{ipv6\+\_\+header\+\_\+iht} $\ast$ipv6\+\_\+inner\+\_\+header, \hyperlink{structrpl__option__ht}{rpl\+\_\+option\+\_\+ht} $\ast$rpl\+\_\+option, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$flow\+\_\+label, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} fw\+\_\+\+Send\+Orfw\+\_\+\+Rcv)
+\begin{DoxyCompactList}\small\item\em Send a packet using the routing table to find the next hop. \end{DoxyCompactList}\item 
+\hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{forwarding_8c_afe12274642699f57149ab380a5c02df5}{forwarding\+\_\+send\+\_\+internal\+\_\+\+Source\+Routing} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{structipv6__header__iht}{ipv6\+\_\+header\+\_\+iht} $\ast$ipv6\+\_\+outer\+\_\+header, \hyperlink{structipv6__header__iht}{ipv6\+\_\+header\+\_\+iht} $\ast$ipv6\+\_\+inner\+\_\+header, \hyperlink{structrpl__option__ht}{rpl\+\_\+option\+\_\+ht} $\ast$rpl\+\_\+option)
+\begin{DoxyCompactList}\small\item\em Send a packet using the source rout to find the next hop. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{forwarding_8c_aa4a2e16d97ecacdc7956bf5650ae32cd}{forwarding\+\_\+create\+Rpl\+Option} (\hyperlink{structrpl__option__ht}{rpl\+\_\+option\+\_\+ht} $\ast$rpl\+\_\+option, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} flags)
+\begin{DoxyCompactList}\small\item\em Create a R\+PL option. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___forwarding_gae600edfbe024170f4eedb417d85d8e90}{forwarding\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em Initialize this module. \end{DoxyCompactList}\item 
+\hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{group___forwarding_ga25d2a7dbc2a0f5e5dda70ff43ef25cb4}{forwarding\+\_\+send} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Send a packet originating at this mote. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___forwarding_gae2d3a3aeedf39da862539fae72235464}{forwarding\+\_\+send\+Done} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{disk_8c_ad018a3100b2dabad325a0800152db297}{error})
+\begin{DoxyCompactList}\small\item\em Indicates a packet has been sent. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___forwarding_gafc64a413d826b5aaedc27869fc165314}{forwarding\+\_\+receive} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{structipv6__header__iht}{ipv6\+\_\+header\+\_\+iht} $\ast$ipv6\+\_\+outer\+\_\+header, \hyperlink{structipv6__header__iht}{ipv6\+\_\+header\+\_\+iht} $\ast$ipv6\+\_\+inner\+\_\+header, \hyperlink{structrpl__option__ht}{rpl\+\_\+option\+\_\+ht} $\ast$rpl\+\_\+option)
+\begin{DoxyCompactList}\small\item\em Indicates a packet was received. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{forwarding.\+c@{forwarding.\+c}!forwarding\+\_\+create\+Rpl\+Option@{forwarding\+\_\+create\+Rpl\+Option}}
+\index{forwarding\+\_\+create\+Rpl\+Option@{forwarding\+\_\+create\+Rpl\+Option}!forwarding.\+c@{forwarding.\+c}}
+\subsubsection[{\texorpdfstring{forwarding\+\_\+create\+Rpl\+Option(rpl\+\_\+option\+\_\+ht $\ast$rpl\+\_\+option, uint8\+\_\+t flags)}{forwarding_createRplOption(rpl_option_ht *rpl_option, uint8_t flags)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} forwarding\+\_\+create\+Rpl\+Option (
+\begin{DoxyParamCaption}
+\item[{{\bf rpl\+\_\+option\+\_\+ht} $\ast$}]{rpl\+\_\+option, }
+\item[{{\bf uint8\+\_\+t}}]{flags}
+\end{DoxyParamCaption}
+)}\hypertarget{forwarding_8c_aa4a2e16d97ecacdc7956bf5650ae32cd}{}\label{forwarding_8c_aa4a2e16d97ecacdc7956bf5650ae32cd}
+
+
+Create a R\+PL option. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em rpl\+\_\+option} & A pointer to the structure to fill in. \\
+\hline
+\mbox{\tt in}  & {\em flags} & The flags to indicate in the R\+PL option. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 728 of file forwarding.\+c.
+
+\index{forwarding.\+c@{forwarding.\+c}!forwarding\+\_\+get\+Next\+Hop@{forwarding\+\_\+get\+Next\+Hop}}
+\index{forwarding\+\_\+get\+Next\+Hop@{forwarding\+\_\+get\+Next\+Hop}!forwarding.\+c@{forwarding.\+c}}
+\subsubsection[{\texorpdfstring{forwarding\+\_\+get\+Next\+Hop(open\+\_\+addr\+\_\+t $\ast$destination128b, open\+\_\+addr\+\_\+t $\ast$address\+To\+Write64b)}{forwarding_getNextHop(open_addr_t *destination128b, open_addr_t *addressToWrite64b)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} forwarding\+\_\+get\+Next\+Hop (
+\begin{DoxyParamCaption}
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{destination128b, }
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{address\+To\+Write64b}
+\end{DoxyParamCaption}
+)}\hypertarget{forwarding_8c_a82f88a4fabd137f372435026ce7b1174}{}\label{forwarding_8c_a82f88a4fabd137f372435026ce7b1174}
+
+
+Retrieve the next hop\textquotesingle{}s address from routing table. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em destination128b} & Final I\+Pv6 destination address. \\
+\hline
+\mbox{\tt out}  & {\em address\+To\+Write64b} & Location to write the E\+U\+I64 of next hop to. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 357 of file forwarding.\+c.
+
+\index{forwarding.\+c@{forwarding.\+c}!forwarding\+\_\+send\+\_\+internal\+\_\+\+Routing\+Table@{forwarding\+\_\+send\+\_\+internal\+\_\+\+Routing\+Table}}
+\index{forwarding\+\_\+send\+\_\+internal\+\_\+\+Routing\+Table@{forwarding\+\_\+send\+\_\+internal\+\_\+\+Routing\+Table}!forwarding.\+c@{forwarding.\+c}}
+\subsubsection[{\texorpdfstring{forwarding\+\_\+send\+\_\+internal\+\_\+\+Routing\+Table(\+Open\+Queue\+Entry\+\_\+t $\ast$msg, ipv6\+\_\+header\+\_\+iht $\ast$ipv6\+\_\+outer\+\_\+header, ipv6\+\_\+header\+\_\+iht $\ast$ipv6\+\_\+inner\+\_\+header, rpl\+\_\+option\+\_\+ht $\ast$rpl\+\_\+option, uint32\+\_\+t $\ast$flow\+\_\+label, uint8\+\_\+t fw\+\_\+\+Send\+Orfw\+\_\+\+Rcv)}{forwarding_send_internal_RoutingTable(OpenQueueEntry_t *msg, ipv6_header_iht *ipv6_outer_header, ipv6_header_iht *ipv6_inner_header, rpl_option_ht *rpl_option, uint32_t *flow_label, uint8_t fw_SendOrfw_Rcv)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf owerror\+\_\+t} forwarding\+\_\+send\+\_\+internal\+\_\+\+Routing\+Table (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg, }
+\item[{{\bf ipv6\+\_\+header\+\_\+iht} $\ast$}]{ipv6\+\_\+outer\+\_\+header, }
+\item[{{\bf ipv6\+\_\+header\+\_\+iht} $\ast$}]{ipv6\+\_\+inner\+\_\+header, }
+\item[{{\bf rpl\+\_\+option\+\_\+ht} $\ast$}]{rpl\+\_\+option, }
+\item[{{\bf uint32\+\_\+t} $\ast$}]{flow\+\_\+label, }
+\item[{{\bf uint8\+\_\+t}}]{fw\+\_\+\+Send\+Orfw\+\_\+\+Rcv}
+\end{DoxyParamCaption}
+)}\hypertarget{forwarding_8c_a9ac357d7bed85d9a17f633ac23c3a4ad}{}\label{forwarding_8c_a9ac357d7bed85d9a17f633ac23c3a4ad}
+
+
+Send a packet using the routing table to find the next hop. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em msg} & The packet to send. \\
+\hline
+\mbox{\tt in}  & {\em ipv6\+\_\+header} & The packet\textquotesingle{}s I\+Pv6 header. \\
+\hline
+\mbox{\tt in}  & {\em rpl\+\_\+option} & The hop-\/by-\/hop option to add in this packet. \\
+\hline
+\mbox{\tt in}  & {\em flow\+\_\+label} & The flowlabel to add in the 6\+Lo\+W\+P\+AN header. \\
+\hline
+\mbox{\tt in}  & {\em fw\+\_\+\+Send\+Orfw\+\_\+\+Rcv} & The packet is originating from this mote (P\+C\+K\+T\+S\+E\+ND), or forwarded (P\+C\+K\+T\+F\+O\+R\+W\+A\+RD). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 386 of file forwarding.\+c.
+
+\index{forwarding.\+c@{forwarding.\+c}!forwarding\+\_\+send\+\_\+internal\+\_\+\+Source\+Routing@{forwarding\+\_\+send\+\_\+internal\+\_\+\+Source\+Routing}}
+\index{forwarding\+\_\+send\+\_\+internal\+\_\+\+Source\+Routing@{forwarding\+\_\+send\+\_\+internal\+\_\+\+Source\+Routing}!forwarding.\+c@{forwarding.\+c}}
+\subsubsection[{\texorpdfstring{forwarding\+\_\+send\+\_\+internal\+\_\+\+Source\+Routing(\+Open\+Queue\+Entry\+\_\+t $\ast$msg, ipv6\+\_\+header\+\_\+iht $\ast$ipv6\+\_\+outer\+\_\+header, ipv6\+\_\+header\+\_\+iht $\ast$ipv6\+\_\+inner\+\_\+header, rpl\+\_\+option\+\_\+ht $\ast$rpl\+\_\+option)}{forwarding_send_internal_SourceRouting(OpenQueueEntry_t *msg, ipv6_header_iht *ipv6_outer_header, ipv6_header_iht *ipv6_inner_header, rpl_option_ht *rpl_option)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf owerror\+\_\+t} forwarding\+\_\+send\+\_\+internal\+\_\+\+Source\+Routing (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg, }
+\item[{{\bf ipv6\+\_\+header\+\_\+iht} $\ast$}]{ipv6\+\_\+outer\+\_\+header, }
+\item[{{\bf ipv6\+\_\+header\+\_\+iht} $\ast$}]{ipv6\+\_\+inner\+\_\+header, }
+\item[{{\bf rpl\+\_\+option\+\_\+ht} $\ast$}]{rpl\+\_\+option}
+\end{DoxyParamCaption}
+)}\hypertarget{forwarding_8c_afe12274642699f57149ab380a5c02df5}{}\label{forwarding_8c_afe12274642699f57149ab380a5c02df5}
+
+
+Send a packet using the source rout to find the next hop. 
+
+\begin{DoxyNote}{Note}
+This is always called for packets being forwarded.
+\end{DoxyNote}
+How to process the routing header is detailed in \href{http://tools.ietf.org/html/rfc6554#page-9}{\tt http\+://tools.\+ietf.\+org/html/rfc6554\#page-\/9}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em msg} & The packet to send. \\
+\hline
+\mbox{\tt in}  & {\em ipv6\+\_\+header} & The packet\textquotesingle{}s I\+Pv6 header. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 435 of file forwarding.\+c.
+

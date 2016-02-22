@@ -1,0 +1,288 @@
+\hypertarget{i2c__lib_8h}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/source/i2c\+\_\+lib.h File Reference}
+\label{i2c__lib_8h}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/source/i2c\+\_\+lib.\+h@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/source/i2c\+\_\+lib.\+h}}
+{\ttfamily \#include $<$headers/hw\+\_\+types.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{i2c__lib_8h_a4398feb0664d44297cd2e2912bdad773}{I2\+C\+\_\+\+I\+N\+T\+\_\+\+M\+A\+S\+T\+ER}~0x00000001
+\item 
+\#define \hyperlink{i2c__lib_8h_a106384ed8baad431a2d3cc2fad04fb5b}{I2\+C\+\_\+\+I\+N\+T\+\_\+\+S\+L\+A\+VE}~0x00000002
+\item 
+\#define \hyperlink{i2c__lib_8h_a6c7f1d895b07f4a20d503e5ddf0b6f94}{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+S\+E\+ND}~0x00000007
+\item 
+\#define \hyperlink{i2c__lib_8h_a35e45c8d222d69d05ad8fb0923e9549f}{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+R\+E\+C\+E\+I\+VE}~0x00000007
+\item 
+\#define \hyperlink{i2c__lib_8h_a0e895c946f6e3276f51e7c9c77584efe}{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+S\+T\+A\+RT}~0x00000003
+\item 
+\#define \hyperlink{i2c__lib_8h_a3bb14df455e3a8d078be0a9585148cf9}{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+C\+O\+NT}~0x00000001
+\item 
+\#define \hyperlink{i2c__lib_8h_a422e2daf4669e76311f9dad6973097bb}{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+F\+I\+N\+I\+SH}~0x00000005
+\item 
+\#define \hyperlink{i2c__lib_8h_a35182cd5f445e1f29715ab49821e2c45}{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+OP}~0x00000004
+\item 
+\#define \hyperlink{i2c__lib_8h_a2ebf205a1423633297f71a168820f8e0}{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+S\+T\+A\+RT}~0x0000000b
+\item 
+\#define \hyperlink{i2c__lib_8h_a2ba70f6e5bcb0792c9df1c98498ce3ff}{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+C\+O\+NT}~0x00000009
+\item 
+\#define \hyperlink{i2c__lib_8h_abc9c05f5da55730d8feb332231d137c0}{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+F\+I\+N\+I\+SH}~0x00000005
+\item 
+\#define \hyperlink{i2c__lib_8h_a9b590bc055e1299e8efb278d0dacc18a}{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+OP}~0x00000004
+\item 
+\#define \hyperlink{i2c__lib_8h_a515b348b82f9e571c7fb7c649c929dd7}{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+N\+O\+NE}~0
+\item 
+\#define \hyperlink{i2c__lib_8h_afdba402804f78026840b017c099fa914}{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+A\+D\+D\+R\+\_\+\+A\+CK}~0x00000004
+\item 
+\#define \hyperlink{i2c__lib_8h_ae95ccf0c0f7fca02eaf95a4dc6ebc1f0}{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+D\+A\+T\+A\+\_\+\+A\+CK}~0x00000008
+\item 
+\#define \hyperlink{i2c__lib_8h_abf4600768e591e0f63439bba8f5de60f}{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+A\+R\+B\+\_\+\+L\+O\+ST}~0x00000010
+\item 
+\#define \hyperlink{i2c__lib_8h_a87352bdc3090ec114d847c5ec51ab173}{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+N\+O\+NE}~0
+\item 
+\#define \hyperlink{i2c__lib_8h_a0f1714d2288f76d03405fb4273157ac5}{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+R\+R\+EQ}~0x00000001
+\item 
+\#define \hyperlink{i2c__lib_8h_a4c0899e46bfe811164fa54963b3cbd22}{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+T\+R\+EQ}~0x00000002
+\item 
+\#define \hyperlink{i2c__lib_8h_abe3db8f01bee18497d803ab504c65e50}{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+R\+R\+E\+Q\+\_\+\+F\+BR}~0x00000005
+\item 
+\#define \hyperlink{i2c__lib_8h_a0f267f13469d5eda5870ebedb9f8c80d}{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+M\+A\+X\+\_\+\+R\+E\+T\+R\+I\+ES}~1000
+\item 
+\#define \hyperlink{i2c__lib_8h_add55f55f568a223e6e6353167aa84f37}{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+N\+T\+\_\+\+S\+T\+OP}~0x00000004
+\item 
+\#define \hyperlink{i2c__lib_8h_a111cd4d4430e46fb7d4d3dd15157cff8}{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+RT}~0x00000002
+\item 
+\#define \hyperlink{i2c__lib_8h_a6e97f1ac1fbd964ac0e13c4a7528bffe}{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+N\+T\+\_\+\+D\+A\+TA}~0x00000001
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_ga09748a62aec2f3d3932f8a77b09ee173}{I2\+C\+Int\+Register} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}($\ast$pfn\+Handler)(\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}))
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_gaa38ca79293a55d707ab9f9b267cb3a79}{I2\+C\+Int\+Unregister} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group__i2c__api_gaf97ea5be165c207bc792fa5bd7331243}{I2\+C\+Master\+Bus\+Busy} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group__i2c__api_gaf5e83323ac50e404b712aa2161a75b40}{I2\+C\+Master\+Busy} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_ga041714345a1a2d7d94917fe881061d3f}{I2\+C\+Master\+Control} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Cmd)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__i2c__api_ga59fdaa345b115e6783e8fb6770b9a9b1}{I2\+C\+Master\+Data\+Get} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_gaefd4234aea3087471598f756beaab58d}{I2\+C\+Master\+Data\+Put} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Data)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_gabf229e58f06ff0a26bf66e9cdbf03b56}{I2\+C\+Master\+Disable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_gaceb8f026728b5c8d5675f641caedfb29}{I2\+C\+Master\+Enable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__i2c__api_gabb8efce4d819b7601821eb56595eb249}{I2\+C\+Master\+Err} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_ga28996e36955ae56b9c312b961278d762}{I2\+C\+Master\+Init\+Exp\+Clk} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+I2\+C\+Clk, \hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} b\+Fast)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_gadb05446393293b14cc86211fb5e59b8d}{I2\+C\+Master\+Int\+Clear} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_ga1f0cc727842bdd9155bc1d9176dfa1b9}{I2\+C\+Master\+Int\+Disable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_ga32985d6ecd7d84e9d43be6c785c251de}{I2\+C\+Master\+Int\+Enable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group__i2c__api_gafddb655219602836b383085de8b5268f}{I2\+C\+Master\+Int\+Status} (\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} b\+Masked)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_ga95d82808b2a27cd139698efbec513a67}{I2\+C\+Master\+Slave\+Addr\+Set} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Slave\+Addr, \hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} b\+Receive)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__i2c__api_gadab69d241a3db8eb9de1075cbc49d134}{I2\+C\+Slave\+Data\+Get} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_ga24bae55695361f212fd85a58086f1f9f}{I2\+C\+Slave\+Data\+Put} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Data)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_ga00570b245dfe33620b0a89c398c2b8a1}{I2\+C\+Slave\+Disable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_ga6f51060e7ecc4f4005e9314a877ae4b6}{I2\+C\+Slave\+Enable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_gab138e14c2fe1d19972e388b8638fb695}{I2\+C\+Slave\+Init} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Slave\+Addr)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_ga86727bec16400449cb39a6341b42c7a9}{I2\+C\+Slave\+Int\+Clear} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_ga97acbac40ff7f1264eea653937a32873}{I2\+C\+Slave\+Int\+Disable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_ga8fa9624c175df164a71363cd166e2334}{I2\+C\+Slave\+Int\+Enable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_ga962968207faa0b75d3fcf792310e7877}{I2\+C\+Slave\+Int\+Clear\+Ex} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Int\+Flags)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_ga99fc364d6ab5bfa82937baf24d72998a}{I2\+C\+Slave\+Int\+Disable\+Ex} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Int\+Flags)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_gab494128420a09f0b7c655abc87f8abef}{I2\+C\+Slave\+Int\+Enable\+Ex} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Int\+Flags)
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group__i2c__api_gaba86c1d914f9f6941249f3745e6fa0ab}{I2\+C\+Slave\+Int\+Status} (\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} b\+Masked)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__i2c__api_ga3ba869ee9bb1ecbd6335c998f2670f7d}{I2\+C\+Slave\+Int\+Status\+Ex} (\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} b\+Masked)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__i2c__api_ga54348958f4ebd7ab18dd1216c04ecf4a}{I2\+C\+Slave\+Status} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}!I2\+C\+\_\+\+I\+N\+T\+\_\+\+M\+A\+S\+T\+ER@{I2\+C\+\_\+\+I\+N\+T\+\_\+\+M\+A\+S\+T\+ER}}
+\index{I2\+C\+\_\+\+I\+N\+T\+\_\+\+M\+A\+S\+T\+ER@{I2\+C\+\_\+\+I\+N\+T\+\_\+\+M\+A\+S\+T\+ER}!i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I\+N\+T\+\_\+\+M\+A\+S\+T\+ER}{I2C_INT_MASTER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I\+N\+T\+\_\+\+M\+A\+S\+T\+ER~0x00000001}\hypertarget{i2c__lib_8h_a4398feb0664d44297cd2e2912bdad773}{}\label{i2c__lib_8h_a4398feb0664d44297cd2e2912bdad773}
+
+
+Definition at line 68 of file i2c\+\_\+lib.\+h.
+
+\index{i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}!I2\+C\+\_\+\+I\+N\+T\+\_\+\+S\+L\+A\+VE@{I2\+C\+\_\+\+I\+N\+T\+\_\+\+S\+L\+A\+VE}}
+\index{I2\+C\+\_\+\+I\+N\+T\+\_\+\+S\+L\+A\+VE@{I2\+C\+\_\+\+I\+N\+T\+\_\+\+S\+L\+A\+VE}!i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I\+N\+T\+\_\+\+S\+L\+A\+VE}{I2C_INT_SLAVE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I\+N\+T\+\_\+\+S\+L\+A\+VE~0x00000002}\hypertarget{i2c__lib_8h_a106384ed8baad431a2d3cc2fad04fb5b}{}\label{i2c__lib_8h_a106384ed8baad431a2d3cc2fad04fb5b}
+
+
+Definition at line 69 of file i2c\+\_\+lib.\+h.
+
+\index{i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}!I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+C\+O\+NT@{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+C\+O\+NT}}
+\index{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+C\+O\+NT@{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+C\+O\+NT}!i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+C\+O\+NT}{I2C_MASTER_CMD_BURST_RECEIVE_CONT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+C\+O\+NT~0x00000009}\hypertarget{i2c__lib_8h_a2ba70f6e5bcb0792c9df1c98498ce3ff}{}\label{i2c__lib_8h_a2ba70f6e5bcb0792c9df1c98498ce3ff}
+
+
+Definition at line 90 of file i2c\+\_\+lib.\+h.
+
+\index{i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}!I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+OP@{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+OP}}
+\index{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+OP@{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+OP}!i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+OP}{I2C_MASTER_CMD_BURST_RECEIVE_ERROR_STOP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+OP~0x00000004}\hypertarget{i2c__lib_8h_a9b590bc055e1299e8efb278d0dacc18a}{}\label{i2c__lib_8h_a9b590bc055e1299e8efb278d0dacc18a}
+
+
+Definition at line 94 of file i2c\+\_\+lib.\+h.
+
+\index{i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}!I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+F\+I\+N\+I\+SH@{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+F\+I\+N\+I\+SH}}
+\index{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+F\+I\+N\+I\+SH@{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+F\+I\+N\+I\+SH}!i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+F\+I\+N\+I\+SH}{I2C_MASTER_CMD_BURST_RECEIVE_FINISH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+F\+I\+N\+I\+SH~0x00000005}\hypertarget{i2c__lib_8h_abc9c05f5da55730d8feb332231d137c0}{}\label{i2c__lib_8h_abc9c05f5da55730d8feb332231d137c0}
+
+
+Definition at line 92 of file i2c\+\_\+lib.\+h.
+
+\index{i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}!I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+S\+T\+A\+RT@{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+S\+T\+A\+RT}}
+\index{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+S\+T\+A\+RT@{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+S\+T\+A\+RT}!i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+S\+T\+A\+RT}{I2C_MASTER_CMD_BURST_RECEIVE_START}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+S\+T\+A\+RT~0x0000000b}\hypertarget{i2c__lib_8h_a2ebf205a1423633297f71a168820f8e0}{}\label{i2c__lib_8h_a2ebf205a1423633297f71a168820f8e0}
+
+
+Definition at line 88 of file i2c\+\_\+lib.\+h.
+
+\index{i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}!I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+C\+O\+NT@{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+C\+O\+NT}}
+\index{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+C\+O\+NT@{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+C\+O\+NT}!i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+C\+O\+NT}{I2C_MASTER_CMD_BURST_SEND_CONT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+C\+O\+NT~0x00000001}\hypertarget{i2c__lib_8h_a3bb14df455e3a8d078be0a9585148cf9}{}\label{i2c__lib_8h_a3bb14df455e3a8d078be0a9585148cf9}
+
+
+Definition at line 82 of file i2c\+\_\+lib.\+h.
+
+\index{i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}!I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+OP@{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+OP}}
+\index{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+OP@{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+OP}!i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+OP}{I2C_MASTER_CMD_BURST_SEND_ERROR_STOP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+OP~0x00000004}\hypertarget{i2c__lib_8h_a35182cd5f445e1f29715ab49821e2c45}{}\label{i2c__lib_8h_a35182cd5f445e1f29715ab49821e2c45}
+
+
+Definition at line 86 of file i2c\+\_\+lib.\+h.
+
+\index{i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}!I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+F\+I\+N\+I\+SH@{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+F\+I\+N\+I\+SH}}
+\index{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+F\+I\+N\+I\+SH@{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+F\+I\+N\+I\+SH}!i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+F\+I\+N\+I\+SH}{I2C_MASTER_CMD_BURST_SEND_FINISH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+F\+I\+N\+I\+SH~0x00000005}\hypertarget{i2c__lib_8h_a422e2daf4669e76311f9dad6973097bb}{}\label{i2c__lib_8h_a422e2daf4669e76311f9dad6973097bb}
+
+
+Definition at line 84 of file i2c\+\_\+lib.\+h.
+
+\index{i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}!I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+S\+T\+A\+RT@{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+S\+T\+A\+RT}}
+\index{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+S\+T\+A\+RT@{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+S\+T\+A\+RT}!i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+S\+T\+A\+RT}{I2C_MASTER_CMD_BURST_SEND_START}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+S\+T\+A\+RT~0x00000003}\hypertarget{i2c__lib_8h_a0e895c946f6e3276f51e7c9c77584efe}{}\label{i2c__lib_8h_a0e895c946f6e3276f51e7c9c77584efe}
+
+
+Definition at line 80 of file i2c\+\_\+lib.\+h.
+
+\index{i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}!I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+R\+E\+C\+E\+I\+VE@{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+R\+E\+C\+E\+I\+VE}}
+\index{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+R\+E\+C\+E\+I\+VE@{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+R\+E\+C\+E\+I\+VE}!i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+R\+E\+C\+E\+I\+VE}{I2C_MASTER_CMD_SINGLE_RECEIVE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+R\+E\+C\+E\+I\+VE~0x00000007}\hypertarget{i2c__lib_8h_a35e45c8d222d69d05ad8fb0923e9549f}{}\label{i2c__lib_8h_a35e45c8d222d69d05ad8fb0923e9549f}
+
+
+Definition at line 78 of file i2c\+\_\+lib.\+h.
+
+\index{i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}!I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+S\+E\+ND@{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+S\+E\+ND}}
+\index{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+S\+E\+ND@{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+S\+E\+ND}!i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+S\+E\+ND}{I2C_MASTER_CMD_SINGLE_SEND}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+S\+E\+ND~0x00000007}\hypertarget{i2c__lib_8h_a6c7f1d895b07f4a20d503e5ddf0b6f94}{}\label{i2c__lib_8h_a6c7f1d895b07f4a20d503e5ddf0b6f94}
+
+
+Definition at line 76 of file i2c\+\_\+lib.\+h.
+
+\index{i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}!I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+A\+D\+D\+R\+\_\+\+A\+CK@{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+A\+D\+D\+R\+\_\+\+A\+CK}}
+\index{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+A\+D\+D\+R\+\_\+\+A\+CK@{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+A\+D\+D\+R\+\_\+\+A\+CK}!i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+A\+D\+D\+R\+\_\+\+A\+CK}{I2C_MASTER_ERR_ADDR_ACK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+A\+D\+D\+R\+\_\+\+A\+CK~0x00000004}\hypertarget{i2c__lib_8h_afdba402804f78026840b017c099fa914}{}\label{i2c__lib_8h_afdba402804f78026840b017c099fa914}
+
+
+Definition at line 103 of file i2c\+\_\+lib.\+h.
+
+\index{i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}!I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+A\+R\+B\+\_\+\+L\+O\+ST@{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+A\+R\+B\+\_\+\+L\+O\+ST}}
+\index{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+A\+R\+B\+\_\+\+L\+O\+ST@{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+A\+R\+B\+\_\+\+L\+O\+ST}!i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+A\+R\+B\+\_\+\+L\+O\+ST}{I2C_MASTER_ERR_ARB_LOST}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+A\+R\+B\+\_\+\+L\+O\+ST~0x00000010}\hypertarget{i2c__lib_8h_abf4600768e591e0f63439bba8f5de60f}{}\label{i2c__lib_8h_abf4600768e591e0f63439bba8f5de60f}
+
+
+Definition at line 105 of file i2c\+\_\+lib.\+h.
+
+\index{i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}!I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+D\+A\+T\+A\+\_\+\+A\+CK@{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+D\+A\+T\+A\+\_\+\+A\+CK}}
+\index{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+D\+A\+T\+A\+\_\+\+A\+CK@{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+D\+A\+T\+A\+\_\+\+A\+CK}!i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+D\+A\+T\+A\+\_\+\+A\+CK}{I2C_MASTER_ERR_DATA_ACK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+D\+A\+T\+A\+\_\+\+A\+CK~0x00000008}\hypertarget{i2c__lib_8h_ae95ccf0c0f7fca02eaf95a4dc6ebc1f0}{}\label{i2c__lib_8h_ae95ccf0c0f7fca02eaf95a4dc6ebc1f0}
+
+
+Definition at line 104 of file i2c\+\_\+lib.\+h.
+
+\index{i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}!I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+N\+O\+NE@{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+N\+O\+NE}}
+\index{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+N\+O\+NE@{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+N\+O\+NE}!i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+N\+O\+NE}{I2C_MASTER_ERR_NONE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+N\+O\+NE~0}\hypertarget{i2c__lib_8h_a515b348b82f9e571c7fb7c649c929dd7}{}\label{i2c__lib_8h_a515b348b82f9e571c7fb7c649c929dd7}
+
+
+Definition at line 102 of file i2c\+\_\+lib.\+h.
+
+\index{i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}!I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+M\+A\+X\+\_\+\+R\+E\+T\+R\+I\+ES@{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+M\+A\+X\+\_\+\+R\+E\+T\+R\+I\+ES}}
+\index{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+M\+A\+X\+\_\+\+R\+E\+T\+R\+I\+ES@{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+M\+A\+X\+\_\+\+R\+E\+T\+R\+I\+ES}!i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+M\+A\+X\+\_\+\+R\+E\+T\+R\+I\+ES}{I2C_MASTER_MAX_RETRIES}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+M\+A\+X\+\_\+\+R\+E\+T\+R\+I\+ES~1000}\hypertarget{i2c__lib_8h_a0f267f13469d5eda5870ebedb9f8c80d}{}\label{i2c__lib_8h_a0f267f13469d5eda5870ebedb9f8c80d}
+
+
+Definition at line 122 of file i2c\+\_\+lib.\+h.
+
+\index{i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}!I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+N\+O\+NE@{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+N\+O\+NE}}
+\index{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+N\+O\+NE@{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+N\+O\+NE}!i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+N\+O\+NE}{I2C_SLAVE_ACT_NONE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+N\+O\+NE~0}\hypertarget{i2c__lib_8h_a87352bdc3090ec114d847c5ec51ab173}{}\label{i2c__lib_8h_a87352bdc3090ec114d847c5ec51ab173}
+
+
+Definition at line 112 of file i2c\+\_\+lib.\+h.
+
+\index{i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}!I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+R\+R\+EQ@{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+R\+R\+EQ}}
+\index{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+R\+R\+EQ@{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+R\+R\+EQ}!i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+R\+R\+EQ}{I2C_SLAVE_ACT_RREQ}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+R\+R\+EQ~0x00000001}\hypertarget{i2c__lib_8h_a0f1714d2288f76d03405fb4273157ac5}{}\label{i2c__lib_8h_a0f1714d2288f76d03405fb4273157ac5}
+
+
+Definition at line 113 of file i2c\+\_\+lib.\+h.
+
+\index{i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}!I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+R\+R\+E\+Q\+\_\+\+F\+BR@{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+R\+R\+E\+Q\+\_\+\+F\+BR}}
+\index{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+R\+R\+E\+Q\+\_\+\+F\+BR@{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+R\+R\+E\+Q\+\_\+\+F\+BR}!i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+R\+R\+E\+Q\+\_\+\+F\+BR}{I2C_SLAVE_ACT_RREQ_FBR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+R\+R\+E\+Q\+\_\+\+F\+BR~0x00000005}\hypertarget{i2c__lib_8h_abe3db8f01bee18497d803ab504c65e50}{}\label{i2c__lib_8h_abe3db8f01bee18497d803ab504c65e50}
+
+
+Definition at line 115 of file i2c\+\_\+lib.\+h.
+
+\index{i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}!I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+T\+R\+EQ@{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+T\+R\+EQ}}
+\index{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+T\+R\+EQ@{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+T\+R\+EQ}!i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+T\+R\+EQ}{I2C_SLAVE_ACT_TREQ}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+T\+R\+EQ~0x00000002}\hypertarget{i2c__lib_8h_a4c0899e46bfe811164fa54963b3cbd22}{}\label{i2c__lib_8h_a4c0899e46bfe811164fa54963b3cbd22}
+
+
+Definition at line 114 of file i2c\+\_\+lib.\+h.
+
+\index{i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}!I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+N\+T\+\_\+\+D\+A\+TA@{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+N\+T\+\_\+\+D\+A\+TA}}
+\index{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+N\+T\+\_\+\+D\+A\+TA@{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+N\+T\+\_\+\+D\+A\+TA}!i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+N\+T\+\_\+\+D\+A\+TA}{I2C_SLAVE_INT_DATA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+N\+T\+\_\+\+D\+A\+TA~0x00000001}\hypertarget{i2c__lib_8h_a6e97f1ac1fbd964ac0e13c4a7528bffe}{}\label{i2c__lib_8h_a6e97f1ac1fbd964ac0e13c4a7528bffe}
+
+
+Definition at line 132 of file i2c\+\_\+lib.\+h.
+
+\index{i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}!I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+RT@{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+RT}}
+\index{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+RT@{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+RT}!i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+RT}{I2C_SLAVE_INT_START}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+RT~0x00000002}\hypertarget{i2c__lib_8h_a111cd4d4430e46fb7d4d3dd15157cff8}{}\label{i2c__lib_8h_a111cd4d4430e46fb7d4d3dd15157cff8}
+
+
+Definition at line 131 of file i2c\+\_\+lib.\+h.
+
+\index{i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}!I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+N\+T\+\_\+\+S\+T\+OP@{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+N\+T\+\_\+\+S\+T\+OP}}
+\index{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+N\+T\+\_\+\+S\+T\+OP@{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+N\+T\+\_\+\+S\+T\+OP}!i2c\+\_\+lib.\+h@{i2c\+\_\+lib.\+h}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+N\+T\+\_\+\+S\+T\+OP}{I2C_SLAVE_INT_STOP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+N\+T\+\_\+\+S\+T\+OP~0x00000004}\hypertarget{i2c__lib_8h_add55f55f568a223e6e6353167aa84f37}{}\label{i2c__lib_8h_add55f55f568a223e6e6353167aa84f37}
+
+
+Definition at line 130 of file i2c\+\_\+lib.\+h.
+

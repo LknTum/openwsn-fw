@@ -1,0 +1,51 @@
+\hypertarget{large__range__accel_8h}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/drivers/gina/large\+\_\+range\+\_\+accel.h File Reference}
+\label{large__range__accel_8h}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/drivers/gina/large\+\_\+range\+\_\+accel.\+h@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/drivers/gina/large\+\_\+range\+\_\+accel.\+h}}
+{\ttfamily \#include \char`\"{}msp430x26x.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stdint.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}i2c.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___large_range_accel_ga499806d09c3f3cb347485f2d2fdd8109}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+I2\+C\+\_\+\+A\+D\+DR}~0x18
+\item 
+\#define \hyperlink{group___large_range_accel_gacd1efbafb14d386c92ce50b2d2579c3a}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+X\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR}~0x00
+\item 
+\#define \hyperlink{group___large_range_accel_gafab7fa16bb9ad7279dbfdfc9d5031ed6}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+X\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR}~0x01
+\item 
+\#define \hyperlink{group___large_range_accel_gaa77060f6e42c8098fe1effe7b3cd7e1c}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Y\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR}~0x02
+\item 
+\#define \hyperlink{group___large_range_accel_gadcd595bc0cf70e4ccbaa95416bb1478d}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Y\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR}~0x03
+\item 
+\#define \hyperlink{group___large_range_accel_ga2f703895b5e8bb9c1c198f3d3d729517}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Z\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR}~0x04
+\item 
+\#define \hyperlink{group___large_range_accel_ga8f15d6b621ca7e17be0f97debda3dd12}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Z\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR}~0x05
+\item 
+\#define \hyperlink{group___large_range_accel_gaf01dc77ef045d9c8c90b94bc34be612b}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+A\+U\+X\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR}~0x06
+\item 
+\#define \hyperlink{group___large_range_accel_gab048042c0057ef6f8f1d153eca6b91ea}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+A\+U\+X\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR}~0x07
+\item 
+\#define \hyperlink{group___large_range_accel_ga8a6470f4fd5b0b53bcbc3a7526689e07}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+R\+E\+S\+E\+T\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+D\+DR}~0x0A
+\item 
+\#define \hyperlink{group___large_range_accel_ga65a40840ee50d20d2318864e88f3ceb1}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+C\+\_\+\+A\+D\+DR}~0x0C
+\item 
+\#define \hyperlink{group___large_range_accel_ga253286907acd8e477925fdb068fcd3bd}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+B\+\_\+\+A\+D\+DR}~0x0D
+\item 
+\#define \hyperlink{group___large_range_accel_gad2fa6db2d889c7ab1c8605db2ea71d61}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+A\+\_\+\+A\+D\+DR}~0x0E
+\item 
+\#define \hyperlink{group___large_range_accel_ga2979b53d21452bab4f9bcb36c9569b42}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+C\+\_\+\+S\+E\+T\+T\+I\+NG}~0x\+E0
+\item 
+\#define \hyperlink{group___large_range_accel_ga78294423504092bfda6f63240b4ad652}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+B\+\_\+\+S\+E\+T\+T\+I\+NG}~0x\+C0
+\item 
+\#define \hyperlink{group___large_range_accel_gafa85c087d02fe049ae15bc4138c4a5d7}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+B\+\_\+\+S\+L\+E\+EP}~0x80
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___large_range_accel_ga363832787b3cf9f181d19bb3367a2aae}{large\+\_\+range\+\_\+accel\+\_\+init} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___large_range_accel_ga3ebaa7e20e2127b059900954a8a7cf15}{large\+\_\+range\+\_\+accel\+\_\+disable} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___large_range_accel_gaa586d4fc95efaa90700ae7f80925bfc5}{large\+\_\+range\+\_\+accel\+\_\+get\+\_\+config} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___large_range_accel_ga6dd63e2fe61e53a9cecea5c4ba14a72c}{large\+\_\+range\+\_\+accel\+\_\+get\+\_\+measurement} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$space\+To\+Write)
+\end{DoxyCompactItemize}

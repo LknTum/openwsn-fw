@@ -1,0 +1,132 @@
+\hypertarget{llwu_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/k20/bsp\+\_\+ext/llwu.c File Reference}
+\label{llwu_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/k20/bsp\+\_\+ext/llwu.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/k20/bsp\+\_\+ext/llwu.\+c}}
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}llwu.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{llwu_8c_a7098442053787234ffc570254dacb4b7}{llwu\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{llwu_8c_ab9bcc120861ede1c36b81b2e8bf78d7b}{llwu\+\_\+reset\+\_\+enable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{llwu_8c_a890d7afbd9428a0063dc316134c89d77}{llwu\+\_\+configure} (unsigned int pin\+\_\+en, unsigned char rise\+\_\+fall, unsigned char module\+\_\+en)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{llwu_8c_a6fa1c44f501acc2a095c2072ff72c649}{llwu\+\_\+configure\+\_\+filter} (unsigned int wu\+\_\+pin\+\_\+num, unsigned char filter\+\_\+en, unsigned char rise\+\_\+fall)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{llwu_8c_ae044b59ca45ad6b50f409f94f90d0255}{llwu\+\_\+isr} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{llwu_8c_ac633d91ed5b5d63bfe9022d8bebecc5b}{re\+\_\+init\+\_\+clk}
+\begin{DoxyCompactList}\small\item\em K20-\/specific definition of the \char`\"{}\+L\+L\+W\+U\char`\"{} bsp module. Revision of Philip Drake(rxaa60) version. \end{DoxyCompactList}\item 
+int \hyperlink{llwu_8c_a5383539a3a607e05906f71be0fd4f4af}{mcg\+\_\+clk\+\_\+hz}
+\begin{DoxyCompactList}\small\item\em K20-\/specific definition of the \char`\"{}board\char`\"{} bsp module. \end{DoxyCompactList}\item 
+int \hyperlink{llwu_8c_a147d9f2b0cb61752bb5c764775d9b022}{mcg\+\_\+clk\+\_\+khz}
+\item 
+int \hyperlink{llwu_8c_a7fa854056a09162506d2e1e8ca57fd6d}{core\+\_\+clk\+\_\+khz}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{llwu.\+c@{llwu.\+c}!llwu\+\_\+configure@{llwu\+\_\+configure}}
+\index{llwu\+\_\+configure@{llwu\+\_\+configure}!llwu.\+c@{llwu.\+c}}
+\subsubsection[{\texorpdfstring{llwu\+\_\+configure(unsigned int pin\+\_\+en, unsigned char rise\+\_\+fall, unsigned char module\+\_\+en)}{llwu_configure(unsigned int pin_en, unsigned char rise_fall, unsigned char module_en)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} llwu\+\_\+configure (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{pin\+\_\+en, }
+\item[{unsigned char}]{rise\+\_\+fall, }
+\item[{unsigned char}]{module\+\_\+en}
+\end{DoxyParamCaption}
+)}\hypertarget{llwu_8c_a890d7afbd9428a0063dc316134c89d77}{}\label{llwu_8c_a890d7afbd9428a0063dc316134c89d77}
+
+
+Definition at line 72 of file llwu.\+c.
+
+\index{llwu.\+c@{llwu.\+c}!llwu\+\_\+configure\+\_\+filter@{llwu\+\_\+configure\+\_\+filter}}
+\index{llwu\+\_\+configure\+\_\+filter@{llwu\+\_\+configure\+\_\+filter}!llwu.\+c@{llwu.\+c}}
+\subsubsection[{\texorpdfstring{llwu\+\_\+configure\+\_\+filter(unsigned int wu\+\_\+pin\+\_\+num, unsigned char filter\+\_\+en, unsigned char rise\+\_\+fall)}{llwu_configure_filter(unsigned int wu_pin_num, unsigned char filter_en, unsigned char rise_fall)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} llwu\+\_\+configure\+\_\+filter (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{wu\+\_\+pin\+\_\+num, }
+\item[{unsigned char}]{filter\+\_\+en, }
+\item[{unsigned char}]{rise\+\_\+fall}
+\end{DoxyParamCaption}
+)}\hypertarget{llwu_8c_a6fa1c44f501acc2a095c2072ff72c649}{}\label{llwu_8c_a6fa1c44f501acc2a095c2072ff72c649}
+
+
+Definition at line 196 of file llwu.\+c.
+
+\index{llwu.\+c@{llwu.\+c}!llwu\+\_\+init@{llwu\+\_\+init}}
+\index{llwu\+\_\+init@{llwu\+\_\+init}!llwu.\+c@{llwu.\+c}}
+\subsubsection[{\texorpdfstring{llwu\+\_\+init(void)}{llwu_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} llwu\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{llwu_8c_a7098442053787234ffc570254dacb4b7}{}\label{llwu_8c_a7098442053787234ffc570254dacb4b7}
+
+
+Definition at line 18 of file llwu.\+c.
+
+\index{llwu.\+c@{llwu.\+c}!llwu\+\_\+isr@{llwu\+\_\+isr}}
+\index{llwu\+\_\+isr@{llwu\+\_\+isr}!llwu.\+c@{llwu.\+c}}
+\subsubsection[{\texorpdfstring{llwu\+\_\+isr(void)}{llwu_isr(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} llwu\+\_\+isr (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{llwu_8c_ae044b59ca45ad6b50f409f94f90d0255}{}\label{llwu_8c_ae044b59ca45ad6b50f409f94f90d0255}
+
+
+Definition at line 237 of file llwu.\+c.
+
+\index{llwu.\+c@{llwu.\+c}!llwu\+\_\+reset\+\_\+enable@{llwu\+\_\+reset\+\_\+enable}}
+\index{llwu\+\_\+reset\+\_\+enable@{llwu\+\_\+reset\+\_\+enable}!llwu.\+c@{llwu.\+c}}
+\subsubsection[{\texorpdfstring{llwu\+\_\+reset\+\_\+enable(void)}{llwu_reset_enable(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} llwu\+\_\+reset\+\_\+enable (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{llwu_8c_ab9bcc120861ede1c36b81b2e8bf78d7b}{}\label{llwu_8c_ab9bcc120861ede1c36b81b2e8bf78d7b}
+
+
+Definition at line 34 of file llwu.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{llwu.\+c@{llwu.\+c}!core\+\_\+clk\+\_\+khz@{core\+\_\+clk\+\_\+khz}}
+\index{core\+\_\+clk\+\_\+khz@{core\+\_\+clk\+\_\+khz}!llwu.\+c@{llwu.\+c}}
+\subsubsection[{\texorpdfstring{core\+\_\+clk\+\_\+khz}{core_clk_khz}}]{\setlength{\rightskip}{0pt plus 5cm}int core\+\_\+clk\+\_\+khz}\hypertarget{llwu_8c_a7fa854056a09162506d2e1e8ca57fd6d}{}\label{llwu_8c_a7fa854056a09162506d2e1e8ca57fd6d}
+
+
+Definition at line 20 of file sysinit.\+c.
+
+\index{llwu.\+c@{llwu.\+c}!mcg\+\_\+clk\+\_\+hz@{mcg\+\_\+clk\+\_\+hz}}
+\index{mcg\+\_\+clk\+\_\+hz@{mcg\+\_\+clk\+\_\+hz}!llwu.\+c@{llwu.\+c}}
+\subsubsection[{\texorpdfstring{mcg\+\_\+clk\+\_\+hz}{mcg_clk_hz}}]{\setlength{\rightskip}{0pt plus 5cm}int mcg\+\_\+clk\+\_\+hz}\hypertarget{llwu_8c_a5383539a3a607e05906f71be0fd4f4af}{}\label{llwu_8c_a5383539a3a607e05906f71be0fd4f4af}
+
+
+K20-\/specific definition of the \char`\"{}board\char`\"{} bsp module. 
+
+\begin{DoxyAuthor}{Author}
+Xavi Vilajosana \href{mailto:xvilajosana@eecs.berkeley.edu}{\tt xvilajosana@eecs.\+berkeley.\+edu}, May 2012. 
+\end{DoxyAuthor}
+
+
+Definition at line 18 of file sysinit.\+c.
+
+\index{llwu.\+c@{llwu.\+c}!mcg\+\_\+clk\+\_\+khz@{mcg\+\_\+clk\+\_\+khz}}
+\index{mcg\+\_\+clk\+\_\+khz@{mcg\+\_\+clk\+\_\+khz}!llwu.\+c@{llwu.\+c}}
+\subsubsection[{\texorpdfstring{mcg\+\_\+clk\+\_\+khz}{mcg_clk_khz}}]{\setlength{\rightskip}{0pt plus 5cm}int mcg\+\_\+clk\+\_\+khz}\hypertarget{llwu_8c_a147d9f2b0cb61752bb5c764775d9b022}{}\label{llwu_8c_a147d9f2b0cb61752bb5c764775d9b022}
+
+
+Definition at line 19 of file sysinit.\+c.
+
+\index{llwu.\+c@{llwu.\+c}!re\+\_\+init\+\_\+clk@{re\+\_\+init\+\_\+clk}}
+\index{re\+\_\+init\+\_\+clk@{re\+\_\+init\+\_\+clk}!llwu.\+c@{llwu.\+c}}
+\subsubsection[{\texorpdfstring{re\+\_\+init\+\_\+clk}{re_init_clk}}]{\setlength{\rightskip}{0pt plus 5cm}int re\+\_\+init\+\_\+clk}\hypertarget{llwu_8c_ac633d91ed5b5d63bfe9022d8bebecc5b}{}\label{llwu_8c_ac633d91ed5b5d63bfe9022d8bebecc5b}
+
+
+K20-\/specific definition of the \char`\"{}\+L\+L\+W\+U\char`\"{} bsp module. Revision of Philip Drake(rxaa60) version. 
+
+\begin{DoxyAuthor}{Author}
+Xavi Vilajosana \href{mailto:xvilajosana@eecs.berkeley.edu}{\tt xvilajosana@eecs.\+berkeley.\+edu}, May 2012. 
+\end{DoxyAuthor}

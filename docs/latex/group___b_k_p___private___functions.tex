@@ -1,0 +1,342 @@
+\hypertarget{group___b_k_p___private___functions}{}\section{B\+K\+P\+\_\+\+Private\+\_\+\+Functions}
+\label{group___b_k_p___private___functions}\index{B\+K\+P\+\_\+\+Private\+\_\+\+Functions@{B\+K\+P\+\_\+\+Private\+\_\+\+Functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___b_k_p___private___functions_gaabff4d8f5ebf4fd9a840bcc9042ca226}{B\+K\+P\+\_\+\+De\+Init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Deinitializes the B\+KP peripheral registers to their default reset values. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___b_k_p___private___functions_gae216446d641d075fb575ce6dbe2ff4c1}{B\+K\+P\+\_\+\+Tamper\+Pin\+Level\+Config} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} B\+K\+P\+\_\+\+Tamper\+Pin\+Level)
+\begin{DoxyCompactList}\small\item\em Configures the Tamper Pin active level. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___b_k_p___private___functions_ga3a0cdff9ad8238ade2c67e2b70f530ac}{B\+K\+P\+\_\+\+Tamper\+Pin\+Cmd} (\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_ac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} New\+State)
+\begin{DoxyCompactList}\small\item\em Enables or disables the Tamper Pin activation. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___b_k_p___private___functions_gab8dbd0c4773f6edb98a28c8ff6a2ead0}{B\+K\+P\+\_\+\+I\+T\+Config} (\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_ac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} New\+State)
+\begin{DoxyCompactList}\small\item\em Enables or disables the Tamper Pin Interrupt. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___b_k_p___private___functions_ga3d1b22b3c6a79f7b423616a0af1885bf}{B\+K\+P\+\_\+\+R\+T\+C\+Output\+Config} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} B\+K\+P\+\_\+\+R\+T\+C\+Output\+Source)
+\begin{DoxyCompactList}\small\item\em Select the R\+TC output source to output on the Tamper pin. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___b_k_p___private___functions_gad34db08a944450d2e7d56d0fd8db2bca}{B\+K\+P\+\_\+\+Set\+R\+T\+C\+Calibration\+Value} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} Calibration\+Value)
+\begin{DoxyCompactList}\small\item\em Sets R\+TC Clock Calibration value. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___b_k_p___private___functions_ga18d220387db651b3cb71fad5c092e041}{B\+K\+P\+\_\+\+Write\+Backup\+Register} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} B\+K\+P\+\_\+\+DR, \hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} Data)
+\begin{DoxyCompactList}\small\item\em Writes user data to the specified Data Backup Register. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{group___b_k_p___private___functions_ga359d8fbc945e0f4e34fedbe037d842c8}{B\+K\+P\+\_\+\+Read\+Backup\+Register} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} B\+K\+P\+\_\+\+DR)
+\begin{DoxyCompactList}\small\item\em Reads data from the specified Data Backup Register. \end{DoxyCompactList}\item 
+\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a89136caac2e14c55151f527ac02daaff}{Flag\+Status} \hyperlink{group___b_k_p___private___functions_gacc9aedde760383f0bd146f0d77a547db}{B\+K\+P\+\_\+\+Get\+Flag\+Status} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Checks whether the Tamper Pin Event flag is set or not. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___b_k_p___private___functions_ga3f3aea5b0a3d8d5d79b0b506928351ea}{B\+K\+P\+\_\+\+Clear\+Flag} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Clears Tamper Pin Event pending flag. \end{DoxyCompactList}\item 
+\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_aacbd7ed539db0aacd973a0f6eca34074}{I\+T\+Status} \hyperlink{group___b_k_p___private___functions_ga99566c9f1f17f499020606cb63511494}{B\+K\+P\+\_\+\+Get\+I\+T\+Status} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Checks whether the Tamper Pin Interrupt has occurred or not. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___b_k_p___private___functions_ga6a93ef8e40959bb10fea670e2040ad74}{B\+K\+P\+\_\+\+Clear\+I\+T\+Pending\+Bit} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Clears Tamper Pin Interrupt pending bit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{B\+K\+P\+\_\+\+Private\+\_\+\+Functions@{B\+K\+P\+\_\+\+Private\+\_\+\+Functions}!B\+K\+P\+\_\+\+Clear\+Flag@{B\+K\+P\+\_\+\+Clear\+Flag}}
+\index{B\+K\+P\+\_\+\+Clear\+Flag@{B\+K\+P\+\_\+\+Clear\+Flag}!B\+K\+P\+\_\+\+Private\+\_\+\+Functions@{B\+K\+P\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{B\+K\+P\+\_\+\+Clear\+Flag(void)}{BKP_ClearFlag(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} B\+K\+P\+\_\+\+Clear\+Flag (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___b_k_p___private___functions_ga3f3aea5b0a3d8d5d79b0b506928351ea}{}\label{group___b_k_p___private___functions_ga3f3aea5b0a3d8d5d79b0b506928351ea}
+
+
+Clears Tamper Pin Event pending flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 269 of file stm32f10x\+\_\+bkp.\+c.
+
+\index{B\+K\+P\+\_\+\+Private\+\_\+\+Functions@{B\+K\+P\+\_\+\+Private\+\_\+\+Functions}!B\+K\+P\+\_\+\+Clear\+I\+T\+Pending\+Bit@{B\+K\+P\+\_\+\+Clear\+I\+T\+Pending\+Bit}}
+\index{B\+K\+P\+\_\+\+Clear\+I\+T\+Pending\+Bit@{B\+K\+P\+\_\+\+Clear\+I\+T\+Pending\+Bit}!B\+K\+P\+\_\+\+Private\+\_\+\+Functions@{B\+K\+P\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{B\+K\+P\+\_\+\+Clear\+I\+T\+Pending\+Bit(void)}{BKP_ClearITPendingBit(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} B\+K\+P\+\_\+\+Clear\+I\+T\+Pending\+Bit (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___b_k_p___private___functions_ga6a93ef8e40959bb10fea670e2040ad74}{}\label{group___b_k_p___private___functions_ga6a93ef8e40959bb10fea670e2040ad74}
+
+
+Clears Tamper Pin Interrupt pending bit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 290 of file stm32f10x\+\_\+bkp.\+c.
+
+\index{B\+K\+P\+\_\+\+Private\+\_\+\+Functions@{B\+K\+P\+\_\+\+Private\+\_\+\+Functions}!B\+K\+P\+\_\+\+De\+Init@{B\+K\+P\+\_\+\+De\+Init}}
+\index{B\+K\+P\+\_\+\+De\+Init@{B\+K\+P\+\_\+\+De\+Init}!B\+K\+P\+\_\+\+Private\+\_\+\+Functions@{B\+K\+P\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{B\+K\+P\+\_\+\+De\+Init(void)}{BKP_DeInit(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} B\+K\+P\+\_\+\+De\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___b_k_p___private___functions_gaabff4d8f5ebf4fd9a840bcc9042ca226}{}\label{group___b_k_p___private___functions_gaabff4d8f5ebf4fd9a840bcc9042ca226}
+
+
+Deinitializes the B\+KP peripheral registers to their default reset values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 120 of file stm32f10x\+\_\+bkp.\+c.
+
+\index{B\+K\+P\+\_\+\+Private\+\_\+\+Functions@{B\+K\+P\+\_\+\+Private\+\_\+\+Functions}!B\+K\+P\+\_\+\+Get\+Flag\+Status@{B\+K\+P\+\_\+\+Get\+Flag\+Status}}
+\index{B\+K\+P\+\_\+\+Get\+Flag\+Status@{B\+K\+P\+\_\+\+Get\+Flag\+Status}!B\+K\+P\+\_\+\+Private\+\_\+\+Functions@{B\+K\+P\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{B\+K\+P\+\_\+\+Get\+Flag\+Status(void)}{BKP_GetFlagStatus(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Flag\+Status} B\+K\+P\+\_\+\+Get\+Flag\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___b_k_p___private___functions_gacc9aedde760383f0bd146f0d77a547db}{}\label{group___b_k_p___private___functions_gacc9aedde760383f0bd146f0d77a547db}
+
+
+Checks whether the Tamper Pin Event flag is set or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & new state of the Tamper Pin Event flag (S\+ET or R\+E\+S\+ET). \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 259 of file stm32f10x\+\_\+bkp.\+c.
+
+\index{B\+K\+P\+\_\+\+Private\+\_\+\+Functions@{B\+K\+P\+\_\+\+Private\+\_\+\+Functions}!B\+K\+P\+\_\+\+Get\+I\+T\+Status@{B\+K\+P\+\_\+\+Get\+I\+T\+Status}}
+\index{B\+K\+P\+\_\+\+Get\+I\+T\+Status@{B\+K\+P\+\_\+\+Get\+I\+T\+Status}!B\+K\+P\+\_\+\+Private\+\_\+\+Functions@{B\+K\+P\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{B\+K\+P\+\_\+\+Get\+I\+T\+Status(void)}{BKP_GetITStatus(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+T\+Status} B\+K\+P\+\_\+\+Get\+I\+T\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___b_k_p___private___functions_ga99566c9f1f17f499020606cb63511494}{}\label{group___b_k_p___private___functions_ga99566c9f1f17f499020606cb63511494}
+
+
+Checks whether the Tamper Pin Interrupt has occurred or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & new state of the Tamper Pin Interrupt (S\+ET or R\+E\+S\+ET). \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 280 of file stm32f10x\+\_\+bkp.\+c.
+
+\index{B\+K\+P\+\_\+\+Private\+\_\+\+Functions@{B\+K\+P\+\_\+\+Private\+\_\+\+Functions}!B\+K\+P\+\_\+\+I\+T\+Config@{B\+K\+P\+\_\+\+I\+T\+Config}}
+\index{B\+K\+P\+\_\+\+I\+T\+Config@{B\+K\+P\+\_\+\+I\+T\+Config}!B\+K\+P\+\_\+\+Private\+\_\+\+Functions@{B\+K\+P\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{B\+K\+P\+\_\+\+I\+T\+Config(\+Functional\+State New\+State)}{BKP_ITConfig(FunctionalState NewState)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} B\+K\+P\+\_\+\+I\+T\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf Functional\+State}}]{New\+State}
+\end{DoxyParamCaption}
+)}\hypertarget{group___b_k_p___private___functions_gab8dbd0c4773f6edb98a28c8ff6a2ead0}{}\label{group___b_k_p___private___functions_gab8dbd0c4773f6edb98a28c8ff6a2ead0}
+
+
+Enables or disables the Tamper Pin Interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em New\+State} & new state of the Tamper Pin Interrupt. This parameter can be\+: E\+N\+A\+B\+LE or D\+I\+S\+A\+B\+LE. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 160 of file stm32f10x\+\_\+bkp.\+c.
+
+\index{B\+K\+P\+\_\+\+Private\+\_\+\+Functions@{B\+K\+P\+\_\+\+Private\+\_\+\+Functions}!B\+K\+P\+\_\+\+Read\+Backup\+Register@{B\+K\+P\+\_\+\+Read\+Backup\+Register}}
+\index{B\+K\+P\+\_\+\+Read\+Backup\+Register@{B\+K\+P\+\_\+\+Read\+Backup\+Register}!B\+K\+P\+\_\+\+Private\+\_\+\+Functions@{B\+K\+P\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{B\+K\+P\+\_\+\+Read\+Backup\+Register(uint16\+\_\+t B\+K\+P\+\_\+\+D\+R)}{BKP_ReadBackupRegister(uint16_t BKP_DR)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\+\_\+t} B\+K\+P\+\_\+\+Read\+Backup\+Register (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t}}]{B\+K\+P\+\_\+\+DR}
+\end{DoxyParamCaption}
+)}\hypertarget{group___b_k_p___private___functions_ga359d8fbc945e0f4e34fedbe037d842c8}{}\label{group___b_k_p___private___functions_ga359d8fbc945e0f4e34fedbe037d842c8}
+
+
+Reads data from the specified Data Backup Register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em B\+K\+P\+\_\+\+DR} & specifies the Data Backup Register. This parameter can be B\+K\+P\+\_\+\+D\+Rx where x\+:\mbox{[}1, 42\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & content of the specified Data Backup Register \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 241 of file stm32f10x\+\_\+bkp.\+c.
+
+\index{B\+K\+P\+\_\+\+Private\+\_\+\+Functions@{B\+K\+P\+\_\+\+Private\+\_\+\+Functions}!B\+K\+P\+\_\+\+R\+T\+C\+Output\+Config@{B\+K\+P\+\_\+\+R\+T\+C\+Output\+Config}}
+\index{B\+K\+P\+\_\+\+R\+T\+C\+Output\+Config@{B\+K\+P\+\_\+\+R\+T\+C\+Output\+Config}!B\+K\+P\+\_\+\+Private\+\_\+\+Functions@{B\+K\+P\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{B\+K\+P\+\_\+\+R\+T\+C\+Output\+Config(uint16\+\_\+t B\+K\+P\+\_\+\+R\+T\+C\+Output\+Source)}{BKP_RTCOutputConfig(uint16_t BKP_RTCOutputSource)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} B\+K\+P\+\_\+\+R\+T\+C\+Output\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t}}]{B\+K\+P\+\_\+\+R\+T\+C\+Output\+Source}
+\end{DoxyParamCaption}
+)}\hypertarget{group___b_k_p___private___functions_ga3d1b22b3c6a79f7b423616a0af1885bf}{}\label{group___b_k_p___private___functions_ga3d1b22b3c6a79f7b423616a0af1885bf}
+
+
+Select the R\+TC output source to output on the Tamper pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em B\+K\+P\+\_\+\+R\+T\+C\+Output\+Source} & specifies the R\+TC output source. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item B\+K\+P\+\_\+\+R\+T\+C\+Output\+Source\+\_\+\+None\+: no R\+TC output on the Tamper pin. \item B\+K\+P\+\_\+\+R\+T\+C\+Output\+Source\+\_\+\+Calib\+Clock\+: output the R\+TC clock with frequency divided by 64 on the Tamper pin. \item B\+K\+P\+\_\+\+R\+T\+C\+Output\+Source\+\_\+\+Alarm\+: output the R\+TC Alarm pulse signal on the Tamper pin. \item B\+K\+P\+\_\+\+R\+T\+C\+Output\+Source\+\_\+\+Second\+: output the R\+TC Second pulse signal on the Tamper pin. \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 180 of file stm32f10x\+\_\+bkp.\+c.
+
+\index{B\+K\+P\+\_\+\+Private\+\_\+\+Functions@{B\+K\+P\+\_\+\+Private\+\_\+\+Functions}!B\+K\+P\+\_\+\+Set\+R\+T\+C\+Calibration\+Value@{B\+K\+P\+\_\+\+Set\+R\+T\+C\+Calibration\+Value}}
+\index{B\+K\+P\+\_\+\+Set\+R\+T\+C\+Calibration\+Value@{B\+K\+P\+\_\+\+Set\+R\+T\+C\+Calibration\+Value}!B\+K\+P\+\_\+\+Private\+\_\+\+Functions@{B\+K\+P\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{B\+K\+P\+\_\+\+Set\+R\+T\+C\+Calibration\+Value(uint8\+\_\+t Calibration\+Value)}{BKP_SetRTCCalibrationValue(uint8_t CalibrationValue)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} B\+K\+P\+\_\+\+Set\+R\+T\+C\+Calibration\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{Calibration\+Value}
+\end{DoxyParamCaption}
+)}\hypertarget{group___b_k_p___private___functions_gad34db08a944450d2e7d56d0fd8db2bca}{}\label{group___b_k_p___private___functions_gad34db08a944450d2e7d56d0fd8db2bca}
+
+
+Sets R\+TC Clock Calibration value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Calibration\+Value} & specifies the R\+TC Clock Calibration value. This parameter must be a number between 0 and 0x7F. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 201 of file stm32f10x\+\_\+bkp.\+c.
+
+\index{B\+K\+P\+\_\+\+Private\+\_\+\+Functions@{B\+K\+P\+\_\+\+Private\+\_\+\+Functions}!B\+K\+P\+\_\+\+Tamper\+Pin\+Cmd@{B\+K\+P\+\_\+\+Tamper\+Pin\+Cmd}}
+\index{B\+K\+P\+\_\+\+Tamper\+Pin\+Cmd@{B\+K\+P\+\_\+\+Tamper\+Pin\+Cmd}!B\+K\+P\+\_\+\+Private\+\_\+\+Functions@{B\+K\+P\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{B\+K\+P\+\_\+\+Tamper\+Pin\+Cmd(\+Functional\+State New\+State)}{BKP_TamperPinCmd(FunctionalState NewState)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} B\+K\+P\+\_\+\+Tamper\+Pin\+Cmd (
+\begin{DoxyParamCaption}
+\item[{{\bf Functional\+State}}]{New\+State}
+\end{DoxyParamCaption}
+)}\hypertarget{group___b_k_p___private___functions_ga3a0cdff9ad8238ade2c67e2b70f530ac}{}\label{group___b_k_p___private___functions_ga3a0cdff9ad8238ade2c67e2b70f530ac}
+
+
+Enables or disables the Tamper Pin activation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em New\+State} & new state of the Tamper Pin activation. This parameter can be\+: E\+N\+A\+B\+LE or D\+I\+S\+A\+B\+LE. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 147 of file stm32f10x\+\_\+bkp.\+c.
+
+\index{B\+K\+P\+\_\+\+Private\+\_\+\+Functions@{B\+K\+P\+\_\+\+Private\+\_\+\+Functions}!B\+K\+P\+\_\+\+Tamper\+Pin\+Level\+Config@{B\+K\+P\+\_\+\+Tamper\+Pin\+Level\+Config}}
+\index{B\+K\+P\+\_\+\+Tamper\+Pin\+Level\+Config@{B\+K\+P\+\_\+\+Tamper\+Pin\+Level\+Config}!B\+K\+P\+\_\+\+Private\+\_\+\+Functions@{B\+K\+P\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{B\+K\+P\+\_\+\+Tamper\+Pin\+Level\+Config(uint16\+\_\+t B\+K\+P\+\_\+\+Tamper\+Pin\+Level)}{BKP_TamperPinLevelConfig(uint16_t BKP_TamperPinLevel)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} B\+K\+P\+\_\+\+Tamper\+Pin\+Level\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t}}]{B\+K\+P\+\_\+\+Tamper\+Pin\+Level}
+\end{DoxyParamCaption}
+)}\hypertarget{group___b_k_p___private___functions_gae216446d641d075fb575ce6dbe2ff4c1}{}\label{group___b_k_p___private___functions_gae216446d641d075fb575ce6dbe2ff4c1}
+
+
+Configures the Tamper Pin active level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em B\+K\+P\+\_\+\+Tamper\+Pin\+Level} & specifies the Tamper Pin active level. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item B\+K\+P\+\_\+\+Tamper\+Pin\+Level\+\_\+\+High\+: Tamper pin active on high level \item B\+K\+P\+\_\+\+Tamper\+Pin\+Level\+\_\+\+Low\+: Tamper pin active on low level \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 134 of file stm32f10x\+\_\+bkp.\+c.
+
+\index{B\+K\+P\+\_\+\+Private\+\_\+\+Functions@{B\+K\+P\+\_\+\+Private\+\_\+\+Functions}!B\+K\+P\+\_\+\+Write\+Backup\+Register@{B\+K\+P\+\_\+\+Write\+Backup\+Register}}
+\index{B\+K\+P\+\_\+\+Write\+Backup\+Register@{B\+K\+P\+\_\+\+Write\+Backup\+Register}!B\+K\+P\+\_\+\+Private\+\_\+\+Functions@{B\+K\+P\+\_\+\+Private\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{B\+K\+P\+\_\+\+Write\+Backup\+Register(uint16\+\_\+t B\+K\+P\+\_\+\+D\+R, uint16\+\_\+t Data)}{BKP_WriteBackupRegister(uint16_t BKP_DR, uint16_t Data)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} B\+K\+P\+\_\+\+Write\+Backup\+Register (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t}}]{B\+K\+P\+\_\+\+DR, }
+\item[{{\bf uint16\+\_\+t}}]{Data}
+\end{DoxyParamCaption}
+)}\hypertarget{group___b_k_p___private___functions_ga18d220387db651b3cb71fad5c092e041}{}\label{group___b_k_p___private___functions_ga18d220387db651b3cb71fad5c092e041}
+
+
+Writes user data to the specified Data Backup Register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em B\+K\+P\+\_\+\+DR} & specifies the Data Backup Register. This parameter can be B\+K\+P\+\_\+\+D\+Rx where x\+:\mbox{[}1, 42\mbox{]} \\
+\hline
+{\em Data} & data to write \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 222 of file stm32f10x\+\_\+bkp.\+c.
+

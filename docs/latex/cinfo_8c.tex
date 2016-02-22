@@ -1,0 +1,103 @@
+\hypertarget{cinfo_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openapps/cinfo/cinfo.c File Reference}
+\label{cinfo_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openapps/cinfo/cinfo.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openapps/cinfo/cinfo.\+c}}
+{\ttfamily \#include \char`\"{}opendefs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cinfo.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}opencoap.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}openqueue.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}packetfunctions.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}openserial.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}openrandom.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}idmanager.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{cinfo_8c_a2e4726c2cdc6a46dc076235e11dffd37}{cinfo\+\_\+receive} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{structcoap__header__iht}{coap\+\_\+header\+\_\+iht} $\ast$coap\+\_\+header, \hyperlink{structcoap__option__iht}{coap\+\_\+option\+\_\+iht} $\ast$coap\+\_\+options)
+\begin{DoxyCompactList}\small\item\em Called when a Co\+AP message is received for this resource. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{cinfo_8c_a162d0966f618a45916507be8fe8c7890}{cinfo\+\_\+send\+Done} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{disk_8c_ad018a3100b2dabad325a0800152db297}{error})
+\begin{DoxyCompactList}\small\item\em The stack indicates that the packet was sent. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__cinfo_ga760a0f0542a849645666eaf5ef0d1946}{cinfo\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em Initialize this module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{cinfo_8c_a6c1b37bb5205c27f3ec2d4626bc6de27}{cinfo\+\_\+path0} \mbox{[}$\,$\mbox{]} = \char`\"{}i\char`\"{}
+\begin{DoxyCompactList}\small\item\em A Co\+AP resource which indicates the board its running on. \end{DoxyCompactList}\item 
+\hyperlink{structcinfo__vars__t}{cinfo\+\_\+vars\+\_\+t} \hyperlink{cinfo_8c_a83a2ebd78dfc90af1c17fba5a466f30a}{cinfo\+\_\+vars}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{cinfo.\+c@{cinfo.\+c}!cinfo\+\_\+receive@{cinfo\+\_\+receive}}
+\index{cinfo\+\_\+receive@{cinfo\+\_\+receive}!cinfo.\+c@{cinfo.\+c}}
+\subsubsection[{\texorpdfstring{cinfo\+\_\+receive(\+Open\+Queue\+Entry\+\_\+t $\ast$msg, coap\+\_\+header\+\_\+iht $\ast$coap\+\_\+header, coap\+\_\+option\+\_\+iht $\ast$coap\+\_\+options)}{cinfo_receive(OpenQueueEntry_t *msg, coap_header_iht *coap_header, coap_option_iht *coap_options)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf owerror\+\_\+t} cinfo\+\_\+receive (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg, }
+\item[{{\bf coap\+\_\+header\+\_\+iht} $\ast$}]{coap\+\_\+header, }
+\item[{{\bf coap\+\_\+option\+\_\+iht} $\ast$}]{coap\+\_\+options}
+\end{DoxyParamCaption}
+)}\hypertarget{cinfo_8c_a2e4726c2cdc6a46dc076235e11dffd37}{}\label{cinfo_8c_a2e4726c2cdc6a46dc076235e11dffd37}
+
+
+Called when a Co\+AP message is received for this resource. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em msg} & The received message. Co\+AP header and options already parsed. \\
+\hline
+\mbox{\tt in}  & {\em coap\+\_\+header} & The Co\+AP header contained in the message. \\
+\hline
+\mbox{\tt in}  & {\em coap\+\_\+options} & The Co\+AP options contained in the message.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the response is prepared successfully. 
+\end{DoxyReturn}
+
+
+Definition at line 70 of file cinfo.\+c.
+
+\index{cinfo.\+c@{cinfo.\+c}!cinfo\+\_\+send\+Done@{cinfo\+\_\+send\+Done}}
+\index{cinfo\+\_\+send\+Done@{cinfo\+\_\+send\+Done}!cinfo.\+c@{cinfo.\+c}}
+\subsubsection[{\texorpdfstring{cinfo\+\_\+send\+Done(\+Open\+Queue\+Entry\+\_\+t $\ast$msg, owerror\+\_\+t error)}{cinfo_sendDone(OpenQueueEntry_t *msg, owerror_t error)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} cinfo\+\_\+send\+Done (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg, }
+\item[{{\bf owerror\+\_\+t}}]{error}
+\end{DoxyParamCaption}
+)}\hypertarget{cinfo_8c_a162d0966f618a45916507be8fe8c7890}{}\label{cinfo_8c_a162d0966f618a45916507be8fe8c7890}
+
+
+The stack indicates that the packet was sent. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em msg} & The Co\+AP message just sent. \\
+\hline
+\mbox{\tt in}  & {\em error} & The outcome of sending it. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 137 of file cinfo.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{cinfo.\+c@{cinfo.\+c}!cinfo\+\_\+path0@{cinfo\+\_\+path0}}
+\index{cinfo\+\_\+path0@{cinfo\+\_\+path0}!cinfo.\+c@{cinfo.\+c}}
+\subsubsection[{\texorpdfstring{cinfo\+\_\+path0}{cinfo_path0}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint8\+\_\+t} cinfo\+\_\+path0\mbox{[}$\,$\mbox{]} = \char`\"{}i\char`\"{}}\hypertarget{cinfo_8c_a6c1b37bb5205c27f3ec2d4626bc6de27}{}\label{cinfo_8c_a6c1b37bb5205c27f3ec2d4626bc6de27}
+
+
+A Co\+AP resource which indicates the board its running on. 
+
+
+
+Definition at line 17 of file cinfo.\+c.
+
+\index{cinfo.\+c@{cinfo.\+c}!cinfo\+\_\+vars@{cinfo\+\_\+vars}}
+\index{cinfo\+\_\+vars@{cinfo\+\_\+vars}!cinfo.\+c@{cinfo.\+c}}
+\subsubsection[{\texorpdfstring{cinfo\+\_\+vars}{cinfo_vars}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cinfo\+\_\+vars\+\_\+t} cinfo\+\_\+vars}\hypertarget{cinfo_8c_a83a2ebd78dfc90af1c17fba5a466f30a}{}\label{cinfo_8c_a83a2ebd78dfc90af1c17fba5a466f30a}
+
+
+Definition at line 21 of file cinfo.\+c.
+

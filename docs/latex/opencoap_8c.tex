@@ -1,0 +1,42 @@
+\hypertarget{opencoap_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/04-\/\+T\+R\+A\+N/opencoap.c File Reference}
+\label{opencoap_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/04-\/\+T\+R\+A\+N/opencoap.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/04-\/\+T\+R\+A\+N/opencoap.\+c}}
+{\ttfamily \#include \char`\"{}opendefs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}opencoap.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}openudp.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}openqueue.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}openserial.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}openrandom.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}packetfunctions.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}idmanager.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}opentimers.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}scheduler.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__open_coap_ga53a859522b159c54e76dc8a20cbdd3ff}{opencoap\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em Initialize this module. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__open_coap_gaaa4778341676139ae72ad5dd515a816d}{opencoap\+\_\+receive} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Indicate a Co\+AP messages was received. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__open_coap_gad576f6262590140be3771817a151fc45}{opencoap\+\_\+send\+Done} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{disk_8c_ad018a3100b2dabad325a0800152db297}{error})
+\begin{DoxyCompactList}\small\item\em Indicates that the Co\+AP response has been sent. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__open_coap_ga3cbc2d2d4a78ae1474cd5105ebc7b3a8}{opencoap\+\_\+write\+Links} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} component\+ID)
+\begin{DoxyCompactList}\small\item\em Writes the links to all the resources on this mote into the message. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__open_coap_ga82e1d3e8b96366e52348c479f7582c0d}{opencoap\+\_\+register} (\hyperlink{structcoap__resource__desc__t}{coap\+\_\+resource\+\_\+desc\+\_\+t} $\ast$desc)
+\begin{DoxyCompactList}\small\item\em Register a new Co\+AP resource. \end{DoxyCompactList}\item 
+\hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{group__open_coap_gaa4a1f14228086a934a38230eb0254323}{opencoap\+\_\+send} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{group__open_coap_gafb608e0d646391b17d00513242200087}{coap\+\_\+type\+\_\+t} type, \hyperlink{group__open_coap_gae99fde61d59e68af70c6bcd0c7b0256f}{coap\+\_\+code\+\_\+t} code, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} T\+KL, \hyperlink{structcoap__resource__desc__t}{coap\+\_\+resource\+\_\+desc\+\_\+t} $\ast$desc\+Sender)
+\begin{DoxyCompactList}\small\item\em Send a Co\+AP request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structopencoap__vars__t}{opencoap\+\_\+vars\+\_\+t} \hyperlink{opencoap_8c_a4c92b1a07d3cfe391d6a05b095d70785}{opencoap\+\_\+vars}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\index{opencoap.\+c@{opencoap.\+c}!opencoap\+\_\+vars@{opencoap\+\_\+vars}}
+\index{opencoap\+\_\+vars@{opencoap\+\_\+vars}!opencoap.\+c@{opencoap.\+c}}
+\subsubsection[{\texorpdfstring{opencoap\+\_\+vars}{opencoap_vars}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf opencoap\+\_\+vars\+\_\+t} opencoap\+\_\+vars}\hypertarget{opencoap_8c_a4c92b1a07d3cfe391d6a05b095d70785}{}\label{opencoap_8c_a4c92b1a07d3cfe391d6a05b095d70785}
+
+
+Definition at line 16 of file opencoap.\+c.
+

@@ -1,0 +1,607 @@
+\hypertarget{usb__dci__kinetis_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bootloader/k20/usb/usb\+\_\+dci\+\_\+kinetis.c File Reference}
+\label{usb__dci__kinetis_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bootloader/k20/usb/usb\+\_\+dci\+\_\+kinetis.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bootloader/k20/usb/usb\+\_\+dci\+\_\+kinetis.\+c}}
+
+
+The file contains Kinetis U\+SB stack controller layer implementation.  
+
+
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}usb\+\_\+dciapi.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\+\_\+devapi.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\+\_\+dci\+\_\+kinetis.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\+\_\+bdt\+\_\+kinetis.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}wdt\+\_\+kinetis.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\+\_\+class.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+Bus\+\_\+\+Reset\+\_\+\+Handler}\par
+{\em The function handles Bus Reset Interrupt
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This functions is called when U\+SB Bus Reset event is received on U\+SB Bus. This function clears all the errors conditions and reinit Global data structures. Also resets U\+SB device controller. }\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Get\+\_\+\+B\+D\+T\+\_\+\+Index}\par
+{\em The function maps endpoint number and direction to bdt index
+
+
+\begin{DoxyParams}{Parameters}
+{\em ep\+\_\+num} & \+: Endpoint Number \\
+\hline
+{\em direction} & Endpoint direction \\
+\hline
+{\em odd} & \+: Odd or even buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bdt index \+: Mapped bdt index I\+N\+V\+A\+L\+I\+D\+\_\+\+B\+D\+T\+\_\+\+I\+N\+D\+EX \+: Incase of error
+\end{DoxyReturn}
+This function returns B\+DT Index from Endpoint number, direction, odd/even buffer }\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Validate\+\_\+\+Param}\par
+{\em The function validates endpoint number \& direction parameters and returns bdt index.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ep\+\_\+num} & \+: Endpoint Number \\
+\hline
+{\em direction} & Endpoint direction \\
+\hline
+{\em odd} & \+: odd or even buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bdt index \+: mapped bdt index I\+N\+V\+A\+L\+I\+D\+\_\+\+B\+D\+T\+\_\+\+I\+N\+D\+EX \+: incase of error
+\end{DoxyReturn}
+This function validates endpoint parameters and returns bdt index }\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+Bus\+\_\+\+Token\+\_\+\+Cpl\+\_\+\+Handler}\par
+{\em The function handles Token Complete U\+SB interrupts on the bus.
+
+
+\begin{DoxyParams}{Parameters}
+{\em stat} & \+: B\+DT stat byte \\
+\hline
+{\em event} & \+: Pointer to U\+SB E\+V\+E\+NT Structure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function handles Token Complete U\+SB interrupts on the bus. }\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Init}\par
+{\em The function initializes the Controller layer
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller\+\_\+\+ID} & \+: Controller ID\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status U\+S\+B\+\_\+\+OK \+: Always
+\end{DoxyReturn}
+Initializes the U\+SB controller }\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} \hyperlink{usb__dci__kinetis_8c_a80e459d3bc0fd491eff7c8bb34b1c24b}{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Init} (\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} controller\+\_\+\+ID, \hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} b\+Vreg\+En)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+De\+Init}\par
+{\em The function de-\/initializes the Controller layer
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller\+\_\+\+ID} & \+: Controller ID\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status U\+S\+B\+\_\+\+OK \+: Always
+\end{DoxyReturn}
+Initializes the U\+SB controller }\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} \hyperlink{usb__dci__kinetis_8c_aed836ee155ee453116108bc30944137c}{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+De\+Init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Init\+\_\+\+End\+Point}\par
+{\em The function initializes an endpoint
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller\+\_\+\+ID} & \+: Controller ID \\
+\hline
+{\em ep\+\_\+ptr} & \+: Pointer to End\+Point Structures \\
+\hline
+{\em flag} & \+: Zero Termination\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status U\+S\+B\+\_\+\+OK \+: When Successfull U\+S\+B\+E\+R\+R\+\_\+\+E\+P\+\_\+\+I\+N\+I\+T\+\_\+\+F\+A\+I\+L\+ED \+: When Error
+\end{DoxyReturn}
+This function initializes an endpoint and the Bufffer Descriptor Table entry associated with it. Incase the input parameters are invalid it will return U\+S\+B\+E\+R\+R\+\_\+\+E\+P\+\_\+\+I\+N\+I\+T\+\_\+\+F\+A\+I\+L\+ED error. }\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} \hyperlink{usb__dci__kinetis_8c_ae155620ed2b3475c8aa56f2a94c3ad38}{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Init\+\_\+\+End\+Point} (\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} controller\+\_\+\+ID, \hyperlink{usb__devapi_8h_abe4d986e9de5b8499fdf2dd587cddbfb}{U\+S\+B\+\_\+\+E\+P\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+P\+TR} ep\+\_\+ptr, \hyperlink{types_8h_a7670a4e8a07d9ebb00411948b0bbf86d}{boolean} flag)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Cancel\+\_\+\+Transfer}\par
+{\em The function cancels any pending Transfers which ahve not been sent
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & \+: U\+SB Device handle \\
+\hline
+{\em endpoint\+\_\+number} & \+: Endpoint number \\
+\hline
+{\em direction} & \+: Endpoint direction\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status U\+S\+B\+E\+R\+R\+\_\+\+N\+O\+T\+\_\+\+S\+U\+P\+P\+O\+R\+T\+ED \+: Always
+\end{DoxyReturn}
+This function just returns Error Code not supported }\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} \hyperlink{usb__dci__kinetis_8c_a45fc4c25425a747ee029c155b6738dda}{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Cancel\+\_\+\+Transfer} (\hyperlink{usb__devapi_8h_aac63c3e675903b05933f6b509491279e}{\+\_\+usb\+\_\+device\+\_\+handle} handle, \hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} endpoint\+\_\+number, \hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} direction)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Deinit\+\_\+\+End\+Point}\par
+{\em The function de initializes an endpoint
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller\+\_\+\+ID} & \+: Controller ID \\
+\hline
+{\em ep\+\_\+num} & \+: Endpoint number \\
+\hline
+{\em direction} & \+: Endpoint direction\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status U\+S\+B\+\_\+\+OK \+: When successfull U\+S\+B\+E\+R\+R\+\_\+\+E\+P\+\_\+\+D\+E\+I\+N\+I\+T\+\_\+\+F\+A\+I\+L\+ED \+: When unsuccessfull
+\end{DoxyReturn}
+This function un-\/intializes the endpoint by clearing the corresponding endpoint control register and then clearing the bdt elem. }\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} \hyperlink{usb__dci__kinetis_8c_a7f6371c41a70f089de01c7b2f95854bc}{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Deinit\+\_\+\+End\+Point} (\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} controller\+\_\+\+ID, \hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} ep\+\_\+num, \hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} direction)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Stall\+\_\+\+End\+Point}\par
+{\em The function stalls an endpoint
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & \+: U\+SB Device handle \\
+\hline
+{\em endpoint\+\_\+number} & \+: Endpoint number \\
+\hline
+{\em direction} & \+: Endpoint direction\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function stalls the endpoint by setting Endpoint B\+DT }\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{usb__dci__kinetis_8c_ae5154e2226afdb827c5e618e3d9b7af8}{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Stall\+\_\+\+End\+Point} (\hyperlink{usb__devapi_8h_aac63c3e675903b05933f6b509491279e}{\+\_\+usb\+\_\+device\+\_\+handle} handle, \hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} endpoint\+\_\+number, \hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} direction)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Unstall\+\_\+\+End\+Point}\par
+{\em The function unstalls an endpoint
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & \+: U\+SB Device handle \\
+\hline
+{\em endpoint\+\_\+number} & \+: Endpoint number \\
+\hline
+{\em direction} & \+: Endpoint direction\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function unstalls the endpoint by clearing Endpoint Control Register and B\+DT }\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{usb__dci__kinetis_8c_aec8e42a95259a755bc1e88efd404acd3}{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Unstall\+\_\+\+End\+Point} (\hyperlink{usb__devapi_8h_aac63c3e675903b05933f6b509491279e}{\+\_\+usb\+\_\+device\+\_\+handle} handle, \hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} endpoint\+\_\+number, \hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} direction)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Get\+\_\+\+Setup\+\_\+\+Data}\par
+{\em The function copies Setup Packet from U\+SB R\+AM to application buffer
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & \+: U\+SB Device handle \\
+\hline
+{\em endpoint\+\_\+number} & \+: Endpoint number \\
+\hline
+{\em buffer\+\_\+ptr} & \+: Application buffer pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+Copies setup packet from U\+SB R\+AM to Application Buffer }\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{usb__dci__kinetis_8c_adf57e14bb634e193fe8b557a8e8913dd}{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Get\+\_\+\+Setup\+\_\+\+Data} (\hyperlink{usb__devapi_8h_aac63c3e675903b05933f6b509491279e}{\+\_\+usb\+\_\+device\+\_\+handle} handle, \hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} endpoint\+\_\+number, \hyperlink{types_8h_a7b968a76f3f622ee580e18acc3ab554c}{uint\+\_\+8\+\_\+ptr} buffer\+\_\+ptr)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Get\+\_\+\+Transfer\+\_\+\+Status}\par
+{\em The function retrieves the Transfer status of an endpoint
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & \+: U\+SB Device handle \\
+\hline
+{\em endpoint\+\_\+number} & \+: Endpoint number \\
+\hline
+{\em direction} & \+: Endpoint direction\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status U\+S\+B\+E\+R\+R\+\_\+\+T\+R\+\_\+\+F\+A\+I\+L\+ED \+: When unsuccessful U\+S\+B\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+I\+D\+LE \+: No transfer on endpoint U\+S\+B\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+D\+I\+S\+A\+B\+L\+ED \+: endpoint is disabled U\+S\+B\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+T\+A\+L\+L\+ED \+: endpoint is stalled U\+S\+B\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+I\+N\+\_\+\+P\+R\+O\+G\+R\+E\+SS \+: When S\+IE has control of B\+DT
+\end{DoxyReturn}
+This function retrieves the transfer status of the endpoint by checking the B\+DT as well as the endpoint control register }\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} \hyperlink{usb__dci__kinetis_8c_ad65efbe4bb5b3f8671b4592a2471864c}{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Get\+\_\+\+Transfer\+\_\+\+Status} (\hyperlink{usb__devapi_8h_aac63c3e675903b05933f6b509491279e}{\+\_\+usb\+\_\+device\+\_\+handle} handle, \hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} endpoint\+\_\+number, \hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} direction)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Recv\+\_\+\+Data}\par
+{\em The function retrieves data received on an R\+E\+CV endpoint
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & \+: U\+SB Device handle \\
+\hline
+{\em endpoint\+\_\+number} & \+: Endpoint number \\
+\hline
+{\em buffer\+\_\+ptr} & \+: Application buffer pointer \\
+\hline
+{\em size} & \+: Size of the buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status U\+S\+B\+\_\+\+OK \+: When successful U\+S\+B\+E\+R\+R\+\_\+\+R\+X\+\_\+\+F\+A\+I\+L\+ED \+: When unsuccessful
+\end{DoxyReturn}
+This function retrieves data received data on a R\+E\+CV endpoint by copying it from U\+SB R\+AM to application buffer }\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} \hyperlink{usb__dci__kinetis_8c_ad8433f72413b75d8a49b13bfbd17820a}{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Recv\+\_\+\+Data} (\hyperlink{usb__devapi_8h_aac63c3e675903b05933f6b509491279e}{\+\_\+usb\+\_\+device\+\_\+handle} handle, \hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} endpoint\+\_\+number, \hyperlink{types_8h_a059209ba0492c6ab8c5e95832d59ea05}{uchar\+\_\+ptr} buffer\+\_\+ptr, \hyperlink{types_8h_a5532400b872b4aa84e54335bf458a318}{uint\+\_\+32} size)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Send\+\_\+\+Data}\par
+{\em The function configures Controller to send data on an S\+E\+ND endpoint
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & \+: U\+SB Device handle \\
+\hline
+{\em endpoint\+\_\+number} & \+: Endpoint number \\
+\hline
+{\em buffer\+\_\+ptr} & \+: Application buffer pointer \\
+\hline
+{\em size} & \+: Size of the buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status U\+S\+B\+\_\+\+OK \+: When successfull U\+S\+B\+E\+R\+R\+\_\+\+T\+X\+\_\+\+F\+A\+I\+L\+ED \+: When unsuccessfull
+\end{DoxyReturn}
+This function configures Controller to send data on a S\+E\+ND endpoint by setting the B\+DT to send data. }\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} \hyperlink{usb__dci__kinetis_8c_a35b23a99ac1f556683e6317909bcc876}{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Send\+\_\+\+Data} (\hyperlink{usb__devapi_8h_aac63c3e675903b05933f6b509491279e}{\+\_\+usb\+\_\+device\+\_\+handle} handle, \hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} endpoint\+\_\+number, \hyperlink{types_8h_a059209ba0492c6ab8c5e95832d59ea05}{uchar\+\_\+ptr} buffer\+\_\+ptr, \hyperlink{types_8h_a5532400b872b4aa84e54335bf458a318}{uint\+\_\+32} size)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Set\+\_\+\+Address}\par
+{\em The function configures Controller to send data on an S\+E\+ND endpoint
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & \+: U\+SB Device handle \\
+\hline
+{\em address} & \+: Controller Address\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+Assigns the Address to the Controller }\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{usb__dci__kinetis_8c_a3040586883d9620ba74ceef2a61f2a1a}{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Set\+\_\+\+Address} (\hyperlink{usb__devapi_8h_aac63c3e675903b05933f6b509491279e}{\+\_\+usb\+\_\+device\+\_\+handle} handle, \hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} address)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Shutdown}\par
+{\em The function shuts down the controller
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & \+: U\+SB Device handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+Resets U\+SB Device Controller }\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{usb__dci__kinetis_8c_a566ecd8d6c48fd933d351bf21f693264}{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Shutdown} (\hyperlink{usb__devapi_8h_aac63c3e675903b05933f6b509491279e}{\+\_\+usb\+\_\+device\+\_\+handle} handle)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Assert\+\_\+\+Resume}\par
+{\em The function makes the Controller start U\+SB R\+E\+S\+U\+ME signaling
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & \+: U\+SB Device handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function starts R\+E\+S\+U\+ME signalling and then stops it after some delay. In this delay make sure that C\+OP is reset. }\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{usb__dci__kinetis_8c_a550820e6460451120484b3feaf5c773d}{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Assert\+\_\+\+Resume} (\hyperlink{usb__devapi_8h_aac63c3e675903b05933f6b509491279e}{\+\_\+usb\+\_\+device\+\_\+handle} handle)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+I\+SR}\par
+{\em The function handles U\+SB interrupts on the bus.
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function is hooked onto interrupt 69 and handles the U\+SB interrupts. After handling the interrupt it calls the Device Layer to notify it about the event. }\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{usb__dci__kinetis_8c_a469228db45737ae217f8a24549b6916c}{U\+S\+B\+\_\+\+I\+SR} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Clear\+\_\+\+Mem}\par
+{\em The function clears memory starting from start\+\_\+addr till count bytes
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+\_\+addr} & \+: Buffer Start address \\
+\hline
+{\em count} & \+: Count of Bytes \\
+\hline
+{\em val} & \+: Value to be set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function is an implementation of memset }\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{usb__dci__kinetis_8c_a054eabbe14678821e55aeb8bf6d5fc52}{Clear\+\_\+\+Mem} (\hyperlink{types_8h_a7b968a76f3f622ee580e18acc3ab554c}{uint\+\_\+8\+\_\+ptr} start\+\_\+addr, \hyperlink{types_8h_a5532400b872b4aa84e54335bf458a318}{uint\+\_\+32} count, \hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} val)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__bdt__kinetis_8h_ae62223b6c0f58d897348212113cef282}{B\+D\+T\+M\+AP} $\ast$ \hyperlink{usb__dci__kinetis_8c_a419c1a7e6803f3c6f6631c7c8abf9e49}{g\+\_\+bdtmap} = \hyperlink{group___l_p_c___types___public___macros_ga070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The file contains Kinetis U\+SB stack controller layer implementation. 
+
+\begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\index{usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}!Clear\+\_\+\+Mem@{Clear\+\_\+\+Mem}}
+\index{Clear\+\_\+\+Mem@{Clear\+\_\+\+Mem}!usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{Clear\+\_\+\+Mem(uint\+\_\+8\+\_\+ptr start\+\_\+addr, uint\+\_\+32 count, uint\+\_\+8 val)}{Clear_Mem(uint_8_ptr start_addr, uint_32 count, uint_8 val)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Clear\+\_\+\+Mem (
+\begin{DoxyParamCaption}
+\item[{{\bf uint\+\_\+8\+\_\+ptr}}]{start\+\_\+addr, }
+\item[{{\bf uint\+\_\+32}}]{count, }
+\item[{{\bf uint\+\_\+8}}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__dci__kinetis_8c_a054eabbe14678821e55aeb8bf6d5fc52}{}\label{usb__dci__kinetis_8c_a054eabbe14678821e55aeb8bf6d5fc52}
+
+
+Definition at line 1927 of file usb\+\_\+dci\+\_\+kinetis.\+c.
+
+\index{usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}!U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Assert\+\_\+\+Resume@{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Assert\+\_\+\+Resume}}
+\index{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Assert\+\_\+\+Resume@{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Assert\+\_\+\+Resume}!usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Assert\+\_\+\+Resume(\+\_\+usb\+\_\+device\+\_\+handle handle)}{USB_DCI_Assert_Resume(_usb_device_handle handle)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Assert\+\_\+\+Resume (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+usb\+\_\+device\+\_\+handle}}]{handle}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__dci__kinetis_8c_a550820e6460451120484b3feaf5c773d}{}\label{usb__dci__kinetis_8c_a550820e6460451120484b3feaf5c773d}
+
+
+Definition at line 1369 of file usb\+\_\+dci\+\_\+kinetis.\+c.
+
+\index{usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}!U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Cancel\+\_\+\+Transfer@{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Cancel\+\_\+\+Transfer}}
+\index{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Cancel\+\_\+\+Transfer@{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Cancel\+\_\+\+Transfer}!usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Cancel\+\_\+\+Transfer(\+\_\+usb\+\_\+device\+\_\+handle handle, uint\+\_\+8 endpoint\+\_\+number, uint\+\_\+8 direction)}{USB_DCI_Cancel_Transfer(_usb_device_handle handle, uint_8 endpoint_number, uint_8 direction)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint\+\_\+8} U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Cancel\+\_\+\+Transfer (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+usb\+\_\+device\+\_\+handle}}]{handle, }
+\item[{{\bf uint\+\_\+8}}]{endpoint\+\_\+number, }
+\item[{{\bf uint\+\_\+8}}]{direction}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__dci__kinetis_8c_a45fc4c25425a747ee029c155b6738dda}{}\label{usb__dci__kinetis_8c_a45fc4c25425a747ee029c155b6738dda}
+
+
+Definition at line 723 of file usb\+\_\+dci\+\_\+kinetis.\+c.
+
+\index{usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}!U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+De\+Init@{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+De\+Init}}
+\index{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+De\+Init@{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+De\+Init}!usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+De\+Init(void)}{USB_DCI_DeInit(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint\+\_\+8} U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+De\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__dci__kinetis_8c_aed836ee155ee453116108bc30944137c}{}\label{usb__dci__kinetis_8c_aed836ee155ee453116108bc30944137c}
+
+
+Definition at line 528 of file usb\+\_\+dci\+\_\+kinetis.\+c.
+
+\index{usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}!U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Deinit\+\_\+\+End\+Point@{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Deinit\+\_\+\+End\+Point}}
+\index{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Deinit\+\_\+\+End\+Point@{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Deinit\+\_\+\+End\+Point}!usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Deinit\+\_\+\+End\+Point(uint\+\_\+8 controller\+\_\+\+I\+D, uint\+\_\+8 ep\+\_\+num, uint\+\_\+8 direction)}{USB_DCI_Deinit_EndPoint(uint_8 controller_ID, uint_8 ep_num, uint_8 direction)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint\+\_\+8} U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Deinit\+\_\+\+End\+Point (
+\begin{DoxyParamCaption}
+\item[{{\bf uint\+\_\+8}}]{controller\+\_\+\+ID, }
+\item[{{\bf uint\+\_\+8}}]{ep\+\_\+num, }
+\item[{{\bf uint\+\_\+8}}]{direction}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__dci__kinetis_8c_a7f6371c41a70f089de01c7b2f95854bc}{}\label{usb__dci__kinetis_8c_a7f6371c41a70f089de01c7b2f95854bc}
+
+
+Definition at line 782 of file usb\+\_\+dci\+\_\+kinetis.\+c.
+
+\index{usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}!U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Get\+\_\+\+Setup\+\_\+\+Data@{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Get\+\_\+\+Setup\+\_\+\+Data}}
+\index{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Get\+\_\+\+Setup\+\_\+\+Data@{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Get\+\_\+\+Setup\+\_\+\+Data}!usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Get\+\_\+\+Setup\+\_\+\+Data(\+\_\+usb\+\_\+device\+\_\+handle handle, uint\+\_\+8 endpoint\+\_\+number, uint\+\_\+8\+\_\+ptr buffer\+\_\+ptr)}{USB_DCI_Get_Setup_Data(_usb_device_handle handle, uint_8 endpoint_number, uint_8_ptr buffer_ptr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Get\+\_\+\+Setup\+\_\+\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+usb\+\_\+device\+\_\+handle}}]{handle, }
+\item[{{\bf uint\+\_\+8}}]{endpoint\+\_\+number, }
+\item[{{\bf uint\+\_\+8\+\_\+ptr}}]{buffer\+\_\+ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__dci__kinetis_8c_adf57e14bb634e193fe8b557a8e8913dd}{}\label{usb__dci__kinetis_8c_adf57e14bb634e193fe8b557a8e8913dd}
+
+
+Definition at line 979 of file usb\+\_\+dci\+\_\+kinetis.\+c.
+
+\index{usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}!U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Get\+\_\+\+Transfer\+\_\+\+Status@{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Get\+\_\+\+Transfer\+\_\+\+Status}}
+\index{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Get\+\_\+\+Transfer\+\_\+\+Status@{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Get\+\_\+\+Transfer\+\_\+\+Status}!usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Get\+\_\+\+Transfer\+\_\+\+Status(\+\_\+usb\+\_\+device\+\_\+handle handle, uint\+\_\+8 endpoint\+\_\+number, uint\+\_\+8 direction)}{USB_DCI_Get_Transfer_Status(_usb_device_handle handle, uint_8 endpoint_number, uint_8 direction)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint\+\_\+8} U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Get\+\_\+\+Transfer\+\_\+\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+usb\+\_\+device\+\_\+handle}}]{handle, }
+\item[{{\bf uint\+\_\+8}}]{endpoint\+\_\+number, }
+\item[{{\bf uint\+\_\+8}}]{direction}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__dci__kinetis_8c_ad65efbe4bb5b3f8671b4592a2471864c}{}\label{usb__dci__kinetis_8c_ad65efbe4bb5b3f8671b4592a2471864c}
+
+
+Definition at line 1028 of file usb\+\_\+dci\+\_\+kinetis.\+c.
+
+\index{usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}!U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Init@{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Init}}
+\index{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Init@{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Init}!usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Init(uint\+\_\+8 controller\+\_\+\+I\+D, uint\+\_\+8 b\+Vreg\+En)}{USB_DCI_Init(uint_8 controller_ID, uint_8 bVregEn)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint\+\_\+8} U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf uint\+\_\+8}}]{controller\+\_\+\+ID, }
+\item[{{\bf uint\+\_\+8}}]{b\+Vreg\+En}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__dci__kinetis_8c_a80e459d3bc0fd491eff7c8bb34b1c24b}{}\label{usb__dci__kinetis_8c_a80e459d3bc0fd491eff7c8bb34b1c24b}
+
+
+Definition at line 408 of file usb\+\_\+dci\+\_\+kinetis.\+c.
+
+\index{usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}!U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Init\+\_\+\+End\+Point@{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Init\+\_\+\+End\+Point}}
+\index{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Init\+\_\+\+End\+Point@{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Init\+\_\+\+End\+Point}!usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Init\+\_\+\+End\+Point(uint\+\_\+8 controller\+\_\+\+I\+D, U\+S\+B\+\_\+\+E\+P\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+P\+T\+R ep\+\_\+ptr, boolean flag)}{USB_DCI_Init_EndPoint(uint_8 controller_ID, USB_EP_STRUCT_PTR ep_ptr, boolean flag)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint\+\_\+8} U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Init\+\_\+\+End\+Point (
+\begin{DoxyParamCaption}
+\item[{{\bf uint\+\_\+8}}]{controller\+\_\+\+ID, }
+\item[{{\bf U\+S\+B\+\_\+\+E\+P\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+P\+TR}}]{ep\+\_\+ptr, }
+\item[{{\bf boolean}}]{flag}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__dci__kinetis_8c_ae155620ed2b3475c8aa56f2a94c3ad38}{}\label{usb__dci__kinetis_8c_ae155620ed2b3475c8aa56f2a94c3ad38}
+
+
+Definition at line 578 of file usb\+\_\+dci\+\_\+kinetis.\+c.
+
+\index{usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}!U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Recv\+\_\+\+Data@{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Recv\+\_\+\+Data}}
+\index{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Recv\+\_\+\+Data@{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Recv\+\_\+\+Data}!usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Recv\+\_\+\+Data(\+\_\+usb\+\_\+device\+\_\+handle handle, uint\+\_\+8 endpoint\+\_\+number, uchar\+\_\+ptr buffer\+\_\+ptr, uint\+\_\+32 size)}{USB_DCI_Recv_Data(_usb_device_handle handle, uint_8 endpoint_number, uchar_ptr buffer_ptr, uint_32 size)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint\+\_\+8} U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Recv\+\_\+\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+usb\+\_\+device\+\_\+handle}}]{handle, }
+\item[{{\bf uint\+\_\+8}}]{endpoint\+\_\+number, }
+\item[{{\bf uchar\+\_\+ptr}}]{buffer\+\_\+ptr, }
+\item[{{\bf uint\+\_\+32}}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__dci__kinetis_8c_ad8433f72413b75d8a49b13bfbd17820a}{}\label{usb__dci__kinetis_8c_ad8433f72413b75d8a49b13bfbd17820a}
+
+
+Definition at line 1089 of file usb\+\_\+dci\+\_\+kinetis.\+c.
+
+\index{usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}!U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Send\+\_\+\+Data@{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Send\+\_\+\+Data}}
+\index{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Send\+\_\+\+Data@{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Send\+\_\+\+Data}!usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Send\+\_\+\+Data(\+\_\+usb\+\_\+device\+\_\+handle handle, uint\+\_\+8 endpoint\+\_\+number, uchar\+\_\+ptr buffer\+\_\+ptr, uint\+\_\+32 size)}{USB_DCI_Send_Data(_usb_device_handle handle, uint_8 endpoint_number, uchar_ptr buffer_ptr, uint_32 size)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint\+\_\+8} U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Send\+\_\+\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+usb\+\_\+device\+\_\+handle}}]{handle, }
+\item[{{\bf uint\+\_\+8}}]{endpoint\+\_\+number, }
+\item[{{\bf uchar\+\_\+ptr}}]{buffer\+\_\+ptr, }
+\item[{{\bf uint\+\_\+32}}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__dci__kinetis_8c_a35b23a99ac1f556683e6317909bcc876}{}\label{usb__dci__kinetis_8c_a35b23a99ac1f556683e6317909bcc876}
+
+
+Definition at line 1200 of file usb\+\_\+dci\+\_\+kinetis.\+c.
+
+\index{usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}!U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Set\+\_\+\+Address@{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Set\+\_\+\+Address}}
+\index{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Set\+\_\+\+Address@{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Set\+\_\+\+Address}!usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Set\+\_\+\+Address(\+\_\+usb\+\_\+device\+\_\+handle handle, uint\+\_\+8 address)}{USB_DCI_Set_Address(_usb_device_handle handle, uint_8 address)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Set\+\_\+\+Address (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+usb\+\_\+device\+\_\+handle}}]{handle, }
+\item[{{\bf uint\+\_\+8}}]{address}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__dci__kinetis_8c_a3040586883d9620ba74ceef2a61f2a1a}{}\label{usb__dci__kinetis_8c_a3040586883d9620ba74ceef2a61f2a1a}
+
+
+Definition at line 1299 of file usb\+\_\+dci\+\_\+kinetis.\+c.
+
+\index{usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}!U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Shutdown@{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Shutdown}}
+\index{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Shutdown@{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Shutdown}!usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Shutdown(\+\_\+usb\+\_\+device\+\_\+handle handle)}{USB_DCI_Shutdown(_usb_device_handle handle)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Shutdown (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+usb\+\_\+device\+\_\+handle}}]{handle}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__dci__kinetis_8c_a566ecd8d6c48fd933d351bf21f693264}{}\label{usb__dci__kinetis_8c_a566ecd8d6c48fd933d351bf21f693264}
+
+
+Definition at line 1332 of file usb\+\_\+dci\+\_\+kinetis.\+c.
+
+\index{usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}!U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Stall\+\_\+\+End\+Point@{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Stall\+\_\+\+End\+Point}}
+\index{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Stall\+\_\+\+End\+Point@{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Stall\+\_\+\+End\+Point}!usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Stall\+\_\+\+End\+Point(\+\_\+usb\+\_\+device\+\_\+handle handle, uint\+\_\+8 endpoint\+\_\+number, uint\+\_\+8 direction)}{USB_DCI_Stall_EndPoint(_usb_device_handle handle, uint_8 endpoint_number, uint_8 direction)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Stall\+\_\+\+End\+Point (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+usb\+\_\+device\+\_\+handle}}]{handle, }
+\item[{{\bf uint\+\_\+8}}]{endpoint\+\_\+number, }
+\item[{{\bf uint\+\_\+8}}]{direction}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__dci__kinetis_8c_ae5154e2226afdb827c5e618e3d9b7af8}{}\label{usb__dci__kinetis_8c_ae5154e2226afdb827c5e618e3d9b7af8}
+
+
+Definition at line 846 of file usb\+\_\+dci\+\_\+kinetis.\+c.
+
+\index{usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}!U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Unstall\+\_\+\+End\+Point@{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Unstall\+\_\+\+End\+Point}}
+\index{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Unstall\+\_\+\+End\+Point@{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Unstall\+\_\+\+End\+Point}!usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Unstall\+\_\+\+End\+Point(\+\_\+usb\+\_\+device\+\_\+handle handle, uint\+\_\+8 endpoint\+\_\+number, uint\+\_\+8 direction)}{USB_DCI_Unstall_EndPoint(_usb_device_handle handle, uint_8 endpoint_number, uint_8 direction)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+S\+B\+\_\+\+D\+C\+I\+\_\+\+Unstall\+\_\+\+End\+Point (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+usb\+\_\+device\+\_\+handle}}]{handle, }
+\item[{{\bf uint\+\_\+8}}]{endpoint\+\_\+number, }
+\item[{{\bf uint\+\_\+8}}]{direction}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__dci__kinetis_8c_aec8e42a95259a755bc1e88efd404acd3}{}\label{usb__dci__kinetis_8c_aec8e42a95259a755bc1e88efd404acd3}
+
+
+Definition at line 897 of file usb\+\_\+dci\+\_\+kinetis.\+c.
+
+\index{usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}!U\+S\+B\+\_\+\+I\+SR@{U\+S\+B\+\_\+\+I\+SR}}
+\index{U\+S\+B\+\_\+\+I\+SR@{U\+S\+B\+\_\+\+I\+SR}!usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+I\+S\+R(void)}{USB_ISR(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+S\+B\+\_\+\+I\+SR (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__dci__kinetis_8c_a469228db45737ae217f8a24549b6916c}{}\label{usb__dci__kinetis_8c_a469228db45737ae217f8a24549b6916c}
+
+
+Definition at line 1733 of file usb\+\_\+dci\+\_\+kinetis.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}!g\+\_\+bdtmap@{g\+\_\+bdtmap}}
+\index{g\+\_\+bdtmap@{g\+\_\+bdtmap}!usb\+\_\+dci\+\_\+kinetis.\+c@{usb\+\_\+dci\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{g\+\_\+bdtmap}{g_bdtmap}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+D\+T\+M\+AP}$\ast$ g\+\_\+bdtmap = {\bf N\+U\+LL}}\hypertarget{usb__dci__kinetis_8c_a419c1a7e6803f3c6f6631c7c8abf9e49}{}\label{usb__dci__kinetis_8c_a419c1a7e6803f3c6f6631c7c8abf9e49}
+
+
+Definition at line 71 of file usb\+\_\+dci\+\_\+kinetis.\+c.
+

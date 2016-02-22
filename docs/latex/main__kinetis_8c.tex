@@ -1,0 +1,297 @@
+\hypertarget{main__kinetis_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bootloader/k20/main\+\_\+kinetis.c File Reference}
+\label{main__kinetis_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bootloader/k20/main\+\_\+kinetis.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bootloader/k20/main\+\_\+kinetis.\+c}}
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}derivative.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}user\+\_\+config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Real\+Timer\+Counter.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Wdt\+\_\+kinetis.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}hidef.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{main__kinetis_8c_a6eddb99f4c07e384171fec7241f0a061}{B\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+RC}~(8000000ul)
+\item 
+\#define \hyperlink{main__kinetis_8c_af4d69a25c574d7ca426854c56b947269}{B\+S\+P\+\_\+\+R\+E\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+RC}~(2000000ul)
+\item 
+\#define \hyperlink{main__kinetis_8c_abdc4e89a87d5d77c791883d9c9766cab}{B\+S\+P\+\_\+\+C\+O\+R\+E\+\_\+\+D\+IV}~(1)
+\item 
+\#define \hyperlink{main__kinetis_8c_a7ab533c3fe9edf5e463bed405a26f9db}{B\+S\+P\+\_\+\+B\+U\+S\+\_\+\+D\+IV}~(1)
+\item 
+\#define \hyperlink{main__kinetis_8c_a42ed693b0994e84dd71d6c9435f5556e}{B\+S\+P\+\_\+\+F\+L\+E\+X\+B\+U\+S\+\_\+\+D\+IV}~(1)
+\item 
+\#define \hyperlink{main__kinetis_8c_ab3db3f8aa24339b344194c14b3b80148}{B\+S\+P\+\_\+\+F\+L\+A\+S\+H\+\_\+\+D\+IV}~(2)
+\item 
+\#define \hyperlink{main__kinetis_8c_ada431bffbc5438568bc55ae4d8da896d}{B\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+M\+UL}~(24)
+\item 
+\#define \hyperlink{main__kinetis_8c_a1639f101912b16544961663763fcb1fb}{B\+S\+P\+\_\+\+R\+E\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+IV}~(\hyperlink{main__kinetis_8c_a6eddb99f4c07e384171fec7241f0a061}{B\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+RC} / \hyperlink{main__kinetis_8c_af4d69a25c574d7ca426854c56b947269}{B\+S\+P\+\_\+\+R\+E\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+RC})
+\item 
+\#define \hyperlink{main__kinetis_8c_a5a80c05b0f3a0b0d1952e670dc4a70b7}{B\+S\+P\+\_\+\+C\+L\+O\+CK}~(\hyperlink{main__kinetis_8c_af4d69a25c574d7ca426854c56b947269}{B\+S\+P\+\_\+\+R\+E\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+RC} $\ast$ \hyperlink{main__kinetis_8c_ada431bffbc5438568bc55ae4d8da896d}{B\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+M\+UL})
+\item 
+\#define \hyperlink{main__kinetis_8c_ae5c40690b2908744bfd6c09fa85f3559}{B\+S\+P\+\_\+\+C\+O\+R\+E\+\_\+\+C\+L\+O\+CK}~(\hyperlink{main__kinetis_8c_a5a80c05b0f3a0b0d1952e670dc4a70b7}{B\+S\+P\+\_\+\+C\+L\+O\+CK} / \hyperlink{main__kinetis_8c_abdc4e89a87d5d77c791883d9c9766cab}{B\+S\+P\+\_\+\+C\+O\+R\+E\+\_\+\+D\+IV})
+\item 
+\#define \hyperlink{main__kinetis_8c_afe0536bbb26c3c7c94c89835973c6cb6}{B\+S\+P\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+CK}~(\hyperlink{main__kinetis_8c_ae5c40690b2908744bfd6c09fa85f3559}{B\+S\+P\+\_\+\+C\+O\+R\+E\+\_\+\+C\+L\+O\+CK})
+\item 
+\#define \hyperlink{main__kinetis_8c_aaf6b20d3f8eca1cc5f0c9808ad75b949}{B\+S\+P\+\_\+\+B\+U\+S\+\_\+\+C\+L\+O\+CK}~(\hyperlink{main__kinetis_8c_a5a80c05b0f3a0b0d1952e670dc4a70b7}{B\+S\+P\+\_\+\+C\+L\+O\+CK} / \hyperlink{main__kinetis_8c_a7ab533c3fe9edf5e463bed405a26f9db}{B\+S\+P\+\_\+\+B\+U\+S\+\_\+\+D\+IV})
+\item 
+\#define \hyperlink{main__kinetis_8c_a4d2ff974db019f793dba6166853b7b5e}{B\+S\+P\+\_\+\+F\+L\+E\+X\+B\+U\+S\+\_\+\+C\+L\+O\+CK}~(\hyperlink{main__kinetis_8c_a5a80c05b0f3a0b0d1952e670dc4a70b7}{B\+S\+P\+\_\+\+C\+L\+O\+CK} / \hyperlink{main__kinetis_8c_a42ed693b0994e84dd71d6c9435f5556e}{B\+S\+P\+\_\+\+F\+L\+E\+X\+B\+U\+S\+\_\+\+D\+IV})
+\item 
+\#define \hyperlink{main__kinetis_8c_aed466ef59bff3eb3cfe6c82b1f8f84a1}{B\+S\+P\+\_\+\+F\+L\+A\+S\+H\+\_\+\+C\+L\+O\+CK}~(\hyperlink{main__kinetis_8c_a5a80c05b0f3a0b0d1952e670dc4a70b7}{B\+S\+P\+\_\+\+C\+L\+O\+CK} / \hyperlink{main__kinetis_8c_ab3db3f8aa24339b344194c14b3b80148}{B\+S\+P\+\_\+\+F\+L\+A\+S\+H\+\_\+\+D\+IV})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{main__kinetis_8c_a076dd416993af0e3c52876f1eb6b3e5b}{Test\+App\+\_\+\+Init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Main File Based on Freescale demo for k60 bootloader. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{main__kinetis_8c_a9fe3484925f03a6112174649a531553d}{Test\+App\+\_\+\+Task} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{main__kinetis_8c_a825a38d3f87d03f011520ff66261fe74}{G\+P\+I\+O\+\_\+\+Init} ()
+\begin{DoxyCompactList}\small\item\em Low level led macros. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{main__kinetis_8c_a6288eba0f8e8ad3ab1544ad731eb7667}{main} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{main__kinetis_8c_a2793f9afdd161306029c482f916c8d75}{display\+\_\+led} (\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} val)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{main__kinetis_8c_a4450d939c082542d3f7b38ddcbf0b5c5}{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TA} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{main__kinetis_8c_a068d5e700ef73e922fb0cd43140906dd}{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TC} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{main__kinetis_8c_a08c5546bb677dbdce3230790ad6f9160}{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TD} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{main__kinetis_8c_aede730bee2273aaeeb58c66274d0fc7e}{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TE} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile \hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} \hyperlink{main__kinetis_8c_affc08593dcc0f775aac8084fc4adf836}{kbi\+\_\+stat}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}!B\+S\+P\+\_\+\+B\+U\+S\+\_\+\+C\+L\+O\+CK@{B\+S\+P\+\_\+\+B\+U\+S\+\_\+\+C\+L\+O\+CK}}
+\index{B\+S\+P\+\_\+\+B\+U\+S\+\_\+\+C\+L\+O\+CK@{B\+S\+P\+\_\+\+B\+U\+S\+\_\+\+C\+L\+O\+CK}!main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+B\+U\+S\+\_\+\+C\+L\+O\+CK}{BSP_BUS_CLOCK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+B\+U\+S\+\_\+\+C\+L\+O\+CK~({\bf B\+S\+P\+\_\+\+C\+L\+O\+CK} / {\bf B\+S\+P\+\_\+\+B\+U\+S\+\_\+\+D\+IV})}\hypertarget{main__kinetis_8c_aaf6b20d3f8eca1cc5f0c9808ad75b949}{}\label{main__kinetis_8c_aaf6b20d3f8eca1cc5f0c9808ad75b949}
+
+
+Definition at line 59 of file main\+\_\+kinetis.\+c.
+
+\index{main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}!B\+S\+P\+\_\+\+B\+U\+S\+\_\+\+D\+IV@{B\+S\+P\+\_\+\+B\+U\+S\+\_\+\+D\+IV}}
+\index{B\+S\+P\+\_\+\+B\+U\+S\+\_\+\+D\+IV@{B\+S\+P\+\_\+\+B\+U\+S\+\_\+\+D\+IV}!main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+B\+U\+S\+\_\+\+D\+IV}{BSP_BUS_DIV}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+B\+U\+S\+\_\+\+D\+IV~(1)}\hypertarget{main__kinetis_8c_a7ab533c3fe9edf5e463bed405a26f9db}{}\label{main__kinetis_8c_a7ab533c3fe9edf5e463bed405a26f9db}
+
+
+Definition at line 46 of file main\+\_\+kinetis.\+c.
+
+\index{main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}!B\+S\+P\+\_\+\+C\+L\+O\+CK@{B\+S\+P\+\_\+\+C\+L\+O\+CK}}
+\index{B\+S\+P\+\_\+\+C\+L\+O\+CK@{B\+S\+P\+\_\+\+C\+L\+O\+CK}!main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+C\+L\+O\+CK}{BSP_CLOCK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+C\+L\+O\+CK~({\bf B\+S\+P\+\_\+\+R\+E\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+RC} $\ast$ {\bf B\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+M\+UL})}\hypertarget{main__kinetis_8c_a5a80c05b0f3a0b0d1952e670dc4a70b7}{}\label{main__kinetis_8c_a5a80c05b0f3a0b0d1952e670dc4a70b7}
+
+
+Definition at line 56 of file main\+\_\+kinetis.\+c.
+
+\index{main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}!B\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+M\+UL@{B\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+M\+UL}}
+\index{B\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+M\+UL@{B\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+M\+UL}!main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+M\+UL}{BSP_CLOCK_MUL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+M\+UL~(24)}\hypertarget{main__kinetis_8c_ada431bffbc5438568bc55ae4d8da896d}{}\label{main__kinetis_8c_ada431bffbc5438568bc55ae4d8da896d}
+
+
+Definition at line 51 of file main\+\_\+kinetis.\+c.
+
+\index{main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}!B\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+RC@{B\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+RC}}
+\index{B\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+RC@{B\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+RC}!main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+RC}{BSP_CLOCK_SRC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+RC~(8000000ul)}\hypertarget{main__kinetis_8c_a6eddb99f4c07e384171fec7241f0a061}{}\label{main__kinetis_8c_a6eddb99f4c07e384171fec7241f0a061}
+
+
+Definition at line 32 of file main\+\_\+kinetis.\+c.
+
+\index{main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}!B\+S\+P\+\_\+\+C\+O\+R\+E\+\_\+\+C\+L\+O\+CK@{B\+S\+P\+\_\+\+C\+O\+R\+E\+\_\+\+C\+L\+O\+CK}}
+\index{B\+S\+P\+\_\+\+C\+O\+R\+E\+\_\+\+C\+L\+O\+CK@{B\+S\+P\+\_\+\+C\+O\+R\+E\+\_\+\+C\+L\+O\+CK}!main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+C\+O\+R\+E\+\_\+\+C\+L\+O\+CK}{BSP_CORE_CLOCK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+C\+O\+R\+E\+\_\+\+C\+L\+O\+CK~({\bf B\+S\+P\+\_\+\+C\+L\+O\+CK} / {\bf B\+S\+P\+\_\+\+C\+O\+R\+E\+\_\+\+D\+IV})}\hypertarget{main__kinetis_8c_ae5c40690b2908744bfd6c09fa85f3559}{}\label{main__kinetis_8c_ae5c40690b2908744bfd6c09fa85f3559}
+
+
+Definition at line 57 of file main\+\_\+kinetis.\+c.
+
+\index{main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}!B\+S\+P\+\_\+\+C\+O\+R\+E\+\_\+\+D\+IV@{B\+S\+P\+\_\+\+C\+O\+R\+E\+\_\+\+D\+IV}}
+\index{B\+S\+P\+\_\+\+C\+O\+R\+E\+\_\+\+D\+IV@{B\+S\+P\+\_\+\+C\+O\+R\+E\+\_\+\+D\+IV}!main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+C\+O\+R\+E\+\_\+\+D\+IV}{BSP_CORE_DIV}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+C\+O\+R\+E\+\_\+\+D\+IV~(1)}\hypertarget{main__kinetis_8c_abdc4e89a87d5d77c791883d9c9766cab}{}\label{main__kinetis_8c_abdc4e89a87d5d77c791883d9c9766cab}
+
+
+Definition at line 45 of file main\+\_\+kinetis.\+c.
+
+\index{main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}!B\+S\+P\+\_\+\+F\+L\+A\+S\+H\+\_\+\+C\+L\+O\+CK@{B\+S\+P\+\_\+\+F\+L\+A\+S\+H\+\_\+\+C\+L\+O\+CK}}
+\index{B\+S\+P\+\_\+\+F\+L\+A\+S\+H\+\_\+\+C\+L\+O\+CK@{B\+S\+P\+\_\+\+F\+L\+A\+S\+H\+\_\+\+C\+L\+O\+CK}!main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+F\+L\+A\+S\+H\+\_\+\+C\+L\+O\+CK}{BSP_FLASH_CLOCK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+F\+L\+A\+S\+H\+\_\+\+C\+L\+O\+CK~({\bf B\+S\+P\+\_\+\+C\+L\+O\+CK} / {\bf B\+S\+P\+\_\+\+F\+L\+A\+S\+H\+\_\+\+D\+IV})}\hypertarget{main__kinetis_8c_aed466ef59bff3eb3cfe6c82b1f8f84a1}{}\label{main__kinetis_8c_aed466ef59bff3eb3cfe6c82b1f8f84a1}
+
+
+Definition at line 61 of file main\+\_\+kinetis.\+c.
+
+\index{main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}!B\+S\+P\+\_\+\+F\+L\+A\+S\+H\+\_\+\+D\+IV@{B\+S\+P\+\_\+\+F\+L\+A\+S\+H\+\_\+\+D\+IV}}
+\index{B\+S\+P\+\_\+\+F\+L\+A\+S\+H\+\_\+\+D\+IV@{B\+S\+P\+\_\+\+F\+L\+A\+S\+H\+\_\+\+D\+IV}!main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+F\+L\+A\+S\+H\+\_\+\+D\+IV}{BSP_FLASH_DIV}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+F\+L\+A\+S\+H\+\_\+\+D\+IV~(2)}\hypertarget{main__kinetis_8c_ab3db3f8aa24339b344194c14b3b80148}{}\label{main__kinetis_8c_ab3db3f8aa24339b344194c14b3b80148}
+
+
+Definition at line 48 of file main\+\_\+kinetis.\+c.
+
+\index{main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}!B\+S\+P\+\_\+\+F\+L\+E\+X\+B\+U\+S\+\_\+\+C\+L\+O\+CK@{B\+S\+P\+\_\+\+F\+L\+E\+X\+B\+U\+S\+\_\+\+C\+L\+O\+CK}}
+\index{B\+S\+P\+\_\+\+F\+L\+E\+X\+B\+U\+S\+\_\+\+C\+L\+O\+CK@{B\+S\+P\+\_\+\+F\+L\+E\+X\+B\+U\+S\+\_\+\+C\+L\+O\+CK}!main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+F\+L\+E\+X\+B\+U\+S\+\_\+\+C\+L\+O\+CK}{BSP_FLEXBUS_CLOCK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+F\+L\+E\+X\+B\+U\+S\+\_\+\+C\+L\+O\+CK~({\bf B\+S\+P\+\_\+\+C\+L\+O\+CK} / {\bf B\+S\+P\+\_\+\+F\+L\+E\+X\+B\+U\+S\+\_\+\+D\+IV})}\hypertarget{main__kinetis_8c_a4d2ff974db019f793dba6166853b7b5e}{}\label{main__kinetis_8c_a4d2ff974db019f793dba6166853b7b5e}
+
+
+Definition at line 60 of file main\+\_\+kinetis.\+c.
+
+\index{main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}!B\+S\+P\+\_\+\+F\+L\+E\+X\+B\+U\+S\+\_\+\+D\+IV@{B\+S\+P\+\_\+\+F\+L\+E\+X\+B\+U\+S\+\_\+\+D\+IV}}
+\index{B\+S\+P\+\_\+\+F\+L\+E\+X\+B\+U\+S\+\_\+\+D\+IV@{B\+S\+P\+\_\+\+F\+L\+E\+X\+B\+U\+S\+\_\+\+D\+IV}!main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+F\+L\+E\+X\+B\+U\+S\+\_\+\+D\+IV}{BSP_FLEXBUS_DIV}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+F\+L\+E\+X\+B\+U\+S\+\_\+\+D\+IV~(1)}\hypertarget{main__kinetis_8c_a42ed693b0994e84dd71d6c9435f5556e}{}\label{main__kinetis_8c_a42ed693b0994e84dd71d6c9435f5556e}
+
+
+Definition at line 47 of file main\+\_\+kinetis.\+c.
+
+\index{main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}!B\+S\+P\+\_\+\+R\+E\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+IV@{B\+S\+P\+\_\+\+R\+E\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+IV}}
+\index{B\+S\+P\+\_\+\+R\+E\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+IV@{B\+S\+P\+\_\+\+R\+E\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+IV}!main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+R\+E\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+IV}{BSP_REF_CLOCK_DIV}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+R\+E\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+IV~({\bf B\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+RC} / {\bf B\+S\+P\+\_\+\+R\+E\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+RC})}\hypertarget{main__kinetis_8c_a1639f101912b16544961663763fcb1fb}{}\label{main__kinetis_8c_a1639f101912b16544961663763fcb1fb}
+
+
+Definition at line 54 of file main\+\_\+kinetis.\+c.
+
+\index{main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}!B\+S\+P\+\_\+\+R\+E\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+RC@{B\+S\+P\+\_\+\+R\+E\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+RC}}
+\index{B\+S\+P\+\_\+\+R\+E\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+RC@{B\+S\+P\+\_\+\+R\+E\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+RC}!main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+R\+E\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+RC}{BSP_REF_CLOCK_SRC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+R\+E\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+RC~(2000000ul)}\hypertarget{main__kinetis_8c_af4d69a25c574d7ca426854c56b947269}{}\label{main__kinetis_8c_af4d69a25c574d7ca426854c56b947269}
+
+
+Definition at line 34 of file main\+\_\+kinetis.\+c.
+
+\index{main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}!B\+S\+P\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+CK@{B\+S\+P\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+CK}}
+\index{B\+S\+P\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+CK@{B\+S\+P\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+CK}!main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+CK}{BSP_SYSTEM_CLOCK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+CK~({\bf B\+S\+P\+\_\+\+C\+O\+R\+E\+\_\+\+C\+L\+O\+CK})}\hypertarget{main__kinetis_8c_afe0536bbb26c3c7c94c89835973c6cb6}{}\label{main__kinetis_8c_afe0536bbb26c3c7c94c89835973c6cb6}
+
+
+Definition at line 58 of file main\+\_\+kinetis.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}!display\+\_\+led@{display\+\_\+led}}
+\index{display\+\_\+led@{display\+\_\+led}!main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{display\+\_\+led(uint\+\_\+8 val)}{display_led(uint_8 val)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} display\+\_\+led (
+\begin{DoxyParamCaption}
+\item[{{\bf uint\+\_\+8}}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{main__kinetis_8c_a2793f9afdd161306029c482f916c8d75}{}\label{main__kinetis_8c_a2793f9afdd161306029c482f916c8d75}
+
+
+Definition at line 556 of file main\+\_\+kinetis.\+c.
+
+\index{main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}!G\+P\+I\+O\+\_\+\+Init@{G\+P\+I\+O\+\_\+\+Init}}
+\index{G\+P\+I\+O\+\_\+\+Init@{G\+P\+I\+O\+\_\+\+Init}!main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{G\+P\+I\+O\+\_\+\+Init()}{GPIO_Init()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} G\+P\+I\+O\+\_\+\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{main__kinetis_8c_a825a38d3f87d03f011520ff66261fe74}{}\label{main__kinetis_8c_a825a38d3f87d03f011520ff66261fe74}
+
+
+Low level led macros. 
+
+\begin{DoxyAuthor}{Author}
+Xavi Vilajosana \href{mailto:xvilajosana@eecs.berkeley.edu}{\tt xvilajosana@eecs.\+berkeley.\+edu}, May 2012. 
+\end{DoxyAuthor}
+
+
+Definition at line 345 of file main\+\_\+kinetis.\+c.
+
+\index{main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}!I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TA@{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TA}}
+\index{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TA@{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TA}!main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+T\+A(void)}{IRQ_ISR_PORTA(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TA (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{main__kinetis_8c_a4450d939c082542d3f7b38ddcbf0b5c5}{}\label{main__kinetis_8c_a4450d939c082542d3f7b38ddcbf0b5c5}
+
+
+Definition at line 819 of file main\+\_\+kinetis.\+c.
+
+\index{main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}!I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TC@{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TC}}
+\index{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TC@{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TC}!main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+T\+C(void)}{IRQ_ISR_PORTC(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TC (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{main__kinetis_8c_a068d5e700ef73e922fb0cd43140906dd}{}\label{main__kinetis_8c_a068d5e700ef73e922fb0cd43140906dd}
+
+
+Definition at line 851 of file main\+\_\+kinetis.\+c.
+
+\index{main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}!I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TD@{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TD}}
+\index{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TD@{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TD}!main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+T\+D(void)}{IRQ_ISR_PORTD(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TD (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{main__kinetis_8c_a08c5546bb677dbdce3230790ad6f9160}{}\label{main__kinetis_8c_a08c5546bb677dbdce3230790ad6f9160}
+
+
+Definition at line 912 of file main\+\_\+kinetis.\+c.
+
+\index{main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}!I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TE@{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TE}}
+\index{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TE@{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TE}!main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+T\+E(void)}{IRQ_ISR_PORTE(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I\+R\+Q\+\_\+\+I\+S\+R\+\_\+\+P\+O\+R\+TE (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{main__kinetis_8c_aede730bee2273aaeeb58c66274d0fc7e}{}\label{main__kinetis_8c_aede730bee2273aaeeb58c66274d0fc7e}
+
+
+Definition at line 942 of file main\+\_\+kinetis.\+c.
+
+\index{main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}!main@{main}}
+\index{main@{main}!main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{main(void)}{main(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} main (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{main__kinetis_8c_a6288eba0f8e8ad3ab1544ad731eb7667}{}\label{main__kinetis_8c_a6288eba0f8e8ad3ab1544ad731eb7667}
+
+
+Definition at line 223 of file main\+\_\+kinetis.\+c.
+
+\index{main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}!Test\+App\+\_\+\+Init@{Test\+App\+\_\+\+Init}}
+\index{Test\+App\+\_\+\+Init@{Test\+App\+\_\+\+Init}!main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{Test\+App\+\_\+\+Init(void)}{TestApp_Init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Test\+App\+\_\+\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{main__kinetis_8c_a076dd416993af0e3c52876f1eb6b3e5b}{}\label{main__kinetis_8c_a076dd416993af0e3c52876f1eb6b3e5b}
+
+
+Main File Based on Freescale demo for k60 bootloader. 
+
+\begin{DoxyAuthor}{Author}
+Xavi Vilajosana \href{mailto:xvilajosana@eecs.berkeley.edu}{\tt xvilajosana@eecs.\+berkeley.\+edu}, June 2012.
+\end{DoxyAuthor}
+Main File Based on Freescale demo for k60 bootloader.
+
+\begin{DoxyAuthor}{Author}
+Xavi Vilajosana \href{mailto:xvilajosana@eecs.berkeley.edu}{\tt xvilajosana@eecs.\+berkeley.\+edu}, June 2012. 
+\end{DoxyAuthor}
+
+
+Definition at line 320 of file disk.\+c.
+
+\index{main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}!Test\+App\+\_\+\+Task@{Test\+App\+\_\+\+Task}}
+\index{Test\+App\+\_\+\+Task@{Test\+App\+\_\+\+Task}!main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{Test\+App\+\_\+\+Task(void)}{TestApp_Task(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Test\+App\+\_\+\+Task (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{main__kinetis_8c_a9fe3484925f03a6112174649a531553d}{}\label{main__kinetis_8c_a9fe3484925f03a6112174649a531553d}
+
+
+Definition at line 352 of file disk.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}!kbi\+\_\+stat@{kbi\+\_\+stat}}
+\index{kbi\+\_\+stat@{kbi\+\_\+stat}!main\+\_\+kinetis.\+c@{main\+\_\+kinetis.\+c}}
+\subsubsection[{\texorpdfstring{kbi\+\_\+stat}{kbi_stat}}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf uint\+\_\+8} kbi\+\_\+stat}\hypertarget{main__kinetis_8c_affc08593dcc0f775aac8084fc4adf836}{}\label{main__kinetis_8c_affc08593dcc0f775aac8084fc4adf836}
+
+
+Definition at line 199 of file main\+\_\+kinetis.\+c.
+

@@ -1,0 +1,749 @@
+\hypertarget{group___u_a_r_t___public___functions}{}\section{U\+A\+RT Public Functions}
+\label{group___u_a_r_t___public___functions}\index{U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___u_a_r_t___public___functions_ga38648a309b0eb01e488f593f93fd9e02}{U\+A\+R\+T\+\_\+\+Init} (L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$U\+A\+R\+Tx, \hyperlink{struct_u_a_r_t___c_f_g___type}{U\+A\+R\+T\+\_\+\+C\+F\+G\+\_\+\+Type} $\ast$U\+A\+R\+T\+\_\+\+Config\+Struct)
+\begin{DoxyCompactList}\small\item\em Initializes the U\+A\+R\+Tx peripheral according to the specified parameters in the U\+A\+R\+T\+\_\+\+Config\+Struct. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___u_a_r_t___public___functions_ga3074f639a2a3de38e5d0129c8ba113b4}{U\+A\+R\+T\+\_\+\+De\+Init} (L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$U\+A\+R\+Tx)
+\begin{DoxyCompactList}\small\item\em De-\/initializes the U\+A\+R\+Tx peripheral registers to their default reset values. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___u_a_r_t___public___functions_gab27415db995bfdbcd9984073833053d9}{U\+A\+R\+T\+\_\+\+Config\+Struct\+Init} (\hyperlink{struct_u_a_r_t___c_f_g___type}{U\+A\+R\+T\+\_\+\+C\+F\+G\+\_\+\+Type} $\ast$U\+A\+R\+T\+\_\+\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Fills each U\+A\+R\+T\+\_\+\+Init\+Struct member with its default value\+: \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___u_a_r_t___public___functions_gaed06c5f6548091cba78b88700b82ad62}{U\+A\+R\+T\+\_\+\+Send\+Byte} (L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$U\+A\+R\+Tx, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} Data)
+\begin{DoxyCompactList}\small\item\em Transmit a single data through U\+A\+RT peripheral. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{group___u_a_r_t___public___functions_gafbb690c2811d921f8c733888fdbfef54}{U\+A\+R\+T\+\_\+\+Receive\+Byte} (L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$U\+A\+R\+Tx)
+\begin{DoxyCompactList}\small\item\em Receive a single data from U\+A\+RT peripheral. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group___u_a_r_t___public___functions_gadeb1a6a95247931abb93fa49571ae51c}{U\+A\+R\+T\+\_\+\+Send} (L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$U\+A\+R\+Tx, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$\hyperlink{z1_2i2c_8c_a1516447e451c9d7b7faa91d54fdf0469}{txbuf}, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} buflen, \hyperlink{group___l_p_c___types___public___types_gaddb88bff95842be0c54e0e979f45cf95}{T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+B\+L\+O\+C\+K\+\_\+\+Type} flag)
+\begin{DoxyCompactList}\small\item\em Send a block of data via U\+A\+RT peripheral. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group___u_a_r_t___public___functions_ga83868ce3b59f46e618c4fc4d864895a1}{U\+A\+R\+T\+\_\+\+Receive} (L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$U\+A\+R\+Tx, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$\hyperlink{z1_2i2c_8c_ab49e2360f2f51e957ca2caff26725265}{rxbuf}, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} buflen, \hyperlink{group___l_p_c___types___public___types_gaddb88bff95842be0c54e0e979f45cf95}{T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+B\+L\+O\+C\+K\+\_\+\+Type} flag)
+\begin{DoxyCompactList}\small\item\em Receive a block of data via U\+A\+RT peripheral. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___u_a_r_t___public___functions_ga68161f5403a077379de35494b6b03273}{U\+A\+R\+T\+\_\+\+Force\+Break} (L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$U\+A\+R\+Tx)
+\begin{DoxyCompactList}\small\item\em Force B\+R\+E\+AK character on U\+A\+RT line, output pin U\+A\+R\+Tx T\+XD is forced to logic 0. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___u_a_r_t___public___functions_ga4bad6b6b83a5345ea0d78427a5df5284}{U\+A\+R\+T\+\_\+\+Int\+Config} (L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$U\+A\+R\+Tx, \hyperlink{group___u_a_r_t___public___types_ga7ee4c5ddc0e165158d0d9f1f03e1b66c}{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+Type} U\+A\+R\+T\+Int\+Cfg, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_ac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} New\+State)
+\begin{DoxyCompactList}\small\item\em Enable or disable specified U\+A\+RT interrupt. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{group___u_a_r_t___public___functions_ga089fc39675174ed51294ea96e4417f0d}{U\+A\+R\+T\+\_\+\+Get\+Line\+Status} (L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$U\+A\+R\+Tx)
+\begin{DoxyCompactList}\small\item\em Get current value of Line Status register in U\+A\+RT peripheral. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group___u_a_r_t___public___functions_ga09314371b86b1597b7aafd912cf6222f}{U\+A\+R\+T\+\_\+\+Get\+Int\+Id} (L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$U\+A\+R\+Tx)
+\begin{DoxyCompactList}\small\item\em Get Interrupt Identification value. \end{DoxyCompactList}\item 
+\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a89136caac2e14c55151f527ac02daaff}{Flag\+Status} \hyperlink{group___u_a_r_t___public___functions_ga78570fc7b78e558ab87abacd9bb22f73}{U\+A\+R\+T\+\_\+\+Check\+Busy} (L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$U\+A\+R\+Tx)
+\begin{DoxyCompactList}\small\item\em Check whether if U\+A\+RT is busy or not. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___u_a_r_t___public___functions_ga91f3bb9558513f4a1da4163997bd198b}{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+Config} (L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$U\+A\+R\+Tx, \hyperlink{struct_u_a_r_t___f_i_f_o___c_f_g___type}{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+C\+F\+G\+\_\+\+Type} $\ast$F\+I\+F\+O\+Cfg)
+\begin{DoxyCompactList}\small\item\em Configure F\+I\+FO function on selected U\+A\+RT peripheral. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___u_a_r_t___public___functions_ga84c4e278cf63acef81e359b76d28319a}{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+Config\+Struct\+Init} (\hyperlink{struct_u_a_r_t___f_i_f_o___c_f_g___type}{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+C\+F\+G\+\_\+\+Type} $\ast$U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Fills each U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+Init\+Struct member with its default value\+: \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___u_a_r_t___public___functions_ga51b07c8e7c54845841a97ec9a8d67c3b}{U\+A\+R\+T\+\_\+\+A\+B\+Cmd} (L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$U\+A\+R\+Tx, \hyperlink{struct_u_a_r_t___a_b___c_f_g___type}{U\+A\+R\+T\+\_\+\+A\+B\+\_\+\+C\+F\+G\+\_\+\+Type} $\ast$A\+B\+Config\+Struct, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_ac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} New\+State)
+\begin{DoxyCompactList}\small\item\em Start/\+Stop Auto Baudrate activity. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___u_a_r_t___public___functions_ga0c01f920210878891c8c10cb9620d5d6}{U\+A\+R\+T\+\_\+\+A\+B\+Clear\+Int\+Pending} (L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$U\+A\+R\+Tx, \hyperlink{group___u_a_r_t___public___types_ga85f8df03cce76ca8e9404364a3b68487}{U\+A\+R\+T\+\_\+\+A\+B\+E\+O\+\_\+\+Type} A\+B\+Int\+Type)
+\begin{DoxyCompactList}\small\item\em Clear Autobaud Interrupt Pending. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___u_a_r_t___public___functions_ga3400356ef61d3735d9d10e04e0e95df4}{U\+A\+R\+T\+\_\+\+Tx\+Cmd} (L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$U\+A\+R\+Tx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_ac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} New\+State)
+\begin{DoxyCompactList}\small\item\em Enable/\+Disable transmission on U\+A\+RT TxD pin. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___u_a_r_t___public___functions_ga5a21807b2f967d1ed1de7bd468cbd9ad}{U\+A\+R\+T\+\_\+\+Full\+Modem\+Force\+Pin\+State} (L\+P\+C\+\_\+\+U\+A\+R\+T1\+\_\+\+Type\+Def $\ast$U\+A\+R\+Tx, \hyperlink{group___u_a_r_t___public___types_gabfc7ec239b7d598e6a2cc163e66b76fc}{U\+A\+R\+T\+\_\+\+M\+O\+D\+E\+M\+\_\+\+P\+I\+N\+\_\+\+Type} Pin, \hyperlink{group___u_a_r_t___public___types_gada493f726a4ea247b209b49fb8c85a52}{U\+A\+R\+T1\+\_\+\+Signal\+State} New\+State)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___u_a_r_t___public___functions_gad65d361221a648575a5328ec1a243aa9}{U\+A\+R\+T\+\_\+\+Full\+Modem\+Config\+Mode} (L\+P\+C\+\_\+\+U\+A\+R\+T1\+\_\+\+Type\+Def $\ast$U\+A\+R\+Tx, \hyperlink{group___u_a_r_t___public___types_ga55fc73bec4c58ad15d24b05095c4523a}{U\+A\+R\+T\+\_\+\+M\+O\+D\+E\+M\+\_\+\+M\+O\+D\+E\+\_\+\+Type} Mode, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_ac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} New\+State)
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{group___u_a_r_t___public___functions_gaee50c6ea6e2ccfa7cc6edceee5833d1e}{U\+A\+R\+T\+\_\+\+Full\+Modem\+Get\+Status} (L\+P\+C\+\_\+\+U\+A\+R\+T1\+\_\+\+Type\+Def $\ast$U\+A\+R\+Tx)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___u_a_r_t___public___functions_ga61acf8ebde89ef2b8c05c2d2a9ac9e7c}{U\+A\+R\+T\+\_\+\+R\+S485\+Config} (L\+P\+C\+\_\+\+U\+A\+R\+T1\+\_\+\+Type\+Def $\ast$U\+A\+R\+Tx, \hyperlink{struct_u_a_r_t1___r_s485___c_t_r_l_c_f_g___type}{U\+A\+R\+T1\+\_\+\+R\+S485\+\_\+\+C\+T\+R\+L\+C\+F\+G\+\_\+\+Type} $\ast$R\+S485\+Config\+Struct)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___u_a_r_t___public___functions_ga8c43ccaa9104baab28df1b0afe57a195}{U\+A\+R\+T\+\_\+\+R\+S485\+Receiver\+Cmd} (L\+P\+C\+\_\+\+U\+A\+R\+T1\+\_\+\+Type\+Def $\ast$U\+A\+R\+Tx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_ac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} New\+State)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___u_a_r_t___public___functions_ga51d8e73f086bb57478966b6b699404d8}{U\+A\+R\+T\+\_\+\+R\+S485\+Send\+Slv\+Addr} (L\+P\+C\+\_\+\+U\+A\+R\+T1\+\_\+\+Type\+Def $\ast$U\+A\+R\+Tx, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} Slv\+Addr)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group___u_a_r_t___public___functions_ga97fc6a99efa2983668cf2d18c5ff7536}{U\+A\+R\+T\+\_\+\+R\+S485\+Send\+Data} (L\+P\+C\+\_\+\+U\+A\+R\+T1\+\_\+\+Type\+Def $\ast$U\+A\+R\+Tx, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$p\+Data, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} size)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___u_a_r_t___public___functions_gaf124bd5ad22ea3060cbb388f76fdb3d7}{U\+A\+R\+T\+\_\+\+Ir\+D\+A\+Invt\+Input\+Cmd} (L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$U\+A\+R\+Tx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_ac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} New\+State)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___u_a_r_t___public___functions_ga4c946a4ac4dd32ea5644f78cebaccc85}{U\+A\+R\+T\+\_\+\+Ir\+D\+A\+Cmd} (L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$U\+A\+R\+Tx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_ac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} New\+State)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___u_a_r_t___public___functions_ga066c5b2f961d138fd388be4edff883ad}{U\+A\+R\+T\+\_\+\+Ir\+D\+A\+Pulse\+Div\+Config} (L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$U\+A\+R\+Tx, \hyperlink{group___u_a_r_t___public___types_ga2e41fe7d668367ce455940f7dfde1d92}{U\+A\+R\+T\+\_\+\+Ir\+D\+A\+\_\+\+P\+U\+L\+S\+E\+\_\+\+Type} Pulse\+Div)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}!U\+A\+R\+T\+\_\+\+A\+B\+Clear\+Int\+Pending@{U\+A\+R\+T\+\_\+\+A\+B\+Clear\+Int\+Pending}}
+\index{U\+A\+R\+T\+\_\+\+A\+B\+Clear\+Int\+Pending@{U\+A\+R\+T\+\_\+\+A\+B\+Clear\+Int\+Pending}!U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+A\+B\+Clear\+Int\+Pending(\+L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$\+U\+A\+R\+Tx, U\+A\+R\+T\+\_\+\+A\+B\+E\+O\+\_\+\+Type A\+B\+Int\+Type)}{UART_ABClearIntPending(LPC_UART_TypeDef *UARTx, UART_ABEO_Type ABIntType)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+\_\+\+A\+B\+Clear\+Int\+Pending (
+\begin{DoxyParamCaption}
+\item[{L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$}]{U\+A\+R\+Tx, }
+\item[{{\bf U\+A\+R\+T\+\_\+\+A\+B\+E\+O\+\_\+\+Type}}]{A\+B\+Int\+Type}
+\end{DoxyParamCaption}
+)}\hypertarget{group___u_a_r_t___public___functions_ga0c01f920210878891c8c10cb9620d5d6}{}\label{group___u_a_r_t___public___functions_ga0c01f920210878891c8c10cb9620d5d6}
+
+
+Clear Autobaud Interrupt Pending. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em U\+A\+R\+Tx} & U\+A\+RT peripheral selected, should be
+\begin{DoxyItemize}
+\item L\+P\+C\+\_\+\+U\+A\+R\+T0\+: U\+A\+R\+T0 peripheral
+\begin{DoxyItemize}
+\item L\+P\+C\+\_\+\+U\+A\+R\+T1\+: U\+A\+R\+T1 peripheral
+\item L\+P\+C\+\_\+\+U\+A\+R\+T2\+: U\+A\+R\+T2 peripheral
+\item L\+P\+C\+\_\+\+U\+A\+R\+T3\+: U\+A\+R\+T3 peripheral 
+\end{DoxyItemize}
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em A\+B\+Int\+Type} & type of auto-\/baud interrupt, should be\+:
+\begin{DoxyItemize}
+\item U\+A\+R\+T\+\_\+\+A\+U\+T\+O\+B\+A\+U\+D\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+A\+B\+EO\+: End of Auto-\/baud interrupt
+\item U\+A\+R\+T\+\_\+\+A\+U\+T\+O\+B\+A\+U\+D\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+A\+B\+TO\+: Auto-\/baud time out interrupt 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Definition at line 947 of file lpc17xx\+\_\+uart.\+c.
+
+\index{U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}!U\+A\+R\+T\+\_\+\+A\+B\+Cmd@{U\+A\+R\+T\+\_\+\+A\+B\+Cmd}}
+\index{U\+A\+R\+T\+\_\+\+A\+B\+Cmd@{U\+A\+R\+T\+\_\+\+A\+B\+Cmd}!U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+A\+B\+Cmd(\+L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$\+U\+A\+R\+Tx, U\+A\+R\+T\+\_\+\+A\+B\+\_\+\+C\+F\+G\+\_\+\+Type $\ast$\+A\+B\+Config\+Struct, Functional\+State New\+State)}{UART_ABCmd(LPC_UART_TypeDef *UARTx, UART_AB_CFG_Type *ABConfigStruct, FunctionalState NewState)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+\_\+\+A\+B\+Cmd (
+\begin{DoxyParamCaption}
+\item[{L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$}]{U\+A\+R\+Tx, }
+\item[{{\bf U\+A\+R\+T\+\_\+\+A\+B\+\_\+\+C\+F\+G\+\_\+\+Type} $\ast$}]{A\+B\+Config\+Struct, }
+\item[{{\bf Functional\+State}}]{New\+State}
+\end{DoxyParamCaption}
+)}\hypertarget{group___u_a_r_t___public___functions_ga51b07c8e7c54845841a97ec9a8d67c3b}{}\label{group___u_a_r_t___public___functions_ga51b07c8e7c54845841a97ec9a8d67c3b}
+
+
+Start/\+Stop Auto Baudrate activity. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em U\+A\+R\+Tx} & U\+A\+RT peripheral selected, should be
+\begin{DoxyItemize}
+\item L\+P\+C\+\_\+\+U\+A\+R\+T0\+: U\+A\+R\+T0 peripheral
+\begin{DoxyItemize}
+\item L\+P\+C\+\_\+\+U\+A\+R\+T1\+: U\+A\+R\+T1 peripheral
+\item L\+P\+C\+\_\+\+U\+A\+R\+T2\+: U\+A\+R\+T2 peripheral
+\item L\+P\+C\+\_\+\+U\+A\+R\+T3\+: U\+A\+R\+T3 peripheral 
+\end{DoxyItemize}
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em A\+B\+Config\+Struct} & A pointer to \hyperlink{struct_u_a_r_t___a_b___c_f_g___type}{U\+A\+R\+T\+\_\+\+A\+B\+\_\+\+C\+F\+G\+\_\+\+Type} structure that contains specified information about U\+A\+RT auto baudrate configuration \\
+\hline
+\mbox{\tt in}  & {\em New\+State} & New State of Auto baudrate activity, should be\+:
+\begin{DoxyItemize}
+\item E\+N\+A\+B\+LE\+: Start this activity
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyItemize}
+\item D\+I\+S\+A\+B\+LE\+: Stop this activity Note\+: Auto-\/baudrate mode enable bit will be cleared once this mode completed. \begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Definition at line 881 of file lpc17xx\+\_\+uart.\+c.
+
+\index{U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}!U\+A\+R\+T\+\_\+\+Check\+Busy@{U\+A\+R\+T\+\_\+\+Check\+Busy}}
+\index{U\+A\+R\+T\+\_\+\+Check\+Busy@{U\+A\+R\+T\+\_\+\+Check\+Busy}!U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+Check\+Busy(\+L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$\+U\+A\+R\+Tx)}{UART_CheckBusy(LPC_UART_TypeDef *UARTx)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Flag\+Status} U\+A\+R\+T\+\_\+\+Check\+Busy (
+\begin{DoxyParamCaption}
+\item[{L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$}]{U\+A\+R\+Tx}
+\end{DoxyParamCaption}
+)}\hypertarget{group___u_a_r_t___public___functions_ga78570fc7b78e558ab87abacd9bb22f73}{}\label{group___u_a_r_t___public___functions_ga78570fc7b78e558ab87abacd9bb22f73}
+
+
+Check whether if U\+A\+RT is busy or not. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em U\+A\+R\+Tx} & U\+A\+RT peripheral selected, should be\+:
+\begin{DoxyItemize}
+\item L\+P\+C\+\_\+\+U\+A\+R\+T0\+: U\+A\+R\+T0 peripheral
+\begin{DoxyItemize}
+\item L\+P\+C\+\_\+\+U\+A\+R\+T1\+: U\+A\+R\+T1 peripheral
+\item L\+P\+C\+\_\+\+U\+A\+R\+T2\+: U\+A\+R\+T2 peripheral
+\item L\+P\+C\+\_\+\+U\+A\+R\+T3\+: U\+A\+R\+T3 peripheral 
+\end{DoxyItemize}
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+R\+E\+S\+ET if U\+A\+RT is not busy, otherwise return S\+ET. 
+\end{DoxyReturn}
+
+
+Definition at line 775 of file lpc17xx\+\_\+uart.\+c.
+
+\index{U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}!U\+A\+R\+T\+\_\+\+Config\+Struct\+Init@{U\+A\+R\+T\+\_\+\+Config\+Struct\+Init}}
+\index{U\+A\+R\+T\+\_\+\+Config\+Struct\+Init@{U\+A\+R\+T\+\_\+\+Config\+Struct\+Init}!U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+Config\+Struct\+Init(\+U\+A\+R\+T\+\_\+\+C\+F\+G\+\_\+\+Type $\ast$\+U\+A\+R\+T\+\_\+\+Init\+Struct)}{UART_ConfigStructInit(UART_CFG_Type *UART_InitStruct)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+\_\+\+Config\+Struct\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+A\+R\+T\+\_\+\+C\+F\+G\+\_\+\+Type} $\ast$}]{U\+A\+R\+T\+\_\+\+Init\+Struct}
+\end{DoxyParamCaption}
+)}\hypertarget{group___u_a_r_t___public___functions_gab27415db995bfdbcd9984073833053d9}{}\label{group___u_a_r_t___public___functions_gab27415db995bfdbcd9984073833053d9}
+
+
+Fills each U\+A\+R\+T\+\_\+\+Init\+Struct member with its default value\+: 
+
+
+\begin{DoxyItemize}
+\item 9600 bps
+\item 8-\/bit data
+\item 1 Stopbit
+\item None Parity 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em U\+A\+R\+T\+\_\+\+Init\+Struct} & Pointer to a \hyperlink{struct_u_a_r_t___c_f_g___type}{U\+A\+R\+T\+\_\+\+C\+F\+G\+\_\+\+Type} structure which will be initialized. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Definition at line 441 of file lpc17xx\+\_\+uart.\+c.
+
+\index{U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}!U\+A\+R\+T\+\_\+\+De\+Init@{U\+A\+R\+T\+\_\+\+De\+Init}}
+\index{U\+A\+R\+T\+\_\+\+De\+Init@{U\+A\+R\+T\+\_\+\+De\+Init}!U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+De\+Init(\+L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$\+U\+A\+R\+Tx)}{UART_DeInit(LPC_UART_TypeDef *UARTx)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+\_\+\+De\+Init (
+\begin{DoxyParamCaption}
+\item[{L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$}]{U\+A\+R\+Tx}
+\end{DoxyParamCaption}
+)}\hypertarget{group___u_a_r_t___public___functions_ga3074f639a2a3de38e5d0129c8ba113b4}{}\label{group___u_a_r_t___public___functions_ga3074f639a2a3de38e5d0129c8ba113b4}
+
+
+De-\/initializes the U\+A\+R\+Tx peripheral registers to their default reset values. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em U\+A\+R\+Tx} & U\+A\+RT peripheral selected, should be\+:
+\begin{DoxyItemize}
+\item L\+P\+C\+\_\+\+U\+A\+R\+T0\+: U\+A\+R\+T0 peripheral
+\begin{DoxyItemize}
+\item L\+P\+C\+\_\+\+U\+A\+R\+T1\+: U\+A\+R\+T1 peripheral
+\item L\+P\+C\+\_\+\+U\+A\+R\+T2\+: U\+A\+R\+T2 peripheral
+\item L\+P\+C\+\_\+\+U\+A\+R\+T3\+: U\+A\+R\+T3 peripheral 
+\end{DoxyItemize}
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 391 of file lpc17xx\+\_\+uart.\+c.
+
+\index{U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}!U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+Config@{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+Config}}
+\index{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+Config@{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+Config}!U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+Config(\+L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$\+U\+A\+R\+Tx, U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+C\+F\+G\+\_\+\+Type $\ast$\+F\+I\+F\+O\+Cfg)}{UART_FIFOConfig(LPC_UART_TypeDef *UARTx, UART_FIFO_CFG_Type *FIFOCfg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+Config (
+\begin{DoxyParamCaption}
+\item[{L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$}]{U\+A\+R\+Tx, }
+\item[{{\bf U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+C\+F\+G\+\_\+\+Type} $\ast$}]{F\+I\+F\+O\+Cfg}
+\end{DoxyParamCaption}
+)}\hypertarget{group___u_a_r_t___public___functions_ga91f3bb9558513f4a1da4163997bd198b}{}\label{group___u_a_r_t___public___functions_ga91f3bb9558513f4a1da4163997bd198b}
+
+
+Configure F\+I\+FO function on selected U\+A\+RT peripheral. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em U\+A\+R\+Tx} & U\+A\+RT peripheral selected, should be\+:
+\begin{DoxyItemize}
+\item L\+P\+C\+\_\+\+U\+A\+R\+T0\+: U\+A\+R\+T0 peripheral
+\begin{DoxyItemize}
+\item L\+P\+C\+\_\+\+U\+A\+R\+T1\+: U\+A\+R\+T1 peripheral
+\item L\+P\+C\+\_\+\+U\+A\+R\+T2\+: U\+A\+R\+T2 peripheral
+\item L\+P\+C\+\_\+\+U\+A\+R\+T3\+: U\+A\+R\+T3 peripheral 
+\end{DoxyItemize}
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em F\+I\+F\+O\+Cfg} & Pointer to a \hyperlink{struct_u_a_r_t___f_i_f_o___c_f_g___type}{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+C\+F\+G\+\_\+\+Type} Structure that contains specified information about F\+I\+FO configuration \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Definition at line 796 of file lpc17xx\+\_\+uart.\+c.
+
+\index{U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}!U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+Config\+Struct\+Init@{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+Config\+Struct\+Init}}
+\index{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+Config\+Struct\+Init@{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+Config\+Struct\+Init}!U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+Config\+Struct\+Init(\+U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+C\+F\+G\+\_\+\+Type $\ast$\+U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+Init\+Struct)}{UART_FIFOConfigStructInit(UART_FIFO_CFG_Type *UART_FIFOInitStruct)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+Config\+Struct\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+C\+F\+G\+\_\+\+Type} $\ast$}]{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+Init\+Struct}
+\end{DoxyParamCaption}
+)}\hypertarget{group___u_a_r_t___public___functions_ga84c4e278cf63acef81e359b76d28319a}{}\label{group___u_a_r_t___public___functions_ga84c4e278cf63acef81e359b76d28319a}
+
+
+Fills each U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+Init\+Struct member with its default value\+: 
+
+
+\begin{DoxyItemize}
+\item F\+I\+F\+O\+\_\+\+D\+M\+A\+Mode = D\+I\+S\+A\+B\+LE
+\item F\+I\+F\+O\+\_\+\+Level = U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+R\+G\+L\+E\+V0
+\item F\+I\+F\+O\+\_\+\+Reset\+Rx\+Buf = E\+N\+A\+B\+LE
+\item F\+I\+F\+O\+\_\+\+Reset\+Tx\+Buf = E\+N\+A\+B\+LE
+\item F\+I\+F\+O\+\_\+\+State = E\+N\+A\+B\+LE
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+Init\+Struct} & Pointer to a \hyperlink{struct_u_a_r_t___f_i_f_o___c_f_g___type}{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+C\+F\+G\+\_\+\+Type} structure which will be initialized. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 855 of file lpc17xx\+\_\+uart.\+c.
+
+\index{U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}!U\+A\+R\+T\+\_\+\+Force\+Break@{U\+A\+R\+T\+\_\+\+Force\+Break}}
+\index{U\+A\+R\+T\+\_\+\+Force\+Break@{U\+A\+R\+T\+\_\+\+Force\+Break}!U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+Force\+Break(\+L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$\+U\+A\+R\+Tx)}{UART_ForceBreak(LPC_UART_TypeDef *UARTx)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+\_\+\+Force\+Break (
+\begin{DoxyParamCaption}
+\item[{L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$}]{U\+A\+R\+Tx}
+\end{DoxyParamCaption}
+)}\hypertarget{group___u_a_r_t___public___functions_ga68161f5403a077379de35494b6b03273}{}\label{group___u_a_r_t___public___functions_ga68161f5403a077379de35494b6b03273}
+
+
+Force B\+R\+E\+AK character on U\+A\+RT line, output pin U\+A\+R\+Tx T\+XD is forced to logic 0. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em U\+A\+R\+Tx} & U\+A\+RT peripheral selected, should be\+:
+\begin{DoxyItemize}
+\item L\+P\+C\+\_\+\+U\+A\+R\+T0\+: U\+A\+R\+T0 peripheral
+\begin{DoxyItemize}
+\item L\+P\+C\+\_\+\+U\+A\+R\+T1\+: U\+A\+R\+T1 peripheral
+\item L\+P\+C\+\_\+\+U\+A\+R\+T2\+: U\+A\+R\+T2 peripheral
+\item L\+P\+C\+\_\+\+U\+A\+R\+T3\+: U\+A\+R\+T3 peripheral 
+\end{DoxyItemize}
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 631 of file lpc17xx\+\_\+uart.\+c.
+
+\index{U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}!U\+A\+R\+T\+\_\+\+Full\+Modem\+Config\+Mode@{U\+A\+R\+T\+\_\+\+Full\+Modem\+Config\+Mode}}
+\index{U\+A\+R\+T\+\_\+\+Full\+Modem\+Config\+Mode@{U\+A\+R\+T\+\_\+\+Full\+Modem\+Config\+Mode}!U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+Full\+Modem\+Config\+Mode(\+L\+P\+C\+\_\+\+U\+A\+R\+T1\+\_\+\+Type\+Def $\ast$\+U\+A\+R\+Tx, U\+A\+R\+T\+\_\+\+M\+O\+D\+E\+M\+\_\+\+M\+O\+D\+E\+\_\+\+Type Mode, Functional\+State New\+State)}{UART_FullModemConfigMode(LPC_UART1_TypeDef *UARTx, UART_MODEM_MODE_Type Mode, FunctionalState NewState)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+\_\+\+Full\+Modem\+Config\+Mode (
+\begin{DoxyParamCaption}
+\item[{L\+P\+C\+\_\+\+U\+A\+R\+T1\+\_\+\+Type\+Def $\ast$}]{U\+A\+R\+Tx, }
+\item[{{\bf U\+A\+R\+T\+\_\+\+M\+O\+D\+E\+M\+\_\+\+M\+O\+D\+E\+\_\+\+Type}}]{Mode, }
+\item[{{\bf Functional\+State}}]{New\+State}
+\end{DoxyParamCaption}
+)}\hypertarget{group___u_a_r_t___public___functions_gad65d361221a648575a5328ec1a243aa9}{}\label{group___u_a_r_t___public___functions_gad65d361221a648575a5328ec1a243aa9}
+\index{U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}!U\+A\+R\+T\+\_\+\+Full\+Modem\+Force\+Pin\+State@{U\+A\+R\+T\+\_\+\+Full\+Modem\+Force\+Pin\+State}}
+\index{U\+A\+R\+T\+\_\+\+Full\+Modem\+Force\+Pin\+State@{U\+A\+R\+T\+\_\+\+Full\+Modem\+Force\+Pin\+State}!U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+Full\+Modem\+Force\+Pin\+State(\+L\+P\+C\+\_\+\+U\+A\+R\+T1\+\_\+\+Type\+Def $\ast$\+U\+A\+R\+Tx, U\+A\+R\+T\+\_\+\+M\+O\+D\+E\+M\+\_\+\+P\+I\+N\+\_\+\+Type Pin, U\+A\+R\+T1\+\_\+\+Signal\+State New\+State)}{UART_FullModemForcePinState(LPC_UART1_TypeDef *UARTx, UART_MODEM_PIN_Type Pin, UART1_SignalState NewState)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+\_\+\+Full\+Modem\+Force\+Pin\+State (
+\begin{DoxyParamCaption}
+\item[{L\+P\+C\+\_\+\+U\+A\+R\+T1\+\_\+\+Type\+Def $\ast$}]{U\+A\+R\+Tx, }
+\item[{{\bf U\+A\+R\+T\+\_\+\+M\+O\+D\+E\+M\+\_\+\+P\+I\+N\+\_\+\+Type}}]{Pin, }
+\item[{{\bf U\+A\+R\+T1\+\_\+\+Signal\+State}}]{New\+State}
+\end{DoxyParamCaption}
+)}\hypertarget{group___u_a_r_t___public___functions_ga5a21807b2f967d1ed1de7bd468cbd9ad}{}\label{group___u_a_r_t___public___functions_ga5a21807b2f967d1ed1de7bd468cbd9ad}
+\index{U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}!U\+A\+R\+T\+\_\+\+Full\+Modem\+Get\+Status@{U\+A\+R\+T\+\_\+\+Full\+Modem\+Get\+Status}}
+\index{U\+A\+R\+T\+\_\+\+Full\+Modem\+Get\+Status@{U\+A\+R\+T\+\_\+\+Full\+Modem\+Get\+Status}!U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+Full\+Modem\+Get\+Status(\+L\+P\+C\+\_\+\+U\+A\+R\+T1\+\_\+\+Type\+Def $\ast$\+U\+A\+R\+Tx)}{UART_FullModemGetStatus(LPC_UART1_TypeDef *UARTx)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} U\+A\+R\+T\+\_\+\+Full\+Modem\+Get\+Status (
+\begin{DoxyParamCaption}
+\item[{L\+P\+C\+\_\+\+U\+A\+R\+T1\+\_\+\+Type\+Def $\ast$}]{U\+A\+R\+Tx}
+\end{DoxyParamCaption}
+)}\hypertarget{group___u_a_r_t___public___functions_gaee50c6ea6e2ccfa7cc6edceee5833d1e}{}\label{group___u_a_r_t___public___functions_gaee50c6ea6e2ccfa7cc6edceee5833d1e}
+\index{U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}!U\+A\+R\+T\+\_\+\+Get\+Int\+Id@{U\+A\+R\+T\+\_\+\+Get\+Int\+Id}}
+\index{U\+A\+R\+T\+\_\+\+Get\+Int\+Id@{U\+A\+R\+T\+\_\+\+Get\+Int\+Id}!U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+Get\+Int\+Id(\+L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$\+U\+A\+R\+Tx)}{UART_GetIntId(LPC_UART_TypeDef *UARTx)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} U\+A\+R\+T\+\_\+\+Get\+Int\+Id (
+\begin{DoxyParamCaption}
+\item[{L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$}]{U\+A\+R\+Tx}
+\end{DoxyParamCaption}
+)}\hypertarget{group___u_a_r_t___public___functions_ga09314371b86b1597b7aafd912cf6222f}{}\label{group___u_a_r_t___public___functions_ga09314371b86b1597b7aafd912cf6222f}
+
+
+Get Interrupt Identification value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em U\+A\+R\+Tx} & U\+A\+RT peripheral selected, should be\+:
+\begin{DoxyItemize}
+\item L\+P\+C\+\_\+\+U\+A\+R\+T0\+: U\+A\+R\+T0 peripheral
+\begin{DoxyItemize}
+\item L\+P\+C\+\_\+\+U\+A\+R\+T1\+: U\+A\+R\+T1 peripheral
+\item L\+P\+C\+\_\+\+U\+A\+R\+T2\+: U\+A\+R\+T2 peripheral
+\item L\+P\+C\+\_\+\+U\+A\+R\+T3\+: U\+A\+R\+T3 peripheral 
+\end{DoxyItemize}
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current value of U\+A\+RT U\+I\+IR register in U\+A\+RT peripheral. 
+\end{DoxyReturn}
+
+
+Definition at line 760 of file lpc17xx\+\_\+uart.\+c.
+
+\index{U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}!U\+A\+R\+T\+\_\+\+Get\+Line\+Status@{U\+A\+R\+T\+\_\+\+Get\+Line\+Status}}
+\index{U\+A\+R\+T\+\_\+\+Get\+Line\+Status@{U\+A\+R\+T\+\_\+\+Get\+Line\+Status}!U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+Get\+Line\+Status(\+L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$\+U\+A\+R\+Tx)}{UART_GetLineStatus(LPC_UART_TypeDef *UARTx)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} U\+A\+R\+T\+\_\+\+Get\+Line\+Status (
+\begin{DoxyParamCaption}
+\item[{L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$}]{U\+A\+R\+Tx}
+\end{DoxyParamCaption}
+)}\hypertarget{group___u_a_r_t___public___functions_ga089fc39675174ed51294ea96e4417f0d}{}\label{group___u_a_r_t___public___functions_ga089fc39675174ed51294ea96e4417f0d}
+
+
+Get current value of Line Status register in U\+A\+RT peripheral. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em U\+A\+R\+Tx} & U\+A\+RT peripheral selected, should be\+:
+\begin{DoxyItemize}
+\item L\+P\+C\+\_\+\+U\+A\+R\+T0\+: U\+A\+R\+T0 peripheral
+\begin{DoxyItemize}
+\item L\+P\+C\+\_\+\+U\+A\+R\+T1\+: U\+A\+R\+T1 peripheral
+\item L\+P\+C\+\_\+\+U\+A\+R\+T2\+: U\+A\+R\+T2 peripheral
+\item L\+P\+C\+\_\+\+U\+A\+R\+T3\+: U\+A\+R\+T3 peripheral 
+\end{DoxyItemize}
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current value of Line Status register in U\+A\+RT peripheral. Note\+: The return value of this function must be A\+N\+Ded with each member in U\+A\+R\+T\+\_\+\+L\+S\+\_\+\+Type enumeration to determine current flag status corresponding to each Line status type. Because some flags in Line Status register will be cleared after reading, the next reading Line Status register could not be correct. So this function used to read Line status register in one time only, then the return value used to check all flags. 
+\end{DoxyReturn}
+
+
+Definition at line 737 of file lpc17xx\+\_\+uart.\+c.
+
+\index{U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}!U\+A\+R\+T\+\_\+\+Init@{U\+A\+R\+T\+\_\+\+Init}}
+\index{U\+A\+R\+T\+\_\+\+Init@{U\+A\+R\+T\+\_\+\+Init}!U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+Init(\+L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$\+U\+A\+R\+Tx, U\+A\+R\+T\+\_\+\+C\+F\+G\+\_\+\+Type $\ast$\+U\+A\+R\+T\+\_\+\+Config\+Struct)}{UART_Init(LPC_UART_TypeDef *UARTx, UART_CFG_Type *UART_ConfigStruct)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+\_\+\+Init (
+\begin{DoxyParamCaption}
+\item[{L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$}]{U\+A\+R\+Tx, }
+\item[{{\bf U\+A\+R\+T\+\_\+\+C\+F\+G\+\_\+\+Type} $\ast$}]{U\+A\+R\+T\+\_\+\+Config\+Struct}
+\end{DoxyParamCaption}
+)}\hypertarget{group___u_a_r_t___public___functions_ga38648a309b0eb01e488f593f93fd9e02}{}\label{group___u_a_r_t___public___functions_ga38648a309b0eb01e488f593f93fd9e02}
+
+
+Initializes the U\+A\+R\+Tx peripheral according to the specified parameters in the U\+A\+R\+T\+\_\+\+Config\+Struct. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em U\+A\+R\+Tx} & U\+A\+RT peripheral selected, should be\+:
+\begin{DoxyItemize}
+\item L\+P\+C\+\_\+\+U\+A\+R\+T0\+: U\+A\+R\+T0 peripheral
+\begin{DoxyItemize}
+\item L\+P\+C\+\_\+\+U\+A\+R\+T1\+: U\+A\+R\+T1 peripheral
+\item L\+P\+C\+\_\+\+U\+A\+R\+T2\+: U\+A\+R\+T2 peripheral
+\item L\+P\+C\+\_\+\+U\+A\+R\+T3\+: U\+A\+R\+T3 peripheral 
+\end{DoxyItemize}
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em U\+A\+R\+T\+\_\+\+Config\+Struct} & Pointer to a \hyperlink{struct_u_a_r_t___c_f_g___type}{U\+A\+R\+T\+\_\+\+C\+F\+G\+\_\+\+Type} structure that contains the configuration information for the specified U\+A\+RT peripheral. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 188 of file lpc17xx\+\_\+uart.\+c.
+
+\index{U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}!U\+A\+R\+T\+\_\+\+Int\+Config@{U\+A\+R\+T\+\_\+\+Int\+Config}}
+\index{U\+A\+R\+T\+\_\+\+Int\+Config@{U\+A\+R\+T\+\_\+\+Int\+Config}!U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+Int\+Config(\+L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$\+U\+A\+R\+Tx, U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+Type U\+A\+R\+T\+Int\+Cfg, Functional\+State New\+State)}{UART_IntConfig(LPC_UART_TypeDef *UARTx, UART_INT_Type UARTIntCfg, FunctionalState NewState)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+\_\+\+Int\+Config (
+\begin{DoxyParamCaption}
+\item[{L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$}]{U\+A\+R\+Tx, }
+\item[{{\bf U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+Type}}]{U\+A\+R\+T\+Int\+Cfg, }
+\item[{{\bf Functional\+State}}]{New\+State}
+\end{DoxyParamCaption}
+)}\hypertarget{group___u_a_r_t___public___functions_ga4bad6b6b83a5345ea0d78427a5df5284}{}\label{group___u_a_r_t___public___functions_ga4bad6b6b83a5345ea0d78427a5df5284}
+
+
+Enable or disable specified U\+A\+RT interrupt. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em U\+A\+R\+Tx} & U\+A\+RT peripheral selected, should be
+\begin{DoxyItemize}
+\item L\+P\+C\+\_\+\+U\+A\+R\+T0\+: U\+A\+R\+T0 peripheral
+\begin{DoxyItemize}
+\item L\+P\+C\+\_\+\+U\+A\+R\+T1\+: U\+A\+R\+T1 peripheral
+\item L\+P\+C\+\_\+\+U\+A\+R\+T2\+: U\+A\+R\+T2 peripheral
+\item L\+P\+C\+\_\+\+U\+A\+R\+T3\+: U\+A\+R\+T3 peripheral 
+\end{DoxyItemize}
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em U\+A\+R\+T\+Int\+Cfg} & Specifies the interrupt flag, should be one of the following\+:
+\begin{DoxyItemize}
+\item U\+A\+R\+T\+\_\+\+I\+N\+T\+C\+F\+G\+\_\+\+R\+BR \+: R\+BR Interrupt enable
+\item U\+A\+R\+T\+\_\+\+I\+N\+T\+C\+F\+G\+\_\+\+T\+H\+RE \+: T\+HR Interrupt enable
+\item U\+A\+R\+T\+\_\+\+I\+N\+T\+C\+F\+G\+\_\+\+R\+LS \+: RX line status interrupt enable
+\item U\+A\+R\+T1\+\_\+\+I\+N\+T\+C\+F\+G\+\_\+\+MS \+: Modem status interrupt enable (U\+A\+R\+T1 only)
+\item U\+A\+R\+T1\+\_\+\+I\+N\+T\+C\+F\+G\+\_\+\+C\+TS \+: C\+T\+S1 signal transition interrupt enable (U\+A\+R\+T1 only)
+\item U\+A\+R\+T\+\_\+\+I\+N\+T\+C\+F\+G\+\_\+\+A\+B\+EO \+: Enables the end of auto-\/baud interrupt
+\item U\+A\+R\+T\+\_\+\+I\+N\+T\+C\+F\+G\+\_\+\+A\+B\+TO \+: Enables the auto-\/baud time-\/out interrupt 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em New\+State} & New state of specified U\+A\+RT interrupt type, should be\+:
+\begin{DoxyItemize}
+\item E\+N\+A\+L\+BE\+: Enable this U\+A\+RT interrupt type.
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyItemize}
+\item D\+I\+S\+A\+L\+BE\+: Disable this U\+A\+RT interrupt type. \begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Definition at line 668 of file lpc17xx\+\_\+uart.\+c.
+
+\index{U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}!U\+A\+R\+T\+\_\+\+Ir\+D\+A\+Cmd@{U\+A\+R\+T\+\_\+\+Ir\+D\+A\+Cmd}}
+\index{U\+A\+R\+T\+\_\+\+Ir\+D\+A\+Cmd@{U\+A\+R\+T\+\_\+\+Ir\+D\+A\+Cmd}!U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+Ir\+D\+A\+Cmd(\+L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$\+U\+A\+R\+Tx, Functional\+State New\+State)}{UART_IrDACmd(LPC_UART_TypeDef *UARTx, FunctionalState NewState)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+\_\+\+Ir\+D\+A\+Cmd (
+\begin{DoxyParamCaption}
+\item[{L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$}]{U\+A\+R\+Tx, }
+\item[{{\bf Functional\+State}}]{New\+State}
+\end{DoxyParamCaption}
+)}\hypertarget{group___u_a_r_t___public___functions_ga4c946a4ac4dd32ea5644f78cebaccc85}{}\label{group___u_a_r_t___public___functions_ga4c946a4ac4dd32ea5644f78cebaccc85}
+\index{U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}!U\+A\+R\+T\+\_\+\+Ir\+D\+A\+Invt\+Input\+Cmd@{U\+A\+R\+T\+\_\+\+Ir\+D\+A\+Invt\+Input\+Cmd}}
+\index{U\+A\+R\+T\+\_\+\+Ir\+D\+A\+Invt\+Input\+Cmd@{U\+A\+R\+T\+\_\+\+Ir\+D\+A\+Invt\+Input\+Cmd}!U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+Ir\+D\+A\+Invt\+Input\+Cmd(\+L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$\+U\+A\+R\+Tx, Functional\+State New\+State)}{UART_IrDAInvtInputCmd(LPC_UART_TypeDef *UARTx, FunctionalState NewState)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+\_\+\+Ir\+D\+A\+Invt\+Input\+Cmd (
+\begin{DoxyParamCaption}
+\item[{L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$}]{U\+A\+R\+Tx, }
+\item[{{\bf Functional\+State}}]{New\+State}
+\end{DoxyParamCaption}
+)}\hypertarget{group___u_a_r_t___public___functions_gaf124bd5ad22ea3060cbb388f76fdb3d7}{}\label{group___u_a_r_t___public___functions_gaf124bd5ad22ea3060cbb388f76fdb3d7}
+\index{U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}!U\+A\+R\+T\+\_\+\+Ir\+D\+A\+Pulse\+Div\+Config@{U\+A\+R\+T\+\_\+\+Ir\+D\+A\+Pulse\+Div\+Config}}
+\index{U\+A\+R\+T\+\_\+\+Ir\+D\+A\+Pulse\+Div\+Config@{U\+A\+R\+T\+\_\+\+Ir\+D\+A\+Pulse\+Div\+Config}!U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+Ir\+D\+A\+Pulse\+Div\+Config(\+L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$\+U\+A\+R\+Tx, U\+A\+R\+T\+\_\+\+Ir\+D\+A\+\_\+\+P\+U\+L\+S\+E\+\_\+\+Type Pulse\+Div)}{UART_IrDAPulseDivConfig(LPC_UART_TypeDef *UARTx, UART_IrDA_PULSE_Type PulseDiv)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+\_\+\+Ir\+D\+A\+Pulse\+Div\+Config (
+\begin{DoxyParamCaption}
+\item[{L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$}]{U\+A\+R\+Tx, }
+\item[{{\bf U\+A\+R\+T\+\_\+\+Ir\+D\+A\+\_\+\+P\+U\+L\+S\+E\+\_\+\+Type}}]{Pulse\+Div}
+\end{DoxyParamCaption}
+)}\hypertarget{group___u_a_r_t___public___functions_ga066c5b2f961d138fd388be4edff883ad}{}\label{group___u_a_r_t___public___functions_ga066c5b2f961d138fd388be4edff883ad}
+\index{U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}!U\+A\+R\+T\+\_\+\+Receive@{U\+A\+R\+T\+\_\+\+Receive}}
+\index{U\+A\+R\+T\+\_\+\+Receive@{U\+A\+R\+T\+\_\+\+Receive}!U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+Receive(\+L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$\+U\+A\+R\+Tx, uint8\+\_\+t $\ast$rxbuf, uint32\+\_\+t buflen, T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+B\+L\+O\+C\+K\+\_\+\+Type flag)}{UART_Receive(LPC_UART_TypeDef *UARTx, uint8_t *rxbuf, uint32_t buflen, TRANSFER_BLOCK_Type flag)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} U\+A\+R\+T\+\_\+\+Receive (
+\begin{DoxyParamCaption}
+\item[{L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$}]{U\+A\+R\+Tx, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{rxbuf, }
+\item[{{\bf uint32\+\_\+t}}]{buflen, }
+\item[{{\bf T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+B\+L\+O\+C\+K\+\_\+\+Type}}]{flag}
+\end{DoxyParamCaption}
+)}\hypertarget{group___u_a_r_t___public___functions_ga83868ce3b59f46e618c4fc4d864895a1}{}\label{group___u_a_r_t___public___functions_ga83868ce3b59f46e618c4fc4d864895a1}
+
+
+Receive a block of data via U\+A\+RT peripheral. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em U\+A\+R\+Tx} & Selected U\+A\+RT peripheral used to send data, should be\+:
+\begin{DoxyItemize}
+\item L\+P\+C\+\_\+\+U\+A\+R\+T0\+: U\+A\+R\+T0 peripheral
+\begin{DoxyItemize}
+\item L\+P\+C\+\_\+\+U\+A\+R\+T1\+: U\+A\+R\+T1 peripheral
+\item L\+P\+C\+\_\+\+U\+A\+R\+T2\+: U\+A\+R\+T2 peripheral
+\item L\+P\+C\+\_\+\+U\+A\+R\+T3\+: U\+A\+R\+T3 peripheral 
+\end{DoxyItemize}
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt out}  & {\em rxbuf} & Pointer to Received buffer \\
+\hline
+\mbox{\tt in}  & {\em buflen} & Length of Received buffer \\
+\hline
+\mbox{\tt in}  & {\em flag} & Flag mode, should be N\+O\+N\+E\+\_\+\+B\+L\+O\+C\+K\+I\+NG or B\+L\+O\+C\+K\+I\+NG\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of bytes received
+\end{DoxyReturn}
+Note\+: when using U\+A\+RT in B\+L\+O\+C\+K\+I\+NG mode, a time-\/out condition is used via defined symbol U\+A\+R\+T\+\_\+\+B\+L\+O\+C\+K\+I\+N\+G\+\_\+\+T\+I\+M\+E\+O\+UT. 
+
+Definition at line 580 of file lpc17xx\+\_\+uart.\+c.
+
+\index{U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}!U\+A\+R\+T\+\_\+\+Receive\+Byte@{U\+A\+R\+T\+\_\+\+Receive\+Byte}}
+\index{U\+A\+R\+T\+\_\+\+Receive\+Byte@{U\+A\+R\+T\+\_\+\+Receive\+Byte}!U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+Receive\+Byte(\+L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$\+U\+A\+R\+Tx)}{UART_ReceiveByte(LPC_UART_TypeDef *UARTx)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} U\+A\+R\+T\+\_\+\+Receive\+Byte (
+\begin{DoxyParamCaption}
+\item[{L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$}]{U\+A\+R\+Tx}
+\end{DoxyParamCaption}
+)}\hypertarget{group___u_a_r_t___public___functions_gafbb690c2811d921f8c733888fdbfef54}{}\label{group___u_a_r_t___public___functions_gafbb690c2811d921f8c733888fdbfef54}
+
+
+Receive a single data from U\+A\+RT peripheral. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em U\+A\+R\+Tx} & U\+A\+RT peripheral selected, should be\+:
+\begin{DoxyItemize}
+\item L\+P\+C\+\_\+\+U\+A\+R\+T0\+: U\+A\+R\+T0 peripheral
+\begin{DoxyItemize}
+\item L\+P\+C\+\_\+\+U\+A\+R\+T1\+: U\+A\+R\+T1 peripheral
+\item L\+P\+C\+\_\+\+U\+A\+R\+T2\+: U\+A\+R\+T2 peripheral
+\item L\+P\+C\+\_\+\+U\+A\+R\+T3\+: U\+A\+R\+T3 peripheral 
+\end{DoxyItemize}
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Data received 
+\end{DoxyReturn}
+
+
+Definition at line 485 of file lpc17xx\+\_\+uart.\+c.
+
+\index{U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}!U\+A\+R\+T\+\_\+\+R\+S485\+Config@{U\+A\+R\+T\+\_\+\+R\+S485\+Config}}
+\index{U\+A\+R\+T\+\_\+\+R\+S485\+Config@{U\+A\+R\+T\+\_\+\+R\+S485\+Config}!U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+R\+S485\+Config(\+L\+P\+C\+\_\+\+U\+A\+R\+T1\+\_\+\+Type\+Def $\ast$\+U\+A\+R\+Tx, U\+A\+R\+T1\+\_\+\+R\+S485\+\_\+\+C\+T\+R\+L\+C\+F\+G\+\_\+\+Type $\ast$\+R\+S485\+Config\+Struct)}{UART_RS485Config(LPC_UART1_TypeDef *UARTx, UART1_RS485_CTRLCFG_Type *RS485ConfigStruct)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+\_\+\+R\+S485\+Config (
+\begin{DoxyParamCaption}
+\item[{L\+P\+C\+\_\+\+U\+A\+R\+T1\+\_\+\+Type\+Def $\ast$}]{U\+A\+R\+Tx, }
+\item[{{\bf U\+A\+R\+T1\+\_\+\+R\+S485\+\_\+\+C\+T\+R\+L\+C\+F\+G\+\_\+\+Type} $\ast$}]{R\+S485\+Config\+Struct}
+\end{DoxyParamCaption}
+)}\hypertarget{group___u_a_r_t___public___functions_ga61acf8ebde89ef2b8c05c2d2a9ac9e7c}{}\label{group___u_a_r_t___public___functions_ga61acf8ebde89ef2b8c05c2d2a9ac9e7c}
+\index{U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}!U\+A\+R\+T\+\_\+\+R\+S485\+Receiver\+Cmd@{U\+A\+R\+T\+\_\+\+R\+S485\+Receiver\+Cmd}}
+\index{U\+A\+R\+T\+\_\+\+R\+S485\+Receiver\+Cmd@{U\+A\+R\+T\+\_\+\+R\+S485\+Receiver\+Cmd}!U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+R\+S485\+Receiver\+Cmd(\+L\+P\+C\+\_\+\+U\+A\+R\+T1\+\_\+\+Type\+Def $\ast$\+U\+A\+R\+Tx, Functional\+State New\+State)}{UART_RS485ReceiverCmd(LPC_UART1_TypeDef *UARTx, FunctionalState NewState)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+\_\+\+R\+S485\+Receiver\+Cmd (
+\begin{DoxyParamCaption}
+\item[{L\+P\+C\+\_\+\+U\+A\+R\+T1\+\_\+\+Type\+Def $\ast$}]{U\+A\+R\+Tx, }
+\item[{{\bf Functional\+State}}]{New\+State}
+\end{DoxyParamCaption}
+)}\hypertarget{group___u_a_r_t___public___functions_ga8c43ccaa9104baab28df1b0afe57a195}{}\label{group___u_a_r_t___public___functions_ga8c43ccaa9104baab28df1b0afe57a195}
+\index{U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}!U\+A\+R\+T\+\_\+\+R\+S485\+Send\+Data@{U\+A\+R\+T\+\_\+\+R\+S485\+Send\+Data}}
+\index{U\+A\+R\+T\+\_\+\+R\+S485\+Send\+Data@{U\+A\+R\+T\+\_\+\+R\+S485\+Send\+Data}!U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+R\+S485\+Send\+Data(\+L\+P\+C\+\_\+\+U\+A\+R\+T1\+\_\+\+Type\+Def $\ast$\+U\+A\+R\+Tx, uint8\+\_\+t $\ast$p\+Data, uint32\+\_\+t size)}{UART_RS485SendData(LPC_UART1_TypeDef *UARTx, uint8_t *pData, uint32_t size)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} U\+A\+R\+T\+\_\+\+R\+S485\+Send\+Data (
+\begin{DoxyParamCaption}
+\item[{L\+P\+C\+\_\+\+U\+A\+R\+T1\+\_\+\+Type\+Def $\ast$}]{U\+A\+R\+Tx, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{p\+Data, }
+\item[{{\bf uint32\+\_\+t}}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{group___u_a_r_t___public___functions_ga97fc6a99efa2983668cf2d18c5ff7536}{}\label{group___u_a_r_t___public___functions_ga97fc6a99efa2983668cf2d18c5ff7536}
+\index{U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}!U\+A\+R\+T\+\_\+\+R\+S485\+Send\+Slv\+Addr@{U\+A\+R\+T\+\_\+\+R\+S485\+Send\+Slv\+Addr}}
+\index{U\+A\+R\+T\+\_\+\+R\+S485\+Send\+Slv\+Addr@{U\+A\+R\+T\+\_\+\+R\+S485\+Send\+Slv\+Addr}!U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+R\+S485\+Send\+Slv\+Addr(\+L\+P\+C\+\_\+\+U\+A\+R\+T1\+\_\+\+Type\+Def $\ast$\+U\+A\+R\+Tx, uint8\+\_\+t Slv\+Addr)}{UART_RS485SendSlvAddr(LPC_UART1_TypeDef *UARTx, uint8_t SlvAddr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+\_\+\+R\+S485\+Send\+Slv\+Addr (
+\begin{DoxyParamCaption}
+\item[{L\+P\+C\+\_\+\+U\+A\+R\+T1\+\_\+\+Type\+Def $\ast$}]{U\+A\+R\+Tx, }
+\item[{{\bf uint8\+\_\+t}}]{Slv\+Addr}
+\end{DoxyParamCaption}
+)}\hypertarget{group___u_a_r_t___public___functions_ga51d8e73f086bb57478966b6b699404d8}{}\label{group___u_a_r_t___public___functions_ga51d8e73f086bb57478966b6b699404d8}
+\index{U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}!U\+A\+R\+T\+\_\+\+Send@{U\+A\+R\+T\+\_\+\+Send}}
+\index{U\+A\+R\+T\+\_\+\+Send@{U\+A\+R\+T\+\_\+\+Send}!U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+Send(\+L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$\+U\+A\+R\+Tx, uint8\+\_\+t $\ast$txbuf, uint32\+\_\+t buflen, T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+B\+L\+O\+C\+K\+\_\+\+Type flag)}{UART_Send(LPC_UART_TypeDef *UARTx, uint8_t *txbuf, uint32_t buflen, TRANSFER_BLOCK_Type flag)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} U\+A\+R\+T\+\_\+\+Send (
+\begin{DoxyParamCaption}
+\item[{L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$}]{U\+A\+R\+Tx, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{txbuf, }
+\item[{{\bf uint32\+\_\+t}}]{buflen, }
+\item[{{\bf T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+B\+L\+O\+C\+K\+\_\+\+Type}}]{flag}
+\end{DoxyParamCaption}
+)}\hypertarget{group___u_a_r_t___public___functions_gadeb1a6a95247931abb93fa49571ae51c}{}\label{group___u_a_r_t___public___functions_gadeb1a6a95247931abb93fa49571ae51c}
+
+
+Send a block of data via U\+A\+RT peripheral. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em U\+A\+R\+Tx} & Selected U\+A\+RT peripheral used to send data, should be\+:
+\begin{DoxyItemize}
+\item L\+P\+C\+\_\+\+U\+A\+R\+T0\+: U\+A\+R\+T0 peripheral
+\begin{DoxyItemize}
+\item L\+P\+C\+\_\+\+U\+A\+R\+T1\+: U\+A\+R\+T1 peripheral
+\item L\+P\+C\+\_\+\+U\+A\+R\+T2\+: U\+A\+R\+T2 peripheral
+\item L\+P\+C\+\_\+\+U\+A\+R\+T3\+: U\+A\+R\+T3 peripheral 
+\end{DoxyItemize}
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em txbuf} & Pointer to Transmit buffer \\
+\hline
+\mbox{\tt in}  & {\em buflen} & Length of Transmit buffer \\
+\hline
+\mbox{\tt in}  & {\em flag} & Flag used in U\+A\+RT transfer, should be N\+O\+N\+E\+\_\+\+B\+L\+O\+C\+K\+I\+NG or B\+L\+O\+C\+K\+I\+NG \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of bytes sent.
+\end{DoxyReturn}
+Note\+: when using U\+A\+RT in B\+L\+O\+C\+K\+I\+NG mode, a time-\/out condition is used via defined symbol U\+A\+R\+T\+\_\+\+B\+L\+O\+C\+K\+I\+N\+G\+\_\+\+T\+I\+M\+E\+O\+UT. 
+
+Definition at line 515 of file lpc17xx\+\_\+uart.\+c.
+
+\index{U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}!U\+A\+R\+T\+\_\+\+Send\+Byte@{U\+A\+R\+T\+\_\+\+Send\+Byte}}
+\index{U\+A\+R\+T\+\_\+\+Send\+Byte@{U\+A\+R\+T\+\_\+\+Send\+Byte}!U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+Send\+Byte(\+L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$\+U\+A\+R\+Tx, uint8\+\_\+t Data)}{UART_SendByte(LPC_UART_TypeDef *UARTx, uint8_t Data)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+\_\+\+Send\+Byte (
+\begin{DoxyParamCaption}
+\item[{L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$}]{U\+A\+R\+Tx, }
+\item[{{\bf uint8\+\_\+t}}]{Data}
+\end{DoxyParamCaption}
+)}\hypertarget{group___u_a_r_t___public___functions_gaed06c5f6548091cba78b88700b82ad62}{}\label{group___u_a_r_t___public___functions_gaed06c5f6548091cba78b88700b82ad62}
+
+
+Transmit a single data through U\+A\+RT peripheral. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em U\+A\+R\+Tx} & U\+A\+RT peripheral selected, should be\+:
+\begin{DoxyItemize}
+\item L\+P\+C\+\_\+\+U\+A\+R\+T0\+: U\+A\+R\+T0 peripheral
+\begin{DoxyItemize}
+\item L\+P\+C\+\_\+\+U\+A\+R\+T1\+: U\+A\+R\+T1 peripheral
+\item L\+P\+C\+\_\+\+U\+A\+R\+T2\+: U\+A\+R\+T2 peripheral
+\item L\+P\+C\+\_\+\+U\+A\+R\+T3\+: U\+A\+R\+T3 peripheral 
+\end{DoxyItemize}
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em Data} & Data to transmit (must be 8-\/bit long) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 460 of file lpc17xx\+\_\+uart.\+c.
+
+\index{U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}!U\+A\+R\+T\+\_\+\+Tx\+Cmd@{U\+A\+R\+T\+\_\+\+Tx\+Cmd}}
+\index{U\+A\+R\+T\+\_\+\+Tx\+Cmd@{U\+A\+R\+T\+\_\+\+Tx\+Cmd}!U\+A\+R\+T Public Functions@{U\+A\+R\+T Public Functions}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+Tx\+Cmd(\+L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$\+U\+A\+R\+Tx, Functional\+State New\+State)}{UART_TxCmd(LPC_UART_TypeDef *UARTx, FunctionalState NewState)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+\_\+\+Tx\+Cmd (
+\begin{DoxyParamCaption}
+\item[{L\+P\+C\+\_\+\+U\+A\+R\+T\+\_\+\+Type\+Def $\ast$}]{U\+A\+R\+Tx, }
+\item[{{\bf Functional\+State}}]{New\+State}
+\end{DoxyParamCaption}
+)}\hypertarget{group___u_a_r_t___public___functions_ga3400356ef61d3735d9d10e04e0e95df4}{}\label{group___u_a_r_t___public___functions_ga3400356ef61d3735d9d10e04e0e95df4}
+
+
+Enable/\+Disable transmission on U\+A\+RT TxD pin. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em U\+A\+R\+Tx} & U\+A\+RT peripheral selected, should be\+:
+\begin{DoxyItemize}
+\item L\+P\+C\+\_\+\+U\+A\+R\+T0\+: U\+A\+R\+T0 peripheral
+\begin{DoxyItemize}
+\item L\+P\+C\+\_\+\+U\+A\+R\+T1\+: U\+A\+R\+T1 peripheral
+\item L\+P\+C\+\_\+\+U\+A\+R\+T2\+: U\+A\+R\+T2 peripheral
+\item L\+P\+C\+\_\+\+U\+A\+R\+T3\+: U\+A\+R\+T3 peripheral 
+\end{DoxyItemize}
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em New\+State} & New State of Tx transmission function, should be\+:
+\begin{DoxyItemize}
+\item E\+N\+A\+B\+LE\+: Enable this function
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyItemize}
+\item D\+I\+S\+A\+B\+LE\+: Disable this function \begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Definition at line 969 of file lpc17xx\+\_\+uart.\+c.
+

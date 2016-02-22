@@ -1,0 +1,327 @@
+\hypertarget{group___packet_functions}{}\section{Packet\+Functions}
+\label{group___packet_functions}\index{Packet\+Functions@{Packet\+Functions}}
+
+
+A library of functions useful for manipulating packets and addresses.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___packet_functions_ga3f23f27556fb610f16c170378eeabeec}{packetfunctions\+\_\+ip128b\+To\+Mac64b} (\hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$ip128b, \hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$prefix64bto\+Write, \hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$mac64bto\+Write)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___packet_functions_ga6d7fd056d46deba15d06d3dc86d3569a}{packetfunctions\+\_\+mac64b\+To\+Ip128b} (\hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$prefix64b, \hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$mac64b, \hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$ip128b\+To\+Write)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___packet_functions_ga26987c269ac582016eaf905cec7b3ead}{packetfunctions\+\_\+mac64b\+To\+Mac16b} (\hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$mac64b, \hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$mac16bto\+Write)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___packet_functions_gab6e0f97c424d57d22794d2c4e0193990}{packetfunctions\+\_\+mac16b\+To\+Mac64b} (\hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$mac16b, \hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$mac64bto\+Write)
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group___packet_functions_gaba1f21e2310fa6bb90ee23eba583e4de}{packetfunctions\+\_\+is\+Broadcast\+Multicast} (\hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$address)
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group___packet_functions_ga47c60182596145c31db05b11926cdcb2}{packetfunctions\+\_\+is\+All\+Routers\+Multicast} (\hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$address)
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group___packet_functions_ga4002d21fb26813d4652268eccf7e4acd}{packetfunctions\+\_\+is\+All\+Hosts\+Multicast} (\hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$address)
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group___packet_functions_ga1f1461cad2a1e59c303d24fa8e165569}{packetfunctions\+\_\+same\+Address} (\hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$address\+\_\+1, \hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$address\+\_\+2)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___packet_functions_ga8d69558563daaaa7d6829353b919cf91}{packetfunctions\+\_\+read\+Address} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$payload, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} type, \hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$write\+To\+Address, \hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} little\+Endian)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___packet_functions_ga000bbaa2e29486905064fc77ef9f9653}{packetfunctions\+\_\+write\+Address} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$address, \hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} little\+Endian)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___packet_functions_ga690ad87588077409f382584732259925}{packetfunctions\+\_\+reserve\+Header\+Size} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$pkt, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} header\+\_\+length)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___packet_functions_ga28450dafe3516a0b2275e564ef01fafb}{packetfunctions\+\_\+toss\+Header} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$pkt, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} header\+\_\+length)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___packet_functions_gae3cb67c149428f8b5613cacbfa1a6e24}{packetfunctions\+\_\+reserve\+Footer\+Size} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$pkt, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} header\+\_\+length)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___packet_functions_ga54293366b7be24efa7bb2ebc73dcee23}{packetfunctions\+\_\+toss\+Footer} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$pkt, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} header\+\_\+length)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___packet_functions_ga0c706bd05f894eb8506ed3ac105db914}{packetfunctions\+\_\+duplicate\+Packet} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$dst, \hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$src)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___packet_functions_ga16f1295774f4a73bd950ea958524884c}{packetfunctions\+\_\+calculate\+C\+RC} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg)
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group___packet_functions_ga71efba46301d8ac6a3236e90b4cf0c94}{packetfunctions\+\_\+check\+C\+RC} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___packet_functions_ga35d4105117b00f89a87823ff34834ad9}{packetfunctions\+\_\+calculate\+Checksum} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$checksum\+\_\+ptr)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___packet_functions_ga3e26888db2ba6e41c9eb6675dfa9c5f9}{packetfunctions\+\_\+htons} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} val, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$dest)
+\item 
+\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{group___packet_functions_gab960a8cb0d85a7b628fbaf47d0887cad}{packetfunctions\+\_\+ntohs} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$src)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___packet_functions_gadab5be4bd6eea7fddd27f533fd5cb205}{packetfunctions\+\_\+htonl} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} val, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$dest)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group___packet_functions_ga8525e8460e9cc8481008f56183d14d69}{packetfunctions\+\_\+ntohl} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$src)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A library of functions useful for manipulating packets and addresses. 
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, August 2010 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\index{Packet\+Functions@{Packet\+Functions}!packetfunctions\+\_\+calculate\+Checksum@{packetfunctions\+\_\+calculate\+Checksum}}
+\index{packetfunctions\+\_\+calculate\+Checksum@{packetfunctions\+\_\+calculate\+Checksum}!Packet\+Functions@{Packet\+Functions}}
+\subsubsection[{\texorpdfstring{packetfunctions\+\_\+calculate\+Checksum(\+Open\+Queue\+Entry\+\_\+t $\ast$msg, uint8\+\_\+t $\ast$checksum\+\_\+ptr)}{packetfunctions_calculateChecksum(OpenQueueEntry_t *msg, uint8_t *checksum_ptr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} packetfunctions\+\_\+calculate\+Checksum (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{checksum\+\_\+ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{group___packet_functions_ga35d4105117b00f89a87823ff34834ad9}{}\label{group___packet_functions_ga35d4105117b00f89a87823ff34834ad9}
+
+
+Definition at line 383 of file packetfunctions.\+c.
+
+\index{Packet\+Functions@{Packet\+Functions}!packetfunctions\+\_\+calculate\+C\+RC@{packetfunctions\+\_\+calculate\+C\+RC}}
+\index{packetfunctions\+\_\+calculate\+C\+RC@{packetfunctions\+\_\+calculate\+C\+RC}!Packet\+Functions@{Packet\+Functions}}
+\subsubsection[{\texorpdfstring{packetfunctions\+\_\+calculate\+C\+R\+C(\+Open\+Queue\+Entry\+\_\+t $\ast$msg)}{packetfunctions_calculateCRC(OpenQueueEntry_t *msg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} packetfunctions\+\_\+calculate\+C\+RC (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{group___packet_functions_ga16f1295774f4a73bd950ea958524884c}{}\label{group___packet_functions_ga16f1295774f4a73bd950ea958524884c}
+
+
+Definition at line 335 of file packetfunctions.\+c.
+
+\index{Packet\+Functions@{Packet\+Functions}!packetfunctions\+\_\+check\+C\+RC@{packetfunctions\+\_\+check\+C\+RC}}
+\index{packetfunctions\+\_\+check\+C\+RC@{packetfunctions\+\_\+check\+C\+RC}!Packet\+Functions@{Packet\+Functions}}
+\subsubsection[{\texorpdfstring{packetfunctions\+\_\+check\+C\+R\+C(\+Open\+Queue\+Entry\+\_\+t $\ast$msg)}{packetfunctions_checkCRC(OpenQueueEntry_t *msg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} packetfunctions\+\_\+check\+C\+RC (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{group___packet_functions_ga71efba46301d8ac6a3236e90b4cf0c94}{}\label{group___packet_functions_ga71efba46301d8ac6a3236e90b4cf0c94}
+
+
+Definition at line 355 of file packetfunctions.\+c.
+
+\index{Packet\+Functions@{Packet\+Functions}!packetfunctions\+\_\+duplicate\+Packet@{packetfunctions\+\_\+duplicate\+Packet}}
+\index{packetfunctions\+\_\+duplicate\+Packet@{packetfunctions\+\_\+duplicate\+Packet}!Packet\+Functions@{Packet\+Functions}}
+\subsubsection[{\texorpdfstring{packetfunctions\+\_\+duplicate\+Packet(\+Open\+Queue\+Entry\+\_\+t $\ast$dst, Open\+Queue\+Entry\+\_\+t $\ast$src)}{packetfunctions_duplicatePacket(OpenQueueEntry_t *dst, OpenQueueEntry_t *src)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} packetfunctions\+\_\+duplicate\+Packet (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{dst, }
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{src}
+\end{DoxyParamCaption}
+)}\hypertarget{group___packet_functions_ga0c706bd05f894eb8506ed3ac105db914}{}\label{group___packet_functions_ga0c706bd05f894eb8506ed3ac105db914}
+
+
+Definition at line 310 of file packetfunctions.\+c.
+
+\index{Packet\+Functions@{Packet\+Functions}!packetfunctions\+\_\+htonl@{packetfunctions\+\_\+htonl}}
+\index{packetfunctions\+\_\+htonl@{packetfunctions\+\_\+htonl}!Packet\+Functions@{Packet\+Functions}}
+\subsubsection[{\texorpdfstring{packetfunctions\+\_\+htonl(uint32\+\_\+t val, uint8\+\_\+t $\ast$dest)}{packetfunctions_htonl(uint32_t val, uint8_t *dest)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} packetfunctions\+\_\+htonl (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{val, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{dest}
+\end{DoxyParamCaption}
+)}\hypertarget{group___packet_functions_gadab5be4bd6eea7fddd27f533fd5cb205}{}\label{group___packet_functions_gadab5be4bd6eea7fddd27f533fd5cb205}
+
+
+Definition at line 456 of file packetfunctions.\+c.
+
+\index{Packet\+Functions@{Packet\+Functions}!packetfunctions\+\_\+htons@{packetfunctions\+\_\+htons}}
+\index{packetfunctions\+\_\+htons@{packetfunctions\+\_\+htons}!Packet\+Functions@{Packet\+Functions}}
+\subsubsection[{\texorpdfstring{packetfunctions\+\_\+htons(uint16\+\_\+t val, uint8\+\_\+t $\ast$dest)}{packetfunctions_htons(uint16_t val, uint8_t *dest)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} packetfunctions\+\_\+htons (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t}}]{val, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{dest}
+\end{DoxyParamCaption}
+)}\hypertarget{group___packet_functions_ga3e26888db2ba6e41c9eb6675dfa9c5f9}{}\label{group___packet_functions_ga3e26888db2ba6e41c9eb6675dfa9c5f9}
+
+
+Definition at line 445 of file packetfunctions.\+c.
+
+\index{Packet\+Functions@{Packet\+Functions}!packetfunctions\+\_\+ip128b\+To\+Mac64b@{packetfunctions\+\_\+ip128b\+To\+Mac64b}}
+\index{packetfunctions\+\_\+ip128b\+To\+Mac64b@{packetfunctions\+\_\+ip128b\+To\+Mac64b}!Packet\+Functions@{Packet\+Functions}}
+\subsubsection[{\texorpdfstring{packetfunctions\+\_\+ip128b\+To\+Mac64b(open\+\_\+addr\+\_\+t $\ast$ip128b, open\+\_\+addr\+\_\+t $\ast$prefix64bto\+Write, open\+\_\+addr\+\_\+t $\ast$mac64bto\+Write)}{packetfunctions_ip128bToMac64b(open_addr_t *ip128b, open_addr_t *prefix64btoWrite, open_addr_t *mac64btoWrite)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} packetfunctions\+\_\+ip128b\+To\+Mac64b (
+\begin{DoxyParamCaption}
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{ip128b, }
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{prefix64bto\+Write, }
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{mac64bto\+Write}
+\end{DoxyParamCaption}
+)}\hypertarget{group___packet_functions_ga3f23f27556fb610f16c170378eeabeec}{}\label{group___packet_functions_ga3f23f27556fb610f16c170378eeabeec}
+
+
+Definition at line 16 of file packetfunctions.\+c.
+
+\index{Packet\+Functions@{Packet\+Functions}!packetfunctions\+\_\+is\+All\+Hosts\+Multicast@{packetfunctions\+\_\+is\+All\+Hosts\+Multicast}}
+\index{packetfunctions\+\_\+is\+All\+Hosts\+Multicast@{packetfunctions\+\_\+is\+All\+Hosts\+Multicast}!Packet\+Functions@{Packet\+Functions}}
+\subsubsection[{\texorpdfstring{packetfunctions\+\_\+is\+All\+Hosts\+Multicast(open\+\_\+addr\+\_\+t $\ast$address)}{packetfunctions_isAllHostsMulticast(open_addr_t *address)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} packetfunctions\+\_\+is\+All\+Hosts\+Multicast (
+\begin{DoxyParamCaption}
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{address}
+\end{DoxyParamCaption}
+)}\hypertarget{group___packet_functions_ga4002d21fb26813d4652268eccf7e4acd}{}\label{group___packet_functions_ga4002d21fb26813d4652268eccf7e4acd}
+
+
+Definition at line 140 of file packetfunctions.\+c.
+
+\index{Packet\+Functions@{Packet\+Functions}!packetfunctions\+\_\+is\+All\+Routers\+Multicast@{packetfunctions\+\_\+is\+All\+Routers\+Multicast}}
+\index{packetfunctions\+\_\+is\+All\+Routers\+Multicast@{packetfunctions\+\_\+is\+All\+Routers\+Multicast}!Packet\+Functions@{Packet\+Functions}}
+\subsubsection[{\texorpdfstring{packetfunctions\+\_\+is\+All\+Routers\+Multicast(open\+\_\+addr\+\_\+t $\ast$address)}{packetfunctions_isAllRoutersMulticast(open_addr_t *address)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} packetfunctions\+\_\+is\+All\+Routers\+Multicast (
+\begin{DoxyParamCaption}
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{address}
+\end{DoxyParamCaption}
+)}\hypertarget{group___packet_functions_ga47c60182596145c31db05b11926cdcb2}{}\label{group___packet_functions_ga47c60182596145c31db05b11926cdcb2}
+
+
+Definition at line 115 of file packetfunctions.\+c.
+
+\index{Packet\+Functions@{Packet\+Functions}!packetfunctions\+\_\+is\+Broadcast\+Multicast@{packetfunctions\+\_\+is\+Broadcast\+Multicast}}
+\index{packetfunctions\+\_\+is\+Broadcast\+Multicast@{packetfunctions\+\_\+is\+Broadcast\+Multicast}!Packet\+Functions@{Packet\+Functions}}
+\subsubsection[{\texorpdfstring{packetfunctions\+\_\+is\+Broadcast\+Multicast(open\+\_\+addr\+\_\+t $\ast$address)}{packetfunctions_isBroadcastMulticast(open_addr_t *address)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} packetfunctions\+\_\+is\+Broadcast\+Multicast (
+\begin{DoxyParamCaption}
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{address}
+\end{DoxyParamCaption}
+)}\hypertarget{group___packet_functions_gaba1f21e2310fa6bb90ee23eba583e4de}{}\label{group___packet_functions_gaba1f21e2310fa6bb90ee23eba583e4de}
+
+
+Definition at line 82 of file packetfunctions.\+c.
+
+\index{Packet\+Functions@{Packet\+Functions}!packetfunctions\+\_\+mac16b\+To\+Mac64b@{packetfunctions\+\_\+mac16b\+To\+Mac64b}}
+\index{packetfunctions\+\_\+mac16b\+To\+Mac64b@{packetfunctions\+\_\+mac16b\+To\+Mac64b}!Packet\+Functions@{Packet\+Functions}}
+\subsubsection[{\texorpdfstring{packetfunctions\+\_\+mac16b\+To\+Mac64b(open\+\_\+addr\+\_\+t $\ast$mac16b, open\+\_\+addr\+\_\+t $\ast$mac64bto\+Write)}{packetfunctions_mac16bToMac64b(open_addr_t *mac16b, open_addr_t *mac64btoWrite)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} packetfunctions\+\_\+mac16b\+To\+Mac64b (
+\begin{DoxyParamCaption}
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{mac16b, }
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{mac64bto\+Write}
+\end{DoxyParamCaption}
+)}\hypertarget{group___packet_functions_gab6e0f97c424d57d22794d2c4e0193990}{}\label{group___packet_functions_gab6e0f97c424d57d22794d2c4e0193990}
+
+
+Definition at line 61 of file packetfunctions.\+c.
+
+\index{Packet\+Functions@{Packet\+Functions}!packetfunctions\+\_\+mac64b\+To\+Ip128b@{packetfunctions\+\_\+mac64b\+To\+Ip128b}}
+\index{packetfunctions\+\_\+mac64b\+To\+Ip128b@{packetfunctions\+\_\+mac64b\+To\+Ip128b}!Packet\+Functions@{Packet\+Functions}}
+\subsubsection[{\texorpdfstring{packetfunctions\+\_\+mac64b\+To\+Ip128b(open\+\_\+addr\+\_\+t $\ast$prefix64b, open\+\_\+addr\+\_\+t $\ast$mac64b, open\+\_\+addr\+\_\+t $\ast$ip128b\+To\+Write)}{packetfunctions_mac64bToIp128b(open_addr_t *prefix64b, open_addr_t *mac64b, open_addr_t *ip128bToWrite)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} packetfunctions\+\_\+mac64b\+To\+Ip128b (
+\begin{DoxyParamCaption}
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{prefix64b, }
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{mac64b, }
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{ip128b\+To\+Write}
+\end{DoxyParamCaption}
+)}\hypertarget{group___packet_functions_ga6d7fd056d46deba15d06d3dc86d3569a}{}\label{group___packet_functions_ga6d7fd056d46deba15d06d3dc86d3569a}
+
+
+Definition at line 32 of file packetfunctions.\+c.
+
+\index{Packet\+Functions@{Packet\+Functions}!packetfunctions\+\_\+mac64b\+To\+Mac16b@{packetfunctions\+\_\+mac64b\+To\+Mac16b}}
+\index{packetfunctions\+\_\+mac64b\+To\+Mac16b@{packetfunctions\+\_\+mac64b\+To\+Mac16b}!Packet\+Functions@{Packet\+Functions}}
+\subsubsection[{\texorpdfstring{packetfunctions\+\_\+mac64b\+To\+Mac16b(open\+\_\+addr\+\_\+t $\ast$mac64b, open\+\_\+addr\+\_\+t $\ast$mac16bto\+Write)}{packetfunctions_mac64bToMac16b(open_addr_t *mac64b, open_addr_t *mac16btoWrite)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} packetfunctions\+\_\+mac64b\+To\+Mac16b (
+\begin{DoxyParamCaption}
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{mac64b, }
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{mac16bto\+Write}
+\end{DoxyParamCaption}
+)}\hypertarget{group___packet_functions_ga26987c269ac582016eaf905cec7b3ead}{}\label{group___packet_functions_ga26987c269ac582016eaf905cec7b3ead}
+
+
+Definition at line 49 of file packetfunctions.\+c.
+
+\index{Packet\+Functions@{Packet\+Functions}!packetfunctions\+\_\+ntohl@{packetfunctions\+\_\+ntohl}}
+\index{packetfunctions\+\_\+ntohl@{packetfunctions\+\_\+ntohl}!Packet\+Functions@{Packet\+Functions}}
+\subsubsection[{\texorpdfstring{packetfunctions\+\_\+ntohl(uint8\+\_\+t $\ast$src)}{packetfunctions_ntohl(uint8_t *src)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} packetfunctions\+\_\+ntohl (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t} $\ast$}]{src}
+\end{DoxyParamCaption}
+)}\hypertarget{group___packet_functions_ga8525e8460e9cc8481008f56183d14d69}{}\label{group___packet_functions_ga8525e8460e9cc8481008f56183d14d69}
+
+
+Definition at line 463 of file packetfunctions.\+c.
+
+\index{Packet\+Functions@{Packet\+Functions}!packetfunctions\+\_\+ntohs@{packetfunctions\+\_\+ntohs}}
+\index{packetfunctions\+\_\+ntohs@{packetfunctions\+\_\+ntohs}!Packet\+Functions@{Packet\+Functions}}
+\subsubsection[{\texorpdfstring{packetfunctions\+\_\+ntohs(uint8\+\_\+t $\ast$src)}{packetfunctions_ntohs(uint8_t *src)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\+\_\+t} packetfunctions\+\_\+ntohs (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t} $\ast$}]{src}
+\end{DoxyParamCaption}
+)}\hypertarget{group___packet_functions_gab960a8cb0d85a7b628fbaf47d0887cad}{}\label{group___packet_functions_gab960a8cb0d85a7b628fbaf47d0887cad}
+
+
+Definition at line 450 of file packetfunctions.\+c.
+
+\index{Packet\+Functions@{Packet\+Functions}!packetfunctions\+\_\+read\+Address@{packetfunctions\+\_\+read\+Address}}
+\index{packetfunctions\+\_\+read\+Address@{packetfunctions\+\_\+read\+Address}!Packet\+Functions@{Packet\+Functions}}
+\subsubsection[{\texorpdfstring{packetfunctions\+\_\+read\+Address(uint8\+\_\+t $\ast$payload, uint8\+\_\+t type, open\+\_\+addr\+\_\+t $\ast$write\+To\+Address, bool little\+Endian)}{packetfunctions_readAddress(uint8_t *payload, uint8_t type, open_addr_t *writeToAddress, bool littleEndian)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} packetfunctions\+\_\+read\+Address (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t} $\ast$}]{payload, }
+\item[{{\bf uint8\+\_\+t}}]{type, }
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{write\+To\+Address, }
+\item[{{\bf bool}}]{little\+Endian}
+\end{DoxyParamCaption}
+)}\hypertarget{group___packet_functions_ga8d69558563daaaa7d6829353b919cf91}{}\label{group___packet_functions_ga8d69558563daaaa7d6829353b919cf91}
+
+
+Definition at line 199 of file packetfunctions.\+c.
+
+\index{Packet\+Functions@{Packet\+Functions}!packetfunctions\+\_\+reserve\+Footer\+Size@{packetfunctions\+\_\+reserve\+Footer\+Size}}
+\index{packetfunctions\+\_\+reserve\+Footer\+Size@{packetfunctions\+\_\+reserve\+Footer\+Size}!Packet\+Functions@{Packet\+Functions}}
+\subsubsection[{\texorpdfstring{packetfunctions\+\_\+reserve\+Footer\+Size(\+Open\+Queue\+Entry\+\_\+t $\ast$pkt, uint8\+\_\+t header\+\_\+length)}{packetfunctions_reserveFooterSize(OpenQueueEntry_t *pkt, uint8_t header_length)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} packetfunctions\+\_\+reserve\+Footer\+Size (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{pkt, }
+\item[{{\bf uint8\+\_\+t}}]{header\+\_\+length}
+\end{DoxyParamCaption}
+)}\hypertarget{group___packet_functions_gae3cb67c149428f8b5613cacbfa1a6e24}{}\label{group___packet_functions_gae3cb67c149428f8b5613cacbfa1a6e24}
+
+
+Definition at line 288 of file packetfunctions.\+c.
+
+\index{Packet\+Functions@{Packet\+Functions}!packetfunctions\+\_\+reserve\+Header\+Size@{packetfunctions\+\_\+reserve\+Header\+Size}}
+\index{packetfunctions\+\_\+reserve\+Header\+Size@{packetfunctions\+\_\+reserve\+Header\+Size}!Packet\+Functions@{Packet\+Functions}}
+\subsubsection[{\texorpdfstring{packetfunctions\+\_\+reserve\+Header\+Size(\+Open\+Queue\+Entry\+\_\+t $\ast$pkt, uint8\+\_\+t header\+\_\+length)}{packetfunctions_reserveHeaderSize(OpenQueueEntry_t *pkt, uint8_t header_length)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} packetfunctions\+\_\+reserve\+Header\+Size (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{pkt, }
+\item[{{\bf uint8\+\_\+t}}]{header\+\_\+length}
+\end{DoxyParamCaption}
+)}\hypertarget{group___packet_functions_ga690ad87588077409f382584732259925}{}\label{group___packet_functions_ga690ad87588077409f382584732259925}
+
+
+Definition at line 268 of file packetfunctions.\+c.
+
+\index{Packet\+Functions@{Packet\+Functions}!packetfunctions\+\_\+same\+Address@{packetfunctions\+\_\+same\+Address}}
+\index{packetfunctions\+\_\+same\+Address@{packetfunctions\+\_\+same\+Address}!Packet\+Functions@{Packet\+Functions}}
+\subsubsection[{\texorpdfstring{packetfunctions\+\_\+same\+Address(open\+\_\+addr\+\_\+t $\ast$address\+\_\+1, open\+\_\+addr\+\_\+t $\ast$address\+\_\+2)}{packetfunctions_sameAddress(open_addr_t *address_1, open_addr_t *address_2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} packetfunctions\+\_\+same\+Address (
+\begin{DoxyParamCaption}
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{address\+\_\+1, }
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{address\+\_\+2}
+\end{DoxyParamCaption}
+)}\hypertarget{group___packet_functions_ga1f1461cad2a1e59c303d24fa8e165569}{}\label{group___packet_functions_ga1f1461cad2a1e59c303d24fa8e165569}
+
+
+Definition at line 165 of file packetfunctions.\+c.
+
+\index{Packet\+Functions@{Packet\+Functions}!packetfunctions\+\_\+toss\+Footer@{packetfunctions\+\_\+toss\+Footer}}
+\index{packetfunctions\+\_\+toss\+Footer@{packetfunctions\+\_\+toss\+Footer}!Packet\+Functions@{Packet\+Functions}}
+\subsubsection[{\texorpdfstring{packetfunctions\+\_\+toss\+Footer(\+Open\+Queue\+Entry\+\_\+t $\ast$pkt, uint8\+\_\+t header\+\_\+length)}{packetfunctions_tossFooter(OpenQueueEntry_t *pkt, uint8_t header_length)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} packetfunctions\+\_\+toss\+Footer (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{pkt, }
+\item[{{\bf uint8\+\_\+t}}]{header\+\_\+length}
+\end{DoxyParamCaption}
+)}\hypertarget{group___packet_functions_ga54293366b7be24efa7bb2ebc73dcee23}{}\label{group___packet_functions_ga54293366b7be24efa7bb2ebc73dcee23}
+
+
+Definition at line 297 of file packetfunctions.\+c.
+
+\index{Packet\+Functions@{Packet\+Functions}!packetfunctions\+\_\+toss\+Header@{packetfunctions\+\_\+toss\+Header}}
+\index{packetfunctions\+\_\+toss\+Header@{packetfunctions\+\_\+toss\+Header}!Packet\+Functions@{Packet\+Functions}}
+\subsubsection[{\texorpdfstring{packetfunctions\+\_\+toss\+Header(\+Open\+Queue\+Entry\+\_\+t $\ast$pkt, uint8\+\_\+t header\+\_\+length)}{packetfunctions_tossHeader(OpenQueueEntry_t *pkt, uint8_t header_length)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} packetfunctions\+\_\+toss\+Header (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{pkt, }
+\item[{{\bf uint8\+\_\+t}}]{header\+\_\+length}
+\end{DoxyParamCaption}
+)}\hypertarget{group___packet_functions_ga28450dafe3516a0b2275e564ef01fafb}{}\label{group___packet_functions_ga28450dafe3516a0b2275e564ef01fafb}
+
+
+Definition at line 278 of file packetfunctions.\+c.
+
+\index{Packet\+Functions@{Packet\+Functions}!packetfunctions\+\_\+write\+Address@{packetfunctions\+\_\+write\+Address}}
+\index{packetfunctions\+\_\+write\+Address@{packetfunctions\+\_\+write\+Address}!Packet\+Functions@{Packet\+Functions}}
+\subsubsection[{\texorpdfstring{packetfunctions\+\_\+write\+Address(\+Open\+Queue\+Entry\+\_\+t $\ast$msg, open\+\_\+addr\+\_\+t $\ast$address, bool little\+Endian)}{packetfunctions_writeAddress(OpenQueueEntry_t *msg, open_addr_t *address, bool littleEndian)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} packetfunctions\+\_\+write\+Address (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg, }
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{address, }
+\item[{{\bf bool}}]{little\+Endian}
+\end{DoxyParamCaption}
+)}\hypertarget{group___packet_functions_ga000bbaa2e29486905064fc77ef9f9653}{}\label{group___packet_functions_ga000bbaa2e29486905064fc77ef9f9653}
+
+
+Definition at line 232 of file packetfunctions.\+c.
+

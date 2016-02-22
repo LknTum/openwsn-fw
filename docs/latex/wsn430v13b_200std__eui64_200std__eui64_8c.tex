@@ -1,0 +1,321 @@
+\hypertarget{wsn430v13b_200std__eui64_200std__eui64_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.c File Reference}
+\label{wsn430v13b_200std__eui64_200std__eui64_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}}
+{\ttfamily \#include \char`\"{}msp430f1611.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stdint.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}string.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{wsn430v13b_200std__eui64_200std__eui64_8c_a91d02a7fd684154f2d38f85d5e1e9486}{P\+I\+N\+\_\+1\+W\+I\+RE}~0x10
+\begin{DoxyCompactList}\small\item\em This is a standalone test program for retrieving the unique identifier from the D\+S2411 chip on the TelosB. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \\*
+\hyperlink{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185edea95d23614110e43c87041571190cce0cb}{O\+W\+\_\+\+D\+L\+Y\+\_\+A} = 6, 
+\hyperlink{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185edea66ad16592881b1707b127828ca073be9}{O\+W\+\_\+\+D\+L\+Y\+\_\+B} = 64, 
+\hyperlink{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185edeaaaf85f97eaf499ed865fb8856dddfd1e}{O\+W\+\_\+\+D\+L\+Y\+\_\+C} = 60, 
+\hyperlink{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185edeaab5d36f6bd5e3032fc66102551fd625b}{O\+W\+\_\+\+D\+L\+Y\+\_\+D} = 10, 
+\\*
+\hyperlink{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185edea3e38856239e96f3003e4b34d957d1fd8}{O\+W\+\_\+\+D\+L\+Y\+\_\+E} = 9, 
+\hyperlink{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185edeae2f4b32c6fe9e805c8e458d4fa80c12c}{O\+W\+\_\+\+D\+L\+Y\+\_\+F} = 55, 
+\hyperlink{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185edeaa0900832e0eae6c38350fa6e71b3b863}{O\+W\+\_\+\+D\+L\+Y\+\_\+G} = 0, 
+\hyperlink{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185edeab2b3d130c3d8aa573b51a1366d835c19}{O\+W\+\_\+\+D\+L\+Y\+\_\+H} = 480, 
+\\*
+\hyperlink{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185edea41e21c63c97bce7b9a68b4cc09a9a31d}{O\+W\+\_\+\+D\+L\+Y\+\_\+I} = 90, 
+\hyperlink{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185edeae35639cedf50525cd0b9d3eba478c85a}{O\+W\+\_\+\+D\+L\+Y\+\_\+J} = 220
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{wsn430v13b_200std__eui64_200std__eui64_8c_a35b82123157aa4f8589eb774de92877c}{owchip\+\_\+geteui} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$eui)
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{wsn430v13b_200std__eui64_200std__eui64_8c_aec118a6a0700dbb2e81a040e37d166d0}{ow\+\_\+reset} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{wsn430v13b_200std__eui64_200std__eui64_8c_a5b8f2090b2f2ec4d3d76eae807a76972}{ow\+\_\+write\+\_\+byte} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{_p_e___types_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte})
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{wsn430v13b_200std__eui64_200std__eui64_8c_a80fbcd9f6f9a77b59aa76d62a0fd1999}{ow\+\_\+read\+\_\+byte} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{wsn430v13b_200std__eui64_200std__eui64_8c_a45133d322a7172da3e56b10106f23c26}{ow\+\_\+write\+\_\+bit} (int is\+\_\+one)
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{wsn430v13b_200std__eui64_200std__eui64_8c_ae32f070d8080c0781bc8f2952c7683d6}{ow\+\_\+read\+\_\+bit} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{wsn430v13b_200std__eui64_200std__eui64_8c_abd72909432a0409bc2b5c278363e88fd}{ow\+\_\+write\+\_\+bit\+\_\+one} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{wsn430v13b_200std__eui64_200std__eui64_8c_adaccaaa1a83c96448dcb6072284f173e}{ow\+\_\+write\+\_\+bit\+\_\+zero} ()
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{wsn430v13b_200std__eui64_200std__eui64_8c_a0d061b1efffe3f383172b035db60d538}{crc8\+\_\+byte} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} crc, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{_p_e___types_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte})
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{wsn430v13b_200std__eui64_200std__eui64_8c_ae4fc958e1bfdbe55e1052ad7369cbd09}{crc8\+\_\+bytes} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} crc, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$bytes, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} len)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{wsn430v13b_200std__eui64_200std__eui64_8c_a6ff6aff9e684ab5c6fbc55371a06f695}{delay\+\_\+us} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{chips_2cc1101_2radio_8c_ac64d140b48f8d336f899452fae7cfe00}{delay})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{wsn430v13b_200std__eui64_200std__eui64_8c_a8c84a7782277b077226bed76c0142347}{owpin\+\_\+init} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{wsn430v13b_200std__eui64_200std__eui64_8c_a0b7f4882143e940dfc3085d6d9228363}{owpin\+\_\+output\+\_\+low} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{wsn430v13b_200std__eui64_200std__eui64_8c_a9ba2d5b5692c53b86807bcd581a958ac}{owpin\+\_\+output\+\_\+high} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{wsn430v13b_200std__eui64_200std__eui64_8c_a89fe7438be854e06e69835c0a745299a}{owpin\+\_\+prepare\+\_\+read} ()
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{wsn430v13b_200std__eui64_200std__eui64_8c_add5fb75c5871a9e5ef94f4dac86c8943}{owpin\+\_\+read} ()
+\item 
+int \hyperlink{wsn430v13b_200std__eui64_200std__eui64_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em The program starts executing here. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}!P\+I\+N\+\_\+1\+W\+I\+RE@{P\+I\+N\+\_\+1\+W\+I\+RE}}
+\index{P\+I\+N\+\_\+1\+W\+I\+RE@{P\+I\+N\+\_\+1\+W\+I\+RE}!wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}}
+\subsubsection[{\texorpdfstring{P\+I\+N\+\_\+1\+W\+I\+RE}{PIN_1WIRE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+I\+N\+\_\+1\+W\+I\+RE~0x10}\hypertarget{wsn430v13b_200std__eui64_200std__eui64_8c_a91d02a7fd684154f2d38f85d5e1e9486}{}\label{wsn430v13b_200std__eui64_200std__eui64_8c_a91d02a7fd684154f2d38f85d5e1e9486}
+
+
+This is a standalone test program for retrieving the unique identifier from the D\+S2411 chip on the TelosB. 
+
+The datasheet of the chip at \href{http://pdfserv.maxim-ic.com/en/ds/DS2411.pdf}{\tt http\+://pdfserv.\+maxim-\/ic.\+com/en/ds/\+D\+S2411.\+pdf}.
+
+Run the program, put a breakpoint a the last line of \hyperlink{gina_200std__eui64_200std__eui64_8c_a840291bc02cba5474a4cb46a9b9566fe}{main()}, and when you get there, watch variable eui. I contains the 64-\/bits read from the D\+S2411, i.\+e.
+\begin{DoxyItemize}
+\item \mbox{[}1B\mbox{]} C\+R\+C8
+\item \mbox{[}6B\mbox{]} unique 48-\/bit identifier
+\item \mbox{[}1B\mbox{]} always 0x01
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, March 2012. 
+\end{DoxyAuthor}
+
+
+Definition at line 22 of file 00std\+\_\+eui64.\+c.
+
+
+
+\subsection{Enumeration Type Documentation}
+\subsubsection[{\texorpdfstring{anonymous enum}{anonymous enum}}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\hypertarget{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185ede}{}\label{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185ede}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{O\+W\+\_\+\+D\+L\+Y\+\_\+A@{O\+W\+\_\+\+D\+L\+Y\+\_\+A}!wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}}\index{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}!O\+W\+\_\+\+D\+L\+Y\+\_\+A@{O\+W\+\_\+\+D\+L\+Y\+\_\+A}}\item[{\em 
+O\+W\+\_\+\+D\+L\+Y\+\_\+A\hypertarget{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185edea95d23614110e43c87041571190cce0cb}{}\label{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185edea95d23614110e43c87041571190cce0cb}
+}]\index{O\+W\+\_\+\+D\+L\+Y\+\_\+B@{O\+W\+\_\+\+D\+L\+Y\+\_\+B}!wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}}\index{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}!O\+W\+\_\+\+D\+L\+Y\+\_\+B@{O\+W\+\_\+\+D\+L\+Y\+\_\+B}}\item[{\em 
+O\+W\+\_\+\+D\+L\+Y\+\_\+B\hypertarget{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185edea66ad16592881b1707b127828ca073be9}{}\label{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185edea66ad16592881b1707b127828ca073be9}
+}]\index{O\+W\+\_\+\+D\+L\+Y\+\_\+C@{O\+W\+\_\+\+D\+L\+Y\+\_\+C}!wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}}\index{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}!O\+W\+\_\+\+D\+L\+Y\+\_\+C@{O\+W\+\_\+\+D\+L\+Y\+\_\+C}}\item[{\em 
+O\+W\+\_\+\+D\+L\+Y\+\_\+C\hypertarget{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185edeaaaf85f97eaf499ed865fb8856dddfd1e}{}\label{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185edeaaaf85f97eaf499ed865fb8856dddfd1e}
+}]\index{O\+W\+\_\+\+D\+L\+Y\+\_\+D@{O\+W\+\_\+\+D\+L\+Y\+\_\+D}!wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}}\index{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}!O\+W\+\_\+\+D\+L\+Y\+\_\+D@{O\+W\+\_\+\+D\+L\+Y\+\_\+D}}\item[{\em 
+O\+W\+\_\+\+D\+L\+Y\+\_\+D\hypertarget{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185edeaab5d36f6bd5e3032fc66102551fd625b}{}\label{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185edeaab5d36f6bd5e3032fc66102551fd625b}
+}]\index{O\+W\+\_\+\+D\+L\+Y\+\_\+E@{O\+W\+\_\+\+D\+L\+Y\+\_\+E}!wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}}\index{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}!O\+W\+\_\+\+D\+L\+Y\+\_\+E@{O\+W\+\_\+\+D\+L\+Y\+\_\+E}}\item[{\em 
+O\+W\+\_\+\+D\+L\+Y\+\_\+E\hypertarget{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185edea3e38856239e96f3003e4b34d957d1fd8}{}\label{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185edea3e38856239e96f3003e4b34d957d1fd8}
+}]\index{O\+W\+\_\+\+D\+L\+Y\+\_\+F@{O\+W\+\_\+\+D\+L\+Y\+\_\+F}!wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}}\index{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}!O\+W\+\_\+\+D\+L\+Y\+\_\+F@{O\+W\+\_\+\+D\+L\+Y\+\_\+F}}\item[{\em 
+O\+W\+\_\+\+D\+L\+Y\+\_\+F\hypertarget{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185edeae2f4b32c6fe9e805c8e458d4fa80c12c}{}\label{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185edeae2f4b32c6fe9e805c8e458d4fa80c12c}
+}]\index{O\+W\+\_\+\+D\+L\+Y\+\_\+G@{O\+W\+\_\+\+D\+L\+Y\+\_\+G}!wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}}\index{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}!O\+W\+\_\+\+D\+L\+Y\+\_\+G@{O\+W\+\_\+\+D\+L\+Y\+\_\+G}}\item[{\em 
+O\+W\+\_\+\+D\+L\+Y\+\_\+G\hypertarget{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185edeaa0900832e0eae6c38350fa6e71b3b863}{}\label{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185edeaa0900832e0eae6c38350fa6e71b3b863}
+}]\index{O\+W\+\_\+\+D\+L\+Y\+\_\+H@{O\+W\+\_\+\+D\+L\+Y\+\_\+H}!wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}}\index{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}!O\+W\+\_\+\+D\+L\+Y\+\_\+H@{O\+W\+\_\+\+D\+L\+Y\+\_\+H}}\item[{\em 
+O\+W\+\_\+\+D\+L\+Y\+\_\+H\hypertarget{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185edeab2b3d130c3d8aa573b51a1366d835c19}{}\label{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185edeab2b3d130c3d8aa573b51a1366d835c19}
+}]\index{O\+W\+\_\+\+D\+L\+Y\+\_\+I@{O\+W\+\_\+\+D\+L\+Y\+\_\+I}!wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}}\index{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}!O\+W\+\_\+\+D\+L\+Y\+\_\+I@{O\+W\+\_\+\+D\+L\+Y\+\_\+I}}\item[{\em 
+O\+W\+\_\+\+D\+L\+Y\+\_\+I\hypertarget{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185edea41e21c63c97bce7b9a68b4cc09a9a31d}{}\label{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185edea41e21c63c97bce7b9a68b4cc09a9a31d}
+}]\index{O\+W\+\_\+\+D\+L\+Y\+\_\+J@{O\+W\+\_\+\+D\+L\+Y\+\_\+J}!wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}}\index{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}!O\+W\+\_\+\+D\+L\+Y\+\_\+J@{O\+W\+\_\+\+D\+L\+Y\+\_\+J}}\item[{\em 
+O\+W\+\_\+\+D\+L\+Y\+\_\+J\hypertarget{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185edeae35639cedf50525cd0b9d3eba478c85a}{}\label{wsn430v13b_200std__eui64_200std__eui64_8c_ac791b66a82093c303b1b2aaf4f185edeae35639cedf50525cd0b9d3eba478c85a}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 26 of file 00std\+\_\+eui64.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}!crc8\+\_\+byte@{crc8\+\_\+byte}}
+\index{crc8\+\_\+byte@{crc8\+\_\+byte}!wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}}
+\subsubsection[{\texorpdfstring{crc8\+\_\+byte(uint8\+\_\+t crc, uint8\+\_\+t byte)}{crc8_byte(uint8_t crc, uint8_t byte)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} crc8\+\_\+byte (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{crc, }
+\item[{{\bf uint8\+\_\+t}}]{byte}
+\end{DoxyParamCaption}
+)}\hypertarget{wsn430v13b_200std__eui64_200std__eui64_8c_a0d061b1efffe3f383172b035db60d538}{}\label{wsn430v13b_200std__eui64_200std__eui64_8c_a0d061b1efffe3f383172b035db60d538}
+
+
+Definition at line 193 of file 00std\+\_\+eui64.\+c.
+
+\index{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}!crc8\+\_\+bytes@{crc8\+\_\+bytes}}
+\index{crc8\+\_\+bytes@{crc8\+\_\+bytes}!wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}}
+\subsubsection[{\texorpdfstring{crc8\+\_\+bytes(uint8\+\_\+t crc, uint8\+\_\+t $\ast$bytes, uint8\+\_\+t len)}{crc8_bytes(uint8_t crc, uint8_t *bytes, uint8_t len)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} crc8\+\_\+bytes (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{crc, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{bytes, }
+\item[{{\bf uint8\+\_\+t}}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{wsn430v13b_200std__eui64_200std__eui64_8c_ae4fc958e1bfdbe55e1052ad7369cbd09}{}\label{wsn430v13b_200std__eui64_200std__eui64_8c_ae4fc958e1bfdbe55e1052ad7369cbd09}
+
+
+Definition at line 206 of file 00std\+\_\+eui64.\+c.
+
+\index{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}!delay\+\_\+us@{delay\+\_\+us}}
+\index{delay\+\_\+us@{delay\+\_\+us}!wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}}
+\subsubsection[{\texorpdfstring{delay\+\_\+us(uint16\+\_\+t delay)}{delay_us(uint16_t delay)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} delay\+\_\+us (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t}}]{delay}
+\end{DoxyParamCaption}
+)}\hypertarget{wsn430v13b_200std__eui64_200std__eui64_8c_a6ff6aff9e684ab5c6fbc55371a06f695}{}\label{wsn430v13b_200std__eui64_200std__eui64_8c_a6ff6aff9e684ab5c6fbc55371a06f695}
+
+
+Definition at line 215 of file 00std\+\_\+eui64.\+c.
+
+\index{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}!main@{main}}
+\index{main@{main}!wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}}
+\subsubsection[{\texorpdfstring{main(void)}{main(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{wsn430v13b_200std__eui64_200std__eui64_8c_a840291bc02cba5474a4cb46a9b9566fe}{}\label{wsn430v13b_200std__eui64_200std__eui64_8c_a840291bc02cba5474a4cb46a9b9566fe}
+
+
+The program starts executing here. 
+
+This is a standalone test program for the L\+E\+Ds and 32k\+Hz crystal of the G\+I\+NA board. 
+
+Definition at line 68 of file 00std\+\_\+eui64.\+c.
+
+\index{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}!ow\+\_\+read\+\_\+bit@{ow\+\_\+read\+\_\+bit}}
+\index{ow\+\_\+read\+\_\+bit@{ow\+\_\+read\+\_\+bit}!wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}}
+\subsubsection[{\texorpdfstring{ow\+\_\+read\+\_\+bit()}{ow_read_bit()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} ow\+\_\+read\+\_\+bit (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{wsn430v13b_200std__eui64_200std__eui64_8c_ae32f070d8080c0781bc8f2952c7683d6}{}\label{wsn430v13b_200std__eui64_200std__eui64_8c_ae32f070d8080c0781bc8f2952c7683d6}
+
+
+Definition at line 166 of file 00std\+\_\+eui64.\+c.
+
+\index{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}!ow\+\_\+read\+\_\+byte@{ow\+\_\+read\+\_\+byte}}
+\index{ow\+\_\+read\+\_\+byte@{ow\+\_\+read\+\_\+byte}!wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}}
+\subsubsection[{\texorpdfstring{ow\+\_\+read\+\_\+byte()}{ow_read_byte()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} ow\+\_\+read\+\_\+byte (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{wsn430v13b_200std__eui64_200std__eui64_8c_a80fbcd9f6f9a77b59aa76d62a0fd1999}{}\label{wsn430v13b_200std__eui64_200std__eui64_8c_a80fbcd9f6f9a77b59aa76d62a0fd1999}
+
+
+Definition at line 145 of file 00std\+\_\+eui64.\+c.
+
+\index{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}!ow\+\_\+reset@{ow\+\_\+reset}}
+\index{ow\+\_\+reset@{ow\+\_\+reset}!wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}}
+\subsubsection[{\texorpdfstring{ow\+\_\+reset()}{ow_reset()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} ow\+\_\+reset (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{wsn430v13b_200std__eui64_200std__eui64_8c_aec118a6a0700dbb2e81a040e37d166d0}{}\label{wsn430v13b_200std__eui64_200std__eui64_8c_aec118a6a0700dbb2e81a040e37d166d0}
+
+
+Definition at line 125 of file 00std\+\_\+eui64.\+c.
+
+\index{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}!ow\+\_\+write\+\_\+bit@{ow\+\_\+write\+\_\+bit}}
+\index{ow\+\_\+write\+\_\+bit@{ow\+\_\+write\+\_\+bit}!wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}}
+\subsubsection[{\texorpdfstring{ow\+\_\+write\+\_\+bit(int is\+\_\+one)}{ow_write_bit(int is_one)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} ow\+\_\+write\+\_\+bit (
+\begin{DoxyParamCaption}
+\item[{int}]{is\+\_\+one}
+\end{DoxyParamCaption}
+)}\hypertarget{wsn430v13b_200std__eui64_200std__eui64_8c_a45133d322a7172da3e56b10106f23c26}{}\label{wsn430v13b_200std__eui64_200std__eui64_8c_a45133d322a7172da3e56b10106f23c26}
+
+
+Definition at line 158 of file 00std\+\_\+eui64.\+c.
+
+\index{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}!ow\+\_\+write\+\_\+bit\+\_\+one@{ow\+\_\+write\+\_\+bit\+\_\+one}}
+\index{ow\+\_\+write\+\_\+bit\+\_\+one@{ow\+\_\+write\+\_\+bit\+\_\+one}!wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}}
+\subsubsection[{\texorpdfstring{ow\+\_\+write\+\_\+bit\+\_\+one()}{ow_write_bit_one()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} ow\+\_\+write\+\_\+bit\+\_\+one (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{wsn430v13b_200std__eui64_200std__eui64_8c_abd72909432a0409bc2b5c278363e88fd}{}\label{wsn430v13b_200std__eui64_200std__eui64_8c_abd72909432a0409bc2b5c278363e88fd}
+
+
+Definition at line 177 of file 00std\+\_\+eui64.\+c.
+
+\index{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}!ow\+\_\+write\+\_\+bit\+\_\+zero@{ow\+\_\+write\+\_\+bit\+\_\+zero}}
+\index{ow\+\_\+write\+\_\+bit\+\_\+zero@{ow\+\_\+write\+\_\+bit\+\_\+zero}!wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}}
+\subsubsection[{\texorpdfstring{ow\+\_\+write\+\_\+bit\+\_\+zero()}{ow_write_bit_zero()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} ow\+\_\+write\+\_\+bit\+\_\+zero (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{wsn430v13b_200std__eui64_200std__eui64_8c_adaccaaa1a83c96448dcb6072284f173e}{}\label{wsn430v13b_200std__eui64_200std__eui64_8c_adaccaaa1a83c96448dcb6072284f173e}
+
+
+Definition at line 184 of file 00std\+\_\+eui64.\+c.
+
+\index{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}!ow\+\_\+write\+\_\+byte@{ow\+\_\+write\+\_\+byte}}
+\index{ow\+\_\+write\+\_\+byte@{ow\+\_\+write\+\_\+byte}!wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}}
+\subsubsection[{\texorpdfstring{ow\+\_\+write\+\_\+byte(uint8\+\_\+t byte)}{ow_write_byte(uint8_t byte)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} ow\+\_\+write\+\_\+byte (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{byte}
+\end{DoxyParamCaption}
+)}\hypertarget{wsn430v13b_200std__eui64_200std__eui64_8c_a5b8f2090b2f2ec4d3d76eae807a76972}{}\label{wsn430v13b_200std__eui64_200std__eui64_8c_a5b8f2090b2f2ec4d3d76eae807a76972}
+
+
+Definition at line 138 of file 00std\+\_\+eui64.\+c.
+
+\index{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}!owchip\+\_\+geteui@{owchip\+\_\+geteui}}
+\index{owchip\+\_\+geteui@{owchip\+\_\+geteui}!wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}}
+\subsubsection[{\texorpdfstring{owchip\+\_\+geteui(uint8\+\_\+t $\ast$eui)}{owchip_geteui(uint8_t *eui)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} owchip\+\_\+geteui (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t} $\ast$}]{eui}
+\end{DoxyParamCaption}
+)}\hypertarget{wsn430v13b_200std__eui64_200std__eui64_8c_a35b82123157aa4f8589eb774de92877c}{}\label{wsn430v13b_200std__eui64_200std__eui64_8c_a35b82123157aa4f8589eb774de92877c}
+
+
+Definition at line 85 of file 00std\+\_\+eui64.\+c.
+
+\index{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}!owpin\+\_\+init@{owpin\+\_\+init}}
+\index{owpin\+\_\+init@{owpin\+\_\+init}!wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}}
+\subsubsection[{\texorpdfstring{owpin\+\_\+init()}{owpin_init()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} owpin\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{wsn430v13b_200std__eui64_200std__eui64_8c_a8c84a7782277b077226bed76c0142347}{}\label{wsn430v13b_200std__eui64_200std__eui64_8c_a8c84a7782277b077226bed76c0142347}
+
+
+Definition at line 223 of file 00std\+\_\+eui64.\+c.
+
+\index{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}!owpin\+\_\+output\+\_\+high@{owpin\+\_\+output\+\_\+high}}
+\index{owpin\+\_\+output\+\_\+high@{owpin\+\_\+output\+\_\+high}!wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}}
+\subsubsection[{\texorpdfstring{owpin\+\_\+output\+\_\+high()}{owpin_output_high()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} owpin\+\_\+output\+\_\+high (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{wsn430v13b_200std__eui64_200std__eui64_8c_a9ba2d5b5692c53b86807bcd581a958ac}{}\label{wsn430v13b_200std__eui64_200std__eui64_8c_a9ba2d5b5692c53b86807bcd581a958ac}
+
+
+Definition at line 232 of file 00std\+\_\+eui64.\+c.
+
+\index{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}!owpin\+\_\+output\+\_\+low@{owpin\+\_\+output\+\_\+low}}
+\index{owpin\+\_\+output\+\_\+low@{owpin\+\_\+output\+\_\+low}!wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}}
+\subsubsection[{\texorpdfstring{owpin\+\_\+output\+\_\+low()}{owpin_output_low()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} owpin\+\_\+output\+\_\+low (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{wsn430v13b_200std__eui64_200std__eui64_8c_a0b7f4882143e940dfc3085d6d9228363}{}\label{wsn430v13b_200std__eui64_200std__eui64_8c_a0b7f4882143e940dfc3085d6d9228363}
+
+
+Definition at line 228 of file 00std\+\_\+eui64.\+c.
+
+\index{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}!owpin\+\_\+prepare\+\_\+read@{owpin\+\_\+prepare\+\_\+read}}
+\index{owpin\+\_\+prepare\+\_\+read@{owpin\+\_\+prepare\+\_\+read}!wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}}
+\subsubsection[{\texorpdfstring{owpin\+\_\+prepare\+\_\+read()}{owpin_prepare_read()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} owpin\+\_\+prepare\+\_\+read (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{wsn430v13b_200std__eui64_200std__eui64_8c_a89fe7438be854e06e69835c0a745299a}{}\label{wsn430v13b_200std__eui64_200std__eui64_8c_a89fe7438be854e06e69835c0a745299a}
+
+
+Definition at line 236 of file 00std\+\_\+eui64.\+c.
+
+\index{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}!owpin\+\_\+read@{owpin\+\_\+read}}
+\index{owpin\+\_\+read@{owpin\+\_\+read}!wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c@{wsn430v13b/00std\+\_\+eui64/00std\+\_\+eui64.\+c}}
+\subsubsection[{\texorpdfstring{owpin\+\_\+read()}{owpin_read()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} owpin\+\_\+read (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{wsn430v13b_200std__eui64_200std__eui64_8c_add5fb75c5871a9e5ef94f4dac86c8943}{}\label{wsn430v13b_200std__eui64_200std__eui64_8c_add5fb75c5871a9e5ef94f4dac86c8943}
+
+
+Definition at line 240 of file 00std\+\_\+eui64.\+c.
+

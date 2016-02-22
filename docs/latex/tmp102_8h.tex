@@ -1,0 +1,192 @@
+\hypertarget{tmp102_8h}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/drivers/z1/tmp102.h File Reference}
+\label{tmp102_8h}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/drivers/z1/tmp102.\+h@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/drivers/z1/tmp102.\+h}}
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}i2c.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}msp430x26x.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{tmp102_8h_a48a1456cf0ab7c9bcf548254ff118a9f}{T\+M\+P102\+\_\+\+A\+D\+DR}~0x48
+\item 
+\#define \hyperlink{tmp102_8h_ab568cd6f7b6792fa0a719710b881026e}{T\+M\+P102\+\_\+\+T\+E\+MP}~0x00
+\item 
+\#define \hyperlink{tmp102_8h_a0f9ba4163b66f315875147c72f4af179}{T\+M\+P102\+\_\+\+C\+O\+NF}~0x01
+\item 
+\#define \hyperlink{tmp102_8h_a7551701523a04bdada79c24197fba0ab}{T\+M\+P102\+\_\+\+T\+L\+OW}~0x02
+\item 
+\#define \hyperlink{tmp102_8h_adecf4c343ccf7dc4c869cec36cd58af3}{T\+M\+P102\+\_\+\+T\+H\+I\+GH}~0x03
+\item 
+\#define \hyperlink{tmp102_8h_ae9df2e4e34e7e41790c6fb48fdf91db5}{T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+D\+IR}~P5\+D\+IR
+\item 
+\#define \hyperlink{tmp102_8h_a406394e6587c6e7c723153478261b8a4}{T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+S\+EL}~P5\+S\+EL
+\item 
+\#define \hyperlink{tmp102_8h_a1c514c33a6e01c97765f8aabddb229ed}{T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+R\+EN}~P5\+R\+EN
+\item 
+\#define \hyperlink{tmp102_8h_a156029082058ec36529d8ddf24e0d8f1}{T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+O\+UT}~P5\+O\+UT
+\item 
+\#define \hyperlink{tmp102_8h_afc850e11e186e06790e72595881e2d94}{T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+P\+IN}~(1$<$$<$0)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{tmp102_8h_ac75f01dc11a58b9e4d93939bcc68f112}{tmp102\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{tmp102_8h_ae5d3064edf373fc0ff96c0d31f207ba7}{tmp102\+\_\+write\+\_\+reg} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} reg, \hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} val)
+\item 
+\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{tmp102_8h_a4b60992dc8697e0573ebc47980e9eeec}{tmp102\+\_\+read\+\_\+reg} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} reg)
+\item 
+\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{tmp102_8h_a43b7759846d255862e3c9d6da4929b32}{tmp102\+\_\+read\+\_\+temp\+\_\+raw} ()
+\item 
+\hyperlink{_p_e___types_8h_aef44329758059c91c76d334e8fc09700}{int8\+\_\+t} \hyperlink{tmp102_8h_a2ed085f6b397540be41ae631be9603a9}{tmp102\+\_\+read\+\_\+temp\+\_\+simple} ()
+\item 
+\hyperlink{_p_e___types_8h_a932e6ccc3d54c58f761c1aead83bd6d7}{int16\+\_\+t} \hyperlink{tmp102_8h_a5f64bd05623d1e727429610e4ccfb4a9}{tmp102\+\_\+read\+\_\+temp\+\_\+x100} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Device drivers header file for tmp102 temperature sensor in Zolertia Z1 W\+SN Platform. \begin{DoxyAuthor}{Author}
+Enric M. Calvo, Zolertia \href{mailto:ecalvo@zolertia.com}{\tt ecalvo@zolertia.\+com} Marcus Lundén, S\+I\+CS \href{mailto:mlunden@sics.se}{\tt mlunden@sics.\+se} Xavi Vilajosana, U\+CB \href{mailto:xvilajosana@eecs.berkeley.edu}{\tt xvilajosana@eecs.\+berkeley.\+edu} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\index{tmp102.\+h@{tmp102.\+h}!T\+M\+P102\+\_\+\+A\+D\+DR@{T\+M\+P102\+\_\+\+A\+D\+DR}}
+\index{T\+M\+P102\+\_\+\+A\+D\+DR@{T\+M\+P102\+\_\+\+A\+D\+DR}!tmp102.\+h@{tmp102.\+h}}
+\subsubsection[{\texorpdfstring{T\+M\+P102\+\_\+\+A\+D\+DR}{TMP102_ADDR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+M\+P102\+\_\+\+A\+D\+DR~0x48}\hypertarget{tmp102_8h_a48a1456cf0ab7c9bcf548254ff118a9f}{}\label{tmp102_8h_a48a1456cf0ab7c9bcf548254ff118a9f}
+
+
+Definition at line 54 of file tmp102.\+h.
+
+\index{tmp102.\+h@{tmp102.\+h}!T\+M\+P102\+\_\+\+C\+O\+NF@{T\+M\+P102\+\_\+\+C\+O\+NF}}
+\index{T\+M\+P102\+\_\+\+C\+O\+NF@{T\+M\+P102\+\_\+\+C\+O\+NF}!tmp102.\+h@{tmp102.\+h}}
+\subsubsection[{\texorpdfstring{T\+M\+P102\+\_\+\+C\+O\+NF}{TMP102_CONF}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+M\+P102\+\_\+\+C\+O\+NF~0x01}\hypertarget{tmp102_8h_a0f9ba4163b66f315875147c72f4af179}{}\label{tmp102_8h_a0f9ba4163b66f315875147c72f4af179}
+
+
+Definition at line 58 of file tmp102.\+h.
+
+\index{tmp102.\+h@{tmp102.\+h}!T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+D\+IR@{T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+D\+IR}}
+\index{T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+D\+IR@{T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+D\+IR}!tmp102.\+h@{tmp102.\+h}}
+\subsubsection[{\texorpdfstring{T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+D\+IR}{TMP102_PWR_DIR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+D\+IR~P5\+D\+IR}\hypertarget{tmp102_8h_ae9df2e4e34e7e41790c6fb48fdf91db5}{}\label{tmp102_8h_ae9df2e4e34e7e41790c6fb48fdf91db5}
+
+
+Definition at line 64 of file tmp102.\+h.
+
+\index{tmp102.\+h@{tmp102.\+h}!T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+O\+UT@{T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+O\+UT}}
+\index{T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+O\+UT@{T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+O\+UT}!tmp102.\+h@{tmp102.\+h}}
+\subsubsection[{\texorpdfstring{T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+O\+UT}{TMP102_PWR_OUT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+O\+UT~P5\+O\+UT}\hypertarget{tmp102_8h_a156029082058ec36529d8ddf24e0d8f1}{}\label{tmp102_8h_a156029082058ec36529d8ddf24e0d8f1}
+
+
+Definition at line 68 of file tmp102.\+h.
+
+\index{tmp102.\+h@{tmp102.\+h}!T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+P\+IN@{T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+P\+IN}}
+\index{T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+P\+IN@{T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+P\+IN}!tmp102.\+h@{tmp102.\+h}}
+\subsubsection[{\texorpdfstring{T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+P\+IN}{TMP102_PWR_PIN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+P\+IN~(1$<$$<$0)}\hypertarget{tmp102_8h_afc850e11e186e06790e72595881e2d94}{}\label{tmp102_8h_afc850e11e186e06790e72595881e2d94}
+
+
+Definition at line 69 of file tmp102.\+h.
+
+\index{tmp102.\+h@{tmp102.\+h}!T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+R\+EN@{T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+R\+EN}}
+\index{T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+R\+EN@{T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+R\+EN}!tmp102.\+h@{tmp102.\+h}}
+\subsubsection[{\texorpdfstring{T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+R\+EN}{TMP102_PWR_REN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+R\+EN~P5\+R\+EN}\hypertarget{tmp102_8h_a1c514c33a6e01c97765f8aabddb229ed}{}\label{tmp102_8h_a1c514c33a6e01c97765f8aabddb229ed}
+
+
+Definition at line 67 of file tmp102.\+h.
+
+\index{tmp102.\+h@{tmp102.\+h}!T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+S\+EL@{T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+S\+EL}}
+\index{T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+S\+EL@{T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+S\+EL}!tmp102.\+h@{tmp102.\+h}}
+\subsubsection[{\texorpdfstring{T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+S\+EL}{TMP102_PWR_SEL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+M\+P102\+\_\+\+P\+W\+R\+\_\+\+S\+EL~P5\+S\+EL}\hypertarget{tmp102_8h_a406394e6587c6e7c723153478261b8a4}{}\label{tmp102_8h_a406394e6587c6e7c723153478261b8a4}
+
+
+Definition at line 65 of file tmp102.\+h.
+
+\index{tmp102.\+h@{tmp102.\+h}!T\+M\+P102\+\_\+\+T\+E\+MP@{T\+M\+P102\+\_\+\+T\+E\+MP}}
+\index{T\+M\+P102\+\_\+\+T\+E\+MP@{T\+M\+P102\+\_\+\+T\+E\+MP}!tmp102.\+h@{tmp102.\+h}}
+\subsubsection[{\texorpdfstring{T\+M\+P102\+\_\+\+T\+E\+MP}{TMP102_TEMP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+M\+P102\+\_\+\+T\+E\+MP~0x00}\hypertarget{tmp102_8h_ab568cd6f7b6792fa0a719710b881026e}{}\label{tmp102_8h_ab568cd6f7b6792fa0a719710b881026e}
+
+
+Definition at line 57 of file tmp102.\+h.
+
+\index{tmp102.\+h@{tmp102.\+h}!T\+M\+P102\+\_\+\+T\+H\+I\+GH@{T\+M\+P102\+\_\+\+T\+H\+I\+GH}}
+\index{T\+M\+P102\+\_\+\+T\+H\+I\+GH@{T\+M\+P102\+\_\+\+T\+H\+I\+GH}!tmp102.\+h@{tmp102.\+h}}
+\subsubsection[{\texorpdfstring{T\+M\+P102\+\_\+\+T\+H\+I\+GH}{TMP102_THIGH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+M\+P102\+\_\+\+T\+H\+I\+GH~0x03}\hypertarget{tmp102_8h_adecf4c343ccf7dc4c869cec36cd58af3}{}\label{tmp102_8h_adecf4c343ccf7dc4c869cec36cd58af3}
+
+
+Definition at line 60 of file tmp102.\+h.
+
+\index{tmp102.\+h@{tmp102.\+h}!T\+M\+P102\+\_\+\+T\+L\+OW@{T\+M\+P102\+\_\+\+T\+L\+OW}}
+\index{T\+M\+P102\+\_\+\+T\+L\+OW@{T\+M\+P102\+\_\+\+T\+L\+OW}!tmp102.\+h@{tmp102.\+h}}
+\subsubsection[{\texorpdfstring{T\+M\+P102\+\_\+\+T\+L\+OW}{TMP102_TLOW}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+M\+P102\+\_\+\+T\+L\+OW~0x02}\hypertarget{tmp102_8h_a7551701523a04bdada79c24197fba0ab}{}\label{tmp102_8h_a7551701523a04bdada79c24197fba0ab}
+
+
+Definition at line 59 of file tmp102.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{tmp102.\+h@{tmp102.\+h}!tmp102\+\_\+init@{tmp102\+\_\+init}}
+\index{tmp102\+\_\+init@{tmp102\+\_\+init}!tmp102.\+h@{tmp102.\+h}}
+\subsubsection[{\texorpdfstring{tmp102\+\_\+init(void)}{tmp102_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} tmp102\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{tmp102_8h_ac75f01dc11a58b9e4d93939bcc68f112}{}\label{tmp102_8h_ac75f01dc11a58b9e4d93939bcc68f112}
+
+
+Definition at line 34 of file tmp102.\+c.
+
+\index{tmp102.\+h@{tmp102.\+h}!tmp102\+\_\+read\+\_\+reg@{tmp102\+\_\+read\+\_\+reg}}
+\index{tmp102\+\_\+read\+\_\+reg@{tmp102\+\_\+read\+\_\+reg}!tmp102.\+h@{tmp102.\+h}}
+\subsubsection[{\texorpdfstring{tmp102\+\_\+read\+\_\+reg(uint8\+\_\+t reg)}{tmp102_read_reg(uint8_t reg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\+\_\+t} tmp102\+\_\+read\+\_\+reg (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{reg}
+\end{DoxyParamCaption}
+)}\hypertarget{tmp102_8h_a4b60992dc8697e0573ebc47980e9eeec}{}\label{tmp102_8h_a4b60992dc8697e0573ebc47980e9eeec}
+
+
+Definition at line 73 of file tmp102.\+c.
+
+\index{tmp102.\+h@{tmp102.\+h}!tmp102\+\_\+read\+\_\+temp\+\_\+raw@{tmp102\+\_\+read\+\_\+temp\+\_\+raw}}
+\index{tmp102\+\_\+read\+\_\+temp\+\_\+raw@{tmp102\+\_\+read\+\_\+temp\+\_\+raw}!tmp102.\+h@{tmp102.\+h}}
+\subsubsection[{\texorpdfstring{tmp102\+\_\+read\+\_\+temp\+\_\+raw()}{tmp102_read_temp_raw()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\+\_\+t} tmp102\+\_\+read\+\_\+temp\+\_\+raw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{tmp102_8h_a43b7759846d255862e3c9d6da4929b32}{}\label{tmp102_8h_a43b7759846d255862e3c9d6da4929b32}
+
+
+Definition at line 90 of file tmp102.\+c.
+
+\index{tmp102.\+h@{tmp102.\+h}!tmp102\+\_\+read\+\_\+temp\+\_\+simple@{tmp102\+\_\+read\+\_\+temp\+\_\+simple}}
+\index{tmp102\+\_\+read\+\_\+temp\+\_\+simple@{tmp102\+\_\+read\+\_\+temp\+\_\+simple}!tmp102.\+h@{tmp102.\+h}}
+\subsubsection[{\texorpdfstring{tmp102\+\_\+read\+\_\+temp\+\_\+simple()}{tmp102_read_temp_simple()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int8\+\_\+t} tmp102\+\_\+read\+\_\+temp\+\_\+simple (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{tmp102_8h_a2ed085f6b397540be41ae631be9603a9}{}\label{tmp102_8h_a2ed085f6b397540be41ae631be9603a9}
+
+
+Definition at line 132 of file tmp102.\+c.
+
+\index{tmp102.\+h@{tmp102.\+h}!tmp102\+\_\+read\+\_\+temp\+\_\+x100@{tmp102\+\_\+read\+\_\+temp\+\_\+x100}}
+\index{tmp102\+\_\+read\+\_\+temp\+\_\+x100@{tmp102\+\_\+read\+\_\+temp\+\_\+x100}!tmp102.\+h@{tmp102.\+h}}
+\subsubsection[{\texorpdfstring{tmp102\+\_\+read\+\_\+temp\+\_\+x100()}{tmp102_read_temp_x100()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int16\+\_\+t} tmp102\+\_\+read\+\_\+temp\+\_\+x100 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{tmp102_8h_a5f64bd05623d1e727429610e4ccfb4a9}{}\label{tmp102_8h_a5f64bd05623d1e727429610e4ccfb4a9}
+
+
+Definition at line 99 of file tmp102.\+c.
+
+\index{tmp102.\+h@{tmp102.\+h}!tmp102\+\_\+write\+\_\+reg@{tmp102\+\_\+write\+\_\+reg}}
+\index{tmp102\+\_\+write\+\_\+reg@{tmp102\+\_\+write\+\_\+reg}!tmp102.\+h@{tmp102.\+h}}
+\subsubsection[{\texorpdfstring{tmp102\+\_\+write\+\_\+reg(uint8\+\_\+t reg, uint16\+\_\+t val)}{tmp102_write_reg(uint8_t reg, uint16_t val)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} tmp102\+\_\+write\+\_\+reg (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{reg, }
+\item[{{\bf uint16\+\_\+t}}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{tmp102_8h_ae5d3064edf373fc0ff96c0d31f207ba7}{}\label{tmp102_8h_ae5d3064edf373fc0ff96c0d31f207ba7}
+
+
+Definition at line 56 of file tmp102.\+c.
+

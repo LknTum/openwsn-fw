@@ -1,0 +1,37 @@
+\hypertarget{i2c_8h}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/i2c.h File Reference}
+\label{i2c_8h}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/i2c.\+h@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/i2c.\+h}}
+{\ttfamily \#include \char`\"{}stdint.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___i2_c_gafb9001a03955fc02cf3bbf44bcd8d975}{I2\+C\+\_\+\+P\+R\+E\+S\+C\+A\+LE}~0x26
+\item 
+\#define \hyperlink{group___i2_c_gad5f4d29f56fdf15e6d198a3383dfcc0f}{I2\+C\+\_\+\+B\+U\+S\+\_\+\+F\+R\+E\+E\+\_\+\+T\+I\+ME}~100
+\item 
+\#define \hyperlink{group___i2_c_ga526d580d324bce60a3e964066fae77e3}{S\+D\+A\+\_\+\+P\+IN}~0x02
+\item 
+\#define \hyperlink{group___i2_c_ga06c967e78bcedcee909a70764f879433}{S\+C\+L\+\_\+\+P\+IN}~0x04
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i2_c_ga5730d9445429351b9f750084c5cb5aae}{i2c\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i2_c_ga460462394097795883ce49312648f8a6}{i2c\+\_\+read\+\_\+registers} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} bus\+\_\+num, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} slave\+\_\+addr, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} reg\+\_\+addr, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} num\+Bytes, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$space\+To\+Write)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i2_c_ga3d674f0d94dcf5c755869bc6762dafef}{i2c\+\_\+write\+\_\+register} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} bus\+\_\+num, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} slave\+\_\+addr, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} length, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$data)
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{group___i2_c_ga8f793e884b17bebb70615748dbf6434a}{i2c\+\_\+slave\+\_\+present} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} bus\+\_\+num, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} slave\+\_\+address)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i2_c_ga846c148c6c939378ab9db213af23b1ea}{i2c\+\_\+read\+\_\+byte} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} address, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$\hyperlink{_p_e___types_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte})
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group___i2_c_ga6c5d53542049a3b17a6c0f5c42b3f9f7}{i2c\+\_\+read\+\_\+bytes} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} address, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$buffer, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} length)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i2_c_ga6d9ff5e4b9a1909ada86224581be53b4}{i2c\+\_\+write\+\_\+byte} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} address, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{_p_e___types_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte})
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group___i2_c_ga2842bfa37d44e63d1777822400677387}{i2c\+\_\+write\+\_\+bytes} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} address, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$buffer, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} length)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i2_c_gaec8c11d47885868ae7931ad990d5db74}{isr\+\_\+i2c\+\_\+tx} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} bus\+\_\+num)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i2_c_gab51d1ed9826f852ce34df92b6ab3bab5}{isr\+\_\+i2c\+\_\+rx} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} bus\+\_\+num)
+\end{DoxyCompactItemize}

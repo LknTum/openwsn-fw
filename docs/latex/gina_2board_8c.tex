@@ -1,0 +1,395 @@
+\hypertarget{gina_2board_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/gina/board.c File Reference}
+\label{gina_2board_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/gina/board.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/gina/board.\+c}}
+{\ttfamily \#include \char`\"{}msp430x26x.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}debugpins.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leds.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}uart.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}spi.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}i2c.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bsp\+\_\+timer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}radio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}radiotimer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}eui64.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{gina_2board_8c_ad0caa506af897a3ebe6699aa0c0da367}{mote\+\_\+main} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em G\+I\+N\+A-\/specific definition of the \char`\"{}board\char`\"{} bsp module. \end{DoxyCompactList}\item 
+int \hyperlink{gina_2board_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__board_ga916f2adc2080b4fe88034086d107a8dc}{board\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em E\+L\+D\+O\+R\+A\+D\+O-\/specific definition of the \char`\"{}board\char`\"{} bsp module. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__board_ga052cfe534a52d7f046e311d4adec00a8}{board\+\_\+sleep} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__board_gafbd0c8dccf10506bd3912960c8cba369}{board\+\_\+reset} ()
+\item 
+\hyperlink{gina_2board_8c_a292630b4f12ece49db0c16d847e8e797}{I\+SR} (D\+A\+C12)
+\item 
+\hyperlink{gina_2board_8c_a469c0aadf88dd21983a32ff74e44d34f}{I\+SR} (D\+MA)
+\item 
+\hyperlink{gina_2board_8c_a7a9ff1094d460fbffba3c10783c1f6ce}{I\+SR} (U\+S\+C\+I\+A\+B1\+TX)
+\item 
+\hyperlink{gina_2board_8c_a424471743711efb826c20d73507cc122}{I\+SR} (U\+S\+C\+I\+A\+B1\+RX)
+\item 
+\hyperlink{gina_2board_8c_a828e37bf35b08ec27d7b48293f9ac9e8}{I\+SR} (P\+O\+R\+T1)
+\item 
+\hyperlink{gina_2board_8c_aa8ca46c0f438b66ed02a9c61fcc3100b}{I\+SR} (P\+O\+R\+T2)
+\item 
+\hyperlink{gina_2board_8c_a5e9b5c89568b320dc8cf11a4008ecb36}{I\+SR} (A\+D\+C12)
+\item 
+\hyperlink{gina_2board_8c_adcff965a7e87b8b603523799cb44b2ff}{I\+SR} (U\+S\+C\+I\+A\+B0\+TX)
+\item 
+\hyperlink{gina_2board_8c_a73b686f9e41c95a4f202a58811dc5246}{I\+SR} (U\+S\+C\+I\+A\+B0\+RX)
+\item 
+\hyperlink{gina_2board_8c_a050e75203f0aaf4fa529dcd5297c1157}{I\+SR} (T\+I\+M\+E\+R\+A1)
+\item 
+\hyperlink{gina_2board_8c_a5710f8661e7330827b77291ea0a9817b}{I\+SR} (T\+I\+M\+E\+R\+A0)
+\item 
+\hyperlink{gina_2board_8c_a9bcd538f9baddeb8fa9bff0d98d790dc}{I\+SR} (W\+DT)
+\item 
+\hyperlink{gina_2board_8c_ad3b91f1d738bd276ed8c9409fc0b4d92}{I\+SR} (C\+O\+M\+P\+A\+R\+A\+T\+O\+RA)
+\item 
+\hyperlink{gina_2board_8c_a78345100e72663880226bd7b0b23e81d}{I\+SR} (T\+I\+M\+E\+R\+B1)
+\item 
+\hyperlink{gina_2board_8c_a30ac10a3b26ecbc891dd3be0484043dc}{I\+SR} (T\+I\+M\+E\+R\+B0)
+\item 
+\hyperlink{gina_2board_8c_abd2ea147e2f49c556aed52a142c74998}{I\+SR} (N\+MI)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{gina/board.\+c@{gina/board.\+c}!I\+SR@{I\+SR}}
+\index{I\+SR@{I\+SR}!gina/board.\+c@{gina/board.\+c}}
+\subsubsection[{\texorpdfstring{I\+S\+R(\+D\+A\+C12)}{ISR(DAC12)}}]{\setlength{\rightskip}{0pt plus 5cm}I\+SR (
+\begin{DoxyParamCaption}
+\item[{D\+A\+C12}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gina_2board_8c_a292630b4f12ece49db0c16d847e8e797}{}\label{gina_2board_8c_a292630b4f12ece49db0c16d847e8e797}
+
+
+Definition at line 116 of file board.\+c.
+
+\index{gina/board.\+c@{gina/board.\+c}!I\+SR@{I\+SR}}
+\index{I\+SR@{I\+SR}!gina/board.\+c@{gina/board.\+c}}
+\subsubsection[{\texorpdfstring{I\+S\+R(\+D\+M\+A)}{ISR(DMA)}}]{\setlength{\rightskip}{0pt plus 5cm}I\+SR (
+\begin{DoxyParamCaption}
+\item[{D\+MA}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gina_2board_8c_a469c0aadf88dd21983a32ff74e44d34f}{}\label{gina_2board_8c_a469c0aadf88dd21983a32ff74e44d34f}
+
+
+Definition at line 122 of file board.\+c.
+
+\index{gina/board.\+c@{gina/board.\+c}!I\+SR@{I\+SR}}
+\index{I\+SR@{I\+SR}!gina/board.\+c@{gina/board.\+c}}
+\subsubsection[{\texorpdfstring{I\+S\+R(\+U\+S\+C\+I\+A\+B1\+T\+X)}{ISR(USCIAB1TX)}}]{\setlength{\rightskip}{0pt plus 5cm}I\+SR (
+\begin{DoxyParamCaption}
+\item[{U\+S\+C\+I\+A\+B1\+TX}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gina_2board_8c_a7a9ff1094d460fbffba3c10783c1f6ce}{}\label{gina_2board_8c_a7a9ff1094d460fbffba3c10783c1f6ce}
+
+
+Definition at line 128 of file board.\+c.
+
+\index{gina/board.\+c@{gina/board.\+c}!I\+SR@{I\+SR}}
+\index{I\+SR@{I\+SR}!gina/board.\+c@{gina/board.\+c}}
+\subsubsection[{\texorpdfstring{I\+S\+R(\+U\+S\+C\+I\+A\+B1\+R\+X)}{ISR(USCIAB1RX)}}]{\setlength{\rightskip}{0pt plus 5cm}I\+SR (
+\begin{DoxyParamCaption}
+\item[{U\+S\+C\+I\+A\+B1\+RX}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gina_2board_8c_a424471743711efb826c20d73507cc122}{}\label{gina_2board_8c_a424471743711efb826c20d73507cc122}
+
+
+Definition at line 143 of file board.\+c.
+
+\index{gina/board.\+c@{gina/board.\+c}!I\+SR@{I\+SR}}
+\index{I\+SR@{I\+SR}!gina/board.\+c@{gina/board.\+c}}
+\subsubsection[{\texorpdfstring{I\+S\+R(\+P\+O\+R\+T1)}{ISR(PORT1)}}]{\setlength{\rightskip}{0pt plus 5cm}I\+SR (
+\begin{DoxyParamCaption}
+\item[{P\+O\+R\+T1}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gina_2board_8c_a828e37bf35b08ec27d7b48293f9ac9e8}{}\label{gina_2board_8c_a828e37bf35b08ec27d7b48293f9ac9e8}
+
+
+Definition at line 158 of file board.\+c.
+
+\index{gina/board.\+c@{gina/board.\+c}!I\+SR@{I\+SR}}
+\index{I\+SR@{I\+SR}!gina/board.\+c@{gina/board.\+c}}
+\subsubsection[{\texorpdfstring{I\+S\+R(\+P\+O\+R\+T2)}{ISR(PORT2)}}]{\setlength{\rightskip}{0pt plus 5cm}I\+SR (
+\begin{DoxyParamCaption}
+\item[{P\+O\+R\+T2}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gina_2board_8c_aa8ca46c0f438b66ed02a9c61fcc3100b}{}\label{gina_2board_8c_aa8ca46c0f438b66ed02a9c61fcc3100b}
+
+
+Definition at line 172 of file board.\+c.
+
+\index{gina/board.\+c@{gina/board.\+c}!I\+SR@{I\+SR}}
+\index{I\+SR@{I\+SR}!gina/board.\+c@{gina/board.\+c}}
+\subsubsection[{\texorpdfstring{I\+S\+R(\+A\+D\+C12)}{ISR(ADC12)}}]{\setlength{\rightskip}{0pt plus 5cm}I\+SR (
+\begin{DoxyParamCaption}
+\item[{A\+D\+C12}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gina_2board_8c_a5e9b5c89568b320dc8cf11a4008ecb36}{}\label{gina_2board_8c_a5e9b5c89568b320dc8cf11a4008ecb36}
+
+
+Definition at line 189 of file board.\+c.
+
+\index{gina/board.\+c@{gina/board.\+c}!I\+SR@{I\+SR}}
+\index{I\+SR@{I\+SR}!gina/board.\+c@{gina/board.\+c}}
+\subsubsection[{\texorpdfstring{I\+S\+R(\+U\+S\+C\+I\+A\+B0\+T\+X)}{ISR(USCIAB0TX)}}]{\setlength{\rightskip}{0pt plus 5cm}I\+SR (
+\begin{DoxyParamCaption}
+\item[{U\+S\+C\+I\+A\+B0\+TX}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gina_2board_8c_adcff965a7e87b8b603523799cb44b2ff}{}\label{gina_2board_8c_adcff965a7e87b8b603523799cb44b2ff}
+
+
+Definition at line 197 of file board.\+c.
+
+\index{gina/board.\+c@{gina/board.\+c}!I\+SR@{I\+SR}}
+\index{I\+SR@{I\+SR}!gina/board.\+c@{gina/board.\+c}}
+\subsubsection[{\texorpdfstring{I\+S\+R(\+U\+S\+C\+I\+A\+B0\+R\+X)}{ISR(USCIAB0RX)}}]{\setlength{\rightskip}{0pt plus 5cm}I\+SR (
+\begin{DoxyParamCaption}
+\item[{U\+S\+C\+I\+A\+B0\+RX}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gina_2board_8c_a73b686f9e41c95a4f202a58811dc5246}{}\label{gina_2board_8c_a73b686f9e41c95a4f202a58811dc5246}
+
+
+Definition at line 203 of file board.\+c.
+
+\index{gina/board.\+c@{gina/board.\+c}!I\+SR@{I\+SR}}
+\index{I\+SR@{I\+SR}!gina/board.\+c@{gina/board.\+c}}
+\subsubsection[{\texorpdfstring{I\+S\+R(\+T\+I\+M\+E\+R\+A1)}{ISR(TIMERA1)}}]{\setlength{\rightskip}{0pt plus 5cm}I\+SR (
+\begin{DoxyParamCaption}
+\item[{T\+I\+M\+E\+R\+A1}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gina_2board_8c_a050e75203f0aaf4fa529dcd5297c1157}{}\label{gina_2board_8c_a050e75203f0aaf4fa529dcd5297c1157}
+
+
+Definition at line 218 of file board.\+c.
+
+\index{gina/board.\+c@{gina/board.\+c}!I\+SR@{I\+SR}}
+\index{I\+SR@{I\+SR}!gina/board.\+c@{gina/board.\+c}}
+\subsubsection[{\texorpdfstring{I\+S\+R(\+T\+I\+M\+E\+R\+A0)}{ISR(TIMERA0)}}]{\setlength{\rightskip}{0pt plus 5cm}I\+SR (
+\begin{DoxyParamCaption}
+\item[{T\+I\+M\+E\+R\+A0}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gina_2board_8c_a5710f8661e7330827b77291ea0a9817b}{}\label{gina_2board_8c_a5710f8661e7330827b77291ea0a9817b}
+
+
+Definition at line 228 of file board.\+c.
+
+\index{gina/board.\+c@{gina/board.\+c}!I\+SR@{I\+SR}}
+\index{I\+SR@{I\+SR}!gina/board.\+c@{gina/board.\+c}}
+\subsubsection[{\texorpdfstring{I\+S\+R(\+W\+D\+T)}{ISR(WDT)}}]{\setlength{\rightskip}{0pt plus 5cm}I\+SR (
+\begin{DoxyParamCaption}
+\item[{W\+DT}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gina_2board_8c_a9bcd538f9baddeb8fa9bff0d98d790dc}{}\label{gina_2board_8c_a9bcd538f9baddeb8fa9bff0d98d790dc}
+
+
+Definition at line 234 of file board.\+c.
+
+\index{gina/board.\+c@{gina/board.\+c}!I\+SR@{I\+SR}}
+\index{I\+SR@{I\+SR}!gina/board.\+c@{gina/board.\+c}}
+\subsubsection[{\texorpdfstring{I\+S\+R(\+C\+O\+M\+P\+A\+R\+A\+T\+O\+R\+A)}{ISR(COMPARATORA)}}]{\setlength{\rightskip}{0pt plus 5cm}I\+SR (
+\begin{DoxyParamCaption}
+\item[{C\+O\+M\+P\+A\+R\+A\+T\+O\+RA}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gina_2board_8c_ad3b91f1d738bd276ed8c9409fc0b4d92}{}\label{gina_2board_8c_ad3b91f1d738bd276ed8c9409fc0b4d92}
+
+
+Definition at line 240 of file board.\+c.
+
+\index{gina/board.\+c@{gina/board.\+c}!I\+SR@{I\+SR}}
+\index{I\+SR@{I\+SR}!gina/board.\+c@{gina/board.\+c}}
+\subsubsection[{\texorpdfstring{I\+S\+R(\+T\+I\+M\+E\+R\+B1)}{ISR(TIMERB1)}}]{\setlength{\rightskip}{0pt plus 5cm}I\+SR (
+\begin{DoxyParamCaption}
+\item[{T\+I\+M\+E\+R\+B1}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gina_2board_8c_a78345100e72663880226bd7b0b23e81d}{}\label{gina_2board_8c_a78345100e72663880226bd7b0b23e81d}
+
+
+Definition at line 247 of file board.\+c.
+
+\index{gina/board.\+c@{gina/board.\+c}!I\+SR@{I\+SR}}
+\index{I\+SR@{I\+SR}!gina/board.\+c@{gina/board.\+c}}
+\subsubsection[{\texorpdfstring{I\+S\+R(\+T\+I\+M\+E\+R\+B0)}{ISR(TIMERB0)}}]{\setlength{\rightskip}{0pt plus 5cm}I\+SR (
+\begin{DoxyParamCaption}
+\item[{T\+I\+M\+E\+R\+B0}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gina_2board_8c_a30ac10a3b26ecbc891dd3be0484043dc}{}\label{gina_2board_8c_a30ac10a3b26ecbc891dd3be0484043dc}
+
+
+Definition at line 253 of file board.\+c.
+
+\index{gina/board.\+c@{gina/board.\+c}!I\+SR@{I\+SR}}
+\index{I\+SR@{I\+SR}!gina/board.\+c@{gina/board.\+c}}
+\subsubsection[{\texorpdfstring{I\+S\+R(\+N\+M\+I)}{ISR(NMI)}}]{\setlength{\rightskip}{0pt plus 5cm}I\+SR (
+\begin{DoxyParamCaption}
+\item[{N\+MI}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gina_2board_8c_abd2ea147e2f49c556aed52a142c74998}{}\label{gina_2board_8c_abd2ea147e2f49c556aed52a142c74998}
+
+
+Definition at line 262 of file board.\+c.
+
+\index{gina/board.\+c@{gina/board.\+c}!main@{main}}
+\index{main@{main}!gina/board.\+c@{gina/board.\+c}}
+\subsubsection[{\texorpdfstring{main(void)}{main(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gina_2board_8c_a840291bc02cba5474a4cb46a9b9566fe}{}\label{gina_2board_8c_a840291bc02cba5474a4cb46a9b9566fe}
+
+
+Definition at line 36 of file board.\+c.
+
+\index{gina/board.\+c@{gina/board.\+c}!mote\+\_\+main@{mote\+\_\+main}}
+\index{mote\+\_\+main@{mote\+\_\+main}!gina/board.\+c@{gina/board.\+c}}
+\subsubsection[{\texorpdfstring{mote\+\_\+main(void)}{mote_main(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int mote\+\_\+main (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gina_2board_8c_ad0caa506af897a3ebe6699aa0c0da367}{}\label{gina_2board_8c_ad0caa506af897a3ebe6699aa0c0da367}
+
+
+G\+I\+N\+A-\/specific definition of the \char`\"{}board\char`\"{} bsp module. 
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, February 2012.
+\end{DoxyAuthor}
+G\+I\+N\+A-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+e\+Z430-\/\+R\+F2500-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+G\+I\+N\+A-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+e\+Z430-\/\+R\+F2500-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+The program starts executing here.
+
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+\begin{DoxyNote}{Note}
+\+: Since the bsp modules for different platforms have the same declaration, you can use this project with any platform.
+\end{DoxyNote}
+Load this program on your boards. The L\+E\+Ds should start blinking furiously.
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, February 2012 The program starts executing here.
+\end{DoxyAuthor}
+G\+I\+N\+A-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+e\+Z430-\/\+R\+F2500-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+The program starts executing here.
+
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+G\+I\+N\+A-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+e\+Z430-\/\+R\+F2500-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+The program starts executing here.
+
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+Since the driver modules for different platforms have the same declaration, you can use this project with any platform.
+
+This application allows you to verify the correct functioning of the opentimers drivers. It starts 3 periodic timers, with periods A\+P\+P\+\_\+\+D\+L\+Y\+\_\+\+T\+I\+M\+E\+R0\+\_\+ms, A\+P\+P\+\_\+\+D\+L\+Y\+\_\+\+T\+I\+M\+E\+R1\+\_\+ms and A\+P\+P\+\_\+\+D\+L\+Y\+\_\+\+T\+I\+M\+E\+R2\+\_\+ms. Each timer is attached an L\+ED (error. radio and sync). When you run the application, you should see the L\+E\+Ds \char`\"{}counting\char`\"{}.
+
+\begin{DoxyAuthor}{Author}
+Pere Tuset \href{mailto:peretuset@openmote.com}{\tt peretuset@openmote.\+com}, January 2015.
+\end{DoxyAuthor}
+G\+I\+N\+A-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+e\+Z430-\/\+R\+F2500-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+The program starts executing here.
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, February 2012. 
+
+Chang Tengfei \href{mailto:tengfei.chang@gmail.com}{\tt tengfei.\+chang@gmail.\+com}, July 2012. 
+
+Alaeddine Weslati \href{mailto:alaeddine.weslati@inria.fr}{\tt alaeddine.\+weslati@inria.\+fr}, August 2013.
+\end{DoxyAuthor}
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+\begin{DoxyNote}{Note}
+\+: Since the bsp modules for different platforms have the same declaration, you can use this project with any platform.
+\end{DoxyNote}
+Load this program on your boards. The L\+E\+Ds should start blinking furiously.
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, February 2012 The program starts executing here.
+\end{DoxyAuthor}
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+Since the driver modules for different platforms have the same declaration, you can use this project with any platform.
+
+This application allows you to verify the correct functioning of the opentimers drivers. It starts 3 periodic timers, with periods A\+P\+P\+\_\+\+D\+L\+Y\+\_\+\+T\+I\+M\+E\+R0\+\_\+ms, A\+P\+P\+\_\+\+D\+L\+Y\+\_\+\+T\+I\+M\+E\+R1\+\_\+ms and A\+P\+P\+\_\+\+D\+L\+Y\+\_\+\+T\+I\+M\+E\+R2\+\_\+ms. Each timer is attached an L\+ED (error. radio and sync). When you run the application, you should see the L\+E\+Ds \char`\"{}counting\char`\"{}.
+
+\begin{DoxyAuthor}{Author}
+Pere Tuset \href{mailto:peretuset@openmote.com}{\tt peretuset@openmote.\+com}, January 2015.
+\end{DoxyAuthor}
+G\+I\+N\+A-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+e\+Z430-\/\+R\+F2500-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+The program starts executing here.
+
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, August 2010
+\end{DoxyAuthor}
+G\+I\+N\+A-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+e\+Z430-\/\+R\+F2500-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+The program starts executing here.
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, February 2012. 
+
+Chang Tengfei \href{mailto:tengfei.chang@gmail.com}{\tt tengfei.\+chang@gmail.\+com}, July 2012. 
+
+Alaeddine Weslati \href{mailto:alaeddine.weslati@inria.fr}{\tt alaeddine.\+weslati@inria.\+fr}, August 2013.
+\end{DoxyAuthor}
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+\begin{DoxyNote}{Note}
+\+: Since the bsp modules for different platforms have the same declaration, you can use this project with any platform.
+\end{DoxyNote}
+Load this program on your boards. The L\+E\+Ds should start blinking furiously.
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, February 2012 The program starts executing here.
+\end{DoxyAuthor}
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+Since the driver modules for different platforms have the same declaration, you can use this project with any platform.
+
+This application allows you to verify the correct functioning of the opentimers drivers. It starts 3 periodic timers, with periods A\+P\+P\+\_\+\+D\+L\+Y\+\_\+\+T\+I\+M\+E\+R0\+\_\+ms, A\+P\+P\+\_\+\+D\+L\+Y\+\_\+\+T\+I\+M\+E\+R1\+\_\+ms and A\+P\+P\+\_\+\+D\+L\+Y\+\_\+\+T\+I\+M\+E\+R2\+\_\+ms. Each timer is attached an L\+ED (error. radio and sync). When you run the application, you should see the L\+E\+Ds \char`\"{}counting\char`\"{}.
+
+\begin{DoxyAuthor}{Author}
+Pere Tuset \href{mailto:peretuset@openmote.com}{\tt peretuset@openmote.\+com}, January 2015.
+\end{DoxyAuthor}
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, August 2010 
+\end{DoxyAuthor}
+
+
+Definition at line 83 of file 00std\+\_\+low\+\_\+power\+\_\+mode.\+c.
+

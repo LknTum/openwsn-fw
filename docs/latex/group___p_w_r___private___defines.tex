@@ -1,0 +1,209 @@
+\hypertarget{group___p_w_r___private___defines}{}\section{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}
+\label{group___p_w_r___private___defines}\index{P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___p_w_r___private___defines_ga7f88bce73931300319824f22578f90de}{P\+W\+R\+\_\+\+O\+F\+F\+S\+ET}~(\hyperlink{openmotestm_2library_2inc_2stm32f10x__map_8h_ac691ec23dace8b7a649a25acb110217a}{P\+W\+R\+\_\+\+B\+A\+SE} -\/ \hyperlink{openmotestm_2library_2inc_2stm32f10x__map_8h_a9171f49478fa86d932f89e78e73b88b0}{P\+E\+R\+I\+P\+H\+\_\+\+B\+A\+SE})
+\item 
+\#define \hyperlink{group___p_w_r___private___defines_gafa1d3d0ea72132df651c76fc1bdffffc}{C\+R\+\_\+\+O\+F\+F\+S\+ET}~(\hyperlink{openmotestm_2library_2src_2stm32f10x__pwr_8c_a7f88bce73931300319824f22578f90de}{P\+W\+R\+\_\+\+O\+F\+F\+S\+ET} + 0x00)
+\item 
+\#define \hyperlink{group___p_w_r___private___defines_ga36ff45d972bf94f31f172fd53cf44d23}{D\+B\+P\+\_\+\+Bit\+Number}~0x08
+\item 
+\#define \hyperlink{group___p_w_r___private___defines_ga799ab60bdbcfc1076cf2d7f206d09b0c}{C\+R\+\_\+\+D\+B\+P\+\_\+\+BB}~(\hyperlink{openmotestm_2library_2inc_2stm32f10x__map_8h_aed7efc100877000845c236ccdc9e144a}{P\+E\+R\+I\+P\+H\+\_\+\+B\+B\+\_\+\+B\+A\+SE} + (\hyperlink{openmotestm_2library_2src_2stm32f10x__rcc_8c_afa1d3d0ea72132df651c76fc1bdffffc}{C\+R\+\_\+\+O\+F\+F\+S\+ET} $\ast$ 32) + (\hyperlink{openmotestm_2library_2src_2stm32f10x__pwr_8c_a36ff45d972bf94f31f172fd53cf44d23}{D\+B\+P\+\_\+\+Bit\+Number} $\ast$ 4))
+\item 
+\#define \hyperlink{group___p_w_r___private___defines_ga17d618eb800c401ef9c6789c9374eaf8}{P\+V\+D\+E\+\_\+\+Bit\+Number}~0x04
+\item 
+\#define \hyperlink{group___p_w_r___private___defines_ga49f51ef8285a6be76fd204d49a00709c}{C\+R\+\_\+\+P\+V\+D\+E\+\_\+\+BB}~(\hyperlink{openmotestm_2library_2inc_2stm32f10x__map_8h_aed7efc100877000845c236ccdc9e144a}{P\+E\+R\+I\+P\+H\+\_\+\+B\+B\+\_\+\+B\+A\+SE} + (\hyperlink{openmotestm_2library_2src_2stm32f10x__rcc_8c_afa1d3d0ea72132df651c76fc1bdffffc}{C\+R\+\_\+\+O\+F\+F\+S\+ET} $\ast$ 32) + (\hyperlink{openmotestm_2library_2src_2stm32f10x__pwr_8c_a17d618eb800c401ef9c6789c9374eaf8}{P\+V\+D\+E\+\_\+\+Bit\+Number} $\ast$ 4))
+\item 
+\#define \hyperlink{group___p_w_r___private___defines_ga984cbe73312b6d3d355c5053763d499a}{C\+S\+R\+\_\+\+O\+F\+F\+S\+ET}~(\hyperlink{openmotestm_2library_2src_2stm32f10x__pwr_8c_a7f88bce73931300319824f22578f90de}{P\+W\+R\+\_\+\+O\+F\+F\+S\+ET} + 0x04)
+\item 
+\#define \hyperlink{group___p_w_r___private___defines_ga94fe0520e8f9b71fa2b99c0565ec70ea}{E\+W\+U\+P\+\_\+\+Bit\+Number}~0x08
+\item 
+\#define \hyperlink{group___p_w_r___private___defines_gaaff864595f697850b19173b0bca991b0}{C\+S\+R\+\_\+\+E\+W\+U\+P\+\_\+\+BB}~(\hyperlink{openmotestm_2library_2inc_2stm32f10x__map_8h_aed7efc100877000845c236ccdc9e144a}{P\+E\+R\+I\+P\+H\+\_\+\+B\+B\+\_\+\+B\+A\+SE} + (\hyperlink{openmotestm_2library_2src_2stm32f10x__rcc_8c_a984cbe73312b6d3d355c5053763d499a}{C\+S\+R\+\_\+\+O\+F\+F\+S\+ET} $\ast$ 32) + (\hyperlink{openmotestm_2library_2src_2stm32f10x__pwr_8c_a94fe0520e8f9b71fa2b99c0565ec70ea}{E\+W\+U\+P\+\_\+\+Bit\+Number} $\ast$ 4))
+\item 
+\#define \hyperlink{group___p_w_r___private___defines_ga8ee6bf9218f3c476629dd9ee70deef21}{C\+R\+\_\+\+D\+S\+\_\+\+M\+A\+SK}~((\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t})0x\+F\+F\+F\+F\+F\+F\+F\+C)
+\item 
+\#define \hyperlink{group___p_w_r___private___defines_gac4a30eebdd1d292331a578b189962e77}{C\+R\+\_\+\+P\+L\+S\+\_\+\+M\+A\+SK}~((\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t})0x\+F\+F\+F\+F\+F\+F1\+F)
+\item 
+\#define \hyperlink{group___p_w_r___private___defines_ga7f88bce73931300319824f22578f90de}{P\+W\+R\+\_\+\+O\+F\+F\+S\+ET}~(\hyperlink{openmotestm_2library_2inc_2stm32f10x__map_8h_ac691ec23dace8b7a649a25acb110217a}{P\+W\+R\+\_\+\+B\+A\+SE} -\/ \hyperlink{openmotestm_2library_2inc_2stm32f10x__map_8h_a9171f49478fa86d932f89e78e73b88b0}{P\+E\+R\+I\+P\+H\+\_\+\+B\+A\+SE})
+\item 
+\#define \hyperlink{group___p_w_r___private___defines_gafa1d3d0ea72132df651c76fc1bdffffc}{C\+R\+\_\+\+O\+F\+F\+S\+ET}~(\hyperlink{openmotestm_2library_2src_2stm32f10x__pwr_8c_a7f88bce73931300319824f22578f90de}{P\+W\+R\+\_\+\+O\+F\+F\+S\+ET} + 0x00)
+\item 
+\#define \hyperlink{group___p_w_r___private___defines_ga36ff45d972bf94f31f172fd53cf44d23}{D\+B\+P\+\_\+\+Bit\+Number}~0x08
+\item 
+\#define \hyperlink{group___p_w_r___private___defines_ga799ab60bdbcfc1076cf2d7f206d09b0c}{C\+R\+\_\+\+D\+B\+P\+\_\+\+BB}~(\hyperlink{openmotestm_2library_2inc_2stm32f10x__map_8h_aed7efc100877000845c236ccdc9e144a}{P\+E\+R\+I\+P\+H\+\_\+\+B\+B\+\_\+\+B\+A\+SE} + (\hyperlink{openmotestm_2library_2src_2stm32f10x__rcc_8c_afa1d3d0ea72132df651c76fc1bdffffc}{C\+R\+\_\+\+O\+F\+F\+S\+ET} $\ast$ 32) + (\hyperlink{openmotestm_2library_2src_2stm32f10x__pwr_8c_a36ff45d972bf94f31f172fd53cf44d23}{D\+B\+P\+\_\+\+Bit\+Number} $\ast$ 4))
+\item 
+\#define \hyperlink{group___p_w_r___private___defines_ga17d618eb800c401ef9c6789c9374eaf8}{P\+V\+D\+E\+\_\+\+Bit\+Number}~0x04
+\item 
+\#define \hyperlink{group___p_w_r___private___defines_ga49f51ef8285a6be76fd204d49a00709c}{C\+R\+\_\+\+P\+V\+D\+E\+\_\+\+BB}~(\hyperlink{openmotestm_2library_2inc_2stm32f10x__map_8h_aed7efc100877000845c236ccdc9e144a}{P\+E\+R\+I\+P\+H\+\_\+\+B\+B\+\_\+\+B\+A\+SE} + (\hyperlink{openmotestm_2library_2src_2stm32f10x__rcc_8c_afa1d3d0ea72132df651c76fc1bdffffc}{C\+R\+\_\+\+O\+F\+F\+S\+ET} $\ast$ 32) + (\hyperlink{openmotestm_2library_2src_2stm32f10x__pwr_8c_a17d618eb800c401ef9c6789c9374eaf8}{P\+V\+D\+E\+\_\+\+Bit\+Number} $\ast$ 4))
+\item 
+\#define \hyperlink{group___p_w_r___private___defines_ga984cbe73312b6d3d355c5053763d499a}{C\+S\+R\+\_\+\+O\+F\+F\+S\+ET}~(\hyperlink{openmotestm_2library_2src_2stm32f10x__pwr_8c_a7f88bce73931300319824f22578f90de}{P\+W\+R\+\_\+\+O\+F\+F\+S\+ET} + 0x04)
+\item 
+\#define \hyperlink{group___p_w_r___private___defines_ga94fe0520e8f9b71fa2b99c0565ec70ea}{E\+W\+U\+P\+\_\+\+Bit\+Number}~0x08
+\item 
+\#define \hyperlink{group___p_w_r___private___defines_gaaff864595f697850b19173b0bca991b0}{C\+S\+R\+\_\+\+E\+W\+U\+P\+\_\+\+BB}~(\hyperlink{openmotestm_2library_2inc_2stm32f10x__map_8h_aed7efc100877000845c236ccdc9e144a}{P\+E\+R\+I\+P\+H\+\_\+\+B\+B\+\_\+\+B\+A\+SE} + (\hyperlink{openmotestm_2library_2src_2stm32f10x__rcc_8c_a984cbe73312b6d3d355c5053763d499a}{C\+S\+R\+\_\+\+O\+F\+F\+S\+ET} $\ast$ 32) + (\hyperlink{openmotestm_2library_2src_2stm32f10x__pwr_8c_a94fe0520e8f9b71fa2b99c0565ec70ea}{E\+W\+U\+P\+\_\+\+Bit\+Number} $\ast$ 4))
+\item 
+\#define \hyperlink{group___p_w_r___private___defines_ga8ee6bf9218f3c476629dd9ee70deef21}{C\+R\+\_\+\+D\+S\+\_\+\+M\+A\+SK}~((\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t})0x\+F\+F\+F\+F\+F\+F\+F\+C)
+\item 
+\#define \hyperlink{group___p_w_r___private___defines_gac4a30eebdd1d292331a578b189962e77}{C\+R\+\_\+\+P\+L\+S\+\_\+\+M\+A\+SK}~((\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t})0x\+F\+F\+F\+F\+F\+F1\+F)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\index{P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}!C\+R\+\_\+\+D\+B\+P\+\_\+\+BB@{C\+R\+\_\+\+D\+B\+P\+\_\+\+BB}}
+\index{C\+R\+\_\+\+D\+B\+P\+\_\+\+BB@{C\+R\+\_\+\+D\+B\+P\+\_\+\+BB}!P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}}
+\subsubsection[{\texorpdfstring{C\+R\+\_\+\+D\+B\+P\+\_\+\+BB}{CR_DBP_BB}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R\+\_\+\+D\+B\+P\+\_\+\+BB~({\bf P\+E\+R\+I\+P\+H\+\_\+\+B\+B\+\_\+\+B\+A\+SE} + ({\bf C\+R\+\_\+\+O\+F\+F\+S\+ET} $\ast$ 32) + ({\bf D\+B\+P\+\_\+\+Bit\+Number} $\ast$ 4))}\hypertarget{group___p_w_r___private___defines_ga799ab60bdbcfc1076cf2d7f206d09b0c}{}\label{group___p_w_r___private___defines_ga799ab60bdbcfc1076cf2d7f206d09b0c}
+
+
+Definition at line 55 of file stm32f10x\+\_\+pwr.\+c.
+
+\index{P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}!C\+R\+\_\+\+D\+B\+P\+\_\+\+BB@{C\+R\+\_\+\+D\+B\+P\+\_\+\+BB}}
+\index{C\+R\+\_\+\+D\+B\+P\+\_\+\+BB@{C\+R\+\_\+\+D\+B\+P\+\_\+\+BB}!P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}}
+\subsubsection[{\texorpdfstring{C\+R\+\_\+\+D\+B\+P\+\_\+\+BB}{CR_DBP_BB}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R\+\_\+\+D\+B\+P\+\_\+\+BB~({\bf P\+E\+R\+I\+P\+H\+\_\+\+B\+B\+\_\+\+B\+A\+SE} + ({\bf C\+R\+\_\+\+O\+F\+F\+S\+ET} $\ast$ 32) + ({\bf D\+B\+P\+\_\+\+Bit\+Number} $\ast$ 4))}\hypertarget{group___p_w_r___private___defines_ga799ab60bdbcfc1076cf2d7f206d09b0c}{}\label{group___p_w_r___private___defines_ga799ab60bdbcfc1076cf2d7f206d09b0c}
+
+
+Definition at line 55 of file stm32f10x\+\_\+pwr.\+c.
+
+\index{P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}!C\+R\+\_\+\+D\+S\+\_\+\+M\+A\+SK@{C\+R\+\_\+\+D\+S\+\_\+\+M\+A\+SK}}
+\index{C\+R\+\_\+\+D\+S\+\_\+\+M\+A\+SK@{C\+R\+\_\+\+D\+S\+\_\+\+M\+A\+SK}!P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}}
+\subsubsection[{\texorpdfstring{C\+R\+\_\+\+D\+S\+\_\+\+M\+A\+SK}{CR_DS_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R\+\_\+\+D\+S\+\_\+\+M\+A\+SK~(({\bf uint32\+\_\+t})0x\+F\+F\+F\+F\+F\+F\+F\+C)}\hypertarget{group___p_w_r___private___defines_ga8ee6bf9218f3c476629dd9ee70deef21}{}\label{group___p_w_r___private___defines_ga8ee6bf9218f3c476629dd9ee70deef21}
+
+
+Definition at line 71 of file stm32f10x\+\_\+pwr.\+c.
+
+\index{P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}!C\+R\+\_\+\+D\+S\+\_\+\+M\+A\+SK@{C\+R\+\_\+\+D\+S\+\_\+\+M\+A\+SK}}
+\index{C\+R\+\_\+\+D\+S\+\_\+\+M\+A\+SK@{C\+R\+\_\+\+D\+S\+\_\+\+M\+A\+SK}!P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}}
+\subsubsection[{\texorpdfstring{C\+R\+\_\+\+D\+S\+\_\+\+M\+A\+SK}{CR_DS_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R\+\_\+\+D\+S\+\_\+\+M\+A\+SK~(({\bf uint32\+\_\+t})0x\+F\+F\+F\+F\+F\+F\+F\+C)}\hypertarget{group___p_w_r___private___defines_ga8ee6bf9218f3c476629dd9ee70deef21}{}\label{group___p_w_r___private___defines_ga8ee6bf9218f3c476629dd9ee70deef21}
+
+
+Definition at line 71 of file stm32f10x\+\_\+pwr.\+c.
+
+\index{P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}!C\+R\+\_\+\+O\+F\+F\+S\+ET@{C\+R\+\_\+\+O\+F\+F\+S\+ET}}
+\index{C\+R\+\_\+\+O\+F\+F\+S\+ET@{C\+R\+\_\+\+O\+F\+F\+S\+ET}!P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}}
+\subsubsection[{\texorpdfstring{C\+R\+\_\+\+O\+F\+F\+S\+ET}{CR_OFFSET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R\+\_\+\+O\+F\+F\+S\+ET~({\bf P\+W\+R\+\_\+\+O\+F\+F\+S\+ET} + 0x00)}\hypertarget{group___p_w_r___private___defines_gafa1d3d0ea72132df651c76fc1bdffffc}{}\label{group___p_w_r___private___defines_gafa1d3d0ea72132df651c76fc1bdffffc}
+
+
+Definition at line 53 of file stm32f10x\+\_\+pwr.\+c.
+
+\index{P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}!C\+R\+\_\+\+O\+F\+F\+S\+ET@{C\+R\+\_\+\+O\+F\+F\+S\+ET}}
+\index{C\+R\+\_\+\+O\+F\+F\+S\+ET@{C\+R\+\_\+\+O\+F\+F\+S\+ET}!P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}}
+\subsubsection[{\texorpdfstring{C\+R\+\_\+\+O\+F\+F\+S\+ET}{CR_OFFSET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R\+\_\+\+O\+F\+F\+S\+ET~({\bf P\+W\+R\+\_\+\+O\+F\+F\+S\+ET} + 0x00)}\hypertarget{group___p_w_r___private___defines_gafa1d3d0ea72132df651c76fc1bdffffc}{}\label{group___p_w_r___private___defines_gafa1d3d0ea72132df651c76fc1bdffffc}
+
+
+Definition at line 53 of file stm32f10x\+\_\+pwr.\+c.
+
+\index{P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}!C\+R\+\_\+\+P\+L\+S\+\_\+\+M\+A\+SK@{C\+R\+\_\+\+P\+L\+S\+\_\+\+M\+A\+SK}}
+\index{C\+R\+\_\+\+P\+L\+S\+\_\+\+M\+A\+SK@{C\+R\+\_\+\+P\+L\+S\+\_\+\+M\+A\+SK}!P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}}
+\subsubsection[{\texorpdfstring{C\+R\+\_\+\+P\+L\+S\+\_\+\+M\+A\+SK}{CR_PLS_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R\+\_\+\+P\+L\+S\+\_\+\+M\+A\+SK~(({\bf uint32\+\_\+t})0x\+F\+F\+F\+F\+F\+F1\+F)}\hypertarget{group___p_w_r___private___defines_gac4a30eebdd1d292331a578b189962e77}{}\label{group___p_w_r___private___defines_gac4a30eebdd1d292331a578b189962e77}
+
+
+Definition at line 72 of file stm32f10x\+\_\+pwr.\+c.
+
+\index{P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}!C\+R\+\_\+\+P\+L\+S\+\_\+\+M\+A\+SK@{C\+R\+\_\+\+P\+L\+S\+\_\+\+M\+A\+SK}}
+\index{C\+R\+\_\+\+P\+L\+S\+\_\+\+M\+A\+SK@{C\+R\+\_\+\+P\+L\+S\+\_\+\+M\+A\+SK}!P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}}
+\subsubsection[{\texorpdfstring{C\+R\+\_\+\+P\+L\+S\+\_\+\+M\+A\+SK}{CR_PLS_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R\+\_\+\+P\+L\+S\+\_\+\+M\+A\+SK~(({\bf uint32\+\_\+t})0x\+F\+F\+F\+F\+F\+F1\+F)}\hypertarget{group___p_w_r___private___defines_gac4a30eebdd1d292331a578b189962e77}{}\label{group___p_w_r___private___defines_gac4a30eebdd1d292331a578b189962e77}
+
+
+Definition at line 72 of file stm32f10x\+\_\+pwr.\+c.
+
+\index{P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}!C\+R\+\_\+\+P\+V\+D\+E\+\_\+\+BB@{C\+R\+\_\+\+P\+V\+D\+E\+\_\+\+BB}}
+\index{C\+R\+\_\+\+P\+V\+D\+E\+\_\+\+BB@{C\+R\+\_\+\+P\+V\+D\+E\+\_\+\+BB}!P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}}
+\subsubsection[{\texorpdfstring{C\+R\+\_\+\+P\+V\+D\+E\+\_\+\+BB}{CR_PVDE_BB}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R\+\_\+\+P\+V\+D\+E\+\_\+\+BB~({\bf P\+E\+R\+I\+P\+H\+\_\+\+B\+B\+\_\+\+B\+A\+SE} + ({\bf C\+R\+\_\+\+O\+F\+F\+S\+ET} $\ast$ 32) + ({\bf P\+V\+D\+E\+\_\+\+Bit\+Number} $\ast$ 4))}\hypertarget{group___p_w_r___private___defines_ga49f51ef8285a6be76fd204d49a00709c}{}\label{group___p_w_r___private___defines_ga49f51ef8285a6be76fd204d49a00709c}
+
+
+Definition at line 59 of file stm32f10x\+\_\+pwr.\+c.
+
+\index{P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}!C\+R\+\_\+\+P\+V\+D\+E\+\_\+\+BB@{C\+R\+\_\+\+P\+V\+D\+E\+\_\+\+BB}}
+\index{C\+R\+\_\+\+P\+V\+D\+E\+\_\+\+BB@{C\+R\+\_\+\+P\+V\+D\+E\+\_\+\+BB}!P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}}
+\subsubsection[{\texorpdfstring{C\+R\+\_\+\+P\+V\+D\+E\+\_\+\+BB}{CR_PVDE_BB}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R\+\_\+\+P\+V\+D\+E\+\_\+\+BB~({\bf P\+E\+R\+I\+P\+H\+\_\+\+B\+B\+\_\+\+B\+A\+SE} + ({\bf C\+R\+\_\+\+O\+F\+F\+S\+ET} $\ast$ 32) + ({\bf P\+V\+D\+E\+\_\+\+Bit\+Number} $\ast$ 4))}\hypertarget{group___p_w_r___private___defines_ga49f51ef8285a6be76fd204d49a00709c}{}\label{group___p_w_r___private___defines_ga49f51ef8285a6be76fd204d49a00709c}
+
+
+Definition at line 59 of file stm32f10x\+\_\+pwr.\+c.
+
+\index{P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}!C\+S\+R\+\_\+\+E\+W\+U\+P\+\_\+\+BB@{C\+S\+R\+\_\+\+E\+W\+U\+P\+\_\+\+BB}}
+\index{C\+S\+R\+\_\+\+E\+W\+U\+P\+\_\+\+BB@{C\+S\+R\+\_\+\+E\+W\+U\+P\+\_\+\+BB}!P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}}
+\subsubsection[{\texorpdfstring{C\+S\+R\+\_\+\+E\+W\+U\+P\+\_\+\+BB}{CSR_EWUP_BB}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+S\+R\+\_\+\+E\+W\+U\+P\+\_\+\+BB~({\bf P\+E\+R\+I\+P\+H\+\_\+\+B\+B\+\_\+\+B\+A\+SE} + ({\bf C\+S\+R\+\_\+\+O\+F\+F\+S\+ET} $\ast$ 32) + ({\bf E\+W\+U\+P\+\_\+\+Bit\+Number} $\ast$ 4))}\hypertarget{group___p_w_r___private___defines_gaaff864595f697850b19173b0bca991b0}{}\label{group___p_w_r___private___defines_gaaff864595f697850b19173b0bca991b0}
+
+
+Definition at line 66 of file stm32f10x\+\_\+pwr.\+c.
+
+\index{P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}!C\+S\+R\+\_\+\+E\+W\+U\+P\+\_\+\+BB@{C\+S\+R\+\_\+\+E\+W\+U\+P\+\_\+\+BB}}
+\index{C\+S\+R\+\_\+\+E\+W\+U\+P\+\_\+\+BB@{C\+S\+R\+\_\+\+E\+W\+U\+P\+\_\+\+BB}!P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}}
+\subsubsection[{\texorpdfstring{C\+S\+R\+\_\+\+E\+W\+U\+P\+\_\+\+BB}{CSR_EWUP_BB}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+S\+R\+\_\+\+E\+W\+U\+P\+\_\+\+BB~({\bf P\+E\+R\+I\+P\+H\+\_\+\+B\+B\+\_\+\+B\+A\+SE} + ({\bf C\+S\+R\+\_\+\+O\+F\+F\+S\+ET} $\ast$ 32) + ({\bf E\+W\+U\+P\+\_\+\+Bit\+Number} $\ast$ 4))}\hypertarget{group___p_w_r___private___defines_gaaff864595f697850b19173b0bca991b0}{}\label{group___p_w_r___private___defines_gaaff864595f697850b19173b0bca991b0}
+
+
+Definition at line 66 of file stm32f10x\+\_\+pwr.\+c.
+
+\index{P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}!C\+S\+R\+\_\+\+O\+F\+F\+S\+ET@{C\+S\+R\+\_\+\+O\+F\+F\+S\+ET}}
+\index{C\+S\+R\+\_\+\+O\+F\+F\+S\+ET@{C\+S\+R\+\_\+\+O\+F\+F\+S\+ET}!P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}}
+\subsubsection[{\texorpdfstring{C\+S\+R\+\_\+\+O\+F\+F\+S\+ET}{CSR_OFFSET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+S\+R\+\_\+\+O\+F\+F\+S\+ET~({\bf P\+W\+R\+\_\+\+O\+F\+F\+S\+ET} + 0x04)}\hypertarget{group___p_w_r___private___defines_ga984cbe73312b6d3d355c5053763d499a}{}\label{group___p_w_r___private___defines_ga984cbe73312b6d3d355c5053763d499a}
+
+
+Definition at line 64 of file stm32f10x\+\_\+pwr.\+c.
+
+\index{P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}!C\+S\+R\+\_\+\+O\+F\+F\+S\+ET@{C\+S\+R\+\_\+\+O\+F\+F\+S\+ET}}
+\index{C\+S\+R\+\_\+\+O\+F\+F\+S\+ET@{C\+S\+R\+\_\+\+O\+F\+F\+S\+ET}!P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}}
+\subsubsection[{\texorpdfstring{C\+S\+R\+\_\+\+O\+F\+F\+S\+ET}{CSR_OFFSET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+S\+R\+\_\+\+O\+F\+F\+S\+ET~({\bf P\+W\+R\+\_\+\+O\+F\+F\+S\+ET} + 0x04)}\hypertarget{group___p_w_r___private___defines_ga984cbe73312b6d3d355c5053763d499a}{}\label{group___p_w_r___private___defines_ga984cbe73312b6d3d355c5053763d499a}
+
+
+Definition at line 64 of file stm32f10x\+\_\+pwr.\+c.
+
+\index{P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}!D\+B\+P\+\_\+\+Bit\+Number@{D\+B\+P\+\_\+\+Bit\+Number}}
+\index{D\+B\+P\+\_\+\+Bit\+Number@{D\+B\+P\+\_\+\+Bit\+Number}!P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}}
+\subsubsection[{\texorpdfstring{D\+B\+P\+\_\+\+Bit\+Number}{DBP_BitNumber}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+B\+P\+\_\+\+Bit\+Number~0x08}\hypertarget{group___p_w_r___private___defines_ga36ff45d972bf94f31f172fd53cf44d23}{}\label{group___p_w_r___private___defines_ga36ff45d972bf94f31f172fd53cf44d23}
+
+
+Definition at line 54 of file stm32f10x\+\_\+pwr.\+c.
+
+\index{P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}!D\+B\+P\+\_\+\+Bit\+Number@{D\+B\+P\+\_\+\+Bit\+Number}}
+\index{D\+B\+P\+\_\+\+Bit\+Number@{D\+B\+P\+\_\+\+Bit\+Number}!P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}}
+\subsubsection[{\texorpdfstring{D\+B\+P\+\_\+\+Bit\+Number}{DBP_BitNumber}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+B\+P\+\_\+\+Bit\+Number~0x08}\hypertarget{group___p_w_r___private___defines_ga36ff45d972bf94f31f172fd53cf44d23}{}\label{group___p_w_r___private___defines_ga36ff45d972bf94f31f172fd53cf44d23}
+
+
+Definition at line 54 of file stm32f10x\+\_\+pwr.\+c.
+
+\index{P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}!E\+W\+U\+P\+\_\+\+Bit\+Number@{E\+W\+U\+P\+\_\+\+Bit\+Number}}
+\index{E\+W\+U\+P\+\_\+\+Bit\+Number@{E\+W\+U\+P\+\_\+\+Bit\+Number}!P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}}
+\subsubsection[{\texorpdfstring{E\+W\+U\+P\+\_\+\+Bit\+Number}{EWUP_BitNumber}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+W\+U\+P\+\_\+\+Bit\+Number~0x08}\hypertarget{group___p_w_r___private___defines_ga94fe0520e8f9b71fa2b99c0565ec70ea}{}\label{group___p_w_r___private___defines_ga94fe0520e8f9b71fa2b99c0565ec70ea}
+
+
+Definition at line 65 of file stm32f10x\+\_\+pwr.\+c.
+
+\index{P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}!E\+W\+U\+P\+\_\+\+Bit\+Number@{E\+W\+U\+P\+\_\+\+Bit\+Number}}
+\index{E\+W\+U\+P\+\_\+\+Bit\+Number@{E\+W\+U\+P\+\_\+\+Bit\+Number}!P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}}
+\subsubsection[{\texorpdfstring{E\+W\+U\+P\+\_\+\+Bit\+Number}{EWUP_BitNumber}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+W\+U\+P\+\_\+\+Bit\+Number~0x08}\hypertarget{group___p_w_r___private___defines_ga94fe0520e8f9b71fa2b99c0565ec70ea}{}\label{group___p_w_r___private___defines_ga94fe0520e8f9b71fa2b99c0565ec70ea}
+
+
+Definition at line 65 of file stm32f10x\+\_\+pwr.\+c.
+
+\index{P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}!P\+V\+D\+E\+\_\+\+Bit\+Number@{P\+V\+D\+E\+\_\+\+Bit\+Number}}
+\index{P\+V\+D\+E\+\_\+\+Bit\+Number@{P\+V\+D\+E\+\_\+\+Bit\+Number}!P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}}
+\subsubsection[{\texorpdfstring{P\+V\+D\+E\+\_\+\+Bit\+Number}{PVDE_BitNumber}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+V\+D\+E\+\_\+\+Bit\+Number~0x04}\hypertarget{group___p_w_r___private___defines_ga17d618eb800c401ef9c6789c9374eaf8}{}\label{group___p_w_r___private___defines_ga17d618eb800c401ef9c6789c9374eaf8}
+
+
+Definition at line 58 of file stm32f10x\+\_\+pwr.\+c.
+
+\index{P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}!P\+V\+D\+E\+\_\+\+Bit\+Number@{P\+V\+D\+E\+\_\+\+Bit\+Number}}
+\index{P\+V\+D\+E\+\_\+\+Bit\+Number@{P\+V\+D\+E\+\_\+\+Bit\+Number}!P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}}
+\subsubsection[{\texorpdfstring{P\+V\+D\+E\+\_\+\+Bit\+Number}{PVDE_BitNumber}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+V\+D\+E\+\_\+\+Bit\+Number~0x04}\hypertarget{group___p_w_r___private___defines_ga17d618eb800c401ef9c6789c9374eaf8}{}\label{group___p_w_r___private___defines_ga17d618eb800c401ef9c6789c9374eaf8}
+
+
+Definition at line 58 of file stm32f10x\+\_\+pwr.\+c.
+
+\index{P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}!P\+W\+R\+\_\+\+O\+F\+F\+S\+ET@{P\+W\+R\+\_\+\+O\+F\+F\+S\+ET}}
+\index{P\+W\+R\+\_\+\+O\+F\+F\+S\+ET@{P\+W\+R\+\_\+\+O\+F\+F\+S\+ET}!P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}}
+\subsubsection[{\texorpdfstring{P\+W\+R\+\_\+\+O\+F\+F\+S\+ET}{PWR_OFFSET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+W\+R\+\_\+\+O\+F\+F\+S\+ET~({\bf P\+W\+R\+\_\+\+B\+A\+SE} -\/ {\bf P\+E\+R\+I\+P\+H\+\_\+\+B\+A\+SE})}\hypertarget{group___p_w_r___private___defines_ga7f88bce73931300319824f22578f90de}{}\label{group___p_w_r___private___defines_ga7f88bce73931300319824f22578f90de}
+
+
+Definition at line 48 of file stm32f10x\+\_\+pwr.\+c.
+
+\index{P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}!P\+W\+R\+\_\+\+O\+F\+F\+S\+ET@{P\+W\+R\+\_\+\+O\+F\+F\+S\+ET}}
+\index{P\+W\+R\+\_\+\+O\+F\+F\+S\+ET@{P\+W\+R\+\_\+\+O\+F\+F\+S\+ET}!P\+W\+R\+\_\+\+Private\+\_\+\+Defines@{P\+W\+R\+\_\+\+Private\+\_\+\+Defines}}
+\subsubsection[{\texorpdfstring{P\+W\+R\+\_\+\+O\+F\+F\+S\+ET}{PWR_OFFSET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+W\+R\+\_\+\+O\+F\+F\+S\+ET~({\bf P\+W\+R\+\_\+\+B\+A\+SE} -\/ {\bf P\+E\+R\+I\+P\+H\+\_\+\+B\+A\+SE})}\hypertarget{group___p_w_r___private___defines_ga7f88bce73931300319824f22578f90de}{}\label{group___p_w_r___private___defines_ga7f88bce73931300319824f22578f90de}
+
+
+Definition at line 48 of file stm32f10x\+\_\+pwr.\+c.
+

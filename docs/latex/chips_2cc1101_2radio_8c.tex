@@ -1,0 +1,182 @@
+\hypertarget{chips_2cc1101_2radio_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/chips/cc1101/radio.c File Reference}
+\label{chips_2cc1101_2radio_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/chips/cc1101/radio.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/chips/cc1101/radio.\+c}}
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}radio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cc1101.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}spi.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}debugpins.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leds.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structradio__vars__t}{radio\+\_\+vars\+\_\+t}
+\begin{DoxyCompactList}\small\item\em derfmega definition of the \char`\"{}radio\char`\"{} bsp module. Adapted from the A\+T86\+R\+F231 code since its the same register layout and all \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{chips_2cc1101_2radio_8c_ad7ca1e4f875e9efa4099955ff0bc6627}{radio\+\_\+spi\+Strobe} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} strobe, \hyperlink{structcc1101__status__t}{cc1101\+\_\+status\+\_\+t} $\ast$status\+Read)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{chips_2cc1101_2radio_8c_a47fdf621f0359f3616e74fb9fbbf73f5}{radio\+\_\+spi\+Write\+Reg} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} reg, \hyperlink{structcc1101__status__t}{cc1101\+\_\+status\+\_\+t} $\ast$status\+Read, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} reg\+Value\+To\+Write)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{chips_2cc1101_2radio_8c_a7755c043b80dd651cc1bc4cf289965b0}{radio\+\_\+spi\+Read\+Reg} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} reg, \hyperlink{structcc1101__status__t}{cc1101\+\_\+status\+\_\+t} $\ast$status\+Read, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$reg\+Value\+Read)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{chips_2cc1101_2radio_8c_ae62a731640fe9b229998c0e011cef366}{radio\+\_\+spi\+Write\+Tx\+Fifo} (\hyperlink{structcc1101__status__t}{cc1101\+\_\+status\+\_\+t} $\ast$status\+Read, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$buf\+To\+Write, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} len\+To\+Write)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{chips_2cc1101_2radio_8c_a0abd28e5dac094d3a15fb8b3f07cc120}{radio\+\_\+spi\+Read\+Rx\+Fifo} (\hyperlink{structcc1101__status__t}{cc1101\+\_\+status\+\_\+t} $\ast$status\+Read, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$buf\+Read, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$len\+Read, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} max\+Buf)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{chips_2cc1101_2radio_8c_ac64d140b48f8d336f899452fae7cfe00}{delay} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} usec)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_gacfb21351bb3f0146635745bfacfe26a8}{radio\+\_\+init} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_gaac2272f2a27534c5223d20f7eb4dbb26}{radio\+\_\+set\+Overflow\+Cb} (\hyperlink{group__radiotimer_ga62b602325e65023c91b784f20cd2d6bc}{radiotimer\+\_\+compare\+\_\+cbt} cb)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_ga49e8fc5745ce8569b6d2616883579062}{radio\+\_\+set\+Compare\+Cb} (\hyperlink{group__radiotimer_ga62b602325e65023c91b784f20cd2d6bc}{radiotimer\+\_\+compare\+\_\+cbt} cb)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_ga7efe6846c7583e300a67ef3a336c187c}{radio\+\_\+set\+Start\+Frame\+Cb} (\hyperlink{group__radiotimer_gac7da641d0774aa21bfabefd560e42acf}{radiotimer\+\_\+capture\+\_\+cbt} cb)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_gabb885551de090c751381377762ae3c7c}{radio\+\_\+set\+End\+Frame\+Cb} (\hyperlink{group__radiotimer_gac7da641d0774aa21bfabefd560e42acf}{radiotimer\+\_\+capture\+\_\+cbt} cb)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_gaf181029cf06b94f0f4ceaafec1c3f209}{radio\+\_\+reset} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{chips_2cc1101_2radio_8c_add9a5dfbbaca69af10e3e8b1ea194977}{radio\+\_\+start\+Timer} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} period)
+\item 
+\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{group__radio_ga9d6377834514a8ebf0b5987bb15daa2e}{radio\+\_\+get\+Timer\+Value} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{chips_2cc1101_2radio_8c_a2d90bd587498b5aed71abb0806134510}{radio\+\_\+set\+Timer\+Period} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} period)
+\item 
+\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{group__radio_ga7845450951762209c4879ad10bf160e6}{radio\+\_\+get\+Timer\+Period} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_gaa062a57421da7b960a2613e4f65d3a11}{radio\+\_\+set\+Frequency} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} frequency)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_gac01e153ff02faec0d39efa095d6e5837}{radio\+\_\+rf\+On} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_gaebe8cf9401340cd8bfaabfb8e465a0e9}{radio\+\_\+rf\+Off} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_ga9adb1e30e5a3aaed77829b231e54700e}{radio\+\_\+load\+Packet} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$packet, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} len)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_ga23b8b3278db30bc9cec95510b584b3c7}{radio\+\_\+tx\+Enable} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_ga913f5f6cecb9bdde24278b4692850888}{radio\+\_\+tx\+Now} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_ga61f398fe7a5d131ef2d30e2d09424705}{radio\+\_\+rx\+Enable} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_ga332cd3358e1d2598d42716d702684473}{radio\+\_\+rx\+Now} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_ga1ba47d80eee0a4a3b6d23cfde6b94c9e}{radio\+\_\+get\+Received\+Frame} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$buf\+Read, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$len\+Read, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} max\+Buf\+Len, \hyperlink{_p_e___types_8h_aef44329758059c91c76d334e8fc09700}{int8\+\_\+t} $\ast$rssi, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$lqi, \hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} $\ast$crc)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structradio__vars__t}{radio\+\_\+vars\+\_\+t} \hyperlink{chips_2cc1101_2radio_8c_a9c243c87287c9b1043c251aae61fd656}{radio\+\_\+vars}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{chips/cc1101/radio.\+c@{chips/cc1101/radio.\+c}!delay@{delay}}
+\index{delay@{delay}!chips/cc1101/radio.\+c@{chips/cc1101/radio.\+c}}
+\subsubsection[{\texorpdfstring{delay(uint16\+\_\+t usec)}{delay(uint16_t usec)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} delay (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t}}]{usec}
+\end{DoxyParamCaption}
+)}\hypertarget{chips_2cc1101_2radio_8c_ac64d140b48f8d336f899452fae7cfe00}{}\label{chips_2cc1101_2radio_8c_ac64d140b48f8d336f899452fae7cfe00}
+
+
+Definition at line 37 of file radio.\+c.
+
+\index{chips/cc1101/radio.\+c@{chips/cc1101/radio.\+c}!radio\+\_\+set\+Timer\+Period@{radio\+\_\+set\+Timer\+Period}}
+\index{radio\+\_\+set\+Timer\+Period@{radio\+\_\+set\+Timer\+Period}!chips/cc1101/radio.\+c@{chips/cc1101/radio.\+c}}
+\subsubsection[{\texorpdfstring{radio\+\_\+set\+Timer\+Period(uint16\+\_\+t period)}{radio_setTimerPeriod(uint16_t period)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} radio\+\_\+set\+Timer\+Period (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t}}]{period}
+\end{DoxyParamCaption}
+)}\hypertarget{chips_2cc1101_2radio_8c_a2d90bd587498b5aed71abb0806134510}{}\label{chips_2cc1101_2radio_8c_a2d90bd587498b5aed71abb0806134510}
+
+
+Definition at line 183 of file radio.\+c.
+
+\index{chips/cc1101/radio.\+c@{chips/cc1101/radio.\+c}!radio\+\_\+spi\+Read\+Reg@{radio\+\_\+spi\+Read\+Reg}}
+\index{radio\+\_\+spi\+Read\+Reg@{radio\+\_\+spi\+Read\+Reg}!chips/cc1101/radio.\+c@{chips/cc1101/radio.\+c}}
+\subsubsection[{\texorpdfstring{radio\+\_\+spi\+Read\+Reg(uint8\+\_\+t reg, cc1101\+\_\+status\+\_\+t $\ast$status\+Read, uint8\+\_\+t $\ast$reg\+Value\+Read)}{radio_spiReadReg(uint8_t reg, cc1101_status_t *statusRead, uint8_t *regValueRead)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} radio\+\_\+spi\+Read\+Reg (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{reg, }
+\item[{{\bf cc1101\+\_\+status\+\_\+t} $\ast$}]{status\+Read, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{reg\+Value\+Read}
+\end{DoxyParamCaption}
+)}\hypertarget{chips_2cc1101_2radio_8c_a7755c043b80dd651cc1bc4cf289965b0}{}\label{chips_2cc1101_2radio_8c_a7755c043b80dd651cc1bc4cf289965b0}
+
+
+Definition at line 368 of file radio.\+c.
+
+\index{chips/cc1101/radio.\+c@{chips/cc1101/radio.\+c}!radio\+\_\+spi\+Read\+Rx\+Fifo@{radio\+\_\+spi\+Read\+Rx\+Fifo}}
+\index{radio\+\_\+spi\+Read\+Rx\+Fifo@{radio\+\_\+spi\+Read\+Rx\+Fifo}!chips/cc1101/radio.\+c@{chips/cc1101/radio.\+c}}
+\subsubsection[{\texorpdfstring{radio\+\_\+spi\+Read\+Rx\+Fifo(cc1101\+\_\+status\+\_\+t $\ast$status\+Read, uint8\+\_\+t $\ast$buf\+Read, uint8\+\_\+t $\ast$len\+Read, uint8\+\_\+t max\+Buf)}{radio_spiReadRxFifo(cc1101_status_t *statusRead, uint8_t *bufRead, uint8_t *lenRead, uint8_t maxBuf)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} radio\+\_\+spi\+Read\+Rx\+Fifo (
+\begin{DoxyParamCaption}
+\item[{{\bf cc1101\+\_\+status\+\_\+t} $\ast$}]{status\+Read, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{buf\+Read, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{len\+Read, }
+\item[{{\bf uint8\+\_\+t}}]{max\+Buf}
+\end{DoxyParamCaption}
+)}\hypertarget{chips_2cc1101_2radio_8c_a0abd28e5dac094d3a15fb8b3f07cc120}{}\label{chips_2cc1101_2radio_8c_a0abd28e5dac094d3a15fb8b3f07cc120}
+
+
+Definition at line 417 of file radio.\+c.
+
+\index{chips/cc1101/radio.\+c@{chips/cc1101/radio.\+c}!radio\+\_\+spi\+Strobe@{radio\+\_\+spi\+Strobe}}
+\index{radio\+\_\+spi\+Strobe@{radio\+\_\+spi\+Strobe}!chips/cc1101/radio.\+c@{chips/cc1101/radio.\+c}}
+\subsubsection[{\texorpdfstring{radio\+\_\+spi\+Strobe(uint8\+\_\+t strobe, cc1101\+\_\+status\+\_\+t $\ast$status\+Read)}{radio_spiStrobe(uint8_t strobe, cc1101_status_t *statusRead)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} radio\+\_\+spi\+Strobe (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{strobe, }
+\item[{{\bf cc1101\+\_\+status\+\_\+t} $\ast$}]{status\+Read}
+\end{DoxyParamCaption}
+)}\hypertarget{chips_2cc1101_2radio_8c_ad7ca1e4f875e9efa4099955ff0bc6627}{}\label{chips_2cc1101_2radio_8c_ad7ca1e4f875e9efa4099955ff0bc6627}
+
+
+Definition at line 337 of file radio.\+c.
+
+\index{chips/cc1101/radio.\+c@{chips/cc1101/radio.\+c}!radio\+\_\+spi\+Write\+Reg@{radio\+\_\+spi\+Write\+Reg}}
+\index{radio\+\_\+spi\+Write\+Reg@{radio\+\_\+spi\+Write\+Reg}!chips/cc1101/radio.\+c@{chips/cc1101/radio.\+c}}
+\subsubsection[{\texorpdfstring{radio\+\_\+spi\+Write\+Reg(uint8\+\_\+t reg, cc1101\+\_\+status\+\_\+t $\ast$status\+Read, uint8\+\_\+t reg\+Value\+To\+Write)}{radio_spiWriteReg(uint8_t reg, cc1101_status_t *statusRead, uint8_t regValueToWrite)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} radio\+\_\+spi\+Write\+Reg (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{reg, }
+\item[{{\bf cc1101\+\_\+status\+\_\+t} $\ast$}]{status\+Read, }
+\item[{{\bf uint8\+\_\+t}}]{reg\+Value\+To\+Write}
+\end{DoxyParamCaption}
+)}\hypertarget{chips_2cc1101_2radio_8c_a47fdf621f0359f3616e74fb9fbbf73f5}{}\label{chips_2cc1101_2radio_8c_a47fdf621f0359f3616e74fb9fbbf73f5}
+
+
+Definition at line 352 of file radio.\+c.
+
+\index{chips/cc1101/radio.\+c@{chips/cc1101/radio.\+c}!radio\+\_\+spi\+Write\+Tx\+Fifo@{radio\+\_\+spi\+Write\+Tx\+Fifo}}
+\index{radio\+\_\+spi\+Write\+Tx\+Fifo@{radio\+\_\+spi\+Write\+Tx\+Fifo}!chips/cc1101/radio.\+c@{chips/cc1101/radio.\+c}}
+\subsubsection[{\texorpdfstring{radio\+\_\+spi\+Write\+Tx\+Fifo(cc1101\+\_\+status\+\_\+t $\ast$status\+Read, uint8\+\_\+t $\ast$buf\+To\+Write, uint8\+\_\+t len\+To\+Write)}{radio_spiWriteTxFifo(cc1101_status_t *statusRead, uint8_t *bufToWrite, uint8_t lenToWrite)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} radio\+\_\+spi\+Write\+Tx\+Fifo (
+\begin{DoxyParamCaption}
+\item[{{\bf cc1101\+\_\+status\+\_\+t} $\ast$}]{status\+Read, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{buf\+To\+Write, }
+\item[{{\bf uint8\+\_\+t}}]{len\+To\+Write}
+\end{DoxyParamCaption}
+)}\hypertarget{chips_2cc1101_2radio_8c_ae62a731640fe9b229998c0e011cef366}{}\label{chips_2cc1101_2radio_8c_ae62a731640fe9b229998c0e011cef366}
+
+
+Definition at line 390 of file radio.\+c.
+
+\index{chips/cc1101/radio.\+c@{chips/cc1101/radio.\+c}!radio\+\_\+start\+Timer@{radio\+\_\+start\+Timer}}
+\index{radio\+\_\+start\+Timer@{radio\+\_\+start\+Timer}!chips/cc1101/radio.\+c@{chips/cc1101/radio.\+c}}
+\subsubsection[{\texorpdfstring{radio\+\_\+start\+Timer(uint16\+\_\+t period)}{radio_startTimer(uint16_t period)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} radio\+\_\+start\+Timer (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t}}]{period}
+\end{DoxyParamCaption}
+)}\hypertarget{chips_2cc1101_2radio_8c_add9a5dfbbaca69af10e3e8b1ea194977}{}\label{chips_2cc1101_2radio_8c_add9a5dfbbaca69af10e3e8b1ea194977}
+
+
+Definition at line 175 of file radio.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{chips/cc1101/radio.\+c@{chips/cc1101/radio.\+c}!radio\+\_\+vars@{radio\+\_\+vars}}
+\index{radio\+\_\+vars@{radio\+\_\+vars}!chips/cc1101/radio.\+c@{chips/cc1101/radio.\+c}}
+\subsubsection[{\texorpdfstring{radio\+\_\+vars}{radio_vars}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf radio\+\_\+vars\+\_\+t} radio\+\_\+vars}\hypertarget{chips_2cc1101_2radio_8c_a9c243c87287c9b1043c251aae61fd656}{}\label{chips_2cc1101_2radio_8c_a9c243c87287c9b1043c251aae61fd656}
+
+
+Definition at line 23 of file radio.\+c.
+

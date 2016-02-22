@@ -1,0 +1,180 @@
+\hypertarget{group__adpativesync}{}\section{Adpativesync}
+\label{group__adpativesync}\index{Adpativesync@{Adpativesync}}
+
+
+adaptive sync module  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structcompensation_info__t}{compensation\+Info\+\_\+t}
+\item 
+struct \hyperlink{structadaptive__sync__vars__t}{adaptive\+\_\+sync\+\_\+vars\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__adpativesync_gac81060fb836128f6649b1249f2eca999}{adaptive\+\_\+sync\+\_\+state\+\_\+t} \{ \hyperlink{group__adpativesync_ggac81060fb836128f6649b1249f2eca999acb5ec123e88fa0c9a1548d1f05b03e0f}{S\+\_\+\+N\+O\+NE} = 0x00, 
+\hyperlink{group__adpativesync_ggac81060fb836128f6649b1249f2eca999a04968eb2fb707873f1ef525cc2dcdaca}{S\+\_\+\+F\+A\+S\+T\+ER} = 0x01, 
+\hyperlink{group__adpativesync_ggac81060fb836128f6649b1249f2eca999a9687b49b1490ae284f1be634573de4ee}{S\+\_\+\+S\+L\+O\+W\+ER} = 0x02
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__adpativesync_ga89deb11d98af3e4cb4cf15c83befc6c9}{adaptive\+\_\+sync\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em initial this module \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__adpativesync_ga94a319cb9d518d12cd800853d8b0d7fc}{adaptive\+\_\+sync\+\_\+indicate\+Time\+Correction} (\hyperlink{_p_e___types_8h_a932e6ccc3d54c58f761c1aead83bd6d7}{int16\+\_\+t} time\+Correction, \hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} timesource)
+\begin{DoxyCompactList}\small\item\em Calculate how many slots have elapsed since last synchronization. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__adpativesync_ga4754d7eb03173c9d65256a04abbdd3a1}{adaptive\+\_\+sync\+\_\+calculate\+Compensated\+Slots} (\hyperlink{_p_e___types_8h_a932e6ccc3d54c58f761c1aead83bd6d7}{int16\+\_\+t} time\+Correction)
+\begin{DoxyCompactList}\small\item\em Calculate the compensation interval, in number of slots. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__adpativesync_ga04865190ddec1a2e91d74bc09f69e7b3}{adaptive\+\_\+sync\+\_\+count\+Compensation\+Timeout} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em update compensation\+Timeout at the beginning of each slot and adjust current slot length when the elapsed slots rearch to compensation interval. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__adpativesync_gadfc86247876d1706bb652832d8dd4cc5}{adaptive\+\_\+sync\+\_\+count\+Compensation\+Timeout\+\_\+compound\+Slots} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} compound\+Slots)
+\begin{DoxyCompactList}\small\item\em update compensation\+Timeout when compound slots are scheduled and adjust the slot when the elapsed slots rearch to compensation interval(e.\+g. S\+E\+R\+I\+A\+L\+RX slots) \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__adpativesync_gacdd4e97ea162473881017916cb373f47}{adaptive\+\_\+sync\+\_\+drift\+Changed} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em set drift\+Changed to true. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+adaptive sync module 
+
+\begin{DoxyAuthor}{Author}
+Tengfei Chang \href{mailto:tengfei.chang@eecs.berkeley.edu}{\tt tengfei.\+chang@eecs.\+berkeley.\+edu}, January 2014. 
+\end{DoxyAuthor}
+
+
+\subsection{Enumeration Type Documentation}
+\index{Adpativesync@{Adpativesync}!adaptive\+\_\+sync\+\_\+state\+\_\+t@{adaptive\+\_\+sync\+\_\+state\+\_\+t}}
+\index{adaptive\+\_\+sync\+\_\+state\+\_\+t@{adaptive\+\_\+sync\+\_\+state\+\_\+t}!Adpativesync@{Adpativesync}}
+\subsubsection[{\texorpdfstring{adaptive\+\_\+sync\+\_\+state\+\_\+t}{adaptive_sync_state_t}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf adaptive\+\_\+sync\+\_\+state\+\_\+t}}\hypertarget{group__adpativesync_gac81060fb836128f6649b1249f2eca999}{}\label{group__adpativesync_gac81060fb836128f6649b1249f2eca999}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+\_\+\+N\+O\+NE@{S\+\_\+\+N\+O\+NE}!Adpativesync@{Adpativesync}}\index{Adpativesync@{Adpativesync}!S\+\_\+\+N\+O\+NE@{S\+\_\+\+N\+O\+NE}}\item[{\em 
+S\+\_\+\+N\+O\+NE\hypertarget{group__adpativesync_ggac81060fb836128f6649b1249f2eca999acb5ec123e88fa0c9a1548d1f05b03e0f}{}\label{group__adpativesync_ggac81060fb836128f6649b1249f2eca999acb5ec123e88fa0c9a1548d1f05b03e0f}
+}]\index{S\+\_\+\+F\+A\+S\+T\+ER@{S\+\_\+\+F\+A\+S\+T\+ER}!Adpativesync@{Adpativesync}}\index{Adpativesync@{Adpativesync}!S\+\_\+\+F\+A\+S\+T\+ER@{S\+\_\+\+F\+A\+S\+T\+ER}}\item[{\em 
+S\+\_\+\+F\+A\+S\+T\+ER\hypertarget{group__adpativesync_ggac81060fb836128f6649b1249f2eca999a04968eb2fb707873f1ef525cc2dcdaca}{}\label{group__adpativesync_ggac81060fb836128f6649b1249f2eca999a04968eb2fb707873f1ef525cc2dcdaca}
+}]\index{S\+\_\+\+S\+L\+O\+W\+ER@{S\+\_\+\+S\+L\+O\+W\+ER}!Adpativesync@{Adpativesync}}\index{Adpativesync@{Adpativesync}!S\+\_\+\+S\+L\+O\+W\+ER@{S\+\_\+\+S\+L\+O\+W\+ER}}\item[{\em 
+S\+\_\+\+S\+L\+O\+W\+ER\hypertarget{group__adpativesync_ggac81060fb836128f6649b1249f2eca999a9687b49b1490ae284f1be634573de4ee}{}\label{group__adpativesync_ggac81060fb836128f6649b1249f2eca999a9687b49b1490ae284f1be634573de4ee}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 20 of file adaptive\+\_\+sync.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{Adpativesync@{Adpativesync}!adaptive\+\_\+sync\+\_\+calculate\+Compensated\+Slots@{adaptive\+\_\+sync\+\_\+calculate\+Compensated\+Slots}}
+\index{adaptive\+\_\+sync\+\_\+calculate\+Compensated\+Slots@{adaptive\+\_\+sync\+\_\+calculate\+Compensated\+Slots}!Adpativesync@{Adpativesync}}
+\subsubsection[{\texorpdfstring{adaptive\+\_\+sync\+\_\+calculate\+Compensated\+Slots(int16\+\_\+t time\+Correction)}{adaptive_sync_calculateCompensatedSlots(int16_t timeCorrection)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} adaptive\+\_\+sync\+\_\+calculate\+Compensated\+Slots (
+\begin{DoxyParamCaption}
+\item[{{\bf int16\+\_\+t}}]{time\+Correction}
+\end{DoxyParamCaption}
+)}\hypertarget{group__adpativesync_ga4754d7eb03173c9d65256a04abbdd3a1}{}\label{group__adpativesync_ga4754d7eb03173c9d65256a04abbdd3a1}
+
+
+Calculate the compensation interval, in number of slots. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em time\+Correction} & time to be corrected\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+compensation\+Slots the number of slots. 
+\end{DoxyReturn}
+
+
+Definition at line 122 of file adaptive\+\_\+sync.\+c.
+
+\index{Adpativesync@{Adpativesync}!adaptive\+\_\+sync\+\_\+count\+Compensation\+Timeout@{adaptive\+\_\+sync\+\_\+count\+Compensation\+Timeout}}
+\index{adaptive\+\_\+sync\+\_\+count\+Compensation\+Timeout@{adaptive\+\_\+sync\+\_\+count\+Compensation\+Timeout}!Adpativesync@{Adpativesync}}
+\subsubsection[{\texorpdfstring{adaptive\+\_\+sync\+\_\+count\+Compensation\+Timeout(void)}{adaptive_sync_countCompensationTimeout(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} adaptive\+\_\+sync\+\_\+count\+Compensation\+Timeout (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__adpativesync_ga04865190ddec1a2e91d74bc09f69e7b3}{}\label{group__adpativesync_ga04865190ddec1a2e91d74bc09f69e7b3}
+
+
+update compensation\+Timeout at the beginning of each slot and adjust current slot length when the elapsed slots rearch to compensation interval. 
+
+Once compensation\+Timeout == 0, extend or shorten current slot length for one tick. 
+
+Definition at line 173 of file adaptive\+\_\+sync.\+c.
+
+\index{Adpativesync@{Adpativesync}!adaptive\+\_\+sync\+\_\+count\+Compensation\+Timeout\+\_\+compound\+Slots@{adaptive\+\_\+sync\+\_\+count\+Compensation\+Timeout\+\_\+compound\+Slots}}
+\index{adaptive\+\_\+sync\+\_\+count\+Compensation\+Timeout\+\_\+compound\+Slots@{adaptive\+\_\+sync\+\_\+count\+Compensation\+Timeout\+\_\+compound\+Slots}!Adpativesync@{Adpativesync}}
+\subsubsection[{\texorpdfstring{adaptive\+\_\+sync\+\_\+count\+Compensation\+Timeout\+\_\+compound\+Slots(uint16\+\_\+t compound\+Slots)}{adaptive_sync_countCompensationTimeout_compoundSlots(uint16_t compoundSlots)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} adaptive\+\_\+sync\+\_\+count\+Compensation\+Timeout\+\_\+compound\+Slots (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t}}]{compound\+Slots}
+\end{DoxyParamCaption}
+)}\hypertarget{group__adpativesync_gadfc86247876d1706bb652832d8dd4cc5}{}\label{group__adpativesync_gadfc86247876d1706bb652832d8dd4cc5}
+
+
+update compensation\+Timeout when compound slots are scheduled and adjust the slot when the elapsed slots rearch to compensation interval(e.\+g. S\+E\+R\+I\+A\+L\+RX slots) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em compound\+Slots} & how many slots will be elapsed before wakeup next time. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 213 of file adaptive\+\_\+sync.\+c.
+
+\index{Adpativesync@{Adpativesync}!adaptive\+\_\+sync\+\_\+drift\+Changed@{adaptive\+\_\+sync\+\_\+drift\+Changed}}
+\index{adaptive\+\_\+sync\+\_\+drift\+Changed@{adaptive\+\_\+sync\+\_\+drift\+Changed}!Adpativesync@{Adpativesync}}
+\subsubsection[{\texorpdfstring{adaptive\+\_\+sync\+\_\+drift\+Changed(void)}{adaptive_sync_driftChanged(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} adaptive\+\_\+sync\+\_\+drift\+Changed (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__adpativesync_gacdd4e97ea162473881017916cb373f47}{}\label{group__adpativesync_gacdd4e97ea162473881017916cb373f47}
+
+
+set drift\+Changed to true. 
+
+
+
+Definition at line 265 of file adaptive\+\_\+sync.\+c.
+
+\index{Adpativesync@{Adpativesync}!adaptive\+\_\+sync\+\_\+indicate\+Time\+Correction@{adaptive\+\_\+sync\+\_\+indicate\+Time\+Correction}}
+\index{adaptive\+\_\+sync\+\_\+indicate\+Time\+Correction@{adaptive\+\_\+sync\+\_\+indicate\+Time\+Correction}!Adpativesync@{Adpativesync}}
+\subsubsection[{\texorpdfstring{adaptive\+\_\+sync\+\_\+indicate\+Time\+Correction(int16\+\_\+t time\+Correction, open\+\_\+addr\+\_\+t timesource)}{adaptive_sync_indicateTimeCorrection(int16_t timeCorrection, open_addr_t timesource)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} adaptive\+\_\+sync\+\_\+indicate\+Time\+Correction (
+\begin{DoxyParamCaption}
+\item[{{\bf int16\+\_\+t}}]{time\+Correction, }
+\item[{{\bf open\+\_\+addr\+\_\+t}}]{timesource}
+\end{DoxyParamCaption}
+)}\hypertarget{group__adpativesync_ga94a319cb9d518d12cd800853d8b0d7fc}{}\label{group__adpativesync_ga94a319cb9d518d12cd800853d8b0d7fc}
+
+
+Calculate how many slots have elapsed since last synchronization. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em time\+Correction} & The time correction being applied. \\
+\hline
+\mbox{\tt in}  & {\em timesource} & The address of the neighbor with which I just communicated, which triggered a time correction. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 53 of file adaptive\+\_\+sync.\+c.
+
+\index{Adpativesync@{Adpativesync}!adaptive\+\_\+sync\+\_\+init@{adaptive\+\_\+sync\+\_\+init}}
+\index{adaptive\+\_\+sync\+\_\+init@{adaptive\+\_\+sync\+\_\+init}!Adpativesync@{Adpativesync}}
+\subsubsection[{\texorpdfstring{adaptive\+\_\+sync\+\_\+init(void)}{adaptive_sync_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} adaptive\+\_\+sync\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__adpativesync_ga89deb11d98af3e4cb4cf15c83befc6c9}{}\label{group__adpativesync_ga89deb11d98af3e4cb4cf15c83befc6c9}
+
+
+initial this module 
+
+
+
+Definition at line 35 of file adaptive\+\_\+sync.\+c.
+

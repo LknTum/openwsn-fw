@@ -1,0 +1,67 @@
+\hypertarget{adaptive__sync_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/02a-\/\+M\+A\+Clow/adaptive\+\_\+sync.c File Reference}
+\label{adaptive__sync_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/02a-\/\+M\+A\+Clow/adaptive\+\_\+sync.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/02a-\/\+M\+A\+Clow/adaptive\+\_\+sync.\+c}}
+{\ttfamily \#include \char`\"{}opendefs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}adaptive\+\_\+sync.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}I\+E\+E\+E802154\+E.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}radio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}openserial.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leds.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}neighbors.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}debugpins.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}packetfunctions.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sixtop.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}scheduler.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}openqueue.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}openrandom.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{adaptive__sync_8c_ae9747ab06ffbd5615bac05b70531838b}{B\+A\+S\+I\+C\+\_\+\+C\+O\+M\+P\+E\+N\+S\+A\+T\+I\+O\+N\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}~58
+\begin{DoxyCompactList}\small\item\em this file is used for the time synchronizatino between different hardware platform \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__adpativesync_ga89deb11d98af3e4cb4cf15c83befc6c9}{adaptive\+\_\+sync\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em initial this module \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__adpativesync_ga94a319cb9d518d12cd800853d8b0d7fc}{adaptive\+\_\+sync\+\_\+indicate\+Time\+Correction} (\hyperlink{_p_e___types_8h_a932e6ccc3d54c58f761c1aead83bd6d7}{int16\+\_\+t} time\+Correction, \hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} timesource)
+\begin{DoxyCompactList}\small\item\em Calculate how many slots have elapsed since last synchronization. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__adpativesync_ga4754d7eb03173c9d65256a04abbdd3a1}{adaptive\+\_\+sync\+\_\+calculate\+Compensated\+Slots} (\hyperlink{_p_e___types_8h_a932e6ccc3d54c58f761c1aead83bd6d7}{int16\+\_\+t} time\+Correction)
+\begin{DoxyCompactList}\small\item\em Calculate the compensation interval, in number of slots. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__adpativesync_ga04865190ddec1a2e91d74bc09f69e7b3}{adaptive\+\_\+sync\+\_\+count\+Compensation\+Timeout} ()
+\begin{DoxyCompactList}\small\item\em update compensation\+Timeout at the beginning of each slot and adjust current slot length when the elapsed slots rearch to compensation interval. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__adpativesync_gadfc86247876d1706bb652832d8dd4cc5}{adaptive\+\_\+sync\+\_\+count\+Compensation\+Timeout\+\_\+compound\+Slots} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} compound\+Slots)
+\begin{DoxyCompactList}\small\item\em update compensation\+Timeout when compound slots are scheduled and adjust the slot when the elapsed slots rearch to compensation interval(e.\+g. S\+E\+R\+I\+A\+L\+RX slots) \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__adpativesync_gacdd4e97ea162473881017916cb373f47}{adaptive\+\_\+sync\+\_\+drift\+Changed} ()
+\begin{DoxyCompactList}\small\item\em set drift\+Changed to true. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structadaptive__sync__vars__t}{adaptive\+\_\+sync\+\_\+vars\+\_\+t} \hyperlink{adaptive__sync_8c_ae816704569399f65474ae8900eb90169}{adaptive\+\_\+sync\+\_\+vars}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{adaptive\+\_\+sync.\+c@{adaptive\+\_\+sync.\+c}!B\+A\+S\+I\+C\+\_\+\+C\+O\+M\+P\+E\+N\+S\+A\+T\+I\+O\+N\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD@{B\+A\+S\+I\+C\+\_\+\+C\+O\+M\+P\+E\+N\+S\+A\+T\+I\+O\+N\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}}
+\index{B\+A\+S\+I\+C\+\_\+\+C\+O\+M\+P\+E\+N\+S\+A\+T\+I\+O\+N\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD@{B\+A\+S\+I\+C\+\_\+\+C\+O\+M\+P\+E\+N\+S\+A\+T\+I\+O\+N\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}!adaptive\+\_\+sync.\+c@{adaptive\+\_\+sync.\+c}}
+\subsubsection[{\texorpdfstring{B\+A\+S\+I\+C\+\_\+\+C\+O\+M\+P\+E\+N\+S\+A\+T\+I\+O\+N\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}{BASIC_COMPENSATION_THRESHOLD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+A\+S\+I\+C\+\_\+\+C\+O\+M\+P\+E\+N\+S\+A\+T\+I\+O\+N\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD~58}\hypertarget{adaptive__sync_8c_ae9747ab06ffbd5615bac05b70531838b}{}\label{adaptive__sync_8c_ae9747ab06ffbd5615bac05b70531838b}
+
+
+this file is used for the time synchronizatino between different hardware platform 
+
+\begin{DoxyAuthor}{Author}
+Tengfei Chang \href{mailto:tengfei.chang@gmail.com}{\tt tengfei.\+chang@gmail.\+com}, January ,2014. 
+\end{DoxyAuthor}
+
+
+Definition at line 22 of file adaptive\+\_\+sync.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{adaptive\+\_\+sync.\+c@{adaptive\+\_\+sync.\+c}!adaptive\+\_\+sync\+\_\+vars@{adaptive\+\_\+sync\+\_\+vars}}
+\index{adaptive\+\_\+sync\+\_\+vars@{adaptive\+\_\+sync\+\_\+vars}!adaptive\+\_\+sync.\+c@{adaptive\+\_\+sync.\+c}}
+\subsubsection[{\texorpdfstring{adaptive\+\_\+sync\+\_\+vars}{adaptive_sync_vars}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf adaptive\+\_\+sync\+\_\+vars\+\_\+t} adaptive\+\_\+sync\+\_\+vars}\hypertarget{adaptive__sync_8c_ae816704569399f65474ae8900eb90169}{}\label{adaptive__sync_8c_ae816704569399f65474ae8900eb90169}
+
+
+Definition at line 28 of file adaptive\+\_\+sync.\+c.
+

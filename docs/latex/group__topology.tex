@@ -1,0 +1,46 @@
+\hypertarget{group__topology}{}\section{Topology}
+\label{group__topology}\index{Topology@{Topology}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group__topology_gab6eb1cb0c830e57a60ccf437d10e3e5b}{topology\+\_\+is\+Acceptable\+Packet} (\hyperlink{structieee802154__header__iht}{ieee802154\+\_\+header\+\_\+iht} $\ast$ieee802514\+\_\+header)
+\begin{DoxyCompactList}\small\item\em Force a topology. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{Topology@{Topology}!topology\+\_\+is\+Acceptable\+Packet@{topology\+\_\+is\+Acceptable\+Packet}}
+\index{topology\+\_\+is\+Acceptable\+Packet@{topology\+\_\+is\+Acceptable\+Packet}!Topology@{Topology}}
+\subsubsection[{\texorpdfstring{topology\+\_\+is\+Acceptable\+Packet(ieee802154\+\_\+header\+\_\+iht $\ast$ieee802514\+\_\+header)}{topology_isAcceptablePacket(ieee802154_header_iht *ieee802514_header)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} topology\+\_\+is\+Acceptable\+Packet (
+\begin{DoxyParamCaption}
+\item[{{\bf ieee802154\+\_\+header\+\_\+iht} $\ast$}]{ieee802514\+\_\+header}
+\end{DoxyParamCaption}
+)}\hypertarget{group__topology_gab6eb1cb0c830e57a60ccf437d10e3e5b}{}\label{group__topology_gab6eb1cb0c830e57a60ccf437d10e3e5b}
+
+
+Force a topology. 
+
+This function is used to force a certain topology, by hard-\/coding the list of acceptable neighbors for a given mote. This function is invoked each time a packet is received. If it returns F\+A\+L\+SE, the packet is silently dropped, as if it were never received. If it returns T\+R\+UE, the packet is accepted.
+
+Typically, filtering packets is done by analyzing the I\+E\+E\+E802.\+15.\+4 header. An example body for this function which forces a topology is\+:
+
+switch (idmanager\+\_\+get\+My\+I\+D(\+A\+D\+D\+R\+\_\+64\+B)-\/$>$addr\+\_\+64b\mbox{[}7\mbox{]}) \{ case T\+O\+P\+O\+L\+O\+G\+Y\+\_\+\+M\+O\+T\+E1\+: if (ieee802514\+\_\+header-\/$>$src.\+addr\+\_\+64b\mbox{[}7\mbox{]}==T\+O\+P\+O\+L\+O\+G\+Y\+\_\+\+M\+O\+T\+E2) \{ return\+Val=T\+R\+UE; \} else \{ return\+Val=F\+A\+L\+SE; \} break; case T\+O\+P\+O\+L\+O\+G\+Y\+\_\+\+M\+O\+T\+E2\+: if (ieee802514\+\_\+header-\/$>$src.\+addr\+\_\+64b\mbox{[}7\mbox{]}==T\+O\+P\+O\+L\+O\+G\+Y\+\_\+\+M\+O\+T\+E1 $\vert$$\vert$ ieee802514\+\_\+header-\/$>$src.\+addr\+\_\+64b\mbox{[}7\mbox{]}==T\+O\+P\+O\+L\+O\+G\+Y\+\_\+\+M\+O\+T\+E3) \{ return\+Val=T\+R\+UE; \} else \{ return\+Val=F\+A\+L\+SE; \} break; default\+: return\+Val=T\+R\+UE; \} return return\+Val;
+
+By default, however, the function should return T\+R\+UE to {\itshape not} force any topology.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ieee802514\+\_\+header} & The parsed I\+E\+E\+E802.\+15.\+4 M\+AC header.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if the packet can be received. 
+
+F\+A\+L\+SE if the packet should be silently dropped. 
+\end{DoxyReturn}
+
+
+Definition at line 53 of file topology.\+c.
+

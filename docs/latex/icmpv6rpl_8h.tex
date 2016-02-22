@@ -1,0 +1,105 @@
+\hypertarget{icmpv6rpl_8h}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/03b-\/\+I\+Pv6/icmpv6rpl.h File Reference}
+\label{icmpv6rpl_8h}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/03b-\/\+I\+Pv6/icmpv6rpl.\+h@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/03b-\/\+I\+Pv6/icmpv6rpl.\+h}}
+{\ttfamily \#include \char`\"{}opentimers.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structicmpv6rpl__dio__ht}{icmpv6rpl\+\_\+dio\+\_\+ht}
+\begin{DoxyCompactList}\small\item\em Header format of a R\+PL D\+IO packet. \end{DoxyCompactList}\item 
+struct \hyperlink{structicmpv6rpl__dao__ht}{icmpv6rpl\+\_\+dao\+\_\+ht}
+\begin{DoxyCompactList}\small\item\em Header format of a R\+PL D\+AO packet. \end{DoxyCompactList}\item 
+struct \hyperlink{structicmpv6rpl__dao__transit__ht}{icmpv6rpl\+\_\+dao\+\_\+transit\+\_\+ht}
+\begin{DoxyCompactList}\small\item\em Header format of a R\+PL D\+AO \char`\"{}\+Transit Information\char`\"{} option. \end{DoxyCompactList}\item 
+struct \hyperlink{structicmpv6rpl__dao__target__ht}{icmpv6rpl\+\_\+dao\+\_\+target\+\_\+ht}
+\begin{DoxyCompactList}\small\item\em Header format of a R\+PL D\+AO \char`\"{}\+Target\char`\"{} option. \end{DoxyCompactList}\item 
+struct \hyperlink{structicmpv6rpl__vars__t}{icmpv6rpl\+\_\+vars\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___i_c_m_pv6_r_p_l_ga8f668655ebf626020f3d47b5dc13cbdc}{T\+I\+M\+E\+R\+\_\+\+D\+I\+O\+\_\+\+T\+I\+M\+E\+O\+UT}~10000
+\item 
+\#define \hyperlink{group___i_c_m_pv6_r_p_l_gae5deb3ed0de2ef56f3f87f1acf48ed13}{T\+I\+M\+E\+R\+\_\+\+D\+A\+O\+\_\+\+T\+I\+M\+E\+O\+UT}~60000
+\item 
+\#define \hyperlink{group___i_c_m_pv6_r_p_l_ga1ae12caee968b3c4346355e6edc2fa1b}{M\+O\+P\+\_\+\+D\+I\+O\+\_\+A}~0$<$$<$5
+\item 
+\#define \hyperlink{group___i_c_m_pv6_r_p_l_ga68b9b921efc360503f32f9b2f31b064a}{M\+O\+P\+\_\+\+D\+I\+O\+\_\+B}~0$<$$<$4
+\item 
+\#define \hyperlink{group___i_c_m_pv6_r_p_l_ga70ade50f3dfe2b0767fa0ef979dea533}{M\+O\+P\+\_\+\+D\+I\+O\+\_\+C}~1$<$$<$3
+\item 
+\#define \hyperlink{group___i_c_m_pv6_r_p_l_ga101deca1213d48043ebd5fb56dca59c8}{P\+R\+F\+\_\+\+D\+I\+O\+\_\+A}~0$<$$<$2
+\item 
+\#define \hyperlink{group___i_c_m_pv6_r_p_l_gad50d0d75312868a94e6bfab9748657aa}{P\+R\+F\+\_\+\+D\+I\+O\+\_\+B}~0$<$$<$1
+\item 
+\#define \hyperlink{group___i_c_m_pv6_r_p_l_gace28fefe40fbc4606b90d1ba79fa4cb7}{P\+R\+F\+\_\+\+D\+I\+O\+\_\+C}~0$<$$<$0
+\item 
+\#define \hyperlink{group___i_c_m_pv6_r_p_l_gac5915be92309eeeca33a95c1ec2d0d89}{G\+\_\+\+D\+IO}~1$<$$<$7
+\item 
+\#define \hyperlink{group___i_c_m_pv6_r_p_l_ga591dd0fee34c7ca9c896973b1fa6f708}{F\+L\+A\+G\+\_\+\+D\+A\+O\+\_\+A}~0$<$$<$0
+\item 
+\#define \hyperlink{group___i_c_m_pv6_r_p_l_ga103f1018a7172b0057cb7f7cdf99b73d}{F\+L\+A\+G\+\_\+\+D\+A\+O\+\_\+B}~0$<$$<$1
+\item 
+\#define \hyperlink{group___i_c_m_pv6_r_p_l_ga632c7da594f4707aa92fe4235d8ca4c7}{F\+L\+A\+G\+\_\+\+D\+A\+O\+\_\+C}~0$<$$<$2
+\item 
+\#define \hyperlink{group___i_c_m_pv6_r_p_l_ga01f7a6ba5364891a303a8e725a170d12}{F\+L\+A\+G\+\_\+\+D\+A\+O\+\_\+D}~0$<$$<$3
+\item 
+\#define \hyperlink{group___i_c_m_pv6_r_p_l_ga106e764d5a7f433bf137362780da4ec8}{F\+L\+A\+G\+\_\+\+D\+A\+O\+\_\+E}~0$<$$<$4
+\item 
+\#define \hyperlink{group___i_c_m_pv6_r_p_l_ga80b1a8bb01b3aa941d3c5c1b24056f1b}{F\+L\+A\+G\+\_\+\+D\+A\+O\+\_\+F}~0$<$$<$5
+\item 
+\#define \hyperlink{group___i_c_m_pv6_r_p_l_ga6068b74c52b57686cdd3af054379ab31}{D\+\_\+\+D\+AO}~1$<$$<$6
+\item 
+\#define \hyperlink{group___i_c_m_pv6_r_p_l_gae04d97823b9a09639485cd885dfc6854}{K\+\_\+\+D\+AO}~0$<$$<$7
+\item 
+\#define \hyperlink{group___i_c_m_pv6_r_p_l_ga695843fab4443b9208b9b3f63668e4b3}{E\+\_\+\+D\+A\+O\+\_\+\+Transit\+\_\+\+Info}~0$<$$<$7
+\item 
+\#define \hyperlink{group___i_c_m_pv6_r_p_l_ga278d0adaa18c164bf954fcbe111b937b}{P\+C1\+\_\+\+A\+\_\+\+D\+A\+O\+\_\+\+Transit\+\_\+\+Info}~0$<$$<$7
+\item 
+\#define \hyperlink{group___i_c_m_pv6_r_p_l_ga60733cb2ce82a72353db3118127783f5}{P\+C1\+\_\+\+B\+\_\+\+D\+A\+O\+\_\+\+Transit\+\_\+\+Info}~1$<$$<$6
+\item 
+\#define \hyperlink{group___i_c_m_pv6_r_p_l_ga45ff21ca0a0df20b71f49005fbe49414}{P\+C2\+\_\+\+A\+\_\+\+D\+A\+O\+\_\+\+Transit\+\_\+\+Info}~0$<$$<$5
+\item 
+\#define \hyperlink{group___i_c_m_pv6_r_p_l_ga4e4f4816b56e79b12c5779bbe4c8c55d}{P\+C2\+\_\+\+B\+\_\+\+D\+A\+O\+\_\+\+Transit\+\_\+\+Info}~0$<$$<$4
+\item 
+\#define \hyperlink{group___i_c_m_pv6_r_p_l_gaeea581acd364f8ba4c521ed008202d0a}{P\+C3\+\_\+\+A\+\_\+\+D\+A\+O\+\_\+\+Transit\+\_\+\+Info}~0$<$$<$3
+\item 
+\#define \hyperlink{group___i_c_m_pv6_r_p_l_gab525a1e4393362a8495f09c8a7a13d55}{P\+C3\+\_\+\+B\+\_\+\+D\+A\+O\+\_\+\+Transit\+\_\+\+Info}~0$<$$<$2
+\item 
+\#define \hyperlink{group___i_c_m_pv6_r_p_l_ga271f09d6156330c6e804cd58eaff9835}{P\+C4\+\_\+\+A\+\_\+\+D\+A\+O\+\_\+\+Transit\+\_\+\+Info}~0$<$$<$1
+\item 
+\#define \hyperlink{group___i_c_m_pv6_r_p_l_ga554e0487c145ca7a58180fc68a8124b5}{P\+C4\+\_\+\+B\+\_\+\+D\+A\+O\+\_\+\+Transit\+\_\+\+Info}~0$<$$<$0
+\item 
+\#define \hyperlink{group___i_c_m_pv6_r_p_l_ga9d6ec6543b7bff16d8d84df14fdee91f}{Prf\+\_\+\+A\+\_\+dio\+\_\+options}~0$<$$<$4
+\item 
+\#define \hyperlink{group___i_c_m_pv6_r_p_l_gaaeaa18d2b800967f481707f376852a50}{Prf\+\_\+\+B\+\_\+dio\+\_\+options}~0$<$$<$3
+\item 
+\#define \hyperlink{group___i_c_m_pv6_r_p_l_ga2f6d170fd016021a724a8730292e6c37}{M\+A\+X\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+P\+A\+R\+E\+N\+TS}~0x01
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{group___i_c_m_pv6_r_p_l_gga3153161a0d848ec64bf4895db3cf1be4aefc8cf6152a5e97ced0c491b4f933755}{O\+P\+T\+I\+O\+N\+\_\+\+R\+O\+U\+T\+E\+\_\+\+I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+T\+Y\+PE} = 0x03, 
+\hyperlink{group___i_c_m_pv6_r_p_l_gga3153161a0d848ec64bf4895db3cf1be4a8ae101d47640a56259fbd9d3b81d88cd}{O\+P\+T\+I\+O\+N\+\_\+\+D\+O\+D\+A\+G\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+T\+Y\+PE} = 0x04, 
+\hyperlink{group___i_c_m_pv6_r_p_l_gga3153161a0d848ec64bf4895db3cf1be4a4b7e74e751a801b667de7133dfc2fce4}{O\+P\+T\+I\+O\+N\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+T\+Y\+PE} = 0x05, 
+\hyperlink{group___i_c_m_pv6_r_p_l_gga3153161a0d848ec64bf4895db3cf1be4a92b2d90a0c3f2b454768f22cf80caa78}{O\+P\+T\+I\+O\+N\+\_\+\+T\+R\+A\+N\+S\+I\+T\+\_\+\+I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+T\+Y\+PE} = 0x06
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i_c_m_pv6_r_p_l_ga7bada18a4742103c7f3b726907cd0382}{icmpv6rpl\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Initialize this module. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i_c_m_pv6_r_p_l_ga849cd3fa4414d99ad68e9baf78c594b5}{icmpv6rpl\+\_\+send\+Done} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{disk_8c_ad018a3100b2dabad325a0800152db297}{error})
+\begin{DoxyCompactList}\small\item\em Called when D\+I\+O/\+D\+AO was sent. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i_c_m_pv6_r_p_l_ga6a943f6b83d94068c38bf9ed684719d9}{icmpv6rpl\+\_\+receive} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Called when R\+PL message received. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i_c_m_pv6_r_p_l_ga9c4de4d84eb79f63a40eb826fc9b8e50}{icmpv6rpl\+\_\+write\+D\+O\+D\+A\+Gid} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$dodagid)
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{group___i_c_m_pv6_r_p_l_ga5679354a50817ec96688fbaab763822a}{icmpv6rpl\+\_\+get\+R\+P\+L\+Intance\+ID} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i_c_m_pv6_r_p_l_ga6724228f85310a8b3ad92bb39bf843f0}{icmpv6rpl\+\_\+get\+R\+P\+L\+D\+O\+D\+A\+Gid} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$address\+\_\+128b)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i_c_m_pv6_r_p_l_ga147bdcc7d626f8c9c004c621c457268a}{icmpv6rpl\+\_\+set\+D\+I\+O\+Period} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} dio\+Period)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i_c_m_pv6_r_p_l_gae337d80795de45ac911449e4a8b4a13e}{icmpv6rpl\+\_\+set\+D\+A\+O\+Period} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} dao\+Period)
+\end{DoxyCompactItemize}

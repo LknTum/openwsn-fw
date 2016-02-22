@@ -1,0 +1,24 @@
+\hypertarget{iot-lab___m3_2library_2_s_t_m32_f10x___std_periph___lib___v3_85_80_2_libraries_2_c_m_s_i_s_2_c_ma7903fbbb33ff1d89c70852ed1b1fe1b}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/iot-\/lab\+\_\+\+M3/library/\+S\+T\+M32\+F10x\+\_\+\+Std\+Periph\+\_\+\+Lib\+\_\+\+V3.5.0/\+Libraries/\+C\+M\+S\+I\+S/\+C\+M3/\+Device\+Support/\+S\+T/\+S\+T\+M32\+F10x/system\+\_\+stm32f10x.c File Reference}
+\label{iot-lab___m3_2library_2_s_t_m32_f10x___std_periph___lib___v3_85_80_2_libraries_2_c_m_s_i_s_2_c_ma7903fbbb33ff1d89c70852ed1b1fe1b}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/iot-\/lab\+\_\+\+M3/library/\+S\+T\+M32\+F10x\+\_\+\+Std\+Periph\+\_\+\+Lib\+\_\+\+V3.\+5.\+0/\+Libraries/\+C\+M\+S\+I\+S/\+C\+M3/\+Device\+Support/\+S\+T/\+S\+T\+M32\+F10x/system\+\_\+stm32f10x.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/iot-\/lab\+\_\+\+M3/library/\+S\+T\+M32\+F10x\+\_\+\+Std\+Periph\+\_\+\+Lib\+\_\+\+V3.\+5.\+0/\+Libraries/\+C\+M\+S\+I\+S/\+C\+M3/\+Device\+Support/\+S\+T/\+S\+T\+M32\+F10x/system\+\_\+stm32f10x.\+c}}
+{\ttfamily \#include \char`\"{}stm32f10x.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___s_t_m32_f10x___system___private___defines_ga69649cc38f34627cfb48b51062ebd390}{S\+Y\+S\+C\+L\+K\+\_\+\+F\+R\+E\+Q\+\_\+72\+M\+Hz}~72000000
+\item 
+\#define \hyperlink{group___s_t_m32_f10x___system___private___defines_ga40e1495541cbb4acbe3f1819bd87a9fe}{V\+E\+C\+T\+\_\+\+T\+A\+B\+\_\+\+O\+F\+F\+S\+ET}~0x0
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___s_t_m32_f10x___system___private___functions_ga93f514700ccf00d08dbdcff7f1224eb2}{System\+Init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Setup the microcontroller system Initialize the Embedded Flash Interface, the P\+LL and update the System\+Core\+Clock variable. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___s_t_m32_f10x___system___private___functions_gae0c36a9591fe6e9c45ecb21a794f0f0f}{System\+Core\+Clock\+Update} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Update System\+Core\+Clock variable according to Clock Register Values. The System\+Core\+Clock variable contains the core clock (H\+C\+LK), it can be used by the user application to setup the Sys\+Tick timer or configure other parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group___s_t_m32_f10x___system___private___variables_gaa3cd3e43291e81e795d642b79b6088e6}{System\+Core\+Clock} = \hyperlink{group___s_t_m32_f10x___system___private___defines_ga69649cc38f34627cfb48b51062ebd390}{S\+Y\+S\+C\+L\+K\+\_\+\+F\+R\+E\+Q\+\_\+72\+M\+Hz}
+\item 
+\hyperlink{group___c_m_s_i_s___c_m3__core__definitions_gaf63697ed9952cc71e1225efe205f6cd3}{\+\_\+\+\_\+I} \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{group___s_t_m32_f10x___system___private___variables_gacdc3ef54c0704c90e69a8a84fb2d970d}{A\+H\+B\+Presc\+Table} \mbox{[}16\mbox{]} = \{0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9\}
+\end{DoxyCompactItemize}

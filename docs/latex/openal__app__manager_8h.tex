@@ -1,0 +1,295 @@
+\hypertarget{openal__app__manager_8h}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/xpressohack/\+Open\+W\+S\+N\+\_\+\+O\+S/src/\+Open\+A\+L/internal/openal\+\_\+app\+\_\+manager.h File Reference}
+\label{openal__app__manager_8h}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/xpressohack/\+Open\+W\+S\+N\+\_\+\+O\+S/src/\+Open\+A\+L/internal/openal\+\_\+app\+\_\+manager.\+h@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/xpressohack/\+Open\+W\+S\+N\+\_\+\+O\+S/src/\+Open\+A\+L/internal/openal\+\_\+app\+\_\+manager.\+h}}
+{\ttfamily \#include \char`\"{}openal\+\_\+internal\+\_\+common.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}openmote\+\_\+pindefs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pins.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Free\+R\+T\+O\+S.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}semphr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}task.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapp__registry__entry__t}{app\+\_\+registry\+\_\+entry\+\_\+t}
+\item 
+struct \hyperlink{structvolatile__app__data__t}{volatile\+\_\+app\+\_\+data\+\_\+t}
+\item 
+struct \hyperlink{structopenal__pin__state__t}{openal\+\_\+pin\+\_\+state\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{openal__app__manager_8h_a579e8052db24cc1469d7d549ec0f1f91}{A\+P\+P\+\_\+\+S\+L\+O\+T\+\_\+\+E\+M\+P\+TY}~0
+\item 
+\#define \hyperlink{openal__app__manager_8h_a4e5b78370cf68e674946d727aa30245f}{A\+P\+P\+\_\+\+C\+U\+R\+R\+E\+NT}~0x\+FE
+\item 
+\#define \hyperlink{openal__app__manager_8h_a082a7e0f54795ac5f1cc348533df32bb}{O\+P\+E\+N\+A\+L\+\_\+\+N\+U\+M\+\_\+\+A\+P\+PS}~10
+\item 
+\#define \hyperlink{openal__app__manager_8h_a36699de715a7db3a2f27e6dce8f5f7db}{N\+O\+\_\+\+O\+W\+N\+ER}~((\hyperlink{_free_r_t_o_s_8h_af7cd8f53b62f0c497b442b504c30f2ec}{x\+Task\+Handle})0x\+F\+F\+F\+F\+F\+F\+F\+F)
+\item 
+\#define \hyperlink{openal__app__manager_8h_a5a3429ed07c8d12b2f21a762cc502d36}{A\+P\+P\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}~0x\+FF
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structapp__registry__entry__t}{app\+\_\+registry\+\_\+entry\+\_\+t} \hyperlink{openal__app__manager_8h_a4ce1d565cc54635a04918a0fe7ffa2e6}{app\+\_\+registry\+\_\+entry\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bb}{app\+\_\+state\+\_\+t} \{ \\*
+\hyperlink{agilefox_200std__low__power__mode_200std__low__power__mode_8c_a5bb27460721cc90620d197fabf50d4bba16aacdd1728d5652f32ea5d0cb96375e}{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+TX} = 0x01, 
+\hyperlink{agilefox_200std__low__power__mode_200std__low__power__mode_8c_a5bb27460721cc90620d197fabf50d4bba17432ac7c0b41023ff0fb83003a64ba1}{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+RX} = 0x02, 
+\hyperlink{01bsp__radio_8c_a5bb27460721cc90620d197fabf50d4bba16aacdd1728d5652f32ea5d0cb96375e}{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+TX} = 0x01, 
+\hyperlink{01bsp__radio_8c_a5bb27460721cc90620d197fabf50d4bba17432ac7c0b41023ff0fb83003a64ba1}{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+RX} = 0x02, 
+\\*
+\hyperlink{03oos__sniffer_8c_a5bb27460721cc90620d197fabf50d4bba16aacdd1728d5652f32ea5d0cb96375e}{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+TX} = 0x01, 
+\hyperlink{03oos__sniffer_8c_a5bb27460721cc90620d197fabf50d4bba17432ac7c0b41023ff0fb83003a64ba1}{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+RX} = 0x02, 
+\hyperlink{openmotestm_200std__low__power__mode_200std__low__power__mode_8c_a5bb27460721cc90620d197fabf50d4bba16aacdd1728d5652f32ea5d0cb96375e}{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+TX} = 0x01, 
+\hyperlink{openmotestm_200std__low__power__mode_200std__low__power__mode_8c_a5bb27460721cc90620d197fabf50d4bba17432ac7c0b41023ff0fb83003a64ba1}{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+RX} = 0x02, 
+\\*
+\hyperlink{samr21__xpro_200std__low__power__mode_200std__low__power__mode_8c_a5bb27460721cc90620d197fabf50d4bba16aacdd1728d5652f32ea5d0cb96375e}{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+TX} = 0x01, 
+\hyperlink{samr21__xpro_200std__low__power__mode_200std__low__power__mode_8c_a5bb27460721cc90620d197fabf50d4bba17432ac7c0b41023ff0fb83003a64ba1}{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+RX} = 0x02, 
+\hyperlink{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bba948b2aee15f52b421fa4770c47bcfe8c}{S\+T\+O\+P\+P\+ED}, 
+\hyperlink{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bba1061be6c3fb88d32829cba6f6b2be304}{R\+U\+N\+N\+I\+NG}, 
+\\*
+\hyperlink{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bbadcc8db9a12e6a02d7e86e4da8f1fa443}{R\+E\+S\+T\+A\+R\+T\+I\+NG}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{structapp__registry__entry__t}{app\+\_\+registry\+\_\+entry\+\_\+t} \hyperlink{openal__app__manager_8c_a40ccf5371aac1a79485a164c488fd1a9}{app\+\_\+registry}\mbox{[}\hyperlink{openal__app__manager_8h_a082a7e0f54795ac5f1cc348533df32bb}{O\+P\+E\+N\+A\+L\+\_\+\+N\+U\+M\+\_\+\+A\+P\+PS}\mbox{]} \hyperlink{openal__app__manager_8h_a106af0e6c050fe0a1d2b604eb01150e5}{\+\_\+\+\_\+attribute\+\_\+\+\_\+} ((section(\char`\"{}.open\+A\+L\+\_\+registry\char`\"{})))
+\item 
+\hyperlink{openal__internal__common_8h_ae9359106fbf415b08abfac4a081b5a96}{openal\+\_\+error\+\_\+code\+\_\+t} \hyperlink{openal__app__manager_8h_a48e76000e608257d30f7d76ba7d250e8}{openal\+\_\+claim\+\_\+pin} (char pin) \hyperlink{openal__internal__common_8h_ac94fce83ea58f8eb7f0a05150d3f9003}{O\+P\+E\+N\+A\+L\+\_\+\+L\+IB}
+\item 
+\hyperlink{openal__internal__common_8h_ae9359106fbf415b08abfac4a081b5a96}{openal\+\_\+error\+\_\+code\+\_\+t} \hyperlink{openal__app__manager_8h_a8fe6d947bfa3935351e64f0ad48d0493}{openal\+\_\+check\+\_\+owner} (char pin) \hyperlink{openal__internal__common_8h_ac94fce83ea58f8eb7f0a05150d3f9003}{O\+P\+E\+N\+A\+L\+\_\+\+L\+IB}
+\item 
+char \hyperlink{openal__app__manager_8h_abe56ddffa45a93121ceefc9646575311}{openal\+\_\+current\+\_\+app} () \hyperlink{openal__internal__common_8h_ac94fce83ea58f8eb7f0a05150d3f9003}{O\+P\+E\+N\+A\+L\+\_\+\+L\+IB}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{openal__app__manager_8h_a0d8415d916a1a582d6ea266b7563b753}{openal\+\_\+start\+\_\+app} (char app\+\_\+no) \hyperlink{openal__internal__common_8h_ac94fce83ea58f8eb7f0a05150d3f9003}{O\+P\+E\+N\+A\+L\+\_\+\+L\+IB}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{openal__app__manager_8h_ac4b2fab1c072d5090975d08c95012873}{openal\+\_\+kill\+\_\+app} (char app\+\_\+no) \hyperlink{openal__internal__common_8h_ac94fce83ea58f8eb7f0a05150d3f9003}{O\+P\+E\+N\+A\+L\+\_\+\+L\+IB}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{openal__app__manager_8h_acfc2845d9a33e8ba23993893510952b6}{openal\+\_\+app\+\_\+manager\+\_\+init} () \hyperlink{openal__internal__common_8h_ac94fce83ea58f8eb7f0a05150d3f9003}{O\+P\+E\+N\+A\+L\+\_\+\+L\+IB}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_free_r_t_o_s_8h_a520d8cf032327581ece00e5bd8e03a75}{x\+Semaphore\+Handle} \hyperlink{openal__app__manager_8h_a0f068b3849f388133a8d18c58151bebe}{app\+\_\+data\+\_\+mutex}
+\item 
+\hyperlink{structvolatile__app__data__t}{volatile\+\_\+app\+\_\+data\+\_\+t} \hyperlink{openal__app__manager_8h_abda0a6cb3ede8cdeae4b1371382e41b7}{openal\+\_\+app\+\_\+data} \mbox{[}\hyperlink{openal__app__manager_8h_a082a7e0f54795ac5f1cc348533df32bb}{O\+P\+E\+N\+A\+L\+\_\+\+N\+U\+M\+\_\+\+A\+P\+PS}\mbox{]}
+\item 
+\hyperlink{_free_r_t_o_s_8h_a520d8cf032327581ece00e5bd8e03a75}{x\+Semaphore\+Handle} \hyperlink{openal__app__manager_8h_aedf8fffed6f6598bf317db36390a3717}{pin\+\_\+registry\+\_\+mutex}
+\item 
+\hyperlink{structopenal__pin__state__t}{openal\+\_\+pin\+\_\+state\+\_\+t} \hyperlink{openal__app__manager_8h_a52014f54fe3ccb97f6a93813927466b1}{openal\+\_\+pin\+\_\+registry} \mbox{[}\hyperlink{openmote__pindefs_8h_af88be7d9c2e784fb8f1cb573c5bf9d26}{O\+P\+E\+N\+M\+O\+T\+E\+\_\+\+N\+U\+M\+\_\+\+P\+I\+NS}\mbox{]}
+\item 
+\hyperlink{_free_r_t_o_s_8h_a520d8cf032327581ece00e5bd8e03a75}{x\+Semaphore\+Handle} \hyperlink{openal__app__manager_8h_a29533f65e0634aa6e86e857ee47a604b}{pin\+\_\+configuration\+\_\+mutex}
+\item 
+\hyperlink{_free_r_t_o_s_8h_a520d8cf032327581ece00e5bd8e03a75}{x\+Semaphore\+Handle} \hyperlink{openal__app__manager_8h_a8252ccdc72feb0db94161c858a8832a3}{adc\+\_\+mutex}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!A\+P\+P\+\_\+\+C\+U\+R\+R\+E\+NT@{A\+P\+P\+\_\+\+C\+U\+R\+R\+E\+NT}}
+\index{A\+P\+P\+\_\+\+C\+U\+R\+R\+E\+NT@{A\+P\+P\+\_\+\+C\+U\+R\+R\+E\+NT}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}
+\subsubsection[{\texorpdfstring{A\+P\+P\+\_\+\+C\+U\+R\+R\+E\+NT}{APP_CURRENT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+P\+\_\+\+C\+U\+R\+R\+E\+NT~0x\+FE}\hypertarget{openal__app__manager_8h_a4e5b78370cf68e674946d727aa30245f}{}\label{openal__app__manager_8h_a4e5b78370cf68e674946d727aa30245f}
+
+
+Definition at line 19 of file openal\+\_\+app\+\_\+manager.\+h.
+
+\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!A\+P\+P\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND@{A\+P\+P\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}}
+\index{A\+P\+P\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND@{A\+P\+P\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}
+\subsubsection[{\texorpdfstring{A\+P\+P\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}{APP_NOT_FOUND}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+P\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND~0x\+FF}\hypertarget{openal__app__manager_8h_a5a3429ed07c8d12b2f21a762cc502d36}{}\label{openal__app__manager_8h_a5a3429ed07c8d12b2f21a762cc502d36}
+
+
+Definition at line 74 of file openal\+\_\+app\+\_\+manager.\+h.
+
+\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!A\+P\+P\+\_\+\+S\+L\+O\+T\+\_\+\+E\+M\+P\+TY@{A\+P\+P\+\_\+\+S\+L\+O\+T\+\_\+\+E\+M\+P\+TY}}
+\index{A\+P\+P\+\_\+\+S\+L\+O\+T\+\_\+\+E\+M\+P\+TY@{A\+P\+P\+\_\+\+S\+L\+O\+T\+\_\+\+E\+M\+P\+TY}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}
+\subsubsection[{\texorpdfstring{A\+P\+P\+\_\+\+S\+L\+O\+T\+\_\+\+E\+M\+P\+TY}{APP_SLOT_EMPTY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+P\+\_\+\+S\+L\+O\+T\+\_\+\+E\+M\+P\+TY~0}\hypertarget{openal__app__manager_8h_a579e8052db24cc1469d7d549ec0f1f91}{}\label{openal__app__manager_8h_a579e8052db24cc1469d7d549ec0f1f91}
+
+
+Definition at line 18 of file openal\+\_\+app\+\_\+manager.\+h.
+
+\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!N\+O\+\_\+\+O\+W\+N\+ER@{N\+O\+\_\+\+O\+W\+N\+ER}}
+\index{N\+O\+\_\+\+O\+W\+N\+ER@{N\+O\+\_\+\+O\+W\+N\+ER}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}
+\subsubsection[{\texorpdfstring{N\+O\+\_\+\+O\+W\+N\+ER}{NO_OWNER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+O\+\_\+\+O\+W\+N\+ER~(({\bf x\+Task\+Handle})0x\+F\+F\+F\+F\+F\+F\+F\+F)}\hypertarget{openal__app__manager_8h_a36699de715a7db3a2f27e6dce8f5f7db}{}\label{openal__app__manager_8h_a36699de715a7db3a2f27e6dce8f5f7db}
+
+
+Definition at line 48 of file openal\+\_\+app\+\_\+manager.\+h.
+
+\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!O\+P\+E\+N\+A\+L\+\_\+\+N\+U\+M\+\_\+\+A\+P\+PS@{O\+P\+E\+N\+A\+L\+\_\+\+N\+U\+M\+\_\+\+A\+P\+PS}}
+\index{O\+P\+E\+N\+A\+L\+\_\+\+N\+U\+M\+\_\+\+A\+P\+PS@{O\+P\+E\+N\+A\+L\+\_\+\+N\+U\+M\+\_\+\+A\+P\+PS}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}
+\subsubsection[{\texorpdfstring{O\+P\+E\+N\+A\+L\+\_\+\+N\+U\+M\+\_\+\+A\+P\+PS}{OPENAL_NUM_APPS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\+P\+E\+N\+A\+L\+\_\+\+N\+U\+M\+\_\+\+A\+P\+PS~10}\hypertarget{openal__app__manager_8h_a082a7e0f54795ac5f1cc348533df32bb}{}\label{openal__app__manager_8h_a082a7e0f54795ac5f1cc348533df32bb}
+
+
+Definition at line 29 of file openal\+\_\+app\+\_\+manager.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!app\+\_\+registry\+\_\+entry\+\_\+t@{app\+\_\+registry\+\_\+entry\+\_\+t}}
+\index{app\+\_\+registry\+\_\+entry\+\_\+t@{app\+\_\+registry\+\_\+entry\+\_\+t}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}
+\subsubsection[{\texorpdfstring{app\+\_\+registry\+\_\+entry\+\_\+t}{app_registry_entry_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf app\+\_\+registry\+\_\+entry\+\_\+t}  {\bf app\+\_\+registry\+\_\+entry\+\_\+t}}\hypertarget{openal__app__manager_8h_a4ce1d565cc54635a04918a0fe7ffa2e6}{}\label{openal__app__manager_8h_a4ce1d565cc54635a04918a0fe7ffa2e6}
+
+
+\subsection{Enumeration Type Documentation}
+\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!app\+\_\+state\+\_\+t@{app\+\_\+state\+\_\+t}}
+\index{app\+\_\+state\+\_\+t@{app\+\_\+state\+\_\+t}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}
+\subsubsection[{\texorpdfstring{app\+\_\+state\+\_\+t}{app_state_t}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf app\+\_\+state\+\_\+t}}\hypertarget{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bb}{}\label{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bb}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+TX@{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+TX}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+TX@{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+TX}}\item[{\em 
+A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+TX\hypertarget{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bba16aacdd1728d5652f32ea5d0cb96375e}{}\label{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bba16aacdd1728d5652f32ea5d0cb96375e}
+}]\index{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+RX@{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+RX}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+RX@{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+RX}}\item[{\em 
+A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+RX\hypertarget{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bba17432ac7c0b41023ff0fb83003a64ba1}{}\label{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bba17432ac7c0b41023ff0fb83003a64ba1}
+}]\index{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+TX@{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+TX}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+TX@{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+TX}}\item[{\em 
+A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+TX\hypertarget{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bba16aacdd1728d5652f32ea5d0cb96375e}{}\label{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bba16aacdd1728d5652f32ea5d0cb96375e}
+}]\index{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+RX@{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+RX}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+RX@{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+RX}}\item[{\em 
+A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+RX\hypertarget{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bba17432ac7c0b41023ff0fb83003a64ba1}{}\label{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bba17432ac7c0b41023ff0fb83003a64ba1}
+}]\index{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+TX@{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+TX}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+TX@{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+TX}}\item[{\em 
+A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+TX\hypertarget{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bba16aacdd1728d5652f32ea5d0cb96375e}{}\label{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bba16aacdd1728d5652f32ea5d0cb96375e}
+}]\index{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+RX@{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+RX}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+RX@{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+RX}}\item[{\em 
+A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+RX\hypertarget{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bba17432ac7c0b41023ff0fb83003a64ba1}{}\label{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bba17432ac7c0b41023ff0fb83003a64ba1}
+}]\index{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+TX@{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+TX}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+TX@{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+TX}}\item[{\em 
+A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+TX\hypertarget{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bba16aacdd1728d5652f32ea5d0cb96375e}{}\label{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bba16aacdd1728d5652f32ea5d0cb96375e}
+}]\index{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+RX@{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+RX}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+RX@{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+RX}}\item[{\em 
+A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+RX\hypertarget{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bba17432ac7c0b41023ff0fb83003a64ba1}{}\label{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bba17432ac7c0b41023ff0fb83003a64ba1}
+}]\index{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+TX@{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+TX}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+TX@{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+TX}}\item[{\em 
+A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+TX\hypertarget{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bba16aacdd1728d5652f32ea5d0cb96375e}{}\label{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bba16aacdd1728d5652f32ea5d0cb96375e}
+}]\index{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+RX@{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+RX}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+RX@{A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+RX}}\item[{\em 
+A\+P\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+RX\hypertarget{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bba17432ac7c0b41023ff0fb83003a64ba1}{}\label{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bba17432ac7c0b41023ff0fb83003a64ba1}
+}]\index{S\+T\+O\+P\+P\+ED@{S\+T\+O\+P\+P\+ED}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!S\+T\+O\+P\+P\+ED@{S\+T\+O\+P\+P\+ED}}\item[{\em 
+S\+T\+O\+P\+P\+ED\hypertarget{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bba948b2aee15f52b421fa4770c47bcfe8c}{}\label{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bba948b2aee15f52b421fa4770c47bcfe8c}
+}]\index{R\+U\+N\+N\+I\+NG@{R\+U\+N\+N\+I\+NG}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!R\+U\+N\+N\+I\+NG@{R\+U\+N\+N\+I\+NG}}\item[{\em 
+R\+U\+N\+N\+I\+NG\hypertarget{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bba1061be6c3fb88d32829cba6f6b2be304}{}\label{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bba1061be6c3fb88d32829cba6f6b2be304}
+}]\index{R\+E\+S\+T\+A\+R\+T\+I\+NG@{R\+E\+S\+T\+A\+R\+T\+I\+NG}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!R\+E\+S\+T\+A\+R\+T\+I\+NG@{R\+E\+S\+T\+A\+R\+T\+I\+NG}}\item[{\em 
+R\+E\+S\+T\+A\+R\+T\+I\+NG\hypertarget{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bbadcc8db9a12e6a02d7e86e4da8f1fa443}{}\label{openal__app__manager_8h_a5bb27460721cc90620d197fabf50d4bbadcc8db9a12e6a02d7e86e4da8f1fa443}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 33 of file openal\+\_\+app\+\_\+manager.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+attribute\+\_\+\+\_\+((section("".\+open\+A\+L\+\_\+registry"")))}{__attribute__((section(".openAL_registry")))}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf app\+\_\+registry\+\_\+entry\+\_\+t} {\bf app\+\_\+registry} \mbox{[}{\bf O\+P\+E\+N\+A\+L\+\_\+\+N\+U\+M\+\_\+\+A\+P\+PS}\mbox{]} \+\_\+\+\_\+attribute\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{(section(\char`\"{}.open\+A\+L\+\_\+registry\char`\"{}))}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{openal__app__manager_8h_a106af0e6c050fe0a1d2b604eb01150e5}{}\label{openal__app__manager_8h_a106af0e6c050fe0a1d2b604eb01150e5}
+\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!openal\+\_\+app\+\_\+manager\+\_\+init@{openal\+\_\+app\+\_\+manager\+\_\+init}}
+\index{openal\+\_\+app\+\_\+manager\+\_\+init@{openal\+\_\+app\+\_\+manager\+\_\+init}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}
+\subsubsection[{\texorpdfstring{openal\+\_\+app\+\_\+manager\+\_\+init() O\+P\+E\+N\+A\+L\+\_\+\+L\+IB}{openal_app_manager_init() OPENAL_LIB}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} openal\+\_\+app\+\_\+manager\+\_\+init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{openal__app__manager_8h_acfc2845d9a33e8ba23993893510952b6}{}\label{openal__app__manager_8h_acfc2845d9a33e8ba23993893510952b6}
+
+
+Definition at line 218 of file openal\+\_\+app\+\_\+manager.\+c.
+
+\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!openal\+\_\+check\+\_\+owner@{openal\+\_\+check\+\_\+owner}}
+\index{openal\+\_\+check\+\_\+owner@{openal\+\_\+check\+\_\+owner}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}
+\subsubsection[{\texorpdfstring{openal\+\_\+check\+\_\+owner(char pin) O\+P\+E\+N\+A\+L\+\_\+\+L\+IB}{openal_check_owner(char pin) OPENAL_LIB}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf openal\+\_\+error\+\_\+code\+\_\+t} openal\+\_\+check\+\_\+owner (
+\begin{DoxyParamCaption}
+\item[{char}]{pin}
+\end{DoxyParamCaption}
+)}\hypertarget{openal__app__manager_8h_a8fe6d947bfa3935351e64f0ad48d0493}{}\label{openal__app__manager_8h_a8fe6d947bfa3935351e64f0ad48d0493}
+
+
+Definition at line 103 of file openal\+\_\+app\+\_\+manager.\+c.
+
+\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!openal\+\_\+claim\+\_\+pin@{openal\+\_\+claim\+\_\+pin}}
+\index{openal\+\_\+claim\+\_\+pin@{openal\+\_\+claim\+\_\+pin}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}
+\subsubsection[{\texorpdfstring{openal\+\_\+claim\+\_\+pin(char pin) O\+P\+E\+N\+A\+L\+\_\+\+L\+IB}{openal_claim_pin(char pin) OPENAL_LIB}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf openal\+\_\+error\+\_\+code\+\_\+t} openal\+\_\+claim\+\_\+pin (
+\begin{DoxyParamCaption}
+\item[{char}]{pin}
+\end{DoxyParamCaption}
+)}\hypertarget{openal__app__manager_8h_a48e76000e608257d30f7d76ba7d250e8}{}\label{openal__app__manager_8h_a48e76000e608257d30f7d76ba7d250e8}
+
+
+Definition at line 46 of file openal\+\_\+app\+\_\+manager.\+c.
+
+\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!openal\+\_\+current\+\_\+app@{openal\+\_\+current\+\_\+app}}
+\index{openal\+\_\+current\+\_\+app@{openal\+\_\+current\+\_\+app}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}
+\subsubsection[{\texorpdfstring{openal\+\_\+current\+\_\+app() O\+P\+E\+N\+A\+L\+\_\+\+L\+IB}{openal_current_app() OPENAL_LIB}}]{\setlength{\rightskip}{0pt plus 5cm}char openal\+\_\+current\+\_\+app (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{openal__app__manager_8h_abe56ddffa45a93121ceefc9646575311}{}\label{openal__app__manager_8h_abe56ddffa45a93121ceefc9646575311}
+
+
+Definition at line 36 of file openal\+\_\+app\+\_\+manager.\+c.
+
+\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!openal\+\_\+kill\+\_\+app@{openal\+\_\+kill\+\_\+app}}
+\index{openal\+\_\+kill\+\_\+app@{openal\+\_\+kill\+\_\+app}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}
+\subsubsection[{\texorpdfstring{openal\+\_\+kill\+\_\+app(char app\+\_\+no) O\+P\+E\+N\+A\+L\+\_\+\+L\+IB}{openal_kill_app(char app_no) OPENAL_LIB}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} openal\+\_\+kill\+\_\+app (
+\begin{DoxyParamCaption}
+\item[{char}]{app\+\_\+no}
+\end{DoxyParamCaption}
+)}\hypertarget{openal__app__manager_8h_ac4b2fab1c072d5090975d08c95012873}{}\label{openal__app__manager_8h_ac4b2fab1c072d5090975d08c95012873}
+
+
+Definition at line 162 of file openal\+\_\+app\+\_\+manager.\+c.
+
+\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!openal\+\_\+start\+\_\+app@{openal\+\_\+start\+\_\+app}}
+\index{openal\+\_\+start\+\_\+app@{openal\+\_\+start\+\_\+app}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}
+\subsubsection[{\texorpdfstring{openal\+\_\+start\+\_\+app(char app\+\_\+no) O\+P\+E\+N\+A\+L\+\_\+\+L\+IB}{openal_start_app(char app_no) OPENAL_LIB}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} openal\+\_\+start\+\_\+app (
+\begin{DoxyParamCaption}
+\item[{char}]{app\+\_\+no}
+\end{DoxyParamCaption}
+)}\hypertarget{openal__app__manager_8h_a0d8415d916a1a582d6ea266b7563b753}{}\label{openal__app__manager_8h_a0d8415d916a1a582d6ea266b7563b753}
+
+
+Definition at line 121 of file openal\+\_\+app\+\_\+manager.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!adc\+\_\+mutex@{adc\+\_\+mutex}}
+\index{adc\+\_\+mutex@{adc\+\_\+mutex}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}
+\subsubsection[{\texorpdfstring{adc\+\_\+mutex}{adc_mutex}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf x\+Semaphore\+Handle} adc\+\_\+mutex}\hypertarget{openal__app__manager_8h_a8252ccdc72feb0db94161c858a8832a3}{}\label{openal__app__manager_8h_a8252ccdc72feb0db94161c858a8832a3}
+
+
+Definition at line 30 of file openal\+\_\+app\+\_\+manager.\+c.
+
+\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!app\+\_\+data\+\_\+mutex@{app\+\_\+data\+\_\+mutex}}
+\index{app\+\_\+data\+\_\+mutex@{app\+\_\+data\+\_\+mutex}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}
+\subsubsection[{\texorpdfstring{app\+\_\+data\+\_\+mutex}{app_data_mutex}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf x\+Semaphore\+Handle} app\+\_\+data\+\_\+mutex}\hypertarget{openal__app__manager_8h_a0f068b3849f388133a8d18c58151bebe}{}\label{openal__app__manager_8h_a0f068b3849f388133a8d18c58151bebe}
+
+
+Definition at line 25 of file openal\+\_\+app\+\_\+manager.\+c.
+
+\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!openal\+\_\+app\+\_\+data@{openal\+\_\+app\+\_\+data}}
+\index{openal\+\_\+app\+\_\+data@{openal\+\_\+app\+\_\+data}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}
+\subsubsection[{\texorpdfstring{openal\+\_\+app\+\_\+data}{openal_app_data}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf volatile\+\_\+app\+\_\+data\+\_\+t} openal\+\_\+app\+\_\+data\mbox{[}{\bf O\+P\+E\+N\+A\+L\+\_\+\+N\+U\+M\+\_\+\+A\+P\+PS}\mbox{]}}\hypertarget{openal__app__manager_8h_abda0a6cb3ede8cdeae4b1371382e41b7}{}\label{openal__app__manager_8h_abda0a6cb3ede8cdeae4b1371382e41b7}
+
+
+Definition at line 26 of file openal\+\_\+app\+\_\+manager.\+c.
+
+\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!openal\+\_\+pin\+\_\+registry@{openal\+\_\+pin\+\_\+registry}}
+\index{openal\+\_\+pin\+\_\+registry@{openal\+\_\+pin\+\_\+registry}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}
+\subsubsection[{\texorpdfstring{openal\+\_\+pin\+\_\+registry}{openal_pin_registry}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf openal\+\_\+pin\+\_\+state\+\_\+t} openal\+\_\+pin\+\_\+registry\mbox{[}{\bf O\+P\+E\+N\+M\+O\+T\+E\+\_\+\+N\+U\+M\+\_\+\+P\+I\+NS}\mbox{]}}\hypertarget{openal__app__manager_8h_a52014f54fe3ccb97f6a93813927466b1}{}\label{openal__app__manager_8h_a52014f54fe3ccb97f6a93813927466b1}
+
+
+Definition at line 23 of file openal\+\_\+app\+\_\+manager.\+c.
+
+\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!pin\+\_\+configuration\+\_\+mutex@{pin\+\_\+configuration\+\_\+mutex}}
+\index{pin\+\_\+configuration\+\_\+mutex@{pin\+\_\+configuration\+\_\+mutex}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}
+\subsubsection[{\texorpdfstring{pin\+\_\+configuration\+\_\+mutex}{pin_configuration_mutex}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf x\+Semaphore\+Handle} pin\+\_\+configuration\+\_\+mutex}\hypertarget{openal__app__manager_8h_a29533f65e0634aa6e86e857ee47a604b}{}\label{openal__app__manager_8h_a29533f65e0634aa6e86e857ee47a604b}
+
+
+Definition at line 29 of file openal\+\_\+app\+\_\+manager.\+c.
+
+\index{openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}!pin\+\_\+registry\+\_\+mutex@{pin\+\_\+registry\+\_\+mutex}}
+\index{pin\+\_\+registry\+\_\+mutex@{pin\+\_\+registry\+\_\+mutex}!openal\+\_\+app\+\_\+manager.\+h@{openal\+\_\+app\+\_\+manager.\+h}}
+\subsubsection[{\texorpdfstring{pin\+\_\+registry\+\_\+mutex}{pin_registry_mutex}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf x\+Semaphore\+Handle} pin\+\_\+registry\+\_\+mutex}\hypertarget{openal__app__manager_8h_aedf8fffed6f6598bf317db36390a3717}{}\label{openal__app__manager_8h_aedf8fffed6f6598bf317db36390a3717}
+
+
+Definition at line 22 of file openal\+\_\+app\+\_\+manager.\+c.
+

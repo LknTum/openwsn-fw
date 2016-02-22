@@ -1,0 +1,131 @@
+\hypertarget{classuinject__dagroot_1_1_open_hdlc}{}\section{uinject\+\_\+dagroot.\+Open\+Hdlc Class Reference}
+\label{classuinject__dagroot_1_1_open_hdlc}\index{uinject\+\_\+dagroot.\+Open\+Hdlc@{uinject\+\_\+dagroot.\+Open\+Hdlc}}
+Inheritance diagram for uinject\+\_\+dagroot.\+Open\+Hdlc\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classuinject__dagroot_1_1_open_hdlc}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classuinject__dagroot_1_1_open_hdlc_a55d8e91f1733696db40b0ad8db9e7d9b}{hdlcify} (self, in\+Buf)
+\item 
+def \hyperlink{classuinject__dagroot_1_1_open_hdlc_ae7f14aad85429cf173a8e1521c67e4dc}{dehdlcify} (self, in\+Buf)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classuinject__dagroot_1_1_open_hdlc_a49aac6e146f8b58775baa2656ed3551a}{H\+D\+L\+C\+\_\+\+F\+L\+AG} = \textquotesingle{}\textbackslash{}x7e\textquotesingle{}
+\item 
+string \hyperlink{classuinject__dagroot_1_1_open_hdlc_a5d91215ec60894c6cd7fc3063f9ce08b}{H\+D\+L\+C\+\_\+\+F\+L\+A\+G\+\_\+\+E\+S\+C\+A\+P\+ED} = \textquotesingle{}\textbackslash{}x5e\textquotesingle{}
+\item 
+string \hyperlink{classuinject__dagroot_1_1_open_hdlc_a37948c1823460393e9620894686f9b33}{H\+D\+L\+C\+\_\+\+E\+S\+C\+A\+PE} = \textquotesingle{}\textbackslash{}x7d\textquotesingle{}
+\item 
+string \hyperlink{classuinject__dagroot_1_1_open_hdlc_a7391613b4b4eb96dc10c54efe82525fa}{H\+D\+L\+C\+\_\+\+E\+S\+C\+A\+P\+E\+\_\+\+E\+S\+C\+A\+P\+ED} = \textquotesingle{}\textbackslash{}x5d\textquotesingle{}
+\item 
+int \hyperlink{classuinject__dagroot_1_1_open_hdlc_a2eab537e67ea04bb40dc429a289694a4}{H\+D\+L\+C\+\_\+\+C\+R\+C\+I\+N\+IT} = 0xffff
+\item 
+int \hyperlink{classuinject__dagroot_1_1_open_hdlc_ac89e62e50a8670281cf6a87f8d517eb0}{H\+D\+L\+C\+\_\+\+C\+R\+C\+G\+O\+OD} = 0xf0b8
+\item 
+tuple \hyperlink{classuinject__dagroot_1_1_open_hdlc_a6fa5e8e2712ec2a0b306e9a3b4d3820a}{F\+C\+S16\+T\+AB}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 6 of file uinject\+\_\+dagroot.\+py.
+
+
+
+\subsection{Member Function Documentation}
+\index{uinject\+\_\+dagroot\+::\+Open\+Hdlc@{uinject\+\_\+dagroot\+::\+Open\+Hdlc}!dehdlcify@{dehdlcify}}
+\index{dehdlcify@{dehdlcify}!uinject\+\_\+dagroot\+::\+Open\+Hdlc@{uinject\+\_\+dagroot\+::\+Open\+Hdlc}}
+\subsubsection[{\texorpdfstring{dehdlcify(self, in\+Buf)}{dehdlcify(self, inBuf)}}]{\setlength{\rightskip}{0pt plus 5cm}def uinject\+\_\+dagroot.\+Open\+Hdlc.\+dehdlcify (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{in\+Buf}
+\end{DoxyParamCaption}
+)}\hypertarget{classuinject__dagroot_1_1_open_hdlc_ae7f14aad85429cf173a8e1521c67e4dc}{}\label{classuinject__dagroot_1_1_open_hdlc_ae7f14aad85429cf173a8e1521c67e4dc}
+\begin{DoxyVerb}Parse an hdlc frame.
+
+:returns: the extracted frame, or -1 if wrong checksum
+\end{DoxyVerb}
+ 
+
+Definition at line 80 of file uinject\+\_\+dagroot.\+py.
+
+\index{uinject\+\_\+dagroot\+::\+Open\+Hdlc@{uinject\+\_\+dagroot\+::\+Open\+Hdlc}!hdlcify@{hdlcify}}
+\index{hdlcify@{hdlcify}!uinject\+\_\+dagroot\+::\+Open\+Hdlc@{uinject\+\_\+dagroot\+::\+Open\+Hdlc}}
+\subsubsection[{\texorpdfstring{hdlcify(self, in\+Buf)}{hdlcify(self, inBuf)}}]{\setlength{\rightskip}{0pt plus 5cm}def uinject\+\_\+dagroot.\+Open\+Hdlc.\+hdlcify (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{in\+Buf}
+\end{DoxyParamCaption}
+)}\hypertarget{classuinject__dagroot_1_1_open_hdlc_a55d8e91f1733696db40b0ad8db9e7d9b}{}\label{classuinject__dagroot_1_1_open_hdlc_a55d8e91f1733696db40b0ad8db9e7d9b}
+\begin{DoxyVerb}Build an hdlc frame.
+
+Use 0x00 for both addr byte, and control byte.
+\end{DoxyVerb}
+ 
+
+Definition at line 52 of file uinject\+\_\+dagroot.\+py.
+
+
+
+\subsection{Member Data Documentation}
+\index{uinject\+\_\+dagroot\+::\+Open\+Hdlc@{uinject\+\_\+dagroot\+::\+Open\+Hdlc}!F\+C\+S16\+T\+AB@{F\+C\+S16\+T\+AB}}
+\index{F\+C\+S16\+T\+AB@{F\+C\+S16\+T\+AB}!uinject\+\_\+dagroot\+::\+Open\+Hdlc@{uinject\+\_\+dagroot\+::\+Open\+Hdlc}}
+\subsubsection[{\texorpdfstring{F\+C\+S16\+T\+AB}{FCS16TAB}}]{\setlength{\rightskip}{0pt plus 5cm}tuple uinject\+\_\+dagroot.\+Open\+Hdlc.\+F\+C\+S16\+T\+AB\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classuinject__dagroot_1_1_open_hdlc_a6fa5e8e2712ec2a0b306e9a3b4d3820a}{}\label{classuinject__dagroot_1_1_open_hdlc_a6fa5e8e2712ec2a0b306e9a3b4d3820a}
+
+
+Definition at line 15 of file uinject\+\_\+dagroot.\+py.
+
+\index{uinject\+\_\+dagroot\+::\+Open\+Hdlc@{uinject\+\_\+dagroot\+::\+Open\+Hdlc}!H\+D\+L\+C\+\_\+\+C\+R\+C\+G\+O\+OD@{H\+D\+L\+C\+\_\+\+C\+R\+C\+G\+O\+OD}}
+\index{H\+D\+L\+C\+\_\+\+C\+R\+C\+G\+O\+OD@{H\+D\+L\+C\+\_\+\+C\+R\+C\+G\+O\+OD}!uinject\+\_\+dagroot\+::\+Open\+Hdlc@{uinject\+\_\+dagroot\+::\+Open\+Hdlc}}
+\subsubsection[{\texorpdfstring{H\+D\+L\+C\+\_\+\+C\+R\+C\+G\+O\+OD}{HDLC_CRCGOOD}}]{\setlength{\rightskip}{0pt plus 5cm}int uinject\+\_\+dagroot.\+Open\+Hdlc.\+H\+D\+L\+C\+\_\+\+C\+R\+C\+G\+O\+OD = 0xf0b8\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classuinject__dagroot_1_1_open_hdlc_ac89e62e50a8670281cf6a87f8d517eb0}{}\label{classuinject__dagroot_1_1_open_hdlc_ac89e62e50a8670281cf6a87f8d517eb0}
+
+
+Definition at line 13 of file uinject\+\_\+dagroot.\+py.
+
+\index{uinject\+\_\+dagroot\+::\+Open\+Hdlc@{uinject\+\_\+dagroot\+::\+Open\+Hdlc}!H\+D\+L\+C\+\_\+\+C\+R\+C\+I\+N\+IT@{H\+D\+L\+C\+\_\+\+C\+R\+C\+I\+N\+IT}}
+\index{H\+D\+L\+C\+\_\+\+C\+R\+C\+I\+N\+IT@{H\+D\+L\+C\+\_\+\+C\+R\+C\+I\+N\+IT}!uinject\+\_\+dagroot\+::\+Open\+Hdlc@{uinject\+\_\+dagroot\+::\+Open\+Hdlc}}
+\subsubsection[{\texorpdfstring{H\+D\+L\+C\+\_\+\+C\+R\+C\+I\+N\+IT}{HDLC_CRCINIT}}]{\setlength{\rightskip}{0pt plus 5cm}int uinject\+\_\+dagroot.\+Open\+Hdlc.\+H\+D\+L\+C\+\_\+\+C\+R\+C\+I\+N\+IT = 0xffff\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classuinject__dagroot_1_1_open_hdlc_a2eab537e67ea04bb40dc429a289694a4}{}\label{classuinject__dagroot_1_1_open_hdlc_a2eab537e67ea04bb40dc429a289694a4}
+
+
+Definition at line 12 of file uinject\+\_\+dagroot.\+py.
+
+\index{uinject\+\_\+dagroot\+::\+Open\+Hdlc@{uinject\+\_\+dagroot\+::\+Open\+Hdlc}!H\+D\+L\+C\+\_\+\+E\+S\+C\+A\+PE@{H\+D\+L\+C\+\_\+\+E\+S\+C\+A\+PE}}
+\index{H\+D\+L\+C\+\_\+\+E\+S\+C\+A\+PE@{H\+D\+L\+C\+\_\+\+E\+S\+C\+A\+PE}!uinject\+\_\+dagroot\+::\+Open\+Hdlc@{uinject\+\_\+dagroot\+::\+Open\+Hdlc}}
+\subsubsection[{\texorpdfstring{H\+D\+L\+C\+\_\+\+E\+S\+C\+A\+PE}{HDLC_ESCAPE}}]{\setlength{\rightskip}{0pt plus 5cm}string uinject\+\_\+dagroot.\+Open\+Hdlc.\+H\+D\+L\+C\+\_\+\+E\+S\+C\+A\+PE = \textquotesingle{}\textbackslash{}x7d\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classuinject__dagroot_1_1_open_hdlc_a37948c1823460393e9620894686f9b33}{}\label{classuinject__dagroot_1_1_open_hdlc_a37948c1823460393e9620894686f9b33}
+
+
+Definition at line 10 of file uinject\+\_\+dagroot.\+py.
+
+\index{uinject\+\_\+dagroot\+::\+Open\+Hdlc@{uinject\+\_\+dagroot\+::\+Open\+Hdlc}!H\+D\+L\+C\+\_\+\+E\+S\+C\+A\+P\+E\+\_\+\+E\+S\+C\+A\+P\+ED@{H\+D\+L\+C\+\_\+\+E\+S\+C\+A\+P\+E\+\_\+\+E\+S\+C\+A\+P\+ED}}
+\index{H\+D\+L\+C\+\_\+\+E\+S\+C\+A\+P\+E\+\_\+\+E\+S\+C\+A\+P\+ED@{H\+D\+L\+C\+\_\+\+E\+S\+C\+A\+P\+E\+\_\+\+E\+S\+C\+A\+P\+ED}!uinject\+\_\+dagroot\+::\+Open\+Hdlc@{uinject\+\_\+dagroot\+::\+Open\+Hdlc}}
+\subsubsection[{\texorpdfstring{H\+D\+L\+C\+\_\+\+E\+S\+C\+A\+P\+E\+\_\+\+E\+S\+C\+A\+P\+ED}{HDLC_ESCAPE_ESCAPED}}]{\setlength{\rightskip}{0pt plus 5cm}string uinject\+\_\+dagroot.\+Open\+Hdlc.\+H\+D\+L\+C\+\_\+\+E\+S\+C\+A\+P\+E\+\_\+\+E\+S\+C\+A\+P\+ED = \textquotesingle{}\textbackslash{}x5d\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classuinject__dagroot_1_1_open_hdlc_a7391613b4b4eb96dc10c54efe82525fa}{}\label{classuinject__dagroot_1_1_open_hdlc_a7391613b4b4eb96dc10c54efe82525fa}
+
+
+Definition at line 11 of file uinject\+\_\+dagroot.\+py.
+
+\index{uinject\+\_\+dagroot\+::\+Open\+Hdlc@{uinject\+\_\+dagroot\+::\+Open\+Hdlc}!H\+D\+L\+C\+\_\+\+F\+L\+AG@{H\+D\+L\+C\+\_\+\+F\+L\+AG}}
+\index{H\+D\+L\+C\+\_\+\+F\+L\+AG@{H\+D\+L\+C\+\_\+\+F\+L\+AG}!uinject\+\_\+dagroot\+::\+Open\+Hdlc@{uinject\+\_\+dagroot\+::\+Open\+Hdlc}}
+\subsubsection[{\texorpdfstring{H\+D\+L\+C\+\_\+\+F\+L\+AG}{HDLC_FLAG}}]{\setlength{\rightskip}{0pt plus 5cm}string uinject\+\_\+dagroot.\+Open\+Hdlc.\+H\+D\+L\+C\+\_\+\+F\+L\+AG = \textquotesingle{}\textbackslash{}x7e\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classuinject__dagroot_1_1_open_hdlc_a49aac6e146f8b58775baa2656ed3551a}{}\label{classuinject__dagroot_1_1_open_hdlc_a49aac6e146f8b58775baa2656ed3551a}
+
+
+Definition at line 8 of file uinject\+\_\+dagroot.\+py.
+
+\index{uinject\+\_\+dagroot\+::\+Open\+Hdlc@{uinject\+\_\+dagroot\+::\+Open\+Hdlc}!H\+D\+L\+C\+\_\+\+F\+L\+A\+G\+\_\+\+E\+S\+C\+A\+P\+ED@{H\+D\+L\+C\+\_\+\+F\+L\+A\+G\+\_\+\+E\+S\+C\+A\+P\+ED}}
+\index{H\+D\+L\+C\+\_\+\+F\+L\+A\+G\+\_\+\+E\+S\+C\+A\+P\+ED@{H\+D\+L\+C\+\_\+\+F\+L\+A\+G\+\_\+\+E\+S\+C\+A\+P\+ED}!uinject\+\_\+dagroot\+::\+Open\+Hdlc@{uinject\+\_\+dagroot\+::\+Open\+Hdlc}}
+\subsubsection[{\texorpdfstring{H\+D\+L\+C\+\_\+\+F\+L\+A\+G\+\_\+\+E\+S\+C\+A\+P\+ED}{HDLC_FLAG_ESCAPED}}]{\setlength{\rightskip}{0pt plus 5cm}string uinject\+\_\+dagroot.\+Open\+Hdlc.\+H\+D\+L\+C\+\_\+\+F\+L\+A\+G\+\_\+\+E\+S\+C\+A\+P\+ED = \textquotesingle{}\textbackslash{}x5e\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classuinject__dagroot_1_1_open_hdlc_a5d91215ec60894c6cd7fc3063f9ce08b}{}\label{classuinject__dagroot_1_1_open_hdlc_a5d91215ec60894c6cd7fc3063f9ce08b}
+
+
+Definition at line 9 of file uinject\+\_\+dagroot.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openapps/uinject/\hyperlink{uinject__dagroot_8py}{uinject\+\_\+dagroot.\+py}\end{DoxyCompactItemize}

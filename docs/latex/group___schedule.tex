@@ -1,0 +1,802 @@
+\hypertarget{group___schedule}{}\section{Schedule}
+\label{group___schedule}\index{Schedule@{Schedule}}
+
+
+Manages the I\+E\+E\+E802.\+15.\+4e schedule.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structschedule_entry__t}{schedule\+Entry\+\_\+t}
+\item 
+struct \hyperlink{structdebug_schedule_entry__t}{debug\+Schedule\+Entry\+\_\+t}
+\item 
+struct \hyperlink{structslotinfo__element__t}{slotinfo\+\_\+element\+\_\+t}
+\item 
+struct \hyperlink{structschedule__vars__t}{schedule\+\_\+vars\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___schedule_gaea12b586ec3f6de3ffcfff93da574345}{S\+L\+O\+T\+F\+R\+A\+M\+E\+\_\+\+L\+E\+N\+G\+TH}~15
+\begin{DoxyCompactList}\small\item\em The length of the superframe, in slots. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___schedule_ga5206eabfac75eeed6f5066fb6d00f7c3}{N\+U\+M\+S\+E\+R\+I\+A\+L\+RX}~1
+\item 
+\#define \hyperlink{group___schedule_ga9fd457940c2d1313fb347b5fd32d2105}{N\+U\+M\+S\+L\+O\+T\+S\+O\+FF}~1
+\item 
+\#define \hyperlink{group___schedule_ga884c794595c4aa480df9022648c29564}{S\+H\+A\+R\+ED}~\hyperlink{opendefs_8h_aa93f0eb578d23995850d61f7d61c55c1}{F\+A\+L\+SE}
+\item 
+\#define \hyperlink{group___schedule_ga299d7e29eb70888b68ace83fd3f1a8df}{S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+C\+E\+L\+LS}~\hyperlink{group___schedule_gaea12b586ec3f6de3ffcfff93da574345}{S\+L\+O\+T\+F\+R\+A\+M\+E\+\_\+\+L\+E\+N\+G\+TH}-\/\hyperlink{group___schedule_ga5206eabfac75eeed6f5066fb6d00f7c3}{N\+U\+M\+S\+E\+R\+I\+A\+L\+RX}-\/\hyperlink{group___schedule_ga9fd457940c2d1313fb347b5fd32d2105}{N\+U\+M\+S\+L\+O\+T\+S\+O\+FF}
+\item 
+\#define \hyperlink{group___schedule_ga62c64cb1c9bbbb2927f358c14535fb7f}{S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+S\+L\+O\+T\+O\+F\+F\+S\+ET}~1
+\item 
+\#define \hyperlink{group___schedule_ga485a603a3e03059901c4fc5fc968a1e9}{S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+C\+H\+A\+N\+N\+E\+L\+O\+F\+F\+S\+ET}~0
+\item 
+\#define \hyperlink{group___schedule_gad04163370dd0242dd8165e08223a1421}{S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+L\+O\+T\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+LE}~1
+\item 
+\#define \hyperlink{group___schedule_ga291f502456c112dface9c0a55f3512cf}{S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+L\+O\+T\+F\+R\+A\+M\+E\+\_\+\+N\+U\+M\+B\+ER}~1
+\item 
+\#define \hyperlink{group___schedule_ga5b6f09fe180237288683a64602eb5a85}{M\+A\+X\+A\+C\+T\+I\+V\+E\+S\+L\+O\+TS}~(\hyperlink{group___schedule_ga299d7e29eb70888b68ace83fd3f1a8df}{S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+C\+E\+L\+LS}+\hyperlink{group___schedule_ga5206eabfac75eeed6f5066fb6d00f7c3}{N\+U\+M\+S\+E\+R\+I\+A\+L\+RX}+\hyperlink{group___schedule_ga9fd457940c2d1313fb347b5fd32d2105}{N\+U\+M\+S\+L\+O\+T\+S\+O\+FF})
+\begin{DoxyCompactList}\small\item\em Maximum number of active slots in a superframe. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___schedule_ga731698f6cbe05cc416f1116762b2dc49}{M\+I\+N\+BE}~2
+\begin{DoxyCompactList}\small\item\em Minimum backoff exponent. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___schedule_ga484b7be00a72295108c945848f750943}{M\+A\+X\+BE}~4
+\begin{DoxyCompactList}\small\item\em Maximum backoff exponent. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___schedule_ga120d77f8a5101329b471874495b73942}{P\+D\+R\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}~80
+\begin{DoxyCompactList}\small\item\em a threshold used for triggering the maintaining process.\+uint\+: percent \end{DoxyCompactList}\item 
+\#define \hyperlink{group___schedule_ga9f09f2107f559401598f179a3a8cabe6}{M\+I\+N\+\_\+\+N\+U\+M\+T\+X\+\_\+\+F\+O\+R\+\_\+\+P\+DR}~50
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{group___schedule_gab53645758fe83985f0b35af7c5c2115e}{channel\+Offset\+\_\+t}
+\item 
+typedef \hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{group___schedule_ga30a663860a70d8c9db2c3a8e66f544fc}{slot\+Offset\+\_\+t}
+\item 
+typedef \hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{group___schedule_gab960413860c0b01b38ece025b0ee534d}{frame\+Length\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group___schedule_gad8490d4fdf8cef27f7e5fa6a37046a3d}{cell\+Type\+\_\+t} \{ \\*
+\hyperlink{group___schedule_ggad8490d4fdf8cef27f7e5fa6a37046a3da1de02f946786ffb3f640a91a9f6a8821}{C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+O\+FF} = 0, 
+\hyperlink{group___schedule_ggad8490d4fdf8cef27f7e5fa6a37046a3dac33ca5a04740302ac863ad086444176c}{C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+TX} = 1, 
+\hyperlink{group___schedule_ggad8490d4fdf8cef27f7e5fa6a37046a3da4bb32ecfb99b1a48cf7b555de0384f8c}{C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+RX} = 2, 
+\hyperlink{group___schedule_ggad8490d4fdf8cef27f7e5fa6a37046a3da703f29e4d2b16980f09eceaeb7a35281}{C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+T\+X\+RX} = 3, 
+\\*
+\hyperlink{group___schedule_ggad8490d4fdf8cef27f7e5fa6a37046a3da605bbb03557716b1d5b350c8756a6cdb}{C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+S\+E\+R\+I\+A\+L\+RX} = 4, 
+\hyperlink{group___schedule_ggad8490d4fdf8cef27f7e5fa6a37046a3da6f952ab410339bde815d94b59e274a81}{C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+M\+O\+R\+E\+S\+E\+R\+I\+A\+L\+RX} = 5
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___schedule_ga7297bbaa78e266834d3027fbe33688a2}{schedule\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Initialize this module. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___schedule_gade694f312044f8bff151d58c7976d067}{schedule\+\_\+start\+D\+A\+Groot} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Starting the D\+A\+Groot schedule propagation. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group___schedule_gafbaaa0f57ce9c382c0fc00225a7b2078}{debug\+Print\+\_\+schedule} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Trigger this module to print status information, over serial. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group___schedule_gac7367d23ea854c9f421dd0a18d767fd1}{debug\+Print\+\_\+backoff} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Trigger this module to print status information, over serial. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___schedule_ga5b2f9c520f24d642064f63558ee6cb45}{schedule\+\_\+set\+Frame\+Length} (\hyperlink{group___schedule_gab960413860c0b01b38ece025b0ee534d}{frame\+Length\+\_\+t} new\+Frame\+Length)
+\begin{DoxyCompactList}\small\item\em Set frame length. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___schedule_ga2584242bf9622f92c42e59337a38a364}{schedule\+\_\+set\+Frame\+Handle} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} frame\+Handle)
+\begin{DoxyCompactList}\small\item\em Set frame handle. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___schedule_ga8b2f6512ece5caf24247579f28c1a77d}{schedule\+\_\+set\+Frame\+Number} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} frame\+Number)
+\begin{DoxyCompactList}\small\item\em Set frame number. \end{DoxyCompactList}\item 
+\hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{group___schedule_ga00825b0f7040c67065d65aadde478241}{schedule\+\_\+add\+Active\+Slot} (\hyperlink{group___schedule_ga30a663860a70d8c9db2c3a8e66f544fc}{slot\+Offset\+\_\+t} slot\+Offset, \hyperlink{group___schedule_gad8490d4fdf8cef27f7e5fa6a37046a3d}{cell\+Type\+\_\+t} type, \hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} shared, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} channel\+Offset, \hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$neighbor)
+\begin{DoxyCompactList}\small\item\em Add a new active slot into the schedule. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___schedule_ga5420055f63ffdbafbd782de6afd7dcbd}{schedule\+\_\+get\+Slot\+Info} (\hyperlink{group___schedule_ga30a663860a70d8c9db2c3a8e66f544fc}{slot\+Offset\+\_\+t} slot\+Offset, \hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$neighbor, \hyperlink{structslotinfo__element__t}{slotinfo\+\_\+element\+\_\+t} $\ast$info)
+\begin{DoxyCompactList}\small\item\em Get the information of a specific slot. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{group___schedule_gaa535aa16066ce3a127d6d52ba9e00e4d}{schedule\+\_\+get\+Max\+Active\+Slots} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Get the maximum number of active slots. \end{DoxyCompactList}\item 
+\hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{group___schedule_ga6565eddf152a1e9df7bbbbdcf8da87ad}{schedule\+\_\+remove\+Active\+Slot} (\hyperlink{group___schedule_ga30a663860a70d8c9db2c3a8e66f544fc}{slot\+Offset\+\_\+t} slot\+Offset, \hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$neighbor)
+\begin{DoxyCompactList}\small\item\em Remove an active slot from the schedule. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group___schedule_ga08f2bf7e2661dddfa4eb18f80cdad000}{schedule\+\_\+is\+Slot\+Offset\+Available} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} slot\+Offset)
+\item 
+\hyperlink{structschedule_entry__t}{schedule\+Entry\+\_\+t} $\ast$ \hyperlink{group___schedule_gaa341503b0e4ebafeaff9ab5de94be13f}{schedule\+\_\+statistic\+\_\+poor\+Link\+Quality} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___schedule_gaf44e496db5d623ea8168d0eaeffc8b2d}{schedule\+\_\+sync\+Slot\+Offset} (\hyperlink{group___schedule_ga30a663860a70d8c9db2c3a8e66f544fc}{slot\+Offset\+\_\+t} target\+Slot\+Offset)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___schedule_gae6998948df91f1ef9124bec27dc87c2e}{schedule\+\_\+advance\+Slot} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em advance to next active slot \end{DoxyCompactList}\item 
+\hyperlink{group___schedule_ga30a663860a70d8c9db2c3a8e66f544fc}{slot\+Offset\+\_\+t} \hyperlink{group___schedule_ga01252633416fb574b1277b1303030248}{schedule\+\_\+get\+Next\+Active\+Slot\+Offset} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em return slot\+Offset of next active slot \end{DoxyCompactList}\item 
+\hyperlink{group___schedule_gab960413860c0b01b38ece025b0ee534d}{frame\+Length\+\_\+t} \hyperlink{group___schedule_gad9d1ef9965017c2923cb6905b7cc6b7f}{schedule\+\_\+get\+Frame\+Length} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Get the frame length. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{group___schedule_gab5f5f36f28daf8b9d66ca4bea15bfd15}{schedule\+\_\+get\+Frame\+Handle} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Get the frame handle. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{group___schedule_gafeced111ea698fa49d70a22d96ad3014}{schedule\+\_\+get\+Frame\+Number} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Get the frame number. \end{DoxyCompactList}\item 
+\hyperlink{group___schedule_gad8490d4fdf8cef27f7e5fa6a37046a3d}{cell\+Type\+\_\+t} \hyperlink{group___schedule_gafbc894e77f655a69eb9a76bd79f08bda}{schedule\+\_\+get\+Type} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Get the type of the current schedule entry. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___schedule_ga6a1d0334cd9da212a38a1db05e291d3a}{schedule\+\_\+get\+Neighbor} (\hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$addr\+To\+Write)
+\begin{DoxyCompactList}\small\item\em Get the neighbor associated wit the current schedule entry. \end{DoxyCompactList}\item 
+\hyperlink{group___schedule_gab53645758fe83985f0b35af7c5c2115e}{channel\+Offset\+\_\+t} \hyperlink{group___schedule_gac5b1f77de9164b82f73cdc76612e5e54}{schedule\+\_\+get\+Channel\+Offset} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Get the channel offset of the current schedule entry. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group___schedule_gab5a0194710b51bf73b6aa363cb2fd8cb}{schedule\+\_\+get\+Ok\+To\+Send} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Check whether I can send on this slot. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___schedule_ga0d3ec70265c59fdb1ba215d67f04ec83}{schedule\+\_\+reset\+Backoff} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Reset the backoff and backoff\+Exponent. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___schedule_gaf1980123fcc1fea95f3bcfdf63de083d}{schedule\+\_\+indicate\+Rx} (\hyperlink{structasn__t}{asn\+\_\+t} $\ast$asn\+Timestamp)
+\begin{DoxyCompactList}\small\item\em Indicate the reception of a packet. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___schedule_gab4fc72142c898c09598ab0d0b255b794}{schedule\+\_\+indicate\+Tx} (\hyperlink{structasn__t}{asn\+\_\+t} $\ast$asn\+Timestamp, \hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} succesfull\+Tx)
+\begin{DoxyCompactList}\small\item\em Indicate the transmission of a packet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manages the I\+E\+E\+E802.\+15.\+4e schedule. 
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, August 2011 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\index{Schedule@{Schedule}!M\+A\+X\+A\+C\+T\+I\+V\+E\+S\+L\+O\+TS@{M\+A\+X\+A\+C\+T\+I\+V\+E\+S\+L\+O\+TS}}
+\index{M\+A\+X\+A\+C\+T\+I\+V\+E\+S\+L\+O\+TS@{M\+A\+X\+A\+C\+T\+I\+V\+E\+S\+L\+O\+TS}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+A\+C\+T\+I\+V\+E\+S\+L\+O\+TS}{MAXACTIVESLOTS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+A\+C\+T\+I\+V\+E\+S\+L\+O\+TS~({\bf S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+C\+E\+L\+LS}+{\bf N\+U\+M\+S\+E\+R\+I\+A\+L\+RX}+{\bf N\+U\+M\+S\+L\+O\+T\+S\+O\+FF})}\hypertarget{group___schedule_ga5b6f09fe180237288683a64602eb5a85}{}\label{group___schedule_ga5b6f09fe180237288683a64602eb5a85}
+
+
+Maximum number of active slots in a superframe. 
+
+Note that this is merely used to allocate R\+AM memory for the schedule. The schedule is represented, in R\+AM, by a table. There is one row per active slot in that table; a slot is \char`\"{}active\char`\"{} when it is not of type C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+O\+FF.
+
+Set this number to the exact number of active slots you are planning on having in your schedule, so not to waste R\+AM. 
+
+Definition at line 54 of file schedule.\+h.
+
+\index{Schedule@{Schedule}!M\+A\+X\+BE@{M\+A\+X\+BE}}
+\index{M\+A\+X\+BE@{M\+A\+X\+BE}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+BE}{MAXBE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+BE~4}\hypertarget{group___schedule_ga484b7be00a72295108c945848f750943}{}\label{group___schedule_ga484b7be00a72295108c945848f750943}
+
+
+Maximum backoff exponent. 
+
+See M\+I\+N\+BE for an explanation of backoff. 
+
+Definition at line 70 of file schedule.\+h.
+
+\index{Schedule@{Schedule}!M\+I\+N\+\_\+\+N\+U\+M\+T\+X\+\_\+\+F\+O\+R\+\_\+\+P\+DR@{M\+I\+N\+\_\+\+N\+U\+M\+T\+X\+\_\+\+F\+O\+R\+\_\+\+P\+DR}}
+\index{M\+I\+N\+\_\+\+N\+U\+M\+T\+X\+\_\+\+F\+O\+R\+\_\+\+P\+DR@{M\+I\+N\+\_\+\+N\+U\+M\+T\+X\+\_\+\+F\+O\+R\+\_\+\+P\+DR}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{M\+I\+N\+\_\+\+N\+U\+M\+T\+X\+\_\+\+F\+O\+R\+\_\+\+P\+DR}{MIN_NUMTX_FOR_PDR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+I\+N\+\_\+\+N\+U\+M\+T\+X\+\_\+\+F\+O\+R\+\_\+\+P\+DR~50}\hypertarget{group___schedule_ga9f09f2107f559401598f179a3a8cabe6}{}\label{group___schedule_ga9f09f2107f559401598f179a3a8cabe6}
+
+
+Definition at line 76 of file schedule.\+h.
+
+\index{Schedule@{Schedule}!M\+I\+N\+BE@{M\+I\+N\+BE}}
+\index{M\+I\+N\+BE@{M\+I\+N\+BE}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{M\+I\+N\+BE}{MINBE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+I\+N\+BE~2}\hypertarget{group___schedule_ga731698f6cbe05cc416f1116762b2dc49}{}\label{group___schedule_ga731698f6cbe05cc416f1116762b2dc49}
+
+
+Minimum backoff exponent. 
+
+Backoff is used only in slots that are marked as shared in the schedule. When not shared, the mote assumes that schedule is collision-\/free, and therefore does not use any backoff mechanism when a transmission fails. 
+
+Definition at line 63 of file schedule.\+h.
+
+\index{Schedule@{Schedule}!N\+U\+M\+S\+E\+R\+I\+A\+L\+RX@{N\+U\+M\+S\+E\+R\+I\+A\+L\+RX}}
+\index{N\+U\+M\+S\+E\+R\+I\+A\+L\+RX@{N\+U\+M\+S\+E\+R\+I\+A\+L\+RX}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{N\+U\+M\+S\+E\+R\+I\+A\+L\+RX}{NUMSERIALRX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+U\+M\+S\+E\+R\+I\+A\+L\+RX~1}\hypertarget{group___schedule_ga5206eabfac75eeed6f5066fb6d00f7c3}{}\label{group___schedule_ga5206eabfac75eeed6f5066fb6d00f7c3}
+\begin{DoxyRefDesc}{L\+K\+N-\/\+Samu}
+\item[\hyperlink{_l_k_n_code_edits__LKN_code_edits000006}{L\+K\+N-\/\+Samu}]Number of slots used for serial transmission \end{DoxyRefDesc}
+
+
+Definition at line 27 of file schedule.\+h.
+
+\index{Schedule@{Schedule}!N\+U\+M\+S\+L\+O\+T\+S\+O\+FF@{N\+U\+M\+S\+L\+O\+T\+S\+O\+FF}}
+\index{N\+U\+M\+S\+L\+O\+T\+S\+O\+FF@{N\+U\+M\+S\+L\+O\+T\+S\+O\+FF}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{N\+U\+M\+S\+L\+O\+T\+S\+O\+FF}{NUMSLOTSOFF}}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+U\+M\+S\+L\+O\+T\+S\+O\+FF~1}\hypertarget{group___schedule_ga9fd457940c2d1313fb347b5fd32d2105}{}\label{group___schedule_ga9fd457940c2d1313fb347b5fd32d2105}
+\begin{DoxyRefDesc}{L\+K\+N-\/\+Samu}
+\item[\hyperlink{_l_k_n_code_edits__LKN_code_edits000007}{L\+K\+N-\/\+Samu}]Number of slots N\+OT used, they are probably used in for serial transmission anyway. \end{DoxyRefDesc}
+
+
+Definition at line 28 of file schedule.\+h.
+
+\index{Schedule@{Schedule}!P\+D\+R\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD@{P\+D\+R\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}}
+\index{P\+D\+R\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD@{P\+D\+R\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{P\+D\+R\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}{PDR_THRESHOLD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+D\+R\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD~80}\hypertarget{group___schedule_ga120d77f8a5101329b471874495b73942}{}\label{group___schedule_ga120d77f8a5101329b471874495b73942}
+
+
+a threshold used for triggering the maintaining process.\+uint\+: percent 
+
+
+
+Definition at line 75 of file schedule.\+h.
+
+\index{Schedule@{Schedule}!S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+C\+E\+L\+LS@{S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+C\+E\+L\+LS}}
+\index{S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+C\+E\+L\+LS@{S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+C\+E\+L\+LS}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+C\+E\+L\+LS}{SCHEDULE_MINIMAL_6TISCH_ACTIVE_CELLS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+C\+E\+L\+LS~{\bf S\+L\+O\+T\+F\+R\+A\+M\+E\+\_\+\+L\+E\+N\+G\+TH}-\/{\bf N\+U\+M\+S\+E\+R\+I\+A\+L\+RX}-\/{\bf N\+U\+M\+S\+L\+O\+T\+S\+O\+FF}}\hypertarget{group___schedule_ga299d7e29eb70888b68ace83fd3f1a8df}{}\label{group___schedule_ga299d7e29eb70888b68ace83fd3f1a8df}
+\begin{DoxyRefDesc}{L\+K\+N-\/\+Samu}
+\item[\hyperlink{_l_k_n_code_edits__LKN_code_edits000008}{L\+K\+N-\/\+Samu}]M\+A\+X\+I\+M\+UM number is 13 \end{DoxyRefDesc}
+
+
+Definition at line 34 of file schedule.\+h.
+
+\index{Schedule@{Schedule}!S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+C\+H\+A\+N\+N\+E\+L\+O\+F\+F\+S\+ET@{S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+C\+H\+A\+N\+N\+E\+L\+O\+F\+F\+S\+ET}}
+\index{S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+C\+H\+A\+N\+N\+E\+L\+O\+F\+F\+S\+ET@{S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+C\+H\+A\+N\+N\+E\+L\+O\+F\+F\+S\+ET}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+C\+H\+A\+N\+N\+E\+L\+O\+F\+F\+S\+ET}{SCHEDULE_MINIMAL_6TISCH_CHANNELOFFSET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+C\+H\+A\+N\+N\+E\+L\+O\+F\+F\+S\+ET~0}\hypertarget{group___schedule_ga485a603a3e03059901c4fc5fc968a1e9}{}\label{group___schedule_ga485a603a3e03059901c4fc5fc968a1e9}
+\begin{DoxyRefDesc}{L\+K\+N-\/\+Samu}
+\item[\hyperlink{_l_k_n_code_edits__LKN_code_edits000010}{L\+K\+N-\/\+Samu}]Default channel hopping offset set to 0 \end{DoxyRefDesc}
+
+
+Definition at line 38 of file schedule.\+h.
+
+\index{Schedule@{Schedule}!S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+L\+O\+T\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+LE@{S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+L\+O\+T\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+LE}}
+\index{S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+L\+O\+T\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+LE@{S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+L\+O\+T\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+LE}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+L\+O\+T\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+LE}{SCHEDULE_MINIMAL_6TISCH_DEFAULT_SLOTFRAME_HANDLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+L\+O\+T\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+LE~1}\hypertarget{group___schedule_gad04163370dd0242dd8165e08223a1421}{}\label{group___schedule_gad04163370dd0242dd8165e08223a1421}
+
+
+Definition at line 39 of file schedule.\+h.
+
+\index{Schedule@{Schedule}!S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+L\+O\+T\+F\+R\+A\+M\+E\+\_\+\+N\+U\+M\+B\+ER@{S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+L\+O\+T\+F\+R\+A\+M\+E\+\_\+\+N\+U\+M\+B\+ER}}
+\index{S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+L\+O\+T\+F\+R\+A\+M\+E\+\_\+\+N\+U\+M\+B\+ER@{S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+L\+O\+T\+F\+R\+A\+M\+E\+\_\+\+N\+U\+M\+B\+ER}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+L\+O\+T\+F\+R\+A\+M\+E\+\_\+\+N\+U\+M\+B\+ER}{SCHEDULE_MINIMAL_6TISCH_DEFAULT_SLOTFRAME_NUMBER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+L\+O\+T\+F\+R\+A\+M\+E\+\_\+\+N\+U\+M\+B\+ER~1}\hypertarget{group___schedule_ga291f502456c112dface9c0a55f3512cf}{}\label{group___schedule_ga291f502456c112dface9c0a55f3512cf}
+
+
+Definition at line 40 of file schedule.\+h.
+
+\index{Schedule@{Schedule}!S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+S\+L\+O\+T\+O\+F\+F\+S\+ET@{S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+S\+L\+O\+T\+O\+F\+F\+S\+ET}}
+\index{S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+S\+L\+O\+T\+O\+F\+F\+S\+ET@{S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+S\+L\+O\+T\+O\+F\+F\+S\+ET}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+S\+L\+O\+T\+O\+F\+F\+S\+ET}{SCHEDULE_MINIMAL_6TISCH_SLOTOFFSET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+6\+T\+I\+S\+C\+H\+\_\+\+S\+L\+O\+T\+O\+F\+F\+S\+ET~1}\hypertarget{group___schedule_ga62c64cb1c9bbbb2927f358c14535fb7f}{}\label{group___schedule_ga62c64cb1c9bbbb2927f358c14535fb7f}
+\begin{DoxyRefDesc}{L\+K\+N-\/\+Samu}
+\item[\hyperlink{_l_k_n_code_edits__LKN_code_edits000009}{L\+K\+N-\/\+Samu}]Default channel hopping offset set to 1 \end{DoxyRefDesc}
+
+
+Definition at line 36 of file schedule.\+h.
+
+\index{Schedule@{Schedule}!S\+H\+A\+R\+ED@{S\+H\+A\+R\+ED}}
+\index{S\+H\+A\+R\+ED@{S\+H\+A\+R\+ED}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{S\+H\+A\+R\+ED}{SHARED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+A\+R\+ED~{\bf F\+A\+L\+SE}}\hypertarget{group___schedule_ga884c794595c4aa480df9022648c29564}{}\label{group___schedule_ga884c794595c4aa480df9022648c29564}
+
+
+Definition at line 30 of file schedule.\+h.
+
+\index{Schedule@{Schedule}!S\+L\+O\+T\+F\+R\+A\+M\+E\+\_\+\+L\+E\+N\+G\+TH@{S\+L\+O\+T\+F\+R\+A\+M\+E\+\_\+\+L\+E\+N\+G\+TH}}
+\index{S\+L\+O\+T\+F\+R\+A\+M\+E\+\_\+\+L\+E\+N\+G\+TH@{S\+L\+O\+T\+F\+R\+A\+M\+E\+\_\+\+L\+E\+N\+G\+TH}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{S\+L\+O\+T\+F\+R\+A\+M\+E\+\_\+\+L\+E\+N\+G\+TH}{SLOTFRAME_LENGTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+L\+O\+T\+F\+R\+A\+M\+E\+\_\+\+L\+E\+N\+G\+TH~15}\hypertarget{group___schedule_gaea12b586ec3f6de3ffcfff93da574345}{}\label{group___schedule_gaea12b586ec3f6de3ffcfff93da574345}
+
+
+The length of the superframe, in slots. 
+
+The superframe repears over time and can be arbitrarly long.
+
+\begin{DoxyRefDesc}{L\+K\+N-\/\+Samu}
+\item[\hyperlink{_l_k_n_code_edits__LKN_code_edits000005}{L\+K\+N-\/\+Samu}]Detailed descriprion of scheduling modification is in \hyperlink{_l_k_n_contribution_TSCH_scheduling}{T\+S\+CH scheduling}.\end{DoxyRefDesc}
+
+
+Definition at line 26 of file schedule.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\index{Schedule@{Schedule}!channel\+Offset\+\_\+t@{channel\+Offset\+\_\+t}}
+\index{channel\+Offset\+\_\+t@{channel\+Offset\+\_\+t}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{channel\+Offset\+\_\+t}{channelOffset_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf uint8\+\_\+t} {\bf channel\+Offset\+\_\+t}}\hypertarget{group___schedule_gab53645758fe83985f0b35af7c5c2115e}{}\label{group___schedule_gab53645758fe83985f0b35af7c5c2115e}
+
+
+Definition at line 80 of file schedule.\+h.
+
+\index{Schedule@{Schedule}!frame\+Length\+\_\+t@{frame\+Length\+\_\+t}}
+\index{frame\+Length\+\_\+t@{frame\+Length\+\_\+t}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{frame\+Length\+\_\+t}{frameLength_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf uint16\+\_\+t} {\bf frame\+Length\+\_\+t}}\hypertarget{group___schedule_gab960413860c0b01b38ece025b0ee534d}{}\label{group___schedule_gab960413860c0b01b38ece025b0ee534d}
+
+
+Definition at line 82 of file schedule.\+h.
+
+\index{Schedule@{Schedule}!slot\+Offset\+\_\+t@{slot\+Offset\+\_\+t}}
+\index{slot\+Offset\+\_\+t@{slot\+Offset\+\_\+t}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{slot\+Offset\+\_\+t}{slotOffset_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf uint16\+\_\+t} {\bf slot\+Offset\+\_\+t}}\hypertarget{group___schedule_ga30a663860a70d8c9db2c3a8e66f544fc}{}\label{group___schedule_ga30a663860a70d8c9db2c3a8e66f544fc}
+
+
+Definition at line 81 of file schedule.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\index{Schedule@{Schedule}!cell\+Type\+\_\+t@{cell\+Type\+\_\+t}}
+\index{cell\+Type\+\_\+t@{cell\+Type\+\_\+t}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{cell\+Type\+\_\+t}{cellType_t}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf cell\+Type\+\_\+t}}\hypertarget{group___schedule_gad8490d4fdf8cef27f7e5fa6a37046a3d}{}\label{group___schedule_gad8490d4fdf8cef27f7e5fa6a37046a3d}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+O\+FF@{C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+O\+FF}!Schedule@{Schedule}}\index{Schedule@{Schedule}!C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+O\+FF@{C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+O\+FF}}\item[{\em 
+C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+O\+FF\hypertarget{group___schedule_ggad8490d4fdf8cef27f7e5fa6a37046a3da1de02f946786ffb3f640a91a9f6a8821}{}\label{group___schedule_ggad8490d4fdf8cef27f7e5fa6a37046a3da1de02f946786ffb3f640a91a9f6a8821}
+}]\index{C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+TX@{C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+TX}!Schedule@{Schedule}}\index{Schedule@{Schedule}!C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+TX@{C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+TX}}\item[{\em 
+C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+TX\hypertarget{group___schedule_ggad8490d4fdf8cef27f7e5fa6a37046a3dac33ca5a04740302ac863ad086444176c}{}\label{group___schedule_ggad8490d4fdf8cef27f7e5fa6a37046a3dac33ca5a04740302ac863ad086444176c}
+}]\index{C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+RX@{C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+RX}!Schedule@{Schedule}}\index{Schedule@{Schedule}!C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+RX@{C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+RX}}\item[{\em 
+C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+RX\hypertarget{group___schedule_ggad8490d4fdf8cef27f7e5fa6a37046a3da4bb32ecfb99b1a48cf7b555de0384f8c}{}\label{group___schedule_ggad8490d4fdf8cef27f7e5fa6a37046a3da4bb32ecfb99b1a48cf7b555de0384f8c}
+}]\index{C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+T\+X\+RX@{C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+T\+X\+RX}!Schedule@{Schedule}}\index{Schedule@{Schedule}!C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+T\+X\+RX@{C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+T\+X\+RX}}\item[{\em 
+C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+T\+X\+RX\hypertarget{group___schedule_ggad8490d4fdf8cef27f7e5fa6a37046a3da703f29e4d2b16980f09eceaeb7a35281}{}\label{group___schedule_ggad8490d4fdf8cef27f7e5fa6a37046a3da703f29e4d2b16980f09eceaeb7a35281}
+}]\index{C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+S\+E\+R\+I\+A\+L\+RX@{C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+S\+E\+R\+I\+A\+L\+RX}!Schedule@{Schedule}}\index{Schedule@{Schedule}!C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+S\+E\+R\+I\+A\+L\+RX@{C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+S\+E\+R\+I\+A\+L\+RX}}\item[{\em 
+C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+S\+E\+R\+I\+A\+L\+RX\hypertarget{group___schedule_ggad8490d4fdf8cef27f7e5fa6a37046a3da605bbb03557716b1d5b350c8756a6cdb}{}\label{group___schedule_ggad8490d4fdf8cef27f7e5fa6a37046a3da605bbb03557716b1d5b350c8756a6cdb}
+}]\index{C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+M\+O\+R\+E\+S\+E\+R\+I\+A\+L\+RX@{C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+M\+O\+R\+E\+S\+E\+R\+I\+A\+L\+RX}!Schedule@{Schedule}}\index{Schedule@{Schedule}!C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+M\+O\+R\+E\+S\+E\+R\+I\+A\+L\+RX@{C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+M\+O\+R\+E\+S\+E\+R\+I\+A\+L\+RX}}\item[{\em 
+C\+E\+L\+L\+T\+Y\+P\+E\+\_\+\+M\+O\+R\+E\+S\+E\+R\+I\+A\+L\+RX\hypertarget{group___schedule_ggad8490d4fdf8cef27f7e5fa6a37046a3da6f952ab410339bde815d94b59e274a81}{}\label{group___schedule_ggad8490d4fdf8cef27f7e5fa6a37046a3da6f952ab410339bde815d94b59e274a81}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 84 of file schedule.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{Schedule@{Schedule}!debug\+Print\+\_\+backoff@{debug\+Print\+\_\+backoff}}
+\index{debug\+Print\+\_\+backoff@{debug\+Print\+\_\+backoff}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{debug\+Print\+\_\+backoff(void)}{debugPrint_backoff(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} debug\+Print\+\_\+backoff (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___schedule_gac7367d23ea854c9f421dd0a18d767fd1}{}\label{group___schedule_gac7367d23ea854c9f421dd0a18d767fd1}
+
+
+Trigger this module to print status information, over serial. 
+
+debug\+Print\+\_\+$\ast$ functions are used by the openserial module to continuously print status information about several modules in the Open\+W\+SN stack.
+
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if this function printed something, F\+A\+L\+SE otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 172 of file schedule.\+c.
+
+\index{Schedule@{Schedule}!debug\+Print\+\_\+schedule@{debug\+Print\+\_\+schedule}}
+\index{debug\+Print\+\_\+schedule@{debug\+Print\+\_\+schedule}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{debug\+Print\+\_\+schedule(void)}{debugPrint_schedule(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} debug\+Print\+\_\+schedule (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___schedule_gafbaaa0f57ce9c382c0fc00225a7b2078}{}\label{group___schedule_gafbaaa0f57ce9c382c0fc00225a7b2078}
+
+
+Trigger this module to print status information, over serial. 
+
+debug\+Print\+\_\+$\ast$ functions are used by the openserial module to continuously print status information about several modules in the Open\+W\+SN stack.
+
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if this function printed something, F\+A\+L\+SE otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 121 of file schedule.\+c.
+
+\index{Schedule@{Schedule}!schedule\+\_\+add\+Active\+Slot@{schedule\+\_\+add\+Active\+Slot}}
+\index{schedule\+\_\+add\+Active\+Slot@{schedule\+\_\+add\+Active\+Slot}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{schedule\+\_\+add\+Active\+Slot(slot\+Offset\+\_\+t slot\+Offset, cell\+Type\+\_\+t type, bool shared, uint8\+\_\+t channel\+Offset, open\+\_\+addr\+\_\+t $\ast$neighbor)}{schedule_addActiveSlot(slotOffset_t slotOffset, cellType_t type, bool shared, uint8_t channelOffset, open_addr_t *neighbor)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf owerror\+\_\+t} schedule\+\_\+add\+Active\+Slot (
+\begin{DoxyParamCaption}
+\item[{{\bf slot\+Offset\+\_\+t}}]{slot\+Offset, }
+\item[{{\bf cell\+Type\+\_\+t}}]{type, }
+\item[{{\bf bool}}]{shared, }
+\item[{{\bf channel\+Offset\+\_\+t}}]{channel\+Offset, }
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{neighbor}
+\end{DoxyParamCaption}
+)}\hypertarget{group___schedule_ga00825b0f7040c67065d65aadde478241}{}\label{group___schedule_ga00825b0f7040c67065d65aadde478241}
+
+
+Add a new active slot into the schedule. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slot\+Offset} & The slotoffset of the new slot \\
+\hline
+{\em type} & The type of the cell \\
+\hline
+{\em shared} & Whether this cell is shared (T\+R\+UE) or not (F\+A\+L\+SE). \\
+\hline
+{\em channel\+Offset} & The channel\+Offset of the new slot \\
+\hline
+{\em neighbor} & The neighbor associated with this cell (all 0\textquotesingle{}s if none) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 291 of file schedule.\+c.
+
+\index{Schedule@{Schedule}!schedule\+\_\+advance\+Slot@{schedule\+\_\+advance\+Slot}}
+\index{schedule\+\_\+advance\+Slot@{schedule\+\_\+advance\+Slot}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{schedule\+\_\+advance\+Slot(void)}{schedule_advanceSlot(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} schedule\+\_\+advance\+Slot (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___schedule_gae6998948df91f1ef9124bec27dc87c2e}{}\label{group___schedule_gae6998948df91f1ef9124bec27dc87c2e}
+
+
+advance to next active slot 
+
+
+
+Definition at line 519 of file schedule.\+c.
+
+\index{Schedule@{Schedule}!schedule\+\_\+get\+Channel\+Offset@{schedule\+\_\+get\+Channel\+Offset}}
+\index{schedule\+\_\+get\+Channel\+Offset@{schedule\+\_\+get\+Channel\+Offset}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{schedule\+\_\+get\+Channel\+Offset(void)}{schedule_getChannelOffset(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf channel\+Offset\+\_\+t} schedule\+\_\+get\+Channel\+Offset (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___schedule_gac5b1f77de9164b82f73cdc76612e5e54}{}\label{group___schedule_gac5b1f77de9164b82f73cdc76612e5e54}
+
+
+Get the channel offset of the current schedule entry. 
+
+\begin{DoxyReturn}{Returns}
+The channel offset of the current schedule entry. 
+\end{DoxyReturn}
+
+
+Definition at line 636 of file schedule.\+c.
+
+\index{Schedule@{Schedule}!schedule\+\_\+get\+Frame\+Handle@{schedule\+\_\+get\+Frame\+Handle}}
+\index{schedule\+\_\+get\+Frame\+Handle@{schedule\+\_\+get\+Frame\+Handle}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{schedule\+\_\+get\+Frame\+Handle(void)}{schedule_getFrameHandle(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} schedule\+\_\+get\+Frame\+Handle (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___schedule_gab5f5f36f28daf8b9d66ca4bea15bfd15}{}\label{group___schedule_gab5f5f36f28daf8b9d66ca4bea15bfd15}
+
+
+Get the frame handle. 
+
+\begin{DoxyReturn}{Returns}
+The frame handle. 
+\end{DoxyReturn}
+
+
+Definition at line 568 of file schedule.\+c.
+
+\index{Schedule@{Schedule}!schedule\+\_\+get\+Frame\+Length@{schedule\+\_\+get\+Frame\+Length}}
+\index{schedule\+\_\+get\+Frame\+Length@{schedule\+\_\+get\+Frame\+Length}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{schedule\+\_\+get\+Frame\+Length(void)}{schedule_getFrameLength(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf frame\+Length\+\_\+t} schedule\+\_\+get\+Frame\+Length (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___schedule_gad9d1ef9965017c2923cb6905b7cc6b7f}{}\label{group___schedule_gad9d1ef9965017c2923cb6905b7cc6b7f}
+
+
+Get the frame length. 
+
+\begin{DoxyReturn}{Returns}
+The frame length. 
+\end{DoxyReturn}
+
+
+Definition at line 550 of file schedule.\+c.
+
+\index{Schedule@{Schedule}!schedule\+\_\+get\+Frame\+Number@{schedule\+\_\+get\+Frame\+Number}}
+\index{schedule\+\_\+get\+Frame\+Number@{schedule\+\_\+get\+Frame\+Number}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{schedule\+\_\+get\+Frame\+Number(void)}{schedule_getFrameNumber(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} schedule\+\_\+get\+Frame\+Number (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___schedule_gafeced111ea698fa49d70a22d96ad3014}{}\label{group___schedule_gafeced111ea698fa49d70a22d96ad3014}
+
+
+Get the frame number. 
+
+\begin{DoxyReturn}{Returns}
+The frame number. 
+\end{DoxyReturn}
+
+
+Definition at line 586 of file schedule.\+c.
+
+\index{Schedule@{Schedule}!schedule\+\_\+get\+Max\+Active\+Slots@{schedule\+\_\+get\+Max\+Active\+Slots}}
+\index{schedule\+\_\+get\+Max\+Active\+Slots@{schedule\+\_\+get\+Max\+Active\+Slots}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{schedule\+\_\+get\+Max\+Active\+Slots(void)}{schedule_getMaxActiveSlots(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\+\_\+t} schedule\+\_\+get\+Max\+Active\+Slots (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___schedule_gaa535aa16066ce3a127d6d52ba9e00e4d}{}\label{group___schedule_gaa535aa16066ce3a127d6d52ba9e00e4d}
+
+
+Get the maximum number of active slots. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em maximum} & number of active slots \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 277 of file schedule.\+c.
+
+\index{Schedule@{Schedule}!schedule\+\_\+get\+Neighbor@{schedule\+\_\+get\+Neighbor}}
+\index{schedule\+\_\+get\+Neighbor@{schedule\+\_\+get\+Neighbor}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{schedule\+\_\+get\+Neighbor(open\+\_\+addr\+\_\+t $\ast$addr\+To\+Write)}{schedule_getNeighbor(open_addr_t *addrToWrite)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} schedule\+\_\+get\+Neighbor (
+\begin{DoxyParamCaption}
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{addr\+To\+Write}
+\end{DoxyParamCaption}
+)}\hypertarget{group___schedule_ga6a1d0334cd9da212a38a1db05e291d3a}{}\label{group___schedule_ga6a1d0334cd9da212a38a1db05e291d3a}
+
+
+Get the neighbor associated wit the current schedule entry. 
+
+\begin{DoxyReturn}{Returns}
+The neighbor associated wit the current schedule entry. 
+\end{DoxyReturn}
+
+
+Definition at line 621 of file schedule.\+c.
+
+\index{Schedule@{Schedule}!schedule\+\_\+get\+Next\+Active\+Slot\+Offset@{schedule\+\_\+get\+Next\+Active\+Slot\+Offset}}
+\index{schedule\+\_\+get\+Next\+Active\+Slot\+Offset@{schedule\+\_\+get\+Next\+Active\+Slot\+Offset}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{schedule\+\_\+get\+Next\+Active\+Slot\+Offset(void)}{schedule_getNextActiveSlotOffset(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf slot\+Offset\+\_\+t} schedule\+\_\+get\+Next\+Active\+Slot\+Offset (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___schedule_ga01252633416fb574b1277b1303030248}{}\label{group___schedule_ga01252633416fb574b1277b1303030248}
+
+
+return slot\+Offset of next active slot 
+
+
+
+Definition at line 532 of file schedule.\+c.
+
+\index{Schedule@{Schedule}!schedule\+\_\+get\+Ok\+To\+Send@{schedule\+\_\+get\+Ok\+To\+Send}}
+\index{schedule\+\_\+get\+Ok\+To\+Send@{schedule\+\_\+get\+Ok\+To\+Send}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{schedule\+\_\+get\+Ok\+To\+Send(void)}{schedule_getOkToSend(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} schedule\+\_\+get\+Ok\+To\+Send (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___schedule_gab5a0194710b51bf73b6aa363cb2fd8cb}{}\label{group___schedule_gab5a0194710b51bf73b6aa363cb2fd8cb}
+
+
+Check whether I can send on this slot. 
+
+This function is called at the beginning of every TX slot. If the slot is {\itshape not} a shared slot, it always return T\+R\+UE. If the slot is a shared slot, it decrements the backoff counter and returns T\+R\+UE only if it hits 0.
+
+Note that the backoff counter is global, not per slot.
+
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if it is OK to send on this slot, F\+A\+L\+SE otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 661 of file schedule.\+c.
+
+\index{Schedule@{Schedule}!schedule\+\_\+get\+Slot\+Info@{schedule\+\_\+get\+Slot\+Info}}
+\index{schedule\+\_\+get\+Slot\+Info@{schedule\+\_\+get\+Slot\+Info}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{schedule\+\_\+get\+Slot\+Info(slot\+Offset\+\_\+t slot\+Offset, open\+\_\+addr\+\_\+t $\ast$neighbor, slotinfo\+\_\+element\+\_\+t $\ast$info)}{schedule_getSlotInfo(slotOffset_t slotOffset, open_addr_t *neighbor, slotinfo_element_t *info)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} schedule\+\_\+get\+Slot\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf slot\+Offset\+\_\+t}}]{slot\+Offset, }
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{neighbor, }
+\item[{{\bf slotinfo\+\_\+element\+\_\+t} $\ast$}]{info}
+\end{DoxyParamCaption}
+)}\hypertarget{group___schedule_ga5420055f63ffdbafbd782de6afd7dcbd}{}\label{group___schedule_ga5420055f63ffdbafbd782de6afd7dcbd}
+
+
+Get the information of a specific slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slot\+Offset} & \\
+\hline
+{\em neighbor} & \\
+\hline
+{\em info} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 245 of file schedule.\+c.
+
+\index{Schedule@{Schedule}!schedule\+\_\+get\+Type@{schedule\+\_\+get\+Type}}
+\index{schedule\+\_\+get\+Type@{schedule\+\_\+get\+Type}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{schedule\+\_\+get\+Type(void)}{schedule_getType(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cell\+Type\+\_\+t} schedule\+\_\+get\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___schedule_gafbc894e77f655a69eb9a76bd79f08bda}{}\label{group___schedule_gafbc894e77f655a69eb9a76bd79f08bda}
+
+
+Get the type of the current schedule entry. 
+
+\begin{DoxyReturn}{Returns}
+The type of the current schedule entry. 
+\end{DoxyReturn}
+
+
+Definition at line 603 of file schedule.\+c.
+
+\index{Schedule@{Schedule}!schedule\+\_\+indicate\+Rx@{schedule\+\_\+indicate\+Rx}}
+\index{schedule\+\_\+indicate\+Rx@{schedule\+\_\+indicate\+Rx}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{schedule\+\_\+indicate\+Rx(asn\+\_\+t $\ast$asn\+Timestamp)}{schedule_indicateRx(asn_t *asnTimestamp)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} schedule\+\_\+indicate\+Rx (
+\begin{DoxyParamCaption}
+\item[{{\bf asn\+\_\+t} $\ast$}]{asn\+Timestamp}
+\end{DoxyParamCaption}
+)}\hypertarget{group___schedule_gaf1980123fcc1fea95f3bcfdf63de083d}{}\label{group___schedule_gaf1980123fcc1fea95f3bcfdf63de083d}
+
+
+Indicate the reception of a packet. 
+
+
+
+Definition at line 711 of file schedule.\+c.
+
+\index{Schedule@{Schedule}!schedule\+\_\+indicate\+Tx@{schedule\+\_\+indicate\+Tx}}
+\index{schedule\+\_\+indicate\+Tx@{schedule\+\_\+indicate\+Tx}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{schedule\+\_\+indicate\+Tx(asn\+\_\+t $\ast$asn\+Timestamp, bool succesfull\+Tx)}{schedule_indicateTx(asn_t *asnTimestamp, bool succesfullTx)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} schedule\+\_\+indicate\+Tx (
+\begin{DoxyParamCaption}
+\item[{{\bf asn\+\_\+t} $\ast$}]{asn\+Timestamp, }
+\item[{{\bf bool}}]{succesfull\+Tx}
+\end{DoxyParamCaption}
+)}\hypertarget{group___schedule_gab4fc72142c898c09598ab0d0b255b794}{}\label{group___schedule_gab4fc72142c898c09598ab0d0b255b794}
+
+
+Indicate the transmission of a packet. 
+
+
+
+Definition at line 728 of file schedule.\+c.
+
+\index{Schedule@{Schedule}!schedule\+\_\+init@{schedule\+\_\+init}}
+\index{schedule\+\_\+init@{schedule\+\_\+init}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{schedule\+\_\+init(void)}{schedule_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} schedule\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___schedule_ga7297bbaa78e266834d3027fbe33688a2}{}\label{group___schedule_ga7297bbaa78e266834d3027fbe33688a2}
+
+
+Initialize this module. 
+
+\begin{DoxyPostcond}{Postcondition}
+Call this function before calling any other function in this module. 
+\end{DoxyPostcond}
+
+
+Definition at line 26 of file schedule.\+c.
+
+\index{Schedule@{Schedule}!schedule\+\_\+is\+Slot\+Offset\+Available@{schedule\+\_\+is\+Slot\+Offset\+Available}}
+\index{schedule\+\_\+is\+Slot\+Offset\+Available@{schedule\+\_\+is\+Slot\+Offset\+Available}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{schedule\+\_\+is\+Slot\+Offset\+Available(uint16\+\_\+t slot\+Offset)}{schedule_isSlotOffsetAvailable(uint16_t slotOffset)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} schedule\+\_\+is\+Slot\+Offset\+Available (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t}}]{slot\+Offset}
+\end{DoxyParamCaption}
+)}\hypertarget{group___schedule_ga08f2bf7e2661dddfa4eb18f80cdad000}{}\label{group___schedule_ga08f2bf7e2661dddfa4eb18f80cdad000}
+
+
+Definition at line 455 of file schedule.\+c.
+
+\index{Schedule@{Schedule}!schedule\+\_\+remove\+Active\+Slot@{schedule\+\_\+remove\+Active\+Slot}}
+\index{schedule\+\_\+remove\+Active\+Slot@{schedule\+\_\+remove\+Active\+Slot}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{schedule\+\_\+remove\+Active\+Slot(slot\+Offset\+\_\+t slot\+Offset, open\+\_\+addr\+\_\+t $\ast$neighbor)}{schedule_removeActiveSlot(slotOffset_t slotOffset, open_addr_t *neighbor)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf owerror\+\_\+t} schedule\+\_\+remove\+Active\+Slot (
+\begin{DoxyParamCaption}
+\item[{{\bf slot\+Offset\+\_\+t}}]{slot\+Offset, }
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{neighbor}
+\end{DoxyParamCaption}
+)}\hypertarget{group___schedule_ga6565eddf152a1e9df7bbbbdcf8da87ad}{}\label{group___schedule_ga6565eddf152a1e9df7bbbbdcf8da87ad}
+
+
+Remove an active slot from the schedule. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slot\+Offset} & The slotoffset of the slot to remove. \\
+\hline
+{\em neighbor} & The neighbor associated with this cell (all 0\textquotesingle{}s if none) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 384 of file schedule.\+c.
+
+\index{Schedule@{Schedule}!schedule\+\_\+reset\+Backoff@{schedule\+\_\+reset\+Backoff}}
+\index{schedule\+\_\+reset\+Backoff@{schedule\+\_\+reset\+Backoff}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{schedule\+\_\+reset\+Backoff(void)}{schedule_resetBackoff(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} schedule\+\_\+reset\+Backoff (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___schedule_ga0d3ec70265c59fdb1ba215d67f04ec83}{}\label{group___schedule_ga0d3ec70265c59fdb1ba215d67f04ec83}
+
+
+Reset the backoff and backoff\+Exponent. 
+
+
+
+Definition at line 695 of file schedule.\+c.
+
+\index{Schedule@{Schedule}!schedule\+\_\+set\+Frame\+Handle@{schedule\+\_\+set\+Frame\+Handle}}
+\index{schedule\+\_\+set\+Frame\+Handle@{schedule\+\_\+set\+Frame\+Handle}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{schedule\+\_\+set\+Frame\+Handle(uint8\+\_\+t frame\+Handle)}{schedule_setFrameHandle(uint8_t frameHandle)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} schedule\+\_\+set\+Frame\+Handle (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{frame\+Handle}
+\end{DoxyParamCaption}
+)}\hypertarget{group___schedule_ga2584242bf9622f92c42e59337a38a364}{}\label{group___schedule_ga2584242bf9622f92c42e59337a38a364}
+
+
+Set frame handle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame\+Handle} & The new frame handle. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 213 of file schedule.\+c.
+
+\index{Schedule@{Schedule}!schedule\+\_\+set\+Frame\+Length@{schedule\+\_\+set\+Frame\+Length}}
+\index{schedule\+\_\+set\+Frame\+Length@{schedule\+\_\+set\+Frame\+Length}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{schedule\+\_\+set\+Frame\+Length(frame\+Length\+\_\+t new\+Frame\+Length)}{schedule_setFrameLength(frameLength_t newFrameLength)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} schedule\+\_\+set\+Frame\+Length (
+\begin{DoxyParamCaption}
+\item[{{\bf frame\+Length\+\_\+t}}]{new\+Frame\+Length}
+\end{DoxyParamCaption}
+)}\hypertarget{group___schedule_ga5b2f9c520f24d642064f63558ee6cb45}{}\label{group___schedule_ga5b2f9c520f24d642064f63558ee6cb45}
+
+
+Set frame length. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Frame\+Length} & The new frame length. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 196 of file schedule.\+c.
+
+\index{Schedule@{Schedule}!schedule\+\_\+set\+Frame\+Number@{schedule\+\_\+set\+Frame\+Number}}
+\index{schedule\+\_\+set\+Frame\+Number@{schedule\+\_\+set\+Frame\+Number}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{schedule\+\_\+set\+Frame\+Number(uint8\+\_\+t frame\+Number)}{schedule_setFrameNumber(uint8_t frameNumber)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} schedule\+\_\+set\+Frame\+Number (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{frame\+Number}
+\end{DoxyParamCaption}
+)}\hypertarget{group___schedule_ga8b2f6512ece5caf24247579f28c1a77d}{}\label{group___schedule_ga8b2f6512ece5caf24247579f28c1a77d}
+
+
+Set frame number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame\+Number} & The new frame number. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 228 of file schedule.\+c.
+
+\index{Schedule@{Schedule}!schedule\+\_\+start\+D\+A\+Groot@{schedule\+\_\+start\+D\+A\+Groot}}
+\index{schedule\+\_\+start\+D\+A\+Groot@{schedule\+\_\+start\+D\+A\+Groot}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{schedule\+\_\+start\+D\+A\+Groot(void)}{schedule_startDAGroot(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} schedule\+\_\+start\+D\+A\+Groot (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___schedule_gade694f312044f8bff151d58c7976d067}{}\label{group___schedule_gade694f312044f8bff151d58c7976d067}
+
+
+Starting the D\+A\+Groot schedule propagation. 
+
+\begin{DoxyRefDesc}{L\+K\+N-\/\+Samu}
+\item[\hyperlink{_l_k_n_code_edits__LKN_code_edits000003}{L\+K\+N-\/\+Samu}]Modified to allow the D\+AG root to program the scheduling for the network\end{DoxyRefDesc}
+\begin{DoxyRefDesc}{L\+K\+N-\/\+Samu}
+\item[\hyperlink{_l_k_n_code_edits__LKN_code_edits000004}{L\+K\+N-\/\+Samu}]variable used to iterate over the different \hyperlink{group___schedule_ga00825b0f7040c67065d65aadde478241}{schedule\+\_\+add\+Active\+Slot} \end{DoxyRefDesc}
+
+
+Definition at line 64 of file schedule.\+c.
+
+\index{Schedule@{Schedule}!schedule\+\_\+statistic\+\_\+poor\+Link\+Quality@{schedule\+\_\+statistic\+\_\+poor\+Link\+Quality}}
+\index{schedule\+\_\+statistic\+\_\+poor\+Link\+Quality@{schedule\+\_\+statistic\+\_\+poor\+Link\+Quality}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{schedule\+\_\+statistic\+\_\+poor\+Link\+Quality(void)}{schedule_statistic_poorLinkQuality(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf schedule\+Entry\+\_\+t}$\ast$ schedule\+\_\+statistic\+\_\+poor\+Link\+Quality (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___schedule_gaa341503b0e4ebafeaff9ab5de94be13f}{}\label{group___schedule_gaa341503b0e4ebafeaff9ab5de94be13f}
+
+
+Definition at line 476 of file schedule.\+c.
+
+\index{Schedule@{Schedule}!schedule\+\_\+sync\+Slot\+Offset@{schedule\+\_\+sync\+Slot\+Offset}}
+\index{schedule\+\_\+sync\+Slot\+Offset@{schedule\+\_\+sync\+Slot\+Offset}!Schedule@{Schedule}}
+\subsubsection[{\texorpdfstring{schedule\+\_\+sync\+Slot\+Offset(slot\+Offset\+\_\+t target\+Slot\+Offset)}{schedule_syncSlotOffset(slotOffset_t targetSlotOffset)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} schedule\+\_\+sync\+Slot\+Offset (
+\begin{DoxyParamCaption}
+\item[{{\bf slot\+Offset\+\_\+t}}]{target\+Slot\+Offset}
+\end{DoxyParamCaption}
+)}\hypertarget{group___schedule_gaf44e496db5d623ea8168d0eaeffc8b2d}{}\label{group___schedule_gaf44e496db5d623ea8168d0eaeffc8b2d}
+
+
+Definition at line 504 of file schedule.\+c.
+

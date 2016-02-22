@@ -1,0 +1,77 @@
+\hypertarget{cm0plus__interrupt_8h}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/samr21\+\_\+xpro/drivers/inc/cm0plus\+\_\+interrupt.h File Reference}
+\label{cm0plus__interrupt_8h}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/samr21\+\_\+xpro/drivers/inc/cm0plus\+\_\+interrupt.\+h@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/samr21\+\_\+xpro/drivers/inc/cm0plus\+\_\+interrupt.\+h}}
+{\ttfamily \#include \char`\"{}sam.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{cm0plus__interrupt_8h_ab18b737d4979367488775229618fa111}{cpu\+\_\+irq\+\_\+is\+\_\+enabled}()    ~(\+\_\+\+\_\+get\+\_\+\+P\+R\+I\+M\+A\+SK() == 0)
+\item 
+\#define \hyperlink{cm0plus__interrupt_8h_a2ed5e2125cfe862bc706b0bd4c3a90a0}{cpu\+\_\+irq\+\_\+enable}()                              
+\item 
+\#define \hyperlink{cm0plus__interrupt_8h_ac27c79fc4820f37abded565f005f27d7}{cpu\+\_\+irq\+\_\+disable}()                            
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{cm0plus__interrupt_8h_a6cb555807af15bd10cbcc4101ab840c7}{irqflags\+\_\+t}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{cm0plus\+\_\+interrupt.\+h@{cm0plus\+\_\+interrupt.\+h}!cpu\+\_\+irq\+\_\+disable@{cpu\+\_\+irq\+\_\+disable}}
+\index{cpu\+\_\+irq\+\_\+disable@{cpu\+\_\+irq\+\_\+disable}!cm0plus\+\_\+interrupt.\+h@{cm0plus\+\_\+interrupt.\+h}}
+\subsubsection[{\texorpdfstring{cpu\+\_\+irq\+\_\+disable}{cpu_irq_disable}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cpu\+\_\+irq\+\_\+disable(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{cm0plus__interrupt_8h_ac27c79fc4820f37abded565f005f27d7}{}\label{cm0plus__interrupt_8h_ac27c79fc4820f37abded565f005f27d7}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                       \(\backslash\)
+    \_\_disable\_irq();                       \hyperlink{agilefox_2library_2inc_2cortexm3__macro_8h_ab1c9b393641dc2d397b3408fdbe72b96}{\(\backslash\)}
+\hyperlink{agilefox_2library_2inc_2cortexm3__macro_8h_ab1c9b393641dc2d397b3408fdbe72b96}{    \_\_DMB}();                               \(\backslash\)
+\} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+
+
+Definition at line 78 of file cm0plus\+\_\+interrupt.\+h.
+
+\index{cm0plus\+\_\+interrupt.\+h@{cm0plus\+\_\+interrupt.\+h}!cpu\+\_\+irq\+\_\+enable@{cpu\+\_\+irq\+\_\+enable}}
+\index{cpu\+\_\+irq\+\_\+enable@{cpu\+\_\+irq\+\_\+enable}!cm0plus\+\_\+interrupt.\+h@{cm0plus\+\_\+interrupt.\+h}}
+\subsubsection[{\texorpdfstring{cpu\+\_\+irq\+\_\+enable}{cpu_irq_enable}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cpu\+\_\+irq\+\_\+enable(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{cm0plus__interrupt_8h_a2ed5e2125cfe862bc706b0bd4c3a90a0}{}\label{cm0plus__interrupt_8h_a2ed5e2125cfe862bc706b0bd4c3a90a0}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                       \hyperlink{agilefox_2library_2inc_2cortexm3__macro_8h_ab1c9b393641dc2d397b3408fdbe72b96}{\(\backslash\)}
+\hyperlink{agilefox_2library_2inc_2cortexm3__macro_8h_ab1c9b393641dc2d397b3408fdbe72b96}{    \_\_DMB}();                               \(\backslash\)
+    \_\_enable\_irq();                        \(\backslash\)
+\} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+
+
+Definition at line 71 of file cm0plus\+\_\+interrupt.\+h.
+
+\index{cm0plus\+\_\+interrupt.\+h@{cm0plus\+\_\+interrupt.\+h}!cpu\+\_\+irq\+\_\+is\+\_\+enabled@{cpu\+\_\+irq\+\_\+is\+\_\+enabled}}
+\index{cpu\+\_\+irq\+\_\+is\+\_\+enabled@{cpu\+\_\+irq\+\_\+is\+\_\+enabled}!cm0plus\+\_\+interrupt.\+h@{cm0plus\+\_\+interrupt.\+h}}
+\subsubsection[{\texorpdfstring{cpu\+\_\+irq\+\_\+is\+\_\+enabled}{cpu_irq_is_enabled}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cpu\+\_\+irq\+\_\+is\+\_\+enabled(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~(\+\_\+\+\_\+get\+\_\+\+P\+R\+I\+M\+A\+SK() == 0)}\hypertarget{cm0plus__interrupt_8h_ab18b737d4979367488775229618fa111}{}\label{cm0plus__interrupt_8h_ab18b737d4979367488775229618fa111}
+
+
+Definition at line 68 of file cm0plus\+\_\+interrupt.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\index{cm0plus\+\_\+interrupt.\+h@{cm0plus\+\_\+interrupt.\+h}!irqflags\+\_\+t@{irqflags\+\_\+t}}
+\index{irqflags\+\_\+t@{irqflags\+\_\+t}!cm0plus\+\_\+interrupt.\+h@{cm0plus\+\_\+interrupt.\+h}}
+\subsubsection[{\texorpdfstring{irqflags\+\_\+t}{irqflags_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf uint32\+\_\+t} {\bf irqflags\+\_\+t}}\hypertarget{cm0plus__interrupt_8h_a6cb555807af15bd10cbcc4101ab840c7}{}\label{cm0plus__interrupt_8h_a6cb555807af15bd10cbcc4101ab840c7}
+
+
+Definition at line 65 of file cm0plus\+\_\+interrupt.\+h.
+

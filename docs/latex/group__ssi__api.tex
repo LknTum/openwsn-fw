@@ -1,0 +1,578 @@
+\hypertarget{group__ssi__api}{}\section{Ssi\+\_\+api}
+\label{group__ssi__api}\index{Ssi\+\_\+api@{Ssi\+\_\+api}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__ssi__api_ga920b241b9d99f0b19f1c0a6f3779bc10}{S\+S\+I\+Config\+Set\+Exp\+Clk} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+S\+S\+I\+Clk, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Protocol, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Mode, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Bit\+Rate, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Data\+Width)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__ssi__api_gadc0373c0979c964baa2ae5aba2ecfe4a}{S\+S\+I\+Enable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__ssi__api_ga71320bfb623b3d5b957e52fdc5d6f869}{S\+S\+I\+Disable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__ssi__api_gacdf1425d778fc513d2951759bd3d472b}{S\+S\+I\+Int\+Register} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}($\ast$pfn\+Handler)(\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}))
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__ssi__api_gae682d0e169a70b235a92b11dbeb5daef}{S\+S\+I\+Int\+Unregister} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__ssi__api_ga806b21cfa8c6be1219ce3633c61adb3d}{S\+S\+I\+Int\+Enable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Int\+Flags)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__ssi__api_ga3939269b55ef5c73a6f2ee4eb52eaee3}{S\+S\+I\+Int\+Disable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Int\+Flags)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__ssi__api_ga200896dc08bf543ee7b175897a93c004}{S\+S\+I\+Int\+Status} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} b\+Masked)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__ssi__api_ga41e323c76b694802d20b607bf499b487}{S\+S\+I\+Int\+Clear} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Int\+Flags)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__ssi__api_ga53159a230743ad5a9106cecbbf70df34}{S\+S\+I\+Data\+Put} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Data)
+\item 
+\hyperlink{_p_e___types_8h_adb828ef50c2dbb783109824e94cf6c47}{int32\+\_\+t} \hyperlink{group__ssi__api_ga5ed9bc426f006597b17d722f04bc169c}{S\+S\+I\+Data\+Put\+Non\+Blocking} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Data)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__ssi__api_gaf4db324f4a44eff242c29fefc54885e6}{S\+S\+I\+Data\+Get} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Data)
+\item 
+\hyperlink{_p_e___types_8h_adb828ef50c2dbb783109824e94cf6c47}{int32\+\_\+t} \hyperlink{group__ssi__api_gadbf2638243a50eb412a9089d8d04184e}{S\+S\+I\+Data\+Get\+Non\+Blocking} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Data)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__ssi__api_ga897bf9d2d751cb23cdef74c222ed141e}{S\+S\+I\+D\+M\+A\+Enable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+D\+M\+A\+Flags)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__ssi__api_ga470e04b0fea55d1bd111712976017d9d}{S\+S\+I\+D\+M\+A\+Disable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+D\+M\+A\+Flags)
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group__ssi__api_ga29159753a8c5831a4460663c22f9e52c}{S\+S\+I\+Busy} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__ssi__api_gaaaaf45725698f4c264582a58c9a359bb}{S\+S\+I\+Clock\+Source\+Set} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Source)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__ssi__api_ga1254e7ea5b8cc1b52b41d29389aba3c2}{S\+S\+I\+Clock\+Source\+Get} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{Ssi\+\_\+api@{Ssi\+\_\+api}!S\+S\+I\+Busy@{S\+S\+I\+Busy}}
+\index{S\+S\+I\+Busy@{S\+S\+I\+Busy}!Ssi\+\_\+api@{Ssi\+\_\+api}}
+\subsubsection[{\texorpdfstring{S\+S\+I\+Busy(uint32\+\_\+t ui32\+Base)}{SSIBusy(uint32_t ui32Base)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} S\+S\+I\+Busy (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ssi__api_ga29159753a8c5831a4460663c22f9e52c}{}\label{group__ssi__api_ga29159753a8c5831a4460663c22f9e52c}
+Determines whether the S\+SI transmitter is busy or not
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the S\+SI port.\\
+\hline
+\end{DoxyParams}
+Allows the caller to determine whether all transmitted bytes have cleared the transmitter hardware. If {\bfseries false} is returned, then the transmit F\+I\+FO is empty and all bits of the last transmitted word have left the hardware shift register.
+
+\begin{DoxyReturn}{Returns}
+Returns {\bfseries true} if the S\+SI is transmitting or {\bfseries false} if all transmissions are complete. 
+\end{DoxyReturn}
+
+
+Definition at line 692 of file ssi.\+c.
+
+\index{Ssi\+\_\+api@{Ssi\+\_\+api}!S\+S\+I\+Clock\+Source\+Get@{S\+S\+I\+Clock\+Source\+Get}}
+\index{S\+S\+I\+Clock\+Source\+Get@{S\+S\+I\+Clock\+Source\+Get}!Ssi\+\_\+api@{Ssi\+\_\+api}}
+\subsubsection[{\texorpdfstring{S\+S\+I\+Clock\+Source\+Get(uint32\+\_\+t ui32\+Base)}{SSIClockSourceGet(uint32_t ui32Base)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} S\+S\+I\+Clock\+Source\+Get (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ssi__api_ga1254e7ea5b8cc1b52b41d29389aba3c2}{}\label{group__ssi__api_ga1254e7ea5b8cc1b52b41d29389aba3c2}
+Gets the data clock source for the specified S\+SI peripheral
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the S\+SI port.\\
+\hline
+\end{DoxyParams}
+This function returns the data clock source for the specified S\+SI. The possible data clock source are the system clock ({\bfseries S\+S\+I\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+S\+T\+EM}) or the precision internal oscillator ({\bfseries S\+S\+I\+\_\+\+C\+L\+O\+C\+K\+\_\+\+P\+I\+O\+SC}).
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 756 of file ssi.\+c.
+
+\index{Ssi\+\_\+api@{Ssi\+\_\+api}!S\+S\+I\+Clock\+Source\+Set@{S\+S\+I\+Clock\+Source\+Set}}
+\index{S\+S\+I\+Clock\+Source\+Set@{S\+S\+I\+Clock\+Source\+Set}!Ssi\+\_\+api@{Ssi\+\_\+api}}
+\subsubsection[{\texorpdfstring{S\+S\+I\+Clock\+Source\+Set(uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Source)}{SSIClockSourceSet(uint32_t ui32Base, uint32_t ui32Source)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} S\+S\+I\+Clock\+Source\+Set (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Source}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ssi__api_gaaaaf45725698f4c264582a58c9a359bb}{}\label{group__ssi__api_gaaaaf45725698f4c264582a58c9a359bb}
+Sets the data clock source for the specified S\+SI peripheral
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the S\+SI port. \\
+\hline
+{\em ui32\+Source} & is the baud clock source for the S\+SI.\\
+\hline
+\end{DoxyParams}
+This function allows the baud clock source for the S\+SI to be selected. The possible clock source are the system clock ({\bfseries S\+S\+I\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+S\+T\+EM}) or the precision internal oscillator ({\bfseries S\+S\+I\+\_\+\+C\+L\+O\+C\+K\+\_\+\+P\+I\+O\+SC}), i.\+e. the IO clock in the Sys\+Ctrl. If {\bfseries S\+S\+I\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+S\+T\+EM} is chosen, the IO clock frequency must thus be queried by \hyperlink{group__sysctl__api_gacd8d6405b30a393cc4f014929468192d}{Sys\+Ctrl\+Clock\+Set()}. If {\bfseries S\+S\+I\+\_\+\+C\+L\+O\+C\+K\+\_\+\+P\+I\+O\+SC} the \hyperlink{group__sysctl__api_gafb4b4a106046eece490412f87e5ee715}{Sys\+Ctrl\+I\+O\+Clock\+Set()} function must be used.
+
+Changing the baud clock source will change the data rate generated by the S\+SI. Therefore, the data rate should be reconfigured after any change to the S\+SI clock source.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 728 of file ssi.\+c.
+
+\index{Ssi\+\_\+api@{Ssi\+\_\+api}!S\+S\+I\+Config\+Set\+Exp\+Clk@{S\+S\+I\+Config\+Set\+Exp\+Clk}}
+\index{S\+S\+I\+Config\+Set\+Exp\+Clk@{S\+S\+I\+Config\+Set\+Exp\+Clk}!Ssi\+\_\+api@{Ssi\+\_\+api}}
+\subsubsection[{\texorpdfstring{S\+S\+I\+Config\+Set\+Exp\+Clk(uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+S\+S\+I\+Clk, uint32\+\_\+t ui32\+Protocol, uint32\+\_\+t ui32\+Mode, uint32\+\_\+t ui32\+Bit\+Rate, uint32\+\_\+t ui32\+Data\+Width)}{SSIConfigSetExpClk(uint32_t ui32Base, uint32_t ui32SSIClk, uint32_t ui32Protocol, uint32_t ui32Mode, uint32_t ui32BitRate, uint32_t ui32DataWidth)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} S\+S\+I\+Config\+Set\+Exp\+Clk (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+S\+S\+I\+Clk, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Protocol, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Mode, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Bit\+Rate, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Data\+Width}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ssi__api_ga920b241b9d99f0b19f1c0a6f3779bc10}{}\label{group__ssi__api_ga920b241b9d99f0b19f1c0a6f3779bc10}
+Configures the synchronous serial interface
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the S\+SI module base address. \\
+\hline
+{\em ui32\+S\+S\+I\+Clk} & is the rate of the clock supplied to the S\+SI module. \\
+\hline
+{\em ui32\+Protocol} & specifies the data transfer protocol. \\
+\hline
+{\em ui32\+Mode} & specifies the mode of operation. \\
+\hline
+{\em ui32\+Bit\+Rate} & specifies the clock rate. \\
+\hline
+{\em ui32\+Data\+Width} & specifies number of bits transferred per frame.\\
+\hline
+\end{DoxyParams}
+This function configures the synchronous serial interface. It sets the S\+SI protocol, mode of operation, bit rate, and data width.
+
+The {\itshape ui32\+Protocol} parameter defines the data frame format. The {\itshape ui32\+Protocol} parameter can be one of the following values\+: {\bfseries S\+S\+I\+\_\+\+F\+R\+F\+\_\+\+M\+O\+T\+O\+\_\+\+M\+O\+D\+E\+\_\+0}, {\bfseries S\+S\+I\+\_\+\+F\+R\+F\+\_\+\+M\+O\+T\+O\+\_\+\+M\+O\+D\+E\+\_\+1}, {\bfseries S\+S\+I\+\_\+\+F\+R\+F\+\_\+\+M\+O\+T\+O\+\_\+\+M\+O\+D\+E\+\_\+2}, {\bfseries S\+S\+I\+\_\+\+F\+R\+F\+\_\+\+M\+O\+T\+O\+\_\+\+M\+O\+D\+E\+\_\+3}, {\bfseries S\+S\+I\+\_\+\+F\+R\+F\+\_\+\+TI}, or {\bfseries S\+S\+I\+\_\+\+F\+R\+F\+\_\+\+N\+MW}. The Motorola frame formats imply the following polarity and phase configurations\+:
+
+
+\begin{DoxyPre}
+Polarity Phase       Mode
+  0       0   SSI\_FRF\_MOTO\_MODE\_0
+  0       1   SSI\_FRF\_MOTO\_MODE\_1
+  1       0   SSI\_FRF\_MOTO\_MODE\_2
+  1       1   SSI\_FRF\_MOTO\_MODE\_3
+\end{DoxyPre}
+
+
+The {\itshape ui32\+Mode} parameter defines the operating mode of the S\+SI module. The S\+SI module can operate as a master or slave; if a slave, the S\+SI can be configured to disable output on its serial output line. The {\itshape ui32\+Mode} parameter can be one of the following values\+: {\bfseries S\+S\+I\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+S\+T\+ER}, {\bfseries S\+S\+I\+\_\+\+M\+O\+D\+E\+\_\+\+S\+L\+A\+VE}, or {\bfseries S\+S\+I\+\_\+\+M\+O\+D\+E\+\_\+\+S\+L\+A\+V\+E\+\_\+\+OD}.
+
+The {\itshape ui32\+Bit\+Rate} parameter defines the bit rate for the S\+SI. This bit rate must satisfy the following clock ratio criteria\+:
+
+
+\begin{DoxyItemize}
+\item F\+S\+SI $>$= 2 $\ast$ bit rate (master mode)
+\item F\+S\+SI $>$= 12 $\ast$ bit rate (slave modes)
+\end{DoxyItemize}
+
+where F\+S\+SI is the frequency of the clock supplied to the S\+SI module.
+
+The {\itshape ui32\+Data\+Width} parameter defines the width of the data transfers, and can be a value between 4 and 16, inclusive.
+
+The peripheral clock is set in the System Control module. The frequency of the system clock is the value returned by \hyperlink{group__sysctl__api_ga9ad809b6591f052d72dde7b1fb1f6eed}{Sys\+Ctrl\+Clock\+Get()} or \hyperlink{group__sysctl__api_ga61cdfa03e9a592cfad5ef7ba81595046}{Sys\+Ctrl\+I\+O\+Clock\+Get()} depending on the chosen clock source as set by \hyperlink{group__ssi__api_gaaaaf45725698f4c264582a58c9a359bb}{S\+S\+I\+Clock\+Source\+Set()}, or it can be explicitly hard coded if it is constant and known (to save the code/execution overhead of a call to \hyperlink{group__sysctl__api_ga9ad809b6591f052d72dde7b1fb1f6eed}{Sys\+Ctrl\+Clock\+Get()} or \hyperlink{group__sysctl__api_ga61cdfa03e9a592cfad5ef7ba81595046}{Sys\+Ctrl\+I\+O\+Clock\+Get()}).
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 110 of file ssi.\+c.
+
+\index{Ssi\+\_\+api@{Ssi\+\_\+api}!S\+S\+I\+Data\+Get@{S\+S\+I\+Data\+Get}}
+\index{S\+S\+I\+Data\+Get@{S\+S\+I\+Data\+Get}!Ssi\+\_\+api@{Ssi\+\_\+api}}
+\subsubsection[{\texorpdfstring{S\+S\+I\+Data\+Get(uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Data)}{SSIDataGet(uint32_t ui32Base, uint32_t *pui32Data)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} S\+S\+I\+Data\+Get (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf uint32\+\_\+t} $\ast$}]{pui32\+Data}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ssi__api_gaf4db324f4a44eff242c29fefc54885e6}{}\label{group__ssi__api_gaf4db324f4a44eff242c29fefc54885e6}
+Gets a data element from the S\+SI receive F\+I\+FO
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the S\+SI module base address. \\
+\hline
+{\em pui32\+Data} & is a pointer to a storage location for data that was received over the S\+SI interface.\\
+\hline
+\end{DoxyParams}
+This function gets received data from the receive F\+I\+FO of the specified S\+SI module and places that data into the location specified by the {\itshape pui32\+Data} parameter.
+
+\begin{DoxyNote}{Note}
+Only the lower N bits of the value written to {\itshape pui32\+Data} contain valid data, where N is the data width as configured by \hyperlink{group__ssi__api_ga920b241b9d99f0b19f1c0a6f3779bc10}{S\+S\+I\+Config\+Set\+Exp\+Clk()}. For example, if the interface is configured for 8-\/bit data width, only the lower 8 bits of the value written to {\itshape pui32\+Data} contain valid data.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 546 of file ssi.\+c.
+
+\index{Ssi\+\_\+api@{Ssi\+\_\+api}!S\+S\+I\+Data\+Get\+Non\+Blocking@{S\+S\+I\+Data\+Get\+Non\+Blocking}}
+\index{S\+S\+I\+Data\+Get\+Non\+Blocking@{S\+S\+I\+Data\+Get\+Non\+Blocking}!Ssi\+\_\+api@{Ssi\+\_\+api}}
+\subsubsection[{\texorpdfstring{S\+S\+I\+Data\+Get\+Non\+Blocking(uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Data)}{SSIDataGetNonBlocking(uint32_t ui32Base, uint32_t *pui32Data)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\+\_\+t} S\+S\+I\+Data\+Get\+Non\+Blocking (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf uint32\+\_\+t} $\ast$}]{pui32\+Data}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ssi__api_gadbf2638243a50eb412a9089d8d04184e}{}\label{group__ssi__api_gadbf2638243a50eb412a9089d8d04184e}
+Gets a data element from the S\+SI receive F\+I\+FO
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the S\+SI module base address. \\
+\hline
+{\em pui32\+Data} & is a pointer to a storage location for data that was received over the S\+SI interface.\\
+\hline
+\end{DoxyParams}
+This function gets received data from the receive F\+I\+FO of the specified S\+SI module and places that data into the location specified by the {\itshape ui32\+Data} parameter. If there is no data in the F\+I\+FO, then this function returns a zero.
+
+\begin{DoxyNote}{Note}
+Only the lower N bits of the value written to {\itshape pui32\+Data} contain valid data, where N is the data width as configured by \hyperlink{group__ssi__api_ga920b241b9d99f0b19f1c0a6f3779bc10}{S\+S\+I\+Config\+Set\+Exp\+Clk()}. For example, if the interface is configured for 8-\/bit data width, only the lower 8 bits of the value written to {\itshape pui32\+Data} contain valid data.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Returns the number of elements read from the S\+SI receive F\+I\+FO. 
+\end{DoxyReturn}
+
+
+Definition at line 589 of file ssi.\+c.
+
+\index{Ssi\+\_\+api@{Ssi\+\_\+api}!S\+S\+I\+Data\+Put@{S\+S\+I\+Data\+Put}}
+\index{S\+S\+I\+Data\+Put@{S\+S\+I\+Data\+Put}!Ssi\+\_\+api@{Ssi\+\_\+api}}
+\subsubsection[{\texorpdfstring{S\+S\+I\+Data\+Put(uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Data)}{SSIDataPut(uint32_t ui32Base, uint32_t ui32Data)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} S\+S\+I\+Data\+Put (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Data}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ssi__api_ga53159a230743ad5a9106cecbbf70df34}{}\label{group__ssi__api_ga53159a230743ad5a9106cecbbf70df34}
+Puts a data element into the S\+SI transmit F\+I\+FO
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the S\+SI module base address. \\
+\hline
+{\em ui32\+Data} & is the data to be transmitted over the S\+SI interface.\\
+\hline
+\end{DoxyParams}
+This function places the supplied data into the transmit F\+I\+FO of the specified S\+SI module.
+
+\begin{DoxyNote}{Note}
+The upper 32 -\/ N bits of the {\itshape ui32\+Data} are discarded by the hardware, where N is the data width as configured by \hyperlink{group__ssi__api_ga920b241b9d99f0b19f1c0a6f3779bc10}{S\+S\+I\+Config\+Set\+Exp\+Clk()}. For example, if the interface is configured for 8-\/bit data width, the upper 24 bits of {\itshape ui32\+Data} are discarded.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 459 of file ssi.\+c.
+
+\index{Ssi\+\_\+api@{Ssi\+\_\+api}!S\+S\+I\+Data\+Put\+Non\+Blocking@{S\+S\+I\+Data\+Put\+Non\+Blocking}}
+\index{S\+S\+I\+Data\+Put\+Non\+Blocking@{S\+S\+I\+Data\+Put\+Non\+Blocking}!Ssi\+\_\+api@{Ssi\+\_\+api}}
+\subsubsection[{\texorpdfstring{S\+S\+I\+Data\+Put\+Non\+Blocking(uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Data)}{SSIDataPutNonBlocking(uint32_t ui32Base, uint32_t ui32Data)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\+\_\+t} S\+S\+I\+Data\+Put\+Non\+Blocking (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Data}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ssi__api_ga5ed9bc426f006597b17d722f04bc169c}{}\label{group__ssi__api_ga5ed9bc426f006597b17d722f04bc169c}
+Puts a data element into the S\+SI transmit F\+I\+FO
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the S\+SI module base address. \\
+\hline
+{\em ui32\+Data} & is the data to be transmitted over the S\+SI interface.\\
+\hline
+\end{DoxyParams}
+This function places the supplied data into the transmit F\+I\+FO of the specified S\+SI module. If there is no space in the F\+I\+FO, then this function returns a zero.
+
+\begin{DoxyNote}{Note}
+The upper 32 -\/ N bits of the {\itshape ui32\+Data} are discarded by the hardware, where N is the data width as configured by \hyperlink{group__ssi__api_ga920b241b9d99f0b19f1c0a6f3779bc10}{S\+S\+I\+Config\+Set\+Exp\+Clk()}. For example, if the interface is configured for 8-\/bit data width, the upper 24 bits of {\itshape ui32\+Data} are discarded.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Returns the number of elements written to the S\+SI transmit F\+I\+FO. 
+\end{DoxyReturn}
+
+
+Definition at line 501 of file ssi.\+c.
+
+\index{Ssi\+\_\+api@{Ssi\+\_\+api}!S\+S\+I\+Disable@{S\+S\+I\+Disable}}
+\index{S\+S\+I\+Disable@{S\+S\+I\+Disable}!Ssi\+\_\+api@{Ssi\+\_\+api}}
+\subsubsection[{\texorpdfstring{S\+S\+I\+Disable(uint32\+\_\+t ui32\+Base)}{SSIDisable(uint32_t ui32Base)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} S\+S\+I\+Disable (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ssi__api_ga71320bfb623b3d5b957e52fdc5d6f869}{}\label{group__ssi__api_ga71320bfb623b3d5b957e52fdc5d6f869}
+Disables the synchronous serial interface
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the S\+SI module base address.\\
+\hline
+\end{DoxyParams}
+This function disables operation of the synchronous serial interface.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 205 of file ssi.\+c.
+
+\index{Ssi\+\_\+api@{Ssi\+\_\+api}!S\+S\+I\+D\+M\+A\+Disable@{S\+S\+I\+D\+M\+A\+Disable}}
+\index{S\+S\+I\+D\+M\+A\+Disable@{S\+S\+I\+D\+M\+A\+Disable}!Ssi\+\_\+api@{Ssi\+\_\+api}}
+\subsubsection[{\texorpdfstring{S\+S\+I\+D\+M\+A\+Disable(uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+D\+M\+A\+Flags)}{SSIDMADisable(uint32_t ui32Base, uint32_t ui32DMAFlags)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} S\+S\+I\+D\+M\+A\+Disable (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+D\+M\+A\+Flags}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ssi__api_ga470e04b0fea55d1bd111712976017d9d}{}\label{group__ssi__api_ga470e04b0fea55d1bd111712976017d9d}
+Disable S\+SI D\+MA operation
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the S\+SI port. \\
+\hline
+{\em ui32\+D\+M\+A\+Flags} & is a bit mask of the D\+MA features to disable.\\
+\hline
+\end{DoxyParams}
+This function is used to disable S\+SI D\+MA features that were enabled by \hyperlink{group__ssi__api_ga897bf9d2d751cb23cdef74c222ed141e}{S\+S\+I\+D\+M\+A\+Enable()}. The specified S\+SI D\+MA features are disabled. The {\itshape ui32\+D\+M\+A\+Flags} parameter is the logical OR of any of the following values\+:
+
+
+\begin{DoxyItemize}
+\item S\+S\+I\+\_\+\+D\+M\+A\+\_\+\+RX -\/ disable D\+MA for receive
+\item S\+S\+I\+\_\+\+D\+M\+A\+\_\+\+TX -\/ disable D\+MA for transmit
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 663 of file ssi.\+c.
+
+\index{Ssi\+\_\+api@{Ssi\+\_\+api}!S\+S\+I\+D\+M\+A\+Enable@{S\+S\+I\+D\+M\+A\+Enable}}
+\index{S\+S\+I\+D\+M\+A\+Enable@{S\+S\+I\+D\+M\+A\+Enable}!Ssi\+\_\+api@{Ssi\+\_\+api}}
+\subsubsection[{\texorpdfstring{S\+S\+I\+D\+M\+A\+Enable(uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+D\+M\+A\+Flags)}{SSIDMAEnable(uint32_t ui32Base, uint32_t ui32DMAFlags)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} S\+S\+I\+D\+M\+A\+Enable (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+D\+M\+A\+Flags}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ssi__api_ga897bf9d2d751cb23cdef74c222ed141e}{}\label{group__ssi__api_ga897bf9d2d751cb23cdef74c222ed141e}
+Enable S\+SI D\+MA operation
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the S\+SI port. \\
+\hline
+{\em ui32\+D\+M\+A\+Flags} & is a bit mask of the D\+MA features to enable.\\
+\hline
+\end{DoxyParams}
+The specified S\+SI D\+MA features are enabled. The S\+SI can be configured to use D\+MA for transmit and/or receive data transfers. The {\itshape ui32\+D\+M\+A\+Flags} parameter is the logical OR of any of the following values\+:
+
+
+\begin{DoxyItemize}
+\item S\+S\+I\+\_\+\+D\+M\+A\+\_\+\+RX -\/ enable D\+MA for receive
+\item S\+S\+I\+\_\+\+D\+M\+A\+\_\+\+TX -\/ enable D\+MA for transmit
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+The u\+D\+MA controller must also be set up before D\+MA can be used with the S\+SI.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 632 of file ssi.\+c.
+
+\index{Ssi\+\_\+api@{Ssi\+\_\+api}!S\+S\+I\+Enable@{S\+S\+I\+Enable}}
+\index{S\+S\+I\+Enable@{S\+S\+I\+Enable}!Ssi\+\_\+api@{Ssi\+\_\+api}}
+\subsubsection[{\texorpdfstring{S\+S\+I\+Enable(uint32\+\_\+t ui32\+Base)}{SSIEnable(uint32_t ui32Base)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} S\+S\+I\+Enable (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ssi__api_gadc0373c0979c964baa2ae5aba2ecfe4a}{}\label{group__ssi__api_gadc0373c0979c964baa2ae5aba2ecfe4a}
+Enables the synchronous serial interface
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the S\+SI module base address.\\
+\hline
+\end{DoxyParams}
+This function enables operation of the synchronous serial interface. The synchronous serial interface must be configured before it is enabled.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 180 of file ssi.\+c.
+
+\index{Ssi\+\_\+api@{Ssi\+\_\+api}!S\+S\+I\+Int\+Clear@{S\+S\+I\+Int\+Clear}}
+\index{S\+S\+I\+Int\+Clear@{S\+S\+I\+Int\+Clear}!Ssi\+\_\+api@{Ssi\+\_\+api}}
+\subsubsection[{\texorpdfstring{S\+S\+I\+Int\+Clear(uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)}{SSIIntClear(uint32_t ui32Base, uint32_t ui32IntFlags)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} S\+S\+I\+Int\+Clear (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Int\+Flags}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ssi__api_ga41e323c76b694802d20b607bf499b487}{}\label{group__ssi__api_ga41e323c76b694802d20b607bf499b487}
+Clears S\+SI interrupt sources
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the S\+SI module base address. \\
+\hline
+{\em ui32\+Int\+Flags} & is a bit mask of the interrupt sources to be cleared.\\
+\hline
+\end{DoxyParams}
+The specified S\+SI interrupt sources are cleared so that they no longer assert. This function must be called in the interrupt handler to keep the interrupts from being recognized again immediately upon exit. The {\itshape ui32\+Int\+Flags} parameter can consist of either or both the {\bfseries S\+S\+I\+\_\+\+R\+X\+TO} and {\bfseries S\+S\+I\+\_\+\+R\+X\+OR} values.
+
+\begin{DoxyNote}{Note}
+Because there is a write buffer in the Cortex-\/\+M3 processor, it may take several clock cycles before the interrupt source is actually cleared. Therefore, it is recommended that the interrupt source be cleared early in the interrupt handler (as opposed to the very last action) to avoid returning from the interrupt handler before the interrupt source is actually cleared. Failure to do so may result in the interrupt handler being immediately reentered (because the interrupt controller still sees the interrupt source asserted).
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 427 of file ssi.\+c.
+
+\index{Ssi\+\_\+api@{Ssi\+\_\+api}!S\+S\+I\+Int\+Disable@{S\+S\+I\+Int\+Disable}}
+\index{S\+S\+I\+Int\+Disable@{S\+S\+I\+Int\+Disable}!Ssi\+\_\+api@{Ssi\+\_\+api}}
+\subsubsection[{\texorpdfstring{S\+S\+I\+Int\+Disable(uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)}{SSIIntDisable(uint32_t ui32Base, uint32_t ui32IntFlags)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} S\+S\+I\+Int\+Disable (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Int\+Flags}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ssi__api_ga3939269b55ef5c73a6f2ee4eb52eaee3}{}\label{group__ssi__api_ga3939269b55ef5c73a6f2ee4eb52eaee3}
+Disables individual S\+SI interrupt sources
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the S\+SI module base address. \\
+\hline
+{\em ui32\+Int\+Flags} & is a bit mask of the interrupt sources to be disabled.\\
+\hline
+\end{DoxyParams}
+Disables the indicated S\+SI interrupt sources. The {\itshape ui32\+Int\+Flags} parameter can be any of the {\bfseries S\+S\+I\+\_\+\+T\+X\+FF}, {\bfseries S\+S\+I\+\_\+\+R\+X\+FF}, {\bfseries S\+S\+I\+\_\+\+R\+X\+TO}, or {\bfseries S\+S\+I\+\_\+\+R\+X\+OR} values.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 350 of file ssi.\+c.
+
+\index{Ssi\+\_\+api@{Ssi\+\_\+api}!S\+S\+I\+Int\+Enable@{S\+S\+I\+Int\+Enable}}
+\index{S\+S\+I\+Int\+Enable@{S\+S\+I\+Int\+Enable}!Ssi\+\_\+api@{Ssi\+\_\+api}}
+\subsubsection[{\texorpdfstring{S\+S\+I\+Int\+Enable(uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)}{SSIIntEnable(uint32_t ui32Base, uint32_t ui32IntFlags)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} S\+S\+I\+Int\+Enable (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Int\+Flags}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ssi__api_ga806b21cfa8c6be1219ce3633c61adb3d}{}\label{group__ssi__api_ga806b21cfa8c6be1219ce3633c61adb3d}
+Enables individual S\+SI interrupt sources
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the S\+SI module base address. \\
+\hline
+{\em ui32\+Int\+Flags} & is a bit mask of the interrupt sources to be enabled.\\
+\hline
+\end{DoxyParams}
+Enables the indicated S\+SI interrupt sources. Only the sources that are enabled can be reflected to the processor interrupt; disabled sources have no effect on the processor. The {\itshape ui32\+Int\+Flags} parameter can be any of the {\bfseries S\+S\+I\+\_\+\+T\+X\+FF}, {\bfseries S\+S\+I\+\_\+\+R\+X\+FF}, {\bfseries S\+S\+I\+\_\+\+R\+X\+TO}, or {\bfseries S\+S\+I\+\_\+\+R\+X\+OR} values.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 322 of file ssi.\+c.
+
+\index{Ssi\+\_\+api@{Ssi\+\_\+api}!S\+S\+I\+Int\+Register@{S\+S\+I\+Int\+Register}}
+\index{S\+S\+I\+Int\+Register@{S\+S\+I\+Int\+Register}!Ssi\+\_\+api@{Ssi\+\_\+api}}
+\subsubsection[{\texorpdfstring{S\+S\+I\+Int\+Register(uint32\+\_\+t ui32\+Base, void($\ast$pfn\+Handler)(void))}{SSIIntRegister(uint32_t ui32Base, void(*pfnHandler)(void))}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} S\+S\+I\+Int\+Register (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf void}($\ast$)({\bf void})}]{pfn\+Handler}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ssi__api_gacdf1425d778fc513d2951759bd3d472b}{}\label{group__ssi__api_gacdf1425d778fc513d2951759bd3d472b}
+Registers an interrupt handler for the synchronous serial interface
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the S\+SI module base address. \\
+\hline
+{\em pfn\+Handler} & is a pointer to the function to be called when the synchronous serial interface interrupt occurs.\\
+\hline
+\end{DoxyParams}
+This sets the handler to be called when an S\+SI interrupt occurs. This will enable the global interrupt in the interrupt controller; specific S\+SI interrupts must be enabled via \hyperlink{group__ssi__api_ga806b21cfa8c6be1219ce3633c61adb3d}{S\+S\+I\+Int\+Enable()}. If necessary, it is the interrupt handler\textquotesingle{}s responsibility to clear the interrupt source via \hyperlink{group__ssi__api_ga41e323c76b694802d20b607bf499b487}{S\+S\+I\+Int\+Clear()}.
+
+\begin{DoxySeeAlso}{See also}
+See \hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()} for important information about registering \hyperlink{_g_c_c_2_m_s_p430_f449_2port_8c_ae0992854bdba99f7b163894433c32aef}{interrupt} handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 239 of file ssi.\+c.
+
+\index{Ssi\+\_\+api@{Ssi\+\_\+api}!S\+S\+I\+Int\+Status@{S\+S\+I\+Int\+Status}}
+\index{S\+S\+I\+Int\+Status@{S\+S\+I\+Int\+Status}!Ssi\+\_\+api@{Ssi\+\_\+api}}
+\subsubsection[{\texorpdfstring{S\+S\+I\+Int\+Status(uint32\+\_\+t ui32\+Base, bool b\+Masked)}{SSIIntStatus(uint32_t ui32Base, bool bMasked)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} S\+S\+I\+Int\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf bool}}]{b\+Masked}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ssi__api_ga200896dc08bf543ee7b175897a93c004}{}\label{group__ssi__api_ga200896dc08bf543ee7b175897a93c004}
+Gets the current interrupt status
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the S\+SI module base address. \\
+\hline
+{\em b\+Masked} & is {\bfseries false} if the raw interrupt status is required or {\bfseries true} if the masked interrupt status is required.\\
+\hline
+\end{DoxyParams}
+This function returns the interrupt status for the S\+SI module. Either the raw interrupt status or the status of interrupts that are allowed to reflect to the processor can be returned.
+
+\begin{DoxyReturn}{Returns}
+The current interrupt status, enumerated as a bit field of {\bfseries S\+S\+I\+\_\+\+T\+X\+FF}, {\bfseries S\+S\+I\+\_\+\+R\+X\+FF}, {\bfseries S\+S\+I\+\_\+\+R\+X\+TO}, and {\bfseries S\+S\+I\+\_\+\+R\+X\+OR}. 
+\end{DoxyReturn}
+
+
+Definition at line 380 of file ssi.\+c.
+
+\index{Ssi\+\_\+api@{Ssi\+\_\+api}!S\+S\+I\+Int\+Unregister@{S\+S\+I\+Int\+Unregister}}
+\index{S\+S\+I\+Int\+Unregister@{S\+S\+I\+Int\+Unregister}!Ssi\+\_\+api@{Ssi\+\_\+api}}
+\subsubsection[{\texorpdfstring{S\+S\+I\+Int\+Unregister(uint32\+\_\+t ui32\+Base)}{SSIIntUnregister(uint32_t ui32Base)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} S\+S\+I\+Int\+Unregister (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ssi__api_gae682d0e169a70b235a92b11dbeb5daef}{}\label{group__ssi__api_gae682d0e169a70b235a92b11dbeb5daef}
+Unregisters an interrupt handler for the synchronous serial interface
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the S\+SI module base address.\\
+\hline
+\end{DoxyParams}
+This function will clear the handler to be called when a S\+SI interrupt occurs. This will also mask off the interrupt in the interrupt controller so that the interrupt handler no longer is called.
+
+\begin{DoxySeeAlso}{See also}
+See \hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()} for important information about registering \hyperlink{_g_c_c_2_m_s_p430_f449_2port_8c_ae0992854bdba99f7b163894433c32aef}{interrupt} handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 281 of file ssi.\+c.
+

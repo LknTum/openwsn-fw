@@ -1,0 +1,110 @@
+\hypertarget{01bsp__bsp__timer_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/common/01bsp\+\_\+bsp\+\_\+timer/01bsp\+\_\+bsp\+\_\+timer.c File Reference}
+\label{01bsp__bsp__timer_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/common/01bsp\+\_\+bsp\+\_\+timer/01bsp\+\_\+bsp\+\_\+timer.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/common/01bsp\+\_\+bsp\+\_\+timer/01bsp\+\_\+bsp\+\_\+timer.\+c}}
+{\ttfamily \#include \char`\"{}stdint.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}string.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}debugpins.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leds.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bsp\+\_\+timer.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapp__vars__t}{app\+\_\+vars\+\_\+t}
+\begin{DoxyCompactList}\small\item\em This program shows the use of the \char`\"{}spi\char`\"{} bsp module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{01bsp__bsp__timer_8c_a3faf66954cf820134de466ddd82f2cd4}{B\+S\+P\+\_\+\+T\+I\+M\+E\+R\+\_\+\+P\+E\+R\+I\+OD}~32768
+\begin{DoxyCompactList}\small\item\em This program shows the use of the \char`\"{}bsp\+\_\+timer\char`\"{} bsp module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{01bsp__bsp__timer_8c_a4bc32ada398f2efd613f7a2aef0bc2ca}{cb\+\_\+compare} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+int \hyperlink{01bsp__bsp__timer_8c_ad0caa506af897a3ebe6699aa0c0da367}{mote\+\_\+main} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em The program starts executing here. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structapp__vars__t}{app\+\_\+vars\+\_\+t} \hyperlink{01bsp__bsp__timer_8c_a8a1b0b7ccff92c7f1d8961997cd2c913}{app\+\_\+vars}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{01bsp\+\_\+bsp\+\_\+timer.\+c@{01bsp\+\_\+bsp\+\_\+timer.\+c}!B\+S\+P\+\_\+\+T\+I\+M\+E\+R\+\_\+\+P\+E\+R\+I\+OD@{B\+S\+P\+\_\+\+T\+I\+M\+E\+R\+\_\+\+P\+E\+R\+I\+OD}}
+\index{B\+S\+P\+\_\+\+T\+I\+M\+E\+R\+\_\+\+P\+E\+R\+I\+OD@{B\+S\+P\+\_\+\+T\+I\+M\+E\+R\+\_\+\+P\+E\+R\+I\+OD}!01bsp\+\_\+bsp\+\_\+timer.\+c@{01bsp\+\_\+bsp\+\_\+timer.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+T\+I\+M\+E\+R\+\_\+\+P\+E\+R\+I\+OD}{BSP_TIMER_PERIOD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+T\+I\+M\+E\+R\+\_\+\+P\+E\+R\+I\+OD~32768}\hypertarget{01bsp__bsp__timer_8c_a3faf66954cf820134de466ddd82f2cd4}{}\label{01bsp__bsp__timer_8c_a3faf66954cf820134de466ddd82f2cd4}
+
+
+This program shows the use of the \char`\"{}bsp\+\_\+timer\char`\"{} bsp module. 
+
+Since the bsp modules for different platforms have the same declaration, you can use this project with any platform.
+
+Load this program onto your board, and start running. It will enable the B\+SP timer. The B\+SP timer is periodic, of period B\+S\+P\+\_\+\+T\+I\+M\+E\+R\+\_\+\+P\+E\+R\+I\+OD ticks. Each time it elapses\+:
+\begin{DoxyItemize}
+\item the frame debugpin toggles
+\item the error L\+ED toggles
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, August 2014. 
+\end{DoxyAuthor}
+
+
+Definition at line 25 of file 01bsp\+\_\+bsp\+\_\+timer.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{01bsp\+\_\+bsp\+\_\+timer.\+c@{01bsp\+\_\+bsp\+\_\+timer.\+c}!cb\+\_\+compare@{cb\+\_\+compare}}
+\index{cb\+\_\+compare@{cb\+\_\+compare}!01bsp\+\_\+bsp\+\_\+timer.\+c@{01bsp\+\_\+bsp\+\_\+timer.\+c}}
+\subsubsection[{\texorpdfstring{cb\+\_\+compare(void)}{cb_compare(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} cb\+\_\+compare (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{01bsp__bsp__timer_8c_a4bc32ada398f2efd613f7a2aef0bc2ca}{}\label{01bsp__bsp__timer_8c_a4bc32ada398f2efd613f7a2aef0bc2ca}
+
+
+Definition at line 58 of file 01bsp\+\_\+bsp\+\_\+timer.\+c.
+
+\index{01bsp\+\_\+bsp\+\_\+timer.\+c@{01bsp\+\_\+bsp\+\_\+timer.\+c}!mote\+\_\+main@{mote\+\_\+main}}
+\index{mote\+\_\+main@{mote\+\_\+main}!01bsp\+\_\+bsp\+\_\+timer.\+c@{01bsp\+\_\+bsp\+\_\+timer.\+c}}
+\subsubsection[{\texorpdfstring{mote\+\_\+main(void)}{mote_main(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int mote\+\_\+main (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{01bsp__bsp__timer_8c_ad0caa506af897a3ebe6699aa0c0da367}{}\label{01bsp__bsp__timer_8c_ad0caa506af897a3ebe6699aa0c0da367}
+
+
+The program starts executing here. 
+
+Z1-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+W\+S\+N430v13b-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+Telos\+B-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+Python-\/based emulation of the mote\textquotesingle{}s power supply.
+
+iot-\/lab\+\_\+\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+iot-\/lab\+\_\+\+A8-\/\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+G\+I\+N\+A-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+e\+Z430-\/\+R\+F2500-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module. 
+
+Definition at line 44 of file 01bsp\+\_\+bsp\+\_\+timer.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{01bsp\+\_\+bsp\+\_\+timer.\+c@{01bsp\+\_\+bsp\+\_\+timer.\+c}!app\+\_\+vars@{app\+\_\+vars}}
+\index{app\+\_\+vars@{app\+\_\+vars}!01bsp\+\_\+bsp\+\_\+timer.\+c@{01bsp\+\_\+bsp\+\_\+timer.\+c}}
+\subsubsection[{\texorpdfstring{app\+\_\+vars}{app_vars}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf app\+\_\+vars\+\_\+t} app\+\_\+vars}\hypertarget{01bsp__bsp__timer_8c_a8a1b0b7ccff92c7f1d8961997cd2c913}{}\label{01bsp__bsp__timer_8c_a8a1b0b7ccff92c7f1d8961997cd2c913}
+
+
+Definition at line 33 of file 01bsp\+\_\+bsp\+\_\+timer.\+c.
+

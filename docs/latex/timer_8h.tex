@@ -1,0 +1,322 @@
+\hypertarget{timer_8h}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/xpressohack/timer.h File Reference}
+\label{timer_8h}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/xpressohack/timer.\+h@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/xpressohack/timer.\+h}}
+{\ttfamily \#include \char`\"{}stdint.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{timer_8h_aedf463990ee6edcca49635e85d0b5f7c}{T\+I\+M\+E\+R\+\_\+to\+\_\+32k\+Hz}~30
+\begin{DoxyCompactList}\small\item\em Cross-\/platform declaration \char`\"{}timer\char`\"{} bsp module. \end{DoxyCompactList}\item 
+\#define \hyperlink{timer_8h_ab1b0dd2e70f4d97afc104b818a9c0267}{T\+I\+C\+S\+\_\+\+P\+E\+R\+\_\+\+S\+E\+C\+O\+ND}~1000000
+\item 
+\#define \hyperlink{timer_8h_ad35f67a85e6e1461cb83540a28b9785a}{T\+I\+C\+S\+\_\+\+P\+E\+R\+\_\+\+MS}~1
+\item 
+\#define \hyperlink{timer_8h_a8e5c93adc19a3ff793528b6b695b091f}{T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+R\+E\+G0}~0
+\item 
+\#define \hyperlink{timer_8h_a9d82a9cf7894ee8cdc55fd7f57a17086}{T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+R\+E\+G1}~1
+\item 
+\#define \hyperlink{timer_8h_a688c8ddddbe579f8c06be6fb09c75585}{T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+R\+E\+G2}~2
+\item 
+\#define \hyperlink{timer_8h_a3c28d393d7a8b11f58de7b7e9b7cf1e4}{T\+I\+M\+E\+R\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+R\+E\+G0}~6
+\item 
+\#define \hyperlink{timer_8h_a40cd10f8eeb17b34cc6087b76e5e4461}{T\+I\+M\+E\+R\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+R\+E\+G1}~7
+\item 
+\#define \hyperlink{timer_8h_a440de1b114b4612d429931b5b724cd1b}{T\+I\+M\+E\+R\+\_\+\+N\+U\+M0}~0
+\item 
+\#define \hyperlink{timer_8h_a1c5737b03f226ed460f7c64880bc0465}{T\+I\+M\+E\+R\+\_\+\+N\+U\+M1}~3
+\item 
+\#define \hyperlink{timer_8h_ab6b77d1294b22d99abb0cdee0ea7d134}{T\+I\+M\+E\+R\+\_\+\+N\+U\+M2}~6
+\item 
+\#define \hyperlink{timer_8h_ada0956990d5af89a711bfd16ef1dc4c8}{T\+I\+M\+E\+R\+\_\+\+N\+U\+M3}~9
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}($\ast$ \hyperlink{timer_8h_acc2fd8d8f22d4fbef321c6adaa08dfd4}{low\+\_\+timer\+\_\+hook}) (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{timer_8h_a62b0dbd0360bb7c0d1dc616832884632}{timer\+\_\+init} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} t\+\_\+num)
+\begin{DoxyCompactList}\small\item\em Initialize a timer. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{timer_8h_aafaeefceed40a51942c1500717fad336}{timer\+\_\+set\+\_\+compare} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} timer\+\_\+num, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} compare\+Reg, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} delay\+In\+Ms)
+\begin{DoxyCompactList}\small\item\em Set the compare value in the timer. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{timer_8h_a06a7ad3f5233956e78fa5d8bf793eeae}{timer\+\_\+set\+\_\+capture} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} timer\+\_\+num, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} capture\+Reg)
+\begin{DoxyCompactList}\small\item\em Configure the capture register and set interrupts. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{timer_8h_a261e916af83312de95215baca761652c}{timer\+\_\+enable} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} timer\+\_\+num)
+\begin{DoxyCompactList}\small\item\em Starts a timer. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{timer_8h_acf6eee99c308746090e36d0f559ec622}{timer\+\_\+reset} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} timer\+\_\+num)
+\begin{DoxyCompactList}\small\item\em Reset a timer. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{timer_8h_adf4ffc07f7cab4b384525dffcf9d3da7}{timer\+\_\+disable} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} timer\+\_\+num)
+\begin{DoxyCompactList}\small\item\em Disable a timer. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{timer_8h_a304d3a392d0acd97595c1e95a7096514}{timer\+\_\+get\+\_\+current\+\_\+value} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} timer\+\_\+num)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{timer_8h_a306dcf6ed8b202e005ac1fbacc63e6a3}{timer\+\_\+reset\+\_\+compare} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} timer\+\_\+num, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} compare\+Reg)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{timer_8h_a073b3cd7b1774fe5a91edab3f4e1d1f4}{timer\+\_\+get\+\_\+capture\+\_\+value} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} timer\+\_\+num, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} compare\+Reg)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{timer_8h_a15673d92665b018557526396bc216e56}{timer\+\_\+set\+\_\+isr\+\_\+compare\+\_\+hook} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} timer\+\_\+num, \hyperlink{timer_8h_acc2fd8d8f22d4fbef321c6adaa08dfd4}{low\+\_\+timer\+\_\+hook} cbt)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{timer_8h_a63ebae3e54ab11263b789f18b3c90b1f}{timer\+\_\+set\+\_\+isr\+\_\+capture\+\_\+hook} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} timer\+\_\+num, \hyperlink{timer_8h_acc2fd8d8f22d4fbef321c6adaa08dfd4}{low\+\_\+timer\+\_\+hook} cbt)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{timer.\+h@{timer.\+h}!T\+I\+C\+S\+\_\+\+P\+E\+R\+\_\+\+MS@{T\+I\+C\+S\+\_\+\+P\+E\+R\+\_\+\+MS}}
+\index{T\+I\+C\+S\+\_\+\+P\+E\+R\+\_\+\+MS@{T\+I\+C\+S\+\_\+\+P\+E\+R\+\_\+\+MS}!timer.\+h@{timer.\+h}}
+\subsubsection[{\texorpdfstring{T\+I\+C\+S\+\_\+\+P\+E\+R\+\_\+\+MS}{TICS_PER_MS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+I\+C\+S\+\_\+\+P\+E\+R\+\_\+\+MS~1}\hypertarget{timer_8h_ad35f67a85e6e1461cb83540a28b9785a}{}\label{timer_8h_ad35f67a85e6e1461cb83540a28b9785a}
+
+
+Definition at line 20 of file timer.\+h.
+
+\index{timer.\+h@{timer.\+h}!T\+I\+C\+S\+\_\+\+P\+E\+R\+\_\+\+S\+E\+C\+O\+ND@{T\+I\+C\+S\+\_\+\+P\+E\+R\+\_\+\+S\+E\+C\+O\+ND}}
+\index{T\+I\+C\+S\+\_\+\+P\+E\+R\+\_\+\+S\+E\+C\+O\+ND@{T\+I\+C\+S\+\_\+\+P\+E\+R\+\_\+\+S\+E\+C\+O\+ND}!timer.\+h@{timer.\+h}}
+\subsubsection[{\texorpdfstring{T\+I\+C\+S\+\_\+\+P\+E\+R\+\_\+\+S\+E\+C\+O\+ND}{TICS_PER_SECOND}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+I\+C\+S\+\_\+\+P\+E\+R\+\_\+\+S\+E\+C\+O\+ND~1000000}\hypertarget{timer_8h_ab1b0dd2e70f4d97afc104b818a9c0267}{}\label{timer_8h_ab1b0dd2e70f4d97afc104b818a9c0267}
+
+
+Definition at line 18 of file timer.\+h.
+
+\index{timer.\+h@{timer.\+h}!T\+I\+M\+E\+R\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+R\+E\+G0@{T\+I\+M\+E\+R\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+R\+E\+G0}}
+\index{T\+I\+M\+E\+R\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+R\+E\+G0@{T\+I\+M\+E\+R\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+R\+E\+G0}!timer.\+h@{timer.\+h}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+E\+R\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+R\+E\+G0}{TIMER_CAPTURE_REG0}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+I\+M\+E\+R\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+R\+E\+G0~6}\hypertarget{timer_8h_a3c28d393d7a8b11f58de7b7e9b7cf1e4}{}\label{timer_8h_a3c28d393d7a8b11f58de7b7e9b7cf1e4}
+
+
+Definition at line 26 of file timer.\+h.
+
+\index{timer.\+h@{timer.\+h}!T\+I\+M\+E\+R\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+R\+E\+G1@{T\+I\+M\+E\+R\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+R\+E\+G1}}
+\index{T\+I\+M\+E\+R\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+R\+E\+G1@{T\+I\+M\+E\+R\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+R\+E\+G1}!timer.\+h@{timer.\+h}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+E\+R\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+R\+E\+G1}{TIMER_CAPTURE_REG1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+I\+M\+E\+R\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+R\+E\+G1~7}\hypertarget{timer_8h_a40cd10f8eeb17b34cc6087b76e5e4461}{}\label{timer_8h_a40cd10f8eeb17b34cc6087b76e5e4461}
+
+
+Definition at line 27 of file timer.\+h.
+
+\index{timer.\+h@{timer.\+h}!T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+R\+E\+G0@{T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+R\+E\+G0}}
+\index{T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+R\+E\+G0@{T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+R\+E\+G0}!timer.\+h@{timer.\+h}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+R\+E\+G0}{TIMER_COMPARE_REG0}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+R\+E\+G0~0}\hypertarget{timer_8h_a8e5c93adc19a3ff793528b6b695b091f}{}\label{timer_8h_a8e5c93adc19a3ff793528b6b695b091f}
+
+
+Definition at line 22 of file timer.\+h.
+
+\index{timer.\+h@{timer.\+h}!T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+R\+E\+G1@{T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+R\+E\+G1}}
+\index{T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+R\+E\+G1@{T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+R\+E\+G1}!timer.\+h@{timer.\+h}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+R\+E\+G1}{TIMER_COMPARE_REG1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+R\+E\+G1~1}\hypertarget{timer_8h_a9d82a9cf7894ee8cdc55fd7f57a17086}{}\label{timer_8h_a9d82a9cf7894ee8cdc55fd7f57a17086}
+
+
+Definition at line 23 of file timer.\+h.
+
+\index{timer.\+h@{timer.\+h}!T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+R\+E\+G2@{T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+R\+E\+G2}}
+\index{T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+R\+E\+G2@{T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+R\+E\+G2}!timer.\+h@{timer.\+h}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+R\+E\+G2}{TIMER_COMPARE_REG2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+R\+E\+G2~2}\hypertarget{timer_8h_a688c8ddddbe579f8c06be6fb09c75585}{}\label{timer_8h_a688c8ddddbe579f8c06be6fb09c75585}
+
+
+Definition at line 24 of file timer.\+h.
+
+\index{timer.\+h@{timer.\+h}!T\+I\+M\+E\+R\+\_\+\+N\+U\+M0@{T\+I\+M\+E\+R\+\_\+\+N\+U\+M0}}
+\index{T\+I\+M\+E\+R\+\_\+\+N\+U\+M0@{T\+I\+M\+E\+R\+\_\+\+N\+U\+M0}!timer.\+h@{timer.\+h}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+E\+R\+\_\+\+N\+U\+M0}{TIMER_NUM0}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+I\+M\+E\+R\+\_\+\+N\+U\+M0~0}\hypertarget{timer_8h_a440de1b114b4612d429931b5b724cd1b}{}\label{timer_8h_a440de1b114b4612d429931b5b724cd1b}
+
+
+Definition at line 29 of file timer.\+h.
+
+\index{timer.\+h@{timer.\+h}!T\+I\+M\+E\+R\+\_\+\+N\+U\+M1@{T\+I\+M\+E\+R\+\_\+\+N\+U\+M1}}
+\index{T\+I\+M\+E\+R\+\_\+\+N\+U\+M1@{T\+I\+M\+E\+R\+\_\+\+N\+U\+M1}!timer.\+h@{timer.\+h}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+E\+R\+\_\+\+N\+U\+M1}{TIMER_NUM1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+I\+M\+E\+R\+\_\+\+N\+U\+M1~3}\hypertarget{timer_8h_a1c5737b03f226ed460f7c64880bc0465}{}\label{timer_8h_a1c5737b03f226ed460f7c64880bc0465}
+
+
+Definition at line 30 of file timer.\+h.
+
+\index{timer.\+h@{timer.\+h}!T\+I\+M\+E\+R\+\_\+\+N\+U\+M2@{T\+I\+M\+E\+R\+\_\+\+N\+U\+M2}}
+\index{T\+I\+M\+E\+R\+\_\+\+N\+U\+M2@{T\+I\+M\+E\+R\+\_\+\+N\+U\+M2}!timer.\+h@{timer.\+h}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+E\+R\+\_\+\+N\+U\+M2}{TIMER_NUM2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+I\+M\+E\+R\+\_\+\+N\+U\+M2~6}\hypertarget{timer_8h_ab6b77d1294b22d99abb0cdee0ea7d134}{}\label{timer_8h_ab6b77d1294b22d99abb0cdee0ea7d134}
+
+
+Definition at line 31 of file timer.\+h.
+
+\index{timer.\+h@{timer.\+h}!T\+I\+M\+E\+R\+\_\+\+N\+U\+M3@{T\+I\+M\+E\+R\+\_\+\+N\+U\+M3}}
+\index{T\+I\+M\+E\+R\+\_\+\+N\+U\+M3@{T\+I\+M\+E\+R\+\_\+\+N\+U\+M3}!timer.\+h@{timer.\+h}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+E\+R\+\_\+\+N\+U\+M3}{TIMER_NUM3}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+I\+M\+E\+R\+\_\+\+N\+U\+M3~9}\hypertarget{timer_8h_ada0956990d5af89a711bfd16ef1dc4c8}{}\label{timer_8h_ada0956990d5af89a711bfd16ef1dc4c8}
+
+
+Definition at line 32 of file timer.\+h.
+
+\index{timer.\+h@{timer.\+h}!T\+I\+M\+E\+R\+\_\+to\+\_\+32k\+Hz@{T\+I\+M\+E\+R\+\_\+to\+\_\+32k\+Hz}}
+\index{T\+I\+M\+E\+R\+\_\+to\+\_\+32k\+Hz@{T\+I\+M\+E\+R\+\_\+to\+\_\+32k\+Hz}!timer.\+h@{timer.\+h}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+E\+R\+\_\+to\+\_\+32k\+Hz}{TIMER_to_32kHz}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+I\+M\+E\+R\+\_\+to\+\_\+32k\+Hz~30}\hypertarget{timer_8h_aedf463990ee6edcca49635e85d0b5f7c}{}\label{timer_8h_aedf463990ee6edcca49635e85d0b5f7c}
+
+
+Cross-\/platform declaration \char`\"{}timer\char`\"{} bsp module. 
+
+\begin{DoxyAuthor}{Author}
+Xavi Vilajosana \href{mailto:xvilajosana@eecs.berkeley.edu}{\tt xvilajosana@eecs.\+berkeley.\+edu}, February 2012. 
+\end{DoxyAuthor}
+
+
+Definition at line 16 of file timer.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\index{timer.\+h@{timer.\+h}!low\+\_\+timer\+\_\+hook@{low\+\_\+timer\+\_\+hook}}
+\index{low\+\_\+timer\+\_\+hook@{low\+\_\+timer\+\_\+hook}!timer.\+h@{timer.\+h}}
+\subsubsection[{\texorpdfstring{low\+\_\+timer\+\_\+hook}{low_timer_hook}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf void}($\ast$ low\+\_\+timer\+\_\+hook) ({\bf uint8\+\_\+t})}\hypertarget{timer_8h_acc2fd8d8f22d4fbef321c6adaa08dfd4}{}\label{timer_8h_acc2fd8d8f22d4fbef321c6adaa08dfd4}
+
+
+Definition at line 37 of file timer.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{timer.\+h@{timer.\+h}!timer\+\_\+disable@{timer\+\_\+disable}}
+\index{timer\+\_\+disable@{timer\+\_\+disable}!timer.\+h@{timer.\+h}}
+\subsubsection[{\texorpdfstring{timer\+\_\+disable(uint8\+\_\+t timer\+\_\+num)}{timer_disable(uint8_t timer_num)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} timer\+\_\+disable (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{timer\+\_\+num}
+\end{DoxyParamCaption}
+)}\hypertarget{timer_8h_adf4ffc07f7cab4b384525dffcf9d3da7}{}\label{timer_8h_adf4ffc07f7cab4b384525dffcf9d3da7}
+
+
+Disable a timer. 
+
+
+
+Definition at line 519 of file timer.\+c.
+
+\index{timer.\+h@{timer.\+h}!timer\+\_\+enable@{timer\+\_\+enable}}
+\index{timer\+\_\+enable@{timer\+\_\+enable}!timer.\+h@{timer.\+h}}
+\subsubsection[{\texorpdfstring{timer\+\_\+enable(uint8\+\_\+t timer\+\_\+num)}{timer_enable(uint8_t timer_num)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} timer\+\_\+enable (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{timer\+\_\+num}
+\end{DoxyParamCaption}
+)}\hypertarget{timer_8h_a261e916af83312de95215baca761652c}{}\label{timer_8h_a261e916af83312de95215baca761652c}
+
+
+Starts a timer. 
+
+\begin{DoxyPrecond}{Precondition}
+Call timer\+\_\+init before calling this function. 
+\end{DoxyPrecond}
+
+
+Definition at line 114 of file timer.\+c.
+
+\index{timer.\+h@{timer.\+h}!timer\+\_\+get\+\_\+capture\+\_\+value@{timer\+\_\+get\+\_\+capture\+\_\+value}}
+\index{timer\+\_\+get\+\_\+capture\+\_\+value@{timer\+\_\+get\+\_\+capture\+\_\+value}!timer.\+h@{timer.\+h}}
+\subsubsection[{\texorpdfstring{timer\+\_\+get\+\_\+capture\+\_\+value(uint8\+\_\+t timer\+\_\+num, uint8\+\_\+t compare\+Reg)}{timer_get_capture_value(uint8_t timer_num, uint8_t compareReg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} timer\+\_\+get\+\_\+capture\+\_\+value (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{timer\+\_\+num, }
+\item[{{\bf uint8\+\_\+t}}]{compare\+Reg}
+\end{DoxyParamCaption}
+)}\hypertarget{timer_8h_a073b3cd7b1774fe5a91edab3f4e1d1f4}{}\label{timer_8h_a073b3cd7b1774fe5a91edab3f4e1d1f4}
+
+
+Definition at line 442 of file timer.\+c.
+
+\index{timer.\+h@{timer.\+h}!timer\+\_\+get\+\_\+current\+\_\+value@{timer\+\_\+get\+\_\+current\+\_\+value}}
+\index{timer\+\_\+get\+\_\+current\+\_\+value@{timer\+\_\+get\+\_\+current\+\_\+value}!timer.\+h@{timer.\+h}}
+\subsubsection[{\texorpdfstring{timer\+\_\+get\+\_\+current\+\_\+value(uint8\+\_\+t timer\+\_\+num)}{timer_get_current_value(uint8_t timer_num)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} timer\+\_\+get\+\_\+current\+\_\+value (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{timer\+\_\+num}
+\end{DoxyParamCaption}
+)}\hypertarget{timer_8h_a304d3a392d0acd97595c1e95a7096514}{}\label{timer_8h_a304d3a392d0acd97595c1e95a7096514}
+
+
+Definition at line 131 of file timer.\+c.
+
+\index{timer.\+h@{timer.\+h}!timer\+\_\+init@{timer\+\_\+init}}
+\index{timer\+\_\+init@{timer\+\_\+init}!timer.\+h@{timer.\+h}}
+\subsubsection[{\texorpdfstring{timer\+\_\+init(uint8\+\_\+t t\+\_\+num)}{timer_init(uint8_t t_num)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} timer\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{t\+\_\+num}
+\end{DoxyParamCaption}
+)}\hypertarget{timer_8h_a62b0dbd0360bb7c0d1dc616832884632}{}\label{timer_8h_a62b0dbd0360bb7c0d1dc616832884632}
+
+
+Initialize a timer. 
+
+
+
+Definition at line 88 of file timer.\+c.
+
+\index{timer.\+h@{timer.\+h}!timer\+\_\+reset@{timer\+\_\+reset}}
+\index{timer\+\_\+reset@{timer\+\_\+reset}!timer.\+h@{timer.\+h}}
+\subsubsection[{\texorpdfstring{timer\+\_\+reset(uint8\+\_\+t timer\+\_\+num)}{timer_reset(uint8_t timer_num)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} timer\+\_\+reset (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{timer\+\_\+num}
+\end{DoxyParamCaption}
+)}\hypertarget{timer_8h_acf6eee99c308746090e36d0f559ec622}{}\label{timer_8h_acf6eee99c308746090e36d0f559ec622}
+
+
+Reset a timer. 
+
+
+
+Definition at line 490 of file timer.\+c.
+
+\index{timer.\+h@{timer.\+h}!timer\+\_\+reset\+\_\+compare@{timer\+\_\+reset\+\_\+compare}}
+\index{timer\+\_\+reset\+\_\+compare@{timer\+\_\+reset\+\_\+compare}!timer.\+h@{timer.\+h}}
+\subsubsection[{\texorpdfstring{timer\+\_\+reset\+\_\+compare(uint8\+\_\+t timer\+\_\+num, uint8\+\_\+t compare\+Reg)}{timer_reset_compare(uint8_t timer_num, uint8_t compareReg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} timer\+\_\+reset\+\_\+compare (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{timer\+\_\+num, }
+\item[{{\bf uint8\+\_\+t}}]{compare\+Reg}
+\end{DoxyParamCaption}
+)}\hypertarget{timer_8h_a306dcf6ed8b202e005ac1fbacc63e6a3}{}\label{timer_8h_a306dcf6ed8b202e005ac1fbacc63e6a3}
+
+
+Definition at line 255 of file timer.\+c.
+
+\index{timer.\+h@{timer.\+h}!timer\+\_\+set\+\_\+capture@{timer\+\_\+set\+\_\+capture}}
+\index{timer\+\_\+set\+\_\+capture@{timer\+\_\+set\+\_\+capture}!timer.\+h@{timer.\+h}}
+\subsubsection[{\texorpdfstring{timer\+\_\+set\+\_\+capture(uint8\+\_\+t timer\+\_\+num, uint8\+\_\+t capture\+Reg)}{timer_set_capture(uint8_t timer_num, uint8_t captureReg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} timer\+\_\+set\+\_\+capture (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{timer\+\_\+num, }
+\item[{{\bf uint8\+\_\+t}}]{capture\+Reg}
+\end{DoxyParamCaption}
+)}\hypertarget{timer_8h_a06a7ad3f5233956e78fa5d8bf793eeae}{}\label{timer_8h_a06a7ad3f5233956e78fa5d8bf793eeae}
+
+
+Configure the capture register and set interrupts. 
+
+Every timer has 2 capture registers. so choose one. 
+
+Definition at line 354 of file timer.\+c.
+
+\index{timer.\+h@{timer.\+h}!timer\+\_\+set\+\_\+compare@{timer\+\_\+set\+\_\+compare}}
+\index{timer\+\_\+set\+\_\+compare@{timer\+\_\+set\+\_\+compare}!timer.\+h@{timer.\+h}}
+\subsubsection[{\texorpdfstring{timer\+\_\+set\+\_\+compare(uint8\+\_\+t timer\+\_\+num, uint8\+\_\+t compare\+Reg, uint32\+\_\+t delay\+In\+Ms)}{timer_set_compare(uint8_t timer_num, uint8_t compareReg, uint32_t delayInMs)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} timer\+\_\+set\+\_\+compare (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{timer\+\_\+num, }
+\item[{{\bf uint8\+\_\+t}}]{compare\+Reg, }
+\item[{{\bf uint32\+\_\+t}}]{delay\+In\+Ticks}
+\end{DoxyParamCaption}
+)}\hypertarget{timer_8h_aafaeefceed40a51942c1500717fad336}{}\label{timer_8h_aafaeefceed40a51942c1500717fad336}
+
+
+Set the compare value in the timer. 
+
+Every timer has 3 compare registers. so choose one. 
+
+Definition at line 159 of file timer.\+c.
+
+\index{timer.\+h@{timer.\+h}!timer\+\_\+set\+\_\+isr\+\_\+capture\+\_\+hook@{timer\+\_\+set\+\_\+isr\+\_\+capture\+\_\+hook}}
+\index{timer\+\_\+set\+\_\+isr\+\_\+capture\+\_\+hook@{timer\+\_\+set\+\_\+isr\+\_\+capture\+\_\+hook}!timer.\+h@{timer.\+h}}
+\subsubsection[{\texorpdfstring{timer\+\_\+set\+\_\+isr\+\_\+capture\+\_\+hook(uint8\+\_\+t timer\+\_\+num, low\+\_\+timer\+\_\+hook cbt)}{timer_set_isr_capture_hook(uint8_t timer_num, low_timer_hook cbt)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} timer\+\_\+set\+\_\+isr\+\_\+capture\+\_\+hook (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{timer\+\_\+num, }
+\item[{{\bf low\+\_\+timer\+\_\+hook}}]{cbt}
+\end{DoxyParamCaption}
+)}\hypertarget{timer_8h_a63ebae3e54ab11263b789f18b3c90b1f}{}\label{timer_8h_a63ebae3e54ab11263b789f18b3c90b1f}
+
+
+Definition at line 64 of file timer.\+c.
+
+\index{timer.\+h@{timer.\+h}!timer\+\_\+set\+\_\+isr\+\_\+compare\+\_\+hook@{timer\+\_\+set\+\_\+isr\+\_\+compare\+\_\+hook}}
+\index{timer\+\_\+set\+\_\+isr\+\_\+compare\+\_\+hook@{timer\+\_\+set\+\_\+isr\+\_\+compare\+\_\+hook}!timer.\+h@{timer.\+h}}
+\subsubsection[{\texorpdfstring{timer\+\_\+set\+\_\+isr\+\_\+compare\+\_\+hook(uint8\+\_\+t timer\+\_\+num, low\+\_\+timer\+\_\+hook cbt)}{timer_set_isr_compare_hook(uint8_t timer_num, low_timer_hook cbt)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} timer\+\_\+set\+\_\+isr\+\_\+compare\+\_\+hook (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{timer\+\_\+num, }
+\item[{{\bf low\+\_\+timer\+\_\+hook}}]{cbt}
+\end{DoxyParamCaption}
+)}\hypertarget{timer_8h_a15673d92665b018557526396bc216e56}{}\label{timer_8h_a15673d92665b018557526396bc216e56}
+
+
+Definition at line 43 of file timer.\+c.
+

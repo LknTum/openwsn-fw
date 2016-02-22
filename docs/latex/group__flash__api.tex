@@ -1,0 +1,250 @@
+\hypertarget{group__flash__api}{}\section{Flash\+\_\+api}
+\label{group__flash__api}\index{Flash\+\_\+api@{Flash\+\_\+api}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_p_e___types_8h_adb828ef50c2dbb783109824e94cf6c47}{int32\+\_\+t} \hyperlink{group__flash__api_gaedcc8d25fdce7a51b46e6d37629dbef3}{Flash\+Main\+Page\+Erase} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Address)
+\item 
+\hyperlink{_p_e___types_8h_adb828ef50c2dbb783109824e94cf6c47}{int32\+\_\+t} \hyperlink{group__flash__api_ga67d5a1a47713df085c99877079365f04}{Flash\+Upper\+Page\+Erase} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{_p_e___types_8h_adb828ef50c2dbb783109824e94cf6c47}{int32\+\_\+t} \hyperlink{group__flash__api_ga15cabe29d0066e6c37e0ccfd452e6adc}{Flash\+Main\+Page\+Program} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Data, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Address, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Count)
+\item 
+\hyperlink{_p_e___types_8h_adb828ef50c2dbb783109824e94cf6c47}{int32\+\_\+t} \hyperlink{group__flash__api_ga2a92b46846b2919278a852f0a4b1ffcf}{Flash\+Upper\+Page\+Program} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Data, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Address, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Count)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__flash__api_gaec19050e37101a648c689b3f40d8da90}{Flash\+Get} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Addr)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__flash__api_gac9664ecdcf054a53ec8e6d896cc3753c}{Flash\+Cache\+Mode\+Get} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__flash__api_gae786aab0fb4bcec9149c918c09fafa15}{Flash\+Cache\+Mode\+Set} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Cache\+Mode)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__flash__api_ga79bccd4cdbd7930d880df9e185935d41}{Flash\+Size\+Get} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__flash__api_gad3d3b9146ff61723dddacaa27b82385c}{Flash\+Sram\+Size\+Get} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{Flash\+\_\+api@{Flash\+\_\+api}!Flash\+Cache\+Mode\+Get@{Flash\+Cache\+Mode\+Get}}
+\index{Flash\+Cache\+Mode\+Get@{Flash\+Cache\+Mode\+Get}!Flash\+\_\+api@{Flash\+\_\+api}}
+\subsubsection[{\texorpdfstring{Flash\+Cache\+Mode\+Get(void)}{FlashCacheModeGet(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} Flash\+Cache\+Mode\+Get (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__flash__api_gac9664ecdcf054a53ec8e6d896cc3753c}{}\label{group__flash__api_gac9664ecdcf054a53ec8e6d896cc3753c}
+Gets the current state of the flash Cache Mode
+
+This function gets the current setting for the Cache Mode.
+
+\begin{DoxyReturn}{Returns}
+Returns the CM bits. Return value should match one of the F\+L\+A\+S\+H\+\_\+\+C\+A\+C\+H\+E\+\_\+\+M\+O\+D\+E\+\_\+$<$$>$ macros defined in flash.\+h. 
+\end{DoxyReturn}
+
+
+Definition at line 328 of file flash.\+c.
+
+\index{Flash\+\_\+api@{Flash\+\_\+api}!Flash\+Cache\+Mode\+Set@{Flash\+Cache\+Mode\+Set}}
+\index{Flash\+Cache\+Mode\+Set@{Flash\+Cache\+Mode\+Set}!Flash\+\_\+api@{Flash\+\_\+api}}
+\subsubsection[{\texorpdfstring{Flash\+Cache\+Mode\+Set(uint32\+\_\+t ui32\+Cache\+Mode)}{FlashCacheModeSet(uint32_t ui32CacheMode)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Flash\+Cache\+Mode\+Set (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Cache\+Mode}
+\end{DoxyParamCaption}
+)}\hypertarget{group__flash__api_gae786aab0fb4bcec9149c918c09fafa15}{}\label{group__flash__api_gae786aab0fb4bcec9149c918c09fafa15}
+Sets the flash Cache Mode state
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Cache\+Mode} & is the desired cache mode.\\
+\hline
+\end{DoxyParams}
+This function sets the flash Cache Mode to the desired state and accepts a right justified 2 bit setting for the Cachemode bits. The function waits for the flash to be idle, reads the F\+C\+TL register contents, masks in the requested setting, and writes it into the F\+C\+TL register.
+
+The parameter {\itshape ui32\+Cache\+Mode} can have one of the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries F\+L\+A\+S\+H\+\_\+\+C\+T\+R\+L\+\_\+\+C\+A\+C\+H\+E\+\_\+\+M\+O\+D\+E\+\_\+\+D\+I\+S\+A\+B\+LE} 
+\item {\bfseries F\+L\+A\+S\+H\+\_\+\+C\+T\+R\+L\+\_\+\+C\+A\+C\+H\+E\+\_\+\+M\+O\+D\+E\+\_\+\+E\+N\+A\+B\+LE} 
+\item {\bfseries F\+L\+A\+S\+H\+\_\+\+C\+T\+R\+L\+\_\+\+C\+A\+C\+H\+E\+\_\+\+M\+O\+D\+E\+\_\+\+P\+R\+E\+F\+E\+T\+C\+H\+\_\+\+E\+N\+A\+B\+LE} 
+\item {\bfseries F\+L\+A\+S\+H\+\_\+\+C\+T\+R\+L\+\_\+\+C\+A\+C\+H\+E\+\_\+\+M\+O\+D\+E\+\_\+\+R\+E\+A\+L\+T\+I\+ME} 
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 358 of file flash.\+c.
+
+\index{Flash\+\_\+api@{Flash\+\_\+api}!Flash\+Get@{Flash\+Get}}
+\index{Flash\+Get@{Flash\+Get}!Flash\+\_\+api@{Flash\+\_\+api}}
+\subsubsection[{\texorpdfstring{Flash\+Get(uint32\+\_\+t ui32\+Addr)}{FlashGet(uint32_t ui32Addr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} Flash\+Get (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Addr}
+\end{DoxyParamCaption}
+)}\hypertarget{group__flash__api_gaec19050e37101a648c689b3f40d8da90}{}\label{group__flash__api_gaec19050e37101a648c689b3f40d8da90}
+Gets the current contents of the flash at the designated address
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Addr} & is the desired address to be read within the flash.\\
+\hline
+\end{DoxyParams}
+This function helps differentiate flash memory reads from flash register reads.
+
+\begin{DoxyReturn}{Returns}
+Returns the 32bit value as an uint32\+\_\+t value. 
+\end{DoxyReturn}
+
+
+Definition at line 312 of file flash.\+c.
+
+\index{Flash\+\_\+api@{Flash\+\_\+api}!Flash\+Main\+Page\+Erase@{Flash\+Main\+Page\+Erase}}
+\index{Flash\+Main\+Page\+Erase@{Flash\+Main\+Page\+Erase}!Flash\+\_\+api@{Flash\+\_\+api}}
+\subsubsection[{\texorpdfstring{Flash\+Main\+Page\+Erase(uint32\+\_\+t ui32\+Address)}{FlashMainPageErase(uint32_t ui32Address)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\+\_\+t} Flash\+Main\+Page\+Erase (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Address}
+\end{DoxyParamCaption}
+)}\hypertarget{group__flash__api_gaedcc8d25fdce7a51b46e6d37629dbef3}{}\label{group__flash__api_gaedcc8d25fdce7a51b46e6d37629dbef3}
+Erases a flash main page with use of R\+OM function
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Address} & is the start address of the flash main page to be erased.\\
+\hline
+\end{DoxyParams}
+This function erases one 2 kB main page of the on-\/chip flash. After erasing, the page is filled with 0x\+FF bytes. Locked pages cannot be erased. The flash main pages do not include the upper page.
+
+This function does not return until the page is erased or an error encountered.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, -\/1 if erasing error is encountered, or -\/2 in case of illegal parameter use. 
+\end{DoxyReturn}
+
+
+Definition at line 71 of file flash.\+c.
+
+\index{Flash\+\_\+api@{Flash\+\_\+api}!Flash\+Main\+Page\+Program@{Flash\+Main\+Page\+Program}}
+\index{Flash\+Main\+Page\+Program@{Flash\+Main\+Page\+Program}!Flash\+\_\+api@{Flash\+\_\+api}}
+\subsubsection[{\texorpdfstring{Flash\+Main\+Page\+Program(uint32\+\_\+t $\ast$pui32\+Data, uint32\+\_\+t ui32\+Address, uint32\+\_\+t ui32\+Count)}{FlashMainPageProgram(uint32_t *pui32Data, uint32_t ui32Address, uint32_t ui32Count)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\+\_\+t} Flash\+Main\+Page\+Program (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t} $\ast$}]{pui32\+Data, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Address, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Count}
+\end{DoxyParamCaption}
+)}\hypertarget{group__flash__api_ga15cabe29d0066e6c37e0ccfd452e6adc}{}\label{group__flash__api_ga15cabe29d0066e6c37e0ccfd452e6adc}
+Programs the flash main pages by use of R\+OM function
+
+
+\begin{DoxyParams}{Parameters}
+{\em pui32\+Data} & is a pointer to the data to be programmed. \\
+\hline
+{\em ui32\+Address} & is the starting address in flash to be programmed. Must be a multiple of four and within the flash main pages. \\
+\hline
+{\em ui32\+Count} & is the number of bytes to be programmed. Must be a multiple of four.\\
+\hline
+\end{DoxyParams}
+This function programs a sequence of words into the on-\/chip flash. Programming each location consists of the result of an A\+ND operation of the new data and the existing data; in other words, bits that contain 1 can remain 1 or be changed to 0, but bits that are 0 cannot be changed to 1. Therefore, a word can be programmed multiple times as long as these rules are followed; if a program operation attempts to change a 0 bit to a 1 bit, that bit will not have its value changed.
+
+Because the flash is programmed one word at a time, the starting address and byte count must both be multiples of four. The caller must verify the programmed contents, if verification is required.
+
+This function does not return until the data is programmed or an error encountered. Locked flash pages cannot be programmed.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, -\/1 if a programming error is encountered or, -\/2 in case of illegal parameter use. 
+\end{DoxyReturn}
+
+
+Definition at line 187 of file flash.\+c.
+
+\index{Flash\+\_\+api@{Flash\+\_\+api}!Flash\+Size\+Get@{Flash\+Size\+Get}}
+\index{Flash\+Size\+Get@{Flash\+Size\+Get}!Flash\+\_\+api@{Flash\+\_\+api}}
+\subsubsection[{\texorpdfstring{Flash\+Size\+Get(void)}{FlashSizeGet(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} Flash\+Size\+Get (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__flash__api_ga79bccd4cdbd7930d880df9e185935d41}{}\label{group__flash__api_ga79bccd4cdbd7930d880df9e185935d41}
+Returns the flash size in number of K\+Bytes
+
+This function returns the size of the flash in K\+Bytes as determined by examining the F\+L\+A\+S\+H\+\_\+\+D\+I\+E\+C\+F\+G0 register settings.
+
+\begin{DoxyReturn}{Returns}
+Returns the flash size in K\+Bytes 
+\end{DoxyReturn}
+
+
+Definition at line 399 of file flash.\+c.
+
+\index{Flash\+\_\+api@{Flash\+\_\+api}!Flash\+Sram\+Size\+Get@{Flash\+Sram\+Size\+Get}}
+\index{Flash\+Sram\+Size\+Get@{Flash\+Sram\+Size\+Get}!Flash\+\_\+api@{Flash\+\_\+api}}
+\subsubsection[{\texorpdfstring{Flash\+Sram\+Size\+Get(void)}{FlashSramSizeGet(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} Flash\+Sram\+Size\+Get (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__flash__api_gad3d3b9146ff61723dddacaa27b82385c}{}\label{group__flash__api_gad3d3b9146ff61723dddacaa27b82385c}
+Returns the S\+R\+AM size in number of K\+Bytes
+
+This function returns the size of the S\+R\+AM in K\+Bytes as determined by examining the F\+L\+A\+S\+H\+\_\+\+D\+I\+E\+C\+F\+G0 register settings.
+
+\begin{DoxyReturn}{Returns}
+Returns the S\+R\+AM size in K\+Bytes 
+\end{DoxyReturn}
+
+
+Definition at line 443 of file flash.\+c.
+
+\index{Flash\+\_\+api@{Flash\+\_\+api}!Flash\+Upper\+Page\+Erase@{Flash\+Upper\+Page\+Erase}}
+\index{Flash\+Upper\+Page\+Erase@{Flash\+Upper\+Page\+Erase}!Flash\+\_\+api@{Flash\+\_\+api}}
+\subsubsection[{\texorpdfstring{Flash\+Upper\+Page\+Erase(void)}{FlashUpperPageErase(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\+\_\+t} Flash\+Upper\+Page\+Erase (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__flash__api_ga67d5a1a47713df085c99877079365f04}{}\label{group__flash__api_ga67d5a1a47713df085c99877079365f04}
+Erases the upper flash page with use of R\+OM function
+
+This function erases the 2 kB upper page of the on-\/chip flash. After erasing, the page is filled with 0x\+FF bytes. A locked page cannot be erased.
+
+This function does not return until the flash page is erased or an error encountered.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, -\/1 if erasing error is encountered or, -\/2 in case of illegal parameter use. 
+\end{DoxyReturn}
+
+
+Definition at line 123 of file flash.\+c.
+
+\index{Flash\+\_\+api@{Flash\+\_\+api}!Flash\+Upper\+Page\+Program@{Flash\+Upper\+Page\+Program}}
+\index{Flash\+Upper\+Page\+Program@{Flash\+Upper\+Page\+Program}!Flash\+\_\+api@{Flash\+\_\+api}}
+\subsubsection[{\texorpdfstring{Flash\+Upper\+Page\+Program(uint32\+\_\+t $\ast$pui32\+Data, uint32\+\_\+t ui32\+Address, uint32\+\_\+t ui32\+Count)}{FlashUpperPageProgram(uint32_t *pui32Data, uint32_t ui32Address, uint32_t ui32Count)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\+\_\+t} Flash\+Upper\+Page\+Program (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t} $\ast$}]{pui32\+Data, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Address, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Count}
+\end{DoxyParamCaption}
+)}\hypertarget{group__flash__api_ga2a92b46846b2919278a852f0a4b1ffcf}{}\label{group__flash__api_ga2a92b46846b2919278a852f0a4b1ffcf}
+Programs the upper page of the flash by use of R\+OM function
+
+
+\begin{DoxyParams}{Parameters}
+{\em pui32\+Data} & is a pointer to the data to be programmed. \\
+\hline
+{\em ui32\+Address} & is the starting address within the flash upper page to be programmed. Must be a multiple of four and within the flash upper page. \\
+\hline
+{\em ui32\+Count} & is the number of bytes to be programmed. Must be a multiple of four.\\
+\hline
+\end{DoxyParams}
+This function programs a sequence of words into the on-\/chip flash. Programming each location consists of the result of an A\+ND operation of the new data and the existing data; in other words, bits that contain 1 can remain 1 or be changed to 0, but bits that are 0 cannot be changed to 1. Therefore, a word can be programmed multiple times as long as these rules are followed; if a program operation attempts to change a 0 bit to a 1 bit, that bit will not have its value changed.
+
+Because the flash is programmed one word at a time, the starting address and byte count must both be multiples of four. The caller must verify the programmed contents, if such verification is required.
+
+This function does not return until the data is programmed or an error encountered. A locked flash page cannot be programmed.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, -\/1 if a programming error is encountered or, -\/2 in case of illegal parameter use. 
+\end{DoxyReturn}
+
+
+Definition at line 255 of file flash.\+c.
+

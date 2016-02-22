@@ -1,0 +1,259 @@
+\hypertarget{z1_2board__info_8h}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/z1/board\+\_\+info.h File Reference}
+\label{z1_2board__info_8h}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/z1/board\+\_\+info.\+h@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/z1/board\+\_\+info.\+h}}
+{\ttfamily \#include \char`\"{}stdint.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}msp430x26x.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}string.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{z1_2board__info_8h_a9399d287145fa673d60fa0e3c04d0a06}{M\+Y\+\_\+\+ID}~0x00
+\begin{DoxyCompactList}\small\item\em Z1-\/specific board information bsp module. \end{DoxyCompactList}\item 
+\#define \hyperlink{z1_2board__info_8h_a4d1e42d22f4f3196580f272c3b151c4c}{I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON}()                ~\+\_\+\+\_\+istate\+\_\+t s;
+\item 
+\#define \hyperlink{z1_2board__info_8h_a3831500c8cafea52fb384417d378e16c}{D\+I\+S\+A\+B\+L\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+TS}()                      
+\item 
+\#define \hyperlink{z1_2board__info_8h_a46477c051ab1d7d85414b2b6f0f27457}{E\+N\+A\+B\+L\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+TS}()                        ~\+\_\+\+\_\+set\+\_\+interrupt\+\_\+state(s);
+\item 
+\#define \hyperlink{z1_2board__info_8h_abe66b9c1c60db84f2a99f2b827275f24}{P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH}~\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t}
+\item 
+\#define \hyperlink{z1_2board__info_8h_ac16e02aadd749b2d27638bed1a805a59}{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH}~\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t}
+\item 
+\#define \hyperlink{z1_2board__info_8h_a07a9f9de95908017f808cbf0c474828e}{P\+O\+R\+T\+\_\+\+S\+I\+G\+N\+E\+D\+\_\+\+I\+N\+T\+\_\+\+W\+I\+D\+TH}~\hyperlink{_p_e___types_8h_a932e6ccc3d54c58f761c1aead83bd6d7}{int16\+\_\+t}
+\item 
+\#define \hyperlink{z1_2board__info_8h_a71ac4f01b5932487c50c4f1a4b821a92}{P\+O\+R\+T\+\_\+\+T\+I\+C\+S\+\_\+\+P\+E\+R\+\_\+\+MS}~33
+\item 
+\#define \hyperlink{z1_2board__info_8h_a279c683842015c43581411bfa8362081}{S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+W\+A\+K\+E\+UP}()                                ~C\+A\+C\+T\+L1 $\vert$= C\+A\+I\+FG
+\item 
+\#define \hyperlink{z1_2board__info_8h_a629721de419fa273ad4a7d63e38060a1}{S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT}()            ~C\+A\+C\+T\+L1  = C\+A\+IE
+\item 
+\#define \hyperlink{z1_2board__info_8h_a8a45b40ce9d01c4e4c5ad97a688b36f2}{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+R\+A\+D\+I\+O\+\_\+\+V\+R\+E\+G\+\_\+\+H\+I\+GH}()                ~P4\+O\+UT $\vert$=  0x20;
+\item 
+\#define \hyperlink{z1_2board__info_8h_af2c69f1c8b18d631157f61d16424a77b}{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+R\+A\+D\+I\+O\+\_\+\+V\+R\+E\+G\+\_\+\+L\+OW}()                  ~P4\+O\+UT \&= $\sim$0x20;
+\item 
+\#define \hyperlink{z1_2board__info_8h_aa1196edb66839649ac71c400235e3706}{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+R\+A\+D\+I\+O\+\_\+\+R\+E\+S\+E\+T\+\_\+\+H\+I\+GH}()              ~P4\+O\+UT $\vert$=  0x40;
+\item 
+\#define \hyperlink{z1_2board__info_8h_a1aa415109ea855e2f2d3632e61167b25}{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+R\+A\+D\+I\+O\+\_\+\+R\+E\+S\+E\+T\+\_\+\+L\+OW}()                ~P4\+O\+UT \&= $\sim$0x40;
+\item 
+\#define \hyperlink{z1_2board__info_8h_a753468943519d7d3ed61ea7134df2f11}{P\+O\+R\+T\+\_\+\+Ts\+Slot\+Duration}~491
+\item 
+\#define \hyperlink{z1_2board__info_8h_af45f329a1d2c1097af1d022b6363b0ed}{P\+O\+R\+T\+\_\+max\+Tx\+Data\+Prepare}~88
+\item 
+\#define \hyperlink{z1_2board__info_8h_a238f21ff0cb8bed569124960f22f882e}{P\+O\+R\+T\+\_\+max\+Rx\+Ack\+Prepare}~20
+\item 
+\#define \hyperlink{z1_2board__info_8h_a9e21d179374e68398446ff4353ad8318}{P\+O\+R\+T\+\_\+max\+Rx\+Data\+Prepare}~33
+\item 
+\#define \hyperlink{z1_2board__info_8h_a8c4fcdb6e44dcf5103f7f727b2cf42b8}{P\+O\+R\+T\+\_\+max\+Tx\+Ack\+Prepare}~40
+\item 
+\#define \hyperlink{z1_2board__info_8h_ad5778702c9656470618b2d8c1c82423a}{P\+O\+R\+T\+\_\+delay\+Tx}~12
+\item 
+\#define \hyperlink{z1_2board__info_8h_a26ca518d2e84908d5486fe5d5d384f52}{P\+O\+R\+T\+\_\+delay\+Rx}~0
+\item 
+\#define \hyperlink{z1_2board__info_8h_a190d1e774c272ae302ed98c400694f9a}{S\+Y\+N\+C\+\_\+\+A\+C\+C\+U\+R\+A\+CY}~1
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}!D\+I\+S\+A\+B\+L\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+TS@{D\+I\+S\+A\+B\+L\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+TS}}
+\index{D\+I\+S\+A\+B\+L\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+TS@{D\+I\+S\+A\+B\+L\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+TS}!z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}}
+\subsubsection[{\texorpdfstring{D\+I\+S\+A\+B\+L\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+TS}{DISABLE_INTERRUPTS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+I\+S\+A\+B\+L\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+TS(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{z1_2board__info_8h_a3831500c8cafea52fb384417d378e16c}{}\label{z1_2board__info_8h_a3831500c8cafea52fb384417d378e16c}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{namespaceserial_1_1serialjava_aa3340e982508ffb757dae29fd0a7c21c}{s} = \_\_get\_interrupt\_state(); \(\backslash\)
+                                            \_\_disable\_interrupt();
+\end{DoxyCode}
+
+
+Definition at line 32 of file board\+\_\+info.\+h.
+
+\index{z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}!E\+N\+A\+B\+L\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+TS@{E\+N\+A\+B\+L\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+TS}}
+\index{E\+N\+A\+B\+L\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+TS@{E\+N\+A\+B\+L\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+TS}!z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}}
+\subsubsection[{\texorpdfstring{E\+N\+A\+B\+L\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+TS}{ENABLE_INTERRUPTS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+N\+A\+B\+L\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+TS(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~\+\_\+\+\_\+set\+\_\+interrupt\+\_\+state(s);}\hypertarget{z1_2board__info_8h_a46477c051ab1d7d85414b2b6f0f27457}{}\label{z1_2board__info_8h_a46477c051ab1d7d85414b2b6f0f27457}
+
+
+Definition at line 34 of file board\+\_\+info.\+h.
+
+\index{z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}!I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON@{I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON}}
+\index{I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON@{I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON}!z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}}
+\subsubsection[{\texorpdfstring{I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON}{INTERRUPT_DECLARATION}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~\+\_\+\+\_\+istate\+\_\+t s;}\hypertarget{z1_2board__info_8h_a4d1e42d22f4f3196580f272c3b151c4c}{}\label{z1_2board__info_8h_a4d1e42d22f4f3196580f272c3b151c4c}
+
+
+Definition at line 31 of file board\+\_\+info.\+h.
+
+\index{z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}!M\+Y\+\_\+\+ID@{M\+Y\+\_\+\+ID}}
+\index{M\+Y\+\_\+\+ID@{M\+Y\+\_\+\+ID}!z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}}
+\subsubsection[{\texorpdfstring{M\+Y\+\_\+\+ID}{MY_ID}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+Y\+\_\+\+ID~0x00}\hypertarget{z1_2board__info_8h_a9399d287145fa673d60fa0e3c04d0a06}{}\label{z1_2board__info_8h_a9399d287145fa673d60fa0e3c04d0a06}
+
+
+Z1-\/specific board information bsp module. 
+
+This module simply defines some strings describing the board, which Co\+AP uses to return the board\textquotesingle{}s description.
+
+\begin{DoxyAuthor}{Author}
+Xavier Vilajosana \href{mailto:xvilajosana@eecs.berkeley.edu}{\tt xvilajosana@eecs.\+berkeley.\+edu}, May 2013. 
+\end{DoxyAuthor}
+
+
+Definition at line 19 of file board\+\_\+info.\+h.
+
+\index{z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}!P\+O\+R\+T\+\_\+delay\+Rx@{P\+O\+R\+T\+\_\+delay\+Rx}}
+\index{P\+O\+R\+T\+\_\+delay\+Rx@{P\+O\+R\+T\+\_\+delay\+Rx}!z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}}
+\subsubsection[{\texorpdfstring{P\+O\+R\+T\+\_\+delay\+Rx}{PORT_delayRx}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+O\+R\+T\+\_\+delay\+Rx~0}\hypertarget{z1_2board__info_8h_a26ca518d2e84908d5486fe5d5d384f52}{}\label{z1_2board__info_8h_a26ca518d2e84908d5486fe5d5d384f52}
+
+
+Definition at line 70 of file board\+\_\+info.\+h.
+
+\index{z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}!P\+O\+R\+T\+\_\+delay\+Tx@{P\+O\+R\+T\+\_\+delay\+Tx}}
+\index{P\+O\+R\+T\+\_\+delay\+Tx@{P\+O\+R\+T\+\_\+delay\+Tx}!z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}}
+\subsubsection[{\texorpdfstring{P\+O\+R\+T\+\_\+delay\+Tx}{PORT_delayTx}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+O\+R\+T\+\_\+delay\+Tx~12}\hypertarget{z1_2board__info_8h_ad5778702c9656470618b2d8c1c82423a}{}\label{z1_2board__info_8h_ad5778702c9656470618b2d8c1c82423a}
+
+
+Definition at line 69 of file board\+\_\+info.\+h.
+
+\index{z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}!P\+O\+R\+T\+\_\+max\+Rx\+Ack\+Prepare@{P\+O\+R\+T\+\_\+max\+Rx\+Ack\+Prepare}}
+\index{P\+O\+R\+T\+\_\+max\+Rx\+Ack\+Prepare@{P\+O\+R\+T\+\_\+max\+Rx\+Ack\+Prepare}!z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}}
+\subsubsection[{\texorpdfstring{P\+O\+R\+T\+\_\+max\+Rx\+Ack\+Prepare}{PORT_maxRxAckPrepare}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+O\+R\+T\+\_\+max\+Rx\+Ack\+Prepare~20}\hypertarget{z1_2board__info_8h_a238f21ff0cb8bed569124960f22f882e}{}\label{z1_2board__info_8h_a238f21ff0cb8bed569124960f22f882e}
+
+
+Definition at line 65 of file board\+\_\+info.\+h.
+
+\index{z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}!P\+O\+R\+T\+\_\+max\+Rx\+Data\+Prepare@{P\+O\+R\+T\+\_\+max\+Rx\+Data\+Prepare}}
+\index{P\+O\+R\+T\+\_\+max\+Rx\+Data\+Prepare@{P\+O\+R\+T\+\_\+max\+Rx\+Data\+Prepare}!z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}}
+\subsubsection[{\texorpdfstring{P\+O\+R\+T\+\_\+max\+Rx\+Data\+Prepare}{PORT_maxRxDataPrepare}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+O\+R\+T\+\_\+max\+Rx\+Data\+Prepare~33}\hypertarget{z1_2board__info_8h_a9e21d179374e68398446ff4353ad8318}{}\label{z1_2board__info_8h_a9e21d179374e68398446ff4353ad8318}
+
+
+Definition at line 66 of file board\+\_\+info.\+h.
+
+\index{z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}!P\+O\+R\+T\+\_\+max\+Tx\+Ack\+Prepare@{P\+O\+R\+T\+\_\+max\+Tx\+Ack\+Prepare}}
+\index{P\+O\+R\+T\+\_\+max\+Tx\+Ack\+Prepare@{P\+O\+R\+T\+\_\+max\+Tx\+Ack\+Prepare}!z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}}
+\subsubsection[{\texorpdfstring{P\+O\+R\+T\+\_\+max\+Tx\+Ack\+Prepare}{PORT_maxTxAckPrepare}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+O\+R\+T\+\_\+max\+Tx\+Ack\+Prepare~40}\hypertarget{z1_2board__info_8h_a8c4fcdb6e44dcf5103f7f727b2cf42b8}{}\label{z1_2board__info_8h_a8c4fcdb6e44dcf5103f7f727b2cf42b8}
+
+
+Definition at line 67 of file board\+\_\+info.\+h.
+
+\index{z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}!P\+O\+R\+T\+\_\+max\+Tx\+Data\+Prepare@{P\+O\+R\+T\+\_\+max\+Tx\+Data\+Prepare}}
+\index{P\+O\+R\+T\+\_\+max\+Tx\+Data\+Prepare@{P\+O\+R\+T\+\_\+max\+Tx\+Data\+Prepare}!z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}}
+\subsubsection[{\texorpdfstring{P\+O\+R\+T\+\_\+max\+Tx\+Data\+Prepare}{PORT_maxTxDataPrepare}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+O\+R\+T\+\_\+max\+Tx\+Data\+Prepare~88}\hypertarget{z1_2board__info_8h_af45f329a1d2c1097af1d022b6363b0ed}{}\label{z1_2board__info_8h_af45f329a1d2c1097af1d022b6363b0ed}
+
+
+Definition at line 64 of file board\+\_\+info.\+h.
+
+\index{z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}!P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+R\+A\+D\+I\+O\+\_\+\+R\+E\+S\+E\+T\+\_\+\+H\+I\+GH@{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+R\+A\+D\+I\+O\+\_\+\+R\+E\+S\+E\+T\+\_\+\+H\+I\+GH}}
+\index{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+R\+A\+D\+I\+O\+\_\+\+R\+E\+S\+E\+T\+\_\+\+H\+I\+GH@{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+R\+A\+D\+I\+O\+\_\+\+R\+E\+S\+E\+T\+\_\+\+H\+I\+GH}!z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}}
+\subsubsection[{\texorpdfstring{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+R\+A\+D\+I\+O\+\_\+\+R\+E\+S\+E\+T\+\_\+\+H\+I\+GH}{PORT_PIN_RADIO_RESET_HIGH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+R\+A\+D\+I\+O\+\_\+\+R\+E\+S\+E\+T\+\_\+\+H\+I\+GH(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~P4\+O\+UT $\vert$=  0x40;}\hypertarget{z1_2board__info_8h_aa1196edb66839649ac71c400235e3706}{}\label{z1_2board__info_8h_aa1196edb66839649ac71c400235e3706}
+
+
+Definition at line 56 of file board\+\_\+info.\+h.
+
+\index{z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}!P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+R\+A\+D\+I\+O\+\_\+\+R\+E\+S\+E\+T\+\_\+\+L\+OW@{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+R\+A\+D\+I\+O\+\_\+\+R\+E\+S\+E\+T\+\_\+\+L\+OW}}
+\index{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+R\+A\+D\+I\+O\+\_\+\+R\+E\+S\+E\+T\+\_\+\+L\+OW@{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+R\+A\+D\+I\+O\+\_\+\+R\+E\+S\+E\+T\+\_\+\+L\+OW}!z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}}
+\subsubsection[{\texorpdfstring{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+R\+A\+D\+I\+O\+\_\+\+R\+E\+S\+E\+T\+\_\+\+L\+OW}{PORT_PIN_RADIO_RESET_LOW}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+R\+A\+D\+I\+O\+\_\+\+R\+E\+S\+E\+T\+\_\+\+L\+OW(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~P4\+O\+UT \&= $\sim$0x40;}\hypertarget{z1_2board__info_8h_a1aa415109ea855e2f2d3632e61167b25}{}\label{z1_2board__info_8h_a1aa415109ea855e2f2d3632e61167b25}
+
+
+Definition at line 57 of file board\+\_\+info.\+h.
+
+\index{z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}!P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+R\+A\+D\+I\+O\+\_\+\+V\+R\+E\+G\+\_\+\+H\+I\+GH@{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+R\+A\+D\+I\+O\+\_\+\+V\+R\+E\+G\+\_\+\+H\+I\+GH}}
+\index{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+R\+A\+D\+I\+O\+\_\+\+V\+R\+E\+G\+\_\+\+H\+I\+GH@{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+R\+A\+D\+I\+O\+\_\+\+V\+R\+E\+G\+\_\+\+H\+I\+GH}!z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}}
+\subsubsection[{\texorpdfstring{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+R\+A\+D\+I\+O\+\_\+\+V\+R\+E\+G\+\_\+\+H\+I\+GH}{PORT_PIN_RADIO_VREG_HIGH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+R\+A\+D\+I\+O\+\_\+\+V\+R\+E\+G\+\_\+\+H\+I\+GH(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~P4\+O\+UT $\vert$=  0x20;}\hypertarget{z1_2board__info_8h_a8a45b40ce9d01c4e4c5ad97a688b36f2}{}\label{z1_2board__info_8h_a8a45b40ce9d01c4e4c5ad97a688b36f2}
+
+
+Definition at line 52 of file board\+\_\+info.\+h.
+
+\index{z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}!P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+R\+A\+D\+I\+O\+\_\+\+V\+R\+E\+G\+\_\+\+L\+OW@{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+R\+A\+D\+I\+O\+\_\+\+V\+R\+E\+G\+\_\+\+L\+OW}}
+\index{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+R\+A\+D\+I\+O\+\_\+\+V\+R\+E\+G\+\_\+\+L\+OW@{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+R\+A\+D\+I\+O\+\_\+\+V\+R\+E\+G\+\_\+\+L\+OW}!z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}}
+\subsubsection[{\texorpdfstring{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+R\+A\+D\+I\+O\+\_\+\+V\+R\+E\+G\+\_\+\+L\+OW}{PORT_PIN_RADIO_VREG_LOW}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+R\+A\+D\+I\+O\+\_\+\+V\+R\+E\+G\+\_\+\+L\+OW(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~P4\+O\+UT \&= $\sim$0x20;}\hypertarget{z1_2board__info_8h_af2c69f1c8b18d631157f61d16424a77b}{}\label{z1_2board__info_8h_af2c69f1c8b18d631157f61d16424a77b}
+
+
+Definition at line 53 of file board\+\_\+info.\+h.
+
+\index{z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}!P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH@{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH}}
+\index{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH@{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH}!z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}}
+\subsubsection[{\texorpdfstring{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH}{PORT_RADIOTIMER_WIDTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH~{\bf uint16\+\_\+t}}\hypertarget{z1_2board__info_8h_ac16e02aadd749b2d27638bed1a805a59}{}\label{z1_2board__info_8h_ac16e02aadd749b2d27638bed1a805a59}
+
+
+Definition at line 40 of file board\+\_\+info.\+h.
+
+\index{z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}!P\+O\+R\+T\+\_\+\+S\+I\+G\+N\+E\+D\+\_\+\+I\+N\+T\+\_\+\+W\+I\+D\+TH@{P\+O\+R\+T\+\_\+\+S\+I\+G\+N\+E\+D\+\_\+\+I\+N\+T\+\_\+\+W\+I\+D\+TH}}
+\index{P\+O\+R\+T\+\_\+\+S\+I\+G\+N\+E\+D\+\_\+\+I\+N\+T\+\_\+\+W\+I\+D\+TH@{P\+O\+R\+T\+\_\+\+S\+I\+G\+N\+E\+D\+\_\+\+I\+N\+T\+\_\+\+W\+I\+D\+TH}!z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}}
+\subsubsection[{\texorpdfstring{P\+O\+R\+T\+\_\+\+S\+I\+G\+N\+E\+D\+\_\+\+I\+N\+T\+\_\+\+W\+I\+D\+TH}{PORT_SIGNED_INT_WIDTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+O\+R\+T\+\_\+\+S\+I\+G\+N\+E\+D\+\_\+\+I\+N\+T\+\_\+\+W\+I\+D\+TH~{\bf int16\+\_\+t}}\hypertarget{z1_2board__info_8h_a07a9f9de95908017f808cbf0c474828e}{}\label{z1_2board__info_8h_a07a9f9de95908017f808cbf0c474828e}
+
+
+Definition at line 42 of file board\+\_\+info.\+h.
+
+\index{z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}!P\+O\+R\+T\+\_\+\+T\+I\+C\+S\+\_\+\+P\+E\+R\+\_\+\+MS@{P\+O\+R\+T\+\_\+\+T\+I\+C\+S\+\_\+\+P\+E\+R\+\_\+\+MS}}
+\index{P\+O\+R\+T\+\_\+\+T\+I\+C\+S\+\_\+\+P\+E\+R\+\_\+\+MS@{P\+O\+R\+T\+\_\+\+T\+I\+C\+S\+\_\+\+P\+E\+R\+\_\+\+MS}!z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}}
+\subsubsection[{\texorpdfstring{P\+O\+R\+T\+\_\+\+T\+I\+C\+S\+\_\+\+P\+E\+R\+\_\+\+MS}{PORT_TICS_PER_MS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+O\+R\+T\+\_\+\+T\+I\+C\+S\+\_\+\+P\+E\+R\+\_\+\+MS~33}\hypertarget{z1_2board__info_8h_a71ac4f01b5932487c50c4f1a4b821a92}{}\label{z1_2board__info_8h_a71ac4f01b5932487c50c4f1a4b821a92}
+
+
+Definition at line 43 of file board\+\_\+info.\+h.
+
+\index{z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}!P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH@{P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH}}
+\index{P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH@{P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH}!z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}}
+\subsubsection[{\texorpdfstring{P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH}{PORT_TIMER_WIDTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH~{\bf uint16\+\_\+t}}\hypertarget{z1_2board__info_8h_abe66b9c1c60db84f2a99f2b827275f24}{}\label{z1_2board__info_8h_abe66b9c1c60db84f2a99f2b827275f24}
+
+
+Definition at line 39 of file board\+\_\+info.\+h.
+
+\index{z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}!P\+O\+R\+T\+\_\+\+Ts\+Slot\+Duration@{P\+O\+R\+T\+\_\+\+Ts\+Slot\+Duration}}
+\index{P\+O\+R\+T\+\_\+\+Ts\+Slot\+Duration@{P\+O\+R\+T\+\_\+\+Ts\+Slot\+Duration}!z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}}
+\subsubsection[{\texorpdfstring{P\+O\+R\+T\+\_\+\+Ts\+Slot\+Duration}{PORT_TsSlotDuration}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+O\+R\+T\+\_\+\+Ts\+Slot\+Duration~491}\hypertarget{z1_2board__info_8h_a753468943519d7d3ed61ea7134df2f11}{}\label{z1_2board__info_8h_a753468943519d7d3ed61ea7134df2f11}
+
+
+Definition at line 62 of file board\+\_\+info.\+h.
+
+\index{z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}!S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT@{S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT}}
+\index{S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT@{S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT}!z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}}
+\subsubsection[{\texorpdfstring{S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT}{SCHEDULER_ENABLE_INTERRUPT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~C\+A\+C\+T\+L1  = C\+A\+IE}\hypertarget{z1_2board__info_8h_a629721de419fa273ad4a7d63e38060a1}{}\label{z1_2board__info_8h_a629721de419fa273ad4a7d63e38060a1}
+
+
+Definition at line 47 of file board\+\_\+info.\+h.
+
+\index{z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}!S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+W\+A\+K\+E\+UP@{S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+W\+A\+K\+E\+UP}}
+\index{S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+W\+A\+K\+E\+UP@{S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+W\+A\+K\+E\+UP}!z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}}
+\subsubsection[{\texorpdfstring{S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+W\+A\+K\+E\+UP}{SCHEDULER_WAKEUP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+W\+A\+K\+E\+UP(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~C\+A\+C\+T\+L1 $\vert$= C\+A\+I\+FG}\hypertarget{z1_2board__info_8h_a279c683842015c43581411bfa8362081}{}\label{z1_2board__info_8h_a279c683842015c43581411bfa8362081}
+
+
+Definition at line 46 of file board\+\_\+info.\+h.
+
+\index{z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}!S\+Y\+N\+C\+\_\+\+A\+C\+C\+U\+R\+A\+CY@{S\+Y\+N\+C\+\_\+\+A\+C\+C\+U\+R\+A\+CY}}
+\index{S\+Y\+N\+C\+\_\+\+A\+C\+C\+U\+R\+A\+CY@{S\+Y\+N\+C\+\_\+\+A\+C\+C\+U\+R\+A\+CY}!z1/board\+\_\+info.\+h@{z1/board\+\_\+info.\+h}}
+\subsubsection[{\texorpdfstring{S\+Y\+N\+C\+\_\+\+A\+C\+C\+U\+R\+A\+CY}{SYNC_ACCURACY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+Y\+N\+C\+\_\+\+A\+C\+C\+U\+R\+A\+CY~1}\hypertarget{z1_2board__info_8h_a190d1e774c272ae302ed98c400694f9a}{}\label{z1_2board__info_8h_a190d1e774c272ae302ed98c400694f9a}
+
+
+Definition at line 75 of file board\+\_\+info.\+h.
+

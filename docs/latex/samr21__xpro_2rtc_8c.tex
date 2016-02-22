@@ -1,0 +1,171 @@
+\hypertarget{samr21__xpro_2rtc_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/samr21\+\_\+xpro/rtc.c File Reference}
+\label{samr21__xpro_2rtc_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/samr21\+\_\+xpro/rtc.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/samr21\+\_\+xpro/rtc.\+c}}
+{\ttfamily \#include \char`\"{}compiler.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}rtc\+\_\+count.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}rtc\+\_\+count\+\_\+interrupt.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bsp\+\_\+rtc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}rtc.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{samr21__xpro_2rtc_8c_a0006609ecc3b0da1fa3ffab832b07941}{configure\+\_\+rtc\+\_\+count} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{samr21__xpro_2rtc_8c_ad8f4e9b1e9d32ceffde54dda66db473c}{configure\+\_\+rtc\+\_\+callbacks} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{samr21__xpro_2rtc_8c_aa4f3adad357a8276b28ac53a84a4d9fb}{enable\+\_\+rtc\+\_\+overflow\+\_\+callback} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{samr21__xpro_2rtc_8c_a5bb52a7382d0753d91af113a6a0d97fe}{disable\+\_\+rtc\+\_\+overflow\+\_\+callback} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{samr21__xpro_2rtc_8c_a0966c0a397a6ddcac5b0253ea820078a}{enable\+\_\+rtc\+\_\+compare0\+\_\+callback} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{samr21__xpro_2rtc_8c_a350e8bd074f72785824ece5425aa82bd}{disable\+\_\+rtc\+\_\+compare0\+\_\+callback} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{samr21__xpro_2rtc_8c_aa2875b4dd45033e49518486ac54e7ede}{rtc\+\_\+set\+\_\+count} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} rtc\+\_\+count)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{samr21__xpro_2rtc_8c_abeb5da40212b711dce9e3f05a295e47d}{rtc\+\_\+set\+\_\+compare} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} compare\+\_\+value, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} comp\+\_\+index)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{samr21__xpro_2rtc_8c_adc80d9930c6c84871ec420a595aad4b8}{rtc\+\_\+overflow\+\_\+callback} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{samr21__xpro_2rtc_8c_a6a39dfeeb0b48b882a08663e9bb24898}{rtc\+\_\+compare0\+\_\+callback} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct rtc\+\_\+module \hyperlink{samr21__xpro_2rtc_8c_ab5868321edea68de6a3af6b7800cfa33}{rtc\+\_\+instance}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{samr21\+\_\+xpro/rtc.\+c@{samr21\+\_\+xpro/rtc.\+c}!configure\+\_\+rtc\+\_\+callbacks@{configure\+\_\+rtc\+\_\+callbacks}}
+\index{configure\+\_\+rtc\+\_\+callbacks@{configure\+\_\+rtc\+\_\+callbacks}!samr21\+\_\+xpro/rtc.\+c@{samr21\+\_\+xpro/rtc.\+c}}
+\subsubsection[{\texorpdfstring{configure\+\_\+rtc\+\_\+callbacks(void)}{configure_rtc_callbacks(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} configure\+\_\+rtc\+\_\+callbacks (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{samr21__xpro_2rtc_8c_ad8f4e9b1e9d32ceffde54dda66db473c}{}\label{samr21__xpro_2rtc_8c_ad8f4e9b1e9d32ceffde54dda66db473c}
+
+
+Definition at line 57 of file rtc.\+c.
+
+\index{samr21\+\_\+xpro/rtc.\+c@{samr21\+\_\+xpro/rtc.\+c}!configure\+\_\+rtc\+\_\+count@{configure\+\_\+rtc\+\_\+count}}
+\index{configure\+\_\+rtc\+\_\+count@{configure\+\_\+rtc\+\_\+count}!samr21\+\_\+xpro/rtc.\+c@{samr21\+\_\+xpro/rtc.\+c}}
+\subsubsection[{\texorpdfstring{configure\+\_\+rtc\+\_\+count(void)}{configure_rtc_count(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} configure\+\_\+rtc\+\_\+count (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{samr21__xpro_2rtc_8c_a0006609ecc3b0da1fa3ffab832b07941}{}\label{samr21__xpro_2rtc_8c_a0006609ecc3b0da1fa3ffab832b07941}
+
+
+Definition at line 43 of file rtc.\+c.
+
+\index{samr21\+\_\+xpro/rtc.\+c@{samr21\+\_\+xpro/rtc.\+c}!disable\+\_\+rtc\+\_\+compare0\+\_\+callback@{disable\+\_\+rtc\+\_\+compare0\+\_\+callback}}
+\index{disable\+\_\+rtc\+\_\+compare0\+\_\+callback@{disable\+\_\+rtc\+\_\+compare0\+\_\+callback}!samr21\+\_\+xpro/rtc.\+c@{samr21\+\_\+xpro/rtc.\+c}}
+\subsubsection[{\texorpdfstring{disable\+\_\+rtc\+\_\+compare0\+\_\+callback(void)}{disable_rtc_compare0_callback(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} disable\+\_\+rtc\+\_\+compare0\+\_\+callback (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{samr21__xpro_2rtc_8c_a350e8bd074f72785824ece5425aa82bd}{}\label{samr21__xpro_2rtc_8c_a350e8bd074f72785824ece5425aa82bd}
+
+
+Definition at line 78 of file rtc.\+c.
+
+\index{samr21\+\_\+xpro/rtc.\+c@{samr21\+\_\+xpro/rtc.\+c}!disable\+\_\+rtc\+\_\+overflow\+\_\+callback@{disable\+\_\+rtc\+\_\+overflow\+\_\+callback}}
+\index{disable\+\_\+rtc\+\_\+overflow\+\_\+callback@{disable\+\_\+rtc\+\_\+overflow\+\_\+callback}!samr21\+\_\+xpro/rtc.\+c@{samr21\+\_\+xpro/rtc.\+c}}
+\subsubsection[{\texorpdfstring{disable\+\_\+rtc\+\_\+overflow\+\_\+callback(void)}{disable_rtc_overflow_callback(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} disable\+\_\+rtc\+\_\+overflow\+\_\+callback (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{samr21__xpro_2rtc_8c_a5bb52a7382d0753d91af113a6a0d97fe}{}\label{samr21__xpro_2rtc_8c_a5bb52a7382d0753d91af113a6a0d97fe}
+
+
+Definition at line 68 of file rtc.\+c.
+
+\index{samr21\+\_\+xpro/rtc.\+c@{samr21\+\_\+xpro/rtc.\+c}!enable\+\_\+rtc\+\_\+compare0\+\_\+callback@{enable\+\_\+rtc\+\_\+compare0\+\_\+callback}}
+\index{enable\+\_\+rtc\+\_\+compare0\+\_\+callback@{enable\+\_\+rtc\+\_\+compare0\+\_\+callback}!samr21\+\_\+xpro/rtc.\+c@{samr21\+\_\+xpro/rtc.\+c}}
+\subsubsection[{\texorpdfstring{enable\+\_\+rtc\+\_\+compare0\+\_\+callback(void)}{enable_rtc_compare0_callback(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} enable\+\_\+rtc\+\_\+compare0\+\_\+callback (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{samr21__xpro_2rtc_8c_a0966c0a397a6ddcac5b0253ea820078a}{}\label{samr21__xpro_2rtc_8c_a0966c0a397a6ddcac5b0253ea820078a}
+
+
+Definition at line 73 of file rtc.\+c.
+
+\index{samr21\+\_\+xpro/rtc.\+c@{samr21\+\_\+xpro/rtc.\+c}!enable\+\_\+rtc\+\_\+overflow\+\_\+callback@{enable\+\_\+rtc\+\_\+overflow\+\_\+callback}}
+\index{enable\+\_\+rtc\+\_\+overflow\+\_\+callback@{enable\+\_\+rtc\+\_\+overflow\+\_\+callback}!samr21\+\_\+xpro/rtc.\+c@{samr21\+\_\+xpro/rtc.\+c}}
+\subsubsection[{\texorpdfstring{enable\+\_\+rtc\+\_\+overflow\+\_\+callback(void)}{enable_rtc_overflow_callback(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} enable\+\_\+rtc\+\_\+overflow\+\_\+callback (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{samr21__xpro_2rtc_8c_aa4f3adad357a8276b28ac53a84a4d9fb}{}\label{samr21__xpro_2rtc_8c_aa4f3adad357a8276b28ac53a84a4d9fb}
+
+
+Definition at line 63 of file rtc.\+c.
+
+\index{samr21\+\_\+xpro/rtc.\+c@{samr21\+\_\+xpro/rtc.\+c}!rtc\+\_\+compare0\+\_\+callback@{rtc\+\_\+compare0\+\_\+callback}}
+\index{rtc\+\_\+compare0\+\_\+callback@{rtc\+\_\+compare0\+\_\+callback}!samr21\+\_\+xpro/rtc.\+c@{samr21\+\_\+xpro/rtc.\+c}}
+\subsubsection[{\texorpdfstring{rtc\+\_\+compare0\+\_\+callback(void)}{rtc_compare0_callback(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} rtc\+\_\+compare0\+\_\+callback (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{samr21__xpro_2rtc_8c_a6a39dfeeb0b48b882a08663e9bb24898}{}\label{samr21__xpro_2rtc_8c_a6a39dfeeb0b48b882a08663e9bb24898}
+
+
+Definition at line 98 of file rtc.\+c.
+
+\index{samr21\+\_\+xpro/rtc.\+c@{samr21\+\_\+xpro/rtc.\+c}!rtc\+\_\+overflow\+\_\+callback@{rtc\+\_\+overflow\+\_\+callback}}
+\index{rtc\+\_\+overflow\+\_\+callback@{rtc\+\_\+overflow\+\_\+callback}!samr21\+\_\+xpro/rtc.\+c@{samr21\+\_\+xpro/rtc.\+c}}
+\subsubsection[{\texorpdfstring{rtc\+\_\+overflow\+\_\+callback(void)}{rtc_overflow_callback(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} rtc\+\_\+overflow\+\_\+callback (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{samr21__xpro_2rtc_8c_adc80d9930c6c84871ec420a595aad4b8}{}\label{samr21__xpro_2rtc_8c_adc80d9930c6c84871ec420a595aad4b8}
+
+
+Definition at line 93 of file rtc.\+c.
+
+\index{samr21\+\_\+xpro/rtc.\+c@{samr21\+\_\+xpro/rtc.\+c}!rtc\+\_\+set\+\_\+compare@{rtc\+\_\+set\+\_\+compare}}
+\index{rtc\+\_\+set\+\_\+compare@{rtc\+\_\+set\+\_\+compare}!samr21\+\_\+xpro/rtc.\+c@{samr21\+\_\+xpro/rtc.\+c}}
+\subsubsection[{\texorpdfstring{rtc\+\_\+set\+\_\+compare(uint32\+\_\+t compare\+\_\+value, uint8\+\_\+t comp\+\_\+index)}{rtc_set_compare(uint32_t compare_value, uint8_t comp_index)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} rtc\+\_\+set\+\_\+compare (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{compare\+\_\+value, }
+\item[{{\bf uint8\+\_\+t}}]{comp\+\_\+index}
+\end{DoxyParamCaption}
+)}\hypertarget{samr21__xpro_2rtc_8c_abeb5da40212b711dce9e3f05a295e47d}{}\label{samr21__xpro_2rtc_8c_abeb5da40212b711dce9e3f05a295e47d}
+
+
+Definition at line 88 of file rtc.\+c.
+
+\index{samr21\+\_\+xpro/rtc.\+c@{samr21\+\_\+xpro/rtc.\+c}!rtc\+\_\+set\+\_\+count@{rtc\+\_\+set\+\_\+count}}
+\index{rtc\+\_\+set\+\_\+count@{rtc\+\_\+set\+\_\+count}!samr21\+\_\+xpro/rtc.\+c@{samr21\+\_\+xpro/rtc.\+c}}
+\subsubsection[{\texorpdfstring{rtc\+\_\+set\+\_\+count(uint32\+\_\+t rtc\+\_\+count)}{rtc_set_count(uint32_t rtc_count)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} rtc\+\_\+set\+\_\+count (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{rtc\+\_\+count}
+\end{DoxyParamCaption}
+)}\hypertarget{samr21__xpro_2rtc_8c_aa2875b4dd45033e49518486ac54e7ede}{}\label{samr21__xpro_2rtc_8c_aa2875b4dd45033e49518486ac54e7ede}
+
+
+Definition at line 83 of file rtc.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{samr21\+\_\+xpro/rtc.\+c@{samr21\+\_\+xpro/rtc.\+c}!rtc\+\_\+instance@{rtc\+\_\+instance}}
+\index{rtc\+\_\+instance@{rtc\+\_\+instance}!samr21\+\_\+xpro/rtc.\+c@{samr21\+\_\+xpro/rtc.\+c}}
+\subsubsection[{\texorpdfstring{rtc\+\_\+instance}{rtc_instance}}]{\setlength{\rightskip}{0pt plus 5cm}struct rtc\+\_\+module rtc\+\_\+instance}\hypertarget{samr21__xpro_2rtc_8c_ab5868321edea68de6a3af6b7800cfa33}{}\label{samr21__xpro_2rtc_8c_ab5868321edea68de6a3af6b7800cfa33}
+Copyright (c) 2014 Atmel Corporation. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item The name of Atmel may not be used to endorse or promote products derived from this software without specific prior written permission.
+\item This software may only be redistributed and used in connection with an Atmel microcontroller product.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE. 
+
+Definition at line 41 of file rtc.\+c.
+

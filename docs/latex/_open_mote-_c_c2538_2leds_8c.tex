@@ -1,0 +1,186 @@
+\hypertarget{_open_mote-_c_c2538_2leds_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/leds.c File Reference}
+\label{_open_mote-_c_c2538_2leds_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/leds.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/leds.\+c}}
+{\ttfamily \#include $<$headers/hw\+\_\+memmap.\+h$>$}\\*
+{\ttfamily \#include $<$headers/hw\+\_\+types.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}stdint.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leds.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gpio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_open_mote-_c_c2538_2leds_8c_ac0949598ab8ed4fcb4210e1d70edfeb4}{B\+S\+P\+\_\+\+L\+E\+D\+\_\+\+B\+A\+SE}~\hyperlink{hw__memmap_8h_a35eb93c001f3b576606bb177393085ea}{G\+P\+I\+O\+\_\+\+C\+\_\+\+B\+A\+SE}
+\item 
+\#define \hyperlink{_open_mote-_c_c2538_2leds_8c_ac735bbacfdc0829d717c2968d355e016}{B\+S\+P\+\_\+\+L\+E\+D\+\_\+1}~\hyperlink{_open_mote-_c_c2538_2source_2gpio_8h_ab3871e35868deecd260e586ad70d4b83}{G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+4}
+\begin{DoxyCompactList}\small\item\em P\+C4 -- red. \end{DoxyCompactList}\item 
+\#define \hyperlink{_open_mote-_c_c2538_2leds_8c_a26beeb1f68fa093ec6bee8564c936305}{B\+S\+P\+\_\+\+L\+E\+D\+\_\+2}~\hyperlink{_open_mote-_c_c2538_2source_2gpio_8h_a01cc9ed93f6fd12fd3403362779aaa18}{G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+5}
+\begin{DoxyCompactList}\small\item\em P\+C5 -- orange. \end{DoxyCompactList}\item 
+\#define \hyperlink{_open_mote-_c_c2538_2leds_8c_a40f785df9050d95d4a977addebaca2ff}{B\+S\+P\+\_\+\+L\+E\+D\+\_\+3}~\hyperlink{_open_mote-_c_c2538_2source_2gpio_8h_a9089f18f20ec88ee38ce6f27389e6d7e}{G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+6}
+\begin{DoxyCompactList}\small\item\em P\+C6 -- yellow. \end{DoxyCompactList}\item 
+\#define \hyperlink{_open_mote-_c_c2538_2leds_8c_a552993626b0949cbdd6269520f8c3842}{B\+S\+P\+\_\+\+L\+E\+D\+\_\+4}~\hyperlink{_open_mote-_c_c2538_2source_2gpio_8h_a482cb86c2f036e630661a41e8986bcfe}{G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+7}
+\begin{DoxyCompactList}\small\item\em P\+C7 -- green. \end{DoxyCompactList}\item 
+\#define \hyperlink{_open_mote-_c_c2538_2leds_8c_ac3a9220505503270dec2befe8b73846a}{B\+S\+P\+\_\+\+L\+E\+D\+\_\+\+A\+LL}
+\begin{DoxyCompactList}\small\item\em Bitmask of all L\+E\+Ds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_open_mote-_c_c2538_2leds_8c_ab379bc6c2333ed2fc3b4809e664bde0b}{bsp\+Led\+Set} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Leds)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_open_mote-_c_c2538_2leds_8c_a8b7c62e6e9f8fc03ef49609b7530c374}{bsp\+Led\+Clear} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Leds)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_open_mote-_c_c2538_2leds_8c_ad92091a64bd0272c7aa9c9868eb06239}{bsp\+Led\+Toggle} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Leds)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__leds_ga67cfc3137a465e560792490e81365254}{leds\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em definition of the \char`\"{}leds\char`\"{} bsp module for Eldo and Jorge boards. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__leds_ga248d93c2ed295c1c463984b881e1b9af}{leds\+\_\+error\+\_\+on} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__leds_ga4639337fca09b91f2136c2843a19e1b3}{leds\+\_\+error\+\_\+off} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__leds_gaa0f84f5b86315c3eed24fc48a826f991}{leds\+\_\+error\+\_\+toggle} ()
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{group__leds_ga49f878b007c160726b61f01fa6afce85}{leds\+\_\+error\+\_\+is\+On} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__leds_gaf1a59644fa7758343d6666e18a4c484c}{leds\+\_\+sync\+\_\+on} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__leds_gafe7544b92ce4fb0eccb46179741ac32b}{leds\+\_\+sync\+\_\+off} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__leds_ga5f8c9297538313c763dfe6cdd5ed8573}{leds\+\_\+sync\+\_\+toggle} ()
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{group__leds_gacacb807ae7bf187ce2e60ff2f036f7a4}{leds\+\_\+sync\+\_\+is\+On} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__leds_gabadb9503b7f4bdff557b9f200d52d47e}{leds\+\_\+radio\+\_\+on} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__leds_ga511a7d73ce107a86e36efdf9c8937f96}{leds\+\_\+radio\+\_\+off} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__leds_ga428daeb3c44d268ad8bc6ab2ac3aa555}{leds\+\_\+radio\+\_\+toggle} ()
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{group__leds_ga49e6fda7ecdef801f2cdddde02850ba3}{leds\+\_\+radio\+\_\+is\+On} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__leds_ga6e8b8f51435375a02bb60ad20b461dc3}{leds\+\_\+debug\+\_\+on} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__leds_ga12ae67ac472f56f1854d632b32f55bad}{leds\+\_\+debug\+\_\+off} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__leds_ga111b33d14f2484efff3cef75614365fe}{leds\+\_\+debug\+\_\+toggle} ()
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{group__leds_gaadc511858f221c17922cf0c77e20d42e}{leds\+\_\+debug\+\_\+is\+On} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__leds_gac3092dd1fe1c3de1ecf54296e7daf0b6}{leds\+\_\+all\+\_\+on} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__leds_ga24ed8c62f483ba89008b4062f7777a2b}{leds\+\_\+all\+\_\+off} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__leds_gaf65df497068c0dd5c1563298dc87d180}{leds\+\_\+all\+\_\+toggle} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__leds_gab68d0db5256aabc4415415f1b33acab5}{leds\+\_\+error\+\_\+blink} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__leds_gaa7592c1f5c7d250c0bafea1d29ff64ab}{leds\+\_\+circular\+\_\+shift} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__leds_ga8dab59dd00dafd1644dfd57e59c8fc29}{leds\+\_\+increment} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{Open\+Mote-\/\+C\+C2538/leds.\+c@{Open\+Mote-\/\+C\+C2538/leds.\+c}!B\+S\+P\+\_\+\+L\+E\+D\+\_\+1@{B\+S\+P\+\_\+\+L\+E\+D\+\_\+1}}
+\index{B\+S\+P\+\_\+\+L\+E\+D\+\_\+1@{B\+S\+P\+\_\+\+L\+E\+D\+\_\+1}!Open\+Mote-\/\+C\+C2538/leds.\+c@{Open\+Mote-\/\+C\+C2538/leds.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+L\+E\+D\+\_\+1}{BSP_LED_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+L\+E\+D\+\_\+1~{\bf G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+4}}\hypertarget{_open_mote-_c_c2538_2leds_8c_ac735bbacfdc0829d717c2968d355e016}{}\label{_open_mote-_c_c2538_2leds_8c_ac735bbacfdc0829d717c2968d355e016}
+
+
+P\+C4 -- red. 
+
+
+
+Definition at line 19 of file leds.\+c.
+
+\index{Open\+Mote-\/\+C\+C2538/leds.\+c@{Open\+Mote-\/\+C\+C2538/leds.\+c}!B\+S\+P\+\_\+\+L\+E\+D\+\_\+2@{B\+S\+P\+\_\+\+L\+E\+D\+\_\+2}}
+\index{B\+S\+P\+\_\+\+L\+E\+D\+\_\+2@{B\+S\+P\+\_\+\+L\+E\+D\+\_\+2}!Open\+Mote-\/\+C\+C2538/leds.\+c@{Open\+Mote-\/\+C\+C2538/leds.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+L\+E\+D\+\_\+2}{BSP_LED_2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+L\+E\+D\+\_\+2~{\bf G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+5}}\hypertarget{_open_mote-_c_c2538_2leds_8c_a26beeb1f68fa093ec6bee8564c936305}{}\label{_open_mote-_c_c2538_2leds_8c_a26beeb1f68fa093ec6bee8564c936305}
+
+
+P\+C5 -- orange. 
+
+
+
+Definition at line 20 of file leds.\+c.
+
+\index{Open\+Mote-\/\+C\+C2538/leds.\+c@{Open\+Mote-\/\+C\+C2538/leds.\+c}!B\+S\+P\+\_\+\+L\+E\+D\+\_\+3@{B\+S\+P\+\_\+\+L\+E\+D\+\_\+3}}
+\index{B\+S\+P\+\_\+\+L\+E\+D\+\_\+3@{B\+S\+P\+\_\+\+L\+E\+D\+\_\+3}!Open\+Mote-\/\+C\+C2538/leds.\+c@{Open\+Mote-\/\+C\+C2538/leds.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+L\+E\+D\+\_\+3}{BSP_LED_3}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+L\+E\+D\+\_\+3~{\bf G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+6}}\hypertarget{_open_mote-_c_c2538_2leds_8c_a40f785df9050d95d4a977addebaca2ff}{}\label{_open_mote-_c_c2538_2leds_8c_a40f785df9050d95d4a977addebaca2ff}
+
+
+P\+C6 -- yellow. 
+
+
+
+Definition at line 21 of file leds.\+c.
+
+\index{Open\+Mote-\/\+C\+C2538/leds.\+c@{Open\+Mote-\/\+C\+C2538/leds.\+c}!B\+S\+P\+\_\+\+L\+E\+D\+\_\+4@{B\+S\+P\+\_\+\+L\+E\+D\+\_\+4}}
+\index{B\+S\+P\+\_\+\+L\+E\+D\+\_\+4@{B\+S\+P\+\_\+\+L\+E\+D\+\_\+4}!Open\+Mote-\/\+C\+C2538/leds.\+c@{Open\+Mote-\/\+C\+C2538/leds.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+L\+E\+D\+\_\+4}{BSP_LED_4}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+L\+E\+D\+\_\+4~{\bf G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+7}}\hypertarget{_open_mote-_c_c2538_2leds_8c_a552993626b0949cbdd6269520f8c3842}{}\label{_open_mote-_c_c2538_2leds_8c_a552993626b0949cbdd6269520f8c3842}
+
+
+P\+C7 -- green. 
+
+
+
+Definition at line 22 of file leds.\+c.
+
+\index{Open\+Mote-\/\+C\+C2538/leds.\+c@{Open\+Mote-\/\+C\+C2538/leds.\+c}!B\+S\+P\+\_\+\+L\+E\+D\+\_\+\+A\+LL@{B\+S\+P\+\_\+\+L\+E\+D\+\_\+\+A\+LL}}
+\index{B\+S\+P\+\_\+\+L\+E\+D\+\_\+\+A\+LL@{B\+S\+P\+\_\+\+L\+E\+D\+\_\+\+A\+LL}!Open\+Mote-\/\+C\+C2538/leds.\+c@{Open\+Mote-\/\+C\+C2538/leds.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+L\+E\+D\+\_\+\+A\+LL}{BSP_LED_ALL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+L\+E\+D\+\_\+\+A\+LL}\hypertarget{_open_mote-_c_c2538_2leds_8c_ac3a9220505503270dec2befe8b73846a}{}\label{_open_mote-_c_c2538_2leds_8c_ac3a9220505503270dec2befe8b73846a}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(\hyperlink{_open_mote-_c_c2538_2leds_8c_ac735bbacfdc0829d717c2968d355e016}{BSP\_LED\_1} | \(\backslash\)
+                                 BSP\_LED\_2 | \(\backslash\)
+                                 BSP\_LED\_3 | \(\backslash\)
+                                 BSP\_LED\_4)
+\end{DoxyCode}
+
+
+Bitmask of all L\+E\+Ds. 
+
+
+
+Definition at line 24 of file leds.\+c.
+
+\index{Open\+Mote-\/\+C\+C2538/leds.\+c@{Open\+Mote-\/\+C\+C2538/leds.\+c}!B\+S\+P\+\_\+\+L\+E\+D\+\_\+\+B\+A\+SE@{B\+S\+P\+\_\+\+L\+E\+D\+\_\+\+B\+A\+SE}}
+\index{B\+S\+P\+\_\+\+L\+E\+D\+\_\+\+B\+A\+SE@{B\+S\+P\+\_\+\+L\+E\+D\+\_\+\+B\+A\+SE}!Open\+Mote-\/\+C\+C2538/leds.\+c@{Open\+Mote-\/\+C\+C2538/leds.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+L\+E\+D\+\_\+\+B\+A\+SE}{BSP_LED_BASE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+L\+E\+D\+\_\+\+B\+A\+SE~{\bf G\+P\+I\+O\+\_\+\+C\+\_\+\+B\+A\+SE}}\hypertarget{_open_mote-_c_c2538_2leds_8c_ac0949598ab8ed4fcb4210e1d70edfeb4}{}\label{_open_mote-_c_c2538_2leds_8c_ac0949598ab8ed4fcb4210e1d70edfeb4}
+Author\+: Xavier Vilajosana (\href{mailto:xvilajosana@eecs.berkeley.edu}{\tt xvilajosana@eecs.\+berkeley.\+edu}) Pere Tuset (\href{mailto:peretuset@openmote.com}{\tt peretuset@openmote.\+com}) Date\+: July 2013 Description\+: C\+C2538-\/specific definition of the \char`\"{}leds\char`\"{} bsp module. 
+
+Definition at line 18 of file leds.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{Open\+Mote-\/\+C\+C2538/leds.\+c@{Open\+Mote-\/\+C\+C2538/leds.\+c}!bsp\+Led\+Clear@{bsp\+Led\+Clear}}
+\index{bsp\+Led\+Clear@{bsp\+Led\+Clear}!Open\+Mote-\/\+C\+C2538/leds.\+c@{Open\+Mote-\/\+C\+C2538/leds.\+c}}
+\subsubsection[{\texorpdfstring{bsp\+Led\+Clear(uint8\+\_\+t ui8\+Leds)}{bspLedClear(uint8_t ui8Leds)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} bsp\+Led\+Clear (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{ui8\+Leds}
+\end{DoxyParamCaption}
+)}\hypertarget{_open_mote-_c_c2538_2leds_8c_a8b7c62e6e9f8fc03ef49609b7530c374}{}\label{_open_mote-_c_c2538_2leds_8c_a8b7c62e6e9f8fc03ef49609b7530c374}
+
+
+Definition at line 148 of file leds.\+c.
+
+\index{Open\+Mote-\/\+C\+C2538/leds.\+c@{Open\+Mote-\/\+C\+C2538/leds.\+c}!bsp\+Led\+Set@{bsp\+Led\+Set}}
+\index{bsp\+Led\+Set@{bsp\+Led\+Set}!Open\+Mote-\/\+C\+C2538/leds.\+c@{Open\+Mote-\/\+C\+C2538/leds.\+c}}
+\subsubsection[{\texorpdfstring{bsp\+Led\+Set(uint8\+\_\+t ui8\+Leds)}{bspLedSet(uint8_t ui8Leds)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} bsp\+Led\+Set (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{ui8\+Leds}
+\end{DoxyParamCaption}
+)}\hypertarget{_open_mote-_c_c2538_2leds_8c_ab379bc6c2333ed2fc3b4809e664bde0b}{}\label{_open_mote-_c_c2538_2leds_8c_ab379bc6c2333ed2fc3b4809e664bde0b}
+
+
+Definition at line 140 of file leds.\+c.
+
+\index{Open\+Mote-\/\+C\+C2538/leds.\+c@{Open\+Mote-\/\+C\+C2538/leds.\+c}!bsp\+Led\+Toggle@{bsp\+Led\+Toggle}}
+\index{bsp\+Led\+Toggle@{bsp\+Led\+Toggle}!Open\+Mote-\/\+C\+C2538/leds.\+c@{Open\+Mote-\/\+C\+C2538/leds.\+c}}
+\subsubsection[{\texorpdfstring{bsp\+Led\+Toggle(uint8\+\_\+t ui8\+Leds)}{bspLedToggle(uint8_t ui8Leds)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} bsp\+Led\+Toggle (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{ui8\+Leds}
+\end{DoxyParamCaption}
+)}\hypertarget{_open_mote-_c_c2538_2leds_8c_ad92091a64bd0272c7aa9c9868eb06239}{}\label{_open_mote-_c_c2538_2leds_8c_ad92091a64bd0272c7aa9c9868eb06239}
+
+
+Definition at line 156 of file leds.\+c.
+

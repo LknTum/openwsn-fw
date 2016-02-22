@@ -1,0 +1,78 @@
+\hypertarget{openmotestm_2library_2src_2stm32f10x__iwdg_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/openmotestm/library/src/stm32f10x\+\_\+iwdg.c File Reference}
+\label{openmotestm_2library_2src_2stm32f10x__iwdg_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/openmotestm/library/src/stm32f10x\+\_\+iwdg.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/openmotestm/library/src/stm32f10x\+\_\+iwdg.\+c}}
+{\ttfamily \#include \char`\"{}stm32f10x\+\_\+iwdg.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{openmotestm_2library_2src_2stm32f10x__iwdg_8c_ad5e5efc1dbd6a045da5a36c3d9df16a5}{K\+R\+\_\+\+K\+E\+Y\+\_\+\+Reload}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+A\+A\+A\+A)
+\item 
+\#define \hyperlink{openmotestm_2library_2src_2stm32f10x__iwdg_8c_a833138e20c8a26786dd7ca3b132152ed}{K\+R\+\_\+\+K\+E\+Y\+\_\+\+Enable}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+C\+C\+C\+C)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{openmotestm_2library_2src_2stm32f10x__iwdg_8c_ac87d4af7e2856b7963570e82a802c34c}{I\+W\+D\+G\+\_\+\+Write\+Access\+Cmd} (\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} I\+W\+D\+G\+\_\+\+Write\+Access)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i_w_d_g___private___functions_ga4fa7f1cd690533a35ad9e4729c0450a3}{I\+W\+D\+G\+\_\+\+Set\+Prescaler} (\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_aed742c436da53c1080638ce6ef7d13de}{u8} I\+W\+D\+G\+\_\+\+Prescaler)
+\begin{DoxyCompactList}\small\item\em Sets I\+W\+DG Prescaler value. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{openmotestm_2library_2src_2stm32f10x__iwdg_8c_af3456c55abe2c51b5184deb4b39dabda}{I\+W\+D\+G\+\_\+\+Set\+Reload} (\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} Reload)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i_w_d_g___private___functions_ga7147ebabdc3fef97f532b171a4e70d49}{I\+W\+D\+G\+\_\+\+Reload\+Counter} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Reloads I\+W\+DG counter with value defined in the reload register (write access to I\+W\+D\+G\+\_\+\+PR and I\+W\+D\+G\+\_\+\+R\+LR registers disabled). \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i_w_d_g___private___functions_ga479b2921c86f8c67b819f5c4bea6bdb6}{I\+W\+D\+G\+\_\+\+Enable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Enables I\+W\+DG (write access to I\+W\+D\+G\+\_\+\+PR and I\+W\+D\+G\+\_\+\+R\+LR registers disabled). \end{DoxyCompactList}\item 
+\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a89136caac2e14c55151f527ac02daaff}{Flag\+Status} \hyperlink{openmotestm_2library_2src_2stm32f10x__iwdg_8c_a2c7783999c54f3499a1383a49fba4f97}{I\+W\+D\+G\+\_\+\+Get\+Flag\+Status} (\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} I\+W\+D\+G\+\_\+\+F\+L\+AG)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{openmotestm/library/src/stm32f10x\+\_\+iwdg.\+c@{openmotestm/library/src/stm32f10x\+\_\+iwdg.\+c}!K\+R\+\_\+\+K\+E\+Y\+\_\+\+Enable@{K\+R\+\_\+\+K\+E\+Y\+\_\+\+Enable}}
+\index{K\+R\+\_\+\+K\+E\+Y\+\_\+\+Enable@{K\+R\+\_\+\+K\+E\+Y\+\_\+\+Enable}!openmotestm/library/src/stm32f10x\+\_\+iwdg.\+c@{openmotestm/library/src/stm32f10x\+\_\+iwdg.\+c}}
+\subsubsection[{\texorpdfstring{K\+R\+\_\+\+K\+E\+Y\+\_\+\+Enable}{KR_KEY_Enable}}]{\setlength{\rightskip}{0pt plus 5cm}\#define K\+R\+\_\+\+K\+E\+Y\+\_\+\+Enable~(({\bf u16})0x\+C\+C\+C\+C)}\hypertarget{openmotestm_2library_2src_2stm32f10x__iwdg_8c_a833138e20c8a26786dd7ca3b132152ed}{}\label{openmotestm_2library_2src_2stm32f10x__iwdg_8c_a833138e20c8a26786dd7ca3b132152ed}
+
+
+Definition at line 24 of file stm32f10x\+\_\+iwdg.\+c.
+
+\index{openmotestm/library/src/stm32f10x\+\_\+iwdg.\+c@{openmotestm/library/src/stm32f10x\+\_\+iwdg.\+c}!K\+R\+\_\+\+K\+E\+Y\+\_\+\+Reload@{K\+R\+\_\+\+K\+E\+Y\+\_\+\+Reload}}
+\index{K\+R\+\_\+\+K\+E\+Y\+\_\+\+Reload@{K\+R\+\_\+\+K\+E\+Y\+\_\+\+Reload}!openmotestm/library/src/stm32f10x\+\_\+iwdg.\+c@{openmotestm/library/src/stm32f10x\+\_\+iwdg.\+c}}
+\subsubsection[{\texorpdfstring{K\+R\+\_\+\+K\+E\+Y\+\_\+\+Reload}{KR_KEY_Reload}}]{\setlength{\rightskip}{0pt plus 5cm}\#define K\+R\+\_\+\+K\+E\+Y\+\_\+\+Reload~(({\bf u16})0x\+A\+A\+A\+A)}\hypertarget{openmotestm_2library_2src_2stm32f10x__iwdg_8c_ad5e5efc1dbd6a045da5a36c3d9df16a5}{}\label{openmotestm_2library_2src_2stm32f10x__iwdg_8c_ad5e5efc1dbd6a045da5a36c3d9df16a5}
+
+
+Definition at line 23 of file stm32f10x\+\_\+iwdg.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{openmotestm/library/src/stm32f10x\+\_\+iwdg.\+c@{openmotestm/library/src/stm32f10x\+\_\+iwdg.\+c}!I\+W\+D\+G\+\_\+\+Get\+Flag\+Status@{I\+W\+D\+G\+\_\+\+Get\+Flag\+Status}}
+\index{I\+W\+D\+G\+\_\+\+Get\+Flag\+Status@{I\+W\+D\+G\+\_\+\+Get\+Flag\+Status}!openmotestm/library/src/stm32f10x\+\_\+iwdg.\+c@{openmotestm/library/src/stm32f10x\+\_\+iwdg.\+c}}
+\subsubsection[{\texorpdfstring{I\+W\+D\+G\+\_\+\+Get\+Flag\+Status(u16 I\+W\+D\+G\+\_\+\+F\+L\+A\+G)}{IWDG_GetFlagStatus(u16 IWDG_FLAG)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Flag\+Status} I\+W\+D\+G\+\_\+\+Get\+Flag\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{I\+W\+D\+G\+\_\+\+F\+L\+AG}
+\end{DoxyParamCaption}
+)}\hypertarget{openmotestm_2library_2src_2stm32f10x__iwdg_8c_a2c7783999c54f3499a1383a49fba4f97}{}\label{openmotestm_2library_2src_2stm32f10x__iwdg_8c_a2c7783999c54f3499a1383a49fba4f97}
+
+
+Definition at line 128 of file stm32f10x\+\_\+iwdg.\+c.
+
+\index{openmotestm/library/src/stm32f10x\+\_\+iwdg.\+c@{openmotestm/library/src/stm32f10x\+\_\+iwdg.\+c}!I\+W\+D\+G\+\_\+\+Set\+Reload@{I\+W\+D\+G\+\_\+\+Set\+Reload}}
+\index{I\+W\+D\+G\+\_\+\+Set\+Reload@{I\+W\+D\+G\+\_\+\+Set\+Reload}!openmotestm/library/src/stm32f10x\+\_\+iwdg.\+c@{openmotestm/library/src/stm32f10x\+\_\+iwdg.\+c}}
+\subsubsection[{\texorpdfstring{I\+W\+D\+G\+\_\+\+Set\+Reload(u16 Reload)}{IWDG_SetReload(u16 Reload)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I\+W\+D\+G\+\_\+\+Set\+Reload (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{Reload}
+\end{DoxyParamCaption}
+)}\hypertarget{openmotestm_2library_2src_2stm32f10x__iwdg_8c_af3456c55abe2c51b5184deb4b39dabda}{}\label{openmotestm_2library_2src_2stm32f10x__iwdg_8c_af3456c55abe2c51b5184deb4b39dabda}
+
+
+Definition at line 84 of file stm32f10x\+\_\+iwdg.\+c.
+
+\index{openmotestm/library/src/stm32f10x\+\_\+iwdg.\+c@{openmotestm/library/src/stm32f10x\+\_\+iwdg.\+c}!I\+W\+D\+G\+\_\+\+Write\+Access\+Cmd@{I\+W\+D\+G\+\_\+\+Write\+Access\+Cmd}}
+\index{I\+W\+D\+G\+\_\+\+Write\+Access\+Cmd@{I\+W\+D\+G\+\_\+\+Write\+Access\+Cmd}!openmotestm/library/src/stm32f10x\+\_\+iwdg.\+c@{openmotestm/library/src/stm32f10x\+\_\+iwdg.\+c}}
+\subsubsection[{\texorpdfstring{I\+W\+D\+G\+\_\+\+Write\+Access\+Cmd(u16 I\+W\+D\+G\+\_\+\+Write\+Access)}{IWDG_WriteAccessCmd(u16 IWDG_WriteAccess)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I\+W\+D\+G\+\_\+\+Write\+Access\+Cmd (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{I\+W\+D\+G\+\_\+\+Write\+Access}
+\end{DoxyParamCaption}
+)}\hypertarget{openmotestm_2library_2src_2stm32f10x__iwdg_8c_ac87d4af7e2856b7963570e82a802c34c}{}\label{openmotestm_2library_2src_2stm32f10x__iwdg_8c_ac87d4af7e2856b7963570e82a802c34c}
+
+
+Definition at line 45 of file stm32f10x\+\_\+iwdg.\+c.
+

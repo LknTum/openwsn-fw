@@ -1,0 +1,132 @@
+\hypertarget{group___open_sensors}{}\section{Open\+Sensors}
+\label{group___open_sensors}\index{Open\+Sensors@{Open\+Sensors}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structopensensors__resource__desc__t}{opensensors\+\_\+resource\+\_\+desc\+\_\+t}
+\item 
+struct \hyperlink{structopensensors__vars__t}{opensensors\+\_\+vars\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___open_sensors_ga848dedd92abfd550d8f60e6f6a68c21d}{opensensors\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Initialize Open\+Sensors. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{group___open_sensors_ga947d231e649df6aa9232d33263285baf}{opensensors\+\_\+get\+Num\+Sensors} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Return the number of registered Open\+Sensors. \end{DoxyCompactList}\item 
+\hyperlink{structopensensors__resource__desc__t}{opensensors\+\_\+resource\+\_\+desc\+\_\+t} $\ast$ \hyperlink{group___open_sensors_gaddc09ea50aeff0c230ba37ec1963265d}{opensensors\+\_\+get\+Resource} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} index)
+\begin{DoxyCompactList}\small\item\em Return an Open\+Sensors resource structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{group___open_sensors_gaf752996db289f7c2e59fccc591a2d07d}{opensensors\+\_\+resource\+\_\+desc\+\_\+t\+::sensor\+Type}
+\item 
+\hyperlink{sensors_8h_a4896998a8e1784ceb727ed0e8f459e47}{callback\+Read\+\_\+cbt} \hyperlink{group___open_sensors_ga1768cf6325dd5cd7caea6087f3b9f565}{opensensors\+\_\+resource\+\_\+desc\+\_\+t\+::callback\+Read}
+\item 
+\hyperlink{sensors_8h_a9f4f0fc901543c7425be6f83307c0ac2}{callback\+Convert\+\_\+cbt} \hyperlink{group___open_sensors_ga181017b594454ddb5e2346366984ee44}{opensensors\+\_\+resource\+\_\+desc\+\_\+t\+::callback\+Convert}
+\item 
+\hyperlink{structopensensors__resource__desc__t}{opensensors\+\_\+resource\+\_\+desc\+\_\+t} \hyperlink{group___open_sensors_gae5c6304a53cdd102b08b8c369fe4af73}{opensensors\+\_\+vars\+\_\+t\+::opensensors\+\_\+resource} \mbox{[}\hyperlink{sensors_8h_a464fdb7834b9b30e4c1dfdf1134cd8cb}{N\+U\+M\+S\+E\+N\+S\+O\+RS}\mbox{]}
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{group___open_sensors_gaec18c546c1947550d51927b99b225a10}{opensensors\+\_\+vars\+\_\+t\+::num\+Sensors}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{Open\+Sensors@{Open\+Sensors}!opensensors\+\_\+get\+Num\+Sensors@{opensensors\+\_\+get\+Num\+Sensors}}
+\index{opensensors\+\_\+get\+Num\+Sensors@{opensensors\+\_\+get\+Num\+Sensors}!Open\+Sensors@{Open\+Sensors}}
+\subsubsection[{\texorpdfstring{opensensors\+\_\+get\+Num\+Sensors(void)}{opensensors_getNumSensors(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} opensensors\+\_\+get\+Num\+Sensors (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___open_sensors_ga947d231e649df6aa9232d33263285baf}{}\label{group___open_sensors_ga947d231e649df6aa9232d33263285baf}
+
+
+Return the number of registered Open\+Sensors. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em the} & number of registered Open\+Sensors. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 41 of file opensensors.\+c.
+
+\index{Open\+Sensors@{Open\+Sensors}!opensensors\+\_\+get\+Resource@{opensensors\+\_\+get\+Resource}}
+\index{opensensors\+\_\+get\+Resource@{opensensors\+\_\+get\+Resource}!Open\+Sensors@{Open\+Sensors}}
+\subsubsection[{\texorpdfstring{opensensors\+\_\+get\+Resource(uint8\+\_\+t index)}{opensensors_getResource(uint8_t index)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf opensensors\+\_\+resource\+\_\+desc\+\_\+t}$\ast$ opensensors\+\_\+get\+Resource (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{group___open_sensors_gaddc09ea50aeff0c230ba37ec1963265d}{}\label{group___open_sensors_gaddc09ea50aeff0c230ba37ec1963265d}
+
+
+Return an Open\+Sensors resource structure. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em index} & Index of the Open\+Sensors resource within Opensensors vars. \\
+\hline
+\mbox{\tt out}  & {\em the} & Open\+Sensors resource within Opensensors vars. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 50 of file opensensors.\+c.
+
+\index{Open\+Sensors@{Open\+Sensors}!opensensors\+\_\+init@{opensensors\+\_\+init}}
+\index{opensensors\+\_\+init@{opensensors\+\_\+init}!Open\+Sensors@{Open\+Sensors}}
+\subsubsection[{\texorpdfstring{opensensors\+\_\+init(void)}{opensensors_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} opensensors\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___open_sensors_ga848dedd92abfd550d8f60e6f6a68c21d}{}\label{group___open_sensors_ga848dedd92abfd550d8f60e6f6a68c21d}
+
+
+Initialize Open\+Sensors. 
+
+
+
+Definition at line 28 of file opensensors.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{Open\+Sensors@{Open\+Sensors}!callback\+Convert@{callback\+Convert}}
+\index{callback\+Convert@{callback\+Convert}!Open\+Sensors@{Open\+Sensors}}
+\subsubsection[{\texorpdfstring{callback\+Convert}{callbackConvert}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf callback\+Convert\+\_\+cbt} opensensors\+\_\+resource\+\_\+desc\+\_\+t\+::callback\+Convert}\hypertarget{group___open_sensors_ga181017b594454ddb5e2346366984ee44}{}\label{group___open_sensors_ga181017b594454ddb5e2346366984ee44}
+
+
+Definition at line 26 of file opensensors.\+h.
+
+\index{Open\+Sensors@{Open\+Sensors}!callback\+Read@{callback\+Read}}
+\index{callback\+Read@{callback\+Read}!Open\+Sensors@{Open\+Sensors}}
+\subsubsection[{\texorpdfstring{callback\+Read}{callbackRead}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf callback\+Read\+\_\+cbt} opensensors\+\_\+resource\+\_\+desc\+\_\+t\+::callback\+Read}\hypertarget{group___open_sensors_ga1768cf6325dd5cd7caea6087f3b9f565}{}\label{group___open_sensors_ga1768cf6325dd5cd7caea6087f3b9f565}
+
+
+Definition at line 25 of file opensensors.\+h.
+
+\index{Open\+Sensors@{Open\+Sensors}!num\+Sensors@{num\+Sensors}}
+\index{num\+Sensors@{num\+Sensors}!Open\+Sensors@{Open\+Sensors}}
+\subsubsection[{\texorpdfstring{num\+Sensors}{numSensors}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} opensensors\+\_\+vars\+\_\+t\+::num\+Sensors}\hypertarget{group___open_sensors_gaec18c546c1947550d51927b99b225a10}{}\label{group___open_sensors_gaec18c546c1947550d51927b99b225a10}
+
+
+Definition at line 33 of file opensensors.\+h.
+
+\index{Open\+Sensors@{Open\+Sensors}!opensensors\+\_\+resource@{opensensors\+\_\+resource}}
+\index{opensensors\+\_\+resource@{opensensors\+\_\+resource}!Open\+Sensors@{Open\+Sensors}}
+\subsubsection[{\texorpdfstring{opensensors\+\_\+resource}{opensensors_resource}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf opensensors\+\_\+resource\+\_\+desc\+\_\+t} opensensors\+\_\+vars\+\_\+t\+::opensensors\+\_\+resource\mbox{[}{\bf N\+U\+M\+S\+E\+N\+S\+O\+RS}\mbox{]}}\hypertarget{group___open_sensors_gae5c6304a53cdd102b08b8c369fe4af73}{}\label{group___open_sensors_gae5c6304a53cdd102b08b8c369fe4af73}
+
+
+Definition at line 32 of file opensensors.\+h.
+
+\index{Open\+Sensors@{Open\+Sensors}!sensor\+Type@{sensor\+Type}}
+\index{sensor\+Type@{sensor\+Type}!Open\+Sensors@{Open\+Sensors}}
+\subsubsection[{\texorpdfstring{sensor\+Type}{sensorType}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} opensensors\+\_\+resource\+\_\+desc\+\_\+t\+::sensor\+Type}\hypertarget{group___open_sensors_gaf752996db289f7c2e59fccc591a2d07d}{}\label{group___open_sensors_gaf752996db289f7c2e59fccc591a2d07d}
+
+
+Definition at line 24 of file opensensors.\+h.
+

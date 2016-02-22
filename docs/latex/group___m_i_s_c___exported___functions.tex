@@ -1,0 +1,70 @@
+\hypertarget{group___m_i_s_c___exported___functions}{}\section{M\+I\+S\+C\+\_\+\+Exported\+\_\+\+Functions}
+\label{group___m_i_s_c___exported___functions}\index{M\+I\+S\+C\+\_\+\+Exported\+\_\+\+Functions@{M\+I\+S\+C\+\_\+\+Exported\+\_\+\+Functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___m_i_s_c___exported___functions_ga4ab373ed0870c06fca5eb51d639adf41}{N\+V\+I\+C\+\_\+\+Init} (\hyperlink{struct_n_v_i_c___init_type_def}{N\+V\+I\+C\+\_\+\+Init\+Type\+Def} $\ast$N\+V\+I\+C\+\_\+\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Initializes the N\+V\+IC peripheral according to the specified parameters in the N\+V\+I\+C\+\_\+\+Init\+Struct. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___m_i_s_c___exported___functions_gae21011c5232f5b8f366acbecd12a1d4a}{N\+V\+I\+C\+\_\+\+System\+L\+P\+Config} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} Low\+Power\+Mode, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_ac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} New\+State)
+\begin{DoxyCompactList}\small\item\em Selects the condition for the system to enter low power mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{M\+I\+S\+C\+\_\+\+Exported\+\_\+\+Functions@{M\+I\+S\+C\+\_\+\+Exported\+\_\+\+Functions}!N\+V\+I\+C\+\_\+\+Init@{N\+V\+I\+C\+\_\+\+Init}}
+\index{N\+V\+I\+C\+\_\+\+Init@{N\+V\+I\+C\+\_\+\+Init}!M\+I\+S\+C\+\_\+\+Exported\+\_\+\+Functions@{M\+I\+S\+C\+\_\+\+Exported\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{N\+V\+I\+C\+\_\+\+Init(\+N\+V\+I\+C\+\_\+\+Init\+Type\+Def $\ast$\+N\+V\+I\+C\+\_\+\+Init\+Struct)}{NVIC_Init(NVIC_InitTypeDef *NVIC_InitStruct)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} N\+V\+I\+C\+\_\+\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+V\+I\+C\+\_\+\+Init\+Type\+Def} $\ast$}]{N\+V\+I\+C\+\_\+\+Init\+Struct}
+\end{DoxyParamCaption}
+)}\hypertarget{group___m_i_s_c___exported___functions_ga4ab373ed0870c06fca5eb51d639adf41}{}\label{group___m_i_s_c___exported___functions_ga4ab373ed0870c06fca5eb51d639adf41}
+
+
+Initializes the N\+V\+IC peripheral according to the specified parameters in the N\+V\+I\+C\+\_\+\+Init\+Struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\+V\+I\+C\+\_\+\+Init\+Struct} & pointer to a \hyperlink{struct_n_v_i_c___init_type_def}{N\+V\+I\+C\+\_\+\+Init\+Type\+Def} structure that contains the configuration information for the specified N\+V\+IC peripheral. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 116 of file stm32f10x\+\_\+nvic.\+c.
+
+\index{M\+I\+S\+C\+\_\+\+Exported\+\_\+\+Functions@{M\+I\+S\+C\+\_\+\+Exported\+\_\+\+Functions}!N\+V\+I\+C\+\_\+\+System\+L\+P\+Config@{N\+V\+I\+C\+\_\+\+System\+L\+P\+Config}}
+\index{N\+V\+I\+C\+\_\+\+System\+L\+P\+Config@{N\+V\+I\+C\+\_\+\+System\+L\+P\+Config}!M\+I\+S\+C\+\_\+\+Exported\+\_\+\+Functions@{M\+I\+S\+C\+\_\+\+Exported\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{N\+V\+I\+C\+\_\+\+System\+L\+P\+Config(uint8\+\_\+t Low\+Power\+Mode, Functional\+State New\+State)}{NVIC_SystemLPConfig(uint8_t LowPowerMode, FunctionalState NewState)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} N\+V\+I\+C\+\_\+\+System\+L\+P\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{Low\+Power\+Mode, }
+\item[{{\bf Functional\+State}}]{New\+State}
+\end{DoxyParamCaption}
+)}\hypertarget{group___m_i_s_c___exported___functions_gae21011c5232f5b8f366acbecd12a1d4a}{}\label{group___m_i_s_c___exported___functions_gae21011c5232f5b8f366acbecd12a1d4a}
+
+
+Selects the condition for the system to enter low power mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Low\+Power\+Mode} & Specifies the new mode for the system to enter low power mode. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item N\+V\+I\+C\+\_\+\+L\+P\+\_\+\+S\+E\+V\+O\+N\+P\+E\+ND \item N\+V\+I\+C\+\_\+\+L\+P\+\_\+\+S\+L\+E\+E\+P\+D\+E\+EP \item N\+V\+I\+C\+\_\+\+L\+P\+\_\+\+S\+L\+E\+E\+P\+O\+N\+E\+X\+IT \end{DoxyItemize}
+\\
+\hline
+{\em New\+State} & new state of LP condition. This parameter can be\+: E\+N\+A\+B\+LE or D\+I\+S\+A\+B\+LE. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 440 of file stm32f10x\+\_\+nvic.\+c.
+

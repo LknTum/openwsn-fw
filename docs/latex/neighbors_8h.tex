@@ -1,0 +1,73 @@
+\hypertarget{neighbors_8h}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/02b-\/\+M\+A\+Chigh/neighbors.h File Reference}
+\label{neighbors_8h}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/02b-\/\+M\+A\+Chigh/neighbors.\+h@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/02b-\/\+M\+A\+Chigh/neighbors.\+h}}
+{\ttfamily \#include \char`\"{}opendefs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}icmpv6rpl.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structneighbor_row__t}{neighbor\+Row\+\_\+t}
+\item 
+struct \hyperlink{structdebug_neighbor_entry__t}{debug\+Neighbor\+Entry\+\_\+t}
+\item 
+struct \hyperlink{structnet_debug_neigbor_entry__t}{net\+Debug\+Neigbor\+Entry\+\_\+t}
+\item 
+struct \hyperlink{structneighbors__vars__t}{neighbors\+\_\+vars\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___neighbors_gaf83606573bb704d34705b540c226a0d9}{M\+A\+X\+N\+U\+M\+N\+E\+I\+G\+H\+B\+O\+RS}~10
+\item 
+\#define \hyperlink{group___neighbors_ga6a269e3fd9f5dc2fe01c351944352799}{M\+A\+X\+P\+R\+E\+F\+E\+R\+E\+N\+CE}~2
+\item 
+\#define \hyperlink{group___neighbors_ga2c403faa9006b83e020166536b480025}{B\+A\+D\+N\+E\+I\+G\+H\+B\+O\+R\+M\+A\+X\+R\+S\+SI}~-\/80
+\item 
+\#define \hyperlink{group___neighbors_ga6e36748acedcb5b5ca037ad19227aeec}{G\+O\+O\+D\+N\+E\+I\+G\+H\+B\+O\+R\+M\+I\+N\+R\+S\+SI}~-\/90
+\item 
+\#define \hyperlink{group___neighbors_ga756051d437b8e4198fe0432b5d73a48b}{S\+W\+I\+T\+C\+H\+S\+T\+A\+B\+I\+L\+I\+T\+Y\+T\+H\+R\+E\+S\+H\+O\+LD}~3
+\item 
+\#define \hyperlink{group___neighbors_ga4d2874b0e44346069a08e6cf15d85d87}{D\+E\+F\+A\+U\+L\+T\+L\+I\+N\+K\+C\+O\+ST}~15
+\item 
+\#define \hyperlink{group___neighbors_gaec4751ff896721a5a0fd70b841d09724}{M\+A\+X\+D\+A\+G\+R\+A\+NK}~0xffff
+\item 
+\#define \hyperlink{group___neighbors_gacc9a3232f2dca59348d8b536005a2f89}{D\+E\+F\+A\+U\+L\+T\+D\+A\+G\+R\+A\+NK}~\hyperlink{group___neighbors_gaec4751ff896721a5a0fd70b841d09724}{M\+A\+X\+D\+A\+G\+R\+A\+NK}
+\item 
+\#define \hyperlink{group___neighbors_gaa81003e9317e9cd007be68d37a09eb40}{M\+I\+N\+H\+O\+P\+R\+A\+N\+K\+I\+N\+C\+R\+E\+A\+SE}~256
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___neighbors_ga4e9c73e9e7ec8a90679bed5d18b593a7}{neighbors\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Initializes this module. \end{DoxyCompactList}\item 
+\hyperlink{opendefs_8h_a502861d0bb432f5702761bd854023e21}{dagrank\+\_\+t} \hyperlink{group___neighbors_gab749e7566b80148cd38495cd7bd62272}{neighbors\+\_\+get\+My\+D\+A\+Grank} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Retrieve this mote\textquotesingle{}s current D\+AG rank. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{group___neighbors_ga07d5dcae3e882a8a9a85997136952fcc}{neighbors\+\_\+get\+Num\+Neighbors} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Retrieve the number of neighbors this mote\textquotesingle{}s currently knows of. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group___neighbors_gaaa20cedbb0eb4d6fb9389ccb211a3903}{neighbors\+\_\+get\+Preferred\+Parent\+Eui64} (\hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$\hyperlink{samr21__xpro_201bsp__flash_201bsp__flash_8c_a1f7d4f7dc49d64e8ffe1ff2e385657e5}{address\+To\+Write})
+\begin{DoxyCompactList}\small\item\em Retrieve my preferred parent\textquotesingle{}s E\+U\+I64 address. \end{DoxyCompactList}\item 
+\hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$ \hyperlink{group___neighbors_gae741527ad75fcd31a5d7d6fc585174b2}{neighbors\+\_\+get\+K\+A\+Neighbor} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} ka\+Period)
+\begin{DoxyCompactList}\small\item\em Find neighbor to which to send KA. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___neighbors_gaa6ff67c38ad56955395d474be68a47e5}{neighbors\+\_\+set\+My\+D\+A\+Grank} (\hyperlink{opendefs_8h_a502861d0bb432f5702761bd854023e21}{dagrank\+\_\+t} rank)
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group___neighbors_gada9893dd745640061b063a06c67be154}{neighbors\+\_\+is\+Stable\+Neighbor} (\hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$address)
+\begin{DoxyCompactList}\small\item\em Indicate whether some neighbor is a stable neighbor. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group___neighbors_ga6811829f946d51d6e30b2f9f812df133}{neighbors\+\_\+is\+Preferred\+Parent} (\hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$address)
+\begin{DoxyCompactList}\small\item\em Indicate whether some neighbor is a preferred neighbor. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group___neighbors_ga3a84fbff4104444fdab844d9cbaa0c77}{neighbors\+\_\+is\+Neighbor\+With\+Lower\+D\+A\+Grank} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} index)
+\begin{DoxyCompactList}\small\item\em Indicate whether some neighbor has a lower D\+AG rank that me. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group___neighbors_gac13c1a5dda0cc06109b811f093b1a400}{neighbors\+\_\+is\+Neighbor\+With\+Higher\+D\+A\+Grank} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} index)
+\begin{DoxyCompactList}\small\item\em Indicate whether some neighbor has a lower D\+AG rank that me. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___neighbors_gaf6850dedabd52cdef3690aee1b1c554c}{neighbors\+\_\+indicate\+Rx} (\hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$l2\+\_\+src, \hyperlink{_p_e___types_8h_aef44329758059c91c76d334e8fc09700}{int8\+\_\+t} rssi, \hyperlink{structasn__t}{asn\+\_\+t} $\ast$asn\+Timestamp, \hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} join\+Prio\+Present, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} join\+Prio)
+\begin{DoxyCompactList}\small\item\em Indicate some (non-\/\+A\+CK) packet was received from a neighbor. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___neighbors_ga8379ad6d1816deed995c75033ffd740a}{neighbors\+\_\+indicate\+Tx} (\hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$dest, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} num\+Tx\+Attempts, \hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} was\+\_\+finally\+\_\+acked, \hyperlink{structasn__t}{asn\+\_\+t} $\ast$asn\+Timestamp)
+\begin{DoxyCompactList}\small\item\em Indicate some packet was sent to some neighbor. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___neighbors_gaa4e24acdf2f814068990c3e535a65164}{neighbors\+\_\+indicate\+Rx\+D\+IO} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Indicate I just received a R\+PL D\+IO from a neighbor. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___neighbors_ga1c1819e3a38fb549a91c495d658b260f}{neighbors\+\_\+get\+Neighbor} (\hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$address, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} addr\+\_\+type, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} index)
+\begin{DoxyCompactList}\small\item\em Write the 64-\/bit address of some neighbor to some location. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___neighbors_ga995345b6dec99e3e20ef4059ed59db34}{neighbors\+\_\+update\+My\+D\+A\+Grank\+And\+Neighbor\+Preference} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Update my D\+AG rank and neighbor preference. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___neighbors_ga3fa32881f8cf7afa1e5334cef8185957}{neighbors\+\_\+remove\+Old} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group___neighbors_ga85475c492d943f16dc6da4fea6683352}{debug\+Print\+\_\+neighbors} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Triggers this module to print status information, over serial. \end{DoxyCompactList}\end{DoxyCompactItemize}

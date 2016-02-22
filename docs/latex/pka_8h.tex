@@ -1,0 +1,164 @@
+\hypertarget{pka_8h}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/source/pka.h File Reference}
+\label{pka_8h}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/source/pka.\+h@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/source/pka.\+h}}
+{\ttfamily \#include $<$headers/hw\+\_\+types.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}ecc\+\_\+curveinfo.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct___e_c_pt}{\+\_\+\+E\+C\+Pt}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{pka_8h_af93f63e19b7558a08670f4e9c7b4a805}{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+SS}~0
+\item 
+\#define \hyperlink{pka_8h_aa2181ee0338ecd27e6b8a5d092c3c611}{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+A\+I\+L\+U\+RE}~1
+\item 
+\#define \hyperlink{pka_8h_a5dfdaa80f7c2a9e84bb15489f9983029}{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+AM}~2
+\item 
+\#define \hyperlink{pka_8h_a1a17123017c14a56bc15579eb321f43b}{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+F\+\_\+\+U\+N\+D\+E\+R\+F\+L\+OW}~3
+\item 
+\#define \hyperlink{pka_8h_acf24295e092c175c0100a09bb067f474}{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+0}~4
+\item 
+\#define \hyperlink{pka_8h_a44ba964235708526426f713b1d0326a8}{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+\_\+\+G\+R\+\_\+B}~5
+\item 
+\#define \hyperlink{pka_8h_a2fced46456f8a316568814bfc70866c4}{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+\_\+\+L\+T\+\_\+B}~6
+\item 
+\#define \hyperlink{pka_8h_a589a77e5be38d5720349052c5a378576}{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+I\+N\+P\+RG}~7
+\item 
+\#define \hyperlink{pka_8h_a9ab8afaa99379e95eef3029c5ef521ec}{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+N\+O\+T\+\_\+\+I\+N\+P\+RG}~8
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct___e_c_pt}{\+\_\+\+E\+C\+Pt} \hyperlink{pka_8h_ad8a0d9ffc3dc89cecf35c8fac620a030}{t\+E\+C\+Pt}
+\item 
+typedef \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__pka__driver_gaed47ea15b15663675629b0e0388afede}{P\+K\+A\+Enable\+Int} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__pka__driver_ga332c572585f555dc982817a355284f70}{P\+K\+A\+Disable\+Int} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__pka__driver_gaac0d2e55a0331401d91eb645e043d333}{P\+K\+A\+Clear\+Int} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__pka__driver_ga8e873132638c12c2ac9fca35a36013d6}{P\+K\+A\+Reg\+Int} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}($\ast$pfn\+Handler)(\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}))
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__pka__driver_ga2d21625a6c77aee8721066476a68275d}{P\+K\+A\+Un\+Reg\+Int} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_ga82d30b6e54d4e06c2fd871dbefbf90c5}{P\+K\+A\+Get\+Ops\+Status} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_gadcb3179ff4f5d836e35d9b4505220787}{P\+K\+A\+Big\+Num\+Mod\+Start} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+B\+Num, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+B\+N\+Size, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Modulus, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Mod\+Size, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Result\+Vector)
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_ga23ee9b245d913950bdab98fb80e72f16}{P\+K\+A\+Big\+Num\+Mod\+Get\+Result} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Result\+Buf, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Size, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Res\+Vector\+Loc)
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_ga6b8827a49b626e7c90608ecbbc59e2b0}{P\+K\+A\+Big\+Num\+Cmp\+Start} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+B\+Num1, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+B\+Num2, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Size)
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_ga0b7348fb8033dfcb8a1584dfb064bf3f}{P\+K\+A\+Big\+Num\+Cmp\+Get\+Result} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_ga789ed728264b5f3d5b411ca72615e470}{P\+K\+A\+Big\+Num\+Inv\+Mod\+Start} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+B\+Num, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+B\+N\+Size, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Modulus, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Size, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Result\+Vector)
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_gaeb5b970ba8ccea84761f2b84ffc3408e}{P\+K\+A\+Big\+Num\+Inv\+Mod\+Get\+Result} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Result\+Buf, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Size, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Res\+Vector\+Loc)
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_gab72dd0782a8e971133dfc94b267881a1}{P\+K\+A\+Big\+Num\+Multiply\+Start} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Xplicand, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Xplicand\+Size, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Xplier, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Xplier\+Size, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Result\+Vector)
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_ga4891923a934ab7b9e174fdfd014665c6}{P\+K\+A\+Big\+Num\+Mult\+Get\+Result} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Result\+Buf, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Len, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Res\+Vector\+Loc)
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_ga41ae8dff39418d7499db8555a2a4b592}{P\+K\+A\+Big\+Num\+Add\+Start} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+B\+N1, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+B\+N1\+Size, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+B\+N2, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+B\+N2\+Size, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Result\+Vector)
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_ga77cf473c12e2c506e6753dacfd3bf219}{P\+K\+A\+Big\+Num\+Add\+Get\+Result} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Result\+Buf, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Len, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32res\+Vector\+Loc)
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_ga99c8ab12e5a5fcba7f63ad0d2f9a98dd}{P\+K\+A\+E\+C\+C\+Multiply\+Start} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Scalar, \hyperlink{pka_8h_ad8a0d9ffc3dc89cecf35c8fac620a030}{t\+E\+C\+Pt} $\ast$pt\+Ec\+Pt, \hyperlink{ecc__curveinfo_8h_a17a628519ae5ba49f5cf62decade4dcb}{t\+E\+C\+C\+Curve\+Info} $\ast$pt\+Curve, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Result\+Vector)
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_ga8ed171250f4b3a26e1f8268a41503450}{P\+K\+A\+E\+C\+C\+Multiply\+Get\+Result} (\hyperlink{pka_8h_ad8a0d9ffc3dc89cecf35c8fac620a030}{t\+E\+C\+Pt} $\ast$pt\+Out\+Ec\+Pt, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Res\+Vector\+Loc)
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_ga37519c82259a12764cb68cb265bc09c9}{P\+K\+A\+E\+C\+C\+Mult\+Gen\+Pt\+Start} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Scalar, \hyperlink{ecc__curveinfo_8h_a17a628519ae5ba49f5cf62decade4dcb}{t\+E\+C\+C\+Curve\+Info} $\ast$pt\+Curve, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Result\+Vector)
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_ga5fe2796e884a65a75bb1732831e0bca9}{P\+K\+A\+E\+C\+C\+Mult\+Gen\+Pt\+Get\+Result} (\hyperlink{pka_8h_ad8a0d9ffc3dc89cecf35c8fac620a030}{t\+E\+C\+Pt} $\ast$pt\+Out\+Ec\+Pt, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} pui32\+Res\+Vector\+Loc)
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_gab12f37d870c923e7800d0523c40442a6}{P\+K\+A\+E\+C\+C\+Add\+Start} (\hyperlink{pka_8h_ad8a0d9ffc3dc89cecf35c8fac620a030}{t\+E\+C\+Pt} $\ast$pt\+Ec\+Pt1, \hyperlink{pka_8h_ad8a0d9ffc3dc89cecf35c8fac620a030}{t\+E\+C\+Pt} $\ast$pt\+Ec\+Pt2, \hyperlink{ecc__curveinfo_8h_a17a628519ae5ba49f5cf62decade4dcb}{t\+E\+C\+C\+Curve\+Info} $\ast$pt\+Curve, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Result\+Vector)
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_ga4fe3c47d5600bd8e8b073a19ec96d258}{P\+K\+A\+E\+C\+C\+Add\+Get\+Result} (\hyperlink{pka_8h_ad8a0d9ffc3dc89cecf35c8fac620a030}{t\+E\+C\+Pt} $\ast$pt\+Out\+Ec\+Pt, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Result\+Loc)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{pka.\+h@{pka.\+h}!P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+\_\+\+G\+R\+\_\+B@{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+\_\+\+G\+R\+\_\+B}}
+\index{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+\_\+\+G\+R\+\_\+B@{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+\_\+\+G\+R\+\_\+B}!pka.\+h@{pka.\+h}}
+\subsubsection[{\texorpdfstring{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+\_\+\+G\+R\+\_\+B}{PKA_STATUS_A_GR_B}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+\_\+\+G\+R\+\_\+B~5}\hypertarget{pka_8h_a44ba964235708526426f713b1d0326a8}{}\label{pka_8h_a44ba964235708526426f713b1d0326a8}
+
+
+Definition at line 69 of file pka.\+h.
+
+\index{pka.\+h@{pka.\+h}!P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+\_\+\+L\+T\+\_\+B@{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+\_\+\+L\+T\+\_\+B}}
+\index{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+\_\+\+L\+T\+\_\+B@{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+\_\+\+L\+T\+\_\+B}!pka.\+h@{pka.\+h}}
+\subsubsection[{\texorpdfstring{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+\_\+\+L\+T\+\_\+B}{PKA_STATUS_A_LT_B}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+\_\+\+L\+T\+\_\+B~6}\hypertarget{pka_8h_a2fced46456f8a316568814bfc70866c4}{}\label{pka_8h_a2fced46456f8a316568814bfc70866c4}
+
+
+Definition at line 72 of file pka.\+h.
+
+\index{pka.\+h@{pka.\+h}!P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+F\+\_\+\+U\+N\+D\+E\+R\+F\+L\+OW@{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+F\+\_\+\+U\+N\+D\+E\+R\+F\+L\+OW}}
+\index{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+F\+\_\+\+U\+N\+D\+E\+R\+F\+L\+OW@{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+F\+\_\+\+U\+N\+D\+E\+R\+F\+L\+OW}!pka.\+h@{pka.\+h}}
+\subsubsection[{\texorpdfstring{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+F\+\_\+\+U\+N\+D\+E\+R\+F\+L\+OW}{PKA_STATUS_BUF_UNDERFLOW}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+F\+\_\+\+U\+N\+D\+E\+R\+F\+L\+OW~3}\hypertarget{pka_8h_a1a17123017c14a56bc15579eb321f43b}{}\label{pka_8h_a1a17123017c14a56bc15579eb321f43b}
+
+
+Definition at line 67 of file pka.\+h.
+
+\index{pka.\+h@{pka.\+h}!P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+A\+I\+L\+U\+RE@{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+A\+I\+L\+U\+RE}}
+\index{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+A\+I\+L\+U\+RE@{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+A\+I\+L\+U\+RE}!pka.\+h@{pka.\+h}}
+\subsubsection[{\texorpdfstring{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+A\+I\+L\+U\+RE}{PKA_STATUS_FAILURE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+A\+I\+L\+U\+RE~1}\hypertarget{pka_8h_aa2181ee0338ecd27e6b8a5d092c3c611}{}\label{pka_8h_aa2181ee0338ecd27e6b8a5d092c3c611}
+
+
+Definition at line 65 of file pka.\+h.
+
+\index{pka.\+h@{pka.\+h}!P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+AM@{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+AM}}
+\index{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+AM@{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+AM}!pka.\+h@{pka.\+h}}
+\subsubsection[{\texorpdfstring{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+AM}{PKA_STATUS_INVALID_PARAM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+AM~2}\hypertarget{pka_8h_a5dfdaa80f7c2a9e84bb15489f9983029}{}\label{pka_8h_a5dfdaa80f7c2a9e84bb15489f9983029}
+
+
+Definition at line 66 of file pka.\+h.
+
+\index{pka.\+h@{pka.\+h}!P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+I\+N\+P\+RG@{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+I\+N\+P\+RG}}
+\index{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+I\+N\+P\+RG@{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+I\+N\+P\+RG}!pka.\+h@{pka.\+h}}
+\subsubsection[{\texorpdfstring{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+I\+N\+P\+RG}{PKA_STATUS_OPERATION_INPRG}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+I\+N\+P\+RG~7}\hypertarget{pka_8h_a589a77e5be38d5720349052c5a378576}{}\label{pka_8h_a589a77e5be38d5720349052c5a378576}
+
+
+Definition at line 75 of file pka.\+h.
+
+\index{pka.\+h@{pka.\+h}!P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+N\+O\+T\+\_\+\+I\+N\+P\+RG@{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+N\+O\+T\+\_\+\+I\+N\+P\+RG}}
+\index{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+N\+O\+T\+\_\+\+I\+N\+P\+RG@{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+N\+O\+T\+\_\+\+I\+N\+P\+RG}!pka.\+h@{pka.\+h}}
+\subsubsection[{\texorpdfstring{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+N\+O\+T\+\_\+\+I\+N\+P\+RG}{PKA_STATUS_OPERATION_NOT_INPRG}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+N\+O\+T\+\_\+\+I\+N\+P\+RG~8}\hypertarget{pka_8h_a9ab8afaa99379e95eef3029c5ef521ec}{}\label{pka_8h_a9ab8afaa99379e95eef3029c5ef521ec}
+
+
+Definition at line 76 of file pka.\+h.
+
+\index{pka.\+h@{pka.\+h}!P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+0@{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+0}}
+\index{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+0@{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+0}!pka.\+h@{pka.\+h}}
+\subsubsection[{\texorpdfstring{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+0}{PKA_STATUS_RESULT_0}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+0~4}\hypertarget{pka_8h_acf24295e092c175c0100a09bb067f474}{}\label{pka_8h_acf24295e092c175c0100a09bb067f474}
+
+
+Definition at line 68 of file pka.\+h.
+
+\index{pka.\+h@{pka.\+h}!P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+SS@{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+SS}}
+\index{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+SS@{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+SS}!pka.\+h@{pka.\+h}}
+\subsubsection[{\texorpdfstring{P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+SS}{PKA_STATUS_SUCCESS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+K\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+SS~0}\hypertarget{pka_8h_af93f63e19b7558a08670f4e9c7b4a805}{}\label{pka_8h_af93f63e19b7558a08670f4e9c7b4a805}
+
+
+Definition at line 64 of file pka.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\index{pka.\+h@{pka.\+h}!t\+E\+C\+Pt@{t\+E\+C\+Pt}}
+\index{t\+E\+C\+Pt@{t\+E\+C\+Pt}!pka.\+h@{pka.\+h}}
+\subsubsection[{\texorpdfstring{t\+E\+C\+Pt}{tECPt}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+E\+C\+Pt}
+ {\bf t\+E\+C\+Pt}}\hypertarget{pka_8h_ad8a0d9ffc3dc89cecf35c8fac620a030}{}\label{pka_8h_ad8a0d9ffc3dc89cecf35c8fac620a030}
+\index{pka.\+h@{pka.\+h}!t\+P\+K\+A\+Status@{t\+P\+K\+A\+Status}}
+\index{t\+P\+K\+A\+Status@{t\+P\+K\+A\+Status}!pka.\+h@{pka.\+h}}
+\subsubsection[{\texorpdfstring{t\+P\+K\+A\+Status}{tPKAStatus}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf uint8\+\_\+t} {\bf t\+P\+K\+A\+Status}}\hypertarget{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{}\label{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}
+
+
+Definition at line 103 of file pka.\+h.
+

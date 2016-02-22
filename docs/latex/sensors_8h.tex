@@ -1,0 +1,203 @@
+\hypertarget{sensors_8h}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/sensors.h File Reference}
+\label{sensors_8h}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/sensors.\+h@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/sensors.\+h}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structsensors__vars__t}{sensors\+\_\+vars\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{sensors_8h_a464fdb7834b9b30e4c1dfdf1134cd8cb}{N\+U\+M\+S\+E\+N\+S\+O\+RS}~10
+\begin{DoxyCompactList}\small\item\em Declaration of the \char`\"{}sensors\char`\"{} board-\/specif driver. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t}($\ast$ \hyperlink{sensors_8h_a4896998a8e1784ceb727ed0e8f459e47}{callback\+Read\+\_\+cbt}) (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+typedef float($\ast$ \hyperlink{sensors_8h_a9f4f0fc901543c7425be6f83307c0ac2}{callback\+Convert\+\_\+cbt}) (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} value)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \\*
+\hyperlink{sensors_8h_a1e8054db89feba236b2235d16d0bd1adaae437a8ae2b73a842ca315b078a455ad}{S\+E\+N\+S\+O\+R\+\_\+\+Z\+E\+RO}, 
+\hyperlink{sensors_8h_a1e8054db89feba236b2235d16d0bd1adabbe996bc7bfb2f8f80d40a4aa2fec6f9}{S\+E\+N\+S\+O\+R\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE}, 
+\hyperlink{sensors_8h_a1e8054db89feba236b2235d16d0bd1adaa70c5bcb83cc62f0ee1179da76c383ef}{S\+E\+N\+S\+O\+R\+\_\+\+H\+U\+M\+I\+D\+I\+TY}, 
+\hyperlink{sensors_8h_a1e8054db89feba236b2235d16d0bd1ada06b104edf1025fa8b474b60efe7c5cad}{S\+E\+N\+S\+O\+R\+\_\+\+L\+I\+G\+HT}, 
+\\*
+\hyperlink{sensors_8h_a1e8054db89feba236b2235d16d0bd1adae38f2f462f05ffee256ed0713b5e8e18}{S\+E\+N\+S\+O\+R\+\_\+\+X\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON}, 
+\hyperlink{sensors_8h_a1e8054db89feba236b2235d16d0bd1ada921b59d9d90da0dd3d21e21ff9a97032}{S\+E\+N\+S\+O\+R\+\_\+\+Y\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON}, 
+\hyperlink{sensors_8h_a1e8054db89feba236b2235d16d0bd1adaa0c66d83141501b225d233f3243bf2ca}{S\+E\+N\+S\+O\+R\+\_\+\+Z\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON}, 
+\hyperlink{sensors_8h_a1e8054db89feba236b2235d16d0bd1ada1dbf480516458fec9dab63b33b918290}{S\+E\+N\+S\+O\+R\+\_\+\+A\+D\+C\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE}, 
+\\*
+\hyperlink{sensors_8h_a1e8054db89feba236b2235d16d0bd1ada7bc601c147e3e41e550dc90eeb9f5575}{S\+E\+N\+S\+O\+R\+\_\+\+D\+E\+F\+A\+U\+LT}, 
+\hyperlink{sensors_8h_a1e8054db89feba236b2235d16d0bd1adaa41a07e65feb6f21b2f95a64c077592c}{S\+E\+N\+S\+O\+R\+\_\+\+L\+A\+ST}
+ \}\begin{DoxyCompactList}\small\item\em Sensor types. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{sensors_8h_ac5ec1d578591899e43c3515d05e573b7}{sensors\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Initialize sensors on the board. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{sensors_8h_a5a0a54b453dfc654f1f74f343e3ff75d}{sensors\+\_\+is\+\_\+present} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} sensor\+Type)
+\begin{DoxyCompactList}\small\item\em Returns a bool value indicating if a given sensor is present. \end{DoxyCompactList}\item 
+\hyperlink{sensors_8h_a4896998a8e1784ceb727ed0e8f459e47}{callback\+Read\+\_\+cbt} \hyperlink{sensors_8h_a6ba3436f989d13c46148fcec5d719aff}{sensors\+\_\+get\+Callback\+Read} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} sensor\+Type)
+\begin{DoxyCompactList}\small\item\em Returns the callback for reading data from a given sensor. \end{DoxyCompactList}\item 
+\hyperlink{sensors_8h_a9f4f0fc901543c7425be6f83307c0ac2}{callback\+Convert\+\_\+cbt} \hyperlink{sensors_8h_aeefb0a7b2300cb82f643ca04077e03e0}{sensors\+\_\+get\+Callback\+Convert} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} sensor\+Type)
+\begin{DoxyCompactList}\small\item\em Returns the callback for converting data from a given sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{sensors.\+h@{sensors.\+h}!N\+U\+M\+S\+E\+N\+S\+O\+RS@{N\+U\+M\+S\+E\+N\+S\+O\+RS}}
+\index{N\+U\+M\+S\+E\+N\+S\+O\+RS@{N\+U\+M\+S\+E\+N\+S\+O\+RS}!sensors.\+h@{sensors.\+h}}
+\subsubsection[{\texorpdfstring{N\+U\+M\+S\+E\+N\+S\+O\+RS}{NUMSENSORS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+U\+M\+S\+E\+N\+S\+O\+RS~10}\hypertarget{sensors_8h_a464fdb7834b9b30e4c1dfdf1134cd8cb}{}\label{sensors_8h_a464fdb7834b9b30e4c1dfdf1134cd8cb}
+
+
+Declaration of the \char`\"{}sensors\char`\"{} board-\/specif driver. 
+
+\begin{DoxyAuthor}{Author}
+Nicola Accettura \href{mailto:nicola.accettura@eecs.berkeley.edu}{\tt nicola.\+accettura@eecs.\+berkeley.\+edu}, March 2015.\+define N\+U\+M\+S\+E\+N\+S\+O\+RS if not defined in board\+\_\+info.\+h 
+\end{DoxyAuthor}
+
+
+Definition at line 13 of file sensors.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\index{sensors.\+h@{sensors.\+h}!callback\+Convert\+\_\+cbt@{callback\+Convert\+\_\+cbt}}
+\index{callback\+Convert\+\_\+cbt@{callback\+Convert\+\_\+cbt}!sensors.\+h@{sensors.\+h}}
+\subsubsection[{\texorpdfstring{callback\+Convert\+\_\+cbt}{callbackConvert_cbt}}]{\setlength{\rightskip}{0pt plus 5cm}typedef float($\ast$ callback\+Convert\+\_\+cbt) ({\bf uint16\+\_\+t} value)}\hypertarget{sensors_8h_a9f4f0fc901543c7425be6f83307c0ac2}{}\label{sensors_8h_a9f4f0fc901543c7425be6f83307c0ac2}
+
+
+Definition at line 34 of file sensors.\+h.
+
+\index{sensors.\+h@{sensors.\+h}!callback\+Read\+\_\+cbt@{callback\+Read\+\_\+cbt}}
+\index{callback\+Read\+\_\+cbt@{callback\+Read\+\_\+cbt}!sensors.\+h@{sensors.\+h}}
+\subsubsection[{\texorpdfstring{callback\+Read\+\_\+cbt}{callbackRead_cbt}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf uint16\+\_\+t}($\ast$ callback\+Read\+\_\+cbt) ({\bf void})}\hypertarget{sensors_8h_a4896998a8e1784ceb727ed0e8f459e47}{}\label{sensors_8h_a4896998a8e1784ceb727ed0e8f459e47}
+
+
+Definition at line 32 of file sensors.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\subsubsection[{\texorpdfstring{anonymous enum}{anonymous enum}}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\hypertarget{sensors_8h_a1e8054db89feba236b2235d16d0bd1ad}{}\label{sensors_8h_a1e8054db89feba236b2235d16d0bd1ad}
+
+
+Sensor types. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+E\+N\+S\+O\+R\+\_\+\+Z\+E\+RO@{S\+E\+N\+S\+O\+R\+\_\+\+Z\+E\+RO}!sensors.\+h@{sensors.\+h}}\index{sensors.\+h@{sensors.\+h}!S\+E\+N\+S\+O\+R\+\_\+\+Z\+E\+RO@{S\+E\+N\+S\+O\+R\+\_\+\+Z\+E\+RO}}\item[{\em 
+S\+E\+N\+S\+O\+R\+\_\+\+Z\+E\+RO\hypertarget{sensors_8h_a1e8054db89feba236b2235d16d0bd1adaae437a8ae2b73a842ca315b078a455ad}{}\label{sensors_8h_a1e8054db89feba236b2235d16d0bd1adaae437a8ae2b73a842ca315b078a455ad}
+}]\index{S\+E\+N\+S\+O\+R\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE@{S\+E\+N\+S\+O\+R\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE}!sensors.\+h@{sensors.\+h}}\index{sensors.\+h@{sensors.\+h}!S\+E\+N\+S\+O\+R\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE@{S\+E\+N\+S\+O\+R\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE}}\item[{\em 
+S\+E\+N\+S\+O\+R\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE\hypertarget{sensors_8h_a1e8054db89feba236b2235d16d0bd1adabbe996bc7bfb2f8f80d40a4aa2fec6f9}{}\label{sensors_8h_a1e8054db89feba236b2235d16d0bd1adabbe996bc7bfb2f8f80d40a4aa2fec6f9}
+}]\index{S\+E\+N\+S\+O\+R\+\_\+\+H\+U\+M\+I\+D\+I\+TY@{S\+E\+N\+S\+O\+R\+\_\+\+H\+U\+M\+I\+D\+I\+TY}!sensors.\+h@{sensors.\+h}}\index{sensors.\+h@{sensors.\+h}!S\+E\+N\+S\+O\+R\+\_\+\+H\+U\+M\+I\+D\+I\+TY@{S\+E\+N\+S\+O\+R\+\_\+\+H\+U\+M\+I\+D\+I\+TY}}\item[{\em 
+S\+E\+N\+S\+O\+R\+\_\+\+H\+U\+M\+I\+D\+I\+TY\hypertarget{sensors_8h_a1e8054db89feba236b2235d16d0bd1adaa70c5bcb83cc62f0ee1179da76c383ef}{}\label{sensors_8h_a1e8054db89feba236b2235d16d0bd1adaa70c5bcb83cc62f0ee1179da76c383ef}
+}]\index{S\+E\+N\+S\+O\+R\+\_\+\+L\+I\+G\+HT@{S\+E\+N\+S\+O\+R\+\_\+\+L\+I\+G\+HT}!sensors.\+h@{sensors.\+h}}\index{sensors.\+h@{sensors.\+h}!S\+E\+N\+S\+O\+R\+\_\+\+L\+I\+G\+HT@{S\+E\+N\+S\+O\+R\+\_\+\+L\+I\+G\+HT}}\item[{\em 
+S\+E\+N\+S\+O\+R\+\_\+\+L\+I\+G\+HT\hypertarget{sensors_8h_a1e8054db89feba236b2235d16d0bd1ada06b104edf1025fa8b474b60efe7c5cad}{}\label{sensors_8h_a1e8054db89feba236b2235d16d0bd1ada06b104edf1025fa8b474b60efe7c5cad}
+}]\index{S\+E\+N\+S\+O\+R\+\_\+\+X\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON@{S\+E\+N\+S\+O\+R\+\_\+\+X\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON}!sensors.\+h@{sensors.\+h}}\index{sensors.\+h@{sensors.\+h}!S\+E\+N\+S\+O\+R\+\_\+\+X\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON@{S\+E\+N\+S\+O\+R\+\_\+\+X\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON}}\item[{\em 
+S\+E\+N\+S\+O\+R\+\_\+\+X\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON\hypertarget{sensors_8h_a1e8054db89feba236b2235d16d0bd1adae38f2f462f05ffee256ed0713b5e8e18}{}\label{sensors_8h_a1e8054db89feba236b2235d16d0bd1adae38f2f462f05ffee256ed0713b5e8e18}
+}]\index{S\+E\+N\+S\+O\+R\+\_\+\+Y\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON@{S\+E\+N\+S\+O\+R\+\_\+\+Y\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON}!sensors.\+h@{sensors.\+h}}\index{sensors.\+h@{sensors.\+h}!S\+E\+N\+S\+O\+R\+\_\+\+Y\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON@{S\+E\+N\+S\+O\+R\+\_\+\+Y\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON}}\item[{\em 
+S\+E\+N\+S\+O\+R\+\_\+\+Y\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON\hypertarget{sensors_8h_a1e8054db89feba236b2235d16d0bd1ada921b59d9d90da0dd3d21e21ff9a97032}{}\label{sensors_8h_a1e8054db89feba236b2235d16d0bd1ada921b59d9d90da0dd3d21e21ff9a97032}
+}]\index{S\+E\+N\+S\+O\+R\+\_\+\+Z\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON@{S\+E\+N\+S\+O\+R\+\_\+\+Z\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON}!sensors.\+h@{sensors.\+h}}\index{sensors.\+h@{sensors.\+h}!S\+E\+N\+S\+O\+R\+\_\+\+Z\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON@{S\+E\+N\+S\+O\+R\+\_\+\+Z\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON}}\item[{\em 
+S\+E\+N\+S\+O\+R\+\_\+\+Z\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON\hypertarget{sensors_8h_a1e8054db89feba236b2235d16d0bd1adaa0c66d83141501b225d233f3243bf2ca}{}\label{sensors_8h_a1e8054db89feba236b2235d16d0bd1adaa0c66d83141501b225d233f3243bf2ca}
+}]\index{S\+E\+N\+S\+O\+R\+\_\+\+A\+D\+C\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE@{S\+E\+N\+S\+O\+R\+\_\+\+A\+D\+C\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE}!sensors.\+h@{sensors.\+h}}\index{sensors.\+h@{sensors.\+h}!S\+E\+N\+S\+O\+R\+\_\+\+A\+D\+C\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE@{S\+E\+N\+S\+O\+R\+\_\+\+A\+D\+C\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE}}\item[{\em 
+S\+E\+N\+S\+O\+R\+\_\+\+A\+D\+C\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE\hypertarget{sensors_8h_a1e8054db89feba236b2235d16d0bd1ada1dbf480516458fec9dab63b33b918290}{}\label{sensors_8h_a1e8054db89feba236b2235d16d0bd1ada1dbf480516458fec9dab63b33b918290}
+}]\index{S\+E\+N\+S\+O\+R\+\_\+\+D\+E\+F\+A\+U\+LT@{S\+E\+N\+S\+O\+R\+\_\+\+D\+E\+F\+A\+U\+LT}!sensors.\+h@{sensors.\+h}}\index{sensors.\+h@{sensors.\+h}!S\+E\+N\+S\+O\+R\+\_\+\+D\+E\+F\+A\+U\+LT@{S\+E\+N\+S\+O\+R\+\_\+\+D\+E\+F\+A\+U\+LT}}\item[{\em 
+S\+E\+N\+S\+O\+R\+\_\+\+D\+E\+F\+A\+U\+LT\hypertarget{sensors_8h_a1e8054db89feba236b2235d16d0bd1ada7bc601c147e3e41e550dc90eeb9f5575}{}\label{sensors_8h_a1e8054db89feba236b2235d16d0bd1ada7bc601c147e3e41e550dc90eeb9f5575}
+}]\index{S\+E\+N\+S\+O\+R\+\_\+\+L\+A\+ST@{S\+E\+N\+S\+O\+R\+\_\+\+L\+A\+ST}!sensors.\+h@{sensors.\+h}}\index{sensors.\+h@{sensors.\+h}!S\+E\+N\+S\+O\+R\+\_\+\+L\+A\+ST@{S\+E\+N\+S\+O\+R\+\_\+\+L\+A\+ST}}\item[{\em 
+S\+E\+N\+S\+O\+R\+\_\+\+L\+A\+ST\hypertarget{sensors_8h_a1e8054db89feba236b2235d16d0bd1adaa41a07e65feb6f21b2f95a64c077592c}{}\label{sensors_8h_a1e8054db89feba236b2235d16d0bd1adaa41a07e65feb6f21b2f95a64c077592c}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 17 of file sensors.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{sensors.\+h@{sensors.\+h}!sensors\+\_\+get\+Callback\+Convert@{sensors\+\_\+get\+Callback\+Convert}}
+\index{sensors\+\_\+get\+Callback\+Convert@{sensors\+\_\+get\+Callback\+Convert}!sensors.\+h@{sensors.\+h}}
+\subsubsection[{\texorpdfstring{sensors\+\_\+get\+Callback\+Convert(uint8\+\_\+t sensor\+Type)}{sensors_getCallbackConvert(uint8_t sensorType)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf callback\+Convert\+\_\+cbt} sensors\+\_\+get\+Callback\+Convert (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{sensor\+Type}
+\end{DoxyParamCaption}
+)}\hypertarget{sensors_8h_aeefb0a7b2300cb82f643ca04077e03e0}{}\label{sensors_8h_aeefb0a7b2300cb82f643ca04077e03e0}
+
+
+Returns the callback for converting data from a given sensor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em sensor\+Type} & sensor type used to associate the callback. \\
+\hline
+\mbox{\tt out}  & {\em callback} & for converting data. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 97 of file sensors.\+c.
+
+\index{sensors.\+h@{sensors.\+h}!sensors\+\_\+get\+Callback\+Read@{sensors\+\_\+get\+Callback\+Read}}
+\index{sensors\+\_\+get\+Callback\+Read@{sensors\+\_\+get\+Callback\+Read}!sensors.\+h@{sensors.\+h}}
+\subsubsection[{\texorpdfstring{sensors\+\_\+get\+Callback\+Read(uint8\+\_\+t sensor\+Type)}{sensors_getCallbackRead(uint8_t sensorType)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf callback\+Read\+\_\+cbt} sensors\+\_\+get\+Callback\+Read (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{sensor\+Type}
+\end{DoxyParamCaption}
+)}\hypertarget{sensors_8h_a6ba3436f989d13c46148fcec5d719aff}{}\label{sensors_8h_a6ba3436f989d13c46148fcec5d719aff}
+
+
+Returns the callback for reading data from a given sensor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em sensor\+Type} & sensor type used to associate the callback. \\
+\hline
+\mbox{\tt out}  & {\em callback} & for reading data. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 69 of file sensors.\+c.
+
+\index{sensors.\+h@{sensors.\+h}!sensors\+\_\+init@{sensors\+\_\+init}}
+\index{sensors\+\_\+init@{sensors\+\_\+init}!sensors.\+h@{sensors.\+h}}
+\subsubsection[{\texorpdfstring{sensors\+\_\+init(void)}{sensors_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sensors\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{sensors_8h_ac5ec1d578591899e43c3515d05e573b7}{}\label{sensors_8h_ac5ec1d578591899e43c3515d05e573b7}
+
+
+Initialize sensors on the board. 
+
+
+
+Definition at line 28 of file sensors.\+c.
+
+\index{sensors.\+h@{sensors.\+h}!sensors\+\_\+is\+\_\+present@{sensors\+\_\+is\+\_\+present}}
+\index{sensors\+\_\+is\+\_\+present@{sensors\+\_\+is\+\_\+present}!sensors.\+h@{sensors.\+h}}
+\subsubsection[{\texorpdfstring{sensors\+\_\+is\+\_\+present(uint8\+\_\+t sensor\+Type)}{sensors_is_present(uint8_t sensorType)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} sensors\+\_\+is\+\_\+present (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{sensor\+Type}
+\end{DoxyParamCaption}
+)}\hypertarget{sensors_8h_a5a0a54b453dfc654f1f74f343e3ff75d}{}\label{sensors_8h_a5a0a54b453dfc654f1f74f343e3ff75d}
+
+
+Returns a bool value indicating if a given sensor is present. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em sensor\+Type} & sensor type polled. \\
+\hline
+\mbox{\tt out}  & {\em return\+Val} & presence of the sensor. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 60 of file sensors.\+c.
+

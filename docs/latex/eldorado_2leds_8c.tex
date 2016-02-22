@@ -1,0 +1,196 @@
+\hypertarget{eldorado_2leds_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/eldorado/leds.c File Reference}
+\label{eldorado_2leds_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/eldorado/leds.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/eldorado/leds.\+c}}
+{\ttfamily \#include \char`\"{}leds.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}eldorado.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__leds_ga67cfc3137a465e560792490e81365254}{leds\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em definition of the \char`\"{}leds\char`\"{} bsp module for Eldo and Jorge boards. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{eldorado_2leds_8c_ad38436349015612db8b4cd2009672b64}{led\+\_\+error\+\_\+on} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{eldorado_2leds_8c_af36010eac24150dfe20b837c4a9711d0}{led\+\_\+error\+\_\+off} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{eldorado_2leds_8c_ab5b1bdc77157ff441dcf85065ce0a0bc}{led\+\_\+error\+\_\+toggle} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{eldorado_2leds_8c_a2bac991b845435f1ef981951d842cf48}{led\+\_\+radio\+\_\+on} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{eldorado_2leds_8c_a99264d64826adce4f65ee07230506020}{led\+\_\+radio\+\_\+off} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{eldorado_2leds_8c_a200957d5632f351583a9318ca6e4e45e}{led\+\_\+radio\+\_\+toggle} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{eldorado_2leds_8c_a9ba853876a2b25bf0affd92986f42511}{led\+\_\+sync\+\_\+on} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{eldorado_2leds_8c_a525916e256973cf6782f8c5fcebdbfb8}{led\+\_\+sync\+\_\+off} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{eldorado_2leds_8c_aff776ede4b6c1d2cec445b070e27c066}{led\+\_\+sync\+\_\+toggle} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{eldorado_2leds_8c_a5c464cdc62ee2c85f662be49444e6156}{led\+\_\+all\+\_\+on} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{eldorado_2leds_8c_a305069be6b3560c41be7228d8b54a62d}{led\+\_\+all\+\_\+off} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{eldorado_2leds_8c_aef4330f54fe93e7ef9d0a08570e46f15}{led\+\_\+all\+\_\+toggle} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__leds_gaa7592c1f5c7d250c0bafea1d29ff64ab}{leds\+\_\+circular\+\_\+shift} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__leds_ga8dab59dd00dafd1644dfd57e59c8fc29}{leds\+\_\+increment} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{eldorado_2leds_8c_a6dcb921686a449c6e3b99e9f831f73ca}{led\+\_\+temp}
+\item 
+unsigned int \hyperlink{eldorado_2leds_8c_a8148b875865c5f7efbb3bdd3bbe4deb4}{L\+ED} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{eldorado/leds.\+c@{eldorado/leds.\+c}!led\+\_\+all\+\_\+off@{led\+\_\+all\+\_\+off}}
+\index{led\+\_\+all\+\_\+off@{led\+\_\+all\+\_\+off}!eldorado/leds.\+c@{eldorado/leds.\+c}}
+\subsubsection[{\texorpdfstring{led\+\_\+all\+\_\+off()}{led_all_off()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} led\+\_\+all\+\_\+off (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{eldorado_2leds_8c_a305069be6b3560c41be7228d8b54a62d}{}\label{eldorado_2leds_8c_a305069be6b3560c41be7228d8b54a62d}
+
+
+Definition at line 66 of file leds.\+c.
+
+\index{eldorado/leds.\+c@{eldorado/leds.\+c}!led\+\_\+all\+\_\+on@{led\+\_\+all\+\_\+on}}
+\index{led\+\_\+all\+\_\+on@{led\+\_\+all\+\_\+on}!eldorado/leds.\+c@{eldorado/leds.\+c}}
+\subsubsection[{\texorpdfstring{led\+\_\+all\+\_\+on()}{led_all_on()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} led\+\_\+all\+\_\+on (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{eldorado_2leds_8c_a5c464cdc62ee2c85f662be49444e6156}{}\label{eldorado_2leds_8c_a5c464cdc62ee2c85f662be49444e6156}
+
+
+Definition at line 60 of file leds.\+c.
+
+\index{eldorado/leds.\+c@{eldorado/leds.\+c}!led\+\_\+all\+\_\+toggle@{led\+\_\+all\+\_\+toggle}}
+\index{led\+\_\+all\+\_\+toggle@{led\+\_\+all\+\_\+toggle}!eldorado/leds.\+c@{eldorado/leds.\+c}}
+\subsubsection[{\texorpdfstring{led\+\_\+all\+\_\+toggle()}{led_all_toggle()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} led\+\_\+all\+\_\+toggle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{eldorado_2leds_8c_aef4330f54fe93e7ef9d0a08570e46f15}{}\label{eldorado_2leds_8c_aef4330f54fe93e7ef9d0a08570e46f15}
+
+
+Definition at line 72 of file leds.\+c.
+
+\index{eldorado/leds.\+c@{eldorado/leds.\+c}!led\+\_\+error\+\_\+off@{led\+\_\+error\+\_\+off}}
+\index{led\+\_\+error\+\_\+off@{led\+\_\+error\+\_\+off}!eldorado/leds.\+c@{eldorado/leds.\+c}}
+\subsubsection[{\texorpdfstring{led\+\_\+error\+\_\+off()}{led_error_off()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} led\+\_\+error\+\_\+off (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{eldorado_2leds_8c_af36010eac24150dfe20b837c4a9711d0}{}\label{eldorado_2leds_8c_af36010eac24150dfe20b837c4a9711d0}
+
+
+Definition at line 33 of file leds.\+c.
+
+\index{eldorado/leds.\+c@{eldorado/leds.\+c}!led\+\_\+error\+\_\+on@{led\+\_\+error\+\_\+on}}
+\index{led\+\_\+error\+\_\+on@{led\+\_\+error\+\_\+on}!eldorado/leds.\+c@{eldorado/leds.\+c}}
+\subsubsection[{\texorpdfstring{led\+\_\+error\+\_\+on()}{led_error_on()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} led\+\_\+error\+\_\+on (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{eldorado_2leds_8c_ad38436349015612db8b4cd2009672b64}{}\label{eldorado_2leds_8c_ad38436349015612db8b4cd2009672b64}
+
+
+Definition at line 29 of file leds.\+c.
+
+\index{eldorado/leds.\+c@{eldorado/leds.\+c}!led\+\_\+error\+\_\+toggle@{led\+\_\+error\+\_\+toggle}}
+\index{led\+\_\+error\+\_\+toggle@{led\+\_\+error\+\_\+toggle}!eldorado/leds.\+c@{eldorado/leds.\+c}}
+\subsubsection[{\texorpdfstring{led\+\_\+error\+\_\+toggle()}{led_error_toggle()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} led\+\_\+error\+\_\+toggle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{eldorado_2leds_8c_ab5b1bdc77157ff441dcf85065ce0a0bc}{}\label{eldorado_2leds_8c_ab5b1bdc77157ff441dcf85065ce0a0bc}
+
+
+Definition at line 36 of file leds.\+c.
+
+\index{eldorado/leds.\+c@{eldorado/leds.\+c}!led\+\_\+radio\+\_\+off@{led\+\_\+radio\+\_\+off}}
+\index{led\+\_\+radio\+\_\+off@{led\+\_\+radio\+\_\+off}!eldorado/leds.\+c@{eldorado/leds.\+c}}
+\subsubsection[{\texorpdfstring{led\+\_\+radio\+\_\+off()}{led_radio_off()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} led\+\_\+radio\+\_\+off (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{eldorado_2leds_8c_a99264d64826adce4f65ee07230506020}{}\label{eldorado_2leds_8c_a99264d64826adce4f65ee07230506020}
+
+
+Definition at line 43 of file leds.\+c.
+
+\index{eldorado/leds.\+c@{eldorado/leds.\+c}!led\+\_\+radio\+\_\+on@{led\+\_\+radio\+\_\+on}}
+\index{led\+\_\+radio\+\_\+on@{led\+\_\+radio\+\_\+on}!eldorado/leds.\+c@{eldorado/leds.\+c}}
+\subsubsection[{\texorpdfstring{led\+\_\+radio\+\_\+on()}{led_radio_on()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} led\+\_\+radio\+\_\+on (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{eldorado_2leds_8c_a2bac991b845435f1ef981951d842cf48}{}\label{eldorado_2leds_8c_a2bac991b845435f1ef981951d842cf48}
+
+
+Definition at line 40 of file leds.\+c.
+
+\index{eldorado/leds.\+c@{eldorado/leds.\+c}!led\+\_\+radio\+\_\+toggle@{led\+\_\+radio\+\_\+toggle}}
+\index{led\+\_\+radio\+\_\+toggle@{led\+\_\+radio\+\_\+toggle}!eldorado/leds.\+c@{eldorado/leds.\+c}}
+\subsubsection[{\texorpdfstring{led\+\_\+radio\+\_\+toggle()}{led_radio_toggle()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} led\+\_\+radio\+\_\+toggle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{eldorado_2leds_8c_a200957d5632f351583a9318ca6e4e45e}{}\label{eldorado_2leds_8c_a200957d5632f351583a9318ca6e4e45e}
+
+
+Definition at line 46 of file leds.\+c.
+
+\index{eldorado/leds.\+c@{eldorado/leds.\+c}!led\+\_\+sync\+\_\+off@{led\+\_\+sync\+\_\+off}}
+\index{led\+\_\+sync\+\_\+off@{led\+\_\+sync\+\_\+off}!eldorado/leds.\+c@{eldorado/leds.\+c}}
+\subsubsection[{\texorpdfstring{led\+\_\+sync\+\_\+off()}{led_sync_off()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} led\+\_\+sync\+\_\+off (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{eldorado_2leds_8c_a525916e256973cf6782f8c5fcebdbfb8}{}\label{eldorado_2leds_8c_a525916e256973cf6782f8c5fcebdbfb8}
+
+
+Definition at line 53 of file leds.\+c.
+
+\index{eldorado/leds.\+c@{eldorado/leds.\+c}!led\+\_\+sync\+\_\+on@{led\+\_\+sync\+\_\+on}}
+\index{led\+\_\+sync\+\_\+on@{led\+\_\+sync\+\_\+on}!eldorado/leds.\+c@{eldorado/leds.\+c}}
+\subsubsection[{\texorpdfstring{led\+\_\+sync\+\_\+on()}{led_sync_on()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} led\+\_\+sync\+\_\+on (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{eldorado_2leds_8c_a9ba853876a2b25bf0affd92986f42511}{}\label{eldorado_2leds_8c_a9ba853876a2b25bf0affd92986f42511}
+
+
+Definition at line 50 of file leds.\+c.
+
+\index{eldorado/leds.\+c@{eldorado/leds.\+c}!led\+\_\+sync\+\_\+toggle@{led\+\_\+sync\+\_\+toggle}}
+\index{led\+\_\+sync\+\_\+toggle@{led\+\_\+sync\+\_\+toggle}!eldorado/leds.\+c@{eldorado/leds.\+c}}
+\subsubsection[{\texorpdfstring{led\+\_\+sync\+\_\+toggle()}{led_sync_toggle()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} led\+\_\+sync\+\_\+toggle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{eldorado_2leds_8c_aff776ede4b6c1d2cec445b070e27c066}{}\label{eldorado_2leds_8c_aff776ede4b6c1d2cec445b070e27c066}
+
+
+Definition at line 56 of file leds.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{eldorado/leds.\+c@{eldorado/leds.\+c}!L\+ED@{L\+ED}}
+\index{L\+ED@{L\+ED}!eldorado/leds.\+c@{eldorado/leds.\+c}}
+\subsubsection[{\texorpdfstring{L\+ED}{LED}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int L\+ED = 0}\hypertarget{eldorado_2leds_8c_a8148b875865c5f7efbb3bdd3bbe4deb4}{}\label{eldorado_2leds_8c_a8148b875865c5f7efbb3bdd3bbe4deb4}
+
+
+Definition at line 92 of file leds.\+c.
+
+\index{eldorado/leds.\+c@{eldorado/leds.\+c}!led\+\_\+temp@{led\+\_\+temp}}
+\index{led\+\_\+temp@{led\+\_\+temp}!eldorado/leds.\+c@{eldorado/leds.\+c}}
+\subsubsection[{\texorpdfstring{led\+\_\+temp}{led_temp}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} led\+\_\+temp}\hypertarget{eldorado_2leds_8c_a6dcb921686a449c6e3b99e9f831f73ca}{}\label{eldorado_2leds_8c_a6dcb921686a449c6e3b99e9f831f73ca}
+
+
+Definition at line 80 of file leds.\+c.
+

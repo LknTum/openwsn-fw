@@ -1,0 +1,26 @@
+\hypertarget{bsp__timer_8h}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/bsp\+\_\+timer.h File Reference}
+\label{bsp__timer_8h}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/bsp\+\_\+timer.\+h@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/bsp\+\_\+timer.\+h}}
+{\ttfamily \#include \char`\"{}stdint.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\\*
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}($\ast$ \hyperlink{group__bsp__timer_ga70c37f3709ac6eb30352181337000ba4}{bsp\+\_\+timer\+\_\+cbt}) (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__bsp__timer_gaffec2bf6372cf491a97821c19abad0fa}{bsp\+\_\+timer\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Initialize this module. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__bsp__timer_ga3a31a787657dccde5a1895fc87578589}{bsp\+\_\+timer\+\_\+set\+\_\+callback} (\hyperlink{openwsnmodule__obj_8h_a217f88f41d2d57897598ce4147c80419}{bsp\+\_\+timer\+\_\+cbt} cb)
+\begin{DoxyCompactList}\small\item\em Register a callback. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__bsp__timer_ga797994251b8540f4be7628411cb98c73}{bsp\+\_\+timer\+\_\+reset} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Reset the timer. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__bsp__timer_gac6b96b1c74c2fd8a4c307831d0fc7528}{bsp\+\_\+timer\+\_\+schedule\+In} (\hyperlink{z1_2board__info_8h_abe66b9c1c60db84f2a99f2b827275f24}{P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} delay\+Ticks)
+\begin{DoxyCompactList}\small\item\em Schedule the callback to be called in some specified time. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__bsp__timer_ga46f9e9c7fb4f454fdc1febf216409ed6}{bsp\+\_\+timer\+\_\+cancel\+\_\+schedule} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Cancel a running compare. \end{DoxyCompactList}\item 
+\hyperlink{z1_2board__info_8h_abe66b9c1c60db84f2a99f2b827275f24}{P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} \hyperlink{group__bsp__timer_gae648940e8aa53efe781a7bbb056a9e50}{bsp\+\_\+timer\+\_\+get\+\_\+current\+Value} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Return the current value of the timer\textquotesingle{}s counter. \end{DoxyCompactList}\item 
+\hyperlink{group__board_gac9ebdcc0a4f3c8422f5f4f0fbbe0ded0}{kick\+\_\+scheduler\+\_\+t} \hyperlink{group__bsp__timer_ga1e6f08f2808b6c73ae3ee4d31346abb9}{bsp\+\_\+timer\+\_\+isr} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}

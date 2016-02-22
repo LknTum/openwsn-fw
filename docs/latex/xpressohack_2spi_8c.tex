@@ -1,0 +1,174 @@
+\hypertarget{xpressohack_2spi_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/xpressohack/spi.c File Reference}
+\label{xpressohack_2spi_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/xpressohack/spi.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/xpressohack/spi.\+c}}
+{\ttfamily \#include \char`\"{}spi.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}clkpwr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}L\+P\+C17xx.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ssp\+\_\+spi\+\_\+wrapper.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structspi__vars__t}{spi\+\_\+vars\+\_\+t}
+\begin{DoxyCompactList}\small\item\em agilefox definition of the \char`\"{}spi\char`\"{} bsp module (based on openmote\+S\+T\+M32 code). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{xpressohack_2spi_8c_a2fea60141e8669444151bdd5f0a018e8}{S\+S\+P\+\_\+\+E\+N\+A\+B\+L\+ED}
+\begin{DoxyCompactList}\small\item\em L\+P\+C17\+X\+X-\/specific definition of the \char`\"{}spi\char`\"{} bsp module. \end{DoxyCompactList}\item 
+\#define \hyperlink{xpressohack_2spi_8c_adc2859b88c022ccb5916f671f08f43ca}{P\+I\+N\+\_\+\+M\+A\+S\+K\+\_\+\+CS}~(1$<$$<$6)
+\item 
+\#define \hyperlink{xpressohack_2spi_8c_aad3cd491353e7c161fe9aba57a15e476}{S\+P\+I\+\_\+\+IE}~(1$<$$<$7)
+\item 
+\#define \hyperlink{xpressohack_2spi_8c_a5a49a9323b5e0f95d8f08cccde5439e6}{S\+P\+I\+\_\+\+L\+SB}~(1$<$$<$6)
+\item 
+\#define \hyperlink{xpressohack_2spi_8c_aa1bf94e0fd155ce0082cc29e9aaa69ea}{S\+P\+I\+\_\+\+M\+ST}~(1$<$$<$5)
+\item 
+\#define \hyperlink{xpressohack_2spi_8c_ab63d9c1408fd05dfc56c5d3a36c7e1ab}{S\+P\+I\+\_\+\+S\+P\+IF}~(1$<$$<$7)
+\item 
+\#define \hyperlink{xpressohack_2spi_8c_ad8e335b1f808bd7408d2aef2377adcb1}{S\+P\+I\+\_\+\+C\+P\+OL}~(1$<$$<$4)
+\item 
+\#define \hyperlink{xpressohack_2spi_8c_a49e8927a636f45641d6231ac63b9e598}{S\+P\+I\+\_\+\+C\+P\+HA}~(1$<$$<$3)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{xpressohack_2spi_8c_a4549d5dc21db5356eb73470e66459f78}{S\+P\+I\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{xpressohack_2spi_8c_a5db0aceecaf7db5fbe2984e88fef3734}{spi\+\_\+init} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{xpressohack_2spi_8c_ac2fb3e956c783d2d4d5e7e418aa6fff0}{spi\+\_\+txrx} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$buf\+Tx, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} lenbuf\+Tx, \hyperlink{spi_8h_acc3b28d69cd1e029d05f77aa7d1ede06}{spi\+\_\+return\+\_\+t} return\+Type, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$buf\+Rx, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} max\+Len\+Buf\+Rx, \hyperlink{spi_8h_af5f18ca9b261f81e8649655fa1bdb3a2}{spi\+\_\+first\+\_\+t} is\+First, \hyperlink{spi_8h_a6a8a77d768dca340b71324f2aec66a97}{spi\+\_\+last\+\_\+t} is\+Last)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structspi__vars__t}{spi\+\_\+vars\+\_\+t} \hyperlink{xpressohack_2spi_8c_a8b57112149902842e4be27339bba4ce1}{spi\+\_\+vars}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{xpressohack/spi.\+c@{xpressohack/spi.\+c}!P\+I\+N\+\_\+\+M\+A\+S\+K\+\_\+\+CS@{P\+I\+N\+\_\+\+M\+A\+S\+K\+\_\+\+CS}}
+\index{P\+I\+N\+\_\+\+M\+A\+S\+K\+\_\+\+CS@{P\+I\+N\+\_\+\+M\+A\+S\+K\+\_\+\+CS}!xpressohack/spi.\+c@{xpressohack/spi.\+c}}
+\subsubsection[{\texorpdfstring{P\+I\+N\+\_\+\+M\+A\+S\+K\+\_\+\+CS}{PIN_MASK_CS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+I\+N\+\_\+\+M\+A\+S\+K\+\_\+\+CS~(1$<$$<$6)}\hypertarget{xpressohack_2spi_8c_adc2859b88c022ccb5916f671f08f43ca}{}\label{xpressohack_2spi_8c_adc2859b88c022ccb5916f671f08f43ca}
+
+
+Definition at line 57 of file spi.\+c.
+
+\index{xpressohack/spi.\+c@{xpressohack/spi.\+c}!S\+P\+I\+\_\+\+C\+P\+HA@{S\+P\+I\+\_\+\+C\+P\+HA}}
+\index{S\+P\+I\+\_\+\+C\+P\+HA@{S\+P\+I\+\_\+\+C\+P\+HA}!xpressohack/spi.\+c@{xpressohack/spi.\+c}}
+\subsubsection[{\texorpdfstring{S\+P\+I\+\_\+\+C\+P\+HA}{SPI_CPHA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+P\+I\+\_\+\+C\+P\+HA~(1$<$$<$3)}\hypertarget{xpressohack_2spi_8c_a49e8927a636f45641d6231ac63b9e598}{}\label{xpressohack_2spi_8c_a49e8927a636f45641d6231ac63b9e598}
+
+
+Definition at line 63 of file spi.\+c.
+
+\index{xpressohack/spi.\+c@{xpressohack/spi.\+c}!S\+P\+I\+\_\+\+C\+P\+OL@{S\+P\+I\+\_\+\+C\+P\+OL}}
+\index{S\+P\+I\+\_\+\+C\+P\+OL@{S\+P\+I\+\_\+\+C\+P\+OL}!xpressohack/spi.\+c@{xpressohack/spi.\+c}}
+\subsubsection[{\texorpdfstring{S\+P\+I\+\_\+\+C\+P\+OL}{SPI_CPOL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+P\+I\+\_\+\+C\+P\+OL~(1$<$$<$4)}\hypertarget{xpressohack_2spi_8c_ad8e335b1f808bd7408d2aef2377adcb1}{}\label{xpressohack_2spi_8c_ad8e335b1f808bd7408d2aef2377adcb1}
+
+
+Definition at line 62 of file spi.\+c.
+
+\index{xpressohack/spi.\+c@{xpressohack/spi.\+c}!S\+P\+I\+\_\+\+IE@{S\+P\+I\+\_\+\+IE}}
+\index{S\+P\+I\+\_\+\+IE@{S\+P\+I\+\_\+\+IE}!xpressohack/spi.\+c@{xpressohack/spi.\+c}}
+\subsubsection[{\texorpdfstring{S\+P\+I\+\_\+\+IE}{SPI_IE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+P\+I\+\_\+\+IE~(1$<$$<$7)}\hypertarget{xpressohack_2spi_8c_aad3cd491353e7c161fe9aba57a15e476}{}\label{xpressohack_2spi_8c_aad3cd491353e7c161fe9aba57a15e476}
+
+
+Definition at line 58 of file spi.\+c.
+
+\index{xpressohack/spi.\+c@{xpressohack/spi.\+c}!S\+P\+I\+\_\+\+L\+SB@{S\+P\+I\+\_\+\+L\+SB}}
+\index{S\+P\+I\+\_\+\+L\+SB@{S\+P\+I\+\_\+\+L\+SB}!xpressohack/spi.\+c@{xpressohack/spi.\+c}}
+\subsubsection[{\texorpdfstring{S\+P\+I\+\_\+\+L\+SB}{SPI_LSB}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+P\+I\+\_\+\+L\+SB~(1$<$$<$6)}\hypertarget{xpressohack_2spi_8c_a5a49a9323b5e0f95d8f08cccde5439e6}{}\label{xpressohack_2spi_8c_a5a49a9323b5e0f95d8f08cccde5439e6}
+
+
+Definition at line 59 of file spi.\+c.
+
+\index{xpressohack/spi.\+c@{xpressohack/spi.\+c}!S\+P\+I\+\_\+\+M\+ST@{S\+P\+I\+\_\+\+M\+ST}}
+\index{S\+P\+I\+\_\+\+M\+ST@{S\+P\+I\+\_\+\+M\+ST}!xpressohack/spi.\+c@{xpressohack/spi.\+c}}
+\subsubsection[{\texorpdfstring{S\+P\+I\+\_\+\+M\+ST}{SPI_MST}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+P\+I\+\_\+\+M\+ST~(1$<$$<$5)}\hypertarget{xpressohack_2spi_8c_aa1bf94e0fd155ce0082cc29e9aaa69ea}{}\label{xpressohack_2spi_8c_aa1bf94e0fd155ce0082cc29e9aaa69ea}
+
+
+Definition at line 60 of file spi.\+c.
+
+\index{xpressohack/spi.\+c@{xpressohack/spi.\+c}!S\+P\+I\+\_\+\+S\+P\+IF@{S\+P\+I\+\_\+\+S\+P\+IF}}
+\index{S\+P\+I\+\_\+\+S\+P\+IF@{S\+P\+I\+\_\+\+S\+P\+IF}!xpressohack/spi.\+c@{xpressohack/spi.\+c}}
+\subsubsection[{\texorpdfstring{S\+P\+I\+\_\+\+S\+P\+IF}{SPI_SPIF}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+P\+I\+\_\+\+S\+P\+IF~(1$<$$<$7)}\hypertarget{xpressohack_2spi_8c_ab63d9c1408fd05dfc56c5d3a36c7e1ab}{}\label{xpressohack_2spi_8c_ab63d9c1408fd05dfc56c5d3a36c7e1ab}
+
+
+Definition at line 61 of file spi.\+c.
+
+\index{xpressohack/spi.\+c@{xpressohack/spi.\+c}!S\+S\+P\+\_\+\+E\+N\+A\+B\+L\+ED@{S\+S\+P\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\index{S\+S\+P\+\_\+\+E\+N\+A\+B\+L\+ED@{S\+S\+P\+\_\+\+E\+N\+A\+B\+L\+ED}!xpressohack/spi.\+c@{xpressohack/spi.\+c}}
+\subsubsection[{\texorpdfstring{S\+S\+P\+\_\+\+E\+N\+A\+B\+L\+ED}{SSP_ENABLED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+S\+P\+\_\+\+E\+N\+A\+B\+L\+ED}\hypertarget{xpressohack_2spi_8c_a2fea60141e8669444151bdd5f0a018e8}{}\label{xpressohack_2spi_8c_a2fea60141e8669444151bdd5f0a018e8}
+
+
+L\+P\+C17\+X\+X-\/specific definition of the \char`\"{}spi\char`\"{} bsp module. 
+
+\begin{DoxyAuthor}{Author}
+Xavi Vilajosana \href{mailto:xvilajosana@eecs.berkeley.edu}{\tt xvilajosana@eecs.\+berkeley.\+edu}, February 2012.
+\end{DoxyAuthor}
+The S\+PI is configured using the following registers\+: (page 401 of the manual)
+
+\subsection*{Power\+: In the P\+C\+O\+NP register (Table 46), set bit P\+C\+S\+PI.}
+
+\begin{DoxyNote}{Note}
+On reset, the S\+PI is enabled (P\+C\+S\+PI = 1). \subsection*{Clock\+: In the P\+C\+L\+K\+S\+E\+L0 register (Table 40), set bit P\+C\+L\+K\+\_\+\+S\+PI. In master mode,}
+\end{DoxyNote}
+the clock must be an even number greater than or equal to 8 (see Section 17.\+7.\+4). \subsection*{Pins\+: The S\+PI pins are configured using both P\+I\+N\+S\+E\+L0 (Table 79) and P\+I\+N\+S\+E\+L1}
+
+(Table 80), as well as the P\+I\+N\+M\+O\+DE (Section 8.\+4) register. P\+I\+N\+S\+E\+L0\mbox{[}31\+:30\mbox{]} is used to configure the S\+PI C\+LK pin. P\+I\+N\+S\+E\+L1\mbox{[}1\+:0\mbox{]}, P\+I\+N\+S\+E\+L1\mbox{[}3\+:2\mbox{]} and P\+I\+N\+S\+E\+L1\mbox{[}5\+:4\mbox{]} are used to configure the pins S\+S\+EL, M\+I\+SO and M\+O\+SI, respectively. \subsection*{Interrupts\+: The S\+PI interrupt flag is enabled using the S0\+S\+P\+I\+NT\mbox{[}0\mbox{]} bit (Section 17.\+7.\+7).}
+
+The S\+PI interrupt flag must be enabled in the N\+V\+IC, see Table 50.
+
+R\+A\+D\+IO S\+PI
+
+The S\+PI is based on a byte-\/oriented protocol and is always a bidirectional communication between master and slave. The S\+PI master starts the transfer by asserting /\+S\+EL = L. Then the master generates eight S\+PI clock cycles to transfer one byte to the radio transceiver (via M\+O\+SI). At the same time, the slave transmits one byte to the master (via M\+I\+SO). When the master wants to receive one byte of data from the slave it must also transmit one byte to the slave. All bytes are transferred with M\+SB first. An S\+PI transaction is finished by releasing /\+S\+EL = H. An S\+PI register access consists of two bytes, a Frame Buffer or S\+R\+AM access of at least two or more bytes as described in Section 6.\+2 “\+S\+PI Protocol” on page 19. /\+S\+EL = L enables the M\+I\+SO output driver of the A\+T86\+R\+F231. The M\+SB of M\+I\+SO is valid after t1 (see Section 12.\+4 “\+Digital Interface Timing Characteristics” on page 157 parameter 12.\+4.\+3) and is updated at each falling edge of S\+C\+LK. If the driver is disabled, there is no internal pull-\/up cir-\/ cuitry connected to it. Driving the appropriate signal level must be ensured by the master device or an external pull-\/up resistor. Note, when both /\+S\+EL and /\+R\+ST are active, the M\+I\+SO output driver is also enabled. Referring to Figure 6-\/2 on page 17 and Figure 6-\/3 on page 17 M\+O\+SI is sampled at the rising edge of the S\+C\+LK signal and the output is set at the falling edge of S\+C\+LK. The signal must be stable before and after the rising edge of S\+C\+LK as specified by t3 and t4, refer to Section 12.\+4 “\+Digital Interface Timing Characteristics” on page 157 parameters 12.\+4.\+5 and 12.\+4.\+6. This S\+PI operational mode is commonly known as \char`\"{}\+S\+P\+I mode 0\char`\"{}. 
+
+Definition at line 53 of file spi.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{xpressohack/spi.\+c@{xpressohack/spi.\+c}!spi\+\_\+init@{spi\+\_\+init}}
+\index{spi\+\_\+init@{spi\+\_\+init}!xpressohack/spi.\+c@{xpressohack/spi.\+c}}
+\subsubsection[{\texorpdfstring{spi\+\_\+init()}{spi_init()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} spi\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{xpressohack_2spi_8c_a5db0aceecaf7db5fbe2984e88fef3734}{}\label{xpressohack_2spi_8c_a5db0aceecaf7db5fbe2984e88fef3734}
+
+
+Definition at line 92 of file spi.\+c.
+
+\index{xpressohack/spi.\+c@{xpressohack/spi.\+c}!S\+P\+I\+\_\+\+I\+R\+Q\+Handler@{S\+P\+I\+\_\+\+I\+R\+Q\+Handler}}
+\index{S\+P\+I\+\_\+\+I\+R\+Q\+Handler@{S\+P\+I\+\_\+\+I\+R\+Q\+Handler}!xpressohack/spi.\+c@{xpressohack/spi.\+c}}
+\subsubsection[{\texorpdfstring{S\+P\+I\+\_\+\+I\+R\+Q\+Handler(void)}{SPI_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} S\+P\+I\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{xpressohack_2spi_8c_a4549d5dc21db5356eb73470e66459f78}{}\label{xpressohack_2spi_8c_a4549d5dc21db5356eb73470e66459f78}
+\index{xpressohack/spi.\+c@{xpressohack/spi.\+c}!spi\+\_\+txrx@{spi\+\_\+txrx}}
+\index{spi\+\_\+txrx@{spi\+\_\+txrx}!xpressohack/spi.\+c@{xpressohack/spi.\+c}}
+\subsubsection[{\texorpdfstring{spi\+\_\+txrx(uint8\+\_\+t $\ast$buf\+Tx, uint8\+\_\+t lenbuf\+Tx, spi\+\_\+return\+\_\+t return\+Type, uint8\+\_\+t $\ast$buf\+Rx, uint8\+\_\+t max\+Len\+Buf\+Rx, spi\+\_\+first\+\_\+t is\+First, spi\+\_\+last\+\_\+t is\+Last)}{spi_txrx(uint8_t *bufTx, uint8_t lenbufTx, spi_return_t returnType, uint8_t *bufRx, uint8_t maxLenBufRx, spi_first_t isFirst, spi_last_t isLast)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} spi\+\_\+txrx (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t} $\ast$}]{buf\+Tx, }
+\item[{{\bf uint8\+\_\+t}}]{lenbuf\+Tx, }
+\item[{{\bf spi\+\_\+return\+\_\+t}}]{return\+Type, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{buf\+Rx, }
+\item[{{\bf uint8\+\_\+t}}]{max\+Len\+Buf\+Rx, }
+\item[{{\bf spi\+\_\+first\+\_\+t}}]{is\+First, }
+\item[{{\bf spi\+\_\+last\+\_\+t}}]{is\+Last}
+\end{DoxyParamCaption}
+)}\hypertarget{xpressohack_2spi_8c_ac2fb3e956c783d2d4d5e7e418aa6fff0}{}\label{xpressohack_2spi_8c_ac2fb3e956c783d2d4d5e7e418aa6fff0}
+
+
+Definition at line 163 of file spi.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{xpressohack/spi.\+c@{xpressohack/spi.\+c}!spi\+\_\+vars@{spi\+\_\+vars}}
+\index{spi\+\_\+vars@{spi\+\_\+vars}!xpressohack/spi.\+c@{xpressohack/spi.\+c}}
+\subsubsection[{\texorpdfstring{spi\+\_\+vars}{spi_vars}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf spi\+\_\+vars\+\_\+t} spi\+\_\+vars}\hypertarget{xpressohack_2spi_8c_a8b57112149902842e4be27339bba4ce1}{}\label{xpressohack_2spi_8c_a8b57112149902842e4be27339bba4ce1}
+
+
+Definition at line 85 of file spi.\+c.
+

@@ -1,0 +1,161 @@
+\hypertarget{namespace01bsp__radio__rx}{}\section{01bsp\+\_\+radio\+\_\+rx Namespace Reference}
+\label{namespace01bsp__radio__rx}\index{01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+list \hyperlink{namespace01bsp__radio__rx_ac941cf5e2831ceb1c533dd8058d39380}{banner} = \mbox{[}$\,$\mbox{]}
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{namespace01bsp__radio__rx_a70be0965c27e9db09d803e6e531cffd1}{D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+O\+T\+L\+AB} = True
+\item 
+string \hyperlink{namespace01bsp__radio__rx_a6d4b4d7b47e25eda283a4b4d9169fc53}{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+O\+T\+E\+N\+A\+ME} = \textquotesingle{}wsn430-\/35\textquotesingle{}
+\item 
+string \hyperlink{namespace01bsp__radio__rx_a0c665114ad67636ce2be1104ebcb3e25}{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+R\+I\+A\+L\+P\+O\+RT} = \textquotesingle{}C\+O\+M10\textquotesingle{}
+\item 
+\hyperlink{namespace01bsp__radio__rx_a26133b524c864be17671325078cba5fb}{iotlab} = None
+\item 
+\hyperlink{namespace01bsp__radio__rx_ae193588ed0cf6e039f855f040b00b2e1}{motename} = None
+\item 
+\hyperlink{namespace01bsp__radio__rx_a2e2330ae6124312eb30b14b10d881298}{serialport} = None
+\item 
+\hyperlink{namespace01bsp__radio__rx_a1e8eff7facf7d42348b520b3ff8525f3}{t} = raw\+\_\+input(\textquotesingle{}running IoT-\/l\+AB? (Y$\vert$N)\+: \textquotesingle{}.format(\hyperlink{namespace01bsp__radio__rx_a70be0965c27e9db09d803e6e531cffd1}{D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+O\+T\+L\+AB}))
+\item 
+\hyperlink{namespace01bsp__radio__rx_a0748304cc94c73d2ff24e024c7c25548}{mote} = socket.\+socket(socket.\+A\+F\+\_\+\+I\+N\+ET,socket.\+S\+O\+C\+K\+\_\+\+S\+T\+R\+E\+AM)
+\item 
+list \hyperlink{namespace01bsp__radio__rx_a4fb6aafdc59522c766004b87f11e7aa1}{raw\+Frame} = \mbox{[}$\,$\mbox{]}
+\item 
+\hyperlink{namespace01bsp__radio__rx_ac80177cbe4706dd415309201ae9a0531}{bytes} = mote.\+recv(1024)
+\item 
+\hyperlink{namespace01bsp__radio__rx_aa35c32b2ed69689c69b2ee0eebde7510}{byte} = \hyperlink{imu__loop_8c_af97f6049272bceaff32e108f006ecc97}{mote.\+read}(1)
+\item 
+\hyperlink{namespace01bsp__radio__rx_a61531cf1011a6bdd829422b751c13b86}{rxpk\+\_\+len}
+\item 
+\hyperlink{namespace01bsp__radio__rx_a2963f3702c3b835e5b64b2edb9d91378}{rxpk\+\_\+num}
+\item 
+\hyperlink{namespace01bsp__radio__rx_a5373bfab07d770f91d33b002d6a8f6b1}{rxpk\+\_\+rssi}
+\item 
+\hyperlink{namespace01bsp__radio__rx_a555c0a333aa1e223a81d28495f6ceb23}{rxpk\+\_\+lqi}
+\item 
+\hyperlink{namespace01bsp__radio__rx_a5d7d1fbf5723c2918de7500e9e50dce7}{rxpk\+\_\+crc}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\index{01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}!banner@{banner}}
+\index{banner@{banner}!01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}}
+\subsubsection[{\texorpdfstring{banner}{banner}}]{\setlength{\rightskip}{0pt plus 5cm}string 01bsp\+\_\+radio\+\_\+rx.\+banner = \mbox{[}$\,$\mbox{]}}\hypertarget{namespace01bsp__radio__rx_ac941cf5e2831ceb1c533dd8058d39380}{}\label{namespace01bsp__radio__rx_ac941cf5e2831ceb1c533dd8058d39380}
+
+
+Definition at line 9 of file 01bsp\+\_\+radio\+\_\+rx.\+py.
+
+\index{01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}!byte@{byte}}
+\index{byte@{byte}!01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}}
+\subsubsection[{\texorpdfstring{byte}{byte}}]{\setlength{\rightskip}{0pt plus 5cm}01bsp\+\_\+radio\+\_\+rx.\+byte = {\bf mote.\+read}(1)}\hypertarget{namespace01bsp__radio__rx_aa35c32b2ed69689c69b2ee0eebde7510}{}\label{namespace01bsp__radio__rx_aa35c32b2ed69689c69b2ee0eebde7510}
+
+
+Definition at line 88 of file 01bsp\+\_\+radio\+\_\+rx.\+py.
+
+\index{01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}!bytes@{bytes}}
+\index{bytes@{bytes}!01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}}
+\subsubsection[{\texorpdfstring{bytes}{bytes}}]{\setlength{\rightskip}{0pt plus 5cm}01bsp\+\_\+radio\+\_\+rx.\+bytes = mote.\+recv(1024)}\hypertarget{namespace01bsp__radio__rx_ac80177cbe4706dd415309201ae9a0531}{}\label{namespace01bsp__radio__rx_ac80177cbe4706dd415309201ae9a0531}
+
+
+Definition at line 85 of file 01bsp\+\_\+radio\+\_\+rx.\+py.
+
+\index{01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}!D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+O\+T\+L\+AB@{D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+O\+T\+L\+AB}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+O\+T\+L\+AB@{D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+O\+T\+L\+AB}!01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}}
+\subsubsection[{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+O\+T\+L\+AB}{DEFAULT_IOTLAB}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} 01bsp\+\_\+radio\+\_\+rx.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+O\+T\+L\+AB = True}\hypertarget{namespace01bsp__radio__rx_a70be0965c27e9db09d803e6e531cffd1}{}\label{namespace01bsp__radio__rx_a70be0965c27e9db09d803e6e531cffd1}
+
+
+Definition at line 20 of file 01bsp\+\_\+radio\+\_\+rx.\+py.
+
+\index{01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}!D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+O\+T\+E\+N\+A\+ME@{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+O\+T\+E\+N\+A\+ME}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+O\+T\+E\+N\+A\+ME@{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+O\+T\+E\+N\+A\+ME}!01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}}
+\subsubsection[{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+O\+T\+E\+N\+A\+ME}{DEFAULT_MOTENAME}}]{\setlength{\rightskip}{0pt plus 5cm}string 01bsp\+\_\+radio\+\_\+rx.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+O\+T\+E\+N\+A\+ME = \textquotesingle{}wsn430-\/35\textquotesingle{}}\hypertarget{namespace01bsp__radio__rx_a6d4b4d7b47e25eda283a4b4d9169fc53}{}\label{namespace01bsp__radio__rx_a6d4b4d7b47e25eda283a4b4d9169fc53}
+
+
+Definition at line 21 of file 01bsp\+\_\+radio\+\_\+rx.\+py.
+
+\index{01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}!D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+R\+I\+A\+L\+P\+O\+RT@{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+R\+I\+A\+L\+P\+O\+RT}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+R\+I\+A\+L\+P\+O\+RT@{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+R\+I\+A\+L\+P\+O\+RT}!01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}}
+\subsubsection[{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+R\+I\+A\+L\+P\+O\+RT}{DEFAULT_SERIALPORT}}]{\setlength{\rightskip}{0pt plus 5cm}string 01bsp\+\_\+radio\+\_\+rx.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+R\+I\+A\+L\+P\+O\+RT = \textquotesingle{}C\+O\+M10\textquotesingle{}}\hypertarget{namespace01bsp__radio__rx_a0c665114ad67636ce2be1104ebcb3e25}{}\label{namespace01bsp__radio__rx_a0c665114ad67636ce2be1104ebcb3e25}
+
+
+Definition at line 22 of file 01bsp\+\_\+radio\+\_\+rx.\+py.
+
+\index{01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}!iotlab@{iotlab}}
+\index{iotlab@{iotlab}!01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}}
+\subsubsection[{\texorpdfstring{iotlab}{iotlab}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} 01bsp\+\_\+radio\+\_\+rx.\+iotlab = None}\hypertarget{namespace01bsp__radio__rx_a26133b524c864be17671325078cba5fb}{}\label{namespace01bsp__radio__rx_a26133b524c864be17671325078cba5fb}
+
+
+Definition at line 26 of file 01bsp\+\_\+radio\+\_\+rx.\+py.
+
+\index{01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}!mote@{mote}}
+\index{mote@{mote}!01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}}
+\subsubsection[{\texorpdfstring{mote}{mote}}]{\setlength{\rightskip}{0pt plus 5cm}01bsp\+\_\+radio\+\_\+rx.\+mote = socket.\+socket(socket.\+A\+F\+\_\+\+I\+N\+ET,socket.\+S\+O\+C\+K\+\_\+\+S\+T\+R\+E\+AM)}\hypertarget{namespace01bsp__radio__rx_a0748304cc94c73d2ff24e024c7c25548}{}\label{namespace01bsp__radio__rx_a0748304cc94c73d2ff24e024c7c25548}
+
+
+Definition at line 63 of file 01bsp\+\_\+radio\+\_\+rx.\+py.
+
+\index{01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}!motename@{motename}}
+\index{motename@{motename}!01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}}
+\subsubsection[{\texorpdfstring{motename}{motename}}]{\setlength{\rightskip}{0pt plus 5cm}01bsp\+\_\+radio\+\_\+rx.\+motename = None}\hypertarget{namespace01bsp__radio__rx_ae193588ed0cf6e039f855f040b00b2e1}{}\label{namespace01bsp__radio__rx_ae193588ed0cf6e039f855f040b00b2e1}
+
+
+Definition at line 27 of file 01bsp\+\_\+radio\+\_\+rx.\+py.
+
+\index{01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}!raw\+Frame@{raw\+Frame}}
+\index{raw\+Frame@{raw\+Frame}!01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}}
+\subsubsection[{\texorpdfstring{raw\+Frame}{rawFrame}}]{\setlength{\rightskip}{0pt plus 5cm}list 01bsp\+\_\+radio\+\_\+rx.\+raw\+Frame = \mbox{[}$\,$\mbox{]}}\hypertarget{namespace01bsp__radio__rx_a4fb6aafdc59522c766004b87f11e7aa1}{}\label{namespace01bsp__radio__rx_a4fb6aafdc59522c766004b87f11e7aa1}
+
+
+Definition at line 80 of file 01bsp\+\_\+radio\+\_\+rx.\+py.
+
+\index{01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}!rxpk\+\_\+crc@{rxpk\+\_\+crc}}
+\index{rxpk\+\_\+crc@{rxpk\+\_\+crc}!01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}}
+\subsubsection[{\texorpdfstring{rxpk\+\_\+crc}{rxpk_crc}}]{\setlength{\rightskip}{0pt plus 5cm}01bsp\+\_\+radio\+\_\+rx.\+rxpk\+\_\+crc}\hypertarget{namespace01bsp__radio__rx_a5d7d1fbf5723c2918de7500e9e50dce7}{}\label{namespace01bsp__radio__rx_a5d7d1fbf5723c2918de7500e9e50dce7}
+
+
+Definition at line 93 of file 01bsp\+\_\+radio\+\_\+rx.\+py.
+
+\index{01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}!rxpk\+\_\+len@{rxpk\+\_\+len}}
+\index{rxpk\+\_\+len@{rxpk\+\_\+len}!01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}}
+\subsubsection[{\texorpdfstring{rxpk\+\_\+len}{rxpk_len}}]{\setlength{\rightskip}{0pt plus 5cm}01bsp\+\_\+radio\+\_\+rx.\+rxpk\+\_\+len}\hypertarget{namespace01bsp__radio__rx_a61531cf1011a6bdd829422b751c13b86}{}\label{namespace01bsp__radio__rx_a61531cf1011a6bdd829422b751c13b86}
+
+
+Definition at line 93 of file 01bsp\+\_\+radio\+\_\+rx.\+py.
+
+\index{01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}!rxpk\+\_\+lqi@{rxpk\+\_\+lqi}}
+\index{rxpk\+\_\+lqi@{rxpk\+\_\+lqi}!01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}}
+\subsubsection[{\texorpdfstring{rxpk\+\_\+lqi}{rxpk_lqi}}]{\setlength{\rightskip}{0pt plus 5cm}01bsp\+\_\+radio\+\_\+rx.\+rxpk\+\_\+lqi}\hypertarget{namespace01bsp__radio__rx_a555c0a333aa1e223a81d28495f6ceb23}{}\label{namespace01bsp__radio__rx_a555c0a333aa1e223a81d28495f6ceb23}
+
+
+Definition at line 93 of file 01bsp\+\_\+radio\+\_\+rx.\+py.
+
+\index{01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}!rxpk\+\_\+num@{rxpk\+\_\+num}}
+\index{rxpk\+\_\+num@{rxpk\+\_\+num}!01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}}
+\subsubsection[{\texorpdfstring{rxpk\+\_\+num}{rxpk_num}}]{\setlength{\rightskip}{0pt plus 5cm}01bsp\+\_\+radio\+\_\+rx.\+rxpk\+\_\+num}\hypertarget{namespace01bsp__radio__rx_a2963f3702c3b835e5b64b2edb9d91378}{}\label{namespace01bsp__radio__rx_a2963f3702c3b835e5b64b2edb9d91378}
+
+
+Definition at line 93 of file 01bsp\+\_\+radio\+\_\+rx.\+py.
+
+\index{01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}!rxpk\+\_\+rssi@{rxpk\+\_\+rssi}}
+\index{rxpk\+\_\+rssi@{rxpk\+\_\+rssi}!01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}}
+\subsubsection[{\texorpdfstring{rxpk\+\_\+rssi}{rxpk_rssi}}]{\setlength{\rightskip}{0pt plus 5cm}01bsp\+\_\+radio\+\_\+rx.\+rxpk\+\_\+rssi}\hypertarget{namespace01bsp__radio__rx_a5373bfab07d770f91d33b002d6a8f6b1}{}\label{namespace01bsp__radio__rx_a5373bfab07d770f91d33b002d6a8f6b1}
+
+
+Definition at line 93 of file 01bsp\+\_\+radio\+\_\+rx.\+py.
+
+\index{01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}!serialport@{serialport}}
+\index{serialport@{serialport}!01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}}
+\subsubsection[{\texorpdfstring{serialport}{serialport}}]{\setlength{\rightskip}{0pt plus 5cm}01bsp\+\_\+radio\+\_\+rx.\+serialport = None}\hypertarget{namespace01bsp__radio__rx_a2e2330ae6124312eb30b14b10d881298}{}\label{namespace01bsp__radio__rx_a2e2330ae6124312eb30b14b10d881298}
+
+
+Definition at line 28 of file 01bsp\+\_\+radio\+\_\+rx.\+py.
+
+\index{01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}!t@{t}}
+\index{t@{t}!01bsp\+\_\+radio\+\_\+rx@{01bsp\+\_\+radio\+\_\+rx}}
+\subsubsection[{\texorpdfstring{t}{t}}]{\setlength{\rightskip}{0pt plus 5cm}01bsp\+\_\+radio\+\_\+rx.\+t = raw\+\_\+input(\textquotesingle{}running IoT-\/l\+AB? (Y$\vert$N)\+: \textquotesingle{}.format({\bf D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+O\+T\+L\+AB}))}\hypertarget{namespace01bsp__radio__rx_a1e8eff7facf7d42348b520b3ff8525f3}{}\label{namespace01bsp__radio__rx_a1e8eff7facf7d42348b520b3ff8525f3}
+
+
+Definition at line 32 of file 01bsp\+\_\+radio\+\_\+rx.\+py.
+

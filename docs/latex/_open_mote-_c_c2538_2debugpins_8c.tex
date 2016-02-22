@@ -1,0 +1,167 @@
+\hypertarget{_open_mote-_c_c2538_2debugpins_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/debugpins.c File Reference}
+\label{_open_mote-_c_c2538_2debugpins_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/debugpins.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/debugpins.\+c}}
+{\ttfamily \#include $<$headers/hw\+\_\+memmap.\+h$>$}\\*
+{\ttfamily \#include $<$headers/hw\+\_\+types.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}debugpins.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gpio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_open_mote-_c_c2538_2debugpins_8c_aaa6c07737ad04ce6b4a82ddbdfdf3e3d}{B\+S\+P\+\_\+\+P\+I\+N\+A\+\_\+\+B\+A\+SE}~\hyperlink{hw__memmap_8h_a73c0487c6e865444f89ca96f8351c81e}{G\+P\+I\+O\+\_\+\+A\+\_\+\+B\+A\+SE}
+\item 
+\#define \hyperlink{_open_mote-_c_c2538_2debugpins_8c_a619734ad8617bbc98a64f0e783e168ff}{B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+\+B\+A\+SE}~\hyperlink{hw__memmap_8h_a1eb15743fd9e3c8f13e6c72e6e3d9a8e}{G\+P\+I\+O\+\_\+\+D\+\_\+\+B\+A\+SE}
+\item 
+\#define \hyperlink{_open_mote-_c_c2538_2debugpins_8c_acfb7b70741d0a6265f538b868b390a6c}{B\+S\+P\+\_\+\+P\+I\+N\+A\+\_\+4}~\hyperlink{_open_mote-_c_c2538_2source_2gpio_8h_ab3871e35868deecd260e586ad70d4b83}{G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+4}
+\begin{DoxyCompactList}\small\item\em P\+A4 -- frame -\/\+R\+F1.\+5. \end{DoxyCompactList}\item 
+\#define \hyperlink{_open_mote-_c_c2538_2debugpins_8c_a18ac2f5dfce225343af3b486a4ba1fdf}{B\+S\+P\+\_\+\+P\+I\+N\+A\+\_\+5}~\hyperlink{_open_mote-_c_c2538_2source_2gpio_8h_a01cc9ed93f6fd12fd3403362779aaa18}{G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+5}
+\begin{DoxyCompactList}\small\item\em P\+A5 -- isr -\/\+R\+F1.\+11. \end{DoxyCompactList}\item 
+\#define \hyperlink{_open_mote-_c_c2538_2debugpins_8c_a73eff0b21371736cb99c553297f342d0}{B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+3}~\hyperlink{_open_mote-_c_c2538_2source_2gpio_8h_adcaf899c018a0dde572b5af783565c62}{G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+3}
+\begin{DoxyCompactList}\small\item\em P\+D3 -- slot -\/\+R\+F1.\+6. \end{DoxyCompactList}\item 
+\#define \hyperlink{_open_mote-_c_c2538_2debugpins_8c_a78684e3a753bc8167efdd2fd1371025c}{B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+2}~\hyperlink{_open_mote-_c_c2538_2source_2gpio_8h_a6eee38b797a7268f04357dfa2759efd2}{G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+2}
+\begin{DoxyCompactList}\small\item\em P\+D2 -- fsm -\/\+R\+F1.\+8. \end{DoxyCompactList}\item 
+\#define \hyperlink{_open_mote-_c_c2538_2debugpins_8c_a34bafcf729795c6cbd7eab7763969e61}{B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+1}~\hyperlink{_open_mote-_c_c2538_2source_2gpio_8h_a6c35af4e75c3cb57bb650feaa7a136b5}{G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+1}
+\begin{DoxyCompactList}\small\item\em P\+D1 -- task -\/\+R\+F1.\+10. \end{DoxyCompactList}\item 
+\#define \hyperlink{_open_mote-_c_c2538_2debugpins_8c_aa7ce9a5f309fe411b6002e8232c66bed}{B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+0}~\hyperlink{_open_mote-_c_c2538_2source_2gpio_8h_a176efbf43a259b7bb0a85a47401505be}{G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+0}
+\begin{DoxyCompactList}\small\item\em P\+D0 -- radio -\/\+R\+F1-\/12. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_open_mote-_c_c2538_2debugpins_8c_a85ae76895e36e10a96fa15b8e997f291}{bsp\+D\+Bpin\+Toggle} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} base, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Pin)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__debugpins_ga67b42e8786576ba76a5dbfd6b61bbf90}{debugpins\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em agilefox definition of the \char`\"{}debugpins\char`\"{} bsp module (based on openmote\+S\+T\+M32 code). \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__debugpins_gaf5f2b7fbde11bd076c0c3e867653fa08}{debugpins\+\_\+frame\+\_\+toggle} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__debugpins_gada37390552bee362863d82aa858f7aed}{debugpins\+\_\+frame\+\_\+clr} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__debugpins_ga2a1a3edef66d4588cb179ee254935790}{debugpins\+\_\+frame\+\_\+set} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__debugpins_gaa50950bd15a2a2ad12412ab5fbf0eb12}{debugpins\+\_\+slot\+\_\+toggle} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__debugpins_ga46be7a970bd088dbf58868c806a90ff6}{debugpins\+\_\+slot\+\_\+clr} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__debugpins_ga7707a462a0287f9c35fd70cd7ffbfa6a}{debugpins\+\_\+slot\+\_\+set} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__debugpins_gaa140c9166f959c8bf59b2a5053e7318f}{debugpins\+\_\+fsm\+\_\+toggle} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__debugpins_gaba8ca5762f3946abe08a2fd60f526018}{debugpins\+\_\+fsm\+\_\+clr} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__debugpins_gabf50b5145dad1b666f26d5ddbc824e40}{debugpins\+\_\+fsm\+\_\+set} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__debugpins_ga99a18520e34187483e8914b69ef05afd}{debugpins\+\_\+task\+\_\+toggle} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__debugpins_gaf62f9250757ae1c09eb39042a16e0251}{debugpins\+\_\+task\+\_\+clr} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__debugpins_gae0fe9c48d906fe3dd00192efa489b557}{debugpins\+\_\+task\+\_\+set} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__debugpins_gad4ae7bd1ab90b3825cf5a8f635038752}{debugpins\+\_\+isr\+\_\+toggle} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__debugpins_ga3ce81a5798029811061c1a4342774318}{debugpins\+\_\+isr\+\_\+clr} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__debugpins_gac4710fcf9befb8c9b174954cf0bfb17d}{debugpins\+\_\+isr\+\_\+set} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__debugpins_ga7811b5c703d511c4f825909e7c401ff2}{debugpins\+\_\+radio\+\_\+toggle} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__debugpins_ga2862bd39a60ffc6ac5e6d49b4d8442d1}{debugpins\+\_\+radio\+\_\+clr} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__debugpins_ga7ad27e0da9558cdb64bb3a383e889808}{debugpins\+\_\+radio\+\_\+set} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{Open\+Mote-\/\+C\+C2538/debugpins.\+c@{Open\+Mote-\/\+C\+C2538/debugpins.\+c}!B\+S\+P\+\_\+\+P\+I\+N\+A\+\_\+4@{B\+S\+P\+\_\+\+P\+I\+N\+A\+\_\+4}}
+\index{B\+S\+P\+\_\+\+P\+I\+N\+A\+\_\+4@{B\+S\+P\+\_\+\+P\+I\+N\+A\+\_\+4}!Open\+Mote-\/\+C\+C2538/debugpins.\+c@{Open\+Mote-\/\+C\+C2538/debugpins.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+P\+I\+N\+A\+\_\+4}{BSP_PINA_4}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+P\+I\+N\+A\+\_\+4~{\bf G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+4}}\hypertarget{_open_mote-_c_c2538_2debugpins_8c_acfb7b70741d0a6265f538b868b390a6c}{}\label{_open_mote-_c_c2538_2debugpins_8c_acfb7b70741d0a6265f538b868b390a6c}
+
+
+P\+A4 -- frame -\/\+R\+F1.\+5. 
+
+
+
+Definition at line 20 of file debugpins.\+c.
+
+\index{Open\+Mote-\/\+C\+C2538/debugpins.\+c@{Open\+Mote-\/\+C\+C2538/debugpins.\+c}!B\+S\+P\+\_\+\+P\+I\+N\+A\+\_\+5@{B\+S\+P\+\_\+\+P\+I\+N\+A\+\_\+5}}
+\index{B\+S\+P\+\_\+\+P\+I\+N\+A\+\_\+5@{B\+S\+P\+\_\+\+P\+I\+N\+A\+\_\+5}!Open\+Mote-\/\+C\+C2538/debugpins.\+c@{Open\+Mote-\/\+C\+C2538/debugpins.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+P\+I\+N\+A\+\_\+5}{BSP_PINA_5}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+P\+I\+N\+A\+\_\+5~{\bf G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+5}}\hypertarget{_open_mote-_c_c2538_2debugpins_8c_a18ac2f5dfce225343af3b486a4ba1fdf}{}\label{_open_mote-_c_c2538_2debugpins_8c_a18ac2f5dfce225343af3b486a4ba1fdf}
+
+
+P\+A5 -- isr -\/\+R\+F1.\+11. 
+
+
+
+Definition at line 21 of file debugpins.\+c.
+
+\index{Open\+Mote-\/\+C\+C2538/debugpins.\+c@{Open\+Mote-\/\+C\+C2538/debugpins.\+c}!B\+S\+P\+\_\+\+P\+I\+N\+A\+\_\+\+B\+A\+SE@{B\+S\+P\+\_\+\+P\+I\+N\+A\+\_\+\+B\+A\+SE}}
+\index{B\+S\+P\+\_\+\+P\+I\+N\+A\+\_\+\+B\+A\+SE@{B\+S\+P\+\_\+\+P\+I\+N\+A\+\_\+\+B\+A\+SE}!Open\+Mote-\/\+C\+C2538/debugpins.\+c@{Open\+Mote-\/\+C\+C2538/debugpins.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+P\+I\+N\+A\+\_\+\+B\+A\+SE}{BSP_PINA_BASE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+P\+I\+N\+A\+\_\+\+B\+A\+SE~{\bf G\+P\+I\+O\+\_\+\+A\+\_\+\+B\+A\+SE}}\hypertarget{_open_mote-_c_c2538_2debugpins_8c_aaa6c07737ad04ce6b4a82ddbdfdf3e3d}{}\label{_open_mote-_c_c2538_2debugpins_8c_aaa6c07737ad04ce6b4a82ddbdfdf3e3d}
+Author\+: Xavier Vilajosana (\href{mailto:xvilajosana@eecs.berkeley.edu}{\tt xvilajosana@eecs.\+berkeley.\+edu}) Pere Tuset (\href{mailto:peretuset@openmote.com}{\tt peretuset@openmote.\+com}) Date\+: July 2013 Description\+: C\+C2538-\/specific definition of the \char`\"{}debugpins\char`\"{} bsp module. 
+
+Definition at line 17 of file debugpins.\+c.
+
+\index{Open\+Mote-\/\+C\+C2538/debugpins.\+c@{Open\+Mote-\/\+C\+C2538/debugpins.\+c}!B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+0@{B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+0}}
+\index{B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+0@{B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+0}!Open\+Mote-\/\+C\+C2538/debugpins.\+c@{Open\+Mote-\/\+C\+C2538/debugpins.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+0}{BSP_PIND_0}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+0~{\bf G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+0}}\hypertarget{_open_mote-_c_c2538_2debugpins_8c_aa7ce9a5f309fe411b6002e8232c66bed}{}\label{_open_mote-_c_c2538_2debugpins_8c_aa7ce9a5f309fe411b6002e8232c66bed}
+
+
+P\+D0 -- radio -\/\+R\+F1-\/12. 
+
+
+
+Definition at line 26 of file debugpins.\+c.
+
+\index{Open\+Mote-\/\+C\+C2538/debugpins.\+c@{Open\+Mote-\/\+C\+C2538/debugpins.\+c}!B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+1@{B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+1}}
+\index{B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+1@{B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+1}!Open\+Mote-\/\+C\+C2538/debugpins.\+c@{Open\+Mote-\/\+C\+C2538/debugpins.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+1}{BSP_PIND_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+1~{\bf G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+1}}\hypertarget{_open_mote-_c_c2538_2debugpins_8c_a34bafcf729795c6cbd7eab7763969e61}{}\label{_open_mote-_c_c2538_2debugpins_8c_a34bafcf729795c6cbd7eab7763969e61}
+
+
+P\+D1 -- task -\/\+R\+F1.\+10. 
+
+
+
+Definition at line 25 of file debugpins.\+c.
+
+\index{Open\+Mote-\/\+C\+C2538/debugpins.\+c@{Open\+Mote-\/\+C\+C2538/debugpins.\+c}!B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+2@{B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+2}}
+\index{B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+2@{B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+2}!Open\+Mote-\/\+C\+C2538/debugpins.\+c@{Open\+Mote-\/\+C\+C2538/debugpins.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+2}{BSP_PIND_2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+2~{\bf G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+2}}\hypertarget{_open_mote-_c_c2538_2debugpins_8c_a78684e3a753bc8167efdd2fd1371025c}{}\label{_open_mote-_c_c2538_2debugpins_8c_a78684e3a753bc8167efdd2fd1371025c}
+
+
+P\+D2 -- fsm -\/\+R\+F1.\+8. 
+
+
+
+Definition at line 24 of file debugpins.\+c.
+
+\index{Open\+Mote-\/\+C\+C2538/debugpins.\+c@{Open\+Mote-\/\+C\+C2538/debugpins.\+c}!B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+3@{B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+3}}
+\index{B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+3@{B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+3}!Open\+Mote-\/\+C\+C2538/debugpins.\+c@{Open\+Mote-\/\+C\+C2538/debugpins.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+3}{BSP_PIND_3}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+3~{\bf G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+3}}\hypertarget{_open_mote-_c_c2538_2debugpins_8c_a73eff0b21371736cb99c553297f342d0}{}\label{_open_mote-_c_c2538_2debugpins_8c_a73eff0b21371736cb99c553297f342d0}
+
+
+P\+D3 -- slot -\/\+R\+F1.\+6. 
+
+
+
+Definition at line 23 of file debugpins.\+c.
+
+\index{Open\+Mote-\/\+C\+C2538/debugpins.\+c@{Open\+Mote-\/\+C\+C2538/debugpins.\+c}!B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+\+B\+A\+SE@{B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+\+B\+A\+SE}}
+\index{B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+\+B\+A\+SE@{B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+\+B\+A\+SE}!Open\+Mote-\/\+C\+C2538/debugpins.\+c@{Open\+Mote-\/\+C\+C2538/debugpins.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+\+B\+A\+SE}{BSP_PIND_BASE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+P\+I\+N\+D\+\_\+\+B\+A\+SE~{\bf G\+P\+I\+O\+\_\+\+D\+\_\+\+B\+A\+SE}}\hypertarget{_open_mote-_c_c2538_2debugpins_8c_a619734ad8617bbc98a64f0e783e168ff}{}\label{_open_mote-_c_c2538_2debugpins_8c_a619734ad8617bbc98a64f0e783e168ff}
+
+
+Definition at line 18 of file debugpins.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{Open\+Mote-\/\+C\+C2538/debugpins.\+c@{Open\+Mote-\/\+C\+C2538/debugpins.\+c}!bsp\+D\+Bpin\+Toggle@{bsp\+D\+Bpin\+Toggle}}
+\index{bsp\+D\+Bpin\+Toggle@{bsp\+D\+Bpin\+Toggle}!Open\+Mote-\/\+C\+C2538/debugpins.\+c@{Open\+Mote-\/\+C\+C2538/debugpins.\+c}}
+\subsubsection[{\texorpdfstring{bsp\+D\+Bpin\+Toggle(uint32\+\_\+t base, uint8\+\_\+t ui8\+Pin)}{bspDBpinToggle(uint32_t base, uint8_t ui8Pin)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} bsp\+D\+Bpin\+Toggle (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{base, }
+\item[{{\bf uint8\+\_\+t}}]{ui8\+Pin}
+\end{DoxyParamCaption}
+)}\hypertarget{_open_mote-_c_c2538_2debugpins_8c_a85ae76895e36e10a96fa15b8e997f291}{}\label{_open_mote-_c_c2538_2debugpins_8c_a85ae76895e36e10a96fa15b8e997f291}
+
+
+Definition at line 112 of file debugpins.\+c.
+

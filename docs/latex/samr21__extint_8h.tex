@@ -1,0 +1,169 @@
+\hypertarget{samr21__extint_8h}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/samr21\+\_\+xpro/drivers/inc/samr21\+\_\+extint.h File Reference}
+\label{samr21__extint_8h}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/samr21\+\_\+xpro/drivers/inc/samr21\+\_\+extint.\+h@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/samr21\+\_\+xpro/drivers/inc/samr21\+\_\+extint.\+h}}
+{\ttfamily \#include \char`\"{}samr21\+\_\+gpio.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structextint__cfg}{extint\+\_\+cfg}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structextint__cfg}{extint\+\_\+cfg} \hyperlink{samr21__extint_8h_a6f716ab9f612c7c77f0ce615c0de9d5b}{extint\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{samr21__extint_8h_a920ab9931e047b548d07ad29dedfcca2}{extint\+\_\+detect} \{ \\*
+\hyperlink{samr21__extint_8h_a920ab9931e047b548d07ad29dedfcca2a6505c5a81f362fc6d2146395fa5e0641}{E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+N\+O\+NE} = 0, 
+\hyperlink{samr21__extint_8h_a920ab9931e047b548d07ad29dedfcca2a62003fada64b948bb611011f2179b2fb}{E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+R\+I\+S\+I\+NG} = 1, 
+\hyperlink{samr21__extint_8h_a920ab9931e047b548d07ad29dedfcca2a0477f603ca427098cd743a9919c89f43}{E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+F\+A\+L\+L\+I\+NG} = 2, 
+\hyperlink{samr21__extint_8h_a920ab9931e047b548d07ad29dedfcca2aa7386678eccf0e246afa75614bfd8841}{E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+B\+O\+TH} = 3, 
+\\*
+\hyperlink{samr21__extint_8h_a920ab9931e047b548d07ad29dedfcca2a9660006ada972d5b562adc15bc787767}{E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+H\+I\+GH} = 4, 
+\hyperlink{samr21__extint_8h_a920ab9931e047b548d07ad29dedfcca2aace71e1f8f4ea192934bc54efa3e7af3}{E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+L\+OW} = 5
+ \}\begin{DoxyCompactList}\small\item\em External interrupt edge detection configuration enum. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{samr21__extint_8h_a8ad6720d3598faa478af7151708790e9}{extint\+\_\+flag\+\_\+clear} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} channel)
+\begin{DoxyCompactList}\small\item\em at86rfx\+\_\+extint\+\_\+flag\+\_\+clear Clears the edge detection state of a configured channel \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{samr21__extint_8h_aaa667fc02a1c92ee9074bec47b247ac8}{extint\+\_\+disable\+\_\+irq} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} channel)
+\begin{DoxyCompactList}\small\item\em extint\+\_\+disable\+\_\+irq Disables the transceiver main interrupt \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{samr21__extint_8h_a6e0e8ca83071b2c5b521bd5763326ffe}{extint\+\_\+enable\+\_\+irq} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} channel)
+\begin{DoxyCompactList}\small\item\em button\+\_\+extint\+\_\+enable\+\_\+irq Enables the button interrupt \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{samr21__extint_8h_a2b3999da6eafc9a83e249b8b845db54d}{eic\+\_\+irq\+\_\+init} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} pin, \hyperlink{samr21__gpio_8h_aa95cc5d0d1c661c00811fa42302ed01c}{pinmux\+\_\+t} $\ast$pinmux, \hyperlink{samr21__extint_8h_a6f716ab9f612c7c77f0ce615c0de9d5b}{extint\+\_\+t} $\ast$extint)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\index{samr21\+\_\+extint.\+h@{samr21\+\_\+extint.\+h}!extint\+\_\+t@{extint\+\_\+t}}
+\index{extint\+\_\+t@{extint\+\_\+t}!samr21\+\_\+extint.\+h@{samr21\+\_\+extint.\+h}}
+\subsubsection[{\texorpdfstring{extint\+\_\+t}{extint_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf extint\+\_\+cfg} {\bf extint\+\_\+t}}\hypertarget{samr21__extint_8h_a6f716ab9f612c7c77f0ce615c0de9d5b}{}\label{samr21__extint_8h_a6f716ab9f612c7c77f0ce615c0de9d5b}
+
+
+\subsection{Enumeration Type Documentation}
+\index{samr21\+\_\+extint.\+h@{samr21\+\_\+extint.\+h}!extint\+\_\+detect@{extint\+\_\+detect}}
+\index{extint\+\_\+detect@{extint\+\_\+detect}!samr21\+\_\+extint.\+h@{samr21\+\_\+extint.\+h}}
+\subsubsection[{\texorpdfstring{extint\+\_\+detect}{extint_detect}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf extint\+\_\+detect}}\hypertarget{samr21__extint_8h_a920ab9931e047b548d07ad29dedfcca2}{}\label{samr21__extint_8h_a920ab9931e047b548d07ad29dedfcca2}
+
+
+External interrupt edge detection configuration enum. 
+
+Copyright (c) 2014 Atmel Corporation. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item The name of Atmel may not be used to endorse or promote products derived from this software without specific prior written permission.
+\item This software may only be redistributed and used in connection with an Atmel microcontroller product.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE. Enum for the possible signal edge detection modes of the External Interrupt Controller module. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+N\+O\+NE@{E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+N\+O\+NE}!samr21\+\_\+extint.\+h@{samr21\+\_\+extint.\+h}}\index{samr21\+\_\+extint.\+h@{samr21\+\_\+extint.\+h}!E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+N\+O\+NE@{E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+N\+O\+NE}}\item[{\em 
+E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+N\+O\+NE\hypertarget{samr21__extint_8h_a920ab9931e047b548d07ad29dedfcca2a6505c5a81f362fc6d2146395fa5e0641}{}\label{samr21__extint_8h_a920ab9931e047b548d07ad29dedfcca2a6505c5a81f362fc6d2146395fa5e0641}
+}]No edge detection. Not allowed as a N\+MI detection mode on some devices. \index{E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+R\+I\+S\+I\+NG@{E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+R\+I\+S\+I\+NG}!samr21\+\_\+extint.\+h@{samr21\+\_\+extint.\+h}}\index{samr21\+\_\+extint.\+h@{samr21\+\_\+extint.\+h}!E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+R\+I\+S\+I\+NG@{E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+R\+I\+S\+I\+NG}}\item[{\em 
+E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+R\+I\+S\+I\+NG\hypertarget{samr21__extint_8h_a920ab9931e047b548d07ad29dedfcca2a62003fada64b948bb611011f2179b2fb}{}\label{samr21__extint_8h_a920ab9931e047b548d07ad29dedfcca2a62003fada64b948bb611011f2179b2fb}
+}]Detect rising signal edges. \index{E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+F\+A\+L\+L\+I\+NG@{E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+F\+A\+L\+L\+I\+NG}!samr21\+\_\+extint.\+h@{samr21\+\_\+extint.\+h}}\index{samr21\+\_\+extint.\+h@{samr21\+\_\+extint.\+h}!E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+F\+A\+L\+L\+I\+NG@{E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+F\+A\+L\+L\+I\+NG}}\item[{\em 
+E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+F\+A\+L\+L\+I\+NG\hypertarget{samr21__extint_8h_a920ab9931e047b548d07ad29dedfcca2a0477f603ca427098cd743a9919c89f43}{}\label{samr21__extint_8h_a920ab9931e047b548d07ad29dedfcca2a0477f603ca427098cd743a9919c89f43}
+}]Detect falling signal edges. \index{E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+B\+O\+TH@{E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+B\+O\+TH}!samr21\+\_\+extint.\+h@{samr21\+\_\+extint.\+h}}\index{samr21\+\_\+extint.\+h@{samr21\+\_\+extint.\+h}!E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+B\+O\+TH@{E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+B\+O\+TH}}\item[{\em 
+E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+B\+O\+TH\hypertarget{samr21__extint_8h_a920ab9931e047b548d07ad29dedfcca2aa7386678eccf0e246afa75614bfd8841}{}\label{samr21__extint_8h_a920ab9931e047b548d07ad29dedfcca2aa7386678eccf0e246afa75614bfd8841}
+}]Detect both signal edges. \index{E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+H\+I\+GH@{E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+H\+I\+GH}!samr21\+\_\+extint.\+h@{samr21\+\_\+extint.\+h}}\index{samr21\+\_\+extint.\+h@{samr21\+\_\+extint.\+h}!E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+H\+I\+GH@{E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+H\+I\+GH}}\item[{\em 
+E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+H\+I\+GH\hypertarget{samr21__extint_8h_a920ab9931e047b548d07ad29dedfcca2a9660006ada972d5b562adc15bc787767}{}\label{samr21__extint_8h_a920ab9931e047b548d07ad29dedfcca2a9660006ada972d5b562adc15bc787767}
+}]Detect high signal levels. \index{E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+L\+OW@{E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+L\+OW}!samr21\+\_\+extint.\+h@{samr21\+\_\+extint.\+h}}\index{samr21\+\_\+extint.\+h@{samr21\+\_\+extint.\+h}!E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+L\+OW@{E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+L\+OW}}\item[{\em 
+E\+X\+T\+I\+N\+T\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+L\+OW\hypertarget{samr21__extint_8h_a920ab9931e047b548d07ad29dedfcca2aace71e1f8f4ea192934bc54efa3e7af3}{}\label{samr21__extint_8h_a920ab9931e047b548d07ad29dedfcca2aace71e1f8f4ea192934bc54efa3e7af3}
+}]Detect low signal levels. \end{description}
+\end{Desc}
+
+
+Definition at line 46 of file samr21\+\_\+extint.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{samr21\+\_\+extint.\+h@{samr21\+\_\+extint.\+h}!eic\+\_\+irq\+\_\+init@{eic\+\_\+irq\+\_\+init}}
+\index{eic\+\_\+irq\+\_\+init@{eic\+\_\+irq\+\_\+init}!samr21\+\_\+extint.\+h@{samr21\+\_\+extint.\+h}}
+\subsubsection[{\texorpdfstring{eic\+\_\+irq\+\_\+init(uint8\+\_\+t pin, pinmux\+\_\+t $\ast$pinmux, extint\+\_\+t $\ast$extint)}{eic_irq_init(uint8_t pin, pinmux_t *pinmux, extint_t *extint)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} eic\+\_\+irq\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{pin, }
+\item[{{\bf pinmux\+\_\+t} $\ast$}]{pinmux, }
+\item[{{\bf extint\+\_\+t} $\ast$}]{extint}
+\end{DoxyParamCaption}
+)}\hypertarget{samr21__extint_8h_a2b3999da6eafc9a83e249b8b845db54d}{}\label{samr21__extint_8h_a2b3999da6eafc9a83e249b8b845db54d}
+\index{samr21\+\_\+extint.\+h@{samr21\+\_\+extint.\+h}!extint\+\_\+disable\+\_\+irq@{extint\+\_\+disable\+\_\+irq}}
+\index{extint\+\_\+disable\+\_\+irq@{extint\+\_\+disable\+\_\+irq}!samr21\+\_\+extint.\+h@{samr21\+\_\+extint.\+h}}
+\subsubsection[{\texorpdfstring{extint\+\_\+disable\+\_\+irq(uint8\+\_\+t channel)}{extint_disable_irq(uint8_t channel)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} extint\+\_\+disable\+\_\+irq (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{channel}
+\end{DoxyParamCaption}
+)}\hypertarget{samr21__extint_8h_aaa667fc02a1c92ee9074bec47b247ac8}{}\label{samr21__extint_8h_aaa667fc02a1c92ee9074bec47b247ac8}
+
+
+extint\+\_\+disable\+\_\+irq Disables the transceiver main interrupt 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 87 of file samr21\+\_\+extint.\+c.
+
+\index{samr21\+\_\+extint.\+h@{samr21\+\_\+extint.\+h}!extint\+\_\+enable\+\_\+irq@{extint\+\_\+enable\+\_\+irq}}
+\index{extint\+\_\+enable\+\_\+irq@{extint\+\_\+enable\+\_\+irq}!samr21\+\_\+extint.\+h@{samr21\+\_\+extint.\+h}}
+\subsubsection[{\texorpdfstring{extint\+\_\+enable\+\_\+irq(uint8\+\_\+t channel)}{extint_enable_irq(uint8_t channel)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} extint\+\_\+enable\+\_\+irq (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{channel}
+\end{DoxyParamCaption}
+)}\hypertarget{samr21__extint_8h_a6e0e8ca83071b2c5b521bd5763326ffe}{}\label{samr21__extint_8h_a6e0e8ca83071b2c5b521bd5763326ffe}
+
+
+button\+\_\+extint\+\_\+enable\+\_\+irq Enables the button interrupt 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 101 of file samr21\+\_\+extint.\+c.
+
+\index{samr21\+\_\+extint.\+h@{samr21\+\_\+extint.\+h}!extint\+\_\+flag\+\_\+clear@{extint\+\_\+flag\+\_\+clear}}
+\index{extint\+\_\+flag\+\_\+clear@{extint\+\_\+flag\+\_\+clear}!samr21\+\_\+extint.\+h@{samr21\+\_\+extint.\+h}}
+\subsubsection[{\texorpdfstring{extint\+\_\+flag\+\_\+clear(uint8\+\_\+t channel)}{extint_flag_clear(uint8_t channel)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} extint\+\_\+flag\+\_\+clear (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{channel}
+\end{DoxyParamCaption}
+)}\hypertarget{samr21__extint_8h_a8ad6720d3598faa478af7151708790e9}{}\label{samr21__extint_8h_a8ad6720d3598faa478af7151708790e9}
+
+
+at86rfx\+\_\+extint\+\_\+flag\+\_\+clear Clears the edge detection state of a configured channel 
+
+Clears the current state of a configured channel, readying it for the next level or edge detection.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file samr21\+\_\+extint.\+c.
+

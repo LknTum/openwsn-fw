@@ -1,0 +1,1348 @@
+\hypertarget{eldorado_8h}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/eldorado/eldorado.h File Reference}
+\label{eldorado_8h}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/eldorado/eldorado.\+h@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/eldorado/eldorado.\+h}}
+{\ttfamily \#include \char`\"{}mc13213.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}M\+C13192\+\_\+regs.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$hidef.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{eldorado_8h_a981fa46bb6c1b37b8135877e9a06f145}{Disable\+Watchdog}~S\+O\+PT = 0x73;
+\item 
+\#define \hyperlink{eldorado_8h_ad424b4881b93595d0a29cbb5dca7377a}{Enable\+Watchdog}~S\+O\+PT = 0xf3;
+\item 
+\#define \hyperlink{eldorado_8h_a3b585423dd6e112880222f2670d6ceb2}{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+C\+I\+\_\+\+P\+O\+RT}~1
+\item 
+\#define \hyperlink{eldorado_8h_a2df7370e7b044c8185f357e3ac971f5b}{E\+L\+D\+O\+R\+A\+D\+O\+\_\+\+B\+O\+A\+RD}
+\item 
+\#define \hyperlink{eldorado_8h_a14edd12ca187f0163244ff5ab9b5d58c}{M\+C13192\+\_\+\+CE}~P\+T\+E\+D\+\_\+\+P\+T\+E\+D2
+\item 
+\#define \hyperlink{eldorado_8h_a3c267d4cb2de43081bc61d3f8a109daf}{M\+C13192\+\_\+\+C\+E\+\_\+\+P\+O\+RT}~P\+T\+E\+D\+D\+\_\+\+P\+T\+E\+D\+D2
+\item 
+\#define \hyperlink{eldorado_8h_a91d8b6375eba58964088607be327afc1}{M\+C13192\+\_\+\+A\+T\+TN}~P\+T\+D\+D\+\_\+\+P\+T\+D\+D0
+\item 
+\#define \hyperlink{eldorado_8h_a1161d81256d08ad84fa20ebd17e8b6f7}{M\+C13192\+\_\+\+A\+T\+T\+N\+\_\+\+P\+O\+RT}~P\+T\+D\+D\+D\+\_\+\+P\+T\+D\+D\+D0
+\item 
+\#define \hyperlink{eldorado_8h_a84b14edf48ae59caf44fd681ee926946}{M\+C13192\+\_\+\+R\+T\+X\+EN}~P\+T\+D\+D\+\_\+\+P\+T\+D\+D1
+\item 
+\#define \hyperlink{eldorado_8h_adee0a3126220e8298214f80dc51bf4b6}{M\+C13192\+\_\+\+R\+T\+X\+E\+N\+\_\+\+P\+O\+RT}~P\+T\+D\+D\+D\+\_\+\+P\+T\+D\+D\+D1
+\item 
+\#define \hyperlink{eldorado_8h_add1448ee149141b3c2b31113513c36fc}{M\+C13192\+\_\+\+R\+E\+S\+ET}~P\+T\+D\+D\+\_\+\+P\+T\+D\+D3
+\item 
+\#define \hyperlink{eldorado_8h_ae2c9e04d6706afba3e8278f8fc5c97e8}{M\+C13192\+\_\+\+R\+E\+S\+E\+T\+\_\+\+P\+O\+RT}~P\+T\+D\+D\+D\+\_\+\+P\+T\+D\+D\+D3
+\item 
+\#define \hyperlink{eldorado_8h_a0734e9c1ca2faab2d3802dd609937ac5}{M\+C13192\+\_\+\+R\+E\+S\+E\+T\+\_\+\+P\+U\+L\+L\+UP}~P\+T\+D\+P\+E\+\_\+\+P\+T\+D\+P\+E3
+\item 
+\#define \hyperlink{eldorado_8h_a43e8cdf166caa364c64d33a3b5b12d95}{M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+S\+O\+U\+R\+CE}~I\+R\+Q\+SC
+\item 
+\#define \hyperlink{eldorado_8h_a535ee997a432a672a79f2dbdad6cbf2d}{M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+I\+E\+\_\+\+B\+IT}~I\+R\+Q\+S\+C\+\_\+\+I\+R\+Q\+IE
+\item 
+\#define \hyperlink{eldorado_8h_ae539bc81de218722c5c2c54b5c006894}{I\+D\+L\+E\+\_\+\+M\+O\+DE}~0x00
+\item 
+\#define \hyperlink{eldorado_8h_aca1f7e0907b7f07b7ea6ddbe8fac6ac5}{R\+X\+\_\+\+M\+O\+DE}~0x02
+\item 
+\#define \hyperlink{eldorado_8h_a60bcaae69589922d624e3a7c1cedd686}{T\+X\+\_\+\+M\+O\+DE}~0x03
+\item 
+\#define \hyperlink{eldorado_8h_aa4b5b2eef2764b9caf2916b362dd18b3}{P\+U\+L\+S\+E\+\_\+\+T\+X\+\_\+\+M\+O\+DE}~0x43
+\item 
+\#define \hyperlink{eldorado_8h_ab4dab52e7cba87db7eab8bbfeb350674}{C\+C\+A\+\_\+\+M\+O\+DE}~0x01
+\item 
+\#define \hyperlink{eldorado_8h_abfbe594f69f63587c5e47cd6195aff9d}{R\+X\+\_\+\+M\+O\+D\+E\+\_\+\+W\+TO}~0x80
+\item 
+\#define \hyperlink{eldorado_8h_a4d78542955ab4ab0d9264ff2d7faace7}{H\+I\+B\+E\+R\+N\+A\+T\+E\+\_\+\+M\+O\+DE}~0x81
+\item 
+\#define \hyperlink{eldorado_8h_a136fd54d85b2317ccafdb8cd8b751408}{D\+O\+Z\+E\+\_\+\+M\+O\+DE}~0x82
+\item 
+\#define \hyperlink{eldorado_8h_a4cf23d5b15bc36a49924e39e166f66ff}{I\+D\+L\+E\+\_\+\+M\+O\+D\+E\+\_\+\+D\+O\+ZE}~0x83
+\item 
+\#define \hyperlink{eldorado_8h_ae0972ba46a0359f90f9fe79693c0edb6}{I\+D\+L\+E\+\_\+\+M\+O\+D\+E\+\_\+\+A\+T\+TN}~0x84
+\item 
+\#define \hyperlink{eldorado_8h_a45ba202b05caf39795aeca91b0ae547e}{T\+I\+M\+E\+O\+UT}~0x85
+\item 
+\#define \hyperlink{eldorado_8h_a34736448cad3104684e50e2473ddbf3e}{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+M\+O\+DE}~0x86
+\item 
+\#define \hyperlink{eldorado_8h_a054bfb29fda548b86050a34195ef1ccb}{M\+C13192\+\_\+\+R\+E\+S\+E\+T\+\_\+\+M\+O\+DE}~0x87
+\item 
+\#define \hyperlink{eldorado_8h_a25fd72112d1198788b36542a1e98cbec}{M\+C13192\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+DE}~0x88
+\item 
+\#define \hyperlink{eldorado_8h_a5f1226244e161294423fac73a93d034d}{R\+E\+S\+E\+T\+\_\+\+D\+E\+L\+AY}~0x89
+\item 
+\#define \hyperlink{eldorado_8h_ae6db24f417f55bdacc904d5adfa34a1d}{T\+X\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}~0x0040
+\item 
+\#define \hyperlink{eldorado_8h_ae234396dedc00b803ea5bf4bdacfdf26}{R\+A\+M\+E\+R\+R\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}~0x4000
+\item 
+\#define \hyperlink{eldorado_8h_abf5d31df79ec80ae6c68f53882786041}{R\+X\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}~0x0080
+\item 
+\#define \hyperlink{eldorado_8h_a2c0e1617c4361d2d86b9817a4efa1d73}{A\+T\+T\+N\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}~0x0400
+\item 
+\#define \hyperlink{eldorado_8h_a3037a80d79c455e3ccb6d7efc7e94f84}{C\+R\+C\+\_\+\+V\+A\+L\+I\+D\+\_\+\+M\+A\+SK}~0x0001
+\item 
+\#define \hyperlink{eldorado_8h_a7290efb8c74a60f7f7ac03623e159ec5}{T\+I\+M\+E\+R1\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}~0x0100
+\item 
+\#define \hyperlink{eldorado_8h_a9fc165a752ad4837b8b4b3f09c9007d5}{X\+C\+V\+R\+\_\+\+S\+E\+Q\+\_\+\+M\+A\+SK}~0x\+F\+F\+F8
+\item 
+\#define \hyperlink{eldorado_8h_a512362e4953a73d9be1360273dfa74a4}{L\+O\+\_\+\+L\+O\+C\+K\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}~0x8000
+\item 
+\#define \hyperlink{eldorado_8h_aaddde9eb577222f26db6bfee298d889b}{C\+C\+A\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}~0x0020
+\item 
+\#define \hyperlink{eldorado_8h_afb7bb02b882e6d4e288201001c0f1259}{D\+O\+Z\+E\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}~0x0200
+\item 
+\#define \hyperlink{eldorado_8h_a595d12d4b0bf38dbbbe46ff05e5740a6}{R\+E\+S\+E\+T\+\_\+\+B\+I\+T\+\_\+\+M\+A\+SK}~0x0080
+\item 
+\#define \hyperlink{eldorado_8h_a3a02a32963431d2a38dfcfc8b83f14c9}{C\+C\+A\+\_\+\+B\+I\+T\+\_\+\+M\+A\+SK}~0x0002
+\item 
+\#define \hyperlink{eldorado_8h_a6c6798d7dd2c16002d6cf37ff1335be0}{A\+C\+C\+E\+L\+\_\+\+E\+N\+A\+B\+L\+ED}~\hyperlink{opendefs_8h_aa93f0eb578d23995850d61f7d61c55c1}{F\+A\+L\+SE}
+\item 
+\#define \hyperlink{eldorado_8h_ae3a60f085902c0a73f7b1e70ce6fb206}{T\+E\+M\+P\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+E\+N\+A\+B\+L\+ED}~\hyperlink{opendefs_8h_aa93f0eb578d23995850d61f7d61c55c1}{F\+A\+L\+SE}
+\item 
+\#define \hyperlink{eldorado_8h_afabd78486acbc6a4d51ed64327e23452}{B\+U\+Z\+Z\+E\+R\+\_\+\+E\+N\+A\+B\+L\+ED}~\hyperlink{opendefs_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{T\+R\+UE}
+\item 
+\#define \hyperlink{eldorado_8h_a8f61bbedff87186c5921764299c4b182}{D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+U\+S\+\_\+\+S\+P\+E\+ED}~8000000
+\item 
+\#define \hyperlink{eldorado_8h_a652f96d37614999df43e03ff58626188}{S\+C\+I\+B\+DH}~S\+C\+I1\+B\+DH
+\item 
+\#define \hyperlink{eldorado_8h_af26ff5693fa93b532a8c6572e6d5f6c0}{S\+C\+I\+B\+DL}~S\+C\+I1\+B\+DL
+\item 
+\#define \hyperlink{eldorado_8h_af7cc6057bf240476022d687474edb906}{S\+C\+I\+C1}~S\+C\+I1\+C1
+\item 
+\#define \hyperlink{eldorado_8h_a4213b6df48a791e9f75a28aef3b08424}{S\+C\+I\+C2}~S\+C\+I1\+C2
+\item 
+\#define \hyperlink{eldorado_8h_a192e32e00061954feb726be44f560062}{S\+C\+I\+S1}~S\+C\+I1\+S1
+\item 
+\#define \hyperlink{eldorado_8h_a4f66bdf33113e8fe8d74a77f3b39dbd5}{S\+C\+I\+S2}~S\+C\+I1\+S2
+\item 
+\#define \hyperlink{eldorado_8h_a5a5c8c12b5e39b5fec291b1f94491181}{S\+C\+I\+C3}~S\+C\+I1\+C3
+\item 
+\#define \hyperlink{eldorado_8h_a8d290c0883a86287d25ab65c43d7fc56}{S\+C\+ID}~S\+C\+I1D
+\item 
+\#define \hyperlink{eldorado_8h_aeb6b8ebbb60cb252c7d4dea68367af0d}{S\+C\+I\+S1\+\_\+\+T\+D\+RE}~S\+C\+I1\+S1\+\_\+\+T\+D\+RE
+\item 
+\#define \hyperlink{eldorado_8h_a3facaf7a479885a2fde786074088797c}{S\+C\+I\+S1\+\_\+\+TC}~S\+C\+I1\+S1\+\_\+\+TC
+\item 
+\#define \hyperlink{eldorado_8h_a5da46cdb9a2133d1b4f0db71a332ba2e}{R\+TS}~P\+T\+A\+D\+\_\+\+P\+T\+A\+D1
+\item 
+\#define \hyperlink{eldorado_8h_adffb23ef5e6ef485f3f94543dd952c6c}{R\+T\+S\+D\+IR}~P\+T\+A\+D\+D\+\_\+\+P\+T\+A\+D\+D1
+\item 
+\#define \hyperlink{eldorado_8h_ae988e583ffb6482b5aa7a0db3cf04d13}{S\+C\+I\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+A\+UD}~38400
+\item 
+\#define \hyperlink{eldorado_8h_a8aa85ae9867fabf70ec72cd3bf6fb6b9}{L\+E\+D1}~P\+T\+A\+D\+\_\+\+P\+T\+A\+D0
+\item 
+\#define \hyperlink{eldorado_8h_aad43d4e4a158407d8b3b6b094174c1f0}{L\+E\+D1\+D\+IR}~P\+T\+A\+D\+D\+\_\+\+P\+T\+A\+D\+D0
+\item 
+\#define \hyperlink{eldorado_8h_ad09fe5bf321b9a2de26bd5e5b9af6424}{L\+E\+D2}~P\+T\+A\+D\+\_\+\+P\+T\+A\+D1
+\item 
+\#define \hyperlink{eldorado_8h_af4baf08a7376905b8c9b5e5c4b8250b3}{L\+E\+D2\+D\+IR}~P\+T\+A\+D\+D\+\_\+\+P\+T\+A\+D\+D1
+\item 
+\#define \hyperlink{eldorado_8h_a4b7ff8e253a7412f83deba3a447028a8}{L\+E\+D3}~P\+T\+A\+D\+\_\+\+P\+T\+A\+D2
+\item 
+\#define \hyperlink{eldorado_8h_a9452dd63803d7960e2976724fa3160ac}{L\+E\+D3\+D\+IR}~P\+T\+A\+D\+D\+\_\+\+P\+T\+A\+D\+D2
+\item 
+\#define \hyperlink{eldorado_8h_ae048837f20072bed467332b1bd1da9fa}{L\+E\+D4}~P\+T\+A\+D\+\_\+\+P\+T\+A\+D3
+\item 
+\#define \hyperlink{eldorado_8h_a4cf343397e92c3cc1dc8eef330c4a200}{L\+E\+D4\+D\+IR}~P\+T\+A\+D\+D\+\_\+\+P\+T\+A\+D\+D3
+\item 
+\#define \hyperlink{eldorado_8h_af2e697ac60e05813d45ea2c9c9e79c25}{L\+E\+D\+\_\+\+ON}~0
+\item 
+\#define \hyperlink{eldorado_8h_a80700bb63bd56ebabbb4728aa433fd29}{L\+E\+D\+\_\+\+O\+FF}~1
+\item 
+\#define \hyperlink{eldorado_8h_a427192092553f7353fc104543a0fe00d}{D\+D\+I\+R\+\_\+\+O\+U\+T\+P\+UT}~1
+\item 
+\#define \hyperlink{eldorado_8h_a254a4060a276529a4966b7a89330ef62}{D\+D\+I\+R\+\_\+\+I\+N\+P\+UT}~0
+\item 
+\#define \hyperlink{eldorado_8h_ac6422b58f93ec0e3b2801a645c88353a}{L\+E\+D\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO}
+\item 
+\#define \hyperlink{eldorado_8h_a145103118f6d9d1129aa4509cf214a13}{B\+U\+Z\+Z\+ER}~P\+T\+D\+D\+\_\+\+P\+T\+D\+D2
+\item 
+\#define \hyperlink{eldorado_8h_a2cbf122bbf59b95cebff04aa607f68aa}{B\+U\+Z\+Z\+E\+R\+D\+IR}~P\+T\+D\+D\+D\+\_\+\+P\+T\+D\+D\+D2
+\item 
+\#define \hyperlink{eldorado_8h_a74bffe43639b09a9dd06f8d88cf6abf8}{B\+U\+Z\+Z\+E\+R\+\_\+\+ON}~1
+\item 
+\#define \hyperlink{eldorado_8h_aaa1a6e80bb4409bde4f568816709a28f}{B\+U\+Z\+Z\+E\+R\+\_\+\+O\+FF}~0
+\item 
+\#define \hyperlink{eldorado_8h_aa3212c864f0271926ca3ca1875e5721c}{B\+U\+Z\+Z\+E\+R\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO}
+\item 
+\#define \hyperlink{eldorado_8h_acb0f9abbadb16a66065b04c9e43b8f41}{P\+B0}~P\+T\+A\+D\+\_\+\+P\+T\+A\+D2
+\item 
+\#define \hyperlink{eldorado_8h_ac4cac00e17eb7335b8d9fb9b47e6c2bd}{P\+B0\+PU}~P\+T\+A\+P\+E\+\_\+\+P\+T\+A\+P\+E2
+\item 
+\#define \hyperlink{eldorado_8h_a13561b625ffb33e8de2cea5caabb45fd}{P\+B0\+D\+IR}~P\+T\+A\+D\+D\+\_\+\+P\+T\+A\+D\+D2
+\item 
+\#define \hyperlink{eldorado_8h_abbdd81468b60caf7f43af5ed01455f06}{P\+B0\+IE}~K\+B\+I1\+P\+E\+\_\+\+K\+B\+I\+P\+E2
+\item 
+\#define \hyperlink{eldorado_8h_a37eb042c0715e6f809fb8677b8805f57}{P\+B1}~P\+T\+A\+D\+\_\+\+P\+T\+A\+D3
+\item 
+\#define \hyperlink{eldorado_8h_a784f3eb69fee39468fea9a5fd6a434a5}{P\+B1\+PU}~P\+T\+A\+P\+E\+\_\+\+P\+T\+A\+P\+E3
+\item 
+\#define \hyperlink{eldorado_8h_afa7b1454bf3a49f681dd95d6824783de}{P\+B1\+D\+IR}~P\+T\+A\+D\+D\+\_\+\+P\+T\+A\+D\+D3
+\item 
+\#define \hyperlink{eldorado_8h_a75cd04560e29c273feb07591de8bfea9}{P\+B1\+IE}~K\+B\+I1\+P\+E\+\_\+\+K\+B\+I\+P\+E3
+\item 
+\#define \hyperlink{eldorado_8h_aedce709abd1cf8bfd0e5b5db39a1b789}{P\+B2}~P\+T\+A\+D\+\_\+\+P\+T\+A\+D4
+\item 
+\#define \hyperlink{eldorado_8h_a135ed477ddba86bdb1192f7d2f48ee45}{P\+B2\+PU}~P\+T\+A\+P\+E\+\_\+\+P\+T\+A\+P\+E4
+\item 
+\#define \hyperlink{eldorado_8h_a261d32665888c90718aad72482f7e9e4}{P\+B2\+D\+IR}~P\+T\+A\+D\+D\+\_\+\+P\+T\+A\+D\+D4
+\item 
+\#define \hyperlink{eldorado_8h_a2eb3689741b535b6ce55cb5f2f043a93}{P\+B2\+IE}~K\+B\+I1\+P\+E\+\_\+\+K\+B\+I\+P\+E4
+\item 
+\#define \hyperlink{eldorado_8h_a9531e9d4cc06b4d72823afe3b2f632f5}{P\+B3}~P\+T\+A\+D\+\_\+\+P\+T\+A\+D5
+\item 
+\#define \hyperlink{eldorado_8h_a2b9acf1ff14fc6b4438d110d2876331d}{P\+B3\+PU}~P\+T\+A\+P\+E\+\_\+\+P\+T\+A\+P\+E5
+\item 
+\#define \hyperlink{eldorado_8h_a3e36aad5415e4c803c3fbad74acc2cc8}{P\+B3\+D\+IR}~P\+T\+A\+D\+D\+\_\+\+P\+T\+A\+D\+D5
+\item 
+\#define \hyperlink{eldorado_8h_a0770484ac257513a6087dee3d44c429c}{P\+B3\+IE}~K\+B\+I1\+P\+E\+\_\+\+K\+B\+I\+P\+E5
+\item 
+\#define \hyperlink{eldorado_8h_acc950b4f5920af77110edc449d945b9a}{K\+B\+I\+\_\+\+S\+W1}~0x04
+\item 
+\#define \hyperlink{eldorado_8h_ac794057d16c60bbed64377533268ae22}{K\+B\+I\+\_\+\+S\+W2}~0x08
+\item 
+\#define \hyperlink{eldorado_8h_a169fa13942f0173db8d05a95bae66705}{K\+B\+I\+\_\+\+S\+W3}~0x10
+\item 
+\#define \hyperlink{eldorado_8h_a12966183ab4c78005a37e351a99a5fdb}{K\+B\+I\+\_\+\+S\+W4}~0x20
+\item 
+\#define \hyperlink{eldorado_8h_a8456e9e229a77bf52e74485975e30042}{S\+W\+I\+T\+C\+H\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO}
+\item 
+\#define \hyperlink{eldorado_8h_af4cc2866af9a3674feedf15a2bb2b540}{A\+C\+C\+E\+L\+\_\+X}~P\+T\+B\+D\+\_\+\+P\+T\+B\+D2
+\item 
+\#define \hyperlink{eldorado_8h_a73df2dcbe32c4a51551b34034093c37f}{A\+C\+C\+E\+L\+\_\+Y}~P\+T\+B\+D\+\_\+\+P\+T\+B\+D3
+\item 
+\#define \hyperlink{eldorado_8h_a1e1de74892d5fa9c2fc21bcc6fd50618}{A\+C\+C\+E\+L\+\_\+Z}~P\+T\+B\+D\+\_\+\+P\+T\+B\+D4
+\item 
+\#define \hyperlink{eldorado_8h_a70b9285ee72df8bfc1276fc130292567}{A\+C\+C\+E\+L\+\_\+\+PS}~P\+T\+B\+D\+\_\+\+P\+T\+B\+D5
+\item 
+\#define \hyperlink{eldorado_8h_a8ce449d3469dbf09fbf4c85d2ce7ced4}{A\+C\+C\+E\+L\+\_\+\+G\+S\+E\+L\+E\+C\+T1}~P\+T\+B\+D\+\_\+\+P\+T\+B\+D1
+\item 
+\#define \hyperlink{eldorado_8h_a6d4bf77307e8256568f6fd207cf782bf}{A\+C\+C\+E\+L\+\_\+\+G\+S\+E\+L\+E\+C\+T2}~P\+T\+B\+D\+\_\+\+P\+T\+B\+D0
+\item 
+\#define \hyperlink{eldorado_8h_abd2bc6ef99aa1b60f6ab2998eaaed2ed}{A\+C\+C\+E\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+X}~A\+T\+D1\+SC = 2;
+\item 
+\#define \hyperlink{eldorado_8h_a00e18ffeafd959d343785a1bc0416159}{A\+C\+C\+E\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+Y}~A\+T\+D1\+SC = 3;
+\item 
+\#define \hyperlink{eldorado_8h_a157612b4059d973158663edaa635171f}{A\+C\+C\+E\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+Z}~A\+T\+D1\+SC = 4;
+\item 
+\#define \hyperlink{eldorado_8h_ae72969a37e6d020166d1951b4450db3a}{A\+C\+C\+E\+L\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO}
+\item 
+\#define \hyperlink{eldorado_8h_a9529bdbf4bf1cbfac271441db233d836}{A\+C\+C\+E\+L\+\_\+\+G\+\_\+\+O\+FF}~\hyperlink{eldorado_8h_a70b9285ee72df8bfc1276fc130292567}{A\+C\+C\+E\+L\+\_\+\+PS} = 0;
+\item 
+\#define \hyperlink{eldorado_8h_a344d180f07d09dcc9968bc8b2548d254}{A\+C\+C\+E\+L\+\_\+\+G\+\_\+\+ON}~\hyperlink{eldorado_8h_a70b9285ee72df8bfc1276fc130292567}{A\+C\+C\+E\+L\+\_\+\+PS} = 1;
+\item 
+\#define \hyperlink{eldorado_8h_a552f815d0d00a52d078da61d1d79b2bc}{A\+C\+C\+E\+L\+\_\+\+G\+\_\+1p5}~\hyperlink{eldorado_8h_a8ce449d3469dbf09fbf4c85d2ce7ced4}{A\+C\+C\+E\+L\+\_\+\+G\+S\+E\+L\+E\+C\+T1} = 0; \hyperlink{eldorado_8h_a6d4bf77307e8256568f6fd207cf782bf}{A\+C\+C\+E\+L\+\_\+\+G\+S\+E\+L\+E\+C\+T2} = 0;
+\item 
+\#define \hyperlink{eldorado_8h_a766a89822e642570ab91d5b9e6afed8e}{A\+C\+C\+E\+L\+\_\+\+G\+\_\+2p0}~\hyperlink{eldorado_8h_a8ce449d3469dbf09fbf4c85d2ce7ced4}{A\+C\+C\+E\+L\+\_\+\+G\+S\+E\+L\+E\+C\+T1} = 0; \hyperlink{eldorado_8h_a6d4bf77307e8256568f6fd207cf782bf}{A\+C\+C\+E\+L\+\_\+\+G\+S\+E\+L\+E\+C\+T2} = 1;
+\item 
+\#define \hyperlink{eldorado_8h_ad3340057a4fa0dbd0415a7a56ea9e9cc}{A\+C\+C\+E\+L\+\_\+\+G\+\_\+4p0}~\hyperlink{eldorado_8h_a8ce449d3469dbf09fbf4c85d2ce7ced4}{A\+C\+C\+E\+L\+\_\+\+G\+S\+E\+L\+E\+C\+T1} = 1; \hyperlink{eldorado_8h_a6d4bf77307e8256568f6fd207cf782bf}{A\+C\+C\+E\+L\+\_\+\+G\+S\+E\+L\+E\+C\+T2} = 0;
+\item 
+\#define \hyperlink{eldorado_8h_a7dae0077d4b6eb5ffa1476dc7e3a49b5}{A\+C\+C\+E\+L\+\_\+\+G\+\_\+6p0}~\hyperlink{eldorado_8h_a8ce449d3469dbf09fbf4c85d2ce7ced4}{A\+C\+C\+E\+L\+\_\+\+G\+S\+E\+L\+E\+C\+T1} = 1; \hyperlink{eldorado_8h_a6d4bf77307e8256568f6fd207cf782bf}{A\+C\+C\+E\+L\+\_\+\+G\+S\+E\+L\+E\+C\+T2} = 1;
+\item 
+\#define \hyperlink{eldorado_8h_a9e68ed137ca4a61c3977dcdad091f27c}{L\+C\+D\+\_\+\+E\+N\+A\+B\+LE}~P\+T\+B\+D\+\_\+\+P\+T\+B\+D0
+\item 
+\#define \hyperlink{eldorado_8h_afc2727c5a1456837aadc657b4501875d}{L\+C\+D\+\_\+\+R\+E\+G\+\_\+\+S\+EL}~P\+T\+B\+D\+\_\+\+P\+T\+B\+D1
+\item 
+\#define \hyperlink{eldorado_8h_a1640ffbc0d8ec0f7edb04a2b93918072}{L\+C\+D\+\_\+\+EN}~P\+T\+B\+D\+\_\+\+P\+T\+B\+D2
+\item 
+\#define \hyperlink{eldorado_8h_a26089a10ddd59a0dc7283c19ccc02533}{L\+C\+D\+\_\+\+RW}~P\+T\+B\+D\+\_\+\+P\+T\+B\+D3
+\item 
+\#define \hyperlink{eldorado_8h_ae0732d2be6629af3a06adadd21a64d20}{L\+C\+D\+\_\+\+D\+A\+T\+A1}~P\+T\+B\+D\+\_\+\+P\+T\+B\+D4
+\item 
+\#define \hyperlink{eldorado_8h_aa4617b181137add2a7b59e7504313fc5}{L\+C\+D\+\_\+\+D\+A\+T\+A2}~P\+T\+B\+D\+\_\+\+P\+T\+B\+D5
+\item 
+\#define \hyperlink{eldorado_8h_a64194fd4150fb5b899fef68ba61b0736}{L\+C\+D\+\_\+\+D\+A\+T\+A3}~P\+T\+B\+D\+\_\+\+P\+T\+B\+D6
+\item 
+\#define \hyperlink{eldorado_8h_a641994cd90117e7d8b32d6e72d6efc37}{L\+C\+D\+\_\+\+D\+A\+T\+A4}~P\+T\+B\+D\+\_\+\+P\+T\+B\+D7
+\item 
+\#define \hyperlink{eldorado_8h_aa6e7d20739cca7f4b462aafb756eb510}{L\+C\+D\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO}~P\+T\+B\+DD = 0x\+F\+F;  /$\ast$ Set whole port to output $\ast$/
+\item 
+\#define \hyperlink{eldorado_8h_aaa787cba39dc955fde1513c0c2edc83c}{E\+N\+T\+E\+R\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+ER}~\+\_\+asm \hyperlink{arm__cm4_8h_aacf6bf8e121fea8b0a92d7197b73fe27}{stop}
+\item 
+\#define \hyperlink{eldorado_8h_a7e248a6d23b44891bb4f0bdb88376068}{P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+O\+N1}~\hyperlink{eldorado_8h_acb0f9abbadb16a66065b04c9e43b8f41}{P\+B0}
+\item 
+\#define \hyperlink{eldorado_8h_afc15afb38fa2f0f9fb1448682c2fd356}{P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+O\+N2}~\hyperlink{eldorado_8h_a37eb042c0715e6f809fb8677b8805f57}{P\+B1}
+\item 
+\#define \hyperlink{eldorado_8h_ac85b1193b67e7a29235358a56b1e2986}{P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+O\+N3}~\hyperlink{eldorado_8h_aedce709abd1cf8bfd0e5b5db39a1b789}{P\+B2}
+\item 
+\#define \hyperlink{eldorado_8h_a74056487e82217c39710ed3ac215d287}{P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+O\+N4}~\hyperlink{eldorado_8h_a9531e9d4cc06b4d72823afe3b2f632f5}{P\+B3}
+\item 
+\#define \hyperlink{eldorado_8h_a354a94d82764457a96788763c4182b5c}{P\+B\+\_\+\+P\+R\+E\+S\+S\+ED}~0
+\item 
+\#define \hyperlink{eldorado_8h_a6090dfbceb4a022cb4261a749ae15bda}{E\+N\+\_\+\+P\+A1\+\_\+\+D\+IR}~P\+T\+C\+D\+D\+\_\+\+P\+T\+C\+D\+D6
+\item 
+\#define \hyperlink{eldorado_8h_a1a2d8452ccfc43e76213d8658db0879e}{E\+N\+\_\+\+P\+A2\+\_\+\+D\+IR}~P\+T\+C\+D\+D\+\_\+\+P\+T\+C\+D\+D7
+\item 
+\#define \hyperlink{eldorado_8h_ad33d38671d52433614c1e497be44f7bf}{E\+N\+\_\+\+P\+A1}~P\+T\+C\+D\+\_\+\+P\+T\+C\+D6
+\item 
+\#define \hyperlink{eldorado_8h_af7d506ed481ecbf2a00c1403ba3a7bcb}{E\+N\+\_\+\+P\+A2}~P\+T\+C\+D\+\_\+\+P\+T\+C\+D7
+\item 
+\#define \hyperlink{eldorado_8h_a09d567ef8818e0646f084fb9d3294621}{I\+R\+Q\+F\+L\+AG}~I\+R\+Q\+S\+C\+\_\+\+I\+R\+QF
+\item 
+\#define \hyperlink{eldorado_8h_a8f3c0221ee9ddeee774e4b60948a587a}{I\+R\+Q\+A\+CK}()                                    ~I\+R\+Q\+SC $\vert$= 0x04
+\item 
+\#define \hyperlink{eldorado_8h_a3b70d03e5b23e62ab98cf0b30571056c}{I\+R\+Q\+Init}()                                  ~I\+R\+Q\+SC = 0x14
+\item 
+\#define \hyperlink{eldorado_8h_a2b479cac1b91a125dbaf530abdbfaa43}{I\+R\+Q\+Pin\+Enable}()                        ~I\+R\+Q\+SC = 0x16
+\item 
+\#define \hyperlink{eldorado_8h_a91b124931b5e62125ba206897fc12377}{I\+R\+Q\+\_\+\+Disable}()                          ~I\+R\+Q\+SC = 0x00;
+\item 
+\#define \hyperlink{eldorado_8h_a17ec013d44f3a89e263788898e567b60}{M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+Disable}()          ~\hyperlink{eldorado_8h_a43e8cdf166caa364c64d33a3b5b12d95}{M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+S\+O\+U\+R\+CE} = \hyperlink{eldorado_8h_a43e8cdf166caa364c64d33a3b5b12d95}{M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+S\+O\+U\+R\+CE} \& $\sim$(0x06)
+\item 
+\#define \hyperlink{eldorado_8h_ae253446c1e70be66a7b89a657a449119}{M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+Enable}()            ~\hyperlink{eldorado_8h_a43e8cdf166caa364c64d33a3b5b12d95}{M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+S\+O\+U\+R\+CE} = \hyperlink{eldorado_8h_a43e8cdf166caa364c64d33a3b5b12d95}{M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+S\+O\+U\+R\+CE} $\vert$ (0x02)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+interrupt \hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{eldorado_8h_a35b93b542f8f881b453c40b788fa11cf}{I\+R\+Q\+Isr} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{eldorado.\+h@{eldorado.\+h}!A\+C\+C\+E\+L\+\_\+\+E\+N\+A\+B\+L\+ED@{A\+C\+C\+E\+L\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\index{A\+C\+C\+E\+L\+\_\+\+E\+N\+A\+B\+L\+ED@{A\+C\+C\+E\+L\+\_\+\+E\+N\+A\+B\+L\+ED}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+E\+L\+\_\+\+E\+N\+A\+B\+L\+ED}{ACCEL_ENABLED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+E\+L\+\_\+\+E\+N\+A\+B\+L\+ED~{\bf F\+A\+L\+SE}}\hypertarget{eldorado_8h_a6c6798d7dd2c16002d6cf37ff1335be0}{}\label{eldorado_8h_a6c6798d7dd2c16002d6cf37ff1335be0}
+
+
+Definition at line 96 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!A\+C\+C\+E\+L\+\_\+\+G\+\_\+1p5@{A\+C\+C\+E\+L\+\_\+\+G\+\_\+1p5}}
+\index{A\+C\+C\+E\+L\+\_\+\+G\+\_\+1p5@{A\+C\+C\+E\+L\+\_\+\+G\+\_\+1p5}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+E\+L\+\_\+\+G\+\_\+1p5}{ACCEL_G_1p5}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+E\+L\+\_\+\+G\+\_\+1p5~{\bf A\+C\+C\+E\+L\+\_\+\+G\+S\+E\+L\+E\+C\+T1} = 0; {\bf A\+C\+C\+E\+L\+\_\+\+G\+S\+E\+L\+E\+C\+T2} = 0;}\hypertarget{eldorado_8h_a552f815d0d00a52d078da61d1d79b2bc}{}\label{eldorado_8h_a552f815d0d00a52d078da61d1d79b2bc}
+
+
+Definition at line 263 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!A\+C\+C\+E\+L\+\_\+\+G\+\_\+2p0@{A\+C\+C\+E\+L\+\_\+\+G\+\_\+2p0}}
+\index{A\+C\+C\+E\+L\+\_\+\+G\+\_\+2p0@{A\+C\+C\+E\+L\+\_\+\+G\+\_\+2p0}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+E\+L\+\_\+\+G\+\_\+2p0}{ACCEL_G_2p0}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+E\+L\+\_\+\+G\+\_\+2p0~{\bf A\+C\+C\+E\+L\+\_\+\+G\+S\+E\+L\+E\+C\+T1} = 0; {\bf A\+C\+C\+E\+L\+\_\+\+G\+S\+E\+L\+E\+C\+T2} = 1;}\hypertarget{eldorado_8h_a766a89822e642570ab91d5b9e6afed8e}{}\label{eldorado_8h_a766a89822e642570ab91d5b9e6afed8e}
+
+
+Definition at line 264 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!A\+C\+C\+E\+L\+\_\+\+G\+\_\+4p0@{A\+C\+C\+E\+L\+\_\+\+G\+\_\+4p0}}
+\index{A\+C\+C\+E\+L\+\_\+\+G\+\_\+4p0@{A\+C\+C\+E\+L\+\_\+\+G\+\_\+4p0}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+E\+L\+\_\+\+G\+\_\+4p0}{ACCEL_G_4p0}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+E\+L\+\_\+\+G\+\_\+4p0~{\bf A\+C\+C\+E\+L\+\_\+\+G\+S\+E\+L\+E\+C\+T1} = 1; {\bf A\+C\+C\+E\+L\+\_\+\+G\+S\+E\+L\+E\+C\+T2} = 0;}\hypertarget{eldorado_8h_ad3340057a4fa0dbd0415a7a56ea9e9cc}{}\label{eldorado_8h_ad3340057a4fa0dbd0415a7a56ea9e9cc}
+
+
+Definition at line 265 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!A\+C\+C\+E\+L\+\_\+\+G\+\_\+6p0@{A\+C\+C\+E\+L\+\_\+\+G\+\_\+6p0}}
+\index{A\+C\+C\+E\+L\+\_\+\+G\+\_\+6p0@{A\+C\+C\+E\+L\+\_\+\+G\+\_\+6p0}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+E\+L\+\_\+\+G\+\_\+6p0}{ACCEL_G_6p0}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+E\+L\+\_\+\+G\+\_\+6p0~{\bf A\+C\+C\+E\+L\+\_\+\+G\+S\+E\+L\+E\+C\+T1} = 1; {\bf A\+C\+C\+E\+L\+\_\+\+G\+S\+E\+L\+E\+C\+T2} = 1;}\hypertarget{eldorado_8h_a7dae0077d4b6eb5ffa1476dc7e3a49b5}{}\label{eldorado_8h_a7dae0077d4b6eb5ffa1476dc7e3a49b5}
+
+
+Definition at line 266 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!A\+C\+C\+E\+L\+\_\+\+G\+\_\+\+O\+FF@{A\+C\+C\+E\+L\+\_\+\+G\+\_\+\+O\+FF}}
+\index{A\+C\+C\+E\+L\+\_\+\+G\+\_\+\+O\+FF@{A\+C\+C\+E\+L\+\_\+\+G\+\_\+\+O\+FF}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+E\+L\+\_\+\+G\+\_\+\+O\+FF}{ACCEL_G_OFF}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+E\+L\+\_\+\+G\+\_\+\+O\+FF~{\bf A\+C\+C\+E\+L\+\_\+\+PS} = 0;}\hypertarget{eldorado_8h_a9529bdbf4bf1cbfac271441db233d836}{}\label{eldorado_8h_a9529bdbf4bf1cbfac271441db233d836}
+
+
+Definition at line 261 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!A\+C\+C\+E\+L\+\_\+\+G\+\_\+\+ON@{A\+C\+C\+E\+L\+\_\+\+G\+\_\+\+ON}}
+\index{A\+C\+C\+E\+L\+\_\+\+G\+\_\+\+ON@{A\+C\+C\+E\+L\+\_\+\+G\+\_\+\+ON}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+E\+L\+\_\+\+G\+\_\+\+ON}{ACCEL_G_ON}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+E\+L\+\_\+\+G\+\_\+\+ON~{\bf A\+C\+C\+E\+L\+\_\+\+PS} = 1;}\hypertarget{eldorado_8h_a344d180f07d09dcc9968bc8b2548d254}{}\label{eldorado_8h_a344d180f07d09dcc9968bc8b2548d254}
+
+
+Definition at line 262 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!A\+C\+C\+E\+L\+\_\+\+G\+S\+E\+L\+E\+C\+T1@{A\+C\+C\+E\+L\+\_\+\+G\+S\+E\+L\+E\+C\+T1}}
+\index{A\+C\+C\+E\+L\+\_\+\+G\+S\+E\+L\+E\+C\+T1@{A\+C\+C\+E\+L\+\_\+\+G\+S\+E\+L\+E\+C\+T1}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+E\+L\+\_\+\+G\+S\+E\+L\+E\+C\+T1}{ACCEL_GSELECT1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+E\+L\+\_\+\+G\+S\+E\+L\+E\+C\+T1~P\+T\+B\+D\+\_\+\+P\+T\+B\+D1}\hypertarget{eldorado_8h_a8ce449d3469dbf09fbf4c85d2ce7ced4}{}\label{eldorado_8h_a8ce449d3469dbf09fbf4c85d2ce7ced4}
+
+
+Definition at line 247 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!A\+C\+C\+E\+L\+\_\+\+G\+S\+E\+L\+E\+C\+T2@{A\+C\+C\+E\+L\+\_\+\+G\+S\+E\+L\+E\+C\+T2}}
+\index{A\+C\+C\+E\+L\+\_\+\+G\+S\+E\+L\+E\+C\+T2@{A\+C\+C\+E\+L\+\_\+\+G\+S\+E\+L\+E\+C\+T2}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+E\+L\+\_\+\+G\+S\+E\+L\+E\+C\+T2}{ACCEL_GSELECT2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+E\+L\+\_\+\+G\+S\+E\+L\+E\+C\+T2~P\+T\+B\+D\+\_\+\+P\+T\+B\+D0}\hypertarget{eldorado_8h_a6d4bf77307e8256568f6fd207cf782bf}{}\label{eldorado_8h_a6d4bf77307e8256568f6fd207cf782bf}
+
+
+Definition at line 248 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!A\+C\+C\+E\+L\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO@{A\+C\+C\+E\+L\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO}}
+\index{A\+C\+C\+E\+L\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO@{A\+C\+C\+E\+L\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+E\+L\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO}{ACCEL_INIT_MACRO}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+E\+L\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO}\hypertarget{eldorado_8h_ae72969a37e6d020166d1951b4450db3a}{}\label{eldorado_8h_ae72969a37e6d020166d1951b4450db3a}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+PTBDD\_PTBDD2 = \hyperlink{eldorado_8h_a254a4060a276529a4966b7a89330ef62}{DDIR\_INPUT}; \(\backslash\)
+                          PTBDD\_PTBDD3 = \hyperlink{eldorado_8h_a254a4060a276529a4966b7a89330ef62}{DDIR\_INPUT}; \(\backslash\)
+                          PTBDD\_PTBDD4 = \hyperlink{eldorado_8h_a254a4060a276529a4966b7a89330ef62}{DDIR\_INPUT}; \(\backslash\)
+                          PTBDD\_PTBDD5 = \hyperlink{eldorado_8h_a427192092553f7353fc104543a0fe00d}{DDIR\_OUTPUT}; \(\backslash\)
+                          PTBDD\_PTBDD1 = \hyperlink{eldorado_8h_a427192092553f7353fc104543a0fe00d}{DDIR\_OUTPUT}; \(\backslash\)
+                          PTBDD\_PTBDD0 = \hyperlink{eldorado_8h_a427192092553f7353fc104543a0fe00d}{DDIR\_OUTPUT};
+\end{DoxyCode}
+
+
+Definition at line 254 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!A\+C\+C\+E\+L\+\_\+\+PS@{A\+C\+C\+E\+L\+\_\+\+PS}}
+\index{A\+C\+C\+E\+L\+\_\+\+PS@{A\+C\+C\+E\+L\+\_\+\+PS}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+E\+L\+\_\+\+PS}{ACCEL_PS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+E\+L\+\_\+\+PS~P\+T\+B\+D\+\_\+\+P\+T\+B\+D5}\hypertarget{eldorado_8h_a70b9285ee72df8bfc1276fc130292567}{}\label{eldorado_8h_a70b9285ee72df8bfc1276fc130292567}
+
+
+Definition at line 246 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!A\+C\+C\+E\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+X@{A\+C\+C\+E\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+X}}
+\index{A\+C\+C\+E\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+X@{A\+C\+C\+E\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+X}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+E\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+X}{ACCEL_START_X}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+E\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+X~A\+T\+D1\+SC = 2;}\hypertarget{eldorado_8h_abd2bc6ef99aa1b60f6ab2998eaaed2ed}{}\label{eldorado_8h_abd2bc6ef99aa1b60f6ab2998eaaed2ed}
+
+
+Definition at line 250 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!A\+C\+C\+E\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+Y@{A\+C\+C\+E\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+Y}}
+\index{A\+C\+C\+E\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+Y@{A\+C\+C\+E\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+Y}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+E\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+Y}{ACCEL_START_Y}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+E\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+Y~A\+T\+D1\+SC = 3;}\hypertarget{eldorado_8h_a00e18ffeafd959d343785a1bc0416159}{}\label{eldorado_8h_a00e18ffeafd959d343785a1bc0416159}
+
+
+Definition at line 251 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!A\+C\+C\+E\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+Z@{A\+C\+C\+E\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+Z}}
+\index{A\+C\+C\+E\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+Z@{A\+C\+C\+E\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+Z}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+E\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+Z}{ACCEL_START_Z}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+E\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+Z~A\+T\+D1\+SC = 4;}\hypertarget{eldorado_8h_a157612b4059d973158663edaa635171f}{}\label{eldorado_8h_a157612b4059d973158663edaa635171f}
+
+
+Definition at line 252 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!A\+C\+C\+E\+L\+\_\+X@{A\+C\+C\+E\+L\+\_\+X}}
+\index{A\+C\+C\+E\+L\+\_\+X@{A\+C\+C\+E\+L\+\_\+X}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+E\+L\+\_\+X}{ACCEL_X}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+E\+L\+\_\+X~P\+T\+B\+D\+\_\+\+P\+T\+B\+D2}\hypertarget{eldorado_8h_af4cc2866af9a3674feedf15a2bb2b540}{}\label{eldorado_8h_af4cc2866af9a3674feedf15a2bb2b540}
+
+
+Definition at line 243 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!A\+C\+C\+E\+L\+\_\+Y@{A\+C\+C\+E\+L\+\_\+Y}}
+\index{A\+C\+C\+E\+L\+\_\+Y@{A\+C\+C\+E\+L\+\_\+Y}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+E\+L\+\_\+Y}{ACCEL_Y}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+E\+L\+\_\+Y~P\+T\+B\+D\+\_\+\+P\+T\+B\+D3}\hypertarget{eldorado_8h_a73df2dcbe32c4a51551b34034093c37f}{}\label{eldorado_8h_a73df2dcbe32c4a51551b34034093c37f}
+
+
+Definition at line 244 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!A\+C\+C\+E\+L\+\_\+Z@{A\+C\+C\+E\+L\+\_\+Z}}
+\index{A\+C\+C\+E\+L\+\_\+Z@{A\+C\+C\+E\+L\+\_\+Z}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+E\+L\+\_\+Z}{ACCEL_Z}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+E\+L\+\_\+Z~P\+T\+B\+D\+\_\+\+P\+T\+B\+D4}\hypertarget{eldorado_8h_a1e1de74892d5fa9c2fc21bcc6fd50618}{}\label{eldorado_8h_a1e1de74892d5fa9c2fc21bcc6fd50618}
+
+
+Definition at line 245 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!A\+T\+T\+N\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK@{A\+T\+T\+N\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}}
+\index{A\+T\+T\+N\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK@{A\+T\+T\+N\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{A\+T\+T\+N\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}{ATTN_IRQ_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+T\+T\+N\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK~0x0400}\hypertarget{eldorado_8h_a2c0e1617c4361d2d86b9817a4efa1d73}{}\label{eldorado_8h_a2c0e1617c4361d2d86b9817a4efa1d73}
+Attention I\+RQ Mask 
+
+Definition at line 54 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!B\+U\+Z\+Z\+ER@{B\+U\+Z\+Z\+ER}}
+\index{B\+U\+Z\+Z\+ER@{B\+U\+Z\+Z\+ER}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{B\+U\+Z\+Z\+ER}{BUZZER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+U\+Z\+Z\+ER~P\+T\+D\+D\+\_\+\+P\+T\+D\+D2}\hypertarget{eldorado_8h_a145103118f6d9d1129aa4509cf214a13}{}\label{eldorado_8h_a145103118f6d9d1129aa4509cf214a13}
+
+
+Definition at line 186 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!B\+U\+Z\+Z\+E\+R\+\_\+\+E\+N\+A\+B\+L\+ED@{B\+U\+Z\+Z\+E\+R\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\index{B\+U\+Z\+Z\+E\+R\+\_\+\+E\+N\+A\+B\+L\+ED@{B\+U\+Z\+Z\+E\+R\+\_\+\+E\+N\+A\+B\+L\+ED}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{B\+U\+Z\+Z\+E\+R\+\_\+\+E\+N\+A\+B\+L\+ED}{BUZZER_ENABLED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+U\+Z\+Z\+E\+R\+\_\+\+E\+N\+A\+B\+L\+ED~{\bf T\+R\+UE}}\hypertarget{eldorado_8h_afabd78486acbc6a4d51ed64327e23452}{}\label{eldorado_8h_afabd78486acbc6a4d51ed64327e23452}
+
+
+Definition at line 98 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!B\+U\+Z\+Z\+E\+R\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO@{B\+U\+Z\+Z\+E\+R\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO}}
+\index{B\+U\+Z\+Z\+E\+R\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO@{B\+U\+Z\+Z\+E\+R\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{B\+U\+Z\+Z\+E\+R\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO}{BUZZER_INIT_MACRO}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+U\+Z\+Z\+E\+R\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO}\hypertarget{eldorado_8h_aa3212c864f0271926ca3ca1875e5721c}{}\label{eldorado_8h_aa3212c864f0271926ca3ca1875e5721c}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{eldorado_8h_a145103118f6d9d1129aa4509cf214a13}{BUZZER}      = \hyperlink{eldorado_8h_aaa1a6e80bb4409bde4f568816709a28f}{BUZZER\_OFF}; \(\backslash\)
+                          BUZZERDIR   = \hyperlink{eldorado_8h_a427192092553f7353fc104543a0fe00d}{DDIR\_OUTPUT};
+\end{DoxyCode}
+
+
+Definition at line 191 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!B\+U\+Z\+Z\+E\+R\+\_\+\+O\+FF@{B\+U\+Z\+Z\+E\+R\+\_\+\+O\+FF}}
+\index{B\+U\+Z\+Z\+E\+R\+\_\+\+O\+FF@{B\+U\+Z\+Z\+E\+R\+\_\+\+O\+FF}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{B\+U\+Z\+Z\+E\+R\+\_\+\+O\+FF}{BUZZER_OFF}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+U\+Z\+Z\+E\+R\+\_\+\+O\+FF~0}\hypertarget{eldorado_8h_aaa1a6e80bb4409bde4f568816709a28f}{}\label{eldorado_8h_aaa1a6e80bb4409bde4f568816709a28f}
+
+
+Definition at line 189 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!B\+U\+Z\+Z\+E\+R\+\_\+\+ON@{B\+U\+Z\+Z\+E\+R\+\_\+\+ON}}
+\index{B\+U\+Z\+Z\+E\+R\+\_\+\+ON@{B\+U\+Z\+Z\+E\+R\+\_\+\+ON}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{B\+U\+Z\+Z\+E\+R\+\_\+\+ON}{BUZZER_ON}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+U\+Z\+Z\+E\+R\+\_\+\+ON~1}\hypertarget{eldorado_8h_a74bffe43639b09a9dd06f8d88cf6abf8}{}\label{eldorado_8h_a74bffe43639b09a9dd06f8d88cf6abf8}
+
+
+Definition at line 188 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!B\+U\+Z\+Z\+E\+R\+D\+IR@{B\+U\+Z\+Z\+E\+R\+D\+IR}}
+\index{B\+U\+Z\+Z\+E\+R\+D\+IR@{B\+U\+Z\+Z\+E\+R\+D\+IR}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{B\+U\+Z\+Z\+E\+R\+D\+IR}{BUZZERDIR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+U\+Z\+Z\+E\+R\+D\+IR~P\+T\+D\+D\+D\+\_\+\+P\+T\+D\+D\+D2}\hypertarget{eldorado_8h_a2cbf122bbf59b95cebff04aa607f68aa}{}\label{eldorado_8h_a2cbf122bbf59b95cebff04aa607f68aa}
+
+
+Definition at line 187 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!C\+C\+A\+\_\+\+B\+I\+T\+\_\+\+M\+A\+SK@{C\+C\+A\+\_\+\+B\+I\+T\+\_\+\+M\+A\+SK}}
+\index{C\+C\+A\+\_\+\+B\+I\+T\+\_\+\+M\+A\+SK@{C\+C\+A\+\_\+\+B\+I\+T\+\_\+\+M\+A\+SK}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{C\+C\+A\+\_\+\+B\+I\+T\+\_\+\+M\+A\+SK}{CCA_BIT_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+A\+\_\+\+B\+I\+T\+\_\+\+M\+A\+SK~0x0002}\hypertarget{eldorado_8h_a3a02a32963431d2a38dfcfc8b83f14c9}{}\label{eldorado_8h_a3a02a32963431d2a38dfcfc8b83f14c9}
+
+
+Definition at line 62 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!C\+C\+A\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK@{C\+C\+A\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}}
+\index{C\+C\+A\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK@{C\+C\+A\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{C\+C\+A\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}{CCA_IRQ_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+A\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK~0x0020}\hypertarget{eldorado_8h_aaddde9eb577222f26db6bfee298d889b}{}\label{eldorado_8h_aaddde9eb577222f26db6bfee298d889b}
+C\+CA I\+RQ Mask 
+
+Definition at line 59 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!C\+C\+A\+\_\+\+M\+O\+DE@{C\+C\+A\+\_\+\+M\+O\+DE}}
+\index{C\+C\+A\+\_\+\+M\+O\+DE@{C\+C\+A\+\_\+\+M\+O\+DE}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{C\+C\+A\+\_\+\+M\+O\+DE}{CCA_MODE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+A\+\_\+\+M\+O\+DE~0x01}\hypertarget{eldorado_8h_ab4dab52e7cba87db7eab8bbfeb350674}{}\label{eldorado_8h_ab4dab52e7cba87db7eab8bbfeb350674}
+C\+CA mode 
+
+Definition at line 39 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!C\+R\+C\+\_\+\+V\+A\+L\+I\+D\+\_\+\+M\+A\+SK@{C\+R\+C\+\_\+\+V\+A\+L\+I\+D\+\_\+\+M\+A\+SK}}
+\index{C\+R\+C\+\_\+\+V\+A\+L\+I\+D\+\_\+\+M\+A\+SK@{C\+R\+C\+\_\+\+V\+A\+L\+I\+D\+\_\+\+M\+A\+SK}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{C\+R\+C\+\_\+\+V\+A\+L\+I\+D\+\_\+\+M\+A\+SK}{CRC_VALID_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R\+C\+\_\+\+V\+A\+L\+I\+D\+\_\+\+M\+A\+SK~0x0001}\hypertarget{eldorado_8h_a3037a80d79c455e3ccb6d7efc7e94f84}{}\label{eldorado_8h_a3037a80d79c455e3ccb6d7efc7e94f84}
+C\+RC valid Mask 
+
+Definition at line 55 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!D\+D\+I\+R\+\_\+\+I\+N\+P\+UT@{D\+D\+I\+R\+\_\+\+I\+N\+P\+UT}}
+\index{D\+D\+I\+R\+\_\+\+I\+N\+P\+UT@{D\+D\+I\+R\+\_\+\+I\+N\+P\+UT}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{D\+D\+I\+R\+\_\+\+I\+N\+P\+UT}{DDIR_INPUT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+D\+I\+R\+\_\+\+I\+N\+P\+UT~0}\hypertarget{eldorado_8h_a254a4060a276529a4966b7a89330ef62}{}\label{eldorado_8h_a254a4060a276529a4966b7a89330ef62}
+
+
+Definition at line 168 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!D\+D\+I\+R\+\_\+\+O\+U\+T\+P\+UT@{D\+D\+I\+R\+\_\+\+O\+U\+T\+P\+UT}}
+\index{D\+D\+I\+R\+\_\+\+O\+U\+T\+P\+UT@{D\+D\+I\+R\+\_\+\+O\+U\+T\+P\+UT}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{D\+D\+I\+R\+\_\+\+O\+U\+T\+P\+UT}{DDIR_OUTPUT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+D\+I\+R\+\_\+\+O\+U\+T\+P\+UT~1}\hypertarget{eldorado_8h_a427192092553f7353fc104543a0fe00d}{}\label{eldorado_8h_a427192092553f7353fc104543a0fe00d}
+
+
+Definition at line 167 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+U\+S\+\_\+\+S\+P\+E\+ED@{D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+U\+S\+\_\+\+S\+P\+E\+ED}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+U\+S\+\_\+\+S\+P\+E\+ED@{D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+U\+S\+\_\+\+S\+P\+E\+ED}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+U\+S\+\_\+\+S\+P\+E\+ED}{DEFAULT_BUS_SPEED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+U\+S\+\_\+\+S\+P\+E\+ED~8000000}\hypertarget{eldorado_8h_a8f61bbedff87186c5921764299c4b182}{}\label{eldorado_8h_a8f61bbedff87186c5921764299c4b182}
+
+
+Definition at line 99 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+C\+I\+\_\+\+P\+O\+RT@{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+C\+I\+\_\+\+P\+O\+RT}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+C\+I\+\_\+\+P\+O\+RT@{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+C\+I\+\_\+\+P\+O\+RT}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+C\+I\+\_\+\+P\+O\+RT}{DEFAULT_SCI_PORT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+C\+I\+\_\+\+P\+O\+RT~1}\hypertarget{eldorado_8h_a3b585423dd6e112880222f2670d6ceb2}{}\label{eldorado_8h_a3b585423dd6e112880222f2670d6ceb2}
+
+
+Definition at line 17 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!Disable\+Watchdog@{Disable\+Watchdog}}
+\index{Disable\+Watchdog@{Disable\+Watchdog}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{Disable\+Watchdog}{DisableWatchdog}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Disable\+Watchdog~S\+O\+PT = 0x73;}\hypertarget{eldorado_8h_a981fa46bb6c1b37b8135877e9a06f145}{}\label{eldorado_8h_a981fa46bb6c1b37b8135877e9a06f145}
+
+
+Definition at line 15 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!D\+O\+Z\+E\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK@{D\+O\+Z\+E\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}}
+\index{D\+O\+Z\+E\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK@{D\+O\+Z\+E\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{D\+O\+Z\+E\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}{DOZE_IRQ_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+O\+Z\+E\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK~0x0200}\hypertarget{eldorado_8h_afb7bb02b882e6d4e288201001c0f1259}{}\label{eldorado_8h_afb7bb02b882e6d4e288201001c0f1259}
+Doze I\+RQ Mask 
+
+Definition at line 60 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!D\+O\+Z\+E\+\_\+\+M\+O\+DE@{D\+O\+Z\+E\+\_\+\+M\+O\+DE}}
+\index{D\+O\+Z\+E\+\_\+\+M\+O\+DE@{D\+O\+Z\+E\+\_\+\+M\+O\+DE}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{D\+O\+Z\+E\+\_\+\+M\+O\+DE}{DOZE_MODE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+O\+Z\+E\+\_\+\+M\+O\+DE~0x82}\hypertarget{eldorado_8h_a136fd54d85b2317ccafdb8cd8b751408}{}\label{eldorado_8h_a136fd54d85b2317ccafdb8cd8b751408}
+Doze mode 
+
+Definition at line 42 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!E\+L\+D\+O\+R\+A\+D\+O\+\_\+\+B\+O\+A\+RD@{E\+L\+D\+O\+R\+A\+D\+O\+\_\+\+B\+O\+A\+RD}}
+\index{E\+L\+D\+O\+R\+A\+D\+O\+\_\+\+B\+O\+A\+RD@{E\+L\+D\+O\+R\+A\+D\+O\+\_\+\+B\+O\+A\+RD}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{E\+L\+D\+O\+R\+A\+D\+O\+\_\+\+B\+O\+A\+RD}{ELDORADO_BOARD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+L\+D\+O\+R\+A\+D\+O\+\_\+\+B\+O\+A\+RD}\hypertarget{eldorado_8h_a2df7370e7b044c8185f357e3ac971f5b}{}\label{eldorado_8h_a2df7370e7b044c8185f357e3ac971f5b}
+
+
+Definition at line 18 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!E\+N\+\_\+\+P\+A1@{E\+N\+\_\+\+P\+A1}}
+\index{E\+N\+\_\+\+P\+A1@{E\+N\+\_\+\+P\+A1}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{E\+N\+\_\+\+P\+A1}{EN_PA1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+N\+\_\+\+P\+A1~P\+T\+C\+D\+\_\+\+P\+T\+C\+D6}\hypertarget{eldorado_8h_ad33d38671d52433614c1e497be44f7bf}{}\label{eldorado_8h_ad33d38671d52433614c1e497be44f7bf}
+
+
+Definition at line 316 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!E\+N\+\_\+\+P\+A1\+\_\+\+D\+IR@{E\+N\+\_\+\+P\+A1\+\_\+\+D\+IR}}
+\index{E\+N\+\_\+\+P\+A1\+\_\+\+D\+IR@{E\+N\+\_\+\+P\+A1\+\_\+\+D\+IR}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{E\+N\+\_\+\+P\+A1\+\_\+\+D\+IR}{EN_PA1_DIR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+N\+\_\+\+P\+A1\+\_\+\+D\+IR~P\+T\+C\+D\+D\+\_\+\+P\+T\+C\+D\+D6}\hypertarget{eldorado_8h_a6090dfbceb4a022cb4261a749ae15bda}{}\label{eldorado_8h_a6090dfbceb4a022cb4261a749ae15bda}
+
+
+Definition at line 314 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!E\+N\+\_\+\+P\+A2@{E\+N\+\_\+\+P\+A2}}
+\index{E\+N\+\_\+\+P\+A2@{E\+N\+\_\+\+P\+A2}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{E\+N\+\_\+\+P\+A2}{EN_PA2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+N\+\_\+\+P\+A2~P\+T\+C\+D\+\_\+\+P\+T\+C\+D7}\hypertarget{eldorado_8h_af7d506ed481ecbf2a00c1403ba3a7bcb}{}\label{eldorado_8h_af7d506ed481ecbf2a00c1403ba3a7bcb}
+
+
+Definition at line 317 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!E\+N\+\_\+\+P\+A2\+\_\+\+D\+IR@{E\+N\+\_\+\+P\+A2\+\_\+\+D\+IR}}
+\index{E\+N\+\_\+\+P\+A2\+\_\+\+D\+IR@{E\+N\+\_\+\+P\+A2\+\_\+\+D\+IR}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{E\+N\+\_\+\+P\+A2\+\_\+\+D\+IR}{EN_PA2_DIR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+N\+\_\+\+P\+A2\+\_\+\+D\+IR~P\+T\+C\+D\+D\+\_\+\+P\+T\+C\+D\+D7}\hypertarget{eldorado_8h_a1a2d8452ccfc43e76213d8658db0879e}{}\label{eldorado_8h_a1a2d8452ccfc43e76213d8658db0879e}
+
+
+Definition at line 315 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!Enable\+Watchdog@{Enable\+Watchdog}}
+\index{Enable\+Watchdog@{Enable\+Watchdog}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{Enable\+Watchdog}{EnableWatchdog}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Enable\+Watchdog~S\+O\+PT = 0xf3;}\hypertarget{eldorado_8h_ad424b4881b93595d0a29cbb5dca7377a}{}\label{eldorado_8h_ad424b4881b93595d0a29cbb5dca7377a}
+
+
+Definition at line 16 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!E\+N\+T\+E\+R\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+ER@{E\+N\+T\+E\+R\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+ER}}
+\index{E\+N\+T\+E\+R\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+ER@{E\+N\+T\+E\+R\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+ER}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{E\+N\+T\+E\+R\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+ER}{ENTER_LOW_POWER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+N\+T\+E\+R\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+ER~\+\_\+asm {\bf stop}}\hypertarget{eldorado_8h_aaa787cba39dc955fde1513c0c2edc83c}{}\label{eldorado_8h_aaa787cba39dc955fde1513c0c2edc83c}
+
+
+Definition at line 285 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!H\+I\+B\+E\+R\+N\+A\+T\+E\+\_\+\+M\+O\+DE@{H\+I\+B\+E\+R\+N\+A\+T\+E\+\_\+\+M\+O\+DE}}
+\index{H\+I\+B\+E\+R\+N\+A\+T\+E\+\_\+\+M\+O\+DE@{H\+I\+B\+E\+R\+N\+A\+T\+E\+\_\+\+M\+O\+DE}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{H\+I\+B\+E\+R\+N\+A\+T\+E\+\_\+\+M\+O\+DE}{HIBERNATE_MODE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\+I\+B\+E\+R\+N\+A\+T\+E\+\_\+\+M\+O\+DE~0x81}\hypertarget{eldorado_8h_a4d78542955ab4ab0d9264ff2d7faace7}{}\label{eldorado_8h_a4d78542955ab4ab0d9264ff2d7faace7}
+Hibernate mode 
+
+Definition at line 41 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!I\+D\+L\+E\+\_\+\+M\+O\+DE@{I\+D\+L\+E\+\_\+\+M\+O\+DE}}
+\index{I\+D\+L\+E\+\_\+\+M\+O\+DE@{I\+D\+L\+E\+\_\+\+M\+O\+DE}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{I\+D\+L\+E\+\_\+\+M\+O\+DE}{IDLE_MODE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+D\+L\+E\+\_\+\+M\+O\+DE~0x00}\hypertarget{eldorado_8h_ae539bc81de218722c5c2c54b5c006894}{}\label{eldorado_8h_ae539bc81de218722c5c2c54b5c006894}
+Idle mode 
+
+Definition at line 35 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!I\+D\+L\+E\+\_\+\+M\+O\+D\+E\+\_\+\+A\+T\+TN@{I\+D\+L\+E\+\_\+\+M\+O\+D\+E\+\_\+\+A\+T\+TN}}
+\index{I\+D\+L\+E\+\_\+\+M\+O\+D\+E\+\_\+\+A\+T\+TN@{I\+D\+L\+E\+\_\+\+M\+O\+D\+E\+\_\+\+A\+T\+TN}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{I\+D\+L\+E\+\_\+\+M\+O\+D\+E\+\_\+\+A\+T\+TN}{IDLE_MODE_ATTN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+D\+L\+E\+\_\+\+M\+O\+D\+E\+\_\+\+A\+T\+TN~0x84}\hypertarget{eldorado_8h_ae0972ba46a0359f90f9fe79693c0edb6}{}\label{eldorado_8h_ae0972ba46a0359f90f9fe79693c0edb6}
+Idle mode attenuation 
+
+Definition at line 44 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!I\+D\+L\+E\+\_\+\+M\+O\+D\+E\+\_\+\+D\+O\+ZE@{I\+D\+L\+E\+\_\+\+M\+O\+D\+E\+\_\+\+D\+O\+ZE}}
+\index{I\+D\+L\+E\+\_\+\+M\+O\+D\+E\+\_\+\+D\+O\+ZE@{I\+D\+L\+E\+\_\+\+M\+O\+D\+E\+\_\+\+D\+O\+ZE}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{I\+D\+L\+E\+\_\+\+M\+O\+D\+E\+\_\+\+D\+O\+ZE}{IDLE_MODE_DOZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+D\+L\+E\+\_\+\+M\+O\+D\+E\+\_\+\+D\+O\+ZE~0x83}\hypertarget{eldorado_8h_a4cf23d5b15bc36a49924e39e166f66ff}{}\label{eldorado_8h_a4cf23d5b15bc36a49924e39e166f66ff}
+Idle mode doze 
+
+Definition at line 43 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!I\+R\+Q\+\_\+\+Disable@{I\+R\+Q\+\_\+\+Disable}}
+\index{I\+R\+Q\+\_\+\+Disable@{I\+R\+Q\+\_\+\+Disable}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{I\+R\+Q\+\_\+\+Disable}{IRQ_Disable}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+R\+Q\+\_\+\+Disable(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~I\+R\+Q\+SC = 0x00;}\hypertarget{eldorado_8h_a91b124931b5e62125ba206897fc12377}{}\label{eldorado_8h_a91b124931b5e62125ba206897fc12377}
+Set for negative edge. 
+
+Definition at line 323 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!I\+R\+Q\+A\+CK@{I\+R\+Q\+A\+CK}}
+\index{I\+R\+Q\+A\+CK@{I\+R\+Q\+A\+CK}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{I\+R\+Q\+A\+CK}{IRQACK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+R\+Q\+A\+CK(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~I\+R\+Q\+SC $\vert$= 0x04}\hypertarget{eldorado_8h_a8f3c0221ee9ddeee774e4b60948a587a}{}\label{eldorado_8h_a8f3c0221ee9ddeee774e4b60948a587a}
+I\+RQ Acknowledge enabled 
+
+Definition at line 320 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!I\+R\+Q\+F\+L\+AG@{I\+R\+Q\+F\+L\+AG}}
+\index{I\+R\+Q\+F\+L\+AG@{I\+R\+Q\+F\+L\+AG}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{I\+R\+Q\+F\+L\+AG}{IRQFLAG}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+R\+Q\+F\+L\+AG~I\+R\+Q\+S\+C\+\_\+\+I\+R\+QF}\hypertarget{eldorado_8h_a09d567ef8818e0646f084fb9d3294621}{}\label{eldorado_8h_a09d567ef8818e0646f084fb9d3294621}
+I\+RQ Flag 
+
+Definition at line 319 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!I\+R\+Q\+Init@{I\+R\+Q\+Init}}
+\index{I\+R\+Q\+Init@{I\+R\+Q\+Init}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{I\+R\+Q\+Init}{IRQInit}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+R\+Q\+Init(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~I\+R\+Q\+SC = 0x14}\hypertarget{eldorado_8h_a3b70d03e5b23e62ab98cf0b30571056c}{}\label{eldorado_8h_a3b70d03e5b23e62ab98cf0b30571056c}
+Configures I\+RQ 
+
+Definition at line 321 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!I\+R\+Q\+Pin\+Enable@{I\+R\+Q\+Pin\+Enable}}
+\index{I\+R\+Q\+Pin\+Enable@{I\+R\+Q\+Pin\+Enable}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{I\+R\+Q\+Pin\+Enable}{IRQPinEnable}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+R\+Q\+Pin\+Enable(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~I\+R\+Q\+SC = 0x16}\hypertarget{eldorado_8h_a2b479cac1b91a125dbaf530abdbfaa43}{}\label{eldorado_8h_a2b479cac1b91a125dbaf530abdbfaa43}
+Enables I\+RQ pin 
+
+Definition at line 322 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!K\+B\+I\+\_\+\+S\+W1@{K\+B\+I\+\_\+\+S\+W1}}
+\index{K\+B\+I\+\_\+\+S\+W1@{K\+B\+I\+\_\+\+S\+W1}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{K\+B\+I\+\_\+\+S\+W1}{KBI_SW1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define K\+B\+I\+\_\+\+S\+W1~0x04}\hypertarget{eldorado_8h_acc950b4f5920af77110edc449d945b9a}{}\label{eldorado_8h_acc950b4f5920af77110edc449d945b9a}
+
+
+Definition at line 224 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!K\+B\+I\+\_\+\+S\+W2@{K\+B\+I\+\_\+\+S\+W2}}
+\index{K\+B\+I\+\_\+\+S\+W2@{K\+B\+I\+\_\+\+S\+W2}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{K\+B\+I\+\_\+\+S\+W2}{KBI_SW2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define K\+B\+I\+\_\+\+S\+W2~0x08}\hypertarget{eldorado_8h_ac794057d16c60bbed64377533268ae22}{}\label{eldorado_8h_ac794057d16c60bbed64377533268ae22}
+
+
+Definition at line 225 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!K\+B\+I\+\_\+\+S\+W3@{K\+B\+I\+\_\+\+S\+W3}}
+\index{K\+B\+I\+\_\+\+S\+W3@{K\+B\+I\+\_\+\+S\+W3}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{K\+B\+I\+\_\+\+S\+W3}{KBI_SW3}}]{\setlength{\rightskip}{0pt plus 5cm}\#define K\+B\+I\+\_\+\+S\+W3~0x10}\hypertarget{eldorado_8h_a169fa13942f0173db8d05a95bae66705}{}\label{eldorado_8h_a169fa13942f0173db8d05a95bae66705}
+
+
+Definition at line 226 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!K\+B\+I\+\_\+\+S\+W4@{K\+B\+I\+\_\+\+S\+W4}}
+\index{K\+B\+I\+\_\+\+S\+W4@{K\+B\+I\+\_\+\+S\+W4}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{K\+B\+I\+\_\+\+S\+W4}{KBI_SW4}}]{\setlength{\rightskip}{0pt plus 5cm}\#define K\+B\+I\+\_\+\+S\+W4~0x20}\hypertarget{eldorado_8h_a12966183ab4c78005a37e351a99a5fdb}{}\label{eldorado_8h_a12966183ab4c78005a37e351a99a5fdb}
+
+
+Definition at line 227 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!L\+C\+D\+\_\+\+D\+A\+T\+A1@{L\+C\+D\+\_\+\+D\+A\+T\+A1}}
+\index{L\+C\+D\+\_\+\+D\+A\+T\+A1@{L\+C\+D\+\_\+\+D\+A\+T\+A1}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{L\+C\+D\+\_\+\+D\+A\+T\+A1}{LCD_DATA1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+C\+D\+\_\+\+D\+A\+T\+A1~P\+T\+B\+D\+\_\+\+P\+T\+B\+D4}\hypertarget{eldorado_8h_ae0732d2be6629af3a06adadd21a64d20}{}\label{eldorado_8h_ae0732d2be6629af3a06adadd21a64d20}
+
+
+Definition at line 276 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!L\+C\+D\+\_\+\+D\+A\+T\+A2@{L\+C\+D\+\_\+\+D\+A\+T\+A2}}
+\index{L\+C\+D\+\_\+\+D\+A\+T\+A2@{L\+C\+D\+\_\+\+D\+A\+T\+A2}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{L\+C\+D\+\_\+\+D\+A\+T\+A2}{LCD_DATA2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+C\+D\+\_\+\+D\+A\+T\+A2~P\+T\+B\+D\+\_\+\+P\+T\+B\+D5}\hypertarget{eldorado_8h_aa4617b181137add2a7b59e7504313fc5}{}\label{eldorado_8h_aa4617b181137add2a7b59e7504313fc5}
+
+
+Definition at line 277 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!L\+C\+D\+\_\+\+D\+A\+T\+A3@{L\+C\+D\+\_\+\+D\+A\+T\+A3}}
+\index{L\+C\+D\+\_\+\+D\+A\+T\+A3@{L\+C\+D\+\_\+\+D\+A\+T\+A3}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{L\+C\+D\+\_\+\+D\+A\+T\+A3}{LCD_DATA3}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+C\+D\+\_\+\+D\+A\+T\+A3~P\+T\+B\+D\+\_\+\+P\+T\+B\+D6}\hypertarget{eldorado_8h_a64194fd4150fb5b899fef68ba61b0736}{}\label{eldorado_8h_a64194fd4150fb5b899fef68ba61b0736}
+
+
+Definition at line 278 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!L\+C\+D\+\_\+\+D\+A\+T\+A4@{L\+C\+D\+\_\+\+D\+A\+T\+A4}}
+\index{L\+C\+D\+\_\+\+D\+A\+T\+A4@{L\+C\+D\+\_\+\+D\+A\+T\+A4}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{L\+C\+D\+\_\+\+D\+A\+T\+A4}{LCD_DATA4}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+C\+D\+\_\+\+D\+A\+T\+A4~P\+T\+B\+D\+\_\+\+P\+T\+B\+D7}\hypertarget{eldorado_8h_a641994cd90117e7d8b32d6e72d6efc37}{}\label{eldorado_8h_a641994cd90117e7d8b32d6e72d6efc37}
+
+
+Definition at line 279 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!L\+C\+D\+\_\+\+EN@{L\+C\+D\+\_\+\+EN}}
+\index{L\+C\+D\+\_\+\+EN@{L\+C\+D\+\_\+\+EN}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{L\+C\+D\+\_\+\+EN}{LCD_EN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+C\+D\+\_\+\+EN~P\+T\+B\+D\+\_\+\+P\+T\+B\+D2}\hypertarget{eldorado_8h_a1640ffbc0d8ec0f7edb04a2b93918072}{}\label{eldorado_8h_a1640ffbc0d8ec0f7edb04a2b93918072}
+
+
+Definition at line 273 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!L\+C\+D\+\_\+\+E\+N\+A\+B\+LE@{L\+C\+D\+\_\+\+E\+N\+A\+B\+LE}}
+\index{L\+C\+D\+\_\+\+E\+N\+A\+B\+LE@{L\+C\+D\+\_\+\+E\+N\+A\+B\+LE}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{L\+C\+D\+\_\+\+E\+N\+A\+B\+LE}{LCD_ENABLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+C\+D\+\_\+\+E\+N\+A\+B\+LE~P\+T\+B\+D\+\_\+\+P\+T\+B\+D0}\hypertarget{eldorado_8h_a9e68ed137ca4a61c3977dcdad091f27c}{}\label{eldorado_8h_a9e68ed137ca4a61c3977dcdad091f27c}
+
+
+Definition at line 271 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!L\+C\+D\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO@{L\+C\+D\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO}}
+\index{L\+C\+D\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO@{L\+C\+D\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{L\+C\+D\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO}{LCD_INIT_MACRO}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+C\+D\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO~P\+T\+B\+DD = 0x\+F\+F;  /$\ast$ Set whole port to output $\ast$/}\hypertarget{eldorado_8h_aa6e7d20739cca7f4b462aafb756eb510}{}\label{eldorado_8h_aa6e7d20739cca7f4b462aafb756eb510}
+
+
+Definition at line 281 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!L\+C\+D\+\_\+\+R\+E\+G\+\_\+\+S\+EL@{L\+C\+D\+\_\+\+R\+E\+G\+\_\+\+S\+EL}}
+\index{L\+C\+D\+\_\+\+R\+E\+G\+\_\+\+S\+EL@{L\+C\+D\+\_\+\+R\+E\+G\+\_\+\+S\+EL}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{L\+C\+D\+\_\+\+R\+E\+G\+\_\+\+S\+EL}{LCD_REG_SEL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+C\+D\+\_\+\+R\+E\+G\+\_\+\+S\+EL~P\+T\+B\+D\+\_\+\+P\+T\+B\+D1}\hypertarget{eldorado_8h_afc2727c5a1456837aadc657b4501875d}{}\label{eldorado_8h_afc2727c5a1456837aadc657b4501875d}
+
+
+Definition at line 272 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!L\+C\+D\+\_\+\+RW@{L\+C\+D\+\_\+\+RW}}
+\index{L\+C\+D\+\_\+\+RW@{L\+C\+D\+\_\+\+RW}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{L\+C\+D\+\_\+\+RW}{LCD_RW}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+C\+D\+\_\+\+RW~P\+T\+B\+D\+\_\+\+P\+T\+B\+D3}\hypertarget{eldorado_8h_a26089a10ddd59a0dc7283c19ccc02533}{}\label{eldorado_8h_a26089a10ddd59a0dc7283c19ccc02533}
+
+
+Definition at line 274 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!L\+E\+D1@{L\+E\+D1}}
+\index{L\+E\+D1@{L\+E\+D1}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{L\+E\+D1}{LED1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D1~P\+T\+A\+D\+\_\+\+P\+T\+A\+D0}\hypertarget{eldorado_8h_a8aa85ae9867fabf70ec72cd3bf6fb6b9}{}\label{eldorado_8h_a8aa85ae9867fabf70ec72cd3bf6fb6b9}
+
+
+Definition at line 143 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!L\+E\+D1\+D\+IR@{L\+E\+D1\+D\+IR}}
+\index{L\+E\+D1\+D\+IR@{L\+E\+D1\+D\+IR}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{L\+E\+D1\+D\+IR}{LED1DIR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D1\+D\+IR~P\+T\+A\+D\+D\+\_\+\+P\+T\+A\+D\+D0}\hypertarget{eldorado_8h_aad43d4e4a158407d8b3b6b094174c1f0}{}\label{eldorado_8h_aad43d4e4a158407d8b3b6b094174c1f0}
+
+
+Definition at line 144 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!L\+E\+D2@{L\+E\+D2}}
+\index{L\+E\+D2@{L\+E\+D2}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{L\+E\+D2}{LED2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D2~P\+T\+A\+D\+\_\+\+P\+T\+A\+D1}\hypertarget{eldorado_8h_ad09fe5bf321b9a2de26bd5e5b9af6424}{}\label{eldorado_8h_ad09fe5bf321b9a2de26bd5e5b9af6424}
+
+
+Definition at line 145 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!L\+E\+D2\+D\+IR@{L\+E\+D2\+D\+IR}}
+\index{L\+E\+D2\+D\+IR@{L\+E\+D2\+D\+IR}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{L\+E\+D2\+D\+IR}{LED2DIR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D2\+D\+IR~P\+T\+A\+D\+D\+\_\+\+P\+T\+A\+D\+D1}\hypertarget{eldorado_8h_af4baf08a7376905b8c9b5e5c4b8250b3}{}\label{eldorado_8h_af4baf08a7376905b8c9b5e5c4b8250b3}
+
+
+Definition at line 146 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!L\+E\+D3@{L\+E\+D3}}
+\index{L\+E\+D3@{L\+E\+D3}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{L\+E\+D3}{LED3}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D3~P\+T\+A\+D\+\_\+\+P\+T\+A\+D2}\hypertarget{eldorado_8h_a4b7ff8e253a7412f83deba3a447028a8}{}\label{eldorado_8h_a4b7ff8e253a7412f83deba3a447028a8}
+
+
+Definition at line 147 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!L\+E\+D3\+D\+IR@{L\+E\+D3\+D\+IR}}
+\index{L\+E\+D3\+D\+IR@{L\+E\+D3\+D\+IR}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{L\+E\+D3\+D\+IR}{LED3DIR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D3\+D\+IR~P\+T\+A\+D\+D\+\_\+\+P\+T\+A\+D\+D2}\hypertarget{eldorado_8h_a9452dd63803d7960e2976724fa3160ac}{}\label{eldorado_8h_a9452dd63803d7960e2976724fa3160ac}
+
+
+Definition at line 148 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!L\+E\+D4@{L\+E\+D4}}
+\index{L\+E\+D4@{L\+E\+D4}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{L\+E\+D4}{LED4}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D4~P\+T\+A\+D\+\_\+\+P\+T\+A\+D3}\hypertarget{eldorado_8h_ae048837f20072bed467332b1bd1da9fa}{}\label{eldorado_8h_ae048837f20072bed467332b1bd1da9fa}
+
+
+Definition at line 149 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!L\+E\+D4\+D\+IR@{L\+E\+D4\+D\+IR}}
+\index{L\+E\+D4\+D\+IR@{L\+E\+D4\+D\+IR}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{L\+E\+D4\+D\+IR}{LED4DIR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D4\+D\+IR~P\+T\+A\+D\+D\+\_\+\+P\+T\+A\+D\+D3}\hypertarget{eldorado_8h_a4cf343397e92c3cc1dc8eef330c4a200}{}\label{eldorado_8h_a4cf343397e92c3cc1dc8eef330c4a200}
+
+
+Definition at line 150 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!L\+E\+D\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO@{L\+E\+D\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO}}
+\index{L\+E\+D\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO@{L\+E\+D\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{L\+E\+D\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO}{LED_INIT_MACRO}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO}\hypertarget{eldorado_8h_ac6422b58f93ec0e3b2801a645c88353a}{}\label{eldorado_8h_ac6422b58f93ec0e3b2801a645c88353a}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{eldorado_8h_a8aa85ae9867fabf70ec72cd3bf6fb6b9}{LED1}     = \hyperlink{eldorado_8h_a80700bb63bd56ebabbb4728aa433fd29}{LED\_OFF}; \(\backslash\)
+                       LED2     = \hyperlink{eldorado_8h_a80700bb63bd56ebabbb4728aa433fd29}{LED\_OFF}; \(\backslash\)
+                       LED3     = \hyperlink{eldorado_8h_a80700bb63bd56ebabbb4728aa433fd29}{LED\_OFF}; \(\backslash\)
+                       LED4     = \hyperlink{eldorado_8h_a80700bb63bd56ebabbb4728aa433fd29}{LED\_OFF}; \(\backslash\)
+                       LED5     = \hyperlink{eldorado_8h_a80700bb63bd56ebabbb4728aa433fd29}{LED\_OFF}; \(\backslash\)
+                       LED1DIR  = \hyperlink{eldorado_8h_a427192092553f7353fc104543a0fe00d}{DDIR\_OUTPUT}; \(\backslash\)
+                       LED2DIR  = \hyperlink{eldorado_8h_a427192092553f7353fc104543a0fe00d}{DDIR\_OUTPUT}; \(\backslash\)
+                       LED3DIR  = \hyperlink{eldorado_8h_a427192092553f7353fc104543a0fe00d}{DDIR\_OUTPUT}; \(\backslash\)
+                       LED4DIR  = \hyperlink{eldorado_8h_a427192092553f7353fc104543a0fe00d}{DDIR\_OUTPUT}; \(\backslash\)
+                       LED5DIR  = \hyperlink{eldorado_8h_a427192092553f7353fc104543a0fe00d}{DDIR\_OUTPUT};
+\end{DoxyCode}
+
+
+Definition at line 170 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!L\+E\+D\+\_\+\+O\+FF@{L\+E\+D\+\_\+\+O\+FF}}
+\index{L\+E\+D\+\_\+\+O\+FF@{L\+E\+D\+\_\+\+O\+FF}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{L\+E\+D\+\_\+\+O\+FF}{LED_OFF}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D\+\_\+\+O\+FF~1}\hypertarget{eldorado_8h_a80700bb63bd56ebabbb4728aa433fd29}{}\label{eldorado_8h_a80700bb63bd56ebabbb4728aa433fd29}
+
+
+Definition at line 166 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!L\+E\+D\+\_\+\+ON@{L\+E\+D\+\_\+\+ON}}
+\index{L\+E\+D\+\_\+\+ON@{L\+E\+D\+\_\+\+ON}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{L\+E\+D\+\_\+\+ON}{LED_ON}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D\+\_\+\+ON~0}\hypertarget{eldorado_8h_af2e697ac60e05813d45ea2c9c9e79c25}{}\label{eldorado_8h_af2e697ac60e05813d45ea2c9c9e79c25}
+
+
+Definition at line 165 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!L\+O\+\_\+\+L\+O\+C\+K\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK@{L\+O\+\_\+\+L\+O\+C\+K\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}}
+\index{L\+O\+\_\+\+L\+O\+C\+K\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK@{L\+O\+\_\+\+L\+O\+C\+K\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{L\+O\+\_\+\+L\+O\+C\+K\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}{LO_LOCK_IRQ_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+O\+\_\+\+L\+O\+C\+K\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK~0x8000}\hypertarget{eldorado_8h_a512362e4953a73d9be1360273dfa74a4}{}\label{eldorado_8h_a512362e4953a73d9be1360273dfa74a4}
+Lo lock I\+RQ Mask 
+
+Definition at line 58 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!M\+C13192\+\_\+\+A\+T\+TN@{M\+C13192\+\_\+\+A\+T\+TN}}
+\index{M\+C13192\+\_\+\+A\+T\+TN@{M\+C13192\+\_\+\+A\+T\+TN}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{M\+C13192\+\_\+\+A\+T\+TN}{MC13192_ATTN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+C13192\+\_\+\+A\+T\+TN~P\+T\+D\+D\+\_\+\+P\+T\+D\+D0}\hypertarget{eldorado_8h_a91d8b6375eba58964088607be327afc1}{}\label{eldorado_8h_a91d8b6375eba58964088607be327afc1}
+
+
+Definition at line 24 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!M\+C13192\+\_\+\+A\+T\+T\+N\+\_\+\+P\+O\+RT@{M\+C13192\+\_\+\+A\+T\+T\+N\+\_\+\+P\+O\+RT}}
+\index{M\+C13192\+\_\+\+A\+T\+T\+N\+\_\+\+P\+O\+RT@{M\+C13192\+\_\+\+A\+T\+T\+N\+\_\+\+P\+O\+RT}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{M\+C13192\+\_\+\+A\+T\+T\+N\+\_\+\+P\+O\+RT}{MC13192_ATTN_PORT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+C13192\+\_\+\+A\+T\+T\+N\+\_\+\+P\+O\+RT~P\+T\+D\+D\+D\+\_\+\+P\+T\+D\+D\+D0}\hypertarget{eldorado_8h_a1161d81256d08ad84fa20ebd17e8b6f7}{}\label{eldorado_8h_a1161d81256d08ad84fa20ebd17e8b6f7}
+
+
+Definition at line 25 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!M\+C13192\+\_\+\+CE@{M\+C13192\+\_\+\+CE}}
+\index{M\+C13192\+\_\+\+CE@{M\+C13192\+\_\+\+CE}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{M\+C13192\+\_\+\+CE}{MC13192_CE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+C13192\+\_\+\+CE~P\+T\+E\+D\+\_\+\+P\+T\+E\+D2}\hypertarget{eldorado_8h_a14edd12ca187f0163244ff5ab9b5d58c}{}\label{eldorado_8h_a14edd12ca187f0163244ff5ab9b5d58c}
+
+
+Definition at line 22 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!M\+C13192\+\_\+\+C\+E\+\_\+\+P\+O\+RT@{M\+C13192\+\_\+\+C\+E\+\_\+\+P\+O\+RT}}
+\index{M\+C13192\+\_\+\+C\+E\+\_\+\+P\+O\+RT@{M\+C13192\+\_\+\+C\+E\+\_\+\+P\+O\+RT}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{M\+C13192\+\_\+\+C\+E\+\_\+\+P\+O\+RT}{MC13192_CE_PORT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+C13192\+\_\+\+C\+E\+\_\+\+P\+O\+RT~P\+T\+E\+D\+D\+\_\+\+P\+T\+E\+D\+D2}\hypertarget{eldorado_8h_a3c267d4cb2de43081bc61d3f8a109daf}{}\label{eldorado_8h_a3c267d4cb2de43081bc61d3f8a109daf}
+
+
+Definition at line 23 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!M\+C13192\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+DE@{M\+C13192\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+DE}}
+\index{M\+C13192\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+DE@{M\+C13192\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+DE}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{M\+C13192\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+DE}{MC13192_CONFIG_MODE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+C13192\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+DE~0x88}\hypertarget{eldorado_8h_a25fd72112d1198788b36542a1e98cbec}{}\label{eldorado_8h_a25fd72112d1198788b36542a1e98cbec}
+Not implemented 
+
+Definition at line 48 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+Disable@{M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+Disable}}
+\index{M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+Disable@{M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+Disable}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+Disable}{MC13192_IRQ_Disable}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+Disable(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+S\+O\+U\+R\+CE} = {\bf M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+S\+O\+U\+R\+CE} \& $\sim$(0x06)}\hypertarget{eldorado_8h_a17ec013d44f3a89e263788898e567b60}{}\label{eldorado_8h_a17ec013d44f3a89e263788898e567b60}
+Disables M\+C13192 transceiver 
+
+Definition at line 324 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+Enable@{M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+Enable}}
+\index{M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+Enable@{M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+Enable}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+Enable}{MC13192_IRQ_Enable}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+Enable(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+S\+O\+U\+R\+CE} = {\bf M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+S\+O\+U\+R\+CE} $\vert$ (0x02)}\hypertarget{eldorado_8h_ae253446c1e70be66a7b89a657a449119}{}\label{eldorado_8h_ae253446c1e70be66a7b89a657a449119}
+Enables M\+C13192 transceiver 
+
+Definition at line 325 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+I\+E\+\_\+\+B\+IT@{M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+I\+E\+\_\+\+B\+IT}}
+\index{M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+I\+E\+\_\+\+B\+IT@{M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+I\+E\+\_\+\+B\+IT}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+I\+E\+\_\+\+B\+IT}{MC13192_IRQ_IE_BIT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+I\+E\+\_\+\+B\+IT~I\+R\+Q\+S\+C\+\_\+\+I\+R\+Q\+IE}\hypertarget{eldorado_8h_a535ee997a432a672a79f2dbdad6cbf2d}{}\label{eldorado_8h_a535ee997a432a672a79f2dbdad6cbf2d}
+
+
+Definition at line 32 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+S\+O\+U\+R\+CE@{M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+S\+O\+U\+R\+CE}}
+\index{M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+S\+O\+U\+R\+CE@{M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+S\+O\+U\+R\+CE}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+S\+O\+U\+R\+CE}{MC13192_IRQ_SOURCE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+C13192\+\_\+\+I\+R\+Q\+\_\+\+S\+O\+U\+R\+CE~I\+R\+Q\+SC}\hypertarget{eldorado_8h_a43e8cdf166caa364c64d33a3b5b12d95}{}\label{eldorado_8h_a43e8cdf166caa364c64d33a3b5b12d95}
+
+
+Definition at line 31 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!M\+C13192\+\_\+\+R\+E\+S\+ET@{M\+C13192\+\_\+\+R\+E\+S\+ET}}
+\index{M\+C13192\+\_\+\+R\+E\+S\+ET@{M\+C13192\+\_\+\+R\+E\+S\+ET}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{M\+C13192\+\_\+\+R\+E\+S\+ET}{MC13192_RESET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+C13192\+\_\+\+R\+E\+S\+ET~P\+T\+D\+D\+\_\+\+P\+T\+D\+D3}\hypertarget{eldorado_8h_add1448ee149141b3c2b31113513c36fc}{}\label{eldorado_8h_add1448ee149141b3c2b31113513c36fc}
+
+
+Definition at line 28 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!M\+C13192\+\_\+\+R\+E\+S\+E\+T\+\_\+\+M\+O\+DE@{M\+C13192\+\_\+\+R\+E\+S\+E\+T\+\_\+\+M\+O\+DE}}
+\index{M\+C13192\+\_\+\+R\+E\+S\+E\+T\+\_\+\+M\+O\+DE@{M\+C13192\+\_\+\+R\+E\+S\+E\+T\+\_\+\+M\+O\+DE}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{M\+C13192\+\_\+\+R\+E\+S\+E\+T\+\_\+\+M\+O\+DE}{MC13192_RESET_MODE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+C13192\+\_\+\+R\+E\+S\+E\+T\+\_\+\+M\+O\+DE~0x87}\hypertarget{eldorado_8h_a054bfb29fda548b86050a34195ef1ccb}{}\label{eldorado_8h_a054bfb29fda548b86050a34195ef1ccb}
+Not implemented 
+
+Definition at line 47 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!M\+C13192\+\_\+\+R\+E\+S\+E\+T\+\_\+\+P\+O\+RT@{M\+C13192\+\_\+\+R\+E\+S\+E\+T\+\_\+\+P\+O\+RT}}
+\index{M\+C13192\+\_\+\+R\+E\+S\+E\+T\+\_\+\+P\+O\+RT@{M\+C13192\+\_\+\+R\+E\+S\+E\+T\+\_\+\+P\+O\+RT}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{M\+C13192\+\_\+\+R\+E\+S\+E\+T\+\_\+\+P\+O\+RT}{MC13192_RESET_PORT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+C13192\+\_\+\+R\+E\+S\+E\+T\+\_\+\+P\+O\+RT~P\+T\+D\+D\+D\+\_\+\+P\+T\+D\+D\+D3}\hypertarget{eldorado_8h_ae2c9e04d6706afba3e8278f8fc5c97e8}{}\label{eldorado_8h_ae2c9e04d6706afba3e8278f8fc5c97e8}
+
+
+Definition at line 29 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!M\+C13192\+\_\+\+R\+E\+S\+E\+T\+\_\+\+P\+U\+L\+L\+UP@{M\+C13192\+\_\+\+R\+E\+S\+E\+T\+\_\+\+P\+U\+L\+L\+UP}}
+\index{M\+C13192\+\_\+\+R\+E\+S\+E\+T\+\_\+\+P\+U\+L\+L\+UP@{M\+C13192\+\_\+\+R\+E\+S\+E\+T\+\_\+\+P\+U\+L\+L\+UP}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{M\+C13192\+\_\+\+R\+E\+S\+E\+T\+\_\+\+P\+U\+L\+L\+UP}{MC13192_RESET_PULLUP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+C13192\+\_\+\+R\+E\+S\+E\+T\+\_\+\+P\+U\+L\+L\+UP~P\+T\+D\+P\+E\+\_\+\+P\+T\+D\+P\+E3}\hypertarget{eldorado_8h_a0734e9c1ca2faab2d3802dd609937ac5}{}\label{eldorado_8h_a0734e9c1ca2faab2d3802dd609937ac5}
+
+
+Definition at line 30 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!M\+C13192\+\_\+\+R\+T\+X\+EN@{M\+C13192\+\_\+\+R\+T\+X\+EN}}
+\index{M\+C13192\+\_\+\+R\+T\+X\+EN@{M\+C13192\+\_\+\+R\+T\+X\+EN}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{M\+C13192\+\_\+\+R\+T\+X\+EN}{MC13192_RTXEN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+C13192\+\_\+\+R\+T\+X\+EN~P\+T\+D\+D\+\_\+\+P\+T\+D\+D1}\hypertarget{eldorado_8h_a84b14edf48ae59caf44fd681ee926946}{}\label{eldorado_8h_a84b14edf48ae59caf44fd681ee926946}
+
+
+Definition at line 26 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!M\+C13192\+\_\+\+R\+T\+X\+E\+N\+\_\+\+P\+O\+RT@{M\+C13192\+\_\+\+R\+T\+X\+E\+N\+\_\+\+P\+O\+RT}}
+\index{M\+C13192\+\_\+\+R\+T\+X\+E\+N\+\_\+\+P\+O\+RT@{M\+C13192\+\_\+\+R\+T\+X\+E\+N\+\_\+\+P\+O\+RT}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{M\+C13192\+\_\+\+R\+T\+X\+E\+N\+\_\+\+P\+O\+RT}{MC13192_RTXEN_PORT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+C13192\+\_\+\+R\+T\+X\+E\+N\+\_\+\+P\+O\+RT~P\+T\+D\+D\+D\+\_\+\+P\+T\+D\+D\+D1}\hypertarget{eldorado_8h_adee0a3126220e8298214f80dc51bf4b6}{}\label{eldorado_8h_adee0a3126220e8298214f80dc51bf4b6}
+
+
+Definition at line 27 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!P\+B0@{P\+B0}}
+\index{P\+B0@{P\+B0}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{P\+B0}{PB0}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+B0~P\+T\+A\+D\+\_\+\+P\+T\+A\+D2}\hypertarget{eldorado_8h_acb0f9abbadb16a66065b04c9e43b8f41}{}\label{eldorado_8h_acb0f9abbadb16a66065b04c9e43b8f41}
+
+
+Definition at line 200 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!P\+B0\+D\+IR@{P\+B0\+D\+IR}}
+\index{P\+B0\+D\+IR@{P\+B0\+D\+IR}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{P\+B0\+D\+IR}{PB0DIR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+B0\+D\+IR~P\+T\+A\+D\+D\+\_\+\+P\+T\+A\+D\+D2}\hypertarget{eldorado_8h_a13561b625ffb33e8de2cea5caabb45fd}{}\label{eldorado_8h_a13561b625ffb33e8de2cea5caabb45fd}
+
+
+Definition at line 202 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!P\+B0\+IE@{P\+B0\+IE}}
+\index{P\+B0\+IE@{P\+B0\+IE}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{P\+B0\+IE}{PB0IE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+B0\+IE~K\+B\+I1\+P\+E\+\_\+\+K\+B\+I\+P\+E2}\hypertarget{eldorado_8h_abbdd81468b60caf7f43af5ed01455f06}{}\label{eldorado_8h_abbdd81468b60caf7f43af5ed01455f06}
+
+
+Definition at line 203 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!P\+B0\+PU@{P\+B0\+PU}}
+\index{P\+B0\+PU@{P\+B0\+PU}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{P\+B0\+PU}{PB0PU}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+B0\+PU~P\+T\+A\+P\+E\+\_\+\+P\+T\+A\+P\+E2}\hypertarget{eldorado_8h_ac4cac00e17eb7335b8d9fb9b47e6c2bd}{}\label{eldorado_8h_ac4cac00e17eb7335b8d9fb9b47e6c2bd}
+
+
+Definition at line 201 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!P\+B1@{P\+B1}}
+\index{P\+B1@{P\+B1}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{P\+B1}{PB1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+B1~P\+T\+A\+D\+\_\+\+P\+T\+A\+D3}\hypertarget{eldorado_8h_a37eb042c0715e6f809fb8677b8805f57}{}\label{eldorado_8h_a37eb042c0715e6f809fb8677b8805f57}
+
+
+Definition at line 206 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!P\+B1\+D\+IR@{P\+B1\+D\+IR}}
+\index{P\+B1\+D\+IR@{P\+B1\+D\+IR}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{P\+B1\+D\+IR}{PB1DIR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+B1\+D\+IR~P\+T\+A\+D\+D\+\_\+\+P\+T\+A\+D\+D3}\hypertarget{eldorado_8h_afa7b1454bf3a49f681dd95d6824783de}{}\label{eldorado_8h_afa7b1454bf3a49f681dd95d6824783de}
+
+
+Definition at line 208 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!P\+B1\+IE@{P\+B1\+IE}}
+\index{P\+B1\+IE@{P\+B1\+IE}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{P\+B1\+IE}{PB1IE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+B1\+IE~K\+B\+I1\+P\+E\+\_\+\+K\+B\+I\+P\+E3}\hypertarget{eldorado_8h_a75cd04560e29c273feb07591de8bfea9}{}\label{eldorado_8h_a75cd04560e29c273feb07591de8bfea9}
+
+
+Definition at line 209 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!P\+B1\+PU@{P\+B1\+PU}}
+\index{P\+B1\+PU@{P\+B1\+PU}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{P\+B1\+PU}{PB1PU}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+B1\+PU~P\+T\+A\+P\+E\+\_\+\+P\+T\+A\+P\+E3}\hypertarget{eldorado_8h_a784f3eb69fee39468fea9a5fd6a434a5}{}\label{eldorado_8h_a784f3eb69fee39468fea9a5fd6a434a5}
+
+
+Definition at line 207 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!P\+B2@{P\+B2}}
+\index{P\+B2@{P\+B2}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{P\+B2}{PB2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+B2~P\+T\+A\+D\+\_\+\+P\+T\+A\+D4}\hypertarget{eldorado_8h_aedce709abd1cf8bfd0e5b5db39a1b789}{}\label{eldorado_8h_aedce709abd1cf8bfd0e5b5db39a1b789}
+
+
+Definition at line 212 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!P\+B2\+D\+IR@{P\+B2\+D\+IR}}
+\index{P\+B2\+D\+IR@{P\+B2\+D\+IR}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{P\+B2\+D\+IR}{PB2DIR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+B2\+D\+IR~P\+T\+A\+D\+D\+\_\+\+P\+T\+A\+D\+D4}\hypertarget{eldorado_8h_a261d32665888c90718aad72482f7e9e4}{}\label{eldorado_8h_a261d32665888c90718aad72482f7e9e4}
+
+
+Definition at line 214 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!P\+B2\+IE@{P\+B2\+IE}}
+\index{P\+B2\+IE@{P\+B2\+IE}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{P\+B2\+IE}{PB2IE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+B2\+IE~K\+B\+I1\+P\+E\+\_\+\+K\+B\+I\+P\+E4}\hypertarget{eldorado_8h_a2eb3689741b535b6ce55cb5f2f043a93}{}\label{eldorado_8h_a2eb3689741b535b6ce55cb5f2f043a93}
+
+
+Definition at line 215 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!P\+B2\+PU@{P\+B2\+PU}}
+\index{P\+B2\+PU@{P\+B2\+PU}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{P\+B2\+PU}{PB2PU}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+B2\+PU~P\+T\+A\+P\+E\+\_\+\+P\+T\+A\+P\+E4}\hypertarget{eldorado_8h_a135ed477ddba86bdb1192f7d2f48ee45}{}\label{eldorado_8h_a135ed477ddba86bdb1192f7d2f48ee45}
+
+
+Definition at line 213 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!P\+B3@{P\+B3}}
+\index{P\+B3@{P\+B3}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{P\+B3}{PB3}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+B3~P\+T\+A\+D\+\_\+\+P\+T\+A\+D5}\hypertarget{eldorado_8h_a9531e9d4cc06b4d72823afe3b2f632f5}{}\label{eldorado_8h_a9531e9d4cc06b4d72823afe3b2f632f5}
+
+
+Definition at line 218 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!P\+B3\+D\+IR@{P\+B3\+D\+IR}}
+\index{P\+B3\+D\+IR@{P\+B3\+D\+IR}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{P\+B3\+D\+IR}{PB3DIR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+B3\+D\+IR~P\+T\+A\+D\+D\+\_\+\+P\+T\+A\+D\+D5}\hypertarget{eldorado_8h_a3e36aad5415e4c803c3fbad74acc2cc8}{}\label{eldorado_8h_a3e36aad5415e4c803c3fbad74acc2cc8}
+
+
+Definition at line 220 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!P\+B3\+IE@{P\+B3\+IE}}
+\index{P\+B3\+IE@{P\+B3\+IE}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{P\+B3\+IE}{PB3IE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+B3\+IE~K\+B\+I1\+P\+E\+\_\+\+K\+B\+I\+P\+E5}\hypertarget{eldorado_8h_a0770484ac257513a6087dee3d44c429c}{}\label{eldorado_8h_a0770484ac257513a6087dee3d44c429c}
+
+
+Definition at line 221 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!P\+B3\+PU@{P\+B3\+PU}}
+\index{P\+B3\+PU@{P\+B3\+PU}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{P\+B3\+PU}{PB3PU}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+B3\+PU~P\+T\+A\+P\+E\+\_\+\+P\+T\+A\+P\+E5}\hypertarget{eldorado_8h_a2b9acf1ff14fc6b4438d110d2876331d}{}\label{eldorado_8h_a2b9acf1ff14fc6b4438d110d2876331d}
+
+
+Definition at line 219 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!P\+B\+\_\+\+P\+R\+E\+S\+S\+ED@{P\+B\+\_\+\+P\+R\+E\+S\+S\+ED}}
+\index{P\+B\+\_\+\+P\+R\+E\+S\+S\+ED@{P\+B\+\_\+\+P\+R\+E\+S\+S\+ED}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{P\+B\+\_\+\+P\+R\+E\+S\+S\+ED}{PB_PRESSED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+B\+\_\+\+P\+R\+E\+S\+S\+ED~0}\hypertarget{eldorado_8h_a354a94d82764457a96788763c4182b5c}{}\label{eldorado_8h_a354a94d82764457a96788763c4182b5c}
+
+
+Definition at line 297 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!P\+U\+L\+S\+E\+\_\+\+T\+X\+\_\+\+M\+O\+DE@{P\+U\+L\+S\+E\+\_\+\+T\+X\+\_\+\+M\+O\+DE}}
+\index{P\+U\+L\+S\+E\+\_\+\+T\+X\+\_\+\+M\+O\+DE@{P\+U\+L\+S\+E\+\_\+\+T\+X\+\_\+\+M\+O\+DE}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{P\+U\+L\+S\+E\+\_\+\+T\+X\+\_\+\+M\+O\+DE}{PULSE_TX_MODE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+U\+L\+S\+E\+\_\+\+T\+X\+\_\+\+M\+O\+DE~0x43}\hypertarget{eldorado_8h_aa4b5b2eef2764b9caf2916b362dd18b3}{}\label{eldorado_8h_aa4b5b2eef2764b9caf2916b362dd18b3}
+Pulse transmit mode 
+
+Definition at line 38 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+O\+N1@{P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+O\+N1}}
+\index{P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+O\+N1@{P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+O\+N1}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+O\+N1}{PUSH_BUTTON1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+O\+N1~{\bf P\+B0}}\hypertarget{eldorado_8h_a7e248a6d23b44891bb4f0bdb88376068}{}\label{eldorado_8h_a7e248a6d23b44891bb4f0bdb88376068}
+
+
+Definition at line 292 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+O\+N2@{P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+O\+N2}}
+\index{P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+O\+N2@{P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+O\+N2}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+O\+N2}{PUSH_BUTTON2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+O\+N2~{\bf P\+B1}}\hypertarget{eldorado_8h_afc15afb38fa2f0f9fb1448682c2fd356}{}\label{eldorado_8h_afc15afb38fa2f0f9fb1448682c2fd356}
+
+
+Definition at line 293 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+O\+N3@{P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+O\+N3}}
+\index{P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+O\+N3@{P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+O\+N3}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+O\+N3}{PUSH_BUTTON3}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+O\+N3~{\bf P\+B2}}\hypertarget{eldorado_8h_ac85b1193b67e7a29235358a56b1e2986}{}\label{eldorado_8h_ac85b1193b67e7a29235358a56b1e2986}
+
+
+Definition at line 294 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+O\+N4@{P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+O\+N4}}
+\index{P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+O\+N4@{P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+O\+N4}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+O\+N4}{PUSH_BUTTON4}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+O\+N4~{\bf P\+B3}}\hypertarget{eldorado_8h_a74056487e82217c39710ed3ac215d287}{}\label{eldorado_8h_a74056487e82217c39710ed3ac215d287}
+
+
+Definition at line 295 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!R\+A\+M\+E\+R\+R\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK@{R\+A\+M\+E\+R\+R\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}}
+\index{R\+A\+M\+E\+R\+R\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK@{R\+A\+M\+E\+R\+R\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{R\+A\+M\+E\+R\+R\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}{RAMERR_IRQ_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+A\+M\+E\+R\+R\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK~0x4000}\hypertarget{eldorado_8h_ae234396dedc00b803ea5bf4bdacfdf26}{}\label{eldorado_8h_ae234396dedc00b803ea5bf4bdacfdf26}
+R\+AM add error I\+RQ Mask 
+
+Definition at line 52 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!R\+E\+S\+E\+T\+\_\+\+B\+I\+T\+\_\+\+M\+A\+SK@{R\+E\+S\+E\+T\+\_\+\+B\+I\+T\+\_\+\+M\+A\+SK}}
+\index{R\+E\+S\+E\+T\+\_\+\+B\+I\+T\+\_\+\+M\+A\+SK@{R\+E\+S\+E\+T\+\_\+\+B\+I\+T\+\_\+\+M\+A\+SK}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{R\+E\+S\+E\+T\+\_\+\+B\+I\+T\+\_\+\+M\+A\+SK}{RESET_BIT_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+S\+E\+T\+\_\+\+B\+I\+T\+\_\+\+M\+A\+SK~0x0080}\hypertarget{eldorado_8h_a595d12d4b0bf38dbbbe46ff05e5740a6}{}\label{eldorado_8h_a595d12d4b0bf38dbbbe46ff05e5740a6}
+Reset bit Mask 
+
+Definition at line 61 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!R\+E\+S\+E\+T\+\_\+\+D\+E\+L\+AY@{R\+E\+S\+E\+T\+\_\+\+D\+E\+L\+AY}}
+\index{R\+E\+S\+E\+T\+\_\+\+D\+E\+L\+AY@{R\+E\+S\+E\+T\+\_\+\+D\+E\+L\+AY}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{R\+E\+S\+E\+T\+\_\+\+D\+E\+L\+AY}{RESET_DELAY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+S\+E\+T\+\_\+\+D\+E\+L\+AY~0x89}\hypertarget{eldorado_8h_a5f1226244e161294423fac73a93d034d}{}\label{eldorado_8h_a5f1226244e161294423fac73a93d034d}
+Set to 100ms 
+
+Definition at line 49 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!R\+TS@{R\+TS}}
+\index{R\+TS@{R\+TS}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{R\+TS}{RTS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+TS~P\+T\+A\+D\+\_\+\+P\+T\+A\+D1}\hypertarget{eldorado_8h_a5da46cdb9a2133d1b4f0db71a332ba2e}{}\label{eldorado_8h_a5da46cdb9a2133d1b4f0db71a332ba2e}
+
+
+Definition at line 118 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!R\+T\+S\+D\+IR@{R\+T\+S\+D\+IR}}
+\index{R\+T\+S\+D\+IR@{R\+T\+S\+D\+IR}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{R\+T\+S\+D\+IR}{RTSDIR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+T\+S\+D\+IR~P\+T\+A\+D\+D\+\_\+\+P\+T\+A\+D\+D1}\hypertarget{eldorado_8h_adffb23ef5e6ef485f3f94543dd952c6c}{}\label{eldorado_8h_adffb23ef5e6ef485f3f94543dd952c6c}
+
+
+Definition at line 119 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!R\+X\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK@{R\+X\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}}
+\index{R\+X\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK@{R\+X\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{R\+X\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}{RX_IRQ_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+X\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK~0x0080}\hypertarget{eldorado_8h_abf5d31df79ec80ae6c68f53882786041}{}\label{eldorado_8h_abf5d31df79ec80ae6c68f53882786041}
+Receive I\+RQ Mask 
+
+Definition at line 53 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!R\+X\+\_\+\+M\+O\+DE@{R\+X\+\_\+\+M\+O\+DE}}
+\index{R\+X\+\_\+\+M\+O\+DE@{R\+X\+\_\+\+M\+O\+DE}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{R\+X\+\_\+\+M\+O\+DE}{RX_MODE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+X\+\_\+\+M\+O\+DE~0x02}\hypertarget{eldorado_8h_aca1f7e0907b7f07b7ea6ddbe8fac6ac5}{}\label{eldorado_8h_aca1f7e0907b7f07b7ea6ddbe8fac6ac5}
+Receive mode 
+
+Definition at line 36 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!R\+X\+\_\+\+M\+O\+D\+E\+\_\+\+W\+TO@{R\+X\+\_\+\+M\+O\+D\+E\+\_\+\+W\+TO}}
+\index{R\+X\+\_\+\+M\+O\+D\+E\+\_\+\+W\+TO@{R\+X\+\_\+\+M\+O\+D\+E\+\_\+\+W\+TO}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{R\+X\+\_\+\+M\+O\+D\+E\+\_\+\+W\+TO}{RX_MODE_WTO}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+X\+\_\+\+M\+O\+D\+E\+\_\+\+W\+TO~0x80}\hypertarget{eldorado_8h_abfbe594f69f63587c5e47cd6195aff9d}{}\label{eldorado_8h_abfbe594f69f63587c5e47cd6195aff9d}
+Receive mode wto 
+
+Definition at line 40 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!S\+C\+I\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+A\+UD@{S\+C\+I\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+A\+UD}}
+\index{S\+C\+I\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+A\+UD@{S\+C\+I\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+A\+UD}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{S\+C\+I\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+A\+UD}{SCI_DEFAULT_BAUD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+C\+I\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+A\+UD~38400}\hypertarget{eldorado_8h_ae988e583ffb6482b5aa7a0db3cf04d13}{}\label{eldorado_8h_ae988e583ffb6482b5aa7a0db3cf04d13}
+
+
+Definition at line 137 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!S\+C\+I\+B\+DH@{S\+C\+I\+B\+DH}}
+\index{S\+C\+I\+B\+DH@{S\+C\+I\+B\+DH}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{S\+C\+I\+B\+DH}{SCIBDH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+C\+I\+B\+DH~S\+C\+I1\+B\+DH}\hypertarget{eldorado_8h_a652f96d37614999df43e03ff58626188}{}\label{eldorado_8h_a652f96d37614999df43e03ff58626188}
+
+
+Definition at line 106 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!S\+C\+I\+B\+DL@{S\+C\+I\+B\+DL}}
+\index{S\+C\+I\+B\+DL@{S\+C\+I\+B\+DL}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{S\+C\+I\+B\+DL}{SCIBDL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+C\+I\+B\+DL~S\+C\+I1\+B\+DL}\hypertarget{eldorado_8h_af26ff5693fa93b532a8c6572e6d5f6c0}{}\label{eldorado_8h_af26ff5693fa93b532a8c6572e6d5f6c0}
+
+
+Definition at line 107 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!S\+C\+I\+C1@{S\+C\+I\+C1}}
+\index{S\+C\+I\+C1@{S\+C\+I\+C1}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{S\+C\+I\+C1}{SCIC1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+C\+I\+C1~S\+C\+I1\+C1}\hypertarget{eldorado_8h_af7cc6057bf240476022d687474edb906}{}\label{eldorado_8h_af7cc6057bf240476022d687474edb906}
+
+
+Definition at line 108 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!S\+C\+I\+C2@{S\+C\+I\+C2}}
+\index{S\+C\+I\+C2@{S\+C\+I\+C2}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{S\+C\+I\+C2}{SCIC2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+C\+I\+C2~S\+C\+I1\+C2}\hypertarget{eldorado_8h_a4213b6df48a791e9f75a28aef3b08424}{}\label{eldorado_8h_a4213b6df48a791e9f75a28aef3b08424}
+
+
+Definition at line 109 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!S\+C\+I\+C3@{S\+C\+I\+C3}}
+\index{S\+C\+I\+C3@{S\+C\+I\+C3}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{S\+C\+I\+C3}{SCIC3}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+C\+I\+C3~S\+C\+I1\+C3}\hypertarget{eldorado_8h_a5a5c8c12b5e39b5fec291b1f94491181}{}\label{eldorado_8h_a5a5c8c12b5e39b5fec291b1f94491181}
+
+
+Definition at line 112 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!S\+C\+ID@{S\+C\+ID}}
+\index{S\+C\+ID@{S\+C\+ID}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{S\+C\+ID}{SCID}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+C\+ID~S\+C\+I1D}\hypertarget{eldorado_8h_a8d290c0883a86287d25ab65c43d7fc56}{}\label{eldorado_8h_a8d290c0883a86287d25ab65c43d7fc56}
+
+
+Definition at line 113 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!S\+C\+I\+S1@{S\+C\+I\+S1}}
+\index{S\+C\+I\+S1@{S\+C\+I\+S1}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{S\+C\+I\+S1}{SCIS1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+C\+I\+S1~S\+C\+I1\+S1}\hypertarget{eldorado_8h_a192e32e00061954feb726be44f560062}{}\label{eldorado_8h_a192e32e00061954feb726be44f560062}
+
+
+Definition at line 110 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!S\+C\+I\+S1\+\_\+\+TC@{S\+C\+I\+S1\+\_\+\+TC}}
+\index{S\+C\+I\+S1\+\_\+\+TC@{S\+C\+I\+S1\+\_\+\+TC}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{S\+C\+I\+S1\+\_\+\+TC}{SCIS1_TC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+C\+I\+S1\+\_\+\+TC~S\+C\+I1\+S1\+\_\+\+TC}\hypertarget{eldorado_8h_a3facaf7a479885a2fde786074088797c}{}\label{eldorado_8h_a3facaf7a479885a2fde786074088797c}
+
+
+Definition at line 116 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!S\+C\+I\+S1\+\_\+\+T\+D\+RE@{S\+C\+I\+S1\+\_\+\+T\+D\+RE}}
+\index{S\+C\+I\+S1\+\_\+\+T\+D\+RE@{S\+C\+I\+S1\+\_\+\+T\+D\+RE}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{S\+C\+I\+S1\+\_\+\+T\+D\+RE}{SCIS1_TDRE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+C\+I\+S1\+\_\+\+T\+D\+RE~S\+C\+I1\+S1\+\_\+\+T\+D\+RE}\hypertarget{eldorado_8h_aeb6b8ebbb60cb252c7d4dea68367af0d}{}\label{eldorado_8h_aeb6b8ebbb60cb252c7d4dea68367af0d}
+
+
+Definition at line 115 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!S\+C\+I\+S2@{S\+C\+I\+S2}}
+\index{S\+C\+I\+S2@{S\+C\+I\+S2}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{S\+C\+I\+S2}{SCIS2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+C\+I\+S2~S\+C\+I1\+S2}\hypertarget{eldorado_8h_a4f66bdf33113e8fe8d74a77f3b39dbd5}{}\label{eldorado_8h_a4f66bdf33113e8fe8d74a77f3b39dbd5}
+
+
+Definition at line 111 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!S\+W\+I\+T\+C\+H\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO@{S\+W\+I\+T\+C\+H\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO}}
+\index{S\+W\+I\+T\+C\+H\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO@{S\+W\+I\+T\+C\+H\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{S\+W\+I\+T\+C\+H\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO}{SWITCH_INIT_MACRO}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+W\+I\+T\+C\+H\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+C\+RO}\hypertarget{eldorado_8h_a8456e9e229a77bf52e74485975e30042}{}\label{eldorado_8h_a8456e9e229a77bf52e74485975e30042}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{eldorado_8h_ac4cac00e17eb7335b8d9fb9b47e6c2bd}{PB0PU} = \hyperlink{types_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE}; \(\backslash\)
+                             PB1PU = \hyperlink{types_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE}; \(\backslash\)
+                             PB2PU = \hyperlink{types_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE}; \(\backslash\)
+                             PB3PU = \hyperlink{types_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE}; \(\backslash\)
+                             PB0DIR = \hyperlink{types_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};\(\backslash\)
+                             PB1DIR = \hyperlink{types_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};\(\backslash\)
+                             PB2DIR = \hyperlink{types_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};\(\backslash\)
+                             PB3DIR = \hyperlink{types_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+\end{DoxyCode}
+
+
+Definition at line 229 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+M\+O\+DE@{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+M\+O\+DE}}
+\index{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+M\+O\+DE@{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+M\+O\+DE}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+M\+O\+DE}{SYSTEM_RESET_MODE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+M\+O\+DE~0x86}\hypertarget{eldorado_8h_a34736448cad3104684e50e2473ddbf3e}{}\label{eldorado_8h_a34736448cad3104684e50e2473ddbf3e}
+Not implemented 
+
+Definition at line 46 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!T\+E\+M\+P\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+E\+N\+A\+B\+L\+ED@{T\+E\+M\+P\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\index{T\+E\+M\+P\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+E\+N\+A\+B\+L\+ED@{T\+E\+M\+P\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+E\+N\+A\+B\+L\+ED}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+M\+P\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+E\+N\+A\+B\+L\+ED}{TEMP_SENSOR_ENABLED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+E\+M\+P\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+E\+N\+A\+B\+L\+ED~{\bf F\+A\+L\+SE}}\hypertarget{eldorado_8h_ae3a60f085902c0a73f7b1e70ce6fb206}{}\label{eldorado_8h_ae3a60f085902c0a73f7b1e70ce6fb206}
+
+
+Definition at line 97 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!T\+I\+M\+E\+O\+UT@{T\+I\+M\+E\+O\+UT}}
+\index{T\+I\+M\+E\+O\+UT@{T\+I\+M\+E\+O\+UT}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+E\+O\+UT}{TIMEOUT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+I\+M\+E\+O\+UT~0x85}\hypertarget{eldorado_8h_a45ba202b05caf39795aeca91b0ae547e}{}\label{eldorado_8h_a45ba202b05caf39795aeca91b0ae547e}
+Timeout 
+
+Definition at line 45 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!T\+I\+M\+E\+R1\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK@{T\+I\+M\+E\+R1\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}}
+\index{T\+I\+M\+E\+R1\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK@{T\+I\+M\+E\+R1\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+E\+R1\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}{TIMER1_IRQ_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+I\+M\+E\+R1\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK~0x0100}\hypertarget{eldorado_8h_a7290efb8c74a60f7f7ac03623e159ec5}{}\label{eldorado_8h_a7290efb8c74a60f7f7ac03623e159ec5}
+Timer1 I\+RQ Mask 
+
+Definition at line 56 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!T\+X\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK@{T\+X\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}}
+\index{T\+X\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK@{T\+X\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{T\+X\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK}{TX_IRQ_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+X\+\_\+\+I\+R\+Q\+\_\+\+M\+A\+SK~0x0040}\hypertarget{eldorado_8h_ae6db24f417f55bdacc904d5adfa34a1d}{}\label{eldorado_8h_ae6db24f417f55bdacc904d5adfa34a1d}
+Transmit I\+RQ Mask 
+
+Definition at line 51 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!T\+X\+\_\+\+M\+O\+DE@{T\+X\+\_\+\+M\+O\+DE}}
+\index{T\+X\+\_\+\+M\+O\+DE@{T\+X\+\_\+\+M\+O\+DE}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{T\+X\+\_\+\+M\+O\+DE}{TX_MODE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+X\+\_\+\+M\+O\+DE~0x03}\hypertarget{eldorado_8h_a60bcaae69589922d624e3a7c1cedd686}{}\label{eldorado_8h_a60bcaae69589922d624e3a7c1cedd686}
+Trasmit mode 
+
+Definition at line 37 of file eldorado.\+h.
+
+\index{eldorado.\+h@{eldorado.\+h}!X\+C\+V\+R\+\_\+\+S\+E\+Q\+\_\+\+M\+A\+SK@{X\+C\+V\+R\+\_\+\+S\+E\+Q\+\_\+\+M\+A\+SK}}
+\index{X\+C\+V\+R\+\_\+\+S\+E\+Q\+\_\+\+M\+A\+SK@{X\+C\+V\+R\+\_\+\+S\+E\+Q\+\_\+\+M\+A\+SK}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{X\+C\+V\+R\+\_\+\+S\+E\+Q\+\_\+\+M\+A\+SK}{XCVR_SEQ_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define X\+C\+V\+R\+\_\+\+S\+E\+Q\+\_\+\+M\+A\+SK~0x\+F\+F\+F8}\hypertarget{eldorado_8h_a9fc165a752ad4837b8b4b3f09c9007d5}{}\label{eldorado_8h_a9fc165a752ad4837b8b4b3f09c9007d5}
+Transceiver seq mask 
+
+Definition at line 57 of file eldorado.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{eldorado.\+h@{eldorado.\+h}!I\+R\+Q\+Isr@{I\+R\+Q\+Isr}}
+\index{I\+R\+Q\+Isr@{I\+R\+Q\+Isr}!eldorado.\+h@{eldorado.\+h}}
+\subsubsection[{\texorpdfstring{I\+R\+Q\+Isr(void)}{IRQIsr(void)}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+\_\+interrupt {\bf void} I\+R\+Q\+Isr (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{eldorado_8h_a35b93b542f8f881b453c40b788fa11cf}{}\label{eldorado_8h_a35b93b542f8f881b453c40b788fa11cf}

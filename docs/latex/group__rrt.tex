@@ -1,0 +1,72 @@
+\hypertarget{group__rrt}{}\section{Rrt}
+\label{group__rrt}\index{Rrt@{Rrt}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structrrt__vars__t}{rrt\+\_\+vars\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__rrt_ga4175f20cafc20669a11649e60e46455e}{rrt\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Initialize this module. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__rrt_gaa2f9c775926eb27d9fabe449828dabd2}{rrt\+\_\+send\+Co\+A\+P\+Msg} (char action\+Msg, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$ipv6mote)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__rrt_ga5b34e5de121363d7b8c5d58b4ffe4aad}{rrt\+\_\+send\+Done} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{disk_8c_ad018a3100b2dabad325a0800152db297}{error})
+\begin{DoxyCompactList}\small\item\em The stack indicates that the packet was sent. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{Rrt@{Rrt}!rrt\+\_\+init@{rrt\+\_\+init}}
+\index{rrt\+\_\+init@{rrt\+\_\+init}!Rrt@{Rrt}}
+\subsubsection[{\texorpdfstring{rrt\+\_\+init(void)}{rrt_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} rrt\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__rrt_ga4175f20cafc20669a11649e60e46455e}{}\label{group__rrt_ga4175f20cafc20669a11649e60e46455e}
+
+
+Initialize this module. 
+
+
+
+Definition at line 47 of file rrt.\+c.
+
+\index{Rrt@{Rrt}!rrt\+\_\+send\+Co\+A\+P\+Msg@{rrt\+\_\+send\+Co\+A\+P\+Msg}}
+\index{rrt\+\_\+send\+Co\+A\+P\+Msg@{rrt\+\_\+send\+Co\+A\+P\+Msg}!Rrt@{Rrt}}
+\subsubsection[{\texorpdfstring{rrt\+\_\+send\+Co\+A\+P\+Msg(char action\+Msg, uint8\+\_\+t $\ast$ipv6mote)}{rrt_sendCoAPMsg(char actionMsg, uint8_t *ipv6mote)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} rrt\+\_\+send\+Co\+A\+P\+Msg (
+\begin{DoxyParamCaption}
+\item[{char}]{action\+Msg, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{ipv6mote}
+\end{DoxyParamCaption}
+)}\hypertarget{group__rrt_gaa2f9c775926eb27d9fabe449828dabd2}{}\label{group__rrt_gaa2f9c775926eb27d9fabe449828dabd2}
+if mote is 0, then send to the ringmater, defined by ip\+Addr\+\_\+ringmaster 
+
+Definition at line 202 of file rrt.\+c.
+
+\index{Rrt@{Rrt}!rrt\+\_\+send\+Done@{rrt\+\_\+send\+Done}}
+\index{rrt\+\_\+send\+Done@{rrt\+\_\+send\+Done}!Rrt@{Rrt}}
+\subsubsection[{\texorpdfstring{rrt\+\_\+send\+Done(\+Open\+Queue\+Entry\+\_\+t $\ast$msg, owerror\+\_\+t error)}{rrt_sendDone(OpenQueueEntry_t *msg, owerror_t error)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} rrt\+\_\+send\+Done (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg, }
+\item[{{\bf owerror\+\_\+t}}]{error}
+\end{DoxyParamCaption}
+)}\hypertarget{group__rrt_ga5b34e5de121363d7b8c5d58b4ffe4aad}{}\label{group__rrt_ga5b34e5de121363d7b8c5d58b4ffe4aad}
+
+
+The stack indicates that the packet was sent. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em msg} & The Co\+AP message just sent. \\
+\hline
+\mbox{\tt in}  & {\em error} & The outcome of sending it. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 271 of file rrt.\+c.
+

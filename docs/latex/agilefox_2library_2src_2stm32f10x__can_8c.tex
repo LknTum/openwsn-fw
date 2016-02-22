@@ -1,0 +1,523 @@
+\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/agilefox/library/src/stm32f10x\+\_\+can.c File Reference}
+\label{agilefox_2library_2src_2stm32f10x__can_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/agilefox/library/src/stm32f10x\+\_\+can.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+{\ttfamily \#include \char`\"{}stm32f10x\+\_\+can.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stm32f10x\+\_\+rcc.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a62de5c53ff6a9a6e59b561aa8f4817e2}{M\+C\+R\+\_\+\+I\+N\+RQ}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00000001) /$\ast$ Initialization request $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a05a05f0fff7b693b458cc3da70fffba5}{M\+C\+R\+\_\+\+S\+L\+E\+EP}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00000002) /$\ast$ Sleep mode request $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_af6b1598f4acf046e9fbaaa349cf6404d}{M\+C\+R\+\_\+\+T\+X\+FP}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00000004) /$\ast$ Transmit F\+I\+F\+O priority $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a7e2bc4e1f166543eabd94310f1b91021}{M\+C\+R\+\_\+\+R\+F\+LM}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00000008) /$\ast$ Receive F\+I\+F\+O locked mode $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_ae8934d820265019ede3731d8824c8f60}{M\+C\+R\+\_\+\+N\+A\+RT}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00000010) /$\ast$ No automatic retransmission $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_ac232cd86f60c37da0783f92c605c7623}{M\+C\+R\+\_\+\+A\+W\+UM}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00000020) /$\ast$ Automatic wake up mode $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_af905d88057235f56fe0ca5ec6577b8c5}{M\+C\+R\+\_\+\+A\+B\+OM}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00000040) /$\ast$ Automatic bus-\/off management $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a090a4589a9a8731600bdec0869f862bd}{M\+C\+R\+\_\+\+T\+T\+CM}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00000080) /$\ast$ time triggered communication $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a08757c14f76c5450442db2c1c987fa3b}{M\+S\+R\+\_\+\+I\+N\+AK}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00000001)    /$\ast$ Initialization acknowledge $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a542a9c7ff45c5e43d081a299fd09f7b0}{M\+S\+R\+\_\+\+W\+K\+UI}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00000008)    /$\ast$ Wake-\/up interrupt $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a3dfff879b72a0e08a3b0a7c8eb61d4c6}{M\+S\+R\+\_\+\+S\+L\+A\+KI}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00000010)    /$\ast$ Sleep acknowledge interrupt $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_acf84e5df24e5999d4073238617253777}{T\+S\+R\+\_\+\+R\+Q\+C\+P0}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00000001)    /$\ast$ Request completed mailbox0 $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a7c3083985151401ee4ad1df9848d46c7}{T\+S\+R\+\_\+\+T\+X\+O\+K0}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00000002)    /$\ast$ Transmission O\+K of mailbox0 $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a70083a1dcb6026fbab31f49643f925b8}{T\+S\+R\+\_\+\+A\+B\+R\+Q0}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00000080)    /$\ast$ Abort request for mailbox0 $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_afbd75e1015ce04d65ec80dc82d613a5c}{T\+S\+R\+\_\+\+R\+Q\+C\+P1}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00000100)    /$\ast$ Request completed mailbox1 $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_aebdf3329f89c05a0bc560458ef6bb475}{T\+S\+R\+\_\+\+T\+X\+O\+K1}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00000200)    /$\ast$ Transmission O\+K of mailbox1 $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_ad5ec96ea66de5220e7886f9cd15ef69d}{T\+S\+R\+\_\+\+A\+B\+R\+Q1}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00008000)    /$\ast$ Abort request for mailbox1 $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a861570c50468d251d54bac54fd493b08}{T\+S\+R\+\_\+\+R\+Q\+C\+P2}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00010000)    /$\ast$ Request completed mailbox2 $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_ab3490c147fcda6eb30e9c979877ba82a}{T\+S\+R\+\_\+\+T\+X\+O\+K2}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00020000)    /$\ast$ Transmission O\+K of mailbox2 $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a75de2b0246fc51da9798ef5bface37a8}{T\+S\+R\+\_\+\+A\+B\+R\+Q2}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00800000)    /$\ast$ Abort request for mailbox2 $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a97e215323b98fd2496e9e33ef35cecb1}{T\+S\+R\+\_\+\+T\+M\+E0}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x04000000)    /$\ast$ Transmit mailbox 0 empty $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_afb67cae62a85d87cc737215dd8e1f1f3}{T\+S\+R\+\_\+\+T\+M\+E1}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x08000000)    /$\ast$ Transmit mailbox 1 empty $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a046a3ff55d4138a78da66e1a763b06e0}{T\+S\+R\+\_\+\+T\+M\+E2}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x10000000)    /$\ast$ Transmit mailbox 2 empty $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a989ca53367d77f158ac20e91e0610dd7}{R\+F0\+R\+\_\+\+F\+U\+L\+L0}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00000008)    /$\ast$ F\+I\+F\+O 0 full $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_ab926671c1a0f298f562378923b0ae0d0}{R\+F0\+R\+\_\+\+F\+O\+V\+R0}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00000010)    /$\ast$ F\+I\+F\+O 0 overrun $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a5b58ea8fc635c0a4b4f9d05cb3407bc4}{R\+F0\+R\+\_\+\+R\+F\+O\+M0}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00000020)    /$\ast$ Release F\+I\+F\+O 0 output mailbox $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a4726564ab77f2b92462140b6ba876268}{R\+F1\+R\+\_\+\+F\+U\+L\+L1}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00000008)    /$\ast$ F\+I\+F\+O 1 full $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a0514c0b248063f5685bf248ce41295f3}{R\+F1\+R\+\_\+\+F\+O\+V\+R1}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00000010)    /$\ast$ F\+I\+F\+O 1 overrun $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a79aa3b7b94ca1e7494116aa00fd9d93e}{R\+F1\+R\+\_\+\+R\+F\+O\+M1}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00000020)    /$\ast$ Release F\+I\+F\+O 1 output mailbox $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a2f898ebddcebfc17afaad62bfa5631ca}{E\+S\+R\+\_\+\+E\+W\+GF}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00000001)    /$\ast$ Error warning flag $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a10ba24cb4c6f0859952134be4265f17f}{E\+S\+R\+\_\+\+E\+P\+VF}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00000002)    /$\ast$ Error passive flag $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a473e1170e1010f8f95da75dc31233c98}{E\+S\+R\+\_\+\+B\+O\+FF}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00000004)    /$\ast$ Bus-\/off flag $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_abeb6db5ba5c01da5084ec1605f868e18}{T\+M\+I\+Dx\+R\+\_\+\+T\+X\+RQ}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00000001) /$\ast$ Transmit mailbox request $\ast$/
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a6125d0273c466e402db1a8f5bf888857}{F\+M\+R\+\_\+\+F\+I\+N\+IT}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00000001) /$\ast$ Filter init mode $\ast$/
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_abae1dfcfe7f9549c37d03a5834d64e39}{C\+A\+N\+\_\+\+De\+Init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a7e62f55dc8fac6ae14a6b90dbbbfb506}{C\+A\+N\+\_\+\+Init} (\hyperlink{struct_c_a_n___init_type_def}{C\+A\+N\+\_\+\+Init\+Type\+Def} $\ast$C\+A\+N\+\_\+\+Init\+Struct)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___c_a_n___exported___functions_ga39476830280340363c51041be6b12647}{C\+A\+N\+\_\+\+Filter\+Init} (\hyperlink{struct_c_a_n___filter_init_type_def}{C\+A\+N\+\_\+\+Filter\+Init\+Type\+Def} $\ast$C\+A\+N\+\_\+\+Filter\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Initializes the C\+AN peripheral according to the specified parameters in the C\+A\+N\+\_\+\+Filter\+Init\+Struct. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___c_a_n___exported___functions_gad77ad810868ed111755fc9e8ae0c7646}{C\+A\+N\+\_\+\+Struct\+Init} (\hyperlink{struct_c_a_n___init_type_def}{C\+A\+N\+\_\+\+Init\+Type\+Def} $\ast$C\+A\+N\+\_\+\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Fills each C\+A\+N\+\_\+\+Init\+Struct member with its default value. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a6eb3e9a11b28067bed58388324800a96}{C\+A\+N\+\_\+\+I\+T\+Config} (\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} C\+A\+N\+\_\+\+IT, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_ac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} New\+State)
+\item 
+\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a419617bb1764d3c33e0d1b6e9c9d757d}{C\+A\+N\+\_\+\+Transmit} (\hyperlink{struct_can_tx_msg}{Can\+Tx\+Msg} $\ast$Tx\+Message)
+\item 
+\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a5cc280f822538084fe39e8e4ea1b7bf3}{C\+A\+N\+\_\+\+Transmit\+Status} (\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Transmit\+Mailbox)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_ab6f51819939e2833ce3a6584a4bdad7a}{C\+A\+N\+\_\+\+Cancel\+Transmit} (\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Mailbox)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_ade80964a0eaea005594db74d33a6d91a}{C\+A\+N\+\_\+\+F\+I\+F\+O\+Release} (\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_aed742c436da53c1080638ce6ef7d13de}{u8} F\+I\+F\+O\+Number)
+\item 
+\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a8484f2bc7d1fa8124695eebc8ff18582}{C\+A\+N\+\_\+\+Message\+Pending} (\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_aed742c436da53c1080638ce6ef7d13de}{u8} F\+I\+F\+O\+Number)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_aa98b5ce62fab6bc612bbec049c448c79}{C\+A\+N\+\_\+\+Receive} (\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_aed742c436da53c1080638ce6ef7d13de}{u8} F\+I\+F\+O\+Number, \hyperlink{struct_can_rx_msg}{Can\+Rx\+Msg} $\ast$Rx\+Message)
+\item 
+\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a88c3596fa37c0f195316460211d3212f}{C\+A\+N\+\_\+\+Sleep} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a4a2107caa16b99452e8c91d224e36bea}{C\+A\+N\+\_\+\+Wake\+Up} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a89136caac2e14c55151f527ac02daaff}{Flag\+Status} \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a344ef2e74834275a552e35516be56ec7}{C\+A\+N\+\_\+\+Get\+Flag\+Status} (\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} C\+A\+N\+\_\+\+F\+L\+AG)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a6419af63560c6fa99c7bf37a6a3e28e8}{C\+A\+N\+\_\+\+Clear\+Flag} (\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} C\+A\+N\+\_\+\+F\+L\+AG)
+\item 
+\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_aacbd7ed539db0aacd973a0f6eca34074}{I\+T\+Status} \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a293b1c3cd5daffac2afce474e88147f7}{C\+A\+N\+\_\+\+Get\+I\+T\+Status} (\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} C\+A\+N\+\_\+\+IT)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__can_8c_a93fde1447f0cf5ace79edb3bf1e3410c}{C\+A\+N\+\_\+\+Clear\+I\+T\+Pending\+Bit} (\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} C\+A\+N\+\_\+\+IT)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!E\+S\+R\+\_\+\+B\+O\+FF@{E\+S\+R\+\_\+\+B\+O\+FF}}
+\index{E\+S\+R\+\_\+\+B\+O\+FF@{E\+S\+R\+\_\+\+B\+O\+FF}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{E\+S\+R\+\_\+\+B\+O\+FF}{ESR_BOFF}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+S\+R\+\_\+\+B\+O\+FF~(({\bf u32})0x00000004)    /$\ast$ Bus-\/off flag $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a473e1170e1010f8f95da75dc31233c98}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a473e1170e1010f8f95da75dc31233c98}
+
+
+Definition at line 65 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!E\+S\+R\+\_\+\+E\+P\+VF@{E\+S\+R\+\_\+\+E\+P\+VF}}
+\index{E\+S\+R\+\_\+\+E\+P\+VF@{E\+S\+R\+\_\+\+E\+P\+VF}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{E\+S\+R\+\_\+\+E\+P\+VF}{ESR_EPVF}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+S\+R\+\_\+\+E\+P\+VF~(({\bf u32})0x00000002)    /$\ast$ Error passive flag $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a10ba24cb4c6f0859952134be4265f17f}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a10ba24cb4c6f0859952134be4265f17f}
+
+
+Definition at line 64 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!E\+S\+R\+\_\+\+E\+W\+GF@{E\+S\+R\+\_\+\+E\+W\+GF}}
+\index{E\+S\+R\+\_\+\+E\+W\+GF@{E\+S\+R\+\_\+\+E\+W\+GF}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{E\+S\+R\+\_\+\+E\+W\+GF}{ESR_EWGF}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+S\+R\+\_\+\+E\+W\+GF~(({\bf u32})0x00000001)    /$\ast$ Error warning flag $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a2f898ebddcebfc17afaad62bfa5631ca}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a2f898ebddcebfc17afaad62bfa5631ca}
+
+
+Definition at line 63 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!F\+M\+R\+\_\+\+F\+I\+N\+IT@{F\+M\+R\+\_\+\+F\+I\+N\+IT}}
+\index{F\+M\+R\+\_\+\+F\+I\+N\+IT@{F\+M\+R\+\_\+\+F\+I\+N\+IT}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{F\+M\+R\+\_\+\+F\+I\+N\+IT}{FMR_FINIT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+M\+R\+\_\+\+F\+I\+N\+IT~(({\bf u32})0x00000001) /$\ast$ Filter init mode $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a6125d0273c466e402db1a8f5bf888857}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a6125d0273c466e402db1a8f5bf888857}
+
+
+Definition at line 71 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!M\+C\+R\+\_\+\+A\+B\+OM@{M\+C\+R\+\_\+\+A\+B\+OM}}
+\index{M\+C\+R\+\_\+\+A\+B\+OM@{M\+C\+R\+\_\+\+A\+B\+OM}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{M\+C\+R\+\_\+\+A\+B\+OM}{MCR_ABOM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+C\+R\+\_\+\+A\+B\+OM~(({\bf u32})0x00000040) /$\ast$ Automatic bus-\/off management $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_af905d88057235f56fe0ca5ec6577b8c5}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_af905d88057235f56fe0ca5ec6577b8c5}
+
+
+Definition at line 30 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!M\+C\+R\+\_\+\+A\+W\+UM@{M\+C\+R\+\_\+\+A\+W\+UM}}
+\index{M\+C\+R\+\_\+\+A\+W\+UM@{M\+C\+R\+\_\+\+A\+W\+UM}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{M\+C\+R\+\_\+\+A\+W\+UM}{MCR_AWUM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+C\+R\+\_\+\+A\+W\+UM~(({\bf u32})0x00000020) /$\ast$ Automatic wake up mode $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_ac232cd86f60c37da0783f92c605c7623}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_ac232cd86f60c37da0783f92c605c7623}
+
+
+Definition at line 29 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!M\+C\+R\+\_\+\+I\+N\+RQ@{M\+C\+R\+\_\+\+I\+N\+RQ}}
+\index{M\+C\+R\+\_\+\+I\+N\+RQ@{M\+C\+R\+\_\+\+I\+N\+RQ}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{M\+C\+R\+\_\+\+I\+N\+RQ}{MCR_INRQ}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+C\+R\+\_\+\+I\+N\+RQ~(({\bf u32})0x00000001) /$\ast$ Initialization request $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a62de5c53ff6a9a6e59b561aa8f4817e2}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a62de5c53ff6a9a6e59b561aa8f4817e2}
+
+
+Definition at line 24 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!M\+C\+R\+\_\+\+N\+A\+RT@{M\+C\+R\+\_\+\+N\+A\+RT}}
+\index{M\+C\+R\+\_\+\+N\+A\+RT@{M\+C\+R\+\_\+\+N\+A\+RT}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{M\+C\+R\+\_\+\+N\+A\+RT}{MCR_NART}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+C\+R\+\_\+\+N\+A\+RT~(({\bf u32})0x00000010) /$\ast$ No automatic retransmission $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_ae8934d820265019ede3731d8824c8f60}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_ae8934d820265019ede3731d8824c8f60}
+
+
+Definition at line 28 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!M\+C\+R\+\_\+\+R\+F\+LM@{M\+C\+R\+\_\+\+R\+F\+LM}}
+\index{M\+C\+R\+\_\+\+R\+F\+LM@{M\+C\+R\+\_\+\+R\+F\+LM}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{M\+C\+R\+\_\+\+R\+F\+LM}{MCR_RFLM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+C\+R\+\_\+\+R\+F\+LM~(({\bf u32})0x00000008) /$\ast$ Receive F\+I\+F\+O locked mode $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a7e2bc4e1f166543eabd94310f1b91021}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a7e2bc4e1f166543eabd94310f1b91021}
+
+
+Definition at line 27 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!M\+C\+R\+\_\+\+S\+L\+E\+EP@{M\+C\+R\+\_\+\+S\+L\+E\+EP}}
+\index{M\+C\+R\+\_\+\+S\+L\+E\+EP@{M\+C\+R\+\_\+\+S\+L\+E\+EP}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{M\+C\+R\+\_\+\+S\+L\+E\+EP}{MCR_SLEEP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+C\+R\+\_\+\+S\+L\+E\+EP~(({\bf u32})0x00000002) /$\ast$ Sleep mode request $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a05a05f0fff7b693b458cc3da70fffba5}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a05a05f0fff7b693b458cc3da70fffba5}
+
+
+Definition at line 25 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!M\+C\+R\+\_\+\+T\+T\+CM@{M\+C\+R\+\_\+\+T\+T\+CM}}
+\index{M\+C\+R\+\_\+\+T\+T\+CM@{M\+C\+R\+\_\+\+T\+T\+CM}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{M\+C\+R\+\_\+\+T\+T\+CM}{MCR_TTCM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+C\+R\+\_\+\+T\+T\+CM~(({\bf u32})0x00000080) /$\ast$ time triggered communication $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a090a4589a9a8731600bdec0869f862bd}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a090a4589a9a8731600bdec0869f862bd}
+
+
+Definition at line 31 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!M\+C\+R\+\_\+\+T\+X\+FP@{M\+C\+R\+\_\+\+T\+X\+FP}}
+\index{M\+C\+R\+\_\+\+T\+X\+FP@{M\+C\+R\+\_\+\+T\+X\+FP}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{M\+C\+R\+\_\+\+T\+X\+FP}{MCR_TXFP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+C\+R\+\_\+\+T\+X\+FP~(({\bf u32})0x00000004) /$\ast$ Transmit F\+I\+F\+O priority $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_af6b1598f4acf046e9fbaaa349cf6404d}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_af6b1598f4acf046e9fbaaa349cf6404d}
+
+
+Definition at line 26 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!M\+S\+R\+\_\+\+I\+N\+AK@{M\+S\+R\+\_\+\+I\+N\+AK}}
+\index{M\+S\+R\+\_\+\+I\+N\+AK@{M\+S\+R\+\_\+\+I\+N\+AK}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{M\+S\+R\+\_\+\+I\+N\+AK}{MSR_INAK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+S\+R\+\_\+\+I\+N\+AK~(({\bf u32})0x00000001)    /$\ast$ Initialization acknowledge $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a08757c14f76c5450442db2c1c987fa3b}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a08757c14f76c5450442db2c1c987fa3b}
+
+
+Definition at line 34 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!M\+S\+R\+\_\+\+S\+L\+A\+KI@{M\+S\+R\+\_\+\+S\+L\+A\+KI}}
+\index{M\+S\+R\+\_\+\+S\+L\+A\+KI@{M\+S\+R\+\_\+\+S\+L\+A\+KI}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{M\+S\+R\+\_\+\+S\+L\+A\+KI}{MSR_SLAKI}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+S\+R\+\_\+\+S\+L\+A\+KI~(({\bf u32})0x00000010)    /$\ast$ Sleep acknowledge interrupt $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a3dfff879b72a0e08a3b0a7c8eb61d4c6}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a3dfff879b72a0e08a3b0a7c8eb61d4c6}
+
+
+Definition at line 36 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!M\+S\+R\+\_\+\+W\+K\+UI@{M\+S\+R\+\_\+\+W\+K\+UI}}
+\index{M\+S\+R\+\_\+\+W\+K\+UI@{M\+S\+R\+\_\+\+W\+K\+UI}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{M\+S\+R\+\_\+\+W\+K\+UI}{MSR_WKUI}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+S\+R\+\_\+\+W\+K\+UI~(({\bf u32})0x00000008)    /$\ast$ Wake-\/up interrupt $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a542a9c7ff45c5e43d081a299fd09f7b0}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a542a9c7ff45c5e43d081a299fd09f7b0}
+
+
+Definition at line 35 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!R\+F0\+R\+\_\+\+F\+O\+V\+R0@{R\+F0\+R\+\_\+\+F\+O\+V\+R0}}
+\index{R\+F0\+R\+\_\+\+F\+O\+V\+R0@{R\+F0\+R\+\_\+\+F\+O\+V\+R0}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{R\+F0\+R\+\_\+\+F\+O\+V\+R0}{RF0R_FOVR0}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+F0\+R\+\_\+\+F\+O\+V\+R0~(({\bf u32})0x00000010)    /$\ast$ F\+I\+F\+O 0 overrun $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_ab926671c1a0f298f562378923b0ae0d0}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_ab926671c1a0f298f562378923b0ae0d0}
+
+
+Definition at line 54 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!R\+F0\+R\+\_\+\+F\+U\+L\+L0@{R\+F0\+R\+\_\+\+F\+U\+L\+L0}}
+\index{R\+F0\+R\+\_\+\+F\+U\+L\+L0@{R\+F0\+R\+\_\+\+F\+U\+L\+L0}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{R\+F0\+R\+\_\+\+F\+U\+L\+L0}{RF0R_FULL0}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+F0\+R\+\_\+\+F\+U\+L\+L0~(({\bf u32})0x00000008)    /$\ast$ F\+I\+F\+O 0 full $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a989ca53367d77f158ac20e91e0610dd7}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a989ca53367d77f158ac20e91e0610dd7}
+
+
+Definition at line 53 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!R\+F0\+R\+\_\+\+R\+F\+O\+M0@{R\+F0\+R\+\_\+\+R\+F\+O\+M0}}
+\index{R\+F0\+R\+\_\+\+R\+F\+O\+M0@{R\+F0\+R\+\_\+\+R\+F\+O\+M0}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{R\+F0\+R\+\_\+\+R\+F\+O\+M0}{RF0R_RFOM0}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+F0\+R\+\_\+\+R\+F\+O\+M0~(({\bf u32})0x00000020)    /$\ast$ Release F\+I\+F\+O 0 output mailbox $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a5b58ea8fc635c0a4b4f9d05cb3407bc4}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a5b58ea8fc635c0a4b4f9d05cb3407bc4}
+
+
+Definition at line 55 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!R\+F1\+R\+\_\+\+F\+O\+V\+R1@{R\+F1\+R\+\_\+\+F\+O\+V\+R1}}
+\index{R\+F1\+R\+\_\+\+F\+O\+V\+R1@{R\+F1\+R\+\_\+\+F\+O\+V\+R1}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{R\+F1\+R\+\_\+\+F\+O\+V\+R1}{RF1R_FOVR1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+F1\+R\+\_\+\+F\+O\+V\+R1~(({\bf u32})0x00000010)    /$\ast$ F\+I\+F\+O 1 overrun $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a0514c0b248063f5685bf248ce41295f3}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a0514c0b248063f5685bf248ce41295f3}
+
+
+Definition at line 59 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!R\+F1\+R\+\_\+\+F\+U\+L\+L1@{R\+F1\+R\+\_\+\+F\+U\+L\+L1}}
+\index{R\+F1\+R\+\_\+\+F\+U\+L\+L1@{R\+F1\+R\+\_\+\+F\+U\+L\+L1}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{R\+F1\+R\+\_\+\+F\+U\+L\+L1}{RF1R_FULL1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+F1\+R\+\_\+\+F\+U\+L\+L1~(({\bf u32})0x00000008)    /$\ast$ F\+I\+F\+O 1 full $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a4726564ab77f2b92462140b6ba876268}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a4726564ab77f2b92462140b6ba876268}
+
+
+Definition at line 58 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!R\+F1\+R\+\_\+\+R\+F\+O\+M1@{R\+F1\+R\+\_\+\+R\+F\+O\+M1}}
+\index{R\+F1\+R\+\_\+\+R\+F\+O\+M1@{R\+F1\+R\+\_\+\+R\+F\+O\+M1}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{R\+F1\+R\+\_\+\+R\+F\+O\+M1}{RF1R_RFOM1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+F1\+R\+\_\+\+R\+F\+O\+M1~(({\bf u32})0x00000020)    /$\ast$ Release F\+I\+F\+O 1 output mailbox $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a79aa3b7b94ca1e7494116aa00fd9d93e}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a79aa3b7b94ca1e7494116aa00fd9d93e}
+
+
+Definition at line 60 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!T\+M\+I\+Dx\+R\+\_\+\+T\+X\+RQ@{T\+M\+I\+Dx\+R\+\_\+\+T\+X\+RQ}}
+\index{T\+M\+I\+Dx\+R\+\_\+\+T\+X\+RQ@{T\+M\+I\+Dx\+R\+\_\+\+T\+X\+RQ}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{T\+M\+I\+Dx\+R\+\_\+\+T\+X\+RQ}{TMIDxR_TXRQ}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+M\+I\+Dx\+R\+\_\+\+T\+X\+RQ~(({\bf u32})0x00000001) /$\ast$ Transmit mailbox request $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_abeb6db5ba5c01da5084ec1605f868e18}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_abeb6db5ba5c01da5084ec1605f868e18}
+
+
+Definition at line 68 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!T\+S\+R\+\_\+\+A\+B\+R\+Q0@{T\+S\+R\+\_\+\+A\+B\+R\+Q0}}
+\index{T\+S\+R\+\_\+\+A\+B\+R\+Q0@{T\+S\+R\+\_\+\+A\+B\+R\+Q0}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{T\+S\+R\+\_\+\+A\+B\+R\+Q0}{TSR_ABRQ0}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+S\+R\+\_\+\+A\+B\+R\+Q0~(({\bf u32})0x00000080)    /$\ast$ Abort request for mailbox0 $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a70083a1dcb6026fbab31f49643f925b8}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a70083a1dcb6026fbab31f49643f925b8}
+
+
+Definition at line 41 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!T\+S\+R\+\_\+\+A\+B\+R\+Q1@{T\+S\+R\+\_\+\+A\+B\+R\+Q1}}
+\index{T\+S\+R\+\_\+\+A\+B\+R\+Q1@{T\+S\+R\+\_\+\+A\+B\+R\+Q1}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{T\+S\+R\+\_\+\+A\+B\+R\+Q1}{TSR_ABRQ1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+S\+R\+\_\+\+A\+B\+R\+Q1~(({\bf u32})0x00008000)    /$\ast$ Abort request for mailbox1 $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_ad5ec96ea66de5220e7886f9cd15ef69d}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_ad5ec96ea66de5220e7886f9cd15ef69d}
+
+
+Definition at line 44 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!T\+S\+R\+\_\+\+A\+B\+R\+Q2@{T\+S\+R\+\_\+\+A\+B\+R\+Q2}}
+\index{T\+S\+R\+\_\+\+A\+B\+R\+Q2@{T\+S\+R\+\_\+\+A\+B\+R\+Q2}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{T\+S\+R\+\_\+\+A\+B\+R\+Q2}{TSR_ABRQ2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+S\+R\+\_\+\+A\+B\+R\+Q2~(({\bf u32})0x00800000)    /$\ast$ Abort request for mailbox2 $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a75de2b0246fc51da9798ef5bface37a8}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a75de2b0246fc51da9798ef5bface37a8}
+
+
+Definition at line 47 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!T\+S\+R\+\_\+\+R\+Q\+C\+P0@{T\+S\+R\+\_\+\+R\+Q\+C\+P0}}
+\index{T\+S\+R\+\_\+\+R\+Q\+C\+P0@{T\+S\+R\+\_\+\+R\+Q\+C\+P0}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{T\+S\+R\+\_\+\+R\+Q\+C\+P0}{TSR_RQCP0}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+S\+R\+\_\+\+R\+Q\+C\+P0~(({\bf u32})0x00000001)    /$\ast$ Request completed mailbox0 $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_acf84e5df24e5999d4073238617253777}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_acf84e5df24e5999d4073238617253777}
+
+
+Definition at line 39 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!T\+S\+R\+\_\+\+R\+Q\+C\+P1@{T\+S\+R\+\_\+\+R\+Q\+C\+P1}}
+\index{T\+S\+R\+\_\+\+R\+Q\+C\+P1@{T\+S\+R\+\_\+\+R\+Q\+C\+P1}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{T\+S\+R\+\_\+\+R\+Q\+C\+P1}{TSR_RQCP1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+S\+R\+\_\+\+R\+Q\+C\+P1~(({\bf u32})0x00000100)    /$\ast$ Request completed mailbox1 $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_afbd75e1015ce04d65ec80dc82d613a5c}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_afbd75e1015ce04d65ec80dc82d613a5c}
+
+
+Definition at line 42 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!T\+S\+R\+\_\+\+R\+Q\+C\+P2@{T\+S\+R\+\_\+\+R\+Q\+C\+P2}}
+\index{T\+S\+R\+\_\+\+R\+Q\+C\+P2@{T\+S\+R\+\_\+\+R\+Q\+C\+P2}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{T\+S\+R\+\_\+\+R\+Q\+C\+P2}{TSR_RQCP2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+S\+R\+\_\+\+R\+Q\+C\+P2~(({\bf u32})0x00010000)    /$\ast$ Request completed mailbox2 $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a861570c50468d251d54bac54fd493b08}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a861570c50468d251d54bac54fd493b08}
+
+
+Definition at line 45 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!T\+S\+R\+\_\+\+T\+M\+E0@{T\+S\+R\+\_\+\+T\+M\+E0}}
+\index{T\+S\+R\+\_\+\+T\+M\+E0@{T\+S\+R\+\_\+\+T\+M\+E0}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{T\+S\+R\+\_\+\+T\+M\+E0}{TSR_TME0}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+S\+R\+\_\+\+T\+M\+E0~(({\bf u32})0x04000000)    /$\ast$ Transmit mailbox 0 empty $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a97e215323b98fd2496e9e33ef35cecb1}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a97e215323b98fd2496e9e33ef35cecb1}
+
+
+Definition at line 48 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!T\+S\+R\+\_\+\+T\+M\+E1@{T\+S\+R\+\_\+\+T\+M\+E1}}
+\index{T\+S\+R\+\_\+\+T\+M\+E1@{T\+S\+R\+\_\+\+T\+M\+E1}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{T\+S\+R\+\_\+\+T\+M\+E1}{TSR_TME1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+S\+R\+\_\+\+T\+M\+E1~(({\bf u32})0x08000000)    /$\ast$ Transmit mailbox 1 empty $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_afb67cae62a85d87cc737215dd8e1f1f3}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_afb67cae62a85d87cc737215dd8e1f1f3}
+
+
+Definition at line 49 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!T\+S\+R\+\_\+\+T\+M\+E2@{T\+S\+R\+\_\+\+T\+M\+E2}}
+\index{T\+S\+R\+\_\+\+T\+M\+E2@{T\+S\+R\+\_\+\+T\+M\+E2}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{T\+S\+R\+\_\+\+T\+M\+E2}{TSR_TME2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+S\+R\+\_\+\+T\+M\+E2~(({\bf u32})0x10000000)    /$\ast$ Transmit mailbox 2 empty $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a046a3ff55d4138a78da66e1a763b06e0}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a046a3ff55d4138a78da66e1a763b06e0}
+
+
+Definition at line 50 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!T\+S\+R\+\_\+\+T\+X\+O\+K0@{T\+S\+R\+\_\+\+T\+X\+O\+K0}}
+\index{T\+S\+R\+\_\+\+T\+X\+O\+K0@{T\+S\+R\+\_\+\+T\+X\+O\+K0}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{T\+S\+R\+\_\+\+T\+X\+O\+K0}{TSR_TXOK0}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+S\+R\+\_\+\+T\+X\+O\+K0~(({\bf u32})0x00000002)    /$\ast$ Transmission O\+K of mailbox0 $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a7c3083985151401ee4ad1df9848d46c7}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a7c3083985151401ee4ad1df9848d46c7}
+
+
+Definition at line 40 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!T\+S\+R\+\_\+\+T\+X\+O\+K1@{T\+S\+R\+\_\+\+T\+X\+O\+K1}}
+\index{T\+S\+R\+\_\+\+T\+X\+O\+K1@{T\+S\+R\+\_\+\+T\+X\+O\+K1}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{T\+S\+R\+\_\+\+T\+X\+O\+K1}{TSR_TXOK1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+S\+R\+\_\+\+T\+X\+O\+K1~(({\bf u32})0x00000200)    /$\ast$ Transmission O\+K of mailbox1 $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_aebdf3329f89c05a0bc560458ef6bb475}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_aebdf3329f89c05a0bc560458ef6bb475}
+
+
+Definition at line 43 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!T\+S\+R\+\_\+\+T\+X\+O\+K2@{T\+S\+R\+\_\+\+T\+X\+O\+K2}}
+\index{T\+S\+R\+\_\+\+T\+X\+O\+K2@{T\+S\+R\+\_\+\+T\+X\+O\+K2}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{T\+S\+R\+\_\+\+T\+X\+O\+K2}{TSR_TXOK2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+S\+R\+\_\+\+T\+X\+O\+K2~(({\bf u32})0x00020000)    /$\ast$ Transmission O\+K of mailbox2 $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_ab3490c147fcda6eb30e9c979877ba82a}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_ab3490c147fcda6eb30e9c979877ba82a}
+
+
+Definition at line 46 of file stm32f10x\+\_\+can.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!C\+A\+N\+\_\+\+Cancel\+Transmit@{C\+A\+N\+\_\+\+Cancel\+Transmit}}
+\index{C\+A\+N\+\_\+\+Cancel\+Transmit@{C\+A\+N\+\_\+\+Cancel\+Transmit}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{C\+A\+N\+\_\+\+Cancel\+Transmit(u8 Mailbox)}{CAN_CancelTransmit(u8 Mailbox)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C\+A\+N\+\_\+\+Cancel\+Transmit (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{Mailbox}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_ab6f51819939e2833ce3a6584a4bdad7a}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_ab6f51819939e2833ce3a6584a4bdad7a}
+
+
+Definition at line 540 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!C\+A\+N\+\_\+\+Clear\+Flag@{C\+A\+N\+\_\+\+Clear\+Flag}}
+\index{C\+A\+N\+\_\+\+Clear\+Flag@{C\+A\+N\+\_\+\+Clear\+Flag}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{C\+A\+N\+\_\+\+Clear\+Flag(u32 C\+A\+N\+\_\+\+F\+L\+A\+G)}{CAN_ClearFlag(u32 CAN_FLAG)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C\+A\+N\+\_\+\+Clear\+Flag (
+\begin{DoxyParamCaption}
+\item[{{\bf u32}}]{C\+A\+N\+\_\+\+F\+L\+AG}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a6419af63560c6fa99c7bf37a6a3e28e8}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a6419af63560c6fa99c7bf37a6a3e28e8}
+
+
+Definition at line 750 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!C\+A\+N\+\_\+\+Clear\+I\+T\+Pending\+Bit@{C\+A\+N\+\_\+\+Clear\+I\+T\+Pending\+Bit}}
+\index{C\+A\+N\+\_\+\+Clear\+I\+T\+Pending\+Bit@{C\+A\+N\+\_\+\+Clear\+I\+T\+Pending\+Bit}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{C\+A\+N\+\_\+\+Clear\+I\+T\+Pending\+Bit(u32 C\+A\+N\+\_\+\+I\+T)}{CAN_ClearITPendingBit(u32 CAN_IT)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C\+A\+N\+\_\+\+Clear\+I\+T\+Pending\+Bit (
+\begin{DoxyParamCaption}
+\item[{{\bf u32}}]{C\+A\+N\+\_\+\+IT}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a93fde1447f0cf5ace79edb3bf1e3410c}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a93fde1447f0cf5ace79edb3bf1e3410c}
+
+
+Definition at line 833 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!C\+A\+N\+\_\+\+De\+Init@{C\+A\+N\+\_\+\+De\+Init}}
+\index{C\+A\+N\+\_\+\+De\+Init@{C\+A\+N\+\_\+\+De\+Init}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{C\+A\+N\+\_\+\+De\+Init(void)}{CAN_DeInit(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C\+A\+N\+\_\+\+De\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_abae1dfcfe7f9549c37d03a5834d64e39}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_abae1dfcfe7f9549c37d03a5834d64e39}
+
+
+Definition at line 88 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!C\+A\+N\+\_\+\+F\+I\+F\+O\+Release@{C\+A\+N\+\_\+\+F\+I\+F\+O\+Release}}
+\index{C\+A\+N\+\_\+\+F\+I\+F\+O\+Release@{C\+A\+N\+\_\+\+F\+I\+F\+O\+Release}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{C\+A\+N\+\_\+\+F\+I\+F\+O\+Release(u8 F\+I\+F\+O\+Number)}{CAN_FIFORelease(u8 FIFONumber)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C\+A\+N\+\_\+\+F\+I\+F\+O\+Release (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{F\+I\+F\+O\+Number}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_ade80964a0eaea005594db74d33a6d91a}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_ade80964a0eaea005594db74d33a6d91a}
+
+
+Definition at line 566 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!C\+A\+N\+\_\+\+Get\+Flag\+Status@{C\+A\+N\+\_\+\+Get\+Flag\+Status}}
+\index{C\+A\+N\+\_\+\+Get\+Flag\+Status@{C\+A\+N\+\_\+\+Get\+Flag\+Status}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{C\+A\+N\+\_\+\+Get\+Flag\+Status(u32 C\+A\+N\+\_\+\+F\+L\+A\+G)}{CAN_GetFlagStatus(u32 CAN_FLAG)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Flag\+Status} C\+A\+N\+\_\+\+Get\+Flag\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf u32}}]{C\+A\+N\+\_\+\+F\+L\+AG}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a344ef2e74834275a552e35516be56ec7}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a344ef2e74834275a552e35516be56ec7}
+
+
+Definition at line 721 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!C\+A\+N\+\_\+\+Get\+I\+T\+Status@{C\+A\+N\+\_\+\+Get\+I\+T\+Status}}
+\index{C\+A\+N\+\_\+\+Get\+I\+T\+Status@{C\+A\+N\+\_\+\+Get\+I\+T\+Status}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{C\+A\+N\+\_\+\+Get\+I\+T\+Status(u32 C\+A\+N\+\_\+\+I\+T)}{CAN_GetITStatus(u32 CAN_IT)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+T\+Status} C\+A\+N\+\_\+\+Get\+I\+T\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf u32}}]{C\+A\+N\+\_\+\+IT}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a293b1c3cd5daffac2afce474e88147f7}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a293b1c3cd5daffac2afce474e88147f7}
+
+
+Definition at line 771 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!C\+A\+N\+\_\+\+Init@{C\+A\+N\+\_\+\+Init}}
+\index{C\+A\+N\+\_\+\+Init@{C\+A\+N\+\_\+\+Init}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{C\+A\+N\+\_\+\+Init(\+C\+A\+N\+\_\+\+Init\+Type\+Def $\ast$\+C\+A\+N\+\_\+\+Init\+Struct)}{CAN_Init(CAN_InitTypeDef *CAN_InitStruct)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} C\+A\+N\+\_\+\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+A\+N\+\_\+\+Init\+Type\+Def} $\ast$}]{C\+A\+N\+\_\+\+Init\+Struct}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a7e62f55dc8fac6ae14a6b90dbbbfb506}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a7e62f55dc8fac6ae14a6b90dbbbfb506}
+
+
+Definition at line 106 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!C\+A\+N\+\_\+\+I\+T\+Config@{C\+A\+N\+\_\+\+I\+T\+Config}}
+\index{C\+A\+N\+\_\+\+I\+T\+Config@{C\+A\+N\+\_\+\+I\+T\+Config}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{C\+A\+N\+\_\+\+I\+T\+Config(u32 C\+A\+N\+\_\+\+I\+T, Functional\+State New\+State)}{CAN_ITConfig(u32 CAN_IT, FunctionalState NewState)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C\+A\+N\+\_\+\+I\+T\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf u32}}]{C\+A\+N\+\_\+\+IT, }
+\item[{{\bf Functional\+State}}]{New\+State}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a6eb3e9a11b28067bed58388324800a96}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a6eb3e9a11b28067bed58388324800a96}
+
+
+Definition at line 379 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!C\+A\+N\+\_\+\+Message\+Pending@{C\+A\+N\+\_\+\+Message\+Pending}}
+\index{C\+A\+N\+\_\+\+Message\+Pending@{C\+A\+N\+\_\+\+Message\+Pending}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{C\+A\+N\+\_\+\+Message\+Pending(u8 F\+I\+F\+O\+Number)}{CAN_MessagePending(u8 FIFONumber)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} C\+A\+N\+\_\+\+Message\+Pending (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{F\+I\+F\+O\+Number}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a8484f2bc7d1fa8124695eebc8ff18582}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a8484f2bc7d1fa8124695eebc8ff18582}
+
+
+Definition at line 590 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!C\+A\+N\+\_\+\+Receive@{C\+A\+N\+\_\+\+Receive}}
+\index{C\+A\+N\+\_\+\+Receive@{C\+A\+N\+\_\+\+Receive}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{C\+A\+N\+\_\+\+Receive(u8 F\+I\+F\+O\+Number, Can\+Rx\+Msg $\ast$\+Rx\+Message)}{CAN_Receive(u8 FIFONumber, CanRxMsg *RxMessage)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C\+A\+N\+\_\+\+Receive (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{F\+I\+F\+O\+Number, }
+\item[{{\bf Can\+Rx\+Msg} $\ast$}]{Rx\+Message}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_aa98b5ce62fab6bc612bbec049c448c79}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_aa98b5ce62fab6bc612bbec049c448c79}
+
+
+Definition at line 620 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!C\+A\+N\+\_\+\+Sleep@{C\+A\+N\+\_\+\+Sleep}}
+\index{C\+A\+N\+\_\+\+Sleep@{C\+A\+N\+\_\+\+Sleep}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{C\+A\+N\+\_\+\+Sleep(void)}{CAN_Sleep(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} C\+A\+N\+\_\+\+Sleep (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a88c3596fa37c0f195316460211d3212f}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a88c3596fa37c0f195316460211d3212f}
+
+
+Definition at line 666 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!C\+A\+N\+\_\+\+Transmit@{C\+A\+N\+\_\+\+Transmit}}
+\index{C\+A\+N\+\_\+\+Transmit@{C\+A\+N\+\_\+\+Transmit}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{C\+A\+N\+\_\+\+Transmit(\+Can\+Tx\+Msg $\ast$\+Tx\+Message)}{CAN_Transmit(CanTxMsg *TxMessage)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} C\+A\+N\+\_\+\+Transmit (
+\begin{DoxyParamCaption}
+\item[{{\bf Can\+Tx\+Msg} $\ast$}]{Tx\+Message}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a419617bb1764d3c33e0d1b6e9c9d757d}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a419617bb1764d3c33e0d1b6e9c9d757d}
+
+
+Definition at line 406 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!C\+A\+N\+\_\+\+Transmit\+Status@{C\+A\+N\+\_\+\+Transmit\+Status}}
+\index{C\+A\+N\+\_\+\+Transmit\+Status@{C\+A\+N\+\_\+\+Transmit\+Status}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{C\+A\+N\+\_\+\+Transmit\+Status(u8 Transmit\+Mailbox)}{CAN_TransmitStatus(u8 TransmitMailbox)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} C\+A\+N\+\_\+\+Transmit\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{Transmit\+Mailbox}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a5cc280f822538084fe39e8e4ea1b7bf3}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a5cc280f822538084fe39e8e4ea1b7bf3}
+
+
+Definition at line 487 of file stm32f10x\+\_\+can.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}!C\+A\+N\+\_\+\+Wake\+Up@{C\+A\+N\+\_\+\+Wake\+Up}}
+\index{C\+A\+N\+\_\+\+Wake\+Up@{C\+A\+N\+\_\+\+Wake\+Up}!agilefox/library/src/stm32f10x\+\_\+can.\+c@{agilefox/library/src/stm32f10x\+\_\+can.\+c}}
+\subsubsection[{\texorpdfstring{C\+A\+N\+\_\+\+Wake\+Up(void)}{CAN_WakeUp(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} C\+A\+N\+\_\+\+Wake\+Up (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__can_8c_a4a2107caa16b99452e8c91d224e36bea}{}\label{agilefox_2library_2src_2stm32f10x__can_8c_a4a2107caa16b99452e8c91d224e36bea}
+
+
+Definition at line 693 of file stm32f10x\+\_\+can.\+c.
+

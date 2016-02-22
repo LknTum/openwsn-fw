@@ -1,0 +1,168 @@
+\hypertarget{pins_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/xpressohack/\+Open\+W\+S\+N\+\_\+\+O\+S/src/\+Open\+A\+L/pins.c File Reference}
+\label{pins_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/xpressohack/\+Open\+W\+S\+N\+\_\+\+O\+S/src/\+Open\+A\+L/pins.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/xpressohack/\+Open\+W\+S\+N\+\_\+\+O\+S/src/\+Open\+A\+L/pins.\+c}}
+{\ttfamily \#include \char`\"{}pins.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}internal/openal\+\_\+app\+\_\+manager.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}internal/openal\+\_\+event\+\_\+manager.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}internal/openmote\+\_\+pindefs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Free\+R\+T\+O\+S.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}queue.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}semphr.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{pins_8c_ad4f05cc16c0c828f1ea6c5446a96555b}{pins\+\_\+pin\+Mode} (char pin, \hyperlink{pins_8h_a77fecc1883f27c095012fbe56345c4db}{pin\+\_\+mode\+\_\+t} mode)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{pins_8c_a34e1234c9206d35fd5176f046d929997}{pins\+\_\+digital\+Write} (char pin, \hyperlink{pins_8h_a415c9face79764817268e20612b9d835}{pin\+\_\+value\+\_\+t} value)
+\item 
+\hyperlink{pins_8h_a415c9face79764817268e20612b9d835}{pin\+\_\+value\+\_\+t} \hyperlink{pins_8c_a9e8fecb0e3e4c4d80cff0ed86bc14044}{pins\+\_\+digital\+Read} (char pin)
+\item 
+unsigned short \hyperlink{pins_8c_a5f2680574565cf2cce593cc5ef02809b}{pins\+\_\+analog\+Read} (char pin)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{pins_8c_ab941ce4fb998c5e5aa9e3f89fbb426b8}{pins\+\_\+analog\+Write} (char pin, unsigned short value)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{pins_8c_ae9f2a106b031027d071e7bd7f31ec1ed}{pins\+\_\+pwm\+\_\+write} (char pin, unsigned int duty\+\_\+cycle)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{pins_8c_aae754ae34abc0696cc8e4b2d503df37c}{pins\+\_\+pwm\+\_\+write\+\_\+adv} (char pin, float duty\+\_\+cycle, float frequency)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{pins_8c_a727cab4cc337a45470792be89e64a52d}{pins\+\_\+configure\+\_\+pullups} (char pin, \hyperlink{pins_8h_a2a233e989d9fa4414dcbdf25268c643f}{pin\+\_\+pullup\+\_\+mode\+\_\+t} mode)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{pins_8c_a59a2d400bb2e12a8482b04ae89b7edce}{pins\+\_\+configure\+\_\+opendrain} (char pin, \hyperlink{pins_8h_ac014a9ac8c809ff97182c20a0a9c0b4f}{pin\+\_\+opendrain\+\_\+mode\+\_\+t} mode)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{pins_8c_a6403b9bddfddb43fe7d6f98772fd0751}{pins\+\_\+configure\+\_\+interrupt} (char pin, \hyperlink{pins_8h_ad92d03f350cec6c197a67bc87f0bf18e}{pin\+\_\+interrupt\+\_\+mode\+\_\+t} mode, \hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}($\ast$\hyperlink{k20_2bsp_2sctimer_8c_a5771d3f574543a9990943a0fcb713929}{callback})(char pin, \hyperlink{pins_8h_ad92d03f350cec6c197a67bc87f0bf18e}{pin\+\_\+interrupt\+\_\+mode\+\_\+t} transition))
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{pins_8c_abd292837c2ee8facfa5594eb92a466d4}{pins\+\_\+clear\+\_\+interrupt} (char pin)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{pins.\+c@{pins.\+c}!pins\+\_\+analog\+Read@{pins\+\_\+analog\+Read}}
+\index{pins\+\_\+analog\+Read@{pins\+\_\+analog\+Read}!pins.\+c@{pins.\+c}}
+\subsubsection[{\texorpdfstring{pins\+\_\+analog\+Read(char pin)}{pins_analogRead(char pin)}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short pins\+\_\+analog\+Read (
+\begin{DoxyParamCaption}
+\item[{char}]{pin}
+\end{DoxyParamCaption}
+)}\hypertarget{pins_8c_a5f2680574565cf2cce593cc5ef02809b}{}\label{pins_8c_a5f2680574565cf2cce593cc5ef02809b}
+
+
+Definition at line 159 of file pins.\+c.
+
+\index{pins.\+c@{pins.\+c}!pins\+\_\+analog\+Write@{pins\+\_\+analog\+Write}}
+\index{pins\+\_\+analog\+Write@{pins\+\_\+analog\+Write}!pins.\+c@{pins.\+c}}
+\subsubsection[{\texorpdfstring{pins\+\_\+analog\+Write(char pin, unsigned short value)}{pins_analogWrite(char pin, unsigned short value)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} pins\+\_\+analog\+Write (
+\begin{DoxyParamCaption}
+\item[{char}]{pin, }
+\item[{unsigned short}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{pins_8c_ab941ce4fb998c5e5aa9e3f89fbb426b8}{}\label{pins_8c_ab941ce4fb998c5e5aa9e3f89fbb426b8}
+
+
+Definition at line 192 of file pins.\+c.
+
+\index{pins.\+c@{pins.\+c}!pins\+\_\+clear\+\_\+interrupt@{pins\+\_\+clear\+\_\+interrupt}}
+\index{pins\+\_\+clear\+\_\+interrupt@{pins\+\_\+clear\+\_\+interrupt}!pins.\+c@{pins.\+c}}
+\subsubsection[{\texorpdfstring{pins\+\_\+clear\+\_\+interrupt(char pin)}{pins_clear_interrupt(char pin)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} pins\+\_\+clear\+\_\+interrupt (
+\begin{DoxyParamCaption}
+\item[{char}]{pin}
+\end{DoxyParamCaption}
+)}\hypertarget{pins_8c_abd292837c2ee8facfa5594eb92a466d4}{}\label{pins_8c_abd292837c2ee8facfa5594eb92a466d4}
+
+
+Definition at line 296 of file pins.\+c.
+
+\index{pins.\+c@{pins.\+c}!pins\+\_\+configure\+\_\+interrupt@{pins\+\_\+configure\+\_\+interrupt}}
+\index{pins\+\_\+configure\+\_\+interrupt@{pins\+\_\+configure\+\_\+interrupt}!pins.\+c@{pins.\+c}}
+\subsubsection[{\texorpdfstring{pins\+\_\+configure\+\_\+interrupt(char pin, pin\+\_\+interrupt\+\_\+mode\+\_\+t mode, void($\ast$callback)(char pin, pin\+\_\+interrupt\+\_\+mode\+\_\+t transition))}{pins_configure_interrupt(char pin, pin_interrupt_mode_t mode, void(*callback)(char pin, pin_interrupt_mode_t transition))}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} pins\+\_\+configure\+\_\+interrupt (
+\begin{DoxyParamCaption}
+\item[{char}]{pin, }
+\item[{{\bf pin\+\_\+interrupt\+\_\+mode\+\_\+t}}]{mode, }
+\item[{{\bf void}($\ast$)(char pin, {\bf pin\+\_\+interrupt\+\_\+mode\+\_\+t} transition)}]{callback}
+\end{DoxyParamCaption}
+)}\hypertarget{pins_8c_a6403b9bddfddb43fe7d6f98772fd0751}{}\label{pins_8c_a6403b9bddfddb43fe7d6f98772fd0751}
+
+
+Definition at line 262 of file pins.\+c.
+
+\index{pins.\+c@{pins.\+c}!pins\+\_\+configure\+\_\+opendrain@{pins\+\_\+configure\+\_\+opendrain}}
+\index{pins\+\_\+configure\+\_\+opendrain@{pins\+\_\+configure\+\_\+opendrain}!pins.\+c@{pins.\+c}}
+\subsubsection[{\texorpdfstring{pins\+\_\+configure\+\_\+opendrain(char pin, pin\+\_\+opendrain\+\_\+mode\+\_\+t mode)}{pins_configure_opendrain(char pin, pin_opendrain_mode_t mode)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} pins\+\_\+configure\+\_\+opendrain (
+\begin{DoxyParamCaption}
+\item[{char}]{pin, }
+\item[{{\bf pin\+\_\+opendrain\+\_\+mode\+\_\+t}}]{mode}
+\end{DoxyParamCaption}
+)}\hypertarget{pins_8c_a59a2d400bb2e12a8482b04ae89b7edce}{}\label{pins_8c_a59a2d400bb2e12a8482b04ae89b7edce}
+
+
+Definition at line 251 of file pins.\+c.
+
+\index{pins.\+c@{pins.\+c}!pins\+\_\+configure\+\_\+pullups@{pins\+\_\+configure\+\_\+pullups}}
+\index{pins\+\_\+configure\+\_\+pullups@{pins\+\_\+configure\+\_\+pullups}!pins.\+c@{pins.\+c}}
+\subsubsection[{\texorpdfstring{pins\+\_\+configure\+\_\+pullups(char pin, pin\+\_\+pullup\+\_\+mode\+\_\+t mode)}{pins_configure_pullups(char pin, pin_pullup_mode_t mode)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} pins\+\_\+configure\+\_\+pullups (
+\begin{DoxyParamCaption}
+\item[{char}]{pin, }
+\item[{{\bf pin\+\_\+pullup\+\_\+mode\+\_\+t}}]{mode}
+\end{DoxyParamCaption}
+)}\hypertarget{pins_8c_a727cab4cc337a45470792be89e64a52d}{}\label{pins_8c_a727cab4cc337a45470792be89e64a52d}
+
+
+Definition at line 240 of file pins.\+c.
+
+\index{pins.\+c@{pins.\+c}!pins\+\_\+digital\+Read@{pins\+\_\+digital\+Read}}
+\index{pins\+\_\+digital\+Read@{pins\+\_\+digital\+Read}!pins.\+c@{pins.\+c}}
+\subsubsection[{\texorpdfstring{pins\+\_\+digital\+Read(char pin)}{pins_digitalRead(char pin)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pin\+\_\+value\+\_\+t} pins\+\_\+digital\+Read (
+\begin{DoxyParamCaption}
+\item[{char}]{pin}
+\end{DoxyParamCaption}
+)}\hypertarget{pins_8c_a9e8fecb0e3e4c4d80cff0ed86bc14044}{}\label{pins_8c_a9e8fecb0e3e4c4d80cff0ed86bc14044}
+
+
+Definition at line 142 of file pins.\+c.
+
+\index{pins.\+c@{pins.\+c}!pins\+\_\+digital\+Write@{pins\+\_\+digital\+Write}}
+\index{pins\+\_\+digital\+Write@{pins\+\_\+digital\+Write}!pins.\+c@{pins.\+c}}
+\subsubsection[{\texorpdfstring{pins\+\_\+digital\+Write(char pin, pin\+\_\+value\+\_\+t value)}{pins_digitalWrite(char pin, pin_value_t value)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} pins\+\_\+digital\+Write (
+\begin{DoxyParamCaption}
+\item[{char}]{pin, }
+\item[{{\bf pin\+\_\+value\+\_\+t}}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{pins_8c_a34e1234c9206d35fd5176f046d929997}{}\label{pins_8c_a34e1234c9206d35fd5176f046d929997}
+
+
+Definition at line 126 of file pins.\+c.
+
+\index{pins.\+c@{pins.\+c}!pins\+\_\+pin\+Mode@{pins\+\_\+pin\+Mode}}
+\index{pins\+\_\+pin\+Mode@{pins\+\_\+pin\+Mode}!pins.\+c@{pins.\+c}}
+\subsubsection[{\texorpdfstring{pins\+\_\+pin\+Mode(char pin, pin\+\_\+mode\+\_\+t mode)}{pins_pinMode(char pin, pin_mode_t mode)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} pins\+\_\+pin\+Mode (
+\begin{DoxyParamCaption}
+\item[{char}]{pin, }
+\item[{{\bf pin\+\_\+mode\+\_\+t}}]{mode}
+\end{DoxyParamCaption}
+)}\hypertarget{pins_8c_ad4f05cc16c0c828f1ea6c5446a96555b}{}\label{pins_8c_ad4f05cc16c0c828f1ea6c5446a96555b}
+
+
+Definition at line 17 of file pins.\+c.
+
+\index{pins.\+c@{pins.\+c}!pins\+\_\+pwm\+\_\+write@{pins\+\_\+pwm\+\_\+write}}
+\index{pins\+\_\+pwm\+\_\+write@{pins\+\_\+pwm\+\_\+write}!pins.\+c@{pins.\+c}}
+\subsubsection[{\texorpdfstring{pins\+\_\+pwm\+\_\+write(char pin, unsigned int duty\+\_\+cycle)}{pins_pwm_write(char pin, unsigned int duty_cycle)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} pins\+\_\+pwm\+\_\+write (
+\begin{DoxyParamCaption}
+\item[{char}]{pin, }
+\item[{unsigned int}]{duty\+\_\+cycle}
+\end{DoxyParamCaption}
+)}\hypertarget{pins_8c_ae9f2a106b031027d071e7bd7f31ec1ed}{}\label{pins_8c_ae9f2a106b031027d071e7bd7f31ec1ed}
+
+
+Definition at line 205 of file pins.\+c.
+
+\index{pins.\+c@{pins.\+c}!pins\+\_\+pwm\+\_\+write\+\_\+adv@{pins\+\_\+pwm\+\_\+write\+\_\+adv}}
+\index{pins\+\_\+pwm\+\_\+write\+\_\+adv@{pins\+\_\+pwm\+\_\+write\+\_\+adv}!pins.\+c@{pins.\+c}}
+\subsubsection[{\texorpdfstring{pins\+\_\+pwm\+\_\+write\+\_\+adv(char pin, float duty\+\_\+cycle, float frequency)}{pins_pwm_write_adv(char pin, float duty_cycle, float frequency)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} pins\+\_\+pwm\+\_\+write\+\_\+adv (
+\begin{DoxyParamCaption}
+\item[{char}]{pin, }
+\item[{float}]{duty\+\_\+cycle, }
+\item[{float}]{frequency}
+\end{DoxyParamCaption}
+)}\hypertarget{pins_8c_aae754ae34abc0696cc8e4b2d503df37c}{}\label{pins_8c_aae754ae34abc0696cc8e4b2d503df37c}
+
+
+Definition at line 220 of file pins.\+c.
+

@@ -1,0 +1,78 @@
+\hypertarget{k20_2bsp_2board_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/k20/bsp/board.c File Reference}
+\label{k20_2bsp_2board_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/k20/bsp/board.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/k20/bsp/board.\+c}}
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leds.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}led.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bsp\+\_\+timer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}smc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}flextimer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}rcm.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{k20_2bsp_2board_8c_ac2813c8b7a4f9c9d58e9032ede1596c0}{mote\+\_\+main} (vod)
+\item 
+int \hyperlink{k20_2bsp_2board_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__board_ga916f2adc2080b4fe88034086d107a8dc}{board\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em E\+L\+D\+O\+R\+A\+D\+O-\/specific definition of the \char`\"{}board\char`\"{} bsp module. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__board_ga052cfe534a52d7f046e311d4adec00a8}{board\+\_\+sleep} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__board_gafbd0c8dccf10506bd3912960c8cba369}{board\+\_\+reset} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{k20_2bsp_2board_8c_ae24792471f37e91da108115b44e729be}{radio\+\_\+external\+\_\+port\+\_\+c\+\_\+isr} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{k20_2bsp_2board_8c_a5383539a3a607e05906f71be0fd4f4af}{mcg\+\_\+clk\+\_\+hz}
+\begin{DoxyCompactList}\small\item\em K20-\/specific definition of the \char`\"{}board\char`\"{} bsp module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{k20/bsp/board.\+c@{k20/bsp/board.\+c}!main@{main}}
+\index{main@{main}!k20/bsp/board.\+c@{k20/bsp/board.\+c}}
+\subsubsection[{\texorpdfstring{main(void)}{main(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{k20_2bsp_2board_8c_a840291bc02cba5474a4cb46a9b9566fe}{}\label{k20_2bsp_2board_8c_a840291bc02cba5474a4cb46a9b9566fe}
+
+
+Definition at line 25 of file board.\+c.
+
+\index{k20/bsp/board.\+c@{k20/bsp/board.\+c}!mote\+\_\+main@{mote\+\_\+main}}
+\index{mote\+\_\+main@{mote\+\_\+main}!k20/bsp/board.\+c@{k20/bsp/board.\+c}}
+\subsubsection[{\texorpdfstring{mote\+\_\+main(vod)}{mote_main(vod)}}]{\setlength{\rightskip}{0pt plus 5cm}int mote\+\_\+main (
+\begin{DoxyParamCaption}
+\item[{vod}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{k20_2bsp_2board_8c_ac2813c8b7a4f9c9d58e9032ede1596c0}{}\label{k20_2bsp_2board_8c_ac2813c8b7a4f9c9d58e9032ede1596c0}
+\index{k20/bsp/board.\+c@{k20/bsp/board.\+c}!radio\+\_\+external\+\_\+port\+\_\+c\+\_\+isr@{radio\+\_\+external\+\_\+port\+\_\+c\+\_\+isr}}
+\index{radio\+\_\+external\+\_\+port\+\_\+c\+\_\+isr@{radio\+\_\+external\+\_\+port\+\_\+c\+\_\+isr}!k20/bsp/board.\+c@{k20/bsp/board.\+c}}
+\subsubsection[{\texorpdfstring{radio\+\_\+external\+\_\+port\+\_\+c\+\_\+isr(void)}{radio_external_port_c_isr(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} radio\+\_\+external\+\_\+port\+\_\+c\+\_\+isr (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{k20_2bsp_2board_8c_ae24792471f37e91da108115b44e729be}{}\label{k20_2bsp_2board_8c_ae24792471f37e91da108115b44e729be}
+
+
+Definition at line 124 of file board.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{k20/bsp/board.\+c@{k20/bsp/board.\+c}!mcg\+\_\+clk\+\_\+hz@{mcg\+\_\+clk\+\_\+hz}}
+\index{mcg\+\_\+clk\+\_\+hz@{mcg\+\_\+clk\+\_\+hz}!k20/bsp/board.\+c@{k20/bsp/board.\+c}}
+\subsubsection[{\texorpdfstring{mcg\+\_\+clk\+\_\+hz}{mcg_clk_hz}}]{\setlength{\rightskip}{0pt plus 5cm}int mcg\+\_\+clk\+\_\+hz}\hypertarget{k20_2bsp_2board_8c_a5383539a3a607e05906f71be0fd4f4af}{}\label{k20_2bsp_2board_8c_a5383539a3a607e05906f71be0fd4f4af}
+
+
+K20-\/specific definition of the \char`\"{}board\char`\"{} bsp module. 
+
+\begin{DoxyAuthor}{Author}
+Xavi Vilajosana \href{mailto:xvilajosana@eecs.berkeley.edu}{\tt xvilajosana@eecs.\+berkeley.\+edu}, May 2012. 
+\end{DoxyAuthor}
+
+
+Definition at line 18 of file sysinit.\+c.
+

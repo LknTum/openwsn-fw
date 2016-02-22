@@ -1,0 +1,372 @@
+\hypertarget{usb__msc_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bootloader/k20/usb/usb\+\_\+msc.c File Reference}
+\label{usb__msc_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bootloader/k20/usb/usb\+\_\+msc.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bootloader/k20/usb/usb\+\_\+msc.\+c}}
+
+
+The file contains U\+SB stack M\+SC layer implimentation.  
+
+
+{\ttfamily \#include \char`\"{}usb\+\_\+msc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\+\_\+descriptor.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+Other\+\_\+\+Requests}\par
+{\em The funtion provides flexibilty to add class and vendor specific requests
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller\+\_\+\+ID} & To identify the controller \\
+\hline
+{\em setup\+\_\+packet} & setup packet received \\
+\hline
+{\em data} & data to be send back \\
+\hline
+{\em size} & size to be returned\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status\+: U\+S\+B\+\_\+\+OK \+: When Successfull Others \+: When Error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} \hyperlink{usb__msc_8c_ada354e3345e701f8134d2c7cf28bf931}{U\+S\+B\+\_\+\+Other\+\_\+\+Requests} (\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} controller\+\_\+\+ID, \hyperlink{usb__class_8h_a4ae2207dfa1a769aefaec7b239fb6899}{U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+S\+T\+R\+U\+CT} $\ast$setup\+\_\+packet, \hyperlink{types_8h_a7b968a76f3f622ee580e18acc3ab554c}{uint\+\_\+8\+\_\+ptr} $\ast$data, \hyperlink{types_8h_a5532400b872b4aa84e54335bf458a318}{uint\+\_\+32} $\ast$size)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{usb__msc_8c_aeb0be7c419b0e12436d0fa7e8666a5e4}{U\+S\+B\+\_\+\+B\+Y\+T\+E\+\_\+\+S\+W\+A\+P4} (\hyperlink{types_8h_a5532400b872b4aa84e54335bf458a318}{uint\+\_\+32} a, \hyperlink{types_8h_a5532400b872b4aa84e54335bf458a318}{uint\+\_\+32} $\ast$b)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{usb__msc_8c_abd0704ee31b8e2ba29b3a1914ecab20b}{U\+S\+B\+\_\+memzero} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} $\ast$ptr, \hyperlink{types_8h_a5532400b872b4aa84e54335bf458a318}{uint\+\_\+32} size)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{usb__msc_8c_a7c495f5028d2cbdbfcf6de81af9beb42}{U\+S\+B\+\_\+memcopy} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} $\ast$src, \hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} $\ast$dst, \hyperlink{types_8h_a5532400b872b4aa84e54335bf458a318}{uint\+\_\+32} size)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf process\+\_\+mass\+\_\+storage\+\_\+command}\par
+{\em Process a Mass storage class command This function is added here to add more sub class specific commands)
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller\+\_\+\+ID} & To identify the controller \\
+\hline
+{\em cbw\+\_\+ptr} & \+: pointer to Command Block Wrapper sent by host \\
+\hline
+{\em csw\+\_\+residue\+\_\+ptr} & pointer to d\+C\+S\+W\+Data\+Residue of Command Status Wrapper \\
+\hline
+{\em csw\+\_\+status\+\_\+ptr} & \+: pointer to b\+C\+S\+W\+Status of Command Status Wrapper\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} \hyperlink{usb__msc_8c_ac12424f31550a0d93c12d75f583570b0}{process\+\_\+mass\+\_\+storage\+\_\+command} (\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} controller\+\_\+\+ID, \hyperlink{usb__msc_8h_af056978d1029d43b9d6db16d937ec0c6}{P\+T\+R\+\_\+\+C\+BW} cbw\+\_\+ptr, \hyperlink{types_8h_a5532400b872b4aa84e54335bf458a318}{uint\+\_\+32} $\ast$csw\+\_\+residue\+\_\+ptr, \hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} $\ast$csw\+\_\+status\+\_\+ptr)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+Service\+\_\+\+Bulk\+\_\+\+In}\par
+{\em The funtion ic callback function of D\+IC Bulk In Endpoint
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{usb__msc_8c_a301a78294d52d053ef0f51b58ab73c37}{U\+S\+B\+\_\+\+Service\+\_\+\+Bulk\+\_\+\+In} (\hyperlink{usb__devapi_8h_a1b6158f49686b4829eb2386f33bd721c}{P\+T\+R\+\_\+\+U\+S\+B\+\_\+\+D\+E\+V\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+T\+R\+U\+CT} event)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+Service\+\_\+\+Bulk\+\_\+\+Out}\par
+{\em The function is callback function of D\+IC Bulk Out Endpoint
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{usb__msc_8c_afeb4a93b8e0dd5e9c998b0d4f46c9cf7}{U\+S\+B\+\_\+\+Service\+\_\+\+Bulk\+\_\+\+Out} (\hyperlink{usb__devapi_8h_a1b6158f49686b4829eb2386f33bd721c}{P\+T\+R\+\_\+\+U\+S\+B\+\_\+\+D\+E\+V\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+T\+R\+U\+CT} event)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+Event}\par
+{\em The funtion initializes M\+SC endpoints
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller\+\_\+\+ID} & To identify the controller \\
+\hline
+{\em event} & pointer to event structure \\
+\hline
+{\em val} & gives the configuration value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{usb__msc_8c_abffd92ac5442d26ac8efd0e2aadfc83c}{U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+Event} (\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} controller\+\_\+\+ID, \hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} event, \hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} $\ast$val)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+Init}\par
+{\em The funtion initializes the Device and Controller layer
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller\+\_\+\+ID} & To Identify the controller \\
+\hline
+{\em class\+\_\+callback} & event callback \\
+\hline
+{\em vendor\+\_\+req\+\_\+callback} & vendor specific class request callback \\
+\hline
+{\em param\+\_\+callback} & application params callback\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status U\+S\+B\+\_\+\+OK \+: When Successfull Others \+: Errors
+\end{DoxyReturn}
+This function initializes the M\+SC Class layer and layers it is dependednt on }\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} \hyperlink{usb__msc_8c_a91efb32d60e013bfec19ff6004034e92}{U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+Init} (\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} controller\+\_\+\+ID, U\+S\+B\+\_\+\+C\+L\+A\+S\+S\+\_\+\+C\+A\+L\+L\+B\+A\+CK msc\+\_\+class\+\_\+callback, U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+F\+U\+NC vendor\+\_\+req\+\_\+callback, U\+S\+B\+\_\+\+C\+L\+A\+S\+S\+\_\+\+C\+A\+L\+L\+B\+A\+CK param\+\_\+callback)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+De\+Init}\par
+{\em The funtion de-\/initializes the Device and Controller layer
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller\+\_\+\+ID} & \+: Controller ID\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status\+: U\+S\+B\+\_\+\+OK \+: When Successfull Others \+: When Error
+\end{DoxyReturn}
+This function de-\/initializes the M\+SC Class layer }\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} \hyperlink{usb__msc_8c_ae1aa8cda9232b165992d40428bca4872}{U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+De\+Init} (\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} controller\+\_\+\+ID)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+Send\+\_\+\+Data}\par
+{\em 
+\begin{DoxyParams}{Parameters}
+{\em controller\+\_\+\+ID} & To identify the controller \+: \\
+\hline
+{\em ep\+\_\+num} & \+: endpoint num \\
+\hline
+{\em app\+\_\+buff} & \+: buffer to send \\
+\hline
+{\em size} & \+: length of the transfer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status U\+S\+B\+\_\+\+OK \+: When Successfull Others \+: Errors 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} \hyperlink{usb__msc_8c_a7da7cf2a1b26d82268cd3c929e39387b}{U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+Send\+\_\+\+Data} (\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} controller\+\_\+\+ID, \hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} ep\+\_\+num, \hyperlink{types_8h_a7b968a76f3f622ee580e18acc3ab554c}{uint\+\_\+8\+\_\+ptr} app\+\_\+buff, \hyperlink{types_8h_a5532400b872b4aa84e54335bf458a318}{uint\+\_\+32} size)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+M\+S\+C\+\_\+\+L\+B\+A\+\_\+\+Transfer}\par
+{\em 
+\begin{DoxyParams}{Parameters}
+{\em controller\+\_\+\+ID} & To identify the controller \\
+\hline
+{\em direction} & \+: transfer direction \\
+\hline
+{\em lba\+\_\+info\+\_\+ptr} & \+: buffer to send\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status U\+S\+B\+\_\+\+OK \+: When Successfull Others \+: Errors 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} \hyperlink{usb__msc_8c_a205a77fb1b82e413afb47f20a3f94b6e}{U\+S\+B\+\_\+\+M\+S\+C\+\_\+\+L\+B\+A\+\_\+\+Transfer} (\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} controller\+\_\+\+ID, \hyperlink{types_8h_a7670a4e8a07d9ebb00411948b0bbf86d}{boolean} direction, \hyperlink{usb__msc_8h_a1e3dd70d80191eb5ea825afb7d1becbe}{P\+T\+R\+\_\+\+L\+B\+A\+\_\+\+I\+N\+F\+O\+\_\+\+S\+T\+R\+U\+CT} lba\+\_\+info\+\_\+ptr)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__msc_8h_a151f9f79407be9e2d526e78cc4917d56}{M\+S\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{usb__msc_8c_a4d733b70bdac20abafea3aacd079c508}{g\+\_\+msc}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The file contains U\+SB stack M\+SC layer implimentation. 
+
+\begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+May-\/08-\/2009 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\index{usb\+\_\+msc.\+c@{usb\+\_\+msc.\+c}!process\+\_\+mass\+\_\+storage\+\_\+command@{process\+\_\+mass\+\_\+storage\+\_\+command}}
+\index{process\+\_\+mass\+\_\+storage\+\_\+command@{process\+\_\+mass\+\_\+storage\+\_\+command}!usb\+\_\+msc.\+c@{usb\+\_\+msc.\+c}}
+\subsubsection[{\texorpdfstring{process\+\_\+mass\+\_\+storage\+\_\+command(uint\+\_\+8 controller\+\_\+\+I\+D, P\+T\+R\+\_\+\+C\+B\+W cbw\+\_\+ptr, uint\+\_\+32 $\ast$csw\+\_\+residue\+\_\+ptr, uint\+\_\+8 $\ast$csw\+\_\+status\+\_\+ptr)}{process_mass_storage_command(uint_8 controller_ID, PTR_CBW cbw_ptr, uint_32 *csw_residue_ptr, uint_8 *csw_status_ptr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint\+\_\+8} process\+\_\+mass\+\_\+storage\+\_\+command (
+\begin{DoxyParamCaption}
+\item[{{\bf uint\+\_\+8}}]{controller\+\_\+\+ID, }
+\item[{{\bf P\+T\+R\+\_\+\+C\+BW}}]{cbw\+\_\+ptr, }
+\item[{{\bf uint\+\_\+32} $\ast$}]{csw\+\_\+residue\+\_\+ptr, }
+\item[{{\bf uint\+\_\+8} $\ast$}]{csw\+\_\+status\+\_\+ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__msc_8c_ac12424f31550a0d93c12d75f583570b0}{}\label{usb__msc_8c_ac12424f31550a0d93c12d75f583570b0}
+
+
+Definition at line 92 of file usb\+\_\+msc.\+c.
+
+\index{usb\+\_\+msc.\+c@{usb\+\_\+msc.\+c}!U\+S\+B\+\_\+\+B\+Y\+T\+E\+\_\+\+S\+W\+A\+P4@{U\+S\+B\+\_\+\+B\+Y\+T\+E\+\_\+\+S\+W\+A\+P4}}
+\index{U\+S\+B\+\_\+\+B\+Y\+T\+E\+\_\+\+S\+W\+A\+P4@{U\+S\+B\+\_\+\+B\+Y\+T\+E\+\_\+\+S\+W\+A\+P4}!usb\+\_\+msc.\+c@{usb\+\_\+msc.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+B\+Y\+T\+E\+\_\+\+S\+W\+A\+P4(uint\+\_\+32 a, uint\+\_\+32 $\ast$b)}{USB_BYTE_SWAP4(uint_32 a, uint_32 *b)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+S\+B\+\_\+\+B\+Y\+T\+E\+\_\+\+S\+W\+A\+P4 (
+\begin{DoxyParamCaption}
+\item[{{\bf uint\+\_\+32}}]{a, }
+\item[{{\bf uint\+\_\+32} $\ast$}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__msc_8c_aeb0be7c419b0e12436d0fa7e8666a5e4}{}\label{usb__msc_8c_aeb0be7c419b0e12436d0fa7e8666a5e4}
+
+
+Definition at line 750 of file usb\+\_\+msc.\+c.
+
+\index{usb\+\_\+msc.\+c@{usb\+\_\+msc.\+c}!U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+De\+Init@{U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+De\+Init}}
+\index{U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+De\+Init@{U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+De\+Init}!usb\+\_\+msc.\+c@{usb\+\_\+msc.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+De\+Init(uint\+\_\+8 controller\+\_\+\+I\+D)}{USB_Class_MSC_DeInit(uint_8 controller_ID)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint\+\_\+8} U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+De\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf uint\+\_\+8}}]{controller\+\_\+\+ID}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__msc_8c_ae1aa8cda9232b165992d40428bca4872}{}\label{usb__msc_8c_ae1aa8cda9232b165992d40428bca4872}
+
+
+Definition at line 884 of file usb\+\_\+msc.\+c.
+
+\index{usb\+\_\+msc.\+c@{usb\+\_\+msc.\+c}!U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+Event@{U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+Event}}
+\index{U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+Event@{U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+Event}!usb\+\_\+msc.\+c@{usb\+\_\+msc.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+Event(uint\+\_\+8 controller\+\_\+\+I\+D, uint\+\_\+8 event, void $\ast$val)}{USB_Class_MSC_Event(uint_8 controller_ID, uint_8 event, void *val)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+Event (
+\begin{DoxyParamCaption}
+\item[{{\bf uint\+\_\+8}}]{controller\+\_\+\+ID, }
+\item[{{\bf uint\+\_\+8}}]{event, }
+\item[{{\bf void} $\ast$}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__msc_8c_abffd92ac5442d26ac8efd0e2aadfc83c}{}\label{usb__msc_8c_abffd92ac5442d26ac8efd0e2aadfc83c}
+
+
+Definition at line 491 of file usb\+\_\+msc.\+c.
+
+\index{usb\+\_\+msc.\+c@{usb\+\_\+msc.\+c}!U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+Init@{U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+Init}}
+\index{U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+Init@{U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+Init}!usb\+\_\+msc.\+c@{usb\+\_\+msc.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+Init(uint\+\_\+8 controller\+\_\+\+I\+D, U\+S\+B\+\_\+\+C\+L\+A\+S\+S\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K msc\+\_\+class\+\_\+callback, U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+F\+U\+N\+C vendor\+\_\+req\+\_\+callback, U\+S\+B\+\_\+\+C\+L\+A\+S\+S\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K param\+\_\+callback)}{USB_Class_MSC_Init(uint_8 controller_ID, USB_CLASS_CALLBACK msc_class_callback, USB_REQ_FUNC vendor_req_callback, USB_CLASS_CALLBACK param_callback)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint\+\_\+8} U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf uint\+\_\+8}}]{controller\+\_\+\+ID, }
+\item[{U\+S\+B\+\_\+\+C\+L\+A\+S\+S\+\_\+\+C\+A\+L\+L\+B\+A\+CK}]{msc\+\_\+class\+\_\+callback, }
+\item[{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+F\+U\+NC}]{vendor\+\_\+req\+\_\+callback, }
+\item[{U\+S\+B\+\_\+\+C\+L\+A\+S\+S\+\_\+\+C\+A\+L\+L\+B\+A\+CK}]{param\+\_\+callback}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__msc_8c_a91efb32d60e013bfec19ff6004034e92}{}\label{usb__msc_8c_a91efb32d60e013bfec19ff6004034e92}
+
+
+Definition at line 800 of file usb\+\_\+msc.\+c.
+
+\index{usb\+\_\+msc.\+c@{usb\+\_\+msc.\+c}!U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+Send\+\_\+\+Data@{U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+Send\+\_\+\+Data}}
+\index{U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+Send\+\_\+\+Data@{U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+Send\+\_\+\+Data}!usb\+\_\+msc.\+c@{usb\+\_\+msc.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+Send\+\_\+\+Data(uint\+\_\+8 controller\+\_\+\+I\+D, uint\+\_\+8 ep\+\_\+num, uint\+\_\+8\+\_\+ptr app\+\_\+buff, uint\+\_\+32 size)}{USB_Class_MSC_Send_Data(uint_8 controller_ID, uint_8 ep_num, uint_8_ptr app_buff, uint_32 size)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint\+\_\+8} U\+S\+B\+\_\+\+Class\+\_\+\+M\+S\+C\+\_\+\+Send\+\_\+\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf uint\+\_\+8}}]{controller\+\_\+\+ID, }
+\item[{{\bf uint\+\_\+8}}]{ep\+\_\+num, }
+\item[{{\bf uint\+\_\+8\+\_\+ptr}}]{app\+\_\+buff, }
+\item[{{\bf uint\+\_\+32}}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__msc_8c_a7da7cf2a1b26d82268cd3c929e39387b}{}\label{usb__msc_8c_a7da7cf2a1b26d82268cd3c929e39387b}
+
+
+Definition at line 929 of file usb\+\_\+msc.\+c.
+
+\index{usb\+\_\+msc.\+c@{usb\+\_\+msc.\+c}!U\+S\+B\+\_\+memcopy@{U\+S\+B\+\_\+memcopy}}
+\index{U\+S\+B\+\_\+memcopy@{U\+S\+B\+\_\+memcopy}!usb\+\_\+msc.\+c@{usb\+\_\+msc.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+memcopy(void $\ast$src, void $\ast$dst, uint\+\_\+32 size)}{USB_memcopy(void *src, void *dst, uint_32 size)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+S\+B\+\_\+memcopy (
+\begin{DoxyParamCaption}
+\item[{{\bf void} $\ast$}]{src, }
+\item[{{\bf void} $\ast$}]{dst, }
+\item[{{\bf uint\+\_\+32}}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__msc_8c_a7c495f5028d2cbdbfcf6de81af9beb42}{}\label{usb__msc_8c_a7c495f5028d2cbdbfcf6de81af9beb42}
+
+
+Definition at line 771 of file usb\+\_\+msc.\+c.
+
+\index{usb\+\_\+msc.\+c@{usb\+\_\+msc.\+c}!U\+S\+B\+\_\+memzero@{U\+S\+B\+\_\+memzero}}
+\index{U\+S\+B\+\_\+memzero@{U\+S\+B\+\_\+memzero}!usb\+\_\+msc.\+c@{usb\+\_\+msc.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+memzero(void $\ast$ptr, uint\+\_\+32 size)}{USB_memzero(void *ptr, uint_32 size)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+S\+B\+\_\+memzero (
+\begin{DoxyParamCaption}
+\item[{{\bf void} $\ast$}]{ptr, }
+\item[{{\bf uint\+\_\+32}}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__msc_8c_abd0704ee31b8e2ba29b3a1914ecab20b}{}\label{usb__msc_8c_abd0704ee31b8e2ba29b3a1914ecab20b}
+
+
+Definition at line 761 of file usb\+\_\+msc.\+c.
+
+\index{usb\+\_\+msc.\+c@{usb\+\_\+msc.\+c}!U\+S\+B\+\_\+\+M\+S\+C\+\_\+\+L\+B\+A\+\_\+\+Transfer@{U\+S\+B\+\_\+\+M\+S\+C\+\_\+\+L\+B\+A\+\_\+\+Transfer}}
+\index{U\+S\+B\+\_\+\+M\+S\+C\+\_\+\+L\+B\+A\+\_\+\+Transfer@{U\+S\+B\+\_\+\+M\+S\+C\+\_\+\+L\+B\+A\+\_\+\+Transfer}!usb\+\_\+msc.\+c@{usb\+\_\+msc.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+M\+S\+C\+\_\+\+L\+B\+A\+\_\+\+Transfer(uint\+\_\+8 controller\+\_\+\+I\+D, boolean direction, P\+T\+R\+\_\+\+L\+B\+A\+\_\+\+I\+N\+F\+O\+\_\+\+S\+T\+R\+U\+C\+T lba\+\_\+info\+\_\+ptr)}{USB_MSC_LBA_Transfer(uint_8 controller_ID, boolean direction, PTR_LBA_INFO_STRUCT lba_info_ptr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint\+\_\+8} U\+S\+B\+\_\+\+M\+S\+C\+\_\+\+L\+B\+A\+\_\+\+Transfer (
+\begin{DoxyParamCaption}
+\item[{{\bf uint\+\_\+8}}]{controller\+\_\+\+ID, }
+\item[{{\bf boolean}}]{direction, }
+\item[{{\bf P\+T\+R\+\_\+\+L\+B\+A\+\_\+\+I\+N\+F\+O\+\_\+\+S\+T\+R\+U\+CT}}]{lba\+\_\+info\+\_\+ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__msc_8c_a205a77fb1b82e413afb47f20a3f94b6e}{}\label{usb__msc_8c_a205a77fb1b82e413afb47f20a3f94b6e}
+
+
+Definition at line 998 of file usb\+\_\+msc.\+c.
+
+\index{usb\+\_\+msc.\+c@{usb\+\_\+msc.\+c}!U\+S\+B\+\_\+\+Other\+\_\+\+Requests@{U\+S\+B\+\_\+\+Other\+\_\+\+Requests}}
+\index{U\+S\+B\+\_\+\+Other\+\_\+\+Requests@{U\+S\+B\+\_\+\+Other\+\_\+\+Requests}!usb\+\_\+msc.\+c@{usb\+\_\+msc.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+Other\+\_\+\+Requests(uint\+\_\+8 controller\+\_\+\+I\+D, U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+S\+T\+R\+U\+C\+T $\ast$setup\+\_\+packet, uint\+\_\+8\+\_\+ptr $\ast$data, uint\+\_\+32 $\ast$size)}{USB_Other_Requests(uint_8 controller_ID, USB_SETUP_STRUCT *setup_packet, uint_8_ptr *data, uint_32 *size)}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf uint\+\_\+8} U\+S\+B\+\_\+\+Other\+\_\+\+Requests (
+\begin{DoxyParamCaption}
+\item[{{\bf uint\+\_\+8}}]{controller\+\_\+\+ID, }
+\item[{{\bf U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+S\+T\+R\+U\+CT} $\ast$}]{setup\+\_\+packet, }
+\item[{{\bf uint\+\_\+8\+\_\+ptr} $\ast$}]{data, }
+\item[{{\bf uint\+\_\+32} $\ast$}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__msc_8c_ada354e3345e701f8134d2c7cf28bf931}{}\label{usb__msc_8c_ada354e3345e701f8134d2c7cf28bf931}
+
+
+Definition at line 635 of file usb\+\_\+msc.\+c.
+
+\index{usb\+\_\+msc.\+c@{usb\+\_\+msc.\+c}!U\+S\+B\+\_\+\+Service\+\_\+\+Bulk\+\_\+\+In@{U\+S\+B\+\_\+\+Service\+\_\+\+Bulk\+\_\+\+In}}
+\index{U\+S\+B\+\_\+\+Service\+\_\+\+Bulk\+\_\+\+In@{U\+S\+B\+\_\+\+Service\+\_\+\+Bulk\+\_\+\+In}!usb\+\_\+msc.\+c@{usb\+\_\+msc.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+Service\+\_\+\+Bulk\+\_\+\+In(\+P\+T\+R\+\_\+\+U\+S\+B\+\_\+\+D\+E\+V\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+T\+R\+U\+C\+T event)}{USB_Service_Bulk_In(PTR_USB_DEV_EVENT_STRUCT event)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+S\+B\+\_\+\+Service\+\_\+\+Bulk\+\_\+\+In (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+T\+R\+\_\+\+U\+S\+B\+\_\+\+D\+E\+V\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+T\+R\+U\+CT}}]{event}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__msc_8c_a301a78294d52d053ef0f51b58ab73c37}{}\label{usb__msc_8c_a301a78294d52d053ef0f51b58ab73c37}
+
+
+Definition at line 182 of file usb\+\_\+msc.\+c.
+
+\index{usb\+\_\+msc.\+c@{usb\+\_\+msc.\+c}!U\+S\+B\+\_\+\+Service\+\_\+\+Bulk\+\_\+\+Out@{U\+S\+B\+\_\+\+Service\+\_\+\+Bulk\+\_\+\+Out}}
+\index{U\+S\+B\+\_\+\+Service\+\_\+\+Bulk\+\_\+\+Out@{U\+S\+B\+\_\+\+Service\+\_\+\+Bulk\+\_\+\+Out}!usb\+\_\+msc.\+c@{usb\+\_\+msc.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+Service\+\_\+\+Bulk\+\_\+\+Out(\+P\+T\+R\+\_\+\+U\+S\+B\+\_\+\+D\+E\+V\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+T\+R\+U\+C\+T event)}{USB_Service_Bulk_Out(PTR_USB_DEV_EVENT_STRUCT event)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+S\+B\+\_\+\+Service\+\_\+\+Bulk\+\_\+\+Out (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+T\+R\+\_\+\+U\+S\+B\+\_\+\+D\+E\+V\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+T\+R\+U\+CT}}]{event}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__msc_8c_afeb4a93b8e0dd5e9c998b0d4f46c9cf7}{}\label{usb__msc_8c_afeb4a93b8e0dd5e9c998b0d4f46c9cf7}
+
+
+Definition at line 302 of file usb\+\_\+msc.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{usb\+\_\+msc.\+c@{usb\+\_\+msc.\+c}!g\+\_\+msc@{g\+\_\+msc}}
+\index{g\+\_\+msc@{g\+\_\+msc}!usb\+\_\+msc.\+c@{usb\+\_\+msc.\+c}}
+\subsubsection[{\texorpdfstring{g\+\_\+msc}{g_msc}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+S\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+S\+T\+R\+U\+CT} g\+\_\+msc}\hypertarget{usb__msc_8c_a4d733b70bdac20abafea3aacd079c508}{}\label{usb__msc_8c_a4d733b70bdac20abafea3aacd079c508}
+
+
+Definition at line 48 of file usb\+\_\+msc.\+c.
+

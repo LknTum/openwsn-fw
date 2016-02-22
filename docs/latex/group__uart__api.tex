@@ -1,0 +1,1112 @@
+\hypertarget{group__uart__api}{}\section{Uart\+\_\+api}
+\label{group__uart__api}\index{Uart\+\_\+api@{Uart\+\_\+api}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_gacd54a0a57df52618d1ebf5581b5927bf}{U\+A\+R\+T\+Parity\+Mode\+Set} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Parity)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__uart__api_ga8ee93b49e449bc738b01eb680b00e1f0}{U\+A\+R\+T\+Parity\+Mode\+Get} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_gae8dd6aeabd442a4cd231bd618897e503}{U\+A\+R\+T\+F\+I\+F\+O\+Level\+Set} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Tx\+Level, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Rx\+Level)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga41337038041a625f3030b16a4efa287c}{U\+A\+R\+T\+F\+I\+F\+O\+Level\+Get} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Tx\+Level, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Rx\+Level)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_gaacfccbb6fb7e3e3138573bfc4835250b}{U\+A\+R\+T\+Config\+Set\+Exp\+Clk} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+U\+A\+R\+T\+Clk, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Baud, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Config)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga14340c8b74b16af630653226007f2cce}{U\+A\+R\+T\+Config\+Get\+Exp\+Clk} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+U\+A\+R\+T\+Clk, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Baud, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Config)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga93ba793d082da8ceb2ddab3ddc650a35}{U\+A\+R\+T\+Enable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga24b7349b5fd44c56e552d2d3fa2e4057}{U\+A\+R\+T\+Disable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_gac6ea9357292a6a51f949d0d2cd85d95a}{U\+A\+R\+T\+F\+I\+F\+O\+Enable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga33ec41720030e24957edf7927174e1c5}{U\+A\+R\+T\+F\+I\+F\+O\+Disable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga7a49f55b28b43b69809866d46db02d32}{U\+A\+R\+T\+Enable\+S\+IR} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} b\+Low\+Power)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_gabb22356aed40380e7d862e5d0ca6cb89}{U\+A\+R\+T\+Disable\+S\+IR} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_gae3b173446db0912f8d04dd1270833169}{U\+A\+R\+T\+Tx\+Int\+Mode\+Set} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Mode)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__uart__api_gabdf3ce387c17f9dee88b45ac7b15ad8c}{U\+A\+R\+T\+Tx\+Int\+Mode\+Get} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group__uart__api_ga4ef85e7bc642ef7169d6641cfa5265c6}{U\+A\+R\+T\+Chars\+Avail} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group__uart__api_ga7ef168edf854186daeafd031b7d55311}{U\+A\+R\+T\+Space\+Avail} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{_p_e___types_8h_adb828ef50c2dbb783109824e94cf6c47}{int32\+\_\+t} \hyperlink{group__uart__api_gaad338221fc820412b005653855cedaf7}{U\+A\+R\+T\+Char\+Get\+Non\+Blocking} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{_p_e___types_8h_adb828ef50c2dbb783109824e94cf6c47}{int32\+\_\+t} \hyperlink{group__uart__api_gafc065333d747a8f71331c4fa2b5ace9e}{U\+A\+R\+T\+Char\+Get} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group__uart__api_ga0649824c67ebbfd57e9a09abfd7c0943}{U\+A\+R\+T\+Char\+Put\+Non\+Blocking} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Data)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga047dde8396fa77bdc8648bea8875c7b9}{U\+A\+R\+T\+Char\+Put} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Data)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga7c544618ac872b85cec285fdeaa50c3b}{U\+A\+R\+T\+Break\+Ctl} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} b\+Break\+State)
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group__uart__api_ga43a13071cb9466b4ecf184a12abd1dc6}{U\+A\+R\+T\+Busy} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga29c627a9df14328949ba6db3e96af135}{U\+A\+R\+T\+Int\+Register} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}($\ast$pfn\+Handler)(\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}))
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_gab78d6c76209cb913dc81750de40d803e}{U\+A\+R\+T\+Int\+Unregister} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga2348192170cdf1bb031fa4ce88c35495}{U\+A\+R\+T\+Int\+Enable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Int\+Flags)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga8bf8b88b433464885d46455bc3a536c4}{U\+A\+R\+T\+Int\+Disable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Int\+Flags)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__uart__api_ga7a204fab5a079529d9ed4a69d13e119e}{U\+A\+R\+T\+Int\+Status} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} b\+Masked)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga1bd3174cd85cc338aba82883c09df981}{U\+A\+R\+T\+Int\+Clear} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Int\+Flags)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_gaac1b6edea28af97be22f5f788312145b}{U\+A\+R\+T\+D\+M\+A\+Enable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+D\+M\+A\+Flags)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga858997600c2e00c63711a340770d2d63}{U\+A\+R\+T\+D\+M\+A\+Disable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+D\+M\+A\+Flags)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__uart__api_gadc2c2c4a69942640cdf3334a35e90c23}{U\+A\+R\+T\+Rx\+Error\+Get} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga68600e26bbe630602ed674190259d74c}{U\+A\+R\+T\+Rx\+Error\+Clear} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga9aa412a7fe9755f7f7e3e98c95a44ef7}{U\+A\+R\+T\+Clock\+Source\+Set} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Source)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__uart__api_gaa9f25b4ba8b610bb0aa0b2090b6b2cd3}{U\+A\+R\+T\+Clock\+Source\+Get} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_gaa6c67f6e29e12e6ec879e4a0c47ccf6f}{U\+A\+R\+T9\+Bit\+Enable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga0ad87ddcc9c6669238817943349bd1e0}{U\+A\+R\+T9\+Bit\+Disable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga263536398c9ac3d4e786d9e750838531}{U\+A\+R\+T9\+Bit\+Addr\+Set} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Addr, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Mask)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga9dd2bd298377af8968ac56ce2ce7968e}{U\+A\+R\+T9\+Bit\+Addr\+Send} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Addr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T9\+Bit\+Addr\+Send@{U\+A\+R\+T9\+Bit\+Addr\+Send}}
+\index{U\+A\+R\+T9\+Bit\+Addr\+Send@{U\+A\+R\+T9\+Bit\+Addr\+Send}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T9\+Bit\+Addr\+Send(uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Addr)}{UART9BitAddrSend(uint32_t ui32Base, uint8_t ui8Addr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T9\+Bit\+Addr\+Send (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf uint8\+\_\+t}}]{ui8\+Addr}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_ga9dd2bd298377af8968ac56ce2ce7968e}{}\label{group__uart__api_ga9dd2bd298377af8968ac56ce2ce7968e}
+Sends an address character from the specified port when operating in 9-\/bit mode
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port. \\
+\hline
+{\em ui8\+Addr} & is the address to be transmitted.\\
+\hline
+\end{DoxyParams}
+This function waits until all data has been sent from the specified port and then sends the given address as an address byte. It then waits until the address byte has been transmitted before returning.
+
+The normal data functions (\hyperlink{group__uart__api_ga047dde8396fa77bdc8648bea8875c7b9}{U\+A\+R\+T\+Char\+Put()}, \hyperlink{group__uart__api_ga0649824c67ebbfd57e9a09abfd7c0943}{U\+A\+R\+T\+Char\+Put\+Non\+Blocking()}, \hyperlink{group__uart__api_gafc065333d747a8f71331c4fa2b5ace9e}{U\+A\+R\+T\+Char\+Get()}, and \hyperlink{group__uart__api_gaad338221fc820412b005653855cedaf7}{U\+A\+R\+T\+Char\+Get\+Non\+Blocking()}) are used to send and receive data characters in 9-\/bit mode.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 1466 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T9\+Bit\+Addr\+Set@{U\+A\+R\+T9\+Bit\+Addr\+Set}}
+\index{U\+A\+R\+T9\+Bit\+Addr\+Set@{U\+A\+R\+T9\+Bit\+Addr\+Set}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T9\+Bit\+Addr\+Set(uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Addr, uint8\+\_\+t ui8\+Mask)}{UART9BitAddrSet(uint32_t ui32Base, uint8_t ui8Addr, uint8_t ui8Mask)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T9\+Bit\+Addr\+Set (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf uint8\+\_\+t}}]{ui8\+Addr, }
+\item[{{\bf uint8\+\_\+t}}]{ui8\+Mask}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_ga263536398c9ac3d4e786d9e750838531}{}\label{group__uart__api_ga263536398c9ac3d4e786d9e750838531}
+Sets the device address(es) for 9-\/bit mode
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port. \\
+\hline
+{\em ui8\+Addr} & is the device address. \\
+\hline
+{\em ui8\+Mask} & is the device address mask.\\
+\hline
+\end{DoxyParams}
+This function sets the device address, or range of device addresses, that respond to requests on the 9-\/bit U\+A\+RT port. The received address is masked with the mask and then compared against the given address, allowing either a single address (if {\bfseries ui8\+Mask} is 0xff) or a set of addresses to be matched.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 1431 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T9\+Bit\+Disable@{U\+A\+R\+T9\+Bit\+Disable}}
+\index{U\+A\+R\+T9\+Bit\+Disable@{U\+A\+R\+T9\+Bit\+Disable}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T9\+Bit\+Disable(uint32\+\_\+t ui32\+Base)}{UART9BitDisable(uint32_t ui32Base)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T9\+Bit\+Disable (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_ga0ad87ddcc9c6669238817943349bd1e0}{}\label{group__uart__api_ga0ad87ddcc9c6669238817943349bd1e0}
+Disables 9-\/bit mode on the specified U\+A\+RT
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port.\\
+\hline
+\end{DoxyParams}
+This function disables the 9-\/bit operational mode of the U\+A\+RT.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 1400 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T9\+Bit\+Enable@{U\+A\+R\+T9\+Bit\+Enable}}
+\index{U\+A\+R\+T9\+Bit\+Enable@{U\+A\+R\+T9\+Bit\+Enable}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T9\+Bit\+Enable(uint32\+\_\+t ui32\+Base)}{UART9BitEnable(uint32_t ui32Base)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T9\+Bit\+Enable (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_gaa6c67f6e29e12e6ec879e4a0c47ccf6f}{}\label{group__uart__api_gaa6c67f6e29e12e6ec879e4a0c47ccf6f}
+Enables 9-\/bit mode on the specified U\+A\+RT
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port.\\
+\hline
+\end{DoxyParams}
+This function enables the 9-\/bit operational mode of the U\+A\+RT.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 1375 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+Break\+Ctl@{U\+A\+R\+T\+Break\+Ctl}}
+\index{U\+A\+R\+T\+Break\+Ctl@{U\+A\+R\+T\+Break\+Ctl}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+Break\+Ctl(uint32\+\_\+t ui32\+Base, bool b\+Break\+State)}{UARTBreakCtl(uint32_t ui32Base, bool bBreakState)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+Break\+Ctl (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf bool}}]{b\+Break\+State}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_ga7c544618ac872b85cec285fdeaa50c3b}{}\label{group__uart__api_ga7c544618ac872b85cec285fdeaa50c3b}
+Causes a B\+R\+E\+AK to be sent
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port. \\
+\hline
+{\em b\+Break\+State} & controls the output level.\\
+\hline
+\end{DoxyParams}
+Calling this function with {\itshape b\+Break\+State} set to {\bfseries true} asserts a break condition on the U\+A\+RT. Calling this function with {\itshape b\+Break\+State} set to {\bfseries false} removes the break condition. For proper transmission of a break command, the break must be asserted for at least two complete frames.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 883 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+Busy@{U\+A\+R\+T\+Busy}}
+\index{U\+A\+R\+T\+Busy@{U\+A\+R\+T\+Busy}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+Busy(uint32\+\_\+t ui32\+Base)}{UARTBusy(uint32_t ui32Base)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} U\+A\+R\+T\+Busy (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_ga43a13071cb9466b4ecf184a12abd1dc6}{}\label{group__uart__api_ga43a13071cb9466b4ecf184a12abd1dc6}
+Determines whether the U\+A\+RT transmitter is busy or not
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port.\\
+\hline
+\end{DoxyParams}
+Allows the caller to determine whether all transmitted bytes have cleared the transmitter hardware. If {\bfseries false} is returned, the transmit F\+I\+FO is empty and all bits of the last transmitted character, including all stop bits, have left the hardware shift register.
+
+\begin{DoxyReturn}{Returns}
+Returns {\bfseries true} if the U\+A\+RT is transmitting or {\bfseries false} if all transmissions are complete. 
+\end{DoxyReturn}
+
+
+Definition at line 915 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+Char\+Get@{U\+A\+R\+T\+Char\+Get}}
+\index{U\+A\+R\+T\+Char\+Get@{U\+A\+R\+T\+Char\+Get}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+Char\+Get(uint32\+\_\+t ui32\+Base)}{UARTCharGet(uint32_t ui32Base)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\+\_\+t} U\+A\+R\+T\+Char\+Get (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_gafc065333d747a8f71331c4fa2b5ace9e}{}\label{group__uart__api_gafc065333d747a8f71331c4fa2b5ace9e}
+Waits for a character from the specified port
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port.\\
+\hline
+\end{DoxyParams}
+This function gets a character from the receive F\+I\+FO for the specified port. If there are no characters available, this function waits until a character is received before returning.
+
+\begin{DoxyReturn}{Returns}
+Returns the character read from the specified port, cast as a {\itshape int32\+\_\+t}. 
+\end{DoxyReturn}
+
+
+Definition at line 763 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+Char\+Get\+Non\+Blocking@{U\+A\+R\+T\+Char\+Get\+Non\+Blocking}}
+\index{U\+A\+R\+T\+Char\+Get\+Non\+Blocking@{U\+A\+R\+T\+Char\+Get\+Non\+Blocking}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+Char\+Get\+Non\+Blocking(uint32\+\_\+t ui32\+Base)}{UARTCharGetNonBlocking(uint32_t ui32Base)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\+\_\+t} U\+A\+R\+T\+Char\+Get\+Non\+Blocking (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_gaad338221fc820412b005653855cedaf7}{}\label{group__uart__api_gaad338221fc820412b005653855cedaf7}
+Receives a character from the specified port
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port.\\
+\hline
+\end{DoxyParams}
+This function gets a character from the receive F\+I\+FO for the specified port.
+
+\begin{DoxyReturn}{Returns}
+Returns the character read from the specified port, cast as a {\itshape int32\+\_\+t}. A {\bfseries -\/1} is returned if there are no characters present in the receive F\+I\+FO. The \hyperlink{group__uart__api_ga4ef85e7bc642ef7169d6641cfa5265c6}{U\+A\+R\+T\+Chars\+Avail()} function should be called before attempting to call this function. 
+\end{DoxyReturn}
+
+
+Definition at line 722 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+Char\+Put@{U\+A\+R\+T\+Char\+Put}}
+\index{U\+A\+R\+T\+Char\+Put@{U\+A\+R\+T\+Char\+Put}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+Char\+Put(uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Data)}{UARTCharPut(uint32_t ui32Base, uint8_t ui8Data)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+Char\+Put (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf uint8\+\_\+t}}]{ui8\+Data}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_ga047dde8396fa77bdc8648bea8875c7b9}{}\label{group__uart__api_ga047dde8396fa77bdc8648bea8875c7b9}
+Waits to send a character from the specified port
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port. \\
+\hline
+{\em ui8\+Data} & is the character to be transmitted.\\
+\hline
+\end{DoxyParams}
+This function sends the character {\itshape ui8\+Data} to the transmit F\+I\+FO for the specified port. If there is no space available in the transmit F\+I\+FO, this function waits until there is space available before returning.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 847 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+Char\+Put\+Non\+Blocking@{U\+A\+R\+T\+Char\+Put\+Non\+Blocking}}
+\index{U\+A\+R\+T\+Char\+Put\+Non\+Blocking@{U\+A\+R\+T\+Char\+Put\+Non\+Blocking}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+Char\+Put\+Non\+Blocking(uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Data)}{UARTCharPutNonBlocking(uint32_t ui32Base, uint8_t ui8Data)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} U\+A\+R\+T\+Char\+Put\+Non\+Blocking (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf uint8\+\_\+t}}]{ui8\+Data}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_ga0649824c67ebbfd57e9a09abfd7c0943}{}\label{group__uart__api_ga0649824c67ebbfd57e9a09abfd7c0943}
+Sends a character to the specified port
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port. \\
+\hline
+{\em ui8\+Data} & is the character to be transmitted.\\
+\hline
+\end{DoxyParams}
+This function writes the character {\itshape ui8\+Data} to the transmit F\+I\+FO for the specified port. This function does not block, so if there is no space available, then a {\bfseries false} is returned, and the application must retry the function later.
+
+\begin{DoxyReturn}{Returns}
+Returns {\bfseries true} if the character was successfully placed in the transmit F\+I\+FO or {\bfseries false} if there was no space available in the transmit F\+I\+FO. 
+\end{DoxyReturn}
+
+
+Definition at line 801 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+Chars\+Avail@{U\+A\+R\+T\+Chars\+Avail}}
+\index{U\+A\+R\+T\+Chars\+Avail@{U\+A\+R\+T\+Chars\+Avail}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+Chars\+Avail(uint32\+\_\+t ui32\+Base)}{UARTCharsAvail(uint32_t ui32Base)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} U\+A\+R\+T\+Chars\+Avail (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_ga4ef85e7bc642ef7169d6641cfa5265c6}{}\label{group__uart__api_ga4ef85e7bc642ef7169d6641cfa5265c6}
+Determines if there are any characters in the receive F\+I\+FO
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port.\\
+\hline
+\end{DoxyParams}
+This function returns a flag indicating whether or not there is data available in the receive F\+I\+FO.
+
+\begin{DoxyReturn}{Returns}
+Returns {\bfseries true} if there is data in the receive F\+I\+FO or {\bfseries false} if there is no data in the receive F\+I\+FO. 
+\end{DoxyReturn}
+
+
+Definition at line 666 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+Clock\+Source\+Get@{U\+A\+R\+T\+Clock\+Source\+Get}}
+\index{U\+A\+R\+T\+Clock\+Source\+Get@{U\+A\+R\+T\+Clock\+Source\+Get}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+Clock\+Source\+Get(uint32\+\_\+t ui32\+Base)}{UARTClockSourceGet(uint32_t ui32Base)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} U\+A\+R\+T\+Clock\+Source\+Get (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_gaa9f25b4ba8b610bb0aa0b2090b6b2cd3}{}\label{group__uart__api_gaa9f25b4ba8b610bb0aa0b2090b6b2cd3}
+Gets the baud clock source for the specified U\+A\+RT
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port.\\
+\hline
+\end{DoxyParams}
+This function returns the baud clock source for the specified U\+A\+RT. The possible baud clock source are the system clock ({\bfseries U\+A\+R\+T\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+S\+T\+EM}) or the precision internal oscillator ({\bfseries U\+A\+R\+T\+\_\+\+C\+L\+O\+C\+K\+\_\+\+P\+I\+O\+SC}).
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 1350 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+Clock\+Source\+Set@{U\+A\+R\+T\+Clock\+Source\+Set}}
+\index{U\+A\+R\+T\+Clock\+Source\+Set@{U\+A\+R\+T\+Clock\+Source\+Set}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+Clock\+Source\+Set(uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Source)}{UARTClockSourceSet(uint32_t ui32Base, uint32_t ui32Source)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+Clock\+Source\+Set (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Source}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_ga9aa412a7fe9755f7f7e3e98c95a44ef7}{}\label{group__uart__api_ga9aa412a7fe9755f7f7e3e98c95a44ef7}
+Sets the baud clock source for the specified U\+A\+RT
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port. \\
+\hline
+{\em ui32\+Source} & is the baud clock source for the U\+A\+RT.\\
+\hline
+\end{DoxyParams}
+This function allows the baud clock source for the U\+A\+RT to be selected. The possible clock source are the system clock ({\bfseries U\+A\+R\+T\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+S\+T\+EM}) or the precision internal oscillator ({\bfseries U\+A\+R\+T\+\_\+\+C\+L\+O\+C\+K\+\_\+\+P\+I\+O\+SC}).
+
+If {\bfseries U\+A\+R\+T\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+S\+T\+EM} is chosen, the IO clock frequency must thus be queried by Sys\+Ctrl\+Clcok\+Set(). If {\bfseries U\+A\+R\+T\+\_\+\+C\+L\+O\+C\+K\+\_\+\+P\+I\+O\+SC} the Sys\+Ctrl\+I\+O\+Clcok\+Set() function must be used.
+
+Changing the baud clock source will change the baud rate generated by the U\+A\+RT. Therefore, the baud rate should be reconfigured after any change to the baud clock source.
+
+\begin{DoxyNote}{Note}
+If the precision internal oscillator ({\bfseries U\+A\+R\+T\+\_\+\+C\+L\+O\+C\+K\+\_\+\+P\+I\+O\+SC}) is used for the U\+A\+RT baud clock, the system clock frequency must be at least 9 M\+Hz in Run mode.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__uart__api_gaacfccbb6fb7e3e3138573bfc4835250b}{U\+A\+R\+T\+Config\+Set\+Exp\+Clk()}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 1322 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+Config\+Get\+Exp\+Clk@{U\+A\+R\+T\+Config\+Get\+Exp\+Clk}}
+\index{U\+A\+R\+T\+Config\+Get\+Exp\+Clk@{U\+A\+R\+T\+Config\+Get\+Exp\+Clk}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+Config\+Get\+Exp\+Clk(uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+U\+A\+R\+T\+Clk, uint32\+\_\+t $\ast$pui32\+Baud, uint32\+\_\+t $\ast$pui32\+Config)}{UARTConfigGetExpClk(uint32_t ui32Base, uint32_t ui32UARTClk, uint32_t *pui32Baud, uint32_t *pui32Config)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+Config\+Get\+Exp\+Clk (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+U\+A\+R\+T\+Clk, }
+\item[{{\bf uint32\+\_\+t} $\ast$}]{pui32\+Baud, }
+\item[{{\bf uint32\+\_\+t} $\ast$}]{pui32\+Config}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_ga14340c8b74b16af630653226007f2cce}{}\label{group__uart__api_ga14340c8b74b16af630653226007f2cce}
+Gets the current configuration of a U\+A\+RT
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port. \\
+\hline
+{\em ui32\+U\+A\+R\+T\+Clk} & is the rate of the clock supplied to the U\+A\+RT module. \\
+\hline
+{\em pui32\+Baud} & is a pointer to storage for the baud rate. \\
+\hline
+{\em pui32\+Config} & is a pointer to storage for the data format.\\
+\hline
+\end{DoxyParams}
+The baud rate and data format for the U\+A\+RT is determined, given an explicitly provided peripheral clock (hence the Exp\+Clk suffix). The returned baud rate is the actual baud rate; it may not be the exact baud rate requested or an ``official\textquotesingle{}\textquotesingle{} baud rate. The data format returned in {\itshape pui32\+Config} is enumerated the same as the {\itshape ui32\+Config} parameter of \hyperlink{group__uart__api_gaacfccbb6fb7e3e3138573bfc4835250b}{U\+A\+R\+T\+Config\+Set\+Exp\+Clk()}.
+
+The peripheral clock is set in the System Control module. The frequency of the system clock is the value returned by \hyperlink{group__sysctl__api_ga9ad809b6591f052d72dde7b1fb1f6eed}{Sys\+Ctrl\+Clock\+Get()} or \hyperlink{group__sysctl__api_ga61cdfa03e9a592cfad5ef7ba81595046}{Sys\+Ctrl\+I\+O\+Clock\+Get()} depending on the chosen clock source as set by \hyperlink{group__uart__api_ga9aa412a7fe9755f7f7e3e98c95a44ef7}{U\+A\+R\+T\+Clock\+Source\+Set()}, or it can be explicitly hard coded if it is constant and known (to save the code/execution overhead of a call to \hyperlink{group__sysctl__api_ga9ad809b6591f052d72dde7b1fb1f6eed}{Sys\+Ctrl\+Clock\+Get()} or \hyperlink{group__sysctl__api_ga61cdfa03e9a592cfad5ef7ba81595046}{Sys\+Ctrl\+I\+O\+Clock\+Get()}).
+
+The C\+C2538 part has the ability to specify the U\+A\+RT baud clock source (via \hyperlink{group__uart__api_ga9aa412a7fe9755f7f7e3e98c95a44ef7}{U\+A\+R\+T\+Clock\+Source\+Set()}), the peripheral clock can be changed to P\+I\+O\+SC. In this case, the peripheral clock should be specified as 16,000,000 (the nominal rate of P\+I\+O\+SC).
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 364 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+Config\+Set\+Exp\+Clk@{U\+A\+R\+T\+Config\+Set\+Exp\+Clk}}
+\index{U\+A\+R\+T\+Config\+Set\+Exp\+Clk@{U\+A\+R\+T\+Config\+Set\+Exp\+Clk}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+Config\+Set\+Exp\+Clk(uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+U\+A\+R\+T\+Clk, uint32\+\_\+t ui32\+Baud, uint32\+\_\+t ui32\+Config)}{UARTConfigSetExpClk(uint32_t ui32Base, uint32_t ui32UARTClk, uint32_t ui32Baud, uint32_t ui32Config)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+Config\+Set\+Exp\+Clk (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+U\+A\+R\+T\+Clk, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Baud, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Config}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_gaacfccbb6fb7e3e3138573bfc4835250b}{}\label{group__uart__api_gaacfccbb6fb7e3e3138573bfc4835250b}
+Sets the configuration of a U\+A\+RT
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port. \\
+\hline
+{\em ui32\+U\+A\+R\+T\+Clk} & is the rate of the clock supplied to the U\+A\+RT module. \\
+\hline
+{\em ui32\+Baud} & is the desired baud rate. \\
+\hline
+{\em ui32\+Config} & is the data format for the port (number of data bits, number of stop bits, and parity).\\
+\hline
+\end{DoxyParams}
+This function configures the U\+A\+RT for operation in the specified data format. The baud rate is provided in the {\itshape ui32\+Baud} parameter and the data format in the {\itshape ui32\+Config} parameter.
+
+The {\itshape ui32\+Config} parameter is the logical OR of three values\+: the number of data bits, the number of stop bits, and the parity. {\bfseries U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+8}, {\bfseries U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+7}, {\bfseries U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+6}, and {\bfseries U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+5} select from eight to five data bits per byte (respectively). {\bfseries U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+T\+O\+P\+\_\+\+O\+NE} and {\bfseries U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+T\+O\+P\+\_\+\+T\+WO} select one or two stop bits (respectively). {\bfseries U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+N\+O\+NE}, {\bfseries U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+E\+V\+EN}, {\bfseries U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+O\+DD}, {\bfseries U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+O\+NE}, and {\bfseries U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+Z\+E\+RO} select the parity mode (no parity bit, even parity bit, odd parity bit, parity bit always one, and parity bit always zero, respectively).
+
+The peripheral clock is set in the System Control module. The frequency of the system clock is the value returned by \hyperlink{group__sysctl__api_ga9ad809b6591f052d72dde7b1fb1f6eed}{Sys\+Ctrl\+Clock\+Get()} or \hyperlink{group__sysctl__api_ga61cdfa03e9a592cfad5ef7ba81595046}{Sys\+Ctrl\+I\+O\+Clock\+Get()} depending on the chosen clock source as set by \hyperlink{group__uart__api_ga9aa412a7fe9755f7f7e3e98c95a44ef7}{U\+A\+R\+T\+Clock\+Source\+Set()}, or it can be explicitly hard coded if it is constant and known (to save the code/execution overhead of a call to \hyperlink{group__sysctl__api_ga9ad809b6591f052d72dde7b1fb1f6eed}{Sys\+Ctrl\+Clock\+Get()} or \hyperlink{group__sysctl__api_ga61cdfa03e9a592cfad5ef7ba81595046}{Sys\+Ctrl\+I\+O\+Clock\+Get()}).
+
+The C\+C2538 part has the ability to specify the U\+A\+RT baud clock source (via \hyperlink{group__uart__api_ga9aa412a7fe9755f7f7e3e98c95a44ef7}{U\+A\+R\+T\+Clock\+Source\+Set()}), the peripheral clock can be changed to P\+I\+O\+SC. In this case, the peripheral clock should be specified as 16,000,000 (the nominal rate of P\+I\+O\+SC).
+
+\begin{DoxySeeAlso}{See also}
+See \hyperlink{group__uart__api_ga9aa412a7fe9755f7f7e3e98c95a44ef7}{U\+A\+R\+T\+Clock\+Source\+Set()}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 269 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+Disable@{U\+A\+R\+T\+Disable}}
+\index{U\+A\+R\+T\+Disable@{U\+A\+R\+T\+Disable}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+Disable(uint32\+\_\+t ui32\+Base)}{UARTDisable(uint32_t ui32Base)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+Disable (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_ga24b7349b5fd44c56e552d2d3fa2e4057}{}\label{group__uart__api_ga24b7349b5fd44c56e552d2d3fa2e4057}
+Disables transmitting and receiving
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port.\\
+\hline
+\end{DoxyParams}
+This function clears the U\+A\+R\+T\+EN, T\+XE, and R\+XE bits, waits for the end of transmission of the current character, and flushes the transmit F\+I\+FO.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 446 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+Disable\+S\+IR@{U\+A\+R\+T\+Disable\+S\+IR}}
+\index{U\+A\+R\+T\+Disable\+S\+IR@{U\+A\+R\+T\+Disable\+S\+IR}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+Disable\+S\+I\+R(uint32\+\_\+t ui32\+Base)}{UARTDisableSIR(uint32_t ui32Base)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+Disable\+S\+IR (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_gabb22356aed40380e7d862e5d0ca6cb89}{}\label{group__uart__api_gabb22356aed40380e7d862e5d0ca6cb89}
+Disables S\+IR (Ir\+DA) mode on the specified U\+A\+RT
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port.\\
+\hline
+\end{DoxyParams}
+This function clears the S\+I\+R\+EN (Ir\+DA) and S\+I\+R\+LP (Low Power) bits.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 568 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+D\+M\+A\+Disable@{U\+A\+R\+T\+D\+M\+A\+Disable}}
+\index{U\+A\+R\+T\+D\+M\+A\+Disable@{U\+A\+R\+T\+D\+M\+A\+Disable}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+D\+M\+A\+Disable(uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+D\+M\+A\+Flags)}{UARTDMADisable(uint32_t ui32Base, uint32_t ui32DMAFlags)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+D\+M\+A\+Disable (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+D\+M\+A\+Flags}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_ga858997600c2e00c63711a340770d2d63}{}\label{group__uart__api_ga858997600c2e00c63711a340770d2d63}
+Disable U\+A\+RT D\+MA operation
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port. \\
+\hline
+{\em ui32\+D\+M\+A\+Flags} & is a bit mask of the D\+MA features to disable.\\
+\hline
+\end{DoxyParams}
+This function is used to disable U\+A\+RT D\+MA features that were enabled by \hyperlink{group__uart__api_gaac1b6edea28af97be22f5f788312145b}{U\+A\+R\+T\+D\+M\+A\+Enable()}. The specified U\+A\+RT D\+MA features are disabled. The {\itshape ui32\+D\+M\+A\+Flags} parameter is the logical OR of any of the following values\+:
+
+
+\begin{DoxyItemize}
+\item U\+A\+R\+T\+\_\+\+D\+M\+A\+\_\+\+RX -\/ disable D\+MA for receive
+\item U\+A\+R\+T\+\_\+\+D\+M\+A\+\_\+\+TX -\/ disable D\+MA for transmit
+\item U\+A\+R\+T\+\_\+\+D\+M\+A\+\_\+\+E\+R\+R\+\_\+\+R\+X\+S\+T\+OP -\/ do not disable D\+MA receive on U\+A\+RT error
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 1220 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+D\+M\+A\+Enable@{U\+A\+R\+T\+D\+M\+A\+Enable}}
+\index{U\+A\+R\+T\+D\+M\+A\+Enable@{U\+A\+R\+T\+D\+M\+A\+Enable}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+D\+M\+A\+Enable(uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+D\+M\+A\+Flags)}{UARTDMAEnable(uint32_t ui32Base, uint32_t ui32DMAFlags)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+D\+M\+A\+Enable (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+D\+M\+A\+Flags}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_gaac1b6edea28af97be22f5f788312145b}{}\label{group__uart__api_gaac1b6edea28af97be22f5f788312145b}
+Enable U\+A\+RT D\+MA operation
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port. \\
+\hline
+{\em ui32\+D\+M\+A\+Flags} & is a bit mask of the D\+MA features to enable.\\
+\hline
+\end{DoxyParams}
+The specified U\+A\+RT D\+MA features are enabled. The U\+A\+RT can be configured to use D\+MA for transmit or receive, and to disable receive if an error occurs. The {\itshape ui32\+D\+M\+A\+Flags} parameter is the logical OR of any of the following values\+:
+
+
+\begin{DoxyItemize}
+\item U\+A\+R\+T\+\_\+\+D\+M\+A\+\_\+\+RX -\/ enable D\+MA for receive
+\item U\+A\+R\+T\+\_\+\+D\+M\+A\+\_\+\+TX -\/ enable D\+MA for transmit
+\item U\+A\+R\+T\+\_\+\+D\+M\+A\+\_\+\+E\+R\+R\+\_\+\+R\+X\+S\+T\+OP -\/ disable D\+MA receive on U\+A\+RT error
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+The u\+D\+MA controller must also be set up before D\+MA can be used with the U\+A\+RT.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 1188 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+Enable@{U\+A\+R\+T\+Enable}}
+\index{U\+A\+R\+T\+Enable@{U\+A\+R\+T\+Enable}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+Enable(uint32\+\_\+t ui32\+Base)}{UARTEnable(uint32_t ui32Base)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+Enable (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_ga93ba793d082da8ceb2ddab3ddc650a35}{}\label{group__uart__api_ga93ba793d082da8ceb2ddab3ddc650a35}
+Enables transmitting and receiving
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port.\\
+\hline
+\end{DoxyParams}
+This function sets the U\+A\+R\+T\+EN, T\+XE, and R\+XE bits, and enables the transmit and receive F\+I\+F\+Os.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 414 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+Enable\+S\+IR@{U\+A\+R\+T\+Enable\+S\+IR}}
+\index{U\+A\+R\+T\+Enable\+S\+IR@{U\+A\+R\+T\+Enable\+S\+IR}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+Enable\+S\+I\+R(uint32\+\_\+t ui32\+Base, bool b\+Low\+Power)}{UARTEnableSIR(uint32_t ui32Base, bool bLowPower)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+Enable\+S\+IR (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf bool}}]{b\+Low\+Power}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_ga7a49f55b28b43b69809866d46db02d32}{}\label{group__uart__api_ga7a49f55b28b43b69809866d46db02d32}
+Enables S\+IR (Ir\+DA) mode on the specified U\+A\+RT
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port. \\
+\hline
+{\em b\+Low\+Power} & indicates if S\+IR Low Power Mode is to be used.\\
+\hline
+\end{DoxyParams}
+This function enables the S\+I\+R\+EN control bit for Ir\+DA mode on the U\+A\+RT. If the {\itshape b\+Low\+Power} flag is set, then S\+I\+R\+LP bit will also be set.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 536 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+F\+I\+F\+O\+Disable@{U\+A\+R\+T\+F\+I\+F\+O\+Disable}}
+\index{U\+A\+R\+T\+F\+I\+F\+O\+Disable@{U\+A\+R\+T\+F\+I\+F\+O\+Disable}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+F\+I\+F\+O\+Disable(uint32\+\_\+t ui32\+Base)}{UARTFIFODisable(uint32_t ui32Base)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+F\+I\+F\+O\+Disable (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_ga33ec41720030e24957edf7927174e1c5}{}\label{group__uart__api_ga33ec41720030e24957edf7927174e1c5}
+Disables the transmit and receive F\+I\+F\+Os
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port.\\
+\hline
+\end{DoxyParams}
+This functions disables the transmit and receive F\+I\+F\+Os in the U\+A\+RT.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 509 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+F\+I\+F\+O\+Enable@{U\+A\+R\+T\+F\+I\+F\+O\+Enable}}
+\index{U\+A\+R\+T\+F\+I\+F\+O\+Enable@{U\+A\+R\+T\+F\+I\+F\+O\+Enable}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+F\+I\+F\+O\+Enable(uint32\+\_\+t ui32\+Base)}{UARTFIFOEnable(uint32_t ui32Base)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+F\+I\+F\+O\+Enable (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_gac6ea9357292a6a51f949d0d2cd85d95a}{}\label{group__uart__api_gac6ea9357292a6a51f949d0d2cd85d95a}
+Enables the transmit and receive F\+I\+F\+Os
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port.\\
+\hline
+\end{DoxyParams}
+This functions enables the transmit and receive F\+I\+F\+Os in the U\+A\+RT.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 484 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+F\+I\+F\+O\+Level\+Get@{U\+A\+R\+T\+F\+I\+F\+O\+Level\+Get}}
+\index{U\+A\+R\+T\+F\+I\+F\+O\+Level\+Get@{U\+A\+R\+T\+F\+I\+F\+O\+Level\+Get}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+F\+I\+F\+O\+Level\+Get(uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Tx\+Level, uint32\+\_\+t $\ast$pui32\+Rx\+Level)}{UARTFIFOLevelGet(uint32_t ui32Base, uint32_t *pui32TxLevel, uint32_t *pui32RxLevel)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+F\+I\+F\+O\+Level\+Get (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf uint32\+\_\+t} $\ast$}]{pui32\+Tx\+Level, }
+\item[{{\bf uint32\+\_\+t} $\ast$}]{pui32\+Rx\+Level}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_ga41337038041a625f3030b16a4efa287c}{}\label{group__uart__api_ga41337038041a625f3030b16a4efa287c}
+Gets the F\+I\+FO level at which interrupts are generated
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port. \\
+\hline
+{\em pui32\+Tx\+Level} & is a pointer to storage for the transmit F\+I\+FO level, returned as one of {\bfseries U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X1\+\_\+8}, {\bfseries U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X2\+\_\+8}, {\bfseries U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X4\+\_\+8}, {\bfseries U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X6\+\_\+8}, or {\bfseries U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X7\+\_\+8}. \\
+\hline
+{\em pui32\+Rx\+Level} & is a pointer to storage for the receive F\+I\+FO level, returned as one of {\bfseries U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X1\+\_\+8}, {\bfseries U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X2\+\_\+8}, {\bfseries U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X4\+\_\+8}, {\bfseries U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X6\+\_\+8}, or {\bfseries U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X7\+\_\+8}.\\
+\hline
+\end{DoxyParams}
+This function gets the F\+I\+FO level at which transmit and receive interrupts are generated.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 205 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+F\+I\+F\+O\+Level\+Set@{U\+A\+R\+T\+F\+I\+F\+O\+Level\+Set}}
+\index{U\+A\+R\+T\+F\+I\+F\+O\+Level\+Set@{U\+A\+R\+T\+F\+I\+F\+O\+Level\+Set}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+F\+I\+F\+O\+Level\+Set(uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Tx\+Level, uint32\+\_\+t ui32\+Rx\+Level)}{UARTFIFOLevelSet(uint32_t ui32Base, uint32_t ui32TxLevel, uint32_t ui32RxLevel)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+F\+I\+F\+O\+Level\+Set (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Tx\+Level, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Rx\+Level}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_gae8dd6aeabd442a4cd231bd618897e503}{}\label{group__uart__api_gae8dd6aeabd442a4cd231bd618897e503}
+Sets the F\+I\+FO level at which interrupts are generated
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port. \\
+\hline
+{\em ui32\+Tx\+Level} & is the transmit F\+I\+FO interrupt level, specified as one of {\bfseries U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X1\+\_\+8}, {\bfseries U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X2\+\_\+8}, {\bfseries U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X4\+\_\+8}, {\bfseries U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X6\+\_\+8}, or {\bfseries U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X7\+\_\+8}. \\
+\hline
+{\em ui32\+Rx\+Level} & is the receive F\+I\+FO interrupt level, specified as one of {\bfseries U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X1\+\_\+8}, {\bfseries U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X2\+\_\+8}, {\bfseries U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X4\+\_\+8}, {\bfseries U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X6\+\_\+8}, or {\bfseries U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X7\+\_\+8}.\\
+\hline
+\end{DoxyParams}
+This function sets the F\+I\+FO level at which transmit and receive interrupts are generated.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 162 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+Int\+Clear@{U\+A\+R\+T\+Int\+Clear}}
+\index{U\+A\+R\+T\+Int\+Clear@{U\+A\+R\+T\+Int\+Clear}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+Int\+Clear(uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)}{UARTIntClear(uint32_t ui32Base, uint32_t ui32IntFlags)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+Int\+Clear (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Int\+Flags}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_ga1bd3174cd85cc338aba82883c09df981}{}\label{group__uart__api_ga1bd3174cd85cc338aba82883c09df981}
+Clears U\+A\+RT interrupt sources
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port. \\
+\hline
+{\em ui32\+Int\+Flags} & is a bit mask of the interrupt sources to be cleared.\\
+\hline
+\end{DoxyParams}
+The specified U\+A\+RT interrupt sources are cleared, so that they no longer assert. This function must be called in the interrupt handler to keep the interrupt from being recognized again immediately upon exit.
+
+The {\itshape ui32\+Int\+Flags} parameter has the same definition as the {\itshape ui32\+Int\+Flags} parameter to \hyperlink{group__uart__api_ga2348192170cdf1bb031fa4ce88c35495}{U\+A\+R\+T\+Int\+Enable()}.
+
+\begin{DoxyNote}{Note}
+Because there is a write buffer in the Cortex-\/\+M3 processor, it may take several clock cycles before the interrupt source is actually cleared. Therefore, it is recommended that the interrupt source be cleared early in the interrupt handler (as opposed to the very last action) to avoid returning from the interrupt handler before the interrupt source is actually cleared. Failure to do so may result in the interrupt handler being immediately reentered (because the interrupt controller still sees the interrupt source asserted).
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 1152 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+Int\+Disable@{U\+A\+R\+T\+Int\+Disable}}
+\index{U\+A\+R\+T\+Int\+Disable@{U\+A\+R\+T\+Int\+Disable}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+Int\+Disable(uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)}{UARTIntDisable(uint32_t ui32Base, uint32_t ui32IntFlags)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+Int\+Disable (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Int\+Flags}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_ga8bf8b88b433464885d46455bc3a536c4}{}\label{group__uart__api_ga8bf8b88b433464885d46455bc3a536c4}
+Disables individual U\+A\+RT interrupt sources
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port. \\
+\hline
+{\em ui32\+Int\+Flags} & is the bit mask of the interrupt sources to be disabled.\\
+\hline
+\end{DoxyParams}
+This function disables the indicated U\+A\+RT interrupt sources. Only the sources that are enabled can be reflected to the processor interrupt; disabled sources have no effect on the processor.
+
+The {\itshape ui32\+Int\+Flags} parameter has the same definition as the {\itshape ui32\+Int\+Flags} parameter to \hyperlink{group__uart__api_ga2348192170cdf1bb031fa4ce88c35495}{U\+A\+R\+T\+Int\+Enable()}.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 1074 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+Int\+Enable@{U\+A\+R\+T\+Int\+Enable}}
+\index{U\+A\+R\+T\+Int\+Enable@{U\+A\+R\+T\+Int\+Enable}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+Int\+Enable(uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)}{UARTIntEnable(uint32_t ui32Base, uint32_t ui32IntFlags)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+Int\+Enable (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Int\+Flags}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_ga2348192170cdf1bb031fa4ce88c35495}{}\label{group__uart__api_ga2348192170cdf1bb031fa4ce88c35495}
+Enables individual U\+A\+RT interrupt sources
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port. \\
+\hline
+{\em ui32\+Int\+Flags} & is the bit mask of the interrupt sources to be enabled.\\
+\hline
+\end{DoxyParams}
+This function enables the indicated U\+A\+RT interrupt sources. Only the sources that are enabled can be reflected to the processor interrupt; disabled sources have no effect on the processor.
+
+The {\itshape ui32\+Int\+Flags} parameter is the logical OR of any of the following\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+9\+B\+IT} -\/ 9-\/bit address match interrupt
+\item {\bfseries U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+OE} -\/ Overrun Error interrupt
+\item {\bfseries U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+BE} -\/ Break Error interrupt
+\item {\bfseries U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+PE} -\/ Parity Error interrupt
+\item {\bfseries U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+FE} -\/ Framing Error interrupt
+\item {\bfseries U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+RT} -\/ Receive Timeout interrupt
+\item {\bfseries U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+TX} -\/ Transmit interrupt
+\item {\bfseries U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+RX} -\/ Receive interrupt
+\item {\bfseries U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+C\+TS} -\/ C\+TS interrupt (U\+A\+R\+T1 only)
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 1043 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+Int\+Register@{U\+A\+R\+T\+Int\+Register}}
+\index{U\+A\+R\+T\+Int\+Register@{U\+A\+R\+T\+Int\+Register}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+Int\+Register(uint32\+\_\+t ui32\+Base, void($\ast$pfn\+Handler)(void))}{UARTIntRegister(uint32_t ui32Base, void(*pfnHandler)(void))}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+Int\+Register (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf void}($\ast$)({\bf void})}]{pfn\+Handler}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_ga29c627a9df14328949ba6db3e96af135}{}\label{group__uart__api_ga29c627a9df14328949ba6db3e96af135}
+Registers an interrupt handler for a U\+A\+RT interrupt
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port. \\
+\hline
+{\em pfn\+Handler} & is a pointer to the function to be called when the U\+A\+RT interrupt occurs.\\
+\hline
+\end{DoxyParams}
+This function does the actual registering of the interrupt handler. This function enables the global interrupt in the interrupt controller; specific U\+A\+RT interrupts must be enabled via \hyperlink{group__uart__api_ga2348192170cdf1bb031fa4ce88c35495}{U\+A\+R\+T\+Int\+Enable()}. It is the interrupt handler\textquotesingle{}s responsibility to clear the interrupt source.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()} for important information about registering \hyperlink{_g_c_c_2_m_s_p430_f449_2port_8c_ae0992854bdba99f7b163894433c32aef}{interrupt} handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 948 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+Int\+Status@{U\+A\+R\+T\+Int\+Status}}
+\index{U\+A\+R\+T\+Int\+Status@{U\+A\+R\+T\+Int\+Status}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+Int\+Status(uint32\+\_\+t ui32\+Base, bool b\+Masked)}{UARTIntStatus(uint32_t ui32Base, bool bMasked)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} U\+A\+R\+T\+Int\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf bool}}]{b\+Masked}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_ga7a204fab5a079529d9ed4a69d13e119e}{}\label{group__uart__api_ga7a204fab5a079529d9ed4a69d13e119e}
+Gets the current interrupt status
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port. \\
+\hline
+{\em b\+Masked} & is {\bfseries false} if the raw interrupt status is required and {\bfseries true} if the masked interrupt status is required.\\
+\hline
+\end{DoxyParams}
+This function returns the interrupt status for the specified U\+A\+RT. Either the raw interrupt status or the status of interrupts that are allowed to reflect to the processor can be returned.
+
+\begin{DoxyReturn}{Returns}
+Returns the current interrupt status, enumerated as a bit field of values described in \hyperlink{group__uart__api_ga2348192170cdf1bb031fa4ce88c35495}{U\+A\+R\+T\+Int\+Enable()}. 
+\end{DoxyReturn}
+
+
+Definition at line 1104 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+Int\+Unregister@{U\+A\+R\+T\+Int\+Unregister}}
+\index{U\+A\+R\+T\+Int\+Unregister@{U\+A\+R\+T\+Int\+Unregister}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+Int\+Unregister(uint32\+\_\+t ui32\+Base)}{UARTIntUnregister(uint32_t ui32Base)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+Int\+Unregister (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_gab78d6c76209cb913dc81750de40d803e}{}\label{group__uart__api_gab78d6c76209cb913dc81750de40d803e}
+Unregisters an interrupt handler for a U\+A\+RT interrupt
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port.\\
+\hline
+\end{DoxyParams}
+This function does the actual unregistering of the interrupt handler. It clears the handler to be called when a U\+A\+RT interrupt occurs. This function also masks off the interrupt in the interrupt controller so that the interrupt handler no longer is called.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()} for important information about registering \hyperlink{_g_c_c_2_m_s_p430_f449_2port_8c_ae0992854bdba99f7b163894433c32aef}{interrupt} handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 991 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+Parity\+Mode\+Get@{U\+A\+R\+T\+Parity\+Mode\+Get}}
+\index{U\+A\+R\+T\+Parity\+Mode\+Get@{U\+A\+R\+T\+Parity\+Mode\+Get}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+Parity\+Mode\+Get(uint32\+\_\+t ui32\+Base)}{UARTParityModeGet(uint32_t ui32Base)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} U\+A\+R\+T\+Parity\+Mode\+Get (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_ga8ee93b49e449bc738b01eb680b00e1f0}{}\label{group__uart__api_ga8ee93b49e449bc738b01eb680b00e1f0}
+Gets the type of parity currently being used
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port.\\
+\hline
+\end{DoxyParams}
+This function gets the type of parity used for transmitting data and expected when receiving data.
+
+\begin{DoxyReturn}{Returns}
+Returns the current parity settings, specified as one of {\bfseries U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+N\+O\+NE}, {\bfseries U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+E\+V\+EN}, {\bfseries U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+O\+DD}, {\bfseries U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+O\+NE}, or {\bfseries U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+Z\+E\+RO}. 
+\end{DoxyReturn}
+
+
+Definition at line 129 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+Parity\+Mode\+Set@{U\+A\+R\+T\+Parity\+Mode\+Set}}
+\index{U\+A\+R\+T\+Parity\+Mode\+Set@{U\+A\+R\+T\+Parity\+Mode\+Set}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+Parity\+Mode\+Set(uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Parity)}{UARTParityModeSet(uint32_t ui32Base, uint32_t ui32Parity)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+Parity\+Mode\+Set (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Parity}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_gacd54a0a57df52618d1ebf5581b5927bf}{}\label{group__uart__api_gacd54a0a57df52618d1ebf5581b5927bf}
+Sets the type of parity
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port. \\
+\hline
+{\em ui32\+Parity} & specifies the type of parity to use.\\
+\hline
+\end{DoxyParams}
+This function sets the type of parity to use for transmitting and expect when receiving. The {\itshape ui32\+Parity} parameter must be one of {\bfseries U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+N\+O\+NE}, {\bfseries U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+E\+V\+EN}, {\bfseries U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+O\+DD}, {\bfseries U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+O\+NE}, or {\bfseries U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+Z\+E\+RO}. The last two allow direct control of the parity bit; it is always either one or zero based on the mode.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 94 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+Rx\+Error\+Clear@{U\+A\+R\+T\+Rx\+Error\+Clear}}
+\index{U\+A\+R\+T\+Rx\+Error\+Clear@{U\+A\+R\+T\+Rx\+Error\+Clear}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+Rx\+Error\+Clear(uint32\+\_\+t ui32\+Base)}{UARTRxErrorClear(uint32_t ui32Base)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+Rx\+Error\+Clear (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_ga68600e26bbe630602ed674190259d74c}{}\label{group__uart__api_ga68600e26bbe630602ed674190259d74c}
+Clears all reported receiver errors
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port.\\
+\hline
+\end{DoxyParams}
+This function is used to clear all receiver error conditions reported via \hyperlink{group__uart__api_gadc2c2c4a69942640cdf3334a35e90c23}{U\+A\+R\+T\+Rx\+Error\+Get()}. If using the overrun, framing error, parity error or break interrupts, this function must be called after clearing the interrupt to ensure that later errors of the same type trigger another interrupt.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 1279 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+Rx\+Error\+Get@{U\+A\+R\+T\+Rx\+Error\+Get}}
+\index{U\+A\+R\+T\+Rx\+Error\+Get@{U\+A\+R\+T\+Rx\+Error\+Get}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+Rx\+Error\+Get(uint32\+\_\+t ui32\+Base)}{UARTRxErrorGet(uint32_t ui32Base)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} U\+A\+R\+T\+Rx\+Error\+Get (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_gadc2c2c4a69942640cdf3334a35e90c23}{}\label{group__uart__api_gadc2c2c4a69942640cdf3334a35e90c23}
+Gets current receiver errors
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port.\\
+\hline
+\end{DoxyParams}
+This function returns the current state of each of the 4 receiver error sources. The returned errors are equivalent to the four error bits returned via the previous call to \hyperlink{group__uart__api_gafc065333d747a8f71331c4fa2b5ace9e}{U\+A\+R\+T\+Char\+Get()} or \hyperlink{group__uart__api_gaad338221fc820412b005653855cedaf7}{U\+A\+R\+T\+Char\+Get\+Non\+Blocking()} with the exception that the overrun error is set immediately the overrun occurs rather than when a character is next read.
+
+\begin{DoxyReturn}{Returns}
+Returns a logical OR combination of the receiver error flags, {\bfseries U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+F\+R\+A\+M\+I\+NG}, {\bfseries U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+I\+TY}, {\bfseries U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+B\+R\+E\+AK} and {\bfseries U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+O\+V\+E\+R\+R\+UN}. 
+\end{DoxyReturn}
+
+
+Definition at line 1251 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+Space\+Avail@{U\+A\+R\+T\+Space\+Avail}}
+\index{U\+A\+R\+T\+Space\+Avail@{U\+A\+R\+T\+Space\+Avail}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+Space\+Avail(uint32\+\_\+t ui32\+Base)}{UARTSpaceAvail(uint32_t ui32Base)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} U\+A\+R\+T\+Space\+Avail (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_ga7ef168edf854186daeafd031b7d55311}{}\label{group__uart__api_ga7ef168edf854186daeafd031b7d55311}
+Determines if there is any space in the transmit F\+I\+FO
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port.\\
+\hline
+\end{DoxyParams}
+This function returns a flag indicating whether or not there is space available in the transmit F\+I\+FO.
+
+\begin{DoxyReturn}{Returns}
+Returns {\bfseries true} if there is space available in the transmit F\+I\+FO or {\bfseries false} if there is no space available in the transmit F\+I\+FO. 
+\end{DoxyReturn}
+
+
+Definition at line 693 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+Tx\+Int\+Mode\+Get@{U\+A\+R\+T\+Tx\+Int\+Mode\+Get}}
+\index{U\+A\+R\+T\+Tx\+Int\+Mode\+Get@{U\+A\+R\+T\+Tx\+Int\+Mode\+Get}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+Tx\+Int\+Mode\+Get(uint32\+\_\+t ui32\+Base)}{UARTTxIntModeGet(uint32_t ui32Base)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} U\+A\+R\+T\+Tx\+Int\+Mode\+Get (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_gabdf3ce387c17f9dee88b45ac7b15ad8c}{}\label{group__uart__api_gabdf3ce387c17f9dee88b45ac7b15ad8c}
+Returns the current operating mode for the U\+A\+RT transmit interrupt
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port.\\
+\hline
+\end{DoxyParams}
+This function returns the current operating mode for the U\+A\+RT transmit interrupt. The return value is {\bfseries U\+A\+R\+T\+\_\+\+T\+X\+I\+N\+T\+\_\+\+M\+O\+D\+E\+\_\+\+E\+OT} if the transmit interrupt is currently set to be asserted once the transmitter is completely idle -\/ the transmit F\+I\+FO is empty and all bits, including any stop bits, have cleared the transmitter. The return value is {\bfseries U\+A\+R\+T\+\_\+\+T\+X\+I\+N\+T\+\_\+\+M\+O\+D\+E\+\_\+\+F\+I\+FO} if the interrupt is set to be asserted based upon the level of the transmit F\+I\+FO.
+
+\begin{DoxyReturn}{Returns}
+Returns {\bfseries U\+A\+R\+T\+\_\+\+T\+X\+I\+N\+T\+\_\+\+M\+O\+D\+E\+\_\+\+F\+I\+FO} or {\bfseries U\+A\+R\+T\+\_\+\+T\+X\+I\+N\+T\+\_\+\+M\+O\+D\+E\+\_\+\+E\+OT}. 
+\end{DoxyReturn}
+
+
+Definition at line 638 of file uarthal.\+c.
+
+\index{Uart\+\_\+api@{Uart\+\_\+api}!U\+A\+R\+T\+Tx\+Int\+Mode\+Set@{U\+A\+R\+T\+Tx\+Int\+Mode\+Set}}
+\index{U\+A\+R\+T\+Tx\+Int\+Mode\+Set@{U\+A\+R\+T\+Tx\+Int\+Mode\+Set}!Uart\+\_\+api@{Uart\+\_\+api}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+Tx\+Int\+Mode\+Set(uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Mode)}{UARTTxIntModeSet(uint32_t ui32Base, uint32_t ui32Mode)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T\+Tx\+Int\+Mode\+Set (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Base, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Mode}
+\end{DoxyParamCaption}
+)}\hypertarget{group__uart__api_gae3b173446db0912f8d04dd1270833169}{}\label{group__uart__api_gae3b173446db0912f8d04dd1270833169}
+Sets the operating mode for the U\+A\+RT transmit interrupt
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the U\+A\+RT port. \\
+\hline
+{\em ui32\+Mode} & is the operating mode for the transmit interrupt. It may be {\bfseries U\+A\+R\+T\+\_\+\+T\+X\+I\+N\+T\+\_\+\+M\+O\+D\+E\+\_\+\+E\+OT} to trigger interrupts when the transmitter is idle or {\bfseries U\+A\+R\+T\+\_\+\+T\+X\+I\+N\+T\+\_\+\+M\+O\+D\+E\+\_\+\+F\+I\+FO} to trigger based on the current transmit F\+I\+FO level.\\
+\hline
+\end{DoxyParams}
+This function allows the mode of the U\+A\+RT transmit interrupt to be set. By default, the transmit interrupt is asserted when the F\+I\+FO level falls past a threshold set via a call to \hyperlink{group__uart__api_gae8dd6aeabd442a4cd231bd618897e503}{U\+A\+R\+T\+F\+I\+F\+O\+Level\+Set()}. Alternatively, if this function is called with {\itshape ui32\+Mode} set to {\bfseries U\+A\+R\+T\+\_\+\+T\+X\+I\+N\+T\+\_\+\+M\+O\+D\+E\+\_\+\+E\+OT}, the transmit interrupt is asserted once the transmitter is completely idle -\/ the transmit F\+I\+FO is empty and all bits, including any stop bits, have cleared the transmitter.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 603 of file uarthal.\+c.
+

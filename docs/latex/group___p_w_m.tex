@@ -1,0 +1,273 @@
+\hypertarget{group___p_w_m}{}\section{P\+WM}
+\label{group___p_w_m}\index{P\+WM@{P\+WM}}
+
+
+Driver for configuring the timer in Pulse Width Modulation mode.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___p_w_m_ga96e506808fe48663a74abcafdcbfdc7e}{P\+W\+M\+P\+E\+R\+I\+OD}~6000
+\item 
+\#define \hyperlink{group___p_w_m_ga6f330c196a65bb05fd5b7fff59d6f62f}{P\+W\+M\+M\+IN}~2000
+\item 
+\#define \hyperlink{group___p_w_m_ga29eaa7ea340aed6c94c8208f548c4ac8}{P\+W\+M\+M\+AX}~4000
+\item 
+\#define \hyperlink{group___p_w_m_ga7a4ad06a2bcb1065209a117ea09bbfbf}{P\+W\+M0}~3000
+\item 
+\#define \hyperlink{group___p_w_m_ga4fda1cf5b4a72bd805a203b9665a155b}{P\+W\+M\+M\+A\+XD}~1000
+\item 
+\#define \hyperlink{group___p_w_m_ga314546c7b69b0cbb81eb8e251790163a}{P\+W\+M\+B\+UF}~300
+\item 
+\#define \hyperlink{group___p_w_m_gaeee77a1eb6566203ee0ff9f73793eef0}{M\+O\+T\+O\+R\+P\+E\+R\+I\+OD}~800
+\item 
+\#define \hyperlink{group___p_w_m_gae1c41fe7d060099ebab9cee16893eac0}{M\+O\+T\+O\+R\+M\+AX}~800
+\item 
+\#define \hyperlink{group___p_w_m_ga1f92d617a268ea424ebbd4e964ed2c7a}{M\+O\+T\+O\+R\+M\+IN}~0
+\item 
+\#define \hyperlink{group___p_w_m_ga4583b6e199cc79c08de94b1406783626}{pwm\+\_\+getservo}(which)~T\+B\+C\+CR\#\#which
+\item 
+\#define \hyperlink{group___p_w_m_ga3377aa8203e3df46d08640cc1c7fae78}{pwm\+\_\+getmotor}(which)~T\+A\+C\+CR\#\#which
+\item 
+\#define \hyperlink{group___p_w_m_ga0f59b97f507f6ddda8b5ba4e641fb015}{P\+W\+M\+\_\+\+W\+A\+IT}~\hyperlink{group___p_w_m_ga354856dbd0205dcf3768b19da8f692d9}{pwm\+\_\+tick} = 0; while (!\hyperlink{group___p_w_m_ga354856dbd0205dcf3768b19da8f692d9}{pwm\+\_\+tick})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___p_w_m_ga1e8fdae3fd7118582ffa427dad05b6e1}{pwm\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___p_w_m_ga5047a45bb0e8e868a84cbe6c6d5f8ec8}{pwm\+\_\+config} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___p_w_m_ga1007676a796e66917174f4aae48672a4}{pwm\+\_\+setservo} (int which, int val)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___p_w_m_ga273dc39cb6630062cb86ca6dcd38c1f9}{pwm\+\_\+setmotor} (int which, int val)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___p_w_m_ga2fbeacc158dbff42bb85bfa3bcac0f21}{pwm\+\_\+nexttick} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___p_w_m_gaec0e6063a08c462c71a366b64ee2947f}{pwm\+\_\+sleep} (int ticks)
+\item 
+int \hyperlink{group___p_w_m_ga34e9c25fc21fdabeafb7fcfa033be383}{pwm\+\_\+test} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___p_w_m_ga769007174508dba2248cdc0a66e888fa}{pwm\+\_\+squiggle} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile char \hyperlink{group___p_w_m_ga354856dbd0205dcf3768b19da8f692d9}{pwm\+\_\+tick}
+\item 
+volatile int \hyperlink{group___p_w_m_ga9e95213338963b42b5a83712d32d3828}{pwm\+\_\+button\+\_\+debounce}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Driver for configuring the timer in Pulse Width Modulation mode. 
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, August 2010 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\index{P\+WM@{P\+WM}!M\+O\+T\+O\+R\+M\+AX@{M\+O\+T\+O\+R\+M\+AX}}
+\index{M\+O\+T\+O\+R\+M\+AX@{M\+O\+T\+O\+R\+M\+AX}!P\+WM@{P\+WM}}
+\subsubsection[{\texorpdfstring{M\+O\+T\+O\+R\+M\+AX}{MOTORMAX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+T\+O\+R\+M\+AX~800}\hypertarget{group___p_w_m_gae1c41fe7d060099ebab9cee16893eac0}{}\label{group___p_w_m_gae1c41fe7d060099ebab9cee16893eac0}
+
+
+Definition at line 23 of file pwm.\+h.
+
+\index{P\+WM@{P\+WM}!M\+O\+T\+O\+R\+M\+IN@{M\+O\+T\+O\+R\+M\+IN}}
+\index{M\+O\+T\+O\+R\+M\+IN@{M\+O\+T\+O\+R\+M\+IN}!P\+WM@{P\+WM}}
+\subsubsection[{\texorpdfstring{M\+O\+T\+O\+R\+M\+IN}{MOTORMIN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+T\+O\+R\+M\+IN~0}\hypertarget{group___p_w_m_ga1f92d617a268ea424ebbd4e964ed2c7a}{}\label{group___p_w_m_ga1f92d617a268ea424ebbd4e964ed2c7a}
+
+
+Definition at line 24 of file pwm.\+h.
+
+\index{P\+WM@{P\+WM}!M\+O\+T\+O\+R\+P\+E\+R\+I\+OD@{M\+O\+T\+O\+R\+P\+E\+R\+I\+OD}}
+\index{M\+O\+T\+O\+R\+P\+E\+R\+I\+OD@{M\+O\+T\+O\+R\+P\+E\+R\+I\+OD}!P\+WM@{P\+WM}}
+\subsubsection[{\texorpdfstring{M\+O\+T\+O\+R\+P\+E\+R\+I\+OD}{MOTORPERIOD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+T\+O\+R\+P\+E\+R\+I\+OD~800}\hypertarget{group___p_w_m_gaeee77a1eb6566203ee0ff9f73793eef0}{}\label{group___p_w_m_gaeee77a1eb6566203ee0ff9f73793eef0}
+
+
+Definition at line 22 of file pwm.\+h.
+
+\index{P\+WM@{P\+WM}!P\+W\+M0@{P\+W\+M0}}
+\index{P\+W\+M0@{P\+W\+M0}!P\+WM@{P\+WM}}
+\subsubsection[{\texorpdfstring{P\+W\+M0}{PWM0}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+W\+M0~3000}\hypertarget{group___p_w_m_ga7a4ad06a2bcb1065209a117ea09bbfbf}{}\label{group___p_w_m_ga7a4ad06a2bcb1065209a117ea09bbfbf}
+
+
+Definition at line 18 of file pwm.\+h.
+
+\index{P\+WM@{P\+WM}!pwm\+\_\+getmotor@{pwm\+\_\+getmotor}}
+\index{pwm\+\_\+getmotor@{pwm\+\_\+getmotor}!P\+WM@{P\+WM}}
+\subsubsection[{\texorpdfstring{pwm\+\_\+getmotor}{pwm_getmotor}}]{\setlength{\rightskip}{0pt plus 5cm}\#define pwm\+\_\+getmotor(
+\begin{DoxyParamCaption}
+\item[{}]{which}
+\end{DoxyParamCaption}
+)~T\+A\+C\+CR\#\#which}\hypertarget{group___p_w_m_ga3377aa8203e3df46d08640cc1c7fae78}{}\label{group___p_w_m_ga3377aa8203e3df46d08640cc1c7fae78}
+
+
+Definition at line 27 of file pwm.\+h.
+
+\index{P\+WM@{P\+WM}!pwm\+\_\+getservo@{pwm\+\_\+getservo}}
+\index{pwm\+\_\+getservo@{pwm\+\_\+getservo}!P\+WM@{P\+WM}}
+\subsubsection[{\texorpdfstring{pwm\+\_\+getservo}{pwm_getservo}}]{\setlength{\rightskip}{0pt plus 5cm}\#define pwm\+\_\+getservo(
+\begin{DoxyParamCaption}
+\item[{}]{which}
+\end{DoxyParamCaption}
+)~T\+B\+C\+CR\#\#which}\hypertarget{group___p_w_m_ga4583b6e199cc79c08de94b1406783626}{}\label{group___p_w_m_ga4583b6e199cc79c08de94b1406783626}
+
+
+Definition at line 26 of file pwm.\+h.
+
+\index{P\+WM@{P\+WM}!P\+W\+M\+\_\+\+W\+A\+IT@{P\+W\+M\+\_\+\+W\+A\+IT}}
+\index{P\+W\+M\+\_\+\+W\+A\+IT@{P\+W\+M\+\_\+\+W\+A\+IT}!P\+WM@{P\+WM}}
+\subsubsection[{\texorpdfstring{P\+W\+M\+\_\+\+W\+A\+IT}{PWM_WAIT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+W\+M\+\_\+\+W\+A\+IT~{\bf pwm\+\_\+tick} = 0; while (!{\bf pwm\+\_\+tick})}\hypertarget{group___p_w_m_ga0f59b97f507f6ddda8b5ba4e641fb015}{}\label{group___p_w_m_ga0f59b97f507f6ddda8b5ba4e641fb015}
+
+
+Definition at line 29 of file pwm.\+h.
+
+\index{P\+WM@{P\+WM}!P\+W\+M\+B\+UF@{P\+W\+M\+B\+UF}}
+\index{P\+W\+M\+B\+UF@{P\+W\+M\+B\+UF}!P\+WM@{P\+WM}}
+\subsubsection[{\texorpdfstring{P\+W\+M\+B\+UF}{PWMBUF}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+W\+M\+B\+UF~300}\hypertarget{group___p_w_m_ga314546c7b69b0cbb81eb8e251790163a}{}\label{group___p_w_m_ga314546c7b69b0cbb81eb8e251790163a}
+
+
+Definition at line 20 of file pwm.\+h.
+
+\index{P\+WM@{P\+WM}!P\+W\+M\+M\+AX@{P\+W\+M\+M\+AX}}
+\index{P\+W\+M\+M\+AX@{P\+W\+M\+M\+AX}!P\+WM@{P\+WM}}
+\subsubsection[{\texorpdfstring{P\+W\+M\+M\+AX}{PWMMAX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+W\+M\+M\+AX~4000}\hypertarget{group___p_w_m_ga29eaa7ea340aed6c94c8208f548c4ac8}{}\label{group___p_w_m_ga29eaa7ea340aed6c94c8208f548c4ac8}
+
+
+Definition at line 17 of file pwm.\+h.
+
+\index{P\+WM@{P\+WM}!P\+W\+M\+M\+A\+XD@{P\+W\+M\+M\+A\+XD}}
+\index{P\+W\+M\+M\+A\+XD@{P\+W\+M\+M\+A\+XD}!P\+WM@{P\+WM}}
+\subsubsection[{\texorpdfstring{P\+W\+M\+M\+A\+XD}{PWMMAXD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+W\+M\+M\+A\+XD~1000}\hypertarget{group___p_w_m_ga4fda1cf5b4a72bd805a203b9665a155b}{}\label{group___p_w_m_ga4fda1cf5b4a72bd805a203b9665a155b}
+
+
+Definition at line 19 of file pwm.\+h.
+
+\index{P\+WM@{P\+WM}!P\+W\+M\+M\+IN@{P\+W\+M\+M\+IN}}
+\index{P\+W\+M\+M\+IN@{P\+W\+M\+M\+IN}!P\+WM@{P\+WM}}
+\subsubsection[{\texorpdfstring{P\+W\+M\+M\+IN}{PWMMIN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+W\+M\+M\+IN~2000}\hypertarget{group___p_w_m_ga6f330c196a65bb05fd5b7fff59d6f62f}{}\label{group___p_w_m_ga6f330c196a65bb05fd5b7fff59d6f62f}
+
+
+Definition at line 16 of file pwm.\+h.
+
+\index{P\+WM@{P\+WM}!P\+W\+M\+P\+E\+R\+I\+OD@{P\+W\+M\+P\+E\+R\+I\+OD}}
+\index{P\+W\+M\+P\+E\+R\+I\+OD@{P\+W\+M\+P\+E\+R\+I\+OD}!P\+WM@{P\+WM}}
+\subsubsection[{\texorpdfstring{P\+W\+M\+P\+E\+R\+I\+OD}{PWMPERIOD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+W\+M\+P\+E\+R\+I\+OD~6000}\hypertarget{group___p_w_m_ga96e506808fe48663a74abcafdcbfdc7e}{}\label{group___p_w_m_ga96e506808fe48663a74abcafdcbfdc7e}
+
+
+Definition at line 15 of file pwm.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{P\+WM@{P\+WM}!pwm\+\_\+config@{pwm\+\_\+config}}
+\index{pwm\+\_\+config@{pwm\+\_\+config}!P\+WM@{P\+WM}}
+\subsubsection[{\texorpdfstring{pwm\+\_\+config(void)}{pwm_config(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} pwm\+\_\+config (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___p_w_m_ga5047a45bb0e8e868a84cbe6c6d5f8ec8}{}\label{group___p_w_m_ga5047a45bb0e8e868a84cbe6c6d5f8ec8}
+
+
+Definition at line 37 of file pwm.\+c.
+
+\index{P\+WM@{P\+WM}!pwm\+\_\+init@{pwm\+\_\+init}}
+\index{pwm\+\_\+init@{pwm\+\_\+init}!P\+WM@{P\+WM}}
+\subsubsection[{\texorpdfstring{pwm\+\_\+init(void)}{pwm_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} pwm\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___p_w_m_ga1e8fdae3fd7118582ffa427dad05b6e1}{}\label{group___p_w_m_ga1e8fdae3fd7118582ffa427dad05b6e1}
+
+
+Definition at line 4 of file pwm.\+c.
+
+\index{P\+WM@{P\+WM}!pwm\+\_\+nexttick@{pwm\+\_\+nexttick}}
+\index{pwm\+\_\+nexttick@{pwm\+\_\+nexttick}!P\+WM@{P\+WM}}
+\subsubsection[{\texorpdfstring{pwm\+\_\+nexttick(void)}{pwm_nexttick(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} pwm\+\_\+nexttick (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___p_w_m_ga2fbeacc158dbff42bb85bfa3bcac0f21}{}\label{group___p_w_m_ga2fbeacc158dbff42bb85bfa3bcac0f21}
+
+
+Definition at line 78 of file pwm.\+c.
+
+\index{P\+WM@{P\+WM}!pwm\+\_\+setmotor@{pwm\+\_\+setmotor}}
+\index{pwm\+\_\+setmotor@{pwm\+\_\+setmotor}!P\+WM@{P\+WM}}
+\subsubsection[{\texorpdfstring{pwm\+\_\+setmotor(int which, int val)}{pwm_setmotor(int which, int val)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} pwm\+\_\+setmotor (
+\begin{DoxyParamCaption}
+\item[{int}]{which, }
+\item[{int}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{group___p_w_m_ga273dc39cb6630062cb86ca6dcd38c1f9}{}\label{group___p_w_m_ga273dc39cb6630062cb86ca6dcd38c1f9}
+
+
+Definition at line 65 of file pwm.\+c.
+
+\index{P\+WM@{P\+WM}!pwm\+\_\+setservo@{pwm\+\_\+setservo}}
+\index{pwm\+\_\+setservo@{pwm\+\_\+setservo}!P\+WM@{P\+WM}}
+\subsubsection[{\texorpdfstring{pwm\+\_\+setservo(int which, int val)}{pwm_setservo(int which, int val)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} pwm\+\_\+setservo (
+\begin{DoxyParamCaption}
+\item[{int}]{which, }
+\item[{int}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{group___p_w_m_ga1007676a796e66917174f4aae48672a4}{}\label{group___p_w_m_ga1007676a796e66917174f4aae48672a4}
+
+
+Definition at line 45 of file pwm.\+c.
+
+\index{P\+WM@{P\+WM}!pwm\+\_\+sleep@{pwm\+\_\+sleep}}
+\index{pwm\+\_\+sleep@{pwm\+\_\+sleep}!P\+WM@{P\+WM}}
+\subsubsection[{\texorpdfstring{pwm\+\_\+sleep(int ticks)}{pwm_sleep(int ticks)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} pwm\+\_\+sleep (
+\begin{DoxyParamCaption}
+\item[{int}]{ticks}
+\end{DoxyParamCaption}
+)}\hypertarget{group___p_w_m_gaec0e6063a08c462c71a366b64ee2947f}{}\label{group___p_w_m_gaec0e6063a08c462c71a366b64ee2947f}
+
+
+Definition at line 84 of file pwm.\+c.
+
+\index{P\+WM@{P\+WM}!pwm\+\_\+squiggle@{pwm\+\_\+squiggle}}
+\index{pwm\+\_\+squiggle@{pwm\+\_\+squiggle}!P\+WM@{P\+WM}}
+\subsubsection[{\texorpdfstring{pwm\+\_\+squiggle(void)}{pwm_squiggle(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} pwm\+\_\+squiggle (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___p_w_m_ga769007174508dba2248cdc0a66e888fa}{}\label{group___p_w_m_ga769007174508dba2248cdc0a66e888fa}
+
+
+Definition at line 90 of file pwm.\+c.
+
+\index{P\+WM@{P\+WM}!pwm\+\_\+test@{pwm\+\_\+test}}
+\index{pwm\+\_\+test@{pwm\+\_\+test}!P\+WM@{P\+WM}}
+\subsubsection[{\texorpdfstring{pwm\+\_\+test(void)}{pwm_test(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int pwm\+\_\+test (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___p_w_m_ga34e9c25fc21fdabeafb7fcfa033be383}{}\label{group___p_w_m_ga34e9c25fc21fdabeafb7fcfa033be383}
+
+
+Definition at line 33 of file pwm.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{P\+WM@{P\+WM}!pwm\+\_\+button\+\_\+debounce@{pwm\+\_\+button\+\_\+debounce}}
+\index{pwm\+\_\+button\+\_\+debounce@{pwm\+\_\+button\+\_\+debounce}!P\+WM@{P\+WM}}
+\subsubsection[{\texorpdfstring{pwm\+\_\+button\+\_\+debounce}{pwm_button_debounce}}]{\setlength{\rightskip}{0pt plus 5cm}volatile int pwm\+\_\+button\+\_\+debounce}\hypertarget{group___p_w_m_ga9e95213338963b42b5a83712d32d3828}{}\label{group___p_w_m_ga9e95213338963b42b5a83712d32d3828}
+
+
+Definition at line 36 of file pwm.\+h.
+
+\index{P\+WM@{P\+WM}!pwm\+\_\+tick@{pwm\+\_\+tick}}
+\index{pwm\+\_\+tick@{pwm\+\_\+tick}!P\+WM@{P\+WM}}
+\subsubsection[{\texorpdfstring{pwm\+\_\+tick}{pwm_tick}}]{\setlength{\rightskip}{0pt plus 5cm}volatile char pwm\+\_\+tick}\hypertarget{group___p_w_m_ga354856dbd0205dcf3768b19da8f692d9}{}\label{group___p_w_m_ga354856dbd0205dcf3768b19da8f692d9}
+
+
+Definition at line 35 of file pwm.\+h.
+

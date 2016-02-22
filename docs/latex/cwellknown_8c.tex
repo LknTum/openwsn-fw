@@ -1,0 +1,79 @@
+\hypertarget{cwellknown_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openapps/cwellknown/cwellknown.c File Reference}
+\label{cwellknown_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openapps/cwellknown/cwellknown.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openapps/cwellknown/cwellknown.\+c}}
+{\ttfamily \#include \char`\"{}opendefs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cwellknown.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}opencoap.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}openqueue.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}packetfunctions.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}openserial.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}idmanager.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{cwellknown_8c_a9de0f01bdd2f6fc4b1722f09dd4ec211}{cwellknown\+\_\+receive} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{structcoap__header__iht}{coap\+\_\+header\+\_\+iht} $\ast$coap\+\_\+header, \hyperlink{structcoap__option__iht}{coap\+\_\+option\+\_\+iht} $\ast$coap\+\_\+options)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{cwellknown_8c_a5c780b0de9b1c2be9c34b3731fcc36e3}{cwellknown\+\_\+send\+Done} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{disk_8c_ad018a3100b2dabad325a0800152db297}{error})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__cwellknown_gae91f4553a4877ff1de90571a965633e0}{cwellknown\+\_\+init} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structcwellknown__vars__t}{cwellknown\+\_\+vars\+\_\+t} \hyperlink{cwellknown_8c_ac3704f6a0e624aecf3fd752c8c43b184}{cwellknown\+\_\+vars}
+\item 
+const \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{cwellknown_8c_a1d79144795c6b92429954becbc8c8986}{cwellknown\+\_\+path0} \mbox{[}$\,$\mbox{]} = \char`\"{}.well-\/known\char`\"{}
+\item 
+const \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{cwellknown_8c_afacd12553809d10c7e82ee80a9cc169c}{cwellknown\+\_\+path1} \mbox{[}$\,$\mbox{]} = \char`\"{}core\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{cwellknown.\+c@{cwellknown.\+c}!cwellknown\+\_\+receive@{cwellknown\+\_\+receive}}
+\index{cwellknown\+\_\+receive@{cwellknown\+\_\+receive}!cwellknown.\+c@{cwellknown.\+c}}
+\subsubsection[{\texorpdfstring{cwellknown\+\_\+receive(\+Open\+Queue\+Entry\+\_\+t $\ast$msg, coap\+\_\+header\+\_\+iht $\ast$coap\+\_\+header, coap\+\_\+option\+\_\+iht $\ast$coap\+\_\+options)}{cwellknown_receive(OpenQueueEntry_t *msg, coap_header_iht *coap_header, coap_option_iht *coap_options)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf owerror\+\_\+t} cwellknown\+\_\+receive (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg, }
+\item[{{\bf coap\+\_\+header\+\_\+iht} $\ast$}]{coap\+\_\+header, }
+\item[{{\bf coap\+\_\+option\+\_\+iht} $\ast$}]{coap\+\_\+options}
+\end{DoxyParamCaption}
+)}\hypertarget{cwellknown_8c_a9de0f01bdd2f6fc4b1722f09dd4ec211}{}\label{cwellknown_8c_a9de0f01bdd2f6fc4b1722f09dd4ec211}
+
+
+Definition at line 49 of file cwellknown.\+c.
+
+\index{cwellknown.\+c@{cwellknown.\+c}!cwellknown\+\_\+send\+Done@{cwellknown\+\_\+send\+Done}}
+\index{cwellknown\+\_\+send\+Done@{cwellknown\+\_\+send\+Done}!cwellknown.\+c@{cwellknown.\+c}}
+\subsubsection[{\texorpdfstring{cwellknown\+\_\+send\+Done(\+Open\+Queue\+Entry\+\_\+t $\ast$msg, owerror\+\_\+t error)}{cwellknown_sendDone(OpenQueueEntry_t *msg, owerror_t error)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} cwellknown\+\_\+send\+Done (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg, }
+\item[{{\bf owerror\+\_\+t}}]{error}
+\end{DoxyParamCaption}
+)}\hypertarget{cwellknown_8c_a5c780b0de9b1c2be9c34b3731fcc36e3}{}\label{cwellknown_8c_a5c780b0de9b1c2be9c34b3731fcc36e3}
+
+
+Definition at line 87 of file cwellknown.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{cwellknown.\+c@{cwellknown.\+c}!cwellknown\+\_\+path0@{cwellknown\+\_\+path0}}
+\index{cwellknown\+\_\+path0@{cwellknown\+\_\+path0}!cwellknown.\+c@{cwellknown.\+c}}
+\subsubsection[{\texorpdfstring{cwellknown\+\_\+path0}{cwellknown_path0}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint8\+\_\+t} cwellknown\+\_\+path0\mbox{[}$\,$\mbox{]} = \char`\"{}.well-\/known\char`\"{}}\hypertarget{cwellknown_8c_a1d79144795c6b92429954becbc8c8986}{}\label{cwellknown_8c_a1d79144795c6b92429954becbc8c8986}
+
+
+Definition at line 13 of file cwellknown.\+c.
+
+\index{cwellknown.\+c@{cwellknown.\+c}!cwellknown\+\_\+path1@{cwellknown\+\_\+path1}}
+\index{cwellknown\+\_\+path1@{cwellknown\+\_\+path1}!cwellknown.\+c@{cwellknown.\+c}}
+\subsubsection[{\texorpdfstring{cwellknown\+\_\+path1}{cwellknown_path1}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint8\+\_\+t} cwellknown\+\_\+path1\mbox{[}$\,$\mbox{]} = \char`\"{}core\char`\"{}}\hypertarget{cwellknown_8c_afacd12553809d10c7e82ee80a9cc169c}{}\label{cwellknown_8c_afacd12553809d10c7e82ee80a9cc169c}
+
+
+Definition at line 14 of file cwellknown.\+c.
+
+\index{cwellknown.\+c@{cwellknown.\+c}!cwellknown\+\_\+vars@{cwellknown\+\_\+vars}}
+\index{cwellknown\+\_\+vars@{cwellknown\+\_\+vars}!cwellknown.\+c@{cwellknown.\+c}}
+\subsubsection[{\texorpdfstring{cwellknown\+\_\+vars}{cwellknown_vars}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cwellknown\+\_\+vars\+\_\+t} cwellknown\+\_\+vars}\hypertarget{cwellknown_8c_ac3704f6a0e624aecf3fd752c8c43b184}{}\label{cwellknown_8c_ac3704f6a0e624aecf3fd752c8c43b184}
+
+
+Definition at line 11 of file cwellknown.\+c.
+

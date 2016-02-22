@@ -1,0 +1,174 @@
+\hypertarget{test__imu__radio_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/gina/old/test\+\_\+imu\+\_\+radio.c File Reference}
+\label{test__imu__radio_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/gina/old/test\+\_\+imu\+\_\+radio.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/gina/old/test\+\_\+imu\+\_\+radio.\+c}}
+{\ttfamily \#include \char`\"{}gina.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leds.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gyro.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}timers.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}large\+\_\+range\+\_\+accel.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}magnetometer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sensitive\+\_\+accel\+\_\+temperature.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}opendefs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}scheduler.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}packetfunctions.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}openqueue.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}radio.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{test__imu__radio_8c_ae3a7e900ec065a326cefef49195f078b}{task\+\_\+application\+\_\+imu\+\_\+radio} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} input)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{test__imu__radio_8c_a6288eba0f8e8ad3ab1544ad731eb7667}{main} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em This is a standalone test program for the L\+E\+Ds and 32k\+Hz crystal of the G\+I\+NA board. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{test__imu__radio_8c_afcddffa630b9262965dd888b5500a7d0}{stupidmac\+\_\+send\+Done} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$pkt, error\+\_\+t \hyperlink{disk_8c_ad018a3100b2dabad325a0800152db297}{error})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{test__imu__radio_8c_a53b925c895fdf10986db21d1ec4893d7}{radio\+\_\+packet\+\_\+received} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$packet\+Received)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$ \hyperlink{test__imu__radio_8c_aec5e9b2bf628232cdda06a77ed3cc32f}{test\+Imu\+Radiopacket\+To\+Send}
+\begin{DoxyCompactList}\small\item\em This is a standalone program which retrieves all the I\+MU sensors values on the G\+I\+N\+A2.\+2b/c board. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{test__imu__radio_8c_a0480b812cba9c1d9c71a5fb1071bd0fc}{counter}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{test\+\_\+imu\+\_\+radio.\+c@{test\+\_\+imu\+\_\+radio.\+c}!main@{main}}
+\index{main@{main}!test\+\_\+imu\+\_\+radio.\+c@{test\+\_\+imu\+\_\+radio.\+c}}
+\subsubsection[{\texorpdfstring{main(void)}{main(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} main (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test__imu__radio_8c_a6288eba0f8e8ad3ab1544ad731eb7667}{}\label{test__imu__radio_8c_a6288eba0f8e8ad3ab1544ad731eb7667}
+
+
+This is a standalone test program for the L\+E\+Ds and 32k\+Hz crystal of the G\+I\+NA board. 
+
+\begin{DoxyNote}{Note}
+The term \char`\"{}crystal\char`\"{} is usually written \char`\"{}\+X\+T\+A\+L\char`\"{} by embedded geeks.
+\end{DoxyNote}
+Download the program to a G\+I\+NA board, run it, you should see the 4 L\+E\+Ds blinking in sequence with a 500ms period.
+
+The digital outputs are\+:
+\begin{DoxyItemize}
+\item P2.\+0\+: red L\+ED
+\item P2.\+1\+: green L\+ED
+\item P2.\+2\+: blue L\+ED
+\item P2.\+3\+: red L\+ED
+\end{DoxyItemize}
+
+The \char`\"{}inputs\char`\"{} are\+:
+\begin{DoxyItemize}
+\item X\+IN, X\+O\+UT\+: 32768\+Hz crystal oscillator
+\end{DoxyItemize}
+
+The debug pins are\+:
+\begin{DoxyItemize}
+\item P5.\+6 output the A\+C\+LK (should be 32768\+Hz)
+\item P1.\+1 toggles when interrupt T\+I\+M\+E\+R\+A0\+\_\+\+V\+E\+C\+T\+OR fires
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, February 2012 The program starts executing here.
+\end{DoxyAuthor}
+This is a standalone test program for the L\+E\+Ds and 32k\+Hz crystal of the G\+I\+NA board.
+
+The digital U\+A\+RT interface is\+:
+\begin{DoxyItemize}
+\item P3.\+7\+: A1\+\_\+\+S\+O\+M\+I\+\_\+\+RX
+\item P3.\+8\+: A1\+\_\+\+S\+O\+M\+I\+\_\+\+TX
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, February 2012 The program starts executing here. 
+\end{DoxyAuthor}
+
+
+Definition at line 52 of file test\+\_\+imu\+\_\+radio.\+c.
+
+\index{test\+\_\+imu\+\_\+radio.\+c@{test\+\_\+imu\+\_\+radio.\+c}!radio\+\_\+packet\+\_\+received@{radio\+\_\+packet\+\_\+received}}
+\index{radio\+\_\+packet\+\_\+received@{radio\+\_\+packet\+\_\+received}!test\+\_\+imu\+\_\+radio.\+c@{test\+\_\+imu\+\_\+radio.\+c}}
+\subsubsection[{\texorpdfstring{radio\+\_\+packet\+\_\+received(\+Open\+Queue\+Entry\+\_\+t $\ast$packet\+Received)}{radio_packet_received(OpenQueueEntry_t *packetReceived)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} radio\+\_\+packet\+\_\+received (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{packet\+Received}
+\end{DoxyParamCaption}
+)}\hypertarget{test__imu__radio_8c_a53b925c895fdf10986db21d1ec4893d7}{}\label{test__imu__radio_8c_a53b925c895fdf10986db21d1ec4893d7}
+
+
+Definition at line 121 of file test\+\_\+imu\+\_\+radio.\+c.
+
+\index{test\+\_\+imu\+\_\+radio.\+c@{test\+\_\+imu\+\_\+radio.\+c}!stupidmac\+\_\+send\+Done@{stupidmac\+\_\+send\+Done}}
+\index{stupidmac\+\_\+send\+Done@{stupidmac\+\_\+send\+Done}!test\+\_\+imu\+\_\+radio.\+c@{test\+\_\+imu\+\_\+radio.\+c}}
+\subsubsection[{\texorpdfstring{stupidmac\+\_\+send\+Done(\+Open\+Queue\+Entry\+\_\+t $\ast$pkt, error\+\_\+t error)}{stupidmac_sendDone(OpenQueueEntry_t *pkt, error_t error)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} stupidmac\+\_\+send\+Done (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{pkt, }
+\item[{error\+\_\+t}]{error}
+\end{DoxyParamCaption}
+)}\hypertarget{test__imu__radio_8c_afcddffa630b9262965dd888b5500a7d0}{}\label{test__imu__radio_8c_afcddffa630b9262965dd888b5500a7d0}
+
+
+Definition at line 116 of file test\+\_\+imu\+\_\+radio.\+c.
+
+\index{test\+\_\+imu\+\_\+radio.\+c@{test\+\_\+imu\+\_\+radio.\+c}!task\+\_\+application\+\_\+imu\+\_\+radio@{task\+\_\+application\+\_\+imu\+\_\+radio}}
+\index{task\+\_\+application\+\_\+imu\+\_\+radio@{task\+\_\+application\+\_\+imu\+\_\+radio}!test\+\_\+imu\+\_\+radio.\+c@{test\+\_\+imu\+\_\+radio.\+c}}
+\subsubsection[{\texorpdfstring{task\+\_\+application\+\_\+imu\+\_\+radio(uint16\+\_\+t input)}{task_application_imu_radio(uint16_t input)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} task\+\_\+application\+\_\+imu\+\_\+radio (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t}}]{input}
+\end{DoxyParamCaption}
+)}\hypertarget{test__imu__radio_8c_ae3a7e900ec065a326cefef49195f078b}{}\label{test__imu__radio_8c_ae3a7e900ec065a326cefef49195f078b}
+
+
+Definition at line 86 of file test\+\_\+imu\+\_\+radio.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{test\+\_\+imu\+\_\+radio.\+c@{test\+\_\+imu\+\_\+radio.\+c}!counter@{counter}}
+\index{counter@{counter}!test\+\_\+imu\+\_\+radio.\+c@{test\+\_\+imu\+\_\+radio.\+c}}
+\subsubsection[{\texorpdfstring{counter}{counter}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} counter}\hypertarget{test__imu__radio_8c_a0480b812cba9c1d9c71a5fb1071bd0fc}{}\label{test__imu__radio_8c_a0480b812cba9c1d9c71a5fb1071bd0fc}
+
+
+Definition at line 49 of file test\+\_\+imu\+\_\+radio.\+c.
+
+\index{test\+\_\+imu\+\_\+radio.\+c@{test\+\_\+imu\+\_\+radio.\+c}!test\+Imu\+Radiopacket\+To\+Send@{test\+Imu\+Radiopacket\+To\+Send}}
+\index{test\+Imu\+Radiopacket\+To\+Send@{test\+Imu\+Radiopacket\+To\+Send}!test\+\_\+imu\+\_\+radio.\+c@{test\+\_\+imu\+\_\+radio.\+c}}
+\subsubsection[{\texorpdfstring{test\+Imu\+Radiopacket\+To\+Send}{testImuRadiopacketToSend}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Open\+Queue\+Entry\+\_\+t}$\ast$ test\+Imu\+Radiopacket\+To\+Send}\hypertarget{test__imu__radio_8c_aec5e9b2bf628232cdda06a77ed3cc32f}{}\label{test__imu__radio_8c_aec5e9b2bf628232cdda06a77ed3cc32f}
+
+
+This is a standalone program which retrieves all the I\+MU sensors values on the G\+I\+N\+A2.\+2b/c board. 
+
+That is, gyro, large range accel, magnetometer, sensitive accel, temperature and sends this data over the radio (30 byte payload, no headers). Download the program to a G\+I\+NA board, run it, and use a sniffer to see the packets fly through the air.
+
+The digital connection to the gyro, large range accel and magnetometeris is done through a two-\/wire I2C serial bus\+:
+\begin{DoxyItemize}
+\item P5.\+2\+: B1\+\_\+\+I2\+C\+\_\+\+S\+CL
+\item P5.\+1\+: B1\+\_\+\+I2\+C\+\_\+\+S\+DA
+\end{DoxyItemize}
+
+In addition\+:
+\begin{DoxyItemize}
+\item P1.\+5\+: interrupt pin from the gyro (not used)
+\item P1.\+7\+: interrupt pin from the large range accelerometer (not used)
+\item P5.\+4\+: output to configure the I2C mode of the large range accelerometer (keep high)
+\end{DoxyItemize}
+
+The debug pins are\+:
+\begin{DoxyItemize}
+\item P1.\+1\+: toggles at every measurement
+\item P1.\+2\+: on during initial configuration and pulses at a new measurement
+\item P1.\+3\+: toggles upon an U\+S\+C\+I\+A\+B1\+T\+X\+\_\+\+V\+E\+C\+T\+OR interrupt (in ti\+\_\+i2c.\+c)
+\item P1.\+4\+: toggles upon an U\+S\+C\+I\+A\+B1\+R\+X\+\_\+\+V\+E\+C\+T\+OR interrupt (in ti\+\_\+i2c.\+c)
+\end{DoxyItemize}
+
+Speed\+:
+\begin{DoxyItemize}
+\item one measurement every $\sim$2.787ms
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, August 2010 
+\end{DoxyAuthor}
+
+
+Definition at line 48 of file test\+\_\+imu\+\_\+radio.\+c.
+
