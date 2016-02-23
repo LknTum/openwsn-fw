@@ -1,0 +1,130 @@
+\hypertarget{agilefox_2flash_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/agilefox/flash.c File Reference}
+\label{agilefox_2flash_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/agilefox/flash.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/agilefox/flash.\+c}}
+{\ttfamily \#include \char`\"{}stm32f10x\+\_\+lib.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}flash.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leds.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stdint.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}string.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{agilefox_2flash_8c_a4394326cae1c8f63e68f25db0bb53e41}{I\+D\+\_\+\+A\+D\+D\+R\+E\+SS}~0x1\+F\+F\+F\+F7\+E8
+\begin{DoxyCompactList}\small\item\em openmote\+S\+T\+M32 definition of the \char`\"{}leds\char`\"{} bsp module. \end{DoxyCompactList}\item 
+\#define \hyperlink{agilefox_2flash_8c_a74cd4c8a601dffc9976cb2016f09dd0d}{I\+D\+\_\+\+L\+E\+N\+G\+TH}~8
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2flash_8c_a27234c7df7c83098e2a269200277dc57}{flash\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em openmote\+S\+T\+M32 definition of the F\+L\+A\+SH. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2flash_8c_ab0609325d694fd47f05c38cb6ec678ea}{flash\+\_\+write\+\_\+\+ID} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2flash_8c_abcee53e40a9034579be8db4fc781f54b}{flash\+\_\+read\+\_\+\+ID} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2flash_8c_a42efad4493c7dafdfaf7a1e353a99c05}{flash\+\_\+get\+ID} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$address)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{agilefox_2flash_8c_a1f7d4f7dc49d64e8ffe1ff2e385657e5}{address\+To\+Write} \mbox{[}\hyperlink{openmotestm_201bsp__flash_2application_201bsp__flash_8c_a74cd4c8a601dffc9976cb2016f09dd0d}{I\+D\+\_\+\+L\+E\+N\+G\+TH}\mbox{]}
+\begin{DoxyCompactList}\small\item\em This is a program which shows how to use the bsp modules for the board and leds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{agilefox/flash.\+c@{agilefox/flash.\+c}!I\+D\+\_\+\+A\+D\+D\+R\+E\+SS@{I\+D\+\_\+\+A\+D\+D\+R\+E\+SS}}
+\index{I\+D\+\_\+\+A\+D\+D\+R\+E\+SS@{I\+D\+\_\+\+A\+D\+D\+R\+E\+SS}!agilefox/flash.\+c@{agilefox/flash.\+c}}
+\subsubsection[{\texorpdfstring{I\+D\+\_\+\+A\+D\+D\+R\+E\+SS}{ID_ADDRESS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+D\+\_\+\+A\+D\+D\+R\+E\+SS~0x1\+F\+F\+F\+F7\+E8}\hypertarget{agilefox_2flash_8c_a4394326cae1c8f63e68f25db0bb53e41}{}\label{agilefox_2flash_8c_a4394326cae1c8f63e68f25db0bb53e41}
+
+
+openmote\+S\+T\+M32 definition of the \char`\"{}leds\char`\"{} bsp module. 
+
+\begin{DoxyAuthor}{Author}
+Chang Tengfei \href{mailto:tengfei.chang@gmail.com}{\tt tengfei.\+chang@gmail.\+com}, July 2012. 
+\end{DoxyAuthor}
+
+
+Definition at line 15 of file flash.\+c.
+
+\index{agilefox/flash.\+c@{agilefox/flash.\+c}!I\+D\+\_\+\+L\+E\+N\+G\+TH@{I\+D\+\_\+\+L\+E\+N\+G\+TH}}
+\index{I\+D\+\_\+\+L\+E\+N\+G\+TH@{I\+D\+\_\+\+L\+E\+N\+G\+TH}!agilefox/flash.\+c@{agilefox/flash.\+c}}
+\subsubsection[{\texorpdfstring{I\+D\+\_\+\+L\+E\+N\+G\+TH}{ID_LENGTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+D\+\_\+\+L\+E\+N\+G\+TH~8}\hypertarget{agilefox_2flash_8c_a74cd4c8a601dffc9976cb2016f09dd0d}{}\label{agilefox_2flash_8c_a74cd4c8a601dffc9976cb2016f09dd0d}
+
+
+Definition at line 16 of file flash.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{agilefox/flash.\+c@{agilefox/flash.\+c}!flash\+\_\+get\+ID@{flash\+\_\+get\+ID}}
+\index{flash\+\_\+get\+ID@{flash\+\_\+get\+ID}!agilefox/flash.\+c@{agilefox/flash.\+c}}
+\subsubsection[{\texorpdfstring{flash\+\_\+get\+I\+D(uint8\+\_\+t $\ast$address)}{flash_getID(uint8_t *address)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} flash\+\_\+get\+ID (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t} $\ast$}]{address}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2flash_8c_a42efad4493c7dafdfaf7a1e353a99c05}{}\label{agilefox_2flash_8c_a42efad4493c7dafdfaf7a1e353a99c05}
+
+
+Definition at line 52 of file flash.\+c.
+
+\index{agilefox/flash.\+c@{agilefox/flash.\+c}!flash\+\_\+init@{flash\+\_\+init}}
+\index{flash\+\_\+init@{flash\+\_\+init}!agilefox/flash.\+c@{agilefox/flash.\+c}}
+\subsubsection[{\texorpdfstring{flash\+\_\+init()}{flash_init()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} flash\+\_\+init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2flash_8c_a27234c7df7c83098e2a269200277dc57}{}\label{agilefox_2flash_8c_a27234c7df7c83098e2a269200277dc57}
+
+
+openmote\+S\+T\+M32 definition of the F\+L\+A\+SH. 
+
+\begin{DoxyAuthor}{Author}
+Chang Tengfei \href{mailto:tengfei.chang@gmail.com}{\tt tengfei.\+chang@gmail.\+com}, July 2012. 
+\end{DoxyAuthor}
+
+
+Definition at line 25 of file flash.\+c.
+
+\index{agilefox/flash.\+c@{agilefox/flash.\+c}!flash\+\_\+read\+\_\+\+ID@{flash\+\_\+read\+\_\+\+ID}}
+\index{flash\+\_\+read\+\_\+\+ID@{flash\+\_\+read\+\_\+\+ID}!agilefox/flash.\+c@{agilefox/flash.\+c}}
+\subsubsection[{\texorpdfstring{flash\+\_\+read\+\_\+\+I\+D()}{flash_read_ID()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} flash\+\_\+read\+\_\+\+ID (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2flash_8c_abcee53e40a9034579be8db4fc781f54b}{}\label{agilefox_2flash_8c_abcee53e40a9034579be8db4fc781f54b}
+
+
+Definition at line 43 of file flash.\+c.
+
+\index{agilefox/flash.\+c@{agilefox/flash.\+c}!flash\+\_\+write\+\_\+\+ID@{flash\+\_\+write\+\_\+\+ID}}
+\index{flash\+\_\+write\+\_\+\+ID@{flash\+\_\+write\+\_\+\+ID}!agilefox/flash.\+c@{agilefox/flash.\+c}}
+\subsubsection[{\texorpdfstring{flash\+\_\+write\+\_\+\+I\+D()}{flash_write_ID()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} flash\+\_\+write\+\_\+\+ID (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2flash_8c_ab0609325d694fd47f05c38cb6ec678ea}{}\label{agilefox_2flash_8c_ab0609325d694fd47f05c38cb6ec678ea}
+
+
+Definition at line 33 of file flash.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{agilefox/flash.\+c@{agilefox/flash.\+c}!address\+To\+Write@{address\+To\+Write}}
+\index{address\+To\+Write@{address\+To\+Write}!agilefox/flash.\+c@{agilefox/flash.\+c}}
+\subsubsection[{\texorpdfstring{address\+To\+Write}{addressToWrite}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} address\+To\+Write\mbox{[}{\bf I\+D\+\_\+\+L\+E\+N\+G\+TH}\mbox{]}}\hypertarget{agilefox_2flash_8c_a1f7d4f7dc49d64e8ffe1ff2e385657e5}{}\label{agilefox_2flash_8c_a1f7d4f7dc49d64e8ffe1ff2e385657e5}
+
+
+This is a program which shows how to use the bsp modules for the board and leds. 
+
+\begin{DoxyNote}{Note}
+\+: Since the bsp modules for different platforms have the same declaration, you can use this project with any platform.
+\end{DoxyNote}
+Load this program on your boards. The L\+E\+Ds should start blinking furiously.
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, February 2012 
+\end{DoxyAuthor}
+
+
+Definition at line 19 of file flash.\+c.
+

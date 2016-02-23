@@ -1,0 +1,177 @@
+\hypertarget{radiotimer__obj_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/python/radiotimer\+\_\+obj.c File Reference}
+\label{radiotimer__obj_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/python/radiotimer\+\_\+obj.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/python/radiotimer\+\_\+obj.\+c}}
+{\ttfamily \#include \char`\"{}radiotimer\+\_\+obj.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{radiotimer__obj_8c_a0021d2738cf47c0e08d4a17cafde0cd8}{radiotimer\+\_\+set\+Overflow\+Cb} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self, \hyperlink{group__radiotimer_ga62b602325e65023c91b784f20cd2d6bc}{radiotimer\+\_\+compare\+\_\+cbt} cb)
+\begin{DoxyCompactList}\small\item\em Python-\/specific definition of the \char`\"{}radiotimer\char`\"{} bsp module. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{radiotimer__obj_8c_a6bfad24cbb8b898878178da285ac8417}{radiotimer\+\_\+set\+Compare\+Cb} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self, \hyperlink{group__radiotimer_ga62b602325e65023c91b784f20cd2d6bc}{radiotimer\+\_\+compare\+\_\+cbt} cb)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{radiotimer__obj_8c_a0a0e94efebbb9646d6e77e14a7291b59}{radiotimer\+\_\+init} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{radiotimer__obj_8c_a0c67c13c9eca3e75bbb9dabfd660abe2}{radiotimer\+\_\+start} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self, \hyperlink{z1_2board__info_8h_ac16e02aadd749b2d27638bed1a805a59}{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} period)
+\item 
+\hyperlink{z1_2board__info_8h_ac16e02aadd749b2d27638bed1a805a59}{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} \hyperlink{radiotimer__obj_8c_a39d01731bcba647da9963e5ac3ceadc9}{radiotimer\+\_\+get\+Value} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{radiotimer__obj_8c_a2c331ff2b549810d266072fae7fcd7ba}{radiotimer\+\_\+set\+Period} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self, \hyperlink{z1_2board__info_8h_ac16e02aadd749b2d27638bed1a805a59}{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} period)
+\item 
+\hyperlink{z1_2board__info_8h_ac16e02aadd749b2d27638bed1a805a59}{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} \hyperlink{radiotimer__obj_8c_af8512bb6f6c8b2b9ecc9e873cec53b38}{radiotimer\+\_\+get\+Period} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{radiotimer__obj_8c_afb44ca09570c76762c900886f0e37689}{radiotimer\+\_\+schedule} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self, \hyperlink{z1_2board__info_8h_ac16e02aadd749b2d27638bed1a805a59}{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} offset)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{radiotimer__obj_8c_aca1ef63d0adf3306baaa25ae14dd3355}{radiotimer\+\_\+cancel} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self)
+\item 
+\hyperlink{z1_2board__info_8h_ac16e02aadd749b2d27638bed1a805a59}{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} \hyperlink{radiotimer__obj_8c_ac3752084100557c34a712e5467429e2c}{radiotimer\+\_\+get\+Captured\+Time} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{radiotimer__obj_8c_a8d9fef929dc061f1c938240cb2cdba2d}{radiotimer\+\_\+intr\+\_\+compare} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{radiotimer__obj_8c_a92553cce49760f0fe35394f9a4cfdd1e}{radiotimer\+\_\+intr\+\_\+overflow} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{radiotimer\+\_\+obj.\+c@{radiotimer\+\_\+obj.\+c}!radiotimer\+\_\+cancel@{radiotimer\+\_\+cancel}}
+\index{radiotimer\+\_\+cancel@{radiotimer\+\_\+cancel}!radiotimer\+\_\+obj.\+c@{radiotimer\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{radiotimer\+\_\+cancel(\+Open\+Mote $\ast$self)}{radiotimer_cancel(OpenMote *self)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} radiotimer\+\_\+cancel (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{radiotimer__obj_8c_aca1ef63d0adf3306baaa25ae14dd3355}{}\label{radiotimer__obj_8c_aca1ef63d0adf3306baaa25ae14dd3355}
+
+
+Definition at line 195 of file radiotimer\+\_\+obj.\+c.
+
+\index{radiotimer\+\_\+obj.\+c@{radiotimer\+\_\+obj.\+c}!radiotimer\+\_\+get\+Captured\+Time@{radiotimer\+\_\+get\+Captured\+Time}}
+\index{radiotimer\+\_\+get\+Captured\+Time@{radiotimer\+\_\+get\+Captured\+Time}!radiotimer\+\_\+obj.\+c@{radiotimer\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{radiotimer\+\_\+get\+Captured\+Time(\+Open\+Mote $\ast$self)}{radiotimer_getCapturedTime(OpenMote *self)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} radiotimer\+\_\+get\+Captured\+Time (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{radiotimer__obj_8c_ac3752084100557c34a712e5467429e2c}{}\label{radiotimer__obj_8c_ac3752084100557c34a712e5467429e2c}
+
+
+Definition at line 217 of file radiotimer\+\_\+obj.\+c.
+
+\index{radiotimer\+\_\+obj.\+c@{radiotimer\+\_\+obj.\+c}!radiotimer\+\_\+get\+Period@{radiotimer\+\_\+get\+Period}}
+\index{radiotimer\+\_\+get\+Period@{radiotimer\+\_\+get\+Period}!radiotimer\+\_\+obj.\+c@{radiotimer\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{radiotimer\+\_\+get\+Period(\+Open\+Mote $\ast$self)}{radiotimer_getPeriod(OpenMote *self)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} radiotimer\+\_\+get\+Period (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{radiotimer__obj_8c_af8512bb6f6c8b2b9ecc9e873cec53b38}{}\label{radiotimer__obj_8c_af8512bb6f6c8b2b9ecc9e873cec53b38}
+
+
+Definition at line 140 of file radiotimer\+\_\+obj.\+c.
+
+\index{radiotimer\+\_\+obj.\+c@{radiotimer\+\_\+obj.\+c}!radiotimer\+\_\+get\+Value@{radiotimer\+\_\+get\+Value}}
+\index{radiotimer\+\_\+get\+Value@{radiotimer\+\_\+get\+Value}!radiotimer\+\_\+obj.\+c@{radiotimer\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{radiotimer\+\_\+get\+Value(\+Open\+Mote $\ast$self)}{radiotimer_getValue(OpenMote *self)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} radiotimer\+\_\+get\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{radiotimer__obj_8c_a39d01731bcba647da9963e5ac3ceadc9}{}\label{radiotimer__obj_8c_a39d01731bcba647da9963e5ac3ceadc9}
+
+
+Definition at line 87 of file radiotimer\+\_\+obj.\+c.
+
+\index{radiotimer\+\_\+obj.\+c@{radiotimer\+\_\+obj.\+c}!radiotimer\+\_\+init@{radiotimer\+\_\+init}}
+\index{radiotimer\+\_\+init@{radiotimer\+\_\+init}!radiotimer\+\_\+obj.\+c@{radiotimer\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{radiotimer\+\_\+init(\+Open\+Mote $\ast$self)}{radiotimer_init(OpenMote *self)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} radiotimer\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{radiotimer__obj_8c_a0a0e94efebbb9646d6e77e14a7291b59}{}\label{radiotimer__obj_8c_a0a0e94efebbb9646d6e77e14a7291b59}
+
+
+Definition at line 45 of file radiotimer\+\_\+obj.\+c.
+
+\index{radiotimer\+\_\+obj.\+c@{radiotimer\+\_\+obj.\+c}!radiotimer\+\_\+intr\+\_\+compare@{radiotimer\+\_\+intr\+\_\+compare}}
+\index{radiotimer\+\_\+intr\+\_\+compare@{radiotimer\+\_\+intr\+\_\+compare}!radiotimer\+\_\+obj.\+c@{radiotimer\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{radiotimer\+\_\+intr\+\_\+compare(\+Open\+Mote $\ast$self)}{radiotimer_intr_compare(OpenMote *self)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} radiotimer\+\_\+intr\+\_\+compare (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{radiotimer__obj_8c_a8d9fef929dc061f1c938240cb2cdba2d}{}\label{radiotimer__obj_8c_a8d9fef929dc061f1c938240cb2cdba2d}
+
+
+Definition at line 249 of file radiotimer\+\_\+obj.\+c.
+
+\index{radiotimer\+\_\+obj.\+c@{radiotimer\+\_\+obj.\+c}!radiotimer\+\_\+intr\+\_\+overflow@{radiotimer\+\_\+intr\+\_\+overflow}}
+\index{radiotimer\+\_\+intr\+\_\+overflow@{radiotimer\+\_\+intr\+\_\+overflow}!radiotimer\+\_\+obj.\+c@{radiotimer\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{radiotimer\+\_\+intr\+\_\+overflow(\+Open\+Mote $\ast$self)}{radiotimer_intr_overflow(OpenMote *self)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} radiotimer\+\_\+intr\+\_\+overflow (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{radiotimer__obj_8c_a92553cce49760f0fe35394f9a4cfdd1e}{}\label{radiotimer__obj_8c_a92553cce49760f0fe35394f9a4cfdd1e}
+
+
+Definition at line 262 of file radiotimer\+\_\+obj.\+c.
+
+\index{radiotimer\+\_\+obj.\+c@{radiotimer\+\_\+obj.\+c}!radiotimer\+\_\+schedule@{radiotimer\+\_\+schedule}}
+\index{radiotimer\+\_\+schedule@{radiotimer\+\_\+schedule}!radiotimer\+\_\+obj.\+c@{radiotimer\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{radiotimer\+\_\+schedule(\+Open\+Mote $\ast$self, P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H offset)}{radiotimer_schedule(OpenMote *self, PORT_RADIOTIMER_WIDTH offset)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} radiotimer\+\_\+schedule (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self, }
+\item[{{\bf P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH}}]{offset}
+\end{DoxyParamCaption}
+)}\hypertarget{radiotimer__obj_8c_afb44ca09570c76762c900886f0e37689}{}\label{radiotimer__obj_8c_afb44ca09570c76762c900886f0e37689}
+
+
+Definition at line 172 of file radiotimer\+\_\+obj.\+c.
+
+\index{radiotimer\+\_\+obj.\+c@{radiotimer\+\_\+obj.\+c}!radiotimer\+\_\+set\+Compare\+Cb@{radiotimer\+\_\+set\+Compare\+Cb}}
+\index{radiotimer\+\_\+set\+Compare\+Cb@{radiotimer\+\_\+set\+Compare\+Cb}!radiotimer\+\_\+obj.\+c@{radiotimer\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{radiotimer\+\_\+set\+Compare\+Cb(\+Open\+Mote $\ast$self, radiotimer\+\_\+compare\+\_\+cbt cb)}{radiotimer_setCompareCb(OpenMote *self, radiotimer_compare_cbt cb)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} radiotimer\+\_\+set\+Compare\+Cb (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self, }
+\item[{{\bf radiotimer\+\_\+compare\+\_\+cbt}}]{cb}
+\end{DoxyParamCaption}
+)}\hypertarget{radiotimer__obj_8c_a6bfad24cbb8b898878178da285ac8417}{}\label{radiotimer__obj_8c_a6bfad24cbb8b898878178da285ac8417}
+
+
+Definition at line 28 of file radiotimer\+\_\+obj.\+c.
+
+\index{radiotimer\+\_\+obj.\+c@{radiotimer\+\_\+obj.\+c}!radiotimer\+\_\+set\+Overflow\+Cb@{radiotimer\+\_\+set\+Overflow\+Cb}}
+\index{radiotimer\+\_\+set\+Overflow\+Cb@{radiotimer\+\_\+set\+Overflow\+Cb}!radiotimer\+\_\+obj.\+c@{radiotimer\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{radiotimer\+\_\+set\+Overflow\+Cb(\+Open\+Mote $\ast$self, radiotimer\+\_\+compare\+\_\+cbt cb)}{radiotimer_setOverflowCb(OpenMote *self, radiotimer_compare_cbt cb)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} radiotimer\+\_\+set\+Overflow\+Cb (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self, }
+\item[{{\bf radiotimer\+\_\+compare\+\_\+cbt}}]{cb}
+\end{DoxyParamCaption}
+)}\hypertarget{radiotimer__obj_8c_a0021d2738cf47c0e08d4a17cafde0cd8}{}\label{radiotimer__obj_8c_a0021d2738cf47c0e08d4a17cafde0cd8}
+
+
+Python-\/specific definition of the \char`\"{}radiotimer\char`\"{} bsp module. 
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, May 2013. 
+\end{DoxyAuthor}
+
+
+Definition at line 15 of file radiotimer\+\_\+obj.\+c.
+
+\index{radiotimer\+\_\+obj.\+c@{radiotimer\+\_\+obj.\+c}!radiotimer\+\_\+set\+Period@{radiotimer\+\_\+set\+Period}}
+\index{radiotimer\+\_\+set\+Period@{radiotimer\+\_\+set\+Period}!radiotimer\+\_\+obj.\+c@{radiotimer\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{radiotimer\+\_\+set\+Period(\+Open\+Mote $\ast$self, P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H period)}{radiotimer_setPeriod(OpenMote *self, PORT_RADIOTIMER_WIDTH period)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} radiotimer\+\_\+set\+Period (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self, }
+\item[{{\bf P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH}}]{period}
+\end{DoxyParamCaption}
+)}\hypertarget{radiotimer__obj_8c_a2c331ff2b549810d266072fae7fcd7ba}{}\label{radiotimer__obj_8c_a2c331ff2b549810d266072fae7fcd7ba}
+
+
+Definition at line 117 of file radiotimer\+\_\+obj.\+c.
+
+\index{radiotimer\+\_\+obj.\+c@{radiotimer\+\_\+obj.\+c}!radiotimer\+\_\+start@{radiotimer\+\_\+start}}
+\index{radiotimer\+\_\+start@{radiotimer\+\_\+start}!radiotimer\+\_\+obj.\+c@{radiotimer\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{radiotimer\+\_\+start(\+Open\+Mote $\ast$self, P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H period)}{radiotimer_start(OpenMote *self, PORT_RADIOTIMER_WIDTH period)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} radiotimer\+\_\+start (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self, }
+\item[{{\bf P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH}}]{period}
+\end{DoxyParamCaption}
+)}\hypertarget{radiotimer__obj_8c_a0c67c13c9eca3e75bbb9dabfd660abe2}{}\label{radiotimer__obj_8c_a0c67c13c9eca3e75bbb9dabfd660abe2}
+
+
+Definition at line 65 of file radiotimer\+\_\+obj.\+c.
+

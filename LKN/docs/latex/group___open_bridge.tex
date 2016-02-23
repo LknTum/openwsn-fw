@@ -1,0 +1,78 @@
+\hypertarget{group___open_bridge}{}\section{Open\+Bridge}
+\label{group___open_bridge}\index{Open\+Bridge@{Open\+Bridge}}
+
+
+Open\+Bridge allows any Open\+W\+SN node to act like a bridge between the wireless sensor network and the Internet.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___open_bridge_ga34778c5d5b048f0db1b588bd88f3fb47}{openbridge\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___open_bridge_gaa9c3e5722db7e8c313d5d36c8269203e}{openbridge\+\_\+trigger\+Data} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___open_bridge_ga48345d223f59957ed3b4b47ed692ef98}{openbridge\+\_\+send\+Done} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{disk_8c_ad018a3100b2dabad325a0800152db297}{error})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___open_bridge_ga59de967f7924e1c672ada8905a54d683}{openbridge\+\_\+receive} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Receive a frame at the openbridge, which sends it out over serial. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Open\+Bridge allows any Open\+W\+SN node to act like a bridge between the wireless sensor network and the Internet. 
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, August 2010 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\index{Open\+Bridge@{Open\+Bridge}!openbridge\+\_\+init@{openbridge\+\_\+init}}
+\index{openbridge\+\_\+init@{openbridge\+\_\+init}!Open\+Bridge@{Open\+Bridge}}
+\subsubsection[{\texorpdfstring{openbridge\+\_\+init(void)}{openbridge_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} openbridge\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___open_bridge_ga34778c5d5b048f0db1b588bd88f3fb47}{}\label{group___open_bridge_ga34778c5d5b048f0db1b588bd88f3fb47}
+
+
+Definition at line 14 of file openbridge.\+c.
+
+\index{Open\+Bridge@{Open\+Bridge}!openbridge\+\_\+receive@{openbridge\+\_\+receive}}
+\index{openbridge\+\_\+receive@{openbridge\+\_\+receive}!Open\+Bridge@{Open\+Bridge}}
+\subsubsection[{\texorpdfstring{openbridge\+\_\+receive(\+Open\+Queue\+Entry\+\_\+t $\ast$msg)}{openbridge_receive(OpenQueueEntry_t *msg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} openbridge\+\_\+receive (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{group___open_bridge_ga59de967f7924e1c672ada8905a54d683}{}\label{group___open_bridge_ga59de967f7924e1c672ada8905a54d683}
+
+
+Receive a frame at the openbridge, which sends it out over serial. 
+
+
+
+Definition at line 83 of file openbridge.\+c.
+
+\index{Open\+Bridge@{Open\+Bridge}!openbridge\+\_\+send\+Done@{openbridge\+\_\+send\+Done}}
+\index{openbridge\+\_\+send\+Done@{openbridge\+\_\+send\+Done}!Open\+Bridge@{Open\+Bridge}}
+\subsubsection[{\texorpdfstring{openbridge\+\_\+send\+Done(\+Open\+Queue\+Entry\+\_\+t $\ast$msg, owerror\+\_\+t error)}{openbridge_sendDone(OpenQueueEntry_t *msg, owerror_t error)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} openbridge\+\_\+send\+Done (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg, }
+\item[{{\bf owerror\+\_\+t}}]{error}
+\end{DoxyParamCaption}
+)}\hypertarget{group___open_bridge_ga48345d223f59957ed3b4b47ed692ef98}{}\label{group___open_bridge_ga48345d223f59957ed3b4b47ed692ef98}
+
+
+Definition at line 70 of file openbridge.\+c.
+
+\index{Open\+Bridge@{Open\+Bridge}!openbridge\+\_\+trigger\+Data@{openbridge\+\_\+trigger\+Data}}
+\index{openbridge\+\_\+trigger\+Data@{openbridge\+\_\+trigger\+Data}!Open\+Bridge@{Open\+Bridge}}
+\subsubsection[{\texorpdfstring{openbridge\+\_\+trigger\+Data(void)}{openbridge_triggerData(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} openbridge\+\_\+trigger\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___open_bridge_gaa9c3e5722db7e8c313d5d36c8269203e}{}\label{group___open_bridge_gaa9c3e5722db7e8c313d5d36c8269203e}
+
+
+Definition at line 17 of file openbridge.\+c.
+

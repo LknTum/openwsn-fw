@@ -1,0 +1,945 @@
+\hypertarget{_i_e_e_e802154_e_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/02a-\/\+M\+A\+Clow/\+I\+E\+E\+E802154E.c File Reference}
+\label{_i_e_e_e802154_e_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/02a-\/\+M\+A\+Clow/\+I\+E\+E\+E802154\+E.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/02a-\/\+M\+A\+Clow/\+I\+E\+E\+E802154\+E.\+c}}
+{\ttfamily \#include \char`\"{}opendefs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}I\+E\+E\+E802154\+E.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}radio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}radiotimer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}I\+E\+E\+E802154.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ieee802154\+\_\+security\+\_\+driver.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}openqueue.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}idmanager.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}openserial.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}schedule.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}packetfunctions.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}scheduler.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leds.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}neighbors.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}debugpins.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sixtop.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}adaptive\+\_\+sync.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}process\+I\+E.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}uinject.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_abed220b65f5aa7b9f85f1bc1b746b3de}{activity\+\_\+synchronize\+\_\+new\+Slot} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a17cbf9108d26e226e53b727aace3874b}{activity\+\_\+synchronize\+\_\+start\+Of\+Frame} (\hyperlink{z1_2board__info_8h_ac16e02aadd749b2d27638bed1a805a59}{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} captured\+Time)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a57252e1d2ff8d3eee1e077c91ff4c0db}{activity\+\_\+synchronize\+\_\+end\+Of\+Frame} (\hyperlink{z1_2board__info_8h_ac16e02aadd749b2d27638bed1a805a59}{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} captured\+Time)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a365846cd666a324ee0d6ff55f79bb976}{activity\+\_\+ti1\+O\+Rri1} ()
+\begin{DoxyCompactList}\small\item\em Main function of the M\+AC scheme. It determines the behavior during the current Time Slot, i.\+e., it enables the reception and/or transmission of packets. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a84922abdd433852f6d5d415e677af1a8}{activity\+\_\+ti2} ()
+\begin{DoxyCompactList}\small\item\em Here, the frequency at which the packet is sent is calculated, and the packet is locally stored before being sent. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_ab5ee6da86708c609ffae48922e3993c2}{activity\+\_\+tie1} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a8e5821f2c7525b953dfaeee6c7195c10}{activity\+\_\+ti3} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_ae3d24d476b0bea015c22a15f51f92195}{activity\+\_\+tie2} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a790f1d2c995ac370c355208ddf14a29b}{activity\+\_\+ti4} (\hyperlink{z1_2board__info_8h_ac16e02aadd749b2d27638bed1a805a59}{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} captured\+Time)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a3a58fc5c1e47362f12b1b25a17b6e855}{activity\+\_\+tie3} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a94fd3f9aae4dc723fdf4b42b87b1b68d}{activity\+\_\+ti5} (\hyperlink{z1_2board__info_8h_ac16e02aadd749b2d27638bed1a805a59}{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} captured\+Time)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_aa905e5f461f823d457b20b11d037382d}{activity\+\_\+ti6} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a605fe656b7a7338f0ffc874b03b67fdf}{activity\+\_\+tie4} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_aaef57841c34d30dae41a0e08882593b6}{activity\+\_\+ti7} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a052e22d89b7e22b5c384c398e35d90c0}{activity\+\_\+tie5} ()
+\begin{DoxyCompactList}\small\item\em This is an activity that indicated an error in transmission of data. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a5fb5c0a908aa5a50451c13615af6456d}{activity\+\_\+ti8} (\hyperlink{z1_2board__info_8h_ac16e02aadd749b2d27638bed1a805a59}{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} captured\+Time)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a27ed86aed2688a44edca16fc30dd873c}{activity\+\_\+tie6} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_ab95e7765955b9438e959cefef43e948a}{activity\+\_\+ti9} (\hyperlink{z1_2board__info_8h_ac16e02aadd749b2d27638bed1a805a59}{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} captured\+Time)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_aef9396aa607ef8778dc5920f451be37e}{activity\+\_\+ri2} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_ab86511242d9271426e29031c638bb2f5}{activity\+\_\+rie1} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a58f30f304e520fdf818ccc886ce1f18d}{activity\+\_\+ri3} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a34f27b03edf64d9d8621d8df5ad2c8cb}{activity\+\_\+rie2} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a9e26da2015680ce865066b478c85f816}{activity\+\_\+ri4} (\hyperlink{z1_2board__info_8h_ac16e02aadd749b2d27638bed1a805a59}{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} captured\+Time)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a5609813d4f0bc40114deb088762dfcc5}{activity\+\_\+rie3} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a58945f36d3b05dea65c4d7014283154a}{activity\+\_\+ri5} (\hyperlink{z1_2board__info_8h_ac16e02aadd749b2d27638bed1a805a59}{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} captured\+Time)
+\begin{DoxyCompactList}\small\item\em This indicated the end of the receiving data packet. Here starts the parsing of the packet\textquotesingle{}s data bytes. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_ad19327c28f1b45c785bf21235caaa411}{activity\+\_\+ri6} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a0b811df2fcafe9ce7f08bac2a6ed0f21}{activity\+\_\+rie4} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a358d1a3b69c5fd938bcf42a44b83941c}{activity\+\_\+ri7} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_ab53769225307777520da1784e4730b24}{activity\+\_\+rie5} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a8448995f47aad43a20c634c0026bfe1b}{activity\+\_\+ri8} (\hyperlink{z1_2board__info_8h_ac16e02aadd749b2d27638bed1a805a59}{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} captured\+Time)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a56ea0390ad1b9fe4f96a0a4e5b633593}{activity\+\_\+rie6} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_acd17691b73a729f50689e5cd42282dc2}{activity\+\_\+ri9} (\hyperlink{z1_2board__info_8h_ac16e02aadd749b2d27638bed1a805a59}{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} captured\+Time)
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{_i_e_e_e802154_e_8c_a8d75076e492b21c63dc62755797543fd}{is\+Valid\+Rx\+Frame} (\hyperlink{structieee802154__header__iht}{ieee802154\+\_\+header\+\_\+iht} $\ast$ieee802514\+\_\+header)
+\begin{DoxyCompactList}\small\item\em Decides whether the packet I just received is valid received frame. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{_i_e_e_e802154_e_8c_a8eb897bc57e6540f967b5e21734d9846}{is\+Valid\+Ack} (\hyperlink{structieee802154__header__iht}{ieee802154\+\_\+header\+\_\+iht} $\ast$ieee802514\+\_\+header, \hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$packet\+Sent)
+\begin{DoxyCompactList}\small\item\em Decides whether the packet I just received is a valid A\+CK. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{_i_e_e_e802154_e_8c_ab8f4fa2596b753643d57e5405b8b7ec3}{is\+Valid\+Join} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$eb, \hyperlink{structieee802154__header__iht}{ieee802154\+\_\+header\+\_\+iht} $\ast$parsed\+Header)
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{_i_e_e_e802154_e_8c_aa42be4c16fe53e0460a63ae76438d668}{ieee154e\+\_\+process\+I\+Es} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$pkt, \hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} $\ast$len\+IE)
+\begin{DoxyCompactList}\small\item\em Retrieves the information from the EB message. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_af7ddc5c9b10da0b029a6cdf13d40455d}{increment\+Asn\+Offset} ()
+\begin{DoxyCompactList}\small\item\em This function is used to increment the A\+SN value over 5 bytes. Additionally, also the value of the slot\+Offset is incremented. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_aee836d385fb2379dd04956ad7b3cfe37}{ieee154e\+\_\+sync\+Slot\+Offset} ()
+\begin{DoxyCompactList}\small\item\em Enables the synchronization of the slot\+Offset upon receiving a new A\+SN value. The slot\+Offset is stored in a 4 bytes variable. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a8decad47b1e2b92bfc8a910f19d30ab3}{ieee154e\+\_\+sync\+Asn\+Offset} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a11291ea3f286082a68d94b2294971070}{asn\+Store\+From\+EB} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$asn)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a2a191956344aae41cb9a10ee6fb5c847}{join\+Priority\+Store\+From\+EB} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} jp)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a5c1984b80295c85c4fd52ebc0f7d015e}{timeslot\+Template\+I\+D\+Store\+From\+EB} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} id)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_adc78537c83f34a16c6e53f835844edbd}{channelhopping\+Template\+I\+D\+Store\+From\+EB} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} id)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a8533e18716c0ed4fc07e4a576684e710}{synchronize\+Packet} (\hyperlink{z1_2board__info_8h_ac16e02aadd749b2d27638bed1a805a59}{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} time\+Received)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_aee5a669dfd357c13aaa8ccde643d31be}{synchronize\+Ack} (\hyperlink{z1_2board__info_8h_a07a9f9de95908017f808cbf0c474828e}{P\+O\+R\+T\+\_\+\+S\+I\+G\+N\+E\+D\+\_\+\+I\+N\+T\+\_\+\+W\+I\+D\+TH} time\+Correction)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a6ec335369ae1eb16b0e74f22f9f89c7b}{change\+Is\+Sync} (\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} new\+Is\+Sync)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_ae3c9520bd58c00cd12decc6696eecb6a}{notif\+\_\+send\+Done} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$packet\+Sent, \hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{disk_8c_ad018a3100b2dabad325a0800152db297}{error})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a7188b67cf820b2e2f4e20853b84a9fd1}{notif\+\_\+receive} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$packet\+Received)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_ade32dd7ca438cf7ced5f6380ae62b517}{reset\+Stats} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_ad083a3a3502c3df37e1855f81de82102}{update\+Stats} (\hyperlink{z1_2board__info_8h_a07a9f9de95908017f808cbf0c474828e}{P\+O\+R\+T\+\_\+\+S\+I\+G\+N\+E\+D\+\_\+\+I\+N\+T\+\_\+\+W\+I\+D\+TH} time\+Correction)
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{_i_e_e_e802154_e_8c_a01c55569f4f1aadf1d4a156b08014e50}{calculate\+Frequency} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} channel\+Offset)
+\begin{DoxyCompactList}\small\item\em Calculates the frequency channel to transmit on, based on the absolute slot number and the channel offset of the requested slot. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a13f52f65bd0274f506e3de727f69d7cf}{change\+State} (\hyperlink{group___i_e_e_e802154_e_ga475ad60808a796f649ed9f2c923e4d14}{ieee154e\+\_\+state\+\_\+t} newstate)
+\begin{DoxyCompactList}\small\item\em Changes the state of the I\+E\+E\+E802.\+15.\+4e F\+SM. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a4d32f5f6b6be4f7b407550ae26a898df}{end\+Slot} ()
+\begin{DoxyCompactList}\small\item\em Housekeeping tasks to do at the end of each slot. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group___i_e_e_e802154_e_ga0479350195775e619bb4c9c379804a62}{debug\+Print\+\_\+asn} ()
+\begin{DoxyCompactList}\small\item\em Trigger this module to print status information, over serial. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group___i_e_e_e802154_e_ga648ec409f5bd3cbce70206f13e3e0c79}{debug\+Print\+\_\+is\+Sync} ()
+\begin{DoxyCompactList}\small\item\em Trigger this module to print status information, over serial. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a11b4ac91c8b7aca5b0439e802e7ac314}{isr\+\_\+ieee154e\+\_\+new\+Slot} ()
+\begin{DoxyCompactList}\small\item\em Indicates a new slot has just started. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154_e_8c_a79cdf69ea52f51313ef6b3c2c5029d30}{isr\+\_\+ieee154e\+\_\+timer} ()
+\begin{DoxyCompactList}\small\item\em Indicates the F\+SM timer has fired. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i_e_e_e802154_e_ga7f73e16007d858dc3b2708836fe81369}{ieee154e\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em This function initializes this module. \end{DoxyCompactList}\item 
+\hyperlink{z1_2board__info_8h_ac16e02aadd749b2d27638bed1a805a59}{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} \hyperlink{group___i_e_e_e802154_e_ga23506174c5642c8e1a8977f83101ffe5}{ieee154e\+\_\+asn\+Diff} (\hyperlink{structasn__t}{asn\+\_\+t} $\ast$some\+A\+SN)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i_e_e_e802154_e_ga95a880f7fd69afd11fb62abf84512171}{ieee154e\+\_\+start\+Of\+Frame} (\hyperlink{z1_2board__info_8h_ac16e02aadd749b2d27638bed1a805a59}{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} captured\+Time)
+\begin{DoxyCompactList}\small\item\em Indicates the radio just received the first byte of a packet. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i_e_e_e802154_e_ga883b649614dda6a6e9c55c5e78ed7982}{ieee154e\+\_\+end\+Of\+Frame} (\hyperlink{z1_2board__info_8h_ac16e02aadd749b2d27638bed1a805a59}{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} captured\+Time)
+\begin{DoxyCompactList}\small\item\em Indicates the radio just received the last byte of a packet. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group___i_e_e_e802154_e_gacdf572d4f74817a0ed5ab375dfab010a}{debug\+Print\+\_\+mac\+Stats} ()
+\begin{DoxyCompactList}\small\item\em Trigger this module to print status information, over serial. \end{DoxyCompactList}\item 
+\hyperlink{toolchain__defs_8h_ac176b886c94b2cf591ec32600fb61a07}{port\+\_\+\+I\+N\+L\+I\+NE} \hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i_e_e_e802154_e_ga97abcc8a5cf976a2e068fd865cc81ada}{ieee154e\+\_\+get\+Asn} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$array)
+\item 
+\hyperlink{toolchain__defs_8h_ac176b886c94b2cf591ec32600fb61a07}{port\+\_\+\+I\+N\+L\+I\+NE} \hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{group___i_e_e_e802154_e_ga4289cb180ed96aebdfdda0aae1c4ed81}{ieee154e\+\_\+get\+Time\+Correction} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i_e_e_e802154_e_gabe670955c8a1280164a0821140e1845d}{ieee154e\+\_\+set\+Is\+Ack\+Enabled} (\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} is\+Enabled)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i_e_e_e802154_e_ga2b0e869933273f2b47d1a82350c8cdcb}{ieee154e\+\_\+set\+Single\+Channel} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} channel)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i_e_e_e802154_e_ga18931c5576f24c9d37ec351a8a2c8f4e}{ieee154e\+\_\+set\+Is\+Security\+Enabled} (\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} is\+Enabled)
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group___i_e_e_e802154_e_ga4247cb86707287e4f0142293e224be74}{ieee154e\+\_\+is\+Synch} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structieee154e__vars__t}{ieee154e\+\_\+vars\+\_\+t} \hyperlink{_i_e_e_e802154_e_8c_abbfc7f36c7b2d2635f4407908445a89b}{ieee154e\+\_\+vars}
+\item 
+\hyperlink{structieee154e__stats__t}{ieee154e\+\_\+stats\+\_\+t} \hyperlink{_i_e_e_e802154_e_8c_a31708c3b2f53eabcbcf5a4b511823162}{ieee154e\+\_\+stats}
+\item 
+\hyperlink{structieee154e__dbg__t}{ieee154e\+\_\+dbg\+\_\+t} \hyperlink{_i_e_e_e802154_e_8c_adf17d2af794ad77f48c82f3ac8951790}{ieee154e\+\_\+dbg}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+ri2@{activity\+\_\+ri2}}
+\index{activity\+\_\+ri2@{activity\+\_\+ri2}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+ri2(void)}{activity_ri2(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+ri2 (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_aef9396aa607ef8778dc5920f451be37e}{}\label{_i_e_e_e802154_e_8c_aef9396aa607ef8778dc5920f451be37e}
+
+
+Definition at line 1401 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+ri3@{activity\+\_\+ri3}}
+\index{activity\+\_\+ri3@{activity\+\_\+ri3}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+ri3(void)}{activity_ri3(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+ri3 (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a58f30f304e520fdf818ccc886ce1f18d}{}\label{_i_e_e_e802154_e_8c_a58f30f304e520fdf818ccc886ce1f18d}
+
+
+Definition at line 1433 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+ri4@{activity\+\_\+ri4}}
+\index{activity\+\_\+ri4@{activity\+\_\+ri4}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+ri4(\+P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H captured\+Time)}{activity_ri4(PORT_RADIOTIMER_WIDTH capturedTime)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+ri4 (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH}}]{captured\+Time}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a9e26da2015680ce865066b478c85f816}{}\label{_i_e_e_e802154_e_8c_a9e26da2015680ce865066b478c85f816}
+
+
+Definition at line 1449 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+ri5@{activity\+\_\+ri5}}
+\index{activity\+\_\+ri5@{activity\+\_\+ri5}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+ri5(\+P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H captured\+Time)}{activity_ri5(PORT_RADIOTIMER_WIDTH capturedTime)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+ri5 (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH}}]{captured\+Time}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a58945f36d3b05dea65c4d7014283154a}{}\label{_i_e_e_e802154_e_8c_a58945f36d3b05dea65c4d7014283154a}
+
+
+This indicated the end of the receiving data packet. Here starts the parsing of the packet\textquotesingle{}s data bytes. 
+
+\begin{DoxyRefDesc}{L\+K\+N-\/\+Samu}
+\item[\hyperlink{_l_k_n_code_edits__LKN_code_edits000013}{L\+K\+N-\/\+Samu}]From this function, we store the value of R\+S\+SI in the payload of our application. \end{DoxyRefDesc}
+
+
+Definition at line 1482 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+ri6@{activity\+\_\+ri6}}
+\index{activity\+\_\+ri6@{activity\+\_\+ri6}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+ri6(void)}{activity_ri6(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+ri6 (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_ad19327c28f1b45c785bf21235caaa411}{}\label{_i_e_e_e802154_e_8c_ad19327c28f1b45c785bf21235caaa411}
+
+
+Definition at line 1644 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+ri7@{activity\+\_\+ri7}}
+\index{activity\+\_\+ri7@{activity\+\_\+ri7}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+ri7(void)}{activity_ri7(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+ri7 (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a358d1a3b69c5fd938bcf42a44b83941c}{}\label{_i_e_e_e802154_e_8c_a358d1a3b69c5fd938bcf42a44b83941c}
+
+
+Definition at line 1738 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+ri8@{activity\+\_\+ri8}}
+\index{activity\+\_\+ri8@{activity\+\_\+ri8}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+ri8(\+P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H captured\+Time)}{activity_ri8(PORT_RADIOTIMER_WIDTH capturedTime)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+ri8 (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH}}]{captured\+Time}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a8448995f47aad43a20c634c0026bfe1b}{}\label{_i_e_e_e802154_e_8c_a8448995f47aad43a20c634c0026bfe1b}
+
+
+Definition at line 1759 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+ri9@{activity\+\_\+ri9}}
+\index{activity\+\_\+ri9@{activity\+\_\+ri9}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+ri9(\+P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H captured\+Time)}{activity_ri9(PORT_RADIOTIMER_WIDTH capturedTime)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+ri9 (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH}}]{captured\+Time}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_acd17691b73a729f50689e5cd42282dc2}{}\label{_i_e_e_e802154_e_8c_acd17691b73a729f50689e5cd42282dc2}
+
+
+Definition at line 1783 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+rie1@{activity\+\_\+rie1}}
+\index{activity\+\_\+rie1@{activity\+\_\+rie1}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+rie1(void)}{activity_rie1(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+rie1 (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_ab86511242d9271426e29031c638bb2f5}{}\label{_i_e_e_e802154_e_8c_ab86511242d9271426e29031c638bb2f5}
+
+
+Definition at line 1423 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+rie2@{activity\+\_\+rie2}}
+\index{activity\+\_\+rie2@{activity\+\_\+rie2}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+rie2(void)}{activity_rie2(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+rie2 (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a34f27b03edf64d9d8621d8df5ad2c8cb}{}\label{_i_e_e_e802154_e_8c_a34f27b03edf64d9d8621d8df5ad2c8cb}
+
+
+Definition at line 1444 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+rie3@{activity\+\_\+rie3}}
+\index{activity\+\_\+rie3@{activity\+\_\+rie3}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+rie3(void)}{activity_rie3(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+rie3 (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a5609813d4f0bc40114deb088762dfcc5}{}\label{_i_e_e_e802154_e_8c_a5609813d4f0bc40114deb088762dfcc5}
+
+
+Definition at line 1466 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+rie4@{activity\+\_\+rie4}}
+\index{activity\+\_\+rie4@{activity\+\_\+rie4}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+rie4(void)}{activity_rie4(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+rie4 (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a0b811df2fcafe9ce7f08bac2a6ed0f21}{}\label{_i_e_e_e802154_e_8c_a0b811df2fcafe9ce7f08bac2a6ed0f21}
+
+
+Definition at line 1728 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+rie5@{activity\+\_\+rie5}}
+\index{activity\+\_\+rie5@{activity\+\_\+rie5}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+rie5(void)}{activity_rie5(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+rie5 (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_ab53769225307777520da1784e4730b24}{}\label{_i_e_e_e802154_e_8c_ab53769225307777520da1784e4730b24}
+
+
+Definition at line 1749 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+rie6@{activity\+\_\+rie6}}
+\index{activity\+\_\+rie6@{activity\+\_\+rie6}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+rie6(void)}{activity_rie6(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+rie6 (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a56ea0390ad1b9fe4f96a0a4e5b633593}{}\label{_i_e_e_e802154_e_8c_a56ea0390ad1b9fe4f96a0a4e5b633593}
+
+
+Definition at line 1773 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+synchronize\+\_\+end\+Of\+Frame@{activity\+\_\+synchronize\+\_\+end\+Of\+Frame}}
+\index{activity\+\_\+synchronize\+\_\+end\+Of\+Frame@{activity\+\_\+synchronize\+\_\+end\+Of\+Frame}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+synchronize\+\_\+end\+Of\+Frame(\+P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H captured\+Time)}{activity_synchronize_endOfFrame(PORT_RADIOTIMER_WIDTH capturedTime)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+synchronize\+\_\+end\+Of\+Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH}}]{captured\+Time}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a57252e1d2ff8d3eee1e077c91ff4c0db}{}\label{_i_e_e_e802154_e_8c_a57252e1d2ff8d3eee1e077c91ff4c0db}
+
+
+Definition at line 507 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+synchronize\+\_\+new\+Slot@{activity\+\_\+synchronize\+\_\+new\+Slot}}
+\index{activity\+\_\+synchronize\+\_\+new\+Slot@{activity\+\_\+synchronize\+\_\+new\+Slot}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+synchronize\+\_\+new\+Slot(void)}{activity_synchronize_newSlot(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+synchronize\+\_\+new\+Slot (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_abed220b65f5aa7b9f85f1bc1b746b3de}{}\label{_i_e_e_e802154_e_8c_abed220b65f5aa7b9f85f1bc1b746b3de}
+
+
+Definition at line 424 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+synchronize\+\_\+start\+Of\+Frame@{activity\+\_\+synchronize\+\_\+start\+Of\+Frame}}
+\index{activity\+\_\+synchronize\+\_\+start\+Of\+Frame@{activity\+\_\+synchronize\+\_\+start\+Of\+Frame}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+synchronize\+\_\+start\+Of\+Frame(\+P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H captured\+Time)}{activity_synchronize_startOfFrame(PORT_RADIOTIMER_WIDTH capturedTime)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+synchronize\+\_\+start\+Of\+Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH}}]{captured\+Time}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a17cbf9108d26e226e53b727aace3874b}{}\label{_i_e_e_e802154_e_8c_a17cbf9108d26e226e53b727aace3874b}
+
+
+Definition at line 487 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+ti1\+O\+Rri1@{activity\+\_\+ti1\+O\+Rri1}}
+\index{activity\+\_\+ti1\+O\+Rri1@{activity\+\_\+ti1\+O\+Rri1}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+ti1\+O\+Rri1()}{activity_ti1ORri1()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+ti1\+O\+Rri1 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a365846cd666a324ee0d6ff55f79bb976}{}\label{_i_e_e_e802154_e_8c_a365846cd666a324ee0d6ff55f79bb976}
+
+
+Main function of the M\+AC scheme. It determines the behavior during the current Time Slot, i.\+e., it enables the reception and/or transmission of packets. 
+
+\begin{DoxyRefDesc}{L\+K\+N-\/\+Samu}
+\item[\hyperlink{_l_k_n_code_edits__LKN_code_edits000010}{L\+K\+N-\/\+Samu}]We modified the function such that the mote can transmit or receive only if it is its own Time Slot. At the beginning, we set the value can\+TX to F\+A\+L\+SE, then we turn it to T\+R\+UE by testing its address with respect of the current time slot.
+\begin{DoxyItemize}
+\item D\+AG root is always allowed to receive and transmit.
+\item Motes are not allowed either to RX or TX in a Time Slot that doesn\textquotesingle{}t match their address.
+\end{DoxyItemize}\end{DoxyRefDesc}
+
+
+\begin{DoxyWarning}{Warning}
+breaks are not used in the main switch! 
+\end{DoxyWarning}
+
+
+Definition at line 832 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+ti2@{activity\+\_\+ti2}}
+\index{activity\+\_\+ti2@{activity\+\_\+ti2}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+ti2()}{activity_ti2()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+ti2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a84922abdd433852f6d5d415e677af1a8}{}\label{_i_e_e_e802154_e_8c_a84922abdd433852f6d5d415e677af1a8}
+
+
+Here, the frequency at which the packet is sent is calculated, and the packet is locally stored before being sent. 
+
+\begin{DoxyRefDesc}{L\+K\+N-\/\+Samu}
+\item[\hyperlink{_l_k_n_code_edits__LKN_code_edits000011}{L\+K\+N-\/\+Samu}]In this function, we store the calculated tx frequency in the fourth element of the payload of our application. Furthermore, we set the tx frequency to the \hyperlink{group___i_e_e_e802154_e_gaf8be83417584fa06ecb6982f183bd222}{S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+I\+N\+G\+\_\+\+C\+H\+A\+N\+N\+EL} if we need to send an EB beacon.\end{DoxyRefDesc}
+
+
+Definition at line 1025 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+ti3@{activity\+\_\+ti3}}
+\index{activity\+\_\+ti3@{activity\+\_\+ti3}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+ti3(void)}{activity_ti3(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+ti3 (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a8e5821f2c7525b953dfaeee6c7195c10}{}\label{_i_e_e_e802154_e_8c_a8e5821f2c7525b953dfaeee6c7195c10}
+
+
+Definition at line 1089 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+ti4@{activity\+\_\+ti4}}
+\index{activity\+\_\+ti4@{activity\+\_\+ti4}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+ti4(\+P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H captured\+Time)}{activity_ti4(PORT_RADIOTIMER_WIDTH capturedTime)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+ti4 (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH}}]{captured\+Time}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a790f1d2c995ac370c355208ddf14a29b}{}\label{_i_e_e_e802154_e_8c_a790f1d2c995ac370c355208ddf14a29b}
+
+
+Definition at line 1111 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+ti5@{activity\+\_\+ti5}}
+\index{activity\+\_\+ti5@{activity\+\_\+ti5}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+ti5(\+P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H captured\+Time)}{activity_ti5(PORT_RADIOTIMER_WIDTH capturedTime)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+ti5 (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH}}]{captured\+Time}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a94fd3f9aae4dc723fdf4b42b87b1b68d}{}\label{_i_e_e_e802154_e_8c_a94fd3f9aae4dc723fdf4b42b87b1b68d}
+
+
+Definition at line 1135 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+ti6@{activity\+\_\+ti6}}
+\index{activity\+\_\+ti6@{activity\+\_\+ti6}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+ti6(void)}{activity_ti6(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+ti6 (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_aa905e5f461f823d457b20b11d037382d}{}\label{_i_e_e_e802154_e_8c_aa905e5f461f823d457b20b11d037382d}
+
+
+Definition at line 1173 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+ti7@{activity\+\_\+ti7}}
+\index{activity\+\_\+ti7@{activity\+\_\+ti7}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+ti7(void)}{activity_ti7(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+ti7 (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_aaef57841c34d30dae41a0e08882593b6}{}\label{_i_e_e_e802154_e_8c_aaef57841c34d30dae41a0e08882593b6}
+
+
+Definition at line 1205 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+ti8@{activity\+\_\+ti8}}
+\index{activity\+\_\+ti8@{activity\+\_\+ti8}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+ti8(\+P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H captured\+Time)}{activity_ti8(PORT_RADIOTIMER_WIDTH capturedTime)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+ti8 (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH}}]{captured\+Time}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a5fb5c0a908aa5a50451c13615af6456d}{}\label{_i_e_e_e802154_e_8c_a5fb5c0a908aa5a50451c13615af6456d}
+
+
+Definition at line 1251 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+ti9@{activity\+\_\+ti9}}
+\index{activity\+\_\+ti9@{activity\+\_\+ti9}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+ti9(\+P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H captured\+Time)}{activity_ti9(PORT_RADIOTIMER_WIDTH capturedTime)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+ti9 (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH}}]{captured\+Time}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_ab95e7765955b9438e959cefef43e948a}{}\label{_i_e_e_e802154_e_8c_ab95e7765955b9438e959cefef43e948a}
+
+
+Definition at line 1270 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+tie1@{activity\+\_\+tie1}}
+\index{activity\+\_\+tie1@{activity\+\_\+tie1}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+tie1(void)}{activity_tie1(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+tie1 (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_ab5ee6da86708c609ffae48922e3993c2}{}\label{_i_e_e_e802154_e_8c_ab5ee6da86708c609ffae48922e3993c2}
+
+
+Definition at line 1079 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+tie2@{activity\+\_\+tie2}}
+\index{activity\+\_\+tie2@{activity\+\_\+tie2}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+tie2(void)}{activity_tie2(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+tie2 (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_ae3d24d476b0bea015c22a15f51f92195}{}\label{_i_e_e_e802154_e_8c_ae3d24d476b0bea015c22a15f51f92195}
+
+
+Definition at line 1100 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+tie3@{activity\+\_\+tie3}}
+\index{activity\+\_\+tie3@{activity\+\_\+tie3}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+tie3(void)}{activity_tie3(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+tie3 (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a3a58fc5c1e47362f12b1b25a17b6e855}{}\label{_i_e_e_e802154_e_8c_a3a58fc5c1e47362f12b1b25a17b6e855}
+
+
+Definition at line 1125 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+tie4@{activity\+\_\+tie4}}
+\index{activity\+\_\+tie4@{activity\+\_\+tie4}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+tie4(void)}{activity_tie4(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+tie4 (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a605fe656b7a7338f0ffc874b03b67fdf}{}\label{_i_e_e_e802154_e_8c_a605fe656b7a7338f0ffc874b03b67fdf}
+
+
+Definition at line 1195 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+tie5@{activity\+\_\+tie5}}
+\index{activity\+\_\+tie5@{activity\+\_\+tie5}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+tie5()}{activity_tie5()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+tie5 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a052e22d89b7e22b5c384c398e35d90c0}{}\label{_i_e_e_e802154_e_8c_a052e22d89b7e22b5c384c398e35d90c0}
+
+
+This is an activity that indicated an error in transmission of data. 
+
+\begin{DoxyRefDesc}{L\+K\+N-\/\+Samu}
+\item[\hyperlink{_l_k_n_code_edits__LKN_code_edits000012}{L\+K\+N-\/\+Samu}]In this function, we store the updated number of transmission attemps in the payload of our application. \end{DoxyRefDesc}
+
+
+Definition at line 1221 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!activity\+\_\+tie6@{activity\+\_\+tie6}}
+\index{activity\+\_\+tie6@{activity\+\_\+tie6}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{activity\+\_\+tie6(void)}{activity_tie6(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} activity\+\_\+tie6 (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a27ed86aed2688a44edca16fc30dd873c}{}\label{_i_e_e_e802154_e_8c_a27ed86aed2688a44edca16fc30dd873c}
+
+
+Definition at line 1265 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!asn\+Store\+From\+EB@{asn\+Store\+From\+EB}}
+\index{asn\+Store\+From\+EB@{asn\+Store\+From\+EB}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{asn\+Store\+From\+E\+B(uint8\+\_\+t $\ast$asn)}{asnStoreFromEB(uint8_t *asn)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} asn\+Store\+From\+EB (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t} $\ast$}]{asn}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a11291ea3f286082a68d94b2294971070}{}\label{_i_e_e_e802154_e_8c_a11291ea3f286082a68d94b2294971070}
+
+
+Definition at line 1963 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!calculate\+Frequency@{calculate\+Frequency}}
+\index{calculate\+Frequency@{calculate\+Frequency}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{calculate\+Frequency(uint8\+\_\+t channel\+Offset)}{calculateFrequency(uint8_t channelOffset)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf uint8\+\_\+t} calculate\+Frequency (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{channel\+Offset}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a01c55569f4f1aadf1d4a156b08014e50}{}\label{_i_e_e_e802154_e_8c_a01c55569f4f1aadf1d4a156b08014e50}
+
+
+Calculates the frequency channel to transmit on, based on the absolute slot number and the channel offset of the requested slot. 
+
+During normal operation, the frequency used is a function of the channel\+Offset indicating in the schedule, and of the A\+SN of the slot. This ensures channel hopping, consecutive packets sent in the same slot in the schedule are done on a difference frequency channel.
+
+During development, you can force single channel operation by having this function return a constant channel number (between 11 and 26). This allows you to use a single-\/channel sniffer; but you can not schedule two links on two different channel offsets in the same slot.
+
+\begin{DoxyRefDesc}{L\+K\+N-\/\+Samu}
+\item[\hyperlink{_l_k_n_code_edits__LKN_code_edits000016}{L\+K\+N-\/\+Samu}]Major changes to the function. We enable the calculations of the next frequency hop by checking the value of \hyperlink{group___i_e_e_e802154_e_ga495914ac755e3089a99e6a6946c12971}{H\+O\+P\+P\+I\+NG}, otherwise we always choose the \hyperlink{group___i_e_e_e802154_e_gaf8be83417584fa06ecb6982f183bd222}{S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+I\+N\+G\+\_\+\+C\+H\+A\+N\+N\+EL}\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em channel\+Offset} & channel offset for the current slot\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The calculated frequency channel, an integer between 11 and 26. 
+\end{DoxyReturn}
+
+
+Definition at line 2239 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!change\+Is\+Sync@{change\+Is\+Sync}}
+\index{change\+Is\+Sync@{change\+Is\+Sync}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{change\+Is\+Sync(bool new\+Is\+Sync)}{changeIsSync(bool newIsSync)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} change\+Is\+Sync (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{new\+Is\+Sync}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a6ec335369ae1eb16b0e74f22f9f89c7b}{}\label{_i_e_e_e802154_e_8c_a6ec335369ae1eb16b0e74f22f9f89c7b}
+
+
+Definition at line 2146 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!change\+State@{change\+State}}
+\index{change\+State@{change\+State}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{change\+State(ieee154e\+\_\+state\+\_\+t newstate)}{changeState(ieee154e_state_t newstate)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} change\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf ieee154e\+\_\+state\+\_\+t}}]{newstate}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a13f52f65bd0274f506e3de727f69d7cf}{}\label{_i_e_e_e802154_e_8c_a13f52f65bd0274f506e3de727f69d7cf}
+
+
+Changes the state of the I\+E\+E\+E802.\+15.\+4e F\+SM. 
+
+Besides simply updating the state global variable, this function toggles the F\+SM debug pin.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em newstate} & The state the I\+E\+E\+E802.\+15.\+4e F\+SM is now in. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 2265 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!channelhopping\+Template\+I\+D\+Store\+From\+EB@{channelhopping\+Template\+I\+D\+Store\+From\+EB}}
+\index{channelhopping\+Template\+I\+D\+Store\+From\+EB@{channelhopping\+Template\+I\+D\+Store\+From\+EB}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{channelhopping\+Template\+I\+D\+Store\+From\+E\+B(uint8\+\_\+t id)}{channelhoppingTemplateIDStoreFromEB(uint8_t id)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} channelhopping\+Template\+I\+D\+Store\+From\+EB (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_adc78537c83f34a16c6e53f835844edbd}{}\label{_i_e_e_e802154_e_8c_adc78537c83f34a16c6e53f835844edbd}
+
+
+Definition at line 2046 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!end\+Slot@{end\+Slot}}
+\index{end\+Slot@{end\+Slot}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{end\+Slot()}{endSlot()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} end\+Slot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a4d32f5f6b6be4f7b407550ae26a898df}{}\label{_i_e_e_e802154_e_8c_a4d32f5f6b6be4f7b407550ae26a898df}
+
+
+Housekeeping tasks to do at the end of each slot. 
+
+This functions is called once in each slot, when there is nothing more to do. This might be when an error occured, or when everything went well. This function resets the state of the F\+SM so it is ready for the next slot.
+
+Note that by the time this function is called, any received packet should already have been sent to the upper layer. Similarly, in a Tx slot, the send\+Done function should already have been done. If this is not the case, this function will do that for you, but assume that something went wrong. 
+
+Definition at line 2317 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!ieee154e\+\_\+process\+I\+Es@{ieee154e\+\_\+process\+I\+Es}}
+\index{ieee154e\+\_\+process\+I\+Es@{ieee154e\+\_\+process\+I\+Es}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{ieee154e\+\_\+process\+I\+Es(\+Open\+Queue\+Entry\+\_\+t $\ast$pkt, uint16\+\_\+t $\ast$len\+I\+E)}{ieee154e_processIEs(OpenQueueEntry_t *pkt, uint16_t *lenIE)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf bool} ieee154e\+\_\+process\+I\+Es (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{pkt, }
+\item[{{\bf uint16\+\_\+t} $\ast$}]{len\+IE}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_aa42be4c16fe53e0460a63ae76438d668}{}\label{_i_e_e_e802154_e_8c_aa42be4c16fe53e0460a63ae76438d668}
+
+
+Retrieves the information from the EB message. 
+
+\begin{DoxyRefDesc}{L\+K\+N-\/\+Samu}
+\item[\hyperlink{_l_k_n_code_edits__LKN_code_edits000009}{L\+K\+N-\/\+Samu}]We modified the function by correcting the calculation of the current Slot\+Offset. Thanks to the newly implemented \hyperlink{_i_e_e_e802154_e_8c_aee836d385fb2379dd04956ad7b3cfe37}{ieee154e\+\_\+sync\+Slot\+Offset()}, it is now possible to adapt to a dynamic range of frame length values. \end{DoxyRefDesc}
+
+
+Definition at line 675 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!ieee154e\+\_\+sync\+Asn\+Offset@{ieee154e\+\_\+sync\+Asn\+Offset}}
+\index{ieee154e\+\_\+sync\+Asn\+Offset@{ieee154e\+\_\+sync\+Asn\+Offset}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{ieee154e\+\_\+sync\+Asn\+Offset()}{ieee154e_syncAsnOffset()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} ieee154e\+\_\+sync\+Asn\+Offset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a8decad47b1e2b92bfc8a910f19d30ab3}{}\label{_i_e_e_e802154_e_8c_a8decad47b1e2b92bfc8a910f19d30ab3}
+
+
+Definition at line 2000 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!ieee154e\+\_\+sync\+Slot\+Offset@{ieee154e\+\_\+sync\+Slot\+Offset}}
+\index{ieee154e\+\_\+sync\+Slot\+Offset@{ieee154e\+\_\+sync\+Slot\+Offset}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{ieee154e\+\_\+sync\+Slot\+Offset()}{ieee154e_syncSlotOffset()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} ieee154e\+\_\+sync\+Slot\+Offset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_aee836d385fb2379dd04956ad7b3cfe37}{}\label{_i_e_e_e802154_e_8c_aee836d385fb2379dd04956ad7b3cfe37}
+
+
+Enables the synchronization of the slot\+Offset upon receiving a new A\+SN value. The slot\+Offset is stored in a 4 bytes variable. 
+
+\begin{DoxyRefDesc}{L\+K\+N-\/\+Samu}
+\item[\hyperlink{_l_k_n_code_edits__LKN_code_edits000015}{L\+K\+N-\/\+Samu}]Implementation of the function based on the original function \hyperlink{_i_e_e_e802154_e_8c_a8decad47b1e2b92bfc8a910f19d30ab3}{ieee154e\+\_\+sync\+Asn\+Offset} \end{DoxyRefDesc}
+
+
+Definition at line 1980 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!increment\+Asn\+Offset@{increment\+Asn\+Offset}}
+\index{increment\+Asn\+Offset@{increment\+Asn\+Offset}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{increment\+Asn\+Offset()}{incrementAsnOffset()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} increment\+Asn\+Offset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_af7ddc5c9b10da0b029a6cdf13d40455d}{}\label{_i_e_e_e802154_e_8c_af7ddc5c9b10da0b029a6cdf13d40455d}
+
+
+This function is used to increment the A\+SN value over 5 bytes. Additionally, also the value of the slot\+Offset is incremented. 
+
+\begin{DoxyRefDesc}{L\+K\+N-\/\+Samu}
+\item[\hyperlink{_l_k_n_code_edits__LKN_code_edits000014}{L\+K\+N-\/\+Samu}]We extended the function such that the slot\+Offset increment depends on the variable frame\+Length size, instead of the predefined value of 16. \end{DoxyRefDesc}
+
+
+Definition at line 1882 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!isr\+\_\+ieee154e\+\_\+new\+Slot@{isr\+\_\+ieee154e\+\_\+new\+Slot}}
+\index{isr\+\_\+ieee154e\+\_\+new\+Slot@{isr\+\_\+ieee154e\+\_\+new\+Slot}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{isr\+\_\+ieee154e\+\_\+new\+Slot()}{isr_ieee154e_newSlot()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} isr\+\_\+ieee154e\+\_\+new\+Slot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a11b4ac91c8b7aca5b0439e802e7ac314}{}\label{_i_e_e_e802154_e_8c_a11b4ac91c8b7aca5b0439e802e7ac314}
+
+
+Indicates a new slot has just started. 
+
+This function executes in I\+SR mode, when the new slot timer fires. 
+
+Definition at line 189 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!isr\+\_\+ieee154e\+\_\+timer@{isr\+\_\+ieee154e\+\_\+timer}}
+\index{isr\+\_\+ieee154e\+\_\+timer@{isr\+\_\+ieee154e\+\_\+timer}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{isr\+\_\+ieee154e\+\_\+timer()}{isr_ieee154e_timer()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} isr\+\_\+ieee154e\+\_\+timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a79cdf69ea52f51313ef6b3c2c5029d30}{}\label{_i_e_e_e802154_e_8c_a79cdf69ea52f51313ef6b3c2c5029d30}
+
+
+Indicates the F\+SM timer has fired. 
+
+This function executes in I\+SR mode, when the F\+SM timer fires. 
+
+Definition at line 215 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!is\+Valid\+Ack@{is\+Valid\+Ack}}
+\index{is\+Valid\+Ack@{is\+Valid\+Ack}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{is\+Valid\+Ack(ieee802154\+\_\+header\+\_\+iht $\ast$ieee802514\+\_\+header, Open\+Queue\+Entry\+\_\+t $\ast$packet\+Sent)}{isValidAck(ieee802154_header_iht *ieee802514_header, OpenQueueEntry_t *packetSent)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf bool} is\+Valid\+Ack (
+\begin{DoxyParamCaption}
+\item[{{\bf ieee802154\+\_\+header\+\_\+iht} $\ast$}]{ieee802514\+\_\+header, }
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{packet\+Sent}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a8eb897bc57e6540f967b5e21734d9846}{}\label{_i_e_e_e802154_e_8c_a8eb897bc57e6540f967b5e21734d9846}
+
+
+Decides whether the packet I just received is a valid A\+CK. 
+
+A packet is a valid A\+CK if it satisfies the following conditions\+:
+\begin{DoxyItemize}
+\item the I\+E\+E\+E802.\+15.\+4 header is valid
+\item the frame type is \textquotesingle{}A\+CK\textquotesingle{}
+\item the sequence number in the A\+CK matches the sequence number of the packet sent
+\item the A\+CK contains my P\+A\+Nid
+\item the packet is unicast to me
+\item the packet comes from the neighbor I sent the data to
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ieee802514\+\_\+header} & I\+E\+E\+E802.\+15.\+4 header of the packet I just received \\
+\hline
+\mbox{\tt in}  & {\em packet\+Sent} & points to the packet I just sent\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if packet is a valid A\+CK, F\+A\+L\+SE otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 1858 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!is\+Valid\+Join@{is\+Valid\+Join}}
+\index{is\+Valid\+Join@{is\+Valid\+Join}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{is\+Valid\+Join(\+Open\+Queue\+Entry\+\_\+t $\ast$eb, ieee802154\+\_\+header\+\_\+iht $\ast$parsed\+Header)}{isValidJoin(OpenQueueEntry_t *eb, ieee802154_header_iht *parsedHeader)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} is\+Valid\+Join (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{eb, }
+\item[{{\bf ieee802154\+\_\+header\+\_\+iht} $\ast$}]{parsed\+Header}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_ab8f4fa2596b753643d57e5405b8b7ec3}{}\label{_i_e_e_e802154_e_8c_ab8f4fa2596b753643d57e5405b8b7ec3}
+
+
+Definition at line 1931 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!is\+Valid\+Rx\+Frame@{is\+Valid\+Rx\+Frame}}
+\index{is\+Valid\+Rx\+Frame@{is\+Valid\+Rx\+Frame}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{is\+Valid\+Rx\+Frame(ieee802154\+\_\+header\+\_\+iht $\ast$ieee802514\+\_\+header)}{isValidRxFrame(ieee802154_header_iht *ieee802514_header)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf bool} is\+Valid\+Rx\+Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf ieee802154\+\_\+header\+\_\+iht} $\ast$}]{ieee802514\+\_\+header}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a8d75076e492b21c63dc62755797543fd}{}\label{_i_e_e_e802154_e_8c_a8d75076e492b21c63dc62755797543fd}
+
+
+Decides whether the packet I just received is valid received frame. 
+
+A valid Rx frame satisfies the following constraints\+:
+\begin{DoxyItemize}
+\item its I\+E\+E\+E802.\+15.\+4 header is well formatted
+\item it\textquotesingle{}s a D\+A\+TA of B\+E\+A\+C\+ON frame (i.\+e. not A\+CK and not C\+O\+M\+M\+A\+ND)
+\item it\textquotesingle{}s sent on the same P\+A\+Nid as mine
+\item it\textquotesingle{}s for me (unicast or broadcast)
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ieee802514\+\_\+header} & I\+E\+E\+E802.\+15.\+4 header of the packet I just received\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if packet is valid received frame, F\+A\+L\+SE otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 1829 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!join\+Priority\+Store\+From\+EB@{join\+Priority\+Store\+From\+EB}}
+\index{join\+Priority\+Store\+From\+EB@{join\+Priority\+Store\+From\+EB}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{join\+Priority\+Store\+From\+E\+B(uint8\+\_\+t jp)}{joinPriorityStoreFromEB(uint8_t jp)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} join\+Priority\+Store\+From\+EB (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{jp}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a2a191956344aae41cb9a10ee6fb5c847}{}\label{_i_e_e_e802154_e_8c_a2a191956344aae41cb9a10ee6fb5c847}
+
+
+Definition at line 1923 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!notif\+\_\+receive@{notif\+\_\+receive}}
+\index{notif\+\_\+receive@{notif\+\_\+receive}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{notif\+\_\+receive(\+Open\+Queue\+Entry\+\_\+t $\ast$packet\+Received)}{notif_receive(OpenQueueEntry_t *packetReceived)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} notif\+\_\+receive (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{packet\+Received}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a7188b67cf820b2e2f4e20853b84a9fd1}{}\label{_i_e_e_e802154_e_8c_a7188b67cf820b2e2f4e20853b84a9fd1}
+
+
+Definition at line 2175 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!notif\+\_\+send\+Done@{notif\+\_\+send\+Done}}
+\index{notif\+\_\+send\+Done@{notif\+\_\+send\+Done}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{notif\+\_\+send\+Done(\+Open\+Queue\+Entry\+\_\+t $\ast$packet\+Sent, owerror\+\_\+t error)}{notif_sendDone(OpenQueueEntry_t *packetSent, owerror_t error)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} notif\+\_\+send\+Done (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{packet\+Sent, }
+\item[{{\bf owerror\+\_\+t}}]{error}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_ae3c9520bd58c00cd12decc6696eecb6a}{}\label{_i_e_e_e802154_e_8c_ae3c9520bd58c00cd12decc6696eecb6a}
+
+
+Definition at line 2160 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!reset\+Stats@{reset\+Stats}}
+\index{reset\+Stats@{reset\+Stats}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{reset\+Stats(void)}{resetStats(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} reset\+Stats (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_ade32dd7ca438cf7ced5f6380ae62b517}{}\label{_i_e_e_e802154_e_8c_ade32dd7ca438cf7ced5f6380ae62b517}
+
+
+Definition at line 2196 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!synchronize\+Ack@{synchronize\+Ack}}
+\index{synchronize\+Ack@{synchronize\+Ack}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{synchronize\+Ack(\+P\+O\+R\+T\+\_\+\+S\+I\+G\+N\+E\+D\+\_\+\+I\+N\+T\+\_\+\+W\+I\+D\+T\+H time\+Correction)}{synchronizeAck(PORT_SIGNED_INT_WIDTH timeCorrection)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} synchronize\+Ack (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+R\+T\+\_\+\+S\+I\+G\+N\+E\+D\+\_\+\+I\+N\+T\+\_\+\+W\+I\+D\+TH}}]{time\+Correction}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_aee5a669dfd357c13aaa8ccde643d31be}{}\label{_i_e_e_e802154_e_8c_aee5a669dfd357c13aaa8ccde643d31be}
+
+
+Definition at line 2106 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!synchronize\+Packet@{synchronize\+Packet}}
+\index{synchronize\+Packet@{synchronize\+Packet}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{synchronize\+Packet(\+P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H time\+Received)}{synchronizePacket(PORT_RADIOTIMER_WIDTH timeReceived)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} synchronize\+Packet (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH}}]{time\+Received}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a8533e18716c0ed4fc07e4a576684e710}{}\label{_i_e_e_e802154_e_8c_a8533e18716c0ed4fc07e4a576684e710}
+
+
+Definition at line 2051 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!timeslot\+Template\+I\+D\+Store\+From\+EB@{timeslot\+Template\+I\+D\+Store\+From\+EB}}
+\index{timeslot\+Template\+I\+D\+Store\+From\+EB@{timeslot\+Template\+I\+D\+Store\+From\+EB}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{timeslot\+Template\+I\+D\+Store\+From\+E\+B(uint8\+\_\+t id)}{timeslotTemplateIDStoreFromEB(uint8_t id)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} timeslot\+Template\+I\+D\+Store\+From\+EB (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_a5c1984b80295c85c4fd52ebc0f7d015e}{}\label{_i_e_e_e802154_e_8c_a5c1984b80295c85c4fd52ebc0f7d015e}
+
+
+Definition at line 2041 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!update\+Stats@{update\+Stats}}
+\index{update\+Stats@{update\+Stats}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{update\+Stats(\+P\+O\+R\+T\+\_\+\+S\+I\+G\+N\+E\+D\+\_\+\+I\+N\+T\+\_\+\+W\+I\+D\+T\+H time\+Correction)}{updateStats(PORT_SIGNED_INT_WIDTH timeCorrection)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} update\+Stats (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+R\+T\+\_\+\+S\+I\+G\+N\+E\+D\+\_\+\+I\+N\+T\+\_\+\+W\+I\+D\+TH}}]{time\+Correction}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154_e_8c_ad083a3a3502c3df37e1855f81de82102}{}\label{_i_e_e_e802154_e_8c_ad083a3a3502c3df37e1855f81de82102}
+
+
+Definition at line 2206 of file I\+E\+E\+E802154\+E.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!ieee154e\+\_\+dbg@{ieee154e\+\_\+dbg}}
+\index{ieee154e\+\_\+dbg@{ieee154e\+\_\+dbg}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{ieee154e\+\_\+dbg}{ieee154e_dbg}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ieee154e\+\_\+dbg\+\_\+t} ieee154e\+\_\+dbg}\hypertarget{_i_e_e_e802154_e_8c_adf17d2af794ad77f48c82f3ac8951790}{}\label{_i_e_e_e802154_e_8c_adf17d2af794ad77f48c82f3ac8951790}
+
+
+Definition at line 26 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!ieee154e\+\_\+stats@{ieee154e\+\_\+stats}}
+\index{ieee154e\+\_\+stats@{ieee154e\+\_\+stats}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{ieee154e\+\_\+stats}{ieee154e_stats}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ieee154e\+\_\+stats\+\_\+t} ieee154e\+\_\+stats}\hypertarget{_i_e_e_e802154_e_8c_a31708c3b2f53eabcbcf5a4b511823162}{}\label{_i_e_e_e802154_e_8c_a31708c3b2f53eabcbcf5a4b511823162}
+
+
+Definition at line 25 of file I\+E\+E\+E802154\+E.\+c.
+
+\index{I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}!ieee154e\+\_\+vars@{ieee154e\+\_\+vars}}
+\index{ieee154e\+\_\+vars@{ieee154e\+\_\+vars}!I\+E\+E\+E802154\+E.\+c@{I\+E\+E\+E802154\+E.\+c}}
+\subsubsection[{\texorpdfstring{ieee154e\+\_\+vars}{ieee154e_vars}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ieee154e\+\_\+vars\+\_\+t} ieee154e\+\_\+vars}\hypertarget{_i_e_e_e802154_e_8c_abbfc7f36c7b2d2635f4407908445a89b}{}\label{_i_e_e_e802154_e_8c_abbfc7f36c7b2d2635f4407908445a89b}
+
+
+Definition at line 24 of file I\+E\+E\+E802154\+E.\+c.
+

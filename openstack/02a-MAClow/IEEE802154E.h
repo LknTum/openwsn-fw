@@ -71,6 +71,9 @@ static const uint8_t chTemplate_default[] = {
 #define IEEE802154E_DESC_TYPE_LONG                         (1<<15)
 #define IEEE802154E_DESC_TYPE_SHORT                        (0<<15)
 
+#define IANA_6TOP_IE_GROUP_ID                              (2<<11)
+#define IANA_6TOP_IE_GROUP_ID_TYPE                         (1<<15)
+
 #define IEEE802154E_DESC_TYPE_HEADER_IE                    0x0000
 #define IEEE802154E_DESC_TYPE_PAYLOAD_IE                   0x8000
 //len field on PAYLOAD/HEADER DESC
@@ -278,6 +281,7 @@ typedef struct {
    // time correction
    int16_t                   timeCorrection;          // store the timeCorrection, prepend and retrieve it inside of frame header
    bool			     my_couldSendEB;
+    uint16_t                  slotDuration;
 } ieee154e_vars_t;
 
 BEGIN_PACK
@@ -310,6 +314,7 @@ void               ieee154e_getAsn(uint8_t* array);
 void               ieee154e_setIsAckEnabled(bool isEnabled);
 void               ieee154e_setSingleChannel(uint8_t channel);
 void               ieee154e_setIsSecurityEnabled(bool isEnabled);
+void               ieee154e_setSlotDuration(uint16_t duration);
 
 uint16_t           ieee154e_getTimeCorrection(void);
 // events

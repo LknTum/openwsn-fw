@@ -1,0 +1,170 @@
+\hypertarget{group__adc__api}{}\section{Adc\+\_\+api}
+\label{group__adc__api}\index{Adc\+\_\+api@{Adc\+\_\+api}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__adc__api_ga95ca16f5e0870ecda7d0113b301e42dd}{S\+O\+C\+A\+D\+C\+Int\+Register} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}($\ast$pfn\+Handler)(\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}))
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__adc__api_ga5cad63f5d3e8f07798b1ce439440d0ae}{S\+O\+C\+A\+D\+C\+Int\+Unregister} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__adc__api_ga96d92c8cc062f4c45831f5b128bc21da}{S\+O\+C\+A\+D\+C\+Single\+Configure} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Resolution, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Reference)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__adc__api_gaa59f17369b3f02c90197e3278a563cdd}{S\+O\+C\+A\+D\+C\+Single\+Start} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Channel)
+\item 
+\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{group__adc__api_ga774b502a5e44f376d1332c6a1a1c9af8}{S\+O\+C\+A\+D\+C\+Data\+Get} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group__adc__api_ga7b30a4921618f172b95d88347145a5a9}{S\+O\+C\+A\+D\+C\+End\+Of\+C\+Onversion\+Get} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{Adc\+\_\+api@{Adc\+\_\+api}!S\+O\+C\+A\+D\+C\+Data\+Get@{S\+O\+C\+A\+D\+C\+Data\+Get}}
+\index{S\+O\+C\+A\+D\+C\+Data\+Get@{S\+O\+C\+A\+D\+C\+Data\+Get}!Adc\+\_\+api@{Adc\+\_\+api}}
+\subsubsection[{\texorpdfstring{S\+O\+C\+A\+D\+C\+Data\+Get(void)}{SOCADCDataGet(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\+\_\+t} S\+O\+C\+A\+D\+C\+Data\+Get (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__adc__api_ga774b502a5e44f376d1332c6a1a1c9af8}{}\label{group__adc__api_ga774b502a5e44f376d1332c6a1a1c9af8}
+Get data value from conversion
+
+This function gets the latest conversion data result of the programmed conversion. The function returns 16 bits of data, but depending on the programmed precision, only part of the data is significant. The following defined bit masks can be used to extract the significant data depending on the decimation rate\+: {\bfseries S\+O\+C\+A\+D\+C\+\_\+7\+\_\+\+B\+I\+T\+\_\+\+M\+A\+SK}, {\bfseries S\+O\+C\+A\+D\+C\+\_\+9\+\_\+\+B\+I\+T\+\_\+\+M\+A\+SK}, {\bfseries S\+O\+C\+A\+D\+C\+\_\+10\+\_\+\+B\+I\+T\+\_\+\+M\+A\+SK} and {\bfseries S\+O\+C\+A\+D\+C\+\_\+12\+\_\+\+B\+I\+T\+\_\+\+M\+A\+SK} 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__adc__api_ga7b30a4921618f172b95d88347145a5a9}{S\+O\+C\+A\+D\+C\+End\+Of\+C\+Onversion\+Get()}.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+Data conversion value 
+\end{DoxyReturn}
+
+
+Definition at line 248 of file adc.\+c.
+
+\index{Adc\+\_\+api@{Adc\+\_\+api}!S\+O\+C\+A\+D\+C\+End\+Of\+C\+Onversion\+Get@{S\+O\+C\+A\+D\+C\+End\+Of\+C\+Onversion\+Get}}
+\index{S\+O\+C\+A\+D\+C\+End\+Of\+C\+Onversion\+Get@{S\+O\+C\+A\+D\+C\+End\+Of\+C\+Onversion\+Get}!Adc\+\_\+api@{Adc\+\_\+api}}
+\subsubsection[{\texorpdfstring{S\+O\+C\+A\+D\+C\+End\+Of\+C\+Onversion\+Get(void)}{SOCADCEndOfCOnversionGet(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} S\+O\+C\+A\+D\+C\+End\+Of\+C\+Onversion\+Get (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__adc__api_ga7b30a4921618f172b95d88347145a5a9}{}\label{group__adc__api_ga7b30a4921618f172b95d88347145a5a9}
+Check if conversion is done
+
+This function can be used to query the status of the conversion.
+
+\begin{DoxyReturn}{Returns}
+true if conversion is done, otherwise false. 
+\end{DoxyReturn}
+
+
+Definition at line 268 of file adc.\+c.
+
+\index{Adc\+\_\+api@{Adc\+\_\+api}!S\+O\+C\+A\+D\+C\+Int\+Register@{S\+O\+C\+A\+D\+C\+Int\+Register}}
+\index{S\+O\+C\+A\+D\+C\+Int\+Register@{S\+O\+C\+A\+D\+C\+Int\+Register}!Adc\+\_\+api@{Adc\+\_\+api}}
+\subsubsection[{\texorpdfstring{S\+O\+C\+A\+D\+C\+Int\+Register(void($\ast$pfn\+Handler)(void))}{SOCADCIntRegister(void(*pfnHandler)(void))}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} S\+O\+C\+A\+D\+C\+Int\+Register (
+\begin{DoxyParamCaption}
+\item[{{\bf void}($\ast$)({\bf void})}]{pfn\+Handler}
+\end{DoxyParamCaption}
+)}\hypertarget{group__adc__api_ga95ca16f5e0870ecda7d0113b301e42dd}{}\label{group__adc__api_ga95ca16f5e0870ecda7d0113b301e42dd}
+Registers an interrupt handler for A\+DC interrupt
+
+
+\begin{DoxyParams}{Parameters}
+{\em pfn\+Handler} & is a pointer to the function called when the S\+OC A\+DC interrupt occurs.\\
+\hline
+\end{DoxyParams}
+This function does the actual registering of the interrupt handler, which enables the global interrupt in the interrupt controller.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()} for important information about registering \hyperlink{_g_c_c_2_m_s_p430_f449_2port_8c_ae0992854bdba99f7b163894433c32aef}{interrupt} handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 71 of file adc.\+c.
+
+\index{Adc\+\_\+api@{Adc\+\_\+api}!S\+O\+C\+A\+D\+C\+Int\+Unregister@{S\+O\+C\+A\+D\+C\+Int\+Unregister}}
+\index{S\+O\+C\+A\+D\+C\+Int\+Unregister@{S\+O\+C\+A\+D\+C\+Int\+Unregister}!Adc\+\_\+api@{Adc\+\_\+api}}
+\subsubsection[{\texorpdfstring{S\+O\+C\+A\+D\+C\+Int\+Unregister(void)}{SOCADCIntUnregister(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} S\+O\+C\+A\+D\+C\+Int\+Unregister (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__adc__api_ga5cad63f5d3e8f07798b1ce439440d0ae}{}\label{group__adc__api_ga5cad63f5d3e8f07798b1ce439440d0ae}
+Unregisters an interrupt handler for the A\+DC interrupt
+
+This function does the actual unregistering of the interrupt handler. This function clears the handler to be called when an A\+DC interrupt occurs and masks off the interrupt in the interrupt controller so that the interrupt handler no longer is called.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()} for important information about registering \hyperlink{_g_c_c_2_m_s_p430_f449_2port_8c_ae0992854bdba99f7b163894433c32aef}{interrupt} handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 100 of file adc.\+c.
+
+\index{Adc\+\_\+api@{Adc\+\_\+api}!S\+O\+C\+A\+D\+C\+Single\+Configure@{S\+O\+C\+A\+D\+C\+Single\+Configure}}
+\index{S\+O\+C\+A\+D\+C\+Single\+Configure@{S\+O\+C\+A\+D\+C\+Single\+Configure}!Adc\+\_\+api@{Adc\+\_\+api}}
+\subsubsection[{\texorpdfstring{S\+O\+C\+A\+D\+C\+Single\+Configure(uint32\+\_\+t ui32\+Resolution, uint32\+\_\+t ui32\+Reference)}{SOCADCSingleConfigure(uint32_t ui32Resolution, uint32_t ui32Reference)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} S\+O\+C\+A\+D\+C\+Single\+Configure (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Resolution, }
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Reference}
+\end{DoxyParamCaption}
+)}\hypertarget{group__adc__api_ga96d92c8cc062f4c45831f5b128bc21da}{}\label{group__adc__api_ga96d92c8cc062f4c45831f5b128bc21da}
+Configure A\+DC conversion for a single channel
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Resolution} & is the resolution of the conversion. \\
+\hline
+{\em ui32\+Reference} & is the reference voltage to be used for the conversion.\\
+\hline
+\end{DoxyParams}
+This function configures the A\+DC for a single channel conversion. The {\itshape ui32\+Resolution} parameter must be one of\+: {\bfseries S\+O\+C\+A\+D\+C\+\_\+7\+\_\+\+B\+IT}, {\bfseries S\+O\+C\+A\+D\+C\+\_\+9\+\_\+\+B\+IT}, {\bfseries S\+O\+C\+A\+D\+C\+\_\+10\+\_\+\+B\+IT} or {\bfseries S\+O\+C\+A\+D\+C\+\_\+12\+\_\+\+B\+IT}. The reference voltage is set using the {\itshape ui32\+Reference} parameter, which must be configured as one of the following\+: {\bfseries S\+O\+C\+A\+D\+C\+\_\+\+R\+E\+F\+\_\+\+I\+N\+T\+E\+R\+N\+AL} for internal reference, {\bfseries S\+O\+C\+A\+D\+C\+\_\+\+R\+E\+F\+\_\+\+E\+X\+T\+\_\+\+A\+I\+N7} for external reference on pin A\+I\+N7 (pad P\+A7), {\bfseries S\+O\+C\+A\+D\+C\+\_\+\+R\+E\+F\+\_\+\+A\+V\+D\+D5} for external A\+V\+D\+D5 pin, {\bfseries S\+O\+C\+A\+D\+C\+\_\+\+R\+E\+F\+\_\+\+E\+X\+T\+\_\+\+A\+I\+N67} for external reference on differential input pins A\+I\+N6-\/\+A\+I\+N7 (Pads P\+A6-\/\+P\+A7).
+
+\begin{DoxyNote}{Note}
+A single conversion triggers an interrupt if this has been registered using \hyperlink{group__adc__api_ga95ca16f5e0870ecda7d0113b301e42dd}{S\+O\+C\+A\+D\+C\+Int\+Register()}.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__adc__api_gaa59f17369b3f02c90197e3278a563cdd}{S\+O\+C\+A\+D\+C\+Single\+Start()} and \hyperlink{group__adc__api_ga95ca16f5e0870ecda7d0113b301e42dd}{S\+O\+C\+A\+D\+C\+Int\+Register()}.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 140 of file adc.\+c.
+
+\index{Adc\+\_\+api@{Adc\+\_\+api}!S\+O\+C\+A\+D\+C\+Single\+Start@{S\+O\+C\+A\+D\+C\+Single\+Start}}
+\index{S\+O\+C\+A\+D\+C\+Single\+Start@{S\+O\+C\+A\+D\+C\+Single\+Start}!Adc\+\_\+api@{Adc\+\_\+api}}
+\subsubsection[{\texorpdfstring{S\+O\+C\+A\+D\+C\+Single\+Start(uint32\+\_\+t ui32\+Channel)}{SOCADCSingleStart(uint32_t ui32Channel)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} S\+O\+C\+A\+D\+C\+Single\+Start (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Channel}
+\end{DoxyParamCaption}
+)}\hypertarget{group__adc__api_gaa59f17369b3f02c90197e3278a563cdd}{}\label{group__adc__api_gaa59f17369b3f02c90197e3278a563cdd}
+Start a configured single conversion
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Channel} & is the input channel to use for the conversion.\\
+\hline
+\end{DoxyParams}
+This function initiates a configured single channel conversion. The input channel is set using the {\itshape ui32\+Channel} parameter. This parameter must be configured as one of the following values\+: {\bfseries S\+O\+C\+A\+D\+C\+\_\+\+A\+I\+N0} for single ended input Pad P\+A0 {\bfseries S\+O\+C\+A\+D\+C\+\_\+\+A\+I\+N1} for single ended input Pad P\+A1 {\bfseries S\+O\+C\+A\+D\+C\+\_\+\+A\+I\+N2} for single ended input Pad P\+A2 {\bfseries S\+O\+C\+A\+D\+C\+\_\+\+A\+I\+N3} for single ended input Pad P\+A3 {\bfseries S\+O\+C\+A\+D\+C\+\_\+\+A\+I\+N4} for single ended input Pad P\+A4 {\bfseries S\+O\+C\+A\+D\+C\+\_\+\+A\+I\+N5} for single ended input Pad P\+A5 {\bfseries S\+O\+C\+A\+D\+C\+\_\+\+A\+I\+N6} for single ended input Pad P\+A6 {\bfseries S\+O\+C\+A\+D\+C\+\_\+\+A\+I\+N7} for single ended input Pad P\+A7 {\bfseries S\+O\+C\+A\+D\+C\+\_\+\+A\+I\+N01} for differential Pads P\+A0-\/\+P\+A1 {\bfseries S\+O\+C\+A\+D\+C\+\_\+\+A\+I\+N23} for differential Pads P\+A2-\/\+P\+A3 {\bfseries S\+O\+C\+A\+D\+C\+\_\+\+A\+I\+N45} for differential Pads P\+A4-\/\+P\+A5 {\bfseries S\+O\+C\+A\+D\+C\+\_\+\+A\+I\+N67} for differential Pads P\+A6-\/\+P\+A7 {\bfseries S\+O\+C\+A\+D\+C\+\_\+\+G\+ND} for Ground as input {\bfseries S\+O\+C\+A\+D\+C\+\_\+\+T\+E\+M\+P\+\_\+\+S\+E\+NS} for on-\/chip temperature sensor {\bfseries S\+O\+C\+A\+D\+C\+\_\+\+V\+DD} for Vdd/3
+
+\begin{DoxyNote}{Note}
+A single conversion triggers an interrupt if this has been registered using \hyperlink{group__adc__api_ga95ca16f5e0870ecda7d0113b301e42dd}{S\+O\+C\+A\+D\+C\+Int\+Register()}.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__adc__api_ga96d92c8cc062f4c45831f5b128bc21da}{S\+O\+C\+A\+D\+C\+Single\+Configure()} and \hyperlink{group__adc__api_ga95ca16f5e0870ecda7d0113b301e42dd}{S\+O\+C\+A\+D\+C\+Int\+Register()}.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 200 of file adc.\+c.
+

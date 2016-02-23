@@ -1,0 +1,259 @@
+\hypertarget{abstimer_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/common/abstimer.c File Reference}
+\label{abstimer_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/common/abstimer.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/common/abstimer.\+c}}
+{\ttfamily \#include \char`\"{}opendefs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bsp\+\_\+timer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}radiotimer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sctimer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}debugpins.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structabstimer__dbg__t}{abstimer\+\_\+dbg\+\_\+t}
+\item 
+struct \hyperlink{structabstimer__vars__t}{abstimer\+\_\+vars\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{abstimer_8c_a40913849bdb0c3e7ff2ca20729ddda33}{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+G\+U\+A\+R\+D\+\_\+\+T\+I\+C\+KS}~2
+\begin{DoxyCompactList}\small\item\em A B\+SP module which abstracts away the \char`\"{}bsp\+\_\+timer\char`\"{} and \char`\"{}radiotimer\char`\"{} modules behind the \char`\"{}sctimer\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}($\ast$ \hyperlink{abstimer_8c_ab0bc168cafa483dee0dc77d184fba1d1}{abstimer\+\_\+cbt}) ()
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{abstimer_8c_a0dd1b7fa75925f96618ae9558aedc4dc}{abstimer\+\_\+src\+\_\+t} \{ \\*
+\hyperlink{abstimer_8c_a0dd1b7fa75925f96618ae9558aedc4dcada3a93b4e88d2c27a758d98d0e03f6f9}{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+B\+S\+P\+\_\+\+T\+I\+M\+ER} = 0, 
+\hyperlink{abstimer_8c_a0dd1b7fa75925f96618ae9558aedc4dcabcee6e6fbe286bef3bbd81ea179e3632}{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+O\+V\+E\+R\+F\+L\+OW}, 
+\hyperlink{abstimer_8c_a0dd1b7fa75925f96618ae9558aedc4dca800ef99997ac5a899d10168e3b2db618}{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+RE}, 
+\hyperlink{abstimer_8c_a0dd1b7fa75925f96618ae9558aedc4dcab98b50bf61c9f1f51ec0c9d71327652b}{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+M\+AX}, 
+\\*
+\hyperlink{k20_2bsp_2radiotimer_8c_a0dd1b7fa75925f96618ae9558aedc4dcabcee6e6fbe286bef3bbd81ea179e3632}{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+O\+V\+E\+R\+F\+L\+OW} =0, 
+\hyperlink{k20_2bsp_2radiotimer_8c_a0dd1b7fa75925f96618ae9558aedc4dca800ef99997ac5a899d10168e3b2db618}{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+RE}, 
+\hyperlink{k20_2bsp_2radiotimer_8c_a0dd1b7fa75925f96618ae9558aedc4dcab98b50bf61c9f1f51ec0c9d71327652b}{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+M\+AX}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{abstimer_8c_a65c720da54256fc40230e9887362dd41}{abstimer\+\_\+init} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{abstimer_8c_a9ba5e579f71d7d82d45f880dc4aafd55}{abstimer\+\_\+reschedule} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{abstimer_8c_a7b243ad7df9e6f570b94d765b0506d6e}{sctimer\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em A timer module with only a single compare value. Can be used to replace the \char`\"{}bsp\+\_\+timer\char`\"{} and \char`\"{}radiotimer\char`\"{} modules with the help of abstimer. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{abstimer_8c_a054db7016ecd0ae3f61f6704a9b0274d}{sctimer\+\_\+schedule} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} val)
+\item 
+\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{abstimer_8c_a204126ea66fed169ef1977f87b1e8805}{sctimer\+\_\+get\+Value} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radiotimer_ga9a5ab332f81d5e2a74143ad62ef6a2f7}{radiotimer\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em Clears the hardware timer and the current data structures, i.\+e. resets everything. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radiotimer_gab892e556a83f22551ff4e4551bd488f7}{radiotimer\+\_\+set\+Overflow\+Cb} (\hyperlink{group__radiotimer_ga62b602325e65023c91b784f20cd2d6bc}{radiotimer\+\_\+compare\+\_\+cbt} cb)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radiotimer_gaf4d7c5df5b6c28462c5104df496ae584}{radiotimer\+\_\+set\+Compare\+Cb} (\hyperlink{group__radiotimer_ga62b602325e65023c91b784f20cd2d6bc}{radiotimer\+\_\+compare\+\_\+cbt} cb)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{abstimer_8c_a3dda7b06fc7986db2f835ad5399be228}{radiotimer\+\_\+start} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} period)
+\item 
+\hyperlink{z1_2board__info_8h_abe66b9c1c60db84f2a99f2b827275f24}{P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} \hyperlink{group__radiotimer_ga763b0da72c3bbf926f5a74283de1003c}{radiotimer\+\_\+get\+Value} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{abstimer_8c_a3e0cb6aae48e0b636c661446f83242d9}{radiotimer\+\_\+set\+Period} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} period)
+\item 
+\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{group__radiotimer_ga6e96a37a1a07cb7ec7639bfb44759437}{radiotimer\+\_\+get\+Period} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{abstimer_8c_ab52f92ecf9d7dd4bcc893119f8cdb4ed}{radiotimer\+\_\+schedule} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} offset)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radiotimer_ga87b29bd5be3a34ea714da11d244e43f2}{radiotimer\+\_\+cancel} ()
+\item 
+\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{group__radiotimer_ga3f869c34f63741cf1aa6e43321662f78}{radiotimer\+\_\+get\+Captured\+Time} ()
+\item 
+\hyperlink{group__board_gac9ebdcc0a4f3c8422f5f4f0fbbe0ded0}{kick\+\_\+scheduler\+\_\+t} \hyperlink{group__radiotimer_ga45ba49be562da796046e90c03fdb1433}{radiotimer\+\_\+isr} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structabstimer__dbg__t}{abstimer\+\_\+dbg\+\_\+t} \hyperlink{abstimer_8c_a387767b8588ea32133d80f1a9c52d960}{abstimer\+\_\+dbg}
+\item 
+\hyperlink{structabstimer__vars__t}{abstimer\+\_\+vars\+\_\+t} \hyperlink{abstimer_8c_a9be87f827683cd4a04778a307e342557}{abstimer\+\_\+vars}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{abstimer.\+c@{abstimer.\+c}!A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+G\+U\+A\+R\+D\+\_\+\+T\+I\+C\+KS@{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+G\+U\+A\+R\+D\+\_\+\+T\+I\+C\+KS}}
+\index{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+G\+U\+A\+R\+D\+\_\+\+T\+I\+C\+KS@{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+G\+U\+A\+R\+D\+\_\+\+T\+I\+C\+KS}!abstimer.\+c@{abstimer.\+c}}
+\subsubsection[{\texorpdfstring{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+G\+U\+A\+R\+D\+\_\+\+T\+I\+C\+KS}{ABSTIMER_GUARD_TICKS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+G\+U\+A\+R\+D\+\_\+\+T\+I\+C\+KS~2}\hypertarget{abstimer_8c_a40913849bdb0c3e7ff2ca20729ddda33}{}\label{abstimer_8c_a40913849bdb0c3e7ff2ca20729ddda33}
+
+
+A B\+SP module which abstracts away the \char`\"{}bsp\+\_\+timer\char`\"{} and \char`\"{}radiotimer\char`\"{} modules behind the \char`\"{}sctimer\char`\"{}. 
+
+\begin{DoxyAuthor}{Author}
+Xavi Vilajosana \href{mailto:xvilajosana@eecs.berkeley.edu}{\tt xvilajosana@eecs.\+berkeley.\+edu}, May 2012. 
+
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, May 2012. 
+\end{DoxyAuthor}
+
+
+Definition at line 17 of file abstimer.\+c.
+
+
+
+\subsection{Typedef Documentation}
+\index{abstimer.\+c@{abstimer.\+c}!abstimer\+\_\+cbt@{abstimer\+\_\+cbt}}
+\index{abstimer\+\_\+cbt@{abstimer\+\_\+cbt}!abstimer.\+c@{abstimer.\+c}}
+\subsubsection[{\texorpdfstring{abstimer\+\_\+cbt}{abstimer_cbt}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf void}($\ast$ abstimer\+\_\+cbt) ()}\hypertarget{abstimer_8c_ab0bc168cafa483dee0dc77d184fba1d1}{}\label{abstimer_8c_ab0bc168cafa483dee0dc77d184fba1d1}
+
+
+Definition at line 19 of file abstimer.\+c.
+
+
+
+\subsection{Enumeration Type Documentation}
+\index{abstimer.\+c@{abstimer.\+c}!abstimer\+\_\+src\+\_\+t@{abstimer\+\_\+src\+\_\+t}}
+\index{abstimer\+\_\+src\+\_\+t@{abstimer\+\_\+src\+\_\+t}!abstimer.\+c@{abstimer.\+c}}
+\subsubsection[{\texorpdfstring{abstimer\+\_\+src\+\_\+t}{abstimer_src_t}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf abstimer\+\_\+src\+\_\+t}}\hypertarget{abstimer_8c_a0dd1b7fa75925f96618ae9558aedc4dc}{}\label{abstimer_8c_a0dd1b7fa75925f96618ae9558aedc4dc}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+B\+S\+P\+\_\+\+T\+I\+M\+ER@{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+B\+S\+P\+\_\+\+T\+I\+M\+ER}!abstimer.\+c@{abstimer.\+c}}\index{abstimer.\+c@{abstimer.\+c}!A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+B\+S\+P\+\_\+\+T\+I\+M\+ER@{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+B\+S\+P\+\_\+\+T\+I\+M\+ER}}\item[{\em 
+A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+B\+S\+P\+\_\+\+T\+I\+M\+ER\hypertarget{abstimer_8c_a0dd1b7fa75925f96618ae9558aedc4dcada3a93b4e88d2c27a758d98d0e03f6f9}{}\label{abstimer_8c_a0dd1b7fa75925f96618ae9558aedc4dcada3a93b4e88d2c27a758d98d0e03f6f9}
+}]\index{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+O\+V\+E\+R\+F\+L\+OW@{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+O\+V\+E\+R\+F\+L\+OW}!abstimer.\+c@{abstimer.\+c}}\index{abstimer.\+c@{abstimer.\+c}!A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+O\+V\+E\+R\+F\+L\+OW@{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+O\+V\+E\+R\+F\+L\+OW}}\item[{\em 
+A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+O\+V\+E\+R\+F\+L\+OW\hypertarget{abstimer_8c_a0dd1b7fa75925f96618ae9558aedc4dcabcee6e6fbe286bef3bbd81ea179e3632}{}\label{abstimer_8c_a0dd1b7fa75925f96618ae9558aedc4dcabcee6e6fbe286bef3bbd81ea179e3632}
+}]\index{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+RE@{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+RE}!abstimer.\+c@{abstimer.\+c}}\index{abstimer.\+c@{abstimer.\+c}!A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+RE@{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+RE}}\item[{\em 
+A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+RE\hypertarget{abstimer_8c_a0dd1b7fa75925f96618ae9558aedc4dca800ef99997ac5a899d10168e3b2db618}{}\label{abstimer_8c_a0dd1b7fa75925f96618ae9558aedc4dca800ef99997ac5a899d10168e3b2db618}
+}]\index{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+M\+AX@{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+M\+AX}!abstimer.\+c@{abstimer.\+c}}\index{abstimer.\+c@{abstimer.\+c}!A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+M\+AX@{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+M\+AX}}\item[{\em 
+A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+M\+AX\hypertarget{abstimer_8c_a0dd1b7fa75925f96618ae9558aedc4dcab98b50bf61c9f1f51ec0c9d71327652b}{}\label{abstimer_8c_a0dd1b7fa75925f96618ae9558aedc4dcab98b50bf61c9f1f51ec0c9d71327652b}
+}]\index{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+O\+V\+E\+R\+F\+L\+OW@{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+O\+V\+E\+R\+F\+L\+OW}!abstimer.\+c@{abstimer.\+c}}\index{abstimer.\+c@{abstimer.\+c}!A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+O\+V\+E\+R\+F\+L\+OW@{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+O\+V\+E\+R\+F\+L\+OW}}\item[{\em 
+A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+O\+V\+E\+R\+F\+L\+OW\hypertarget{abstimer_8c_a0dd1b7fa75925f96618ae9558aedc4dcabcee6e6fbe286bef3bbd81ea179e3632}{}\label{abstimer_8c_a0dd1b7fa75925f96618ae9558aedc4dcabcee6e6fbe286bef3bbd81ea179e3632}
+}]\index{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+RE@{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+RE}!abstimer.\+c@{abstimer.\+c}}\index{abstimer.\+c@{abstimer.\+c}!A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+RE@{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+RE}}\item[{\em 
+A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+RE\hypertarget{abstimer_8c_a0dd1b7fa75925f96618ae9558aedc4dca800ef99997ac5a899d10168e3b2db618}{}\label{abstimer_8c_a0dd1b7fa75925f96618ae9558aedc4dca800ef99997ac5a899d10168e3b2db618}
+}]\index{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+M\+AX@{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+M\+AX}!abstimer.\+c@{abstimer.\+c}}\index{abstimer.\+c@{abstimer.\+c}!A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+M\+AX@{A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+M\+AX}}\item[{\em 
+A\+B\+S\+T\+I\+M\+E\+R\+\_\+\+S\+R\+C\+\_\+\+M\+AX\hypertarget{abstimer_8c_a0dd1b7fa75925f96618ae9558aedc4dcab98b50bf61c9f1f51ec0c9d71327652b}{}\label{abstimer_8c_a0dd1b7fa75925f96618ae9558aedc4dcab98b50bf61c9f1f51ec0c9d71327652b}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 23 of file abstimer.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{abstimer.\+c@{abstimer.\+c}!abstimer\+\_\+init@{abstimer\+\_\+init}}
+\index{abstimer\+\_\+init@{abstimer\+\_\+init}!abstimer.\+c@{abstimer.\+c}}
+\subsubsection[{\texorpdfstring{abstimer\+\_\+init()}{abstimer_init()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} abstimer\+\_\+init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{abstimer_8c_a65c720da54256fc40230e9887362dd41}{}\label{abstimer_8c_a65c720da54256fc40230e9887362dd41}
+
+
+Definition at line 244 of file abstimer.\+c.
+
+\index{abstimer.\+c@{abstimer.\+c}!abstimer\+\_\+reschedule@{abstimer\+\_\+reschedule}}
+\index{abstimer\+\_\+reschedule@{abstimer\+\_\+reschedule}!abstimer.\+c@{abstimer.\+c}}
+\subsubsection[{\texorpdfstring{abstimer\+\_\+reschedule()}{abstimer_reschedule()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} abstimer\+\_\+reschedule (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{abstimer_8c_a9ba5e579f71d7d82d45f880dc4aafd55}{}\label{abstimer_8c_a9ba5e579f71d7d82d45f880dc4aafd55}
+
+
+Definition at line 264 of file abstimer.\+c.
+
+\index{abstimer.\+c@{abstimer.\+c}!radiotimer\+\_\+schedule@{radiotimer\+\_\+schedule}}
+\index{radiotimer\+\_\+schedule@{radiotimer\+\_\+schedule}!abstimer.\+c@{abstimer.\+c}}
+\subsubsection[{\texorpdfstring{radiotimer\+\_\+schedule(uint16\+\_\+t offset)}{radiotimer_schedule(uint16_t offset)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} radiotimer\+\_\+schedule (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t}}]{offset}
+\end{DoxyParamCaption}
+)}\hypertarget{abstimer_8c_ab52f92ecf9d7dd4bcc893119f8cdb4ed}{}\label{abstimer_8c_ab52f92ecf9d7dd4bcc893119f8cdb4ed}
+
+
+Definition at line 206 of file abstimer.\+c.
+
+\index{abstimer.\+c@{abstimer.\+c}!radiotimer\+\_\+set\+Period@{radiotimer\+\_\+set\+Period}}
+\index{radiotimer\+\_\+set\+Period@{radiotimer\+\_\+set\+Period}!abstimer.\+c@{abstimer.\+c}}
+\subsubsection[{\texorpdfstring{radiotimer\+\_\+set\+Period(uint16\+\_\+t period)}{radiotimer_setPeriod(uint16_t period)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} radiotimer\+\_\+set\+Period (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t}}]{period}
+\end{DoxyParamCaption}
+)}\hypertarget{abstimer_8c_a3e0cb6aae48e0b636c661446f83242d9}{}\label{abstimer_8c_a3e0cb6aae48e0b636c661446f83242d9}
+
+
+Definition at line 190 of file abstimer.\+c.
+
+\index{abstimer.\+c@{abstimer.\+c}!radiotimer\+\_\+start@{radiotimer\+\_\+start}}
+\index{radiotimer\+\_\+start@{radiotimer\+\_\+start}!abstimer.\+c@{abstimer.\+c}}
+\subsubsection[{\texorpdfstring{radiotimer\+\_\+start(uint16\+\_\+t period)}{radiotimer_start(uint16_t period)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} radiotimer\+\_\+start (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t}}]{period}
+\end{DoxyParamCaption}
+)}\hypertarget{abstimer_8c_a3dda7b06fc7986db2f835ad5399be228}{}\label{abstimer_8c_a3dda7b06fc7986db2f835ad5399be228}
+
+
+Definition at line 160 of file abstimer.\+c.
+
+\index{abstimer.\+c@{abstimer.\+c}!sctimer\+\_\+get\+Value@{sctimer\+\_\+get\+Value}}
+\index{sctimer\+\_\+get\+Value@{sctimer\+\_\+get\+Value}!abstimer.\+c@{abstimer.\+c}}
+\subsubsection[{\texorpdfstring{sctimer\+\_\+get\+Value()}{sctimer_getValue()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\+\_\+t} sctimer\+\_\+get\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{abstimer_8c_a204126ea66fed169ef1977f87b1e8805}{}\label{abstimer_8c_a204126ea66fed169ef1977f87b1e8805}
+
+
+Definition at line 44 of file sctimer\+\_\+mac.\+c.
+
+\index{abstimer.\+c@{abstimer.\+c}!sctimer\+\_\+init@{sctimer\+\_\+init}}
+\index{sctimer\+\_\+init@{sctimer\+\_\+init}!abstimer.\+c@{abstimer.\+c}}
+\subsubsection[{\texorpdfstring{sctimer\+\_\+init()}{sctimer_init()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sctimer\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{abstimer_8c_a7b243ad7df9e6f570b94d765b0506d6e}{}\label{abstimer_8c_a7b243ad7df9e6f570b94d765b0506d6e}
+
+
+A timer module with only a single compare value. Can be used to replace the \char`\"{}bsp\+\_\+timer\char`\"{} and \char`\"{}radiotimer\char`\"{} modules with the help of abstimer. 
+
+on the derfmega we use timer 2 with asynchronous operation
+
+\begin{DoxyAuthor}{Author}
+Kevin Weekly \href{mailto:kweekly@eecs.berkeley.edu}{\tt kweekly@eecs.\+berkeley.\+edu}, June 2012.
+
+Xavi Vilajosana \href{mailto:xvilajosana@eecs.berkeley.edu}{\tt xvilajosana@eecs.\+berkeley.\+edu}, May 2012. 
+
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, May 2012. 
+\end{DoxyAuthor}
+
+
+Definition at line 22 of file sctimer\+\_\+mac.\+c.
+
+\index{abstimer.\+c@{abstimer.\+c}!sctimer\+\_\+schedule@{sctimer\+\_\+schedule}}
+\index{sctimer\+\_\+schedule@{sctimer\+\_\+schedule}!abstimer.\+c@{abstimer.\+c}}
+\subsubsection[{\texorpdfstring{sctimer\+\_\+schedule(uint16\+\_\+t val)}{sctimer_schedule(uint16_t val)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sctimer\+\_\+schedule (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t}}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{abstimer_8c_a054db7016ecd0ae3f61f6704a9b0274d}{}\label{abstimer_8c_a054db7016ecd0ae3f61f6704a9b0274d}
+When the L\+P\+T\+MR is enabled and the C\+NR equals the value in the C\+MR and increments, T\+CF is set and the hardware trigger asserts until the next time the C\+NR increments. If the C\+MR is 0, the hardware trigger will remain asserted until the L\+P\+T\+MR is disabled. If the L\+P\+T\+MR is enabled, the C\+MR must be altered only when T\+CF is set. 
+
+Definition at line 44 of file sctimer.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{abstimer.\+c@{abstimer.\+c}!abstimer\+\_\+dbg@{abstimer\+\_\+dbg}}
+\index{abstimer\+\_\+dbg@{abstimer\+\_\+dbg}!abstimer.\+c@{abstimer.\+c}}
+\subsubsection[{\texorpdfstring{abstimer\+\_\+dbg}{abstimer_dbg}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf abstimer\+\_\+dbg\+\_\+t} abstimer\+\_\+dbg}\hypertarget{abstimer_8c_a387767b8588ea32133d80f1a9c52d960}{}\label{abstimer_8c_a387767b8588ea32133d80f1a9c52d960}
+
+
+Definition at line 40 of file abstimer.\+c.
+
+\index{abstimer.\+c@{abstimer.\+c}!abstimer\+\_\+vars@{abstimer\+\_\+vars}}
+\index{abstimer\+\_\+vars@{abstimer\+\_\+vars}!abstimer.\+c@{abstimer.\+c}}
+\subsubsection[{\texorpdfstring{abstimer\+\_\+vars}{abstimer_vars}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf abstimer\+\_\+vars\+\_\+t} abstimer\+\_\+vars}\hypertarget{abstimer_8c_a9be87f827683cd4a04778a307e342557}{}\label{abstimer_8c_a9be87f827683cd4a04778a307e342557}
+
+
+Definition at line 61 of file abstimer.\+c.
+

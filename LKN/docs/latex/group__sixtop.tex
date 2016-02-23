@@ -1,0 +1,486 @@
+\hypertarget{group__sixtop}{}\section{sixtop}
+\label{group__sixtop}\index{sixtop@{sixtop}}
+
+
+Implementation of the 6\+Ti\+S\+CH Operation Sublayer (6top).  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structsixtop__vars__t}{sixtop\+\_\+vars\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__sixtop_ga74014f9a4d1b5540a3e44369e296b449}{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+6\+P\+\_\+\+V\+E\+R\+S\+I\+ON}~0x01
+\item 
+\#define \hyperlink{group__sixtop_gabdc29537673b19bb583c8ccb3e3330c6}{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+N\+O\+NE}~0x00
+\item 
+\#define \hyperlink{group__sixtop_gaed6611a612519c8be4dcc1b8931ae952}{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+A\+DD}~0x01
+\item 
+\#define \hyperlink{group__sixtop_gadb01974cc07399fc01209c4a94a35eb4}{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+D\+E\+L\+E\+TE}~0x02
+\item 
+\#define \hyperlink{group__sixtop_ga5fc5a89e85fa0537ec21d7c6b4fe5241}{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+C\+O\+U\+NT}~0x03
+\item 
+\#define \hyperlink{group__sixtop_ga9bc18cb88810c338e62221426255d2b5}{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+L\+I\+ST}~0x04
+\item 
+\#define \hyperlink{group__sixtop_ga0bdf7483c22f454cdbaa4b66bb13bd6c}{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+C\+L\+E\+AR}~0x05
+\item 
+\#define \hyperlink{group__sixtop_gaf34161cd672d7fe6175ea1343b31c2bf}{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+S\+U\+C\+C\+E\+SS}~0x06
+\item 
+\#define \hyperlink{group__sixtop_ga92a8bc12446d9440ef6bd92f0bf63b10}{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+V\+E\+R\+\_\+\+E\+RR}~0x07
+\item 
+\#define \hyperlink{group__sixtop_gabb11416715eb01fad87f5e28867c6bd9}{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+S\+F\+I\+D\+\_\+\+E\+RR}~0x08
+\item 
+\#define \hyperlink{group__sixtop_ga08b4fb07b78fd672a46f02e09d24b1a7}{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+B\+U\+SY}~0x09
+\item 
+\#define \hyperlink{group__sixtop_ga5f807240736ea7b4938e6b2087e3e024}{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+R\+E\+S\+ET}~0x0a
+\item 
+\#define \hyperlink{group__sixtop_ga75b866e3a1f1d116a0d61943779a811f}{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+E\+RR}~0x0b
+\item 
+\#define \hyperlink{group__sixtop_ga14969413ec66e507bee020d526feb199}{S\+F\+I\+D\+\_\+\+S\+F0}~0
+\item 
+\#define \hyperlink{group__sixtop_gafe4b5903cd4d2dd815d7e22c58b9a2e0}{S\+I\+X2\+S\+I\+X\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+MS}~4000
+\item 
+\#define \hyperlink{group__sixtop_ga8280ff28bc5bc0d53db912f80dce4dcd}{S\+I\+X\+T\+O\+P\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+\+E\+B\+P\+E\+R\+I\+OD}~5
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__sixtop_ga8161d14ed7c0b1839e3feb69349e8eb4}{sixtop\+\_\+\+Command\+I\+D\+\_\+num} \{ \hyperlink{group__sixtop_gga8161d14ed7c0b1839e3feb69349e8eb4a0ad40c703c2a81b01e3f1be8bea20ad5}{S\+I\+X\+T\+O\+P\+\_\+\+S\+O\+F\+T\+\_\+\+C\+E\+L\+L\+\_\+\+R\+EQ} = 0x00, 
+\hyperlink{group__sixtop_gga8161d14ed7c0b1839e3feb69349e8eb4a5da1b52bd5a45f8e74177273bc68713c}{S\+I\+X\+T\+O\+P\+\_\+\+S\+O\+F\+T\+\_\+\+C\+E\+L\+L\+\_\+\+R\+E\+S\+P\+O\+N\+SE} = 0x01, 
+\hyperlink{group__sixtop_gga8161d14ed7c0b1839e3feb69349e8eb4a85a4d9f653487b2e5c0d61d4f99ccdd1}{S\+I\+X\+T\+O\+P\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+S\+O\+F\+T\+\_\+\+C\+E\+L\+L\+\_\+\+R\+E\+Q\+U\+E\+ST} = 0x02
+ \}
+\item 
+enum \hyperlink{group__sixtop_ga0d114e8a582180b48d3b337cff5f90e0}{six2six\+\_\+state\+\_\+t} \{ \\*
+\hyperlink{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0a8eff737a4dc265fd457301a51c030c66}{S\+I\+X\+\_\+\+I\+D\+LE} = 0x00, 
+\hyperlink{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0abf12add745e22b60800ce2c6a62e1373}{S\+I\+X\+\_\+\+S\+E\+N\+D\+I\+N\+G\+\_\+\+R\+E\+Q\+U\+E\+ST} = 0x01, 
+\hyperlink{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0a3417040b0066dfd51588b0f71ae91f70}{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+A\+D\+D\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+D\+D\+O\+NE} = 0x02, 
+\hyperlink{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0afd12611bd6c8a701284eaa711428b7a0}{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+D\+E\+L\+E\+T\+E\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+D\+D\+O\+NE} = 0x03, 
+\\*
+\hyperlink{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0afdf425bb0501f7b98f621fcccb08d7d0}{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+C\+O\+U\+N\+T\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+D\+D\+O\+NE} = 0x04, 
+\hyperlink{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0a9bb0c7efbad25eb05f4a86f7b56510c1}{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+L\+I\+S\+T\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+D\+D\+O\+NE} = 0x05, 
+\hyperlink{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0a6aa2fe817064a0a167aa62ce15f5367b}{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+C\+L\+E\+A\+R\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+D\+D\+O\+NE} = 0x06, 
+\hyperlink{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0a2da41dc5ffe3a2da3b0466ea3e57491e}{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+A\+D\+D\+R\+E\+S\+P\+O\+N\+SE} = 0x07, 
+\\*
+\hyperlink{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0a1ecdebe4b5117da63bd428e27f1184f4}{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+D\+E\+L\+E\+T\+E\+R\+E\+S\+P\+O\+N\+SE} = 0x08, 
+\hyperlink{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0ab52ee40a7f9e6225479636b126ad8468}{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+C\+O\+U\+N\+T\+R\+E\+S\+P\+O\+N\+SE} = 0x09, 
+\hyperlink{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0aa2eb90549133bec760bb5202a91d88cd}{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+L\+I\+S\+T\+R\+E\+S\+P\+O\+N\+SE} = 0x0a, 
+\hyperlink{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0aaee37a7161bef787a87c409e337ee9da}{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+C\+L\+E\+A\+R\+R\+E\+S\+P\+O\+N\+SE} = 0x0b, 
+\\*
+\hyperlink{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0aa1f0e17540d2e5052a4055985cdacde1}{S\+I\+X\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+ED} = 0x0c, 
+\hyperlink{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0ac6a964f094e72e3f58bc0b18882c0866}{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+S\+E\+N\+D\+D\+O\+NE} = 0x0d
+ \}
+\item 
+enum \hyperlink{group__sixtop_gaa3d42866c0888ad4ae5166773563addd}{six2six\+\_\+handler\+\_\+t} \{ \hyperlink{group__sixtop_ggaa3d42866c0888ad4ae5166773563adddabe85569061dbb43cbfe8d2c7bef0fd87}{S\+I\+X\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+\+N\+O\+NE} = 0x00, 
+\hyperlink{group__sixtop_ggaa3d42866c0888ad4ae5166773563addda1e70de1e3c3a32b92460d3bb64a77ee8}{S\+I\+X\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+\+M\+A\+I\+N\+T\+A\+IN} = 0x01, 
+\hyperlink{group__sixtop_ggaa3d42866c0888ad4ae5166773563adddab7b5414272e8249d1dc3d496413d4a58}{S\+I\+X\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+\+O\+TF} = 0x02
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__sixtop_ga7ebc63dd17f632acdb878a79c1d79da8}{sixtop\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__sixtop_ga462512c8c301081df10b0d51f7e7bc8b}{sixtop\+\_\+set\+Ka\+Period} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} ka\+Period)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__sixtop_ga075d83ee0b50fe58ddb21fe5461b8d37}{sixtop\+\_\+set\+E\+B\+Period} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} eb\+Period)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__sixtop_ga88c7b3727422755c34000ca4600abfa2}{sixtop\+\_\+set\+Handler} (\hyperlink{group__sixtop_gaa3d42866c0888ad4ae5166773563addd}{six2six\+\_\+handler\+\_\+t} handler)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__sixtop_ga2839458024d85a3e05fb67767fe7adb9}{sixtop\+\_\+request} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} code, \hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$neighbor, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} num\+Cells)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__sixtop_ga83ffb7e25a1e635539b526b15f857dbd}{sixtop\+\_\+add\+O\+Rremove\+Cell\+By\+Info} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} code, \hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$neighbor, \hyperlink{structcell_info__ht}{cell\+Info\+\_\+ht} $\ast$cell\+Info)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__sixtop_gacfaa93a6c2b7348a48913b44e00a5205}{sixtop\+\_\+maintaining} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} slot\+Offset, \hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$neighbor)
+\item 
+\hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{group__sixtop_ga7e16122ce4b265f68df057c0fd852ecd}{sixtop\+\_\+send} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__sixtop_ga7c754289c0f435249b69965524ad9368}{task\+\_\+sixtop\+Notif\+Send\+Done} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__sixtop_ga04eb8f63cc93551e15143a21a6e6403e}{task\+\_\+sixtop\+Notif\+Receive} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group__sixtop_ga5b5d77a858a5ac83abdf678d38d059e0}{debug\+Print\+\_\+my\+D\+A\+Grank} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Trigger this module to print status information, over serial. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group__sixtop_ga1c6ef448cc665d7c6e9dd84c819d638a}{debug\+Print\+\_\+ka\+Period} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Trigger this module to print status information, over serial. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__sixtop_ga98991c277d212918c9a9f8fb7b4edc7a}{sixtop\+\_\+set\+Is\+Response\+Enabled} (\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} is\+Enabled)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of the 6\+Ti\+S\+CH Operation Sublayer (6top). 
+
+6top is defined in the following drafts\+:
+\begin{DoxyItemize}
+\item \href{http://tools.ietf.org/id/draft-wang-6tisch-6top-sublayer-01.txt}{\tt http\+://tools.\+ietf.\+org/id/draft-\/wang-\/6tisch-\/6top-\/sublayer-\/01.\+txt}
+\item \href{http://tools.ietf.org/wg/6tisch/draft-ietf-6tisch-6top-interface/}{\tt http\+://tools.\+ietf.\+org/wg/6tisch/draft-\/ietf-\/6tisch-\/6top-\/interface/}
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Tengfei Chang \href{mailto:tengfei.chang@eecs.berkeley.edu}{\tt tengfei.\+chang@eecs.\+berkeley.\+edu}, July 2014. 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\index{sixtop@{sixtop}!I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+6\+P\+\_\+\+V\+E\+R\+S\+I\+ON@{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+6\+P\+\_\+\+V\+E\+R\+S\+I\+ON}}
+\index{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+6\+P\+\_\+\+V\+E\+R\+S\+I\+ON@{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+6\+P\+\_\+\+V\+E\+R\+S\+I\+ON}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+6\+P\+\_\+\+V\+E\+R\+S\+I\+ON}{IANA_6TOP_6P_VERSION}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+6\+P\+\_\+\+V\+E\+R\+S\+I\+ON~0x01}\hypertarget{group__sixtop_ga74014f9a4d1b5540a3e44369e296b449}{}\label{group__sixtop_ga74014f9a4d1b5540a3e44369e296b449}
+
+
+Definition at line 16 of file sixtop.\+h.
+
+\index{sixtop@{sixtop}!I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+A\+DD@{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+A\+DD}}
+\index{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+A\+DD@{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+A\+DD}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+A\+DD}{IANA_6TOP_CMD_ADD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+A\+DD~0x01}\hypertarget{group__sixtop_gaed6611a612519c8be4dcc1b8931ae952}{}\label{group__sixtop_gaed6611a612519c8be4dcc1b8931ae952}
+
+
+Definition at line 19 of file sixtop.\+h.
+
+\index{sixtop@{sixtop}!I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+C\+L\+E\+AR@{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+C\+L\+E\+AR}}
+\index{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+C\+L\+E\+AR@{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+C\+L\+E\+AR}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+C\+L\+E\+AR}{IANA_6TOP_CMD_CLEAR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+C\+L\+E\+AR~0x05}\hypertarget{group__sixtop_ga0bdf7483c22f454cdbaa4b66bb13bd6c}{}\label{group__sixtop_ga0bdf7483c22f454cdbaa4b66bb13bd6c}
+
+
+Definition at line 23 of file sixtop.\+h.
+
+\index{sixtop@{sixtop}!I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+C\+O\+U\+NT@{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+C\+O\+U\+NT}}
+\index{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+C\+O\+U\+NT@{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+C\+O\+U\+NT}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+C\+O\+U\+NT}{IANA_6TOP_CMD_COUNT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+C\+O\+U\+NT~0x03}\hypertarget{group__sixtop_ga5fc5a89e85fa0537ec21d7c6b4fe5241}{}\label{group__sixtop_ga5fc5a89e85fa0537ec21d7c6b4fe5241}
+
+
+Definition at line 21 of file sixtop.\+h.
+
+\index{sixtop@{sixtop}!I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+D\+E\+L\+E\+TE@{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+D\+E\+L\+E\+TE}}
+\index{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+D\+E\+L\+E\+TE@{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+D\+E\+L\+E\+TE}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+D\+E\+L\+E\+TE}{IANA_6TOP_CMD_DELETE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+D\+E\+L\+E\+TE~0x02}\hypertarget{group__sixtop_gadb01974cc07399fc01209c4a94a35eb4}{}\label{group__sixtop_gadb01974cc07399fc01209c4a94a35eb4}
+
+
+Definition at line 20 of file sixtop.\+h.
+
+\index{sixtop@{sixtop}!I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+L\+I\+ST@{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+L\+I\+ST}}
+\index{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+L\+I\+ST@{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+L\+I\+ST}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+L\+I\+ST}{IANA_6TOP_CMD_LIST}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+L\+I\+ST~0x04}\hypertarget{group__sixtop_ga9bc18cb88810c338e62221426255d2b5}{}\label{group__sixtop_ga9bc18cb88810c338e62221426255d2b5}
+
+
+Definition at line 22 of file sixtop.\+h.
+
+\index{sixtop@{sixtop}!I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+N\+O\+NE@{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+N\+O\+NE}}
+\index{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+N\+O\+NE@{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+N\+O\+NE}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+N\+O\+NE}{IANA_6TOP_CMD_NONE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+C\+M\+D\+\_\+\+N\+O\+NE~0x00}\hypertarget{group__sixtop_gabdc29537673b19bb583c8ccb3e3330c6}{}\label{group__sixtop_gabdc29537673b19bb583c8ccb3e3330c6}
+
+
+Definition at line 18 of file sixtop.\+h.
+
+\index{sixtop@{sixtop}!I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+B\+U\+SY@{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+B\+U\+SY}}
+\index{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+B\+U\+SY@{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+B\+U\+SY}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+B\+U\+SY}{IANA_6TOP_RC_BUSY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+B\+U\+SY~0x09}\hypertarget{group__sixtop_ga08b4fb07b78fd672a46f02e09d24b1a7}{}\label{group__sixtop_ga08b4fb07b78fd672a46f02e09d24b1a7}
+
+
+Definition at line 28 of file sixtop.\+h.
+
+\index{sixtop@{sixtop}!I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+E\+RR@{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+E\+RR}}
+\index{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+E\+RR@{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+E\+RR}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+E\+RR}{IANA_6TOP_RC_ERR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+E\+RR~0x0b}\hypertarget{group__sixtop_ga75b866e3a1f1d116a0d61943779a811f}{}\label{group__sixtop_ga75b866e3a1f1d116a0d61943779a811f}
+
+
+Definition at line 30 of file sixtop.\+h.
+
+\index{sixtop@{sixtop}!I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+R\+E\+S\+ET@{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+R\+E\+S\+ET}}
+\index{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+R\+E\+S\+ET@{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+R\+E\+S\+ET}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+R\+E\+S\+ET}{IANA_6TOP_RC_RESET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+R\+E\+S\+ET~0x0a}\hypertarget{group__sixtop_ga5f807240736ea7b4938e6b2087e3e024}{}\label{group__sixtop_ga5f807240736ea7b4938e6b2087e3e024}
+
+
+Definition at line 29 of file sixtop.\+h.
+
+\index{sixtop@{sixtop}!I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+S\+F\+I\+D\+\_\+\+E\+RR@{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+S\+F\+I\+D\+\_\+\+E\+RR}}
+\index{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+S\+F\+I\+D\+\_\+\+E\+RR@{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+S\+F\+I\+D\+\_\+\+E\+RR}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+S\+F\+I\+D\+\_\+\+E\+RR}{IANA_6TOP_RC_SFID_ERR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+S\+F\+I\+D\+\_\+\+E\+RR~0x08}\hypertarget{group__sixtop_gabb11416715eb01fad87f5e28867c6bd9}{}\label{group__sixtop_gabb11416715eb01fad87f5e28867c6bd9}
+
+
+Definition at line 27 of file sixtop.\+h.
+
+\index{sixtop@{sixtop}!I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+S\+U\+C\+C\+E\+SS@{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+S\+U\+C\+C\+E\+SS}}
+\index{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+S\+U\+C\+C\+E\+SS@{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+S\+U\+C\+C\+E\+SS}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+S\+U\+C\+C\+E\+SS}{IANA_6TOP_RC_SUCCESS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+S\+U\+C\+C\+E\+SS~0x06}\hypertarget{group__sixtop_gaf34161cd672d7fe6175ea1343b31c2bf}{}\label{group__sixtop_gaf34161cd672d7fe6175ea1343b31c2bf}
+
+
+Definition at line 25 of file sixtop.\+h.
+
+\index{sixtop@{sixtop}!I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+V\+E\+R\+\_\+\+E\+RR@{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+V\+E\+R\+\_\+\+E\+RR}}
+\index{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+V\+E\+R\+\_\+\+E\+RR@{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+V\+E\+R\+\_\+\+E\+RR}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+V\+E\+R\+\_\+\+E\+RR}{IANA_6TOP_RC_VER_ERR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+N\+A\+\_\+6\+T\+O\+P\+\_\+\+R\+C\+\_\+\+V\+E\+R\+\_\+\+E\+RR~0x07}\hypertarget{group__sixtop_ga92a8bc12446d9440ef6bd92f0bf63b10}{}\label{group__sixtop_ga92a8bc12446d9440ef6bd92f0bf63b10}
+
+
+Definition at line 26 of file sixtop.\+h.
+
+\index{sixtop@{sixtop}!S\+F\+I\+D\+\_\+\+S\+F0@{S\+F\+I\+D\+\_\+\+S\+F0}}
+\index{S\+F\+I\+D\+\_\+\+S\+F0@{S\+F\+I\+D\+\_\+\+S\+F0}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{S\+F\+I\+D\+\_\+\+S\+F0}{SFID_SF0}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+F\+I\+D\+\_\+\+S\+F0~0}\hypertarget{group__sixtop_ga14969413ec66e507bee020d526feb199}{}\label{group__sixtop_ga14969413ec66e507bee020d526feb199}
+
+
+Definition at line 33 of file sixtop.\+h.
+
+\index{sixtop@{sixtop}!S\+I\+X2\+S\+I\+X\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+MS@{S\+I\+X2\+S\+I\+X\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+MS}}
+\index{S\+I\+X2\+S\+I\+X\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+MS@{S\+I\+X2\+S\+I\+X\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+MS}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{S\+I\+X2\+S\+I\+X\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+MS}{SIX2SIX_TIMEOUT_MS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+I\+X2\+S\+I\+X\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+MS~4000}\hypertarget{group__sixtop_gafe4b5903cd4d2dd815d7e22c58b9a2e0}{}\label{group__sixtop_gafe4b5903cd4d2dd815d7e22c58b9a2e0}
+
+
+Definition at line 74 of file sixtop.\+h.
+
+\index{sixtop@{sixtop}!S\+I\+X\+T\+O\+P\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+\+E\+B\+P\+E\+R\+I\+OD@{S\+I\+X\+T\+O\+P\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+\+E\+B\+P\+E\+R\+I\+OD}}
+\index{S\+I\+X\+T\+O\+P\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+\+E\+B\+P\+E\+R\+I\+OD@{S\+I\+X\+T\+O\+P\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+\+E\+B\+P\+E\+R\+I\+OD}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{S\+I\+X\+T\+O\+P\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+\+E\+B\+P\+E\+R\+I\+OD}{SIXTOP_MINIMAL_EBPERIOD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+I\+X\+T\+O\+P\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+\+E\+B\+P\+E\+R\+I\+OD~5}\hypertarget{group__sixtop_ga8280ff28bc5bc0d53db912f80dce4dcd}{}\label{group__sixtop_ga8280ff28bc5bc0d53db912f80dce4dcd}
+
+
+Definition at line 75 of file sixtop.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\index{sixtop@{sixtop}!six2six\+\_\+handler\+\_\+t@{six2six\+\_\+handler\+\_\+t}}
+\index{six2six\+\_\+handler\+\_\+t@{six2six\+\_\+handler\+\_\+t}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{six2six\+\_\+handler\+\_\+t}{six2six_handler_t}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf six2six\+\_\+handler\+\_\+t}}\hypertarget{group__sixtop_gaa3d42866c0888ad4ae5166773563addd}{}\label{group__sixtop_gaa3d42866c0888ad4ae5166773563addd}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+I\+X\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+\+N\+O\+NE@{S\+I\+X\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+\+N\+O\+NE}!sixtop@{sixtop}}\index{sixtop@{sixtop}!S\+I\+X\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+\+N\+O\+NE@{S\+I\+X\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+\+N\+O\+NE}}\item[{\em 
+S\+I\+X\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+\+N\+O\+NE\hypertarget{group__sixtop_ggaa3d42866c0888ad4ae5166773563adddabe85569061dbb43cbfe8d2c7bef0fd87}{}\label{group__sixtop_ggaa3d42866c0888ad4ae5166773563adddabe85569061dbb43cbfe8d2c7bef0fd87}
+}]\index{S\+I\+X\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+\+M\+A\+I\+N\+T\+A\+IN@{S\+I\+X\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+\+M\+A\+I\+N\+T\+A\+IN}!sixtop@{sixtop}}\index{sixtop@{sixtop}!S\+I\+X\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+\+M\+A\+I\+N\+T\+A\+IN@{S\+I\+X\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+\+M\+A\+I\+N\+T\+A\+IN}}\item[{\em 
+S\+I\+X\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+\+M\+A\+I\+N\+T\+A\+IN\hypertarget{group__sixtop_ggaa3d42866c0888ad4ae5166773563addda1e70de1e3c3a32b92460d3bb64a77ee8}{}\label{group__sixtop_ggaa3d42866c0888ad4ae5166773563addda1e70de1e3c3a32b92460d3bb64a77ee8}
+}]\index{S\+I\+X\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+\+O\+TF@{S\+I\+X\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+\+O\+TF}!sixtop@{sixtop}}\index{sixtop@{sixtop}!S\+I\+X\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+\+O\+TF@{S\+I\+X\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+\+O\+TF}}\item[{\em 
+S\+I\+X\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+\+O\+TF\hypertarget{group__sixtop_ggaa3d42866c0888ad4ae5166773563adddab7b5414272e8249d1dc3d496413d4a58}{}\label{group__sixtop_ggaa3d42866c0888ad4ae5166773563adddab7b5414272e8249d1dc3d496413d4a58}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 66 of file sixtop.\+h.
+
+\index{sixtop@{sixtop}!six2six\+\_\+state\+\_\+t@{six2six\+\_\+state\+\_\+t}}
+\index{six2six\+\_\+state\+\_\+t@{six2six\+\_\+state\+\_\+t}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{six2six\+\_\+state\+\_\+t}{six2six_state_t}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf six2six\+\_\+state\+\_\+t}}\hypertarget{group__sixtop_ga0d114e8a582180b48d3b337cff5f90e0}{}\label{group__sixtop_ga0d114e8a582180b48d3b337cff5f90e0}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+I\+X\+\_\+\+I\+D\+LE@{S\+I\+X\+\_\+\+I\+D\+LE}!sixtop@{sixtop}}\index{sixtop@{sixtop}!S\+I\+X\+\_\+\+I\+D\+LE@{S\+I\+X\+\_\+\+I\+D\+LE}}\item[{\em 
+S\+I\+X\+\_\+\+I\+D\+LE\hypertarget{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0a8eff737a4dc265fd457301a51c030c66}{}\label{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0a8eff737a4dc265fd457301a51c030c66}
+}]\index{S\+I\+X\+\_\+\+S\+E\+N\+D\+I\+N\+G\+\_\+\+R\+E\+Q\+U\+E\+ST@{S\+I\+X\+\_\+\+S\+E\+N\+D\+I\+N\+G\+\_\+\+R\+E\+Q\+U\+E\+ST}!sixtop@{sixtop}}\index{sixtop@{sixtop}!S\+I\+X\+\_\+\+S\+E\+N\+D\+I\+N\+G\+\_\+\+R\+E\+Q\+U\+E\+ST@{S\+I\+X\+\_\+\+S\+E\+N\+D\+I\+N\+G\+\_\+\+R\+E\+Q\+U\+E\+ST}}\item[{\em 
+S\+I\+X\+\_\+\+S\+E\+N\+D\+I\+N\+G\+\_\+\+R\+E\+Q\+U\+E\+ST\hypertarget{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0abf12add745e22b60800ce2c6a62e1373}{}\label{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0abf12add745e22b60800ce2c6a62e1373}
+}]\index{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+A\+D\+D\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+D\+D\+O\+NE@{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+A\+D\+D\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+D\+D\+O\+NE}!sixtop@{sixtop}}\index{sixtop@{sixtop}!S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+A\+D\+D\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+D\+D\+O\+NE@{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+A\+D\+D\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+D\+D\+O\+NE}}\item[{\em 
+S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+A\+D\+D\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+D\+D\+O\+NE\hypertarget{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0a3417040b0066dfd51588b0f71ae91f70}{}\label{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0a3417040b0066dfd51588b0f71ae91f70}
+}]\index{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+D\+E\+L\+E\+T\+E\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+D\+D\+O\+NE@{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+D\+E\+L\+E\+T\+E\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+D\+D\+O\+NE}!sixtop@{sixtop}}\index{sixtop@{sixtop}!S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+D\+E\+L\+E\+T\+E\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+D\+D\+O\+NE@{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+D\+E\+L\+E\+T\+E\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+D\+D\+O\+NE}}\item[{\em 
+S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+D\+E\+L\+E\+T\+E\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+D\+D\+O\+NE\hypertarget{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0afd12611bd6c8a701284eaa711428b7a0}{}\label{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0afd12611bd6c8a701284eaa711428b7a0}
+}]\index{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+C\+O\+U\+N\+T\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+D\+D\+O\+NE@{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+C\+O\+U\+N\+T\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+D\+D\+O\+NE}!sixtop@{sixtop}}\index{sixtop@{sixtop}!S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+C\+O\+U\+N\+T\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+D\+D\+O\+NE@{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+C\+O\+U\+N\+T\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+D\+D\+O\+NE}}\item[{\em 
+S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+C\+O\+U\+N\+T\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+D\+D\+O\+NE\hypertarget{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0afdf425bb0501f7b98f621fcccb08d7d0}{}\label{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0afdf425bb0501f7b98f621fcccb08d7d0}
+}]\index{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+L\+I\+S\+T\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+D\+D\+O\+NE@{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+L\+I\+S\+T\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+D\+D\+O\+NE}!sixtop@{sixtop}}\index{sixtop@{sixtop}!S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+L\+I\+S\+T\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+D\+D\+O\+NE@{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+L\+I\+S\+T\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+D\+D\+O\+NE}}\item[{\em 
+S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+L\+I\+S\+T\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+D\+D\+O\+NE\hypertarget{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0a9bb0c7efbad25eb05f4a86f7b56510c1}{}\label{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0a9bb0c7efbad25eb05f4a86f7b56510c1}
+}]\index{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+C\+L\+E\+A\+R\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+D\+D\+O\+NE@{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+C\+L\+E\+A\+R\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+D\+D\+O\+NE}!sixtop@{sixtop}}\index{sixtop@{sixtop}!S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+C\+L\+E\+A\+R\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+D\+D\+O\+NE@{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+C\+L\+E\+A\+R\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+D\+D\+O\+NE}}\item[{\em 
+S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+C\+L\+E\+A\+R\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+D\+D\+O\+NE\hypertarget{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0a6aa2fe817064a0a167aa62ce15f5367b}{}\label{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0a6aa2fe817064a0a167aa62ce15f5367b}
+}]\index{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+A\+D\+D\+R\+E\+S\+P\+O\+N\+SE@{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+A\+D\+D\+R\+E\+S\+P\+O\+N\+SE}!sixtop@{sixtop}}\index{sixtop@{sixtop}!S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+A\+D\+D\+R\+E\+S\+P\+O\+N\+SE@{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+A\+D\+D\+R\+E\+S\+P\+O\+N\+SE}}\item[{\em 
+S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+A\+D\+D\+R\+E\+S\+P\+O\+N\+SE\hypertarget{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0a2da41dc5ffe3a2da3b0466ea3e57491e}{}\label{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0a2da41dc5ffe3a2da3b0466ea3e57491e}
+}]\index{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+D\+E\+L\+E\+T\+E\+R\+E\+S\+P\+O\+N\+SE@{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+D\+E\+L\+E\+T\+E\+R\+E\+S\+P\+O\+N\+SE}!sixtop@{sixtop}}\index{sixtop@{sixtop}!S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+D\+E\+L\+E\+T\+E\+R\+E\+S\+P\+O\+N\+SE@{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+D\+E\+L\+E\+T\+E\+R\+E\+S\+P\+O\+N\+SE}}\item[{\em 
+S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+D\+E\+L\+E\+T\+E\+R\+E\+S\+P\+O\+N\+SE\hypertarget{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0a1ecdebe4b5117da63bd428e27f1184f4}{}\label{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0a1ecdebe4b5117da63bd428e27f1184f4}
+}]\index{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+C\+O\+U\+N\+T\+R\+E\+S\+P\+O\+N\+SE@{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+C\+O\+U\+N\+T\+R\+E\+S\+P\+O\+N\+SE}!sixtop@{sixtop}}\index{sixtop@{sixtop}!S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+C\+O\+U\+N\+T\+R\+E\+S\+P\+O\+N\+SE@{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+C\+O\+U\+N\+T\+R\+E\+S\+P\+O\+N\+SE}}\item[{\em 
+S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+C\+O\+U\+N\+T\+R\+E\+S\+P\+O\+N\+SE\hypertarget{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0ab52ee40a7f9e6225479636b126ad8468}{}\label{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0ab52ee40a7f9e6225479636b126ad8468}
+}]\index{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+L\+I\+S\+T\+R\+E\+S\+P\+O\+N\+SE@{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+L\+I\+S\+T\+R\+E\+S\+P\+O\+N\+SE}!sixtop@{sixtop}}\index{sixtop@{sixtop}!S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+L\+I\+S\+T\+R\+E\+S\+P\+O\+N\+SE@{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+L\+I\+S\+T\+R\+E\+S\+P\+O\+N\+SE}}\item[{\em 
+S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+L\+I\+S\+T\+R\+E\+S\+P\+O\+N\+SE\hypertarget{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0aa2eb90549133bec760bb5202a91d88cd}{}\label{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0aa2eb90549133bec760bb5202a91d88cd}
+}]\index{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+C\+L\+E\+A\+R\+R\+E\+S\+P\+O\+N\+SE@{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+C\+L\+E\+A\+R\+R\+E\+S\+P\+O\+N\+SE}!sixtop@{sixtop}}\index{sixtop@{sixtop}!S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+C\+L\+E\+A\+R\+R\+E\+S\+P\+O\+N\+SE@{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+C\+L\+E\+A\+R\+R\+E\+S\+P\+O\+N\+SE}}\item[{\em 
+S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+C\+L\+E\+A\+R\+R\+E\+S\+P\+O\+N\+SE\hypertarget{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0aaee37a7161bef787a87c409e337ee9da}{}\label{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0aaee37a7161bef787a87c409e337ee9da}
+}]\index{S\+I\+X\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+ED@{S\+I\+X\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+ED}!sixtop@{sixtop}}\index{sixtop@{sixtop}!S\+I\+X\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+ED@{S\+I\+X\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+ED}}\item[{\em 
+S\+I\+X\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+ED\hypertarget{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0aa1f0e17540d2e5052a4055985cdacde1}{}\label{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0aa1f0e17540d2e5052a4055985cdacde1}
+}]\index{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+S\+E\+N\+D\+D\+O\+NE@{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+S\+E\+N\+D\+D\+O\+NE}!sixtop@{sixtop}}\index{sixtop@{sixtop}!S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+S\+E\+N\+D\+D\+O\+NE@{S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+S\+E\+N\+D\+D\+O\+NE}}\item[{\em 
+S\+I\+X\+\_\+\+W\+A\+I\+T\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+S\+E\+N\+D\+D\+O\+NE\hypertarget{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0ac6a964f094e72e3f58bc0b18882c0866}{}\label{group__sixtop_gga0d114e8a582180b48d3b337cff5f90e0ac6a964f094e72e3f58bc0b18882c0866}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 42 of file sixtop.\+h.
+
+\index{sixtop@{sixtop}!sixtop\+\_\+\+Command\+I\+D\+\_\+num@{sixtop\+\_\+\+Command\+I\+D\+\_\+num}}
+\index{sixtop\+\_\+\+Command\+I\+D\+\_\+num@{sixtop\+\_\+\+Command\+I\+D\+\_\+num}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{sixtop\+\_\+\+Command\+I\+D\+\_\+num}{sixtop_CommandID_num}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf sixtop\+\_\+\+Command\+I\+D\+\_\+num}}\hypertarget{group__sixtop_ga8161d14ed7c0b1839e3feb69349e8eb4}{}\label{group__sixtop_ga8161d14ed7c0b1839e3feb69349e8eb4}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+I\+X\+T\+O\+P\+\_\+\+S\+O\+F\+T\+\_\+\+C\+E\+L\+L\+\_\+\+R\+EQ@{S\+I\+X\+T\+O\+P\+\_\+\+S\+O\+F\+T\+\_\+\+C\+E\+L\+L\+\_\+\+R\+EQ}!sixtop@{sixtop}}\index{sixtop@{sixtop}!S\+I\+X\+T\+O\+P\+\_\+\+S\+O\+F\+T\+\_\+\+C\+E\+L\+L\+\_\+\+R\+EQ@{S\+I\+X\+T\+O\+P\+\_\+\+S\+O\+F\+T\+\_\+\+C\+E\+L\+L\+\_\+\+R\+EQ}}\item[{\em 
+S\+I\+X\+T\+O\+P\+\_\+\+S\+O\+F\+T\+\_\+\+C\+E\+L\+L\+\_\+\+R\+EQ\hypertarget{group__sixtop_gga8161d14ed7c0b1839e3feb69349e8eb4a0ad40c703c2a81b01e3f1be8bea20ad5}{}\label{group__sixtop_gga8161d14ed7c0b1839e3feb69349e8eb4a0ad40c703c2a81b01e3f1be8bea20ad5}
+}]\index{S\+I\+X\+T\+O\+P\+\_\+\+S\+O\+F\+T\+\_\+\+C\+E\+L\+L\+\_\+\+R\+E\+S\+P\+O\+N\+SE@{S\+I\+X\+T\+O\+P\+\_\+\+S\+O\+F\+T\+\_\+\+C\+E\+L\+L\+\_\+\+R\+E\+S\+P\+O\+N\+SE}!sixtop@{sixtop}}\index{sixtop@{sixtop}!S\+I\+X\+T\+O\+P\+\_\+\+S\+O\+F\+T\+\_\+\+C\+E\+L\+L\+\_\+\+R\+E\+S\+P\+O\+N\+SE@{S\+I\+X\+T\+O\+P\+\_\+\+S\+O\+F\+T\+\_\+\+C\+E\+L\+L\+\_\+\+R\+E\+S\+P\+O\+N\+SE}}\item[{\em 
+S\+I\+X\+T\+O\+P\+\_\+\+S\+O\+F\+T\+\_\+\+C\+E\+L\+L\+\_\+\+R\+E\+S\+P\+O\+N\+SE\hypertarget{group__sixtop_gga8161d14ed7c0b1839e3feb69349e8eb4a5da1b52bd5a45f8e74177273bc68713c}{}\label{group__sixtop_gga8161d14ed7c0b1839e3feb69349e8eb4a5da1b52bd5a45f8e74177273bc68713c}
+}]\index{S\+I\+X\+T\+O\+P\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+S\+O\+F\+T\+\_\+\+C\+E\+L\+L\+\_\+\+R\+E\+Q\+U\+E\+ST@{S\+I\+X\+T\+O\+P\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+S\+O\+F\+T\+\_\+\+C\+E\+L\+L\+\_\+\+R\+E\+Q\+U\+E\+ST}!sixtop@{sixtop}}\index{sixtop@{sixtop}!S\+I\+X\+T\+O\+P\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+S\+O\+F\+T\+\_\+\+C\+E\+L\+L\+\_\+\+R\+E\+Q\+U\+E\+ST@{S\+I\+X\+T\+O\+P\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+S\+O\+F\+T\+\_\+\+C\+E\+L\+L\+\_\+\+R\+E\+Q\+U\+E\+ST}}\item[{\em 
+S\+I\+X\+T\+O\+P\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+S\+O\+F\+T\+\_\+\+C\+E\+L\+L\+\_\+\+R\+E\+Q\+U\+E\+ST\hypertarget{group__sixtop_gga8161d14ed7c0b1839e3feb69349e8eb4a85a4d9f653487b2e5c0d61d4f99ccdd1}{}\label{group__sixtop_gga8161d14ed7c0b1839e3feb69349e8eb4a85a4d9f653487b2e5c0d61d4f99ccdd1}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 35 of file sixtop.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{sixtop@{sixtop}!debug\+Print\+\_\+ka\+Period@{debug\+Print\+\_\+ka\+Period}}
+\index{debug\+Print\+\_\+ka\+Period@{debug\+Print\+\_\+ka\+Period}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{debug\+Print\+\_\+ka\+Period(void)}{debugPrint_kaPeriod(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} debug\+Print\+\_\+ka\+Period (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sixtop_ga1c6ef448cc665d7c6e9dd84c819d638a}{}\label{group__sixtop_ga1c6ef448cc665d7c6e9dd84c819d638a}
+
+
+Trigger this module to print status information, over serial. 
+
+debug\+Print\+\_\+$\ast$ functions are used by the openserial module to continuously print status information about several modules in the Open\+W\+SN stack.
+
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if this function printed something, F\+A\+L\+SE otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 588 of file sixtop.\+c.
+
+\index{sixtop@{sixtop}!debug\+Print\+\_\+my\+D\+A\+Grank@{debug\+Print\+\_\+my\+D\+A\+Grank}}
+\index{debug\+Print\+\_\+my\+D\+A\+Grank@{debug\+Print\+\_\+my\+D\+A\+Grank}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{debug\+Print\+\_\+my\+D\+A\+Grank(void)}{debugPrint_myDAGrank(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} debug\+Print\+\_\+my\+D\+A\+Grank (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sixtop_ga5b5d77a858a5ac83abdf678d38d059e0}{}\label{group__sixtop_ga5b5d77a858a5ac83abdf678d38d059e0}
+
+
+Trigger this module to print status information, over serial. 
+
+debug\+Print\+\_\+$\ast$ functions are used by the openserial module to continuously print status information about several modules in the Open\+W\+SN stack.
+
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if this function printed something, F\+A\+L\+SE otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 570 of file sixtop.\+c.
+
+\index{sixtop@{sixtop}!sixtop\+\_\+add\+O\+Rremove\+Cell\+By\+Info@{sixtop\+\_\+add\+O\+Rremove\+Cell\+By\+Info}}
+\index{sixtop\+\_\+add\+O\+Rremove\+Cell\+By\+Info@{sixtop\+\_\+add\+O\+Rremove\+Cell\+By\+Info}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{sixtop\+\_\+add\+O\+Rremove\+Cell\+By\+Info(uint8\+\_\+t code, open\+\_\+addr\+\_\+t $\ast$neighbor, cell\+Info\+\_\+ht $\ast$cell\+Info)}{sixtop_addORremoveCellByInfo(uint8_t code, open_addr_t *neighbor, cellInfo_ht *cellInfo)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sixtop\+\_\+add\+O\+Rremove\+Cell\+By\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{code, }
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{neighbor, }
+\item[{{\bf cell\+Info\+\_\+ht} $\ast$}]{cell\+Info}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sixtop_ga83ffb7e25a1e635539b526b15f857dbd}{}\label{group__sixtop_ga83ffb7e25a1e635539b526b15f857dbd}
+
+
+Definition at line 276 of file sixtop.\+c.
+
+\index{sixtop@{sixtop}!sixtop\+\_\+init@{sixtop\+\_\+init}}
+\index{sixtop\+\_\+init@{sixtop\+\_\+init}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{sixtop\+\_\+init(void)}{sixtop_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sixtop\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sixtop_ga7ebc63dd17f632acdb878a79c1d79da8}{}\label{group__sixtop_ga7ebc63dd17f632acdb878a79c1d79da8}
+
+
+Definition at line 107 of file sixtop.\+c.
+
+\index{sixtop@{sixtop}!sixtop\+\_\+maintaining@{sixtop\+\_\+maintaining}}
+\index{sixtop\+\_\+maintaining@{sixtop\+\_\+maintaining}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{sixtop\+\_\+maintaining(uint16\+\_\+t slot\+Offset, open\+\_\+addr\+\_\+t $\ast$neighbor)}{sixtop_maintaining(uint16_t slotOffset, open_addr_t *neighbor)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sixtop\+\_\+maintaining (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t}}]{slot\+Offset, }
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{neighbor}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sixtop_gacfaa93a6c2b7348a48913b44e00a5205}{}\label{group__sixtop_gacfaa93a6c2b7348a48913b44e00a5205}
+
+
+Definition at line 367 of file sixtop.\+c.
+
+\index{sixtop@{sixtop}!sixtop\+\_\+request@{sixtop\+\_\+request}}
+\index{sixtop\+\_\+request@{sixtop\+\_\+request}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{sixtop\+\_\+request(uint8\+\_\+t code, open\+\_\+addr\+\_\+t $\ast$neighbor, uint8\+\_\+t num\+Cells)}{sixtop_request(uint8_t code, open_addr_t *neighbor, uint8_t numCells)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sixtop\+\_\+request (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{code, }
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{neighbor, }
+\item[{{\bf uint8\+\_\+t}}]{num\+Cells}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sixtop_ga2839458024d85a3e05fb67767fe7adb9}{}\label{group__sixtop_ga2839458024d85a3e05fb67767fe7adb9}
+
+
+Definition at line 155 of file sixtop.\+c.
+
+\index{sixtop@{sixtop}!sixtop\+\_\+send@{sixtop\+\_\+send}}
+\index{sixtop\+\_\+send@{sixtop\+\_\+send}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{sixtop\+\_\+send(\+Open\+Queue\+Entry\+\_\+t $\ast$msg)}{sixtop_send(OpenQueueEntry_t *msg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf owerror\+\_\+t} sixtop\+\_\+send (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sixtop_ga7e16122ce4b265f68df057c0fd852ecd}{}\label{group__sixtop_ga7e16122ce4b265f68df057c0fd852ecd}
+
+
+Definition at line 386 of file sixtop.\+c.
+
+\index{sixtop@{sixtop}!sixtop\+\_\+set\+E\+B\+Period@{sixtop\+\_\+set\+E\+B\+Period}}
+\index{sixtop\+\_\+set\+E\+B\+Period@{sixtop\+\_\+set\+E\+B\+Period}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{sixtop\+\_\+set\+E\+B\+Period(uint8\+\_\+t eb\+Period)}{sixtop_setEBPeriod(uint8_t ebPeriod)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sixtop\+\_\+set\+E\+B\+Period (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{eb\+Period}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sixtop_ga075d83ee0b50fe58ddb21fe5461b8d37}{}\label{group__sixtop_ga075d83ee0b50fe58ddb21fe5461b8d37}
+
+
+Definition at line 141 of file sixtop.\+c.
+
+\index{sixtop@{sixtop}!sixtop\+\_\+set\+Handler@{sixtop\+\_\+set\+Handler}}
+\index{sixtop\+\_\+set\+Handler@{sixtop\+\_\+set\+Handler}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{sixtop\+\_\+set\+Handler(six2six\+\_\+handler\+\_\+t handler)}{sixtop_setHandler(six2six_handler_t handler)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sixtop\+\_\+set\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf six2six\+\_\+handler\+\_\+t}}]{handler}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sixtop_ga88c7b3727422755c34000ca4600abfa2}{}\label{group__sixtop_ga88c7b3727422755c34000ca4600abfa2}
+
+
+Definition at line 149 of file sixtop.\+c.
+
+\index{sixtop@{sixtop}!sixtop\+\_\+set\+Is\+Response\+Enabled@{sixtop\+\_\+set\+Is\+Response\+Enabled}}
+\index{sixtop\+\_\+set\+Is\+Response\+Enabled@{sixtop\+\_\+set\+Is\+Response\+Enabled}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{sixtop\+\_\+set\+Is\+Response\+Enabled(bool is\+Enabled)}{sixtop_setIsResponseEnabled(bool isEnabled)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sixtop\+\_\+set\+Is\+Response\+Enabled (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{is\+Enabled}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sixtop_ga98991c277d212918c9a9f8fb7b4edc7a}{}\label{group__sixtop_ga98991c277d212918c9a9f8fb7b4edc7a}
+
+
+Definition at line 601 of file sixtop.\+c.
+
+\index{sixtop@{sixtop}!sixtop\+\_\+set\+Ka\+Period@{sixtop\+\_\+set\+Ka\+Period}}
+\index{sixtop\+\_\+set\+Ka\+Period@{sixtop\+\_\+set\+Ka\+Period}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{sixtop\+\_\+set\+Ka\+Period(uint16\+\_\+t ka\+Period)}{sixtop_setKaPeriod(uint16_t kaPeriod)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sixtop\+\_\+set\+Ka\+Period (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t}}]{ka\+Period}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sixtop_ga462512c8c301081df10b0d51f7e7bc8b}{}\label{group__sixtop_ga462512c8c301081df10b0d51f7e7bc8b}
+
+
+Definition at line 133 of file sixtop.\+c.
+
+\index{sixtop@{sixtop}!task\+\_\+sixtop\+Notif\+Receive@{task\+\_\+sixtop\+Notif\+Receive}}
+\index{task\+\_\+sixtop\+Notif\+Receive@{task\+\_\+sixtop\+Notif\+Receive}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{task\+\_\+sixtop\+Notif\+Receive(void)}{task_sixtopNotifReceive(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} task\+\_\+sixtop\+Notif\+Receive (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sixtop_ga04eb8f63cc93551e15143a21a6e6403e}{}\label{group__sixtop_ga04eb8f63cc93551e15143a21a6e6403e}
+
+
+Definition at line 486 of file sixtop.\+c.
+
+\index{sixtop@{sixtop}!task\+\_\+sixtop\+Notif\+Send\+Done@{task\+\_\+sixtop\+Notif\+Send\+Done}}
+\index{task\+\_\+sixtop\+Notif\+Send\+Done@{task\+\_\+sixtop\+Notif\+Send\+Done}!sixtop@{sixtop}}
+\subsubsection[{\texorpdfstring{task\+\_\+sixtop\+Notif\+Send\+Done(void)}{task_sixtopNotifSendDone(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} task\+\_\+sixtop\+Notif\+Send\+Done (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__sixtop_ga7c754289c0f435249b69965524ad9368}{}\label{group__sixtop_ga7c754289c0f435249b69965524ad9368}
+
+
+Definition at line 413 of file sixtop.\+c.
+

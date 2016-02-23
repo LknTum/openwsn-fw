@@ -1,0 +1,38 @@
+\hypertarget{idmanager_8h}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/cross-\/layers/idmanager.h File Reference}
+\label{idmanager_8h}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/cross-\/layers/idmanager.\+h@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/cross-\/layers/idmanager.\+h}}
+{\ttfamily \#include \char`\"{}opendefs.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structdebug_i_d_manager_entry__t}{debug\+I\+D\+Manager\+Entry\+\_\+t}
+\item 
+struct \hyperlink{structidmanager__vars__t}{idmanager\+\_\+vars\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___i_d_manager_ga75a645b8c3a1fdda2c11bb1ec2a0f440}{A\+C\+T\+I\+O\+N\+\_\+\+Y\+ES}~\textquotesingle{}Y\textquotesingle{}
+\item 
+\#define \hyperlink{group___i_d_manager_ga7a8c6698e6d3bf6fb3528ba07aa8d5eb}{A\+C\+T\+I\+O\+N\+\_\+\+NO}~\textquotesingle{}N\textquotesingle{}
+\item 
+\#define \hyperlink{group___i_d_manager_ga935e9aef6a097c624a9b3b6147fbf197}{A\+C\+T\+I\+O\+N\+\_\+\+T\+O\+G\+G\+LE}~\textquotesingle{}T\textquotesingle{}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i_d_manager_ga3e974443ae75269d00c3de03992a1669}{idmanager\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Used to initialize the Identifier of the device. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group___i_d_manager_gaa792e6561333f1615bbc61392e826d39}{idmanager\+\_\+get\+Is\+D\+A\+Groot} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i_d_manager_gab463c5b7e0b714691efe0c46629705f7}{idmanager\+\_\+set\+Is\+D\+A\+Groot} (\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} new\+Role)
+\item 
+\hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$ \hyperlink{group___i_d_manager_gac95b57a051d12bff7b5c3e3599ce4aa5}{idmanager\+\_\+get\+My\+ID} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} type)
+\item 
+\hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{group___i_d_manager_ga5e2f6326c043a60f46e019aa538ca7d2}{idmanager\+\_\+set\+My\+ID} (\hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$new\+ID)
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group___i_d_manager_ga4cff67772250923086a3d6476eb673c8}{idmanager\+\_\+is\+My\+Address} (\hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$addr)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i_d_manager_ga464f5751bc371a97b41407697e6817a3}{idmanager\+\_\+trigger\+About\+Root} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group___i_d_manager_gaa69fa284f9b777d2f5f600f94c3eb44b}{debug\+Print\+\_\+id} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Trigger this module to print status information, over serial. \end{DoxyCompactList}\end{DoxyCompactItemize}

@@ -1,0 +1,79 @@
+\hypertarget{group___i_c_m_pv6_echo}{}\section{I\+C\+M\+Pv6\+Echo}
+\label{group___i_c_m_pv6_echo}\index{I\+C\+M\+Pv6\+Echo@{I\+C\+M\+Pv6\+Echo}}
+
+
+I\+C\+M\+Pv6 echo (ping) implementation.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structicmpv6echo__vars__t}{icmpv6echo\+\_\+vars\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i_c_m_pv6_echo_gaa18a0f1c239132fc754e43f475b33995}{icmpv6echo\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i_c_m_pv6_echo_ga9ac3ae0e9d1e46044070298bc24fee82}{icmpv6echo\+\_\+trigger} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i_c_m_pv6_echo_ga0502bcb8a36b276660fd1b4b40939753}{icmpv6echo\+\_\+send\+Done} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{disk_8c_ad018a3100b2dabad325a0800152db297}{error})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i_c_m_pv6_echo_gaa78a139f3dd544c9a78e5c7397419408}{icmpv6echo\+\_\+receive} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+I\+C\+M\+Pv6 echo (ping) implementation. 
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, August 2010 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\index{I\+C\+M\+Pv6\+Echo@{I\+C\+M\+Pv6\+Echo}!icmpv6echo\+\_\+init@{icmpv6echo\+\_\+init}}
+\index{icmpv6echo\+\_\+init@{icmpv6echo\+\_\+init}!I\+C\+M\+Pv6\+Echo@{I\+C\+M\+Pv6\+Echo}}
+\subsubsection[{\texorpdfstring{icmpv6echo\+\_\+init(void)}{icmpv6echo_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} icmpv6echo\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i_c_m_pv6_echo_gaa18a0f1c239132fc754e43f475b33995}{}\label{group___i_c_m_pv6_echo_gaa18a0f1c239132fc754e43f475b33995}
+
+
+Definition at line 17 of file icmpv6echo.\+c.
+
+\index{I\+C\+M\+Pv6\+Echo@{I\+C\+M\+Pv6\+Echo}!icmpv6echo\+\_\+receive@{icmpv6echo\+\_\+receive}}
+\index{icmpv6echo\+\_\+receive@{icmpv6echo\+\_\+receive}!I\+C\+M\+Pv6\+Echo@{I\+C\+M\+Pv6\+Echo}}
+\subsubsection[{\texorpdfstring{icmpv6echo\+\_\+receive(\+Open\+Queue\+Entry\+\_\+t $\ast$msg)}{icmpv6echo_receive(OpenQueueEntry_t *msg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} icmpv6echo\+\_\+receive (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i_c_m_pv6_echo_gaa78a139f3dd544c9a78e5c7397419408}{}\label{group___i_c_m_pv6_echo_gaa78a139f3dd544c9a78e5c7397419408}
+
+
+Definition at line 94 of file icmpv6echo.\+c.
+
+\index{I\+C\+M\+Pv6\+Echo@{I\+C\+M\+Pv6\+Echo}!icmpv6echo\+\_\+send\+Done@{icmpv6echo\+\_\+send\+Done}}
+\index{icmpv6echo\+\_\+send\+Done@{icmpv6echo\+\_\+send\+Done}!I\+C\+M\+Pv6\+Echo@{I\+C\+M\+Pv6\+Echo}}
+\subsubsection[{\texorpdfstring{icmpv6echo\+\_\+send\+Done(\+Open\+Queue\+Entry\+\_\+t $\ast$msg, owerror\+\_\+t error)}{icmpv6echo_sendDone(OpenQueueEntry_t *msg, owerror_t error)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} icmpv6echo\+\_\+send\+Done (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg, }
+\item[{{\bf owerror\+\_\+t}}]{error}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i_c_m_pv6_echo_ga0502bcb8a36b276660fd1b4b40939753}{}\label{group___i_c_m_pv6_echo_ga0502bcb8a36b276660fd1b4b40939753}
+
+
+Definition at line 83 of file icmpv6echo.\+c.
+
+\index{I\+C\+M\+Pv6\+Echo@{I\+C\+M\+Pv6\+Echo}!icmpv6echo\+\_\+trigger@{icmpv6echo\+\_\+trigger}}
+\index{icmpv6echo\+\_\+trigger@{icmpv6echo\+\_\+trigger}!I\+C\+M\+Pv6\+Echo@{I\+C\+M\+Pv6\+Echo}}
+\subsubsection[{\texorpdfstring{icmpv6echo\+\_\+trigger(void)}{icmpv6echo_trigger(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} icmpv6echo\+\_\+trigger (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i_c_m_pv6_echo_ga9ac3ae0e9d1e46044070298bc24fee82}{}\label{group___i_c_m_pv6_echo_ga9ac3ae0e9d1e46044070298bc24fee82}
+
+
+Definition at line 22 of file icmpv6echo.\+c.
+

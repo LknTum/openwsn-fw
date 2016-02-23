@@ -1,0 +1,216 @@
+\hypertarget{group__systick__api}{}\section{Systick\+\_\+api}
+\label{group__systick__api}\index{Systick\+\_\+api@{Systick\+\_\+api}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__systick__api_ga6fa7e44c447e4f861e63a2bf4d175afd}{Sys\+Tick\+Enable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__systick__api_ga0b993bfbd72abac7286c4f54369576f2}{Sys\+Tick\+Disable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__systick__api_ga4921bef366ee31ca37ef271abecedcb5}{Sys\+Tick\+Int\+Register} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}($\ast$pfn\+Handler)(\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}))
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__systick__api_ga606359e78b226889129995cf4f59ce09}{Sys\+Tick\+Int\+Unregister} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__systick__api_gae9621f9d2bcf0cfe021cd5b7ff98edcc}{Sys\+Tick\+Int\+Enable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__systick__api_ga13ef9fe1d534da117371ae936bb089ee}{Sys\+Tick\+Int\+Disable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__systick__api_ga5892f33d986c614769aa4cfe20bfc80d}{Sys\+Tick\+Period\+Set} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Period)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__systick__api_gab72fc40f3f868232eef127c6f3adb3b2}{Sys\+Tick\+Period\+Get} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__systick__api_ga6da4621404c875256a99d81137626c25}{Sys\+Tick\+Value\+Get} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{Systick\+\_\+api@{Systick\+\_\+api}!Sys\+Tick\+Disable@{Sys\+Tick\+Disable}}
+\index{Sys\+Tick\+Disable@{Sys\+Tick\+Disable}!Systick\+\_\+api@{Systick\+\_\+api}}
+\subsubsection[{\texorpdfstring{Sys\+Tick\+Disable(void)}{SysTickDisable(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Sys\+Tick\+Disable (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__systick__api_ga0b993bfbd72abac7286c4f54369576f2}{}\label{group__systick__api_ga0b993bfbd72abac7286c4f54369576f2}
+Disables the Sys\+Tick counter
+
+This will stop the Sys\+Tick counter. If an interrupt handler has been registered, it will no longer be called until Sys\+Tick is restarted.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 91 of file systick.\+c.
+
+\index{Systick\+\_\+api@{Systick\+\_\+api}!Sys\+Tick\+Enable@{Sys\+Tick\+Enable}}
+\index{Sys\+Tick\+Enable@{Sys\+Tick\+Enable}!Systick\+\_\+api@{Systick\+\_\+api}}
+\subsubsection[{\texorpdfstring{Sys\+Tick\+Enable(void)}{SysTickEnable(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Sys\+Tick\+Enable (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__systick__api_ga6fa7e44c447e4f861e63a2bf4d175afd}{}\label{group__systick__api_ga6fa7e44c447e4f861e63a2bf4d175afd}
+Enables the Sys\+Tick counter
+
+This function starts the Sys\+Tick counter. If an interrupt handler has been registered, it is called when the Sys\+Tick counter rolls over.
+
+\begin{DoxyNote}{Note}
+Calling this function causes the Sys\+Tick counter to (re)commence counting from its current value. The counter is not automatically reloaded with the period as specified in a previous call to \hyperlink{group__systick__api_ga5892f33d986c614769aa4cfe20bfc80d}{Sys\+Tick\+Period\+Set()}. If an immediate reload is required, the {\bfseries N\+V\+I\+C\+\_\+\+S\+T\+\_\+\+C\+U\+R\+R\+E\+NT} register must be written to force the reload. Any write to this register clears the Sys\+Tick counter to 0 and causes a reload with the supplied period on the next clock.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file systick.\+c.
+
+\index{Systick\+\_\+api@{Systick\+\_\+api}!Sys\+Tick\+Int\+Disable@{Sys\+Tick\+Int\+Disable}}
+\index{Sys\+Tick\+Int\+Disable@{Sys\+Tick\+Int\+Disable}!Systick\+\_\+api@{Systick\+\_\+api}}
+\subsubsection[{\texorpdfstring{Sys\+Tick\+Int\+Disable(void)}{SysTickIntDisable(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Sys\+Tick\+Int\+Disable (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__systick__api_ga13ef9fe1d534da117371ae936bb089ee}{}\label{group__systick__api_ga13ef9fe1d534da117371ae936bb089ee}
+Disables the Sys\+Tick interrupt
+
+This function will disable the Sys\+Tick interrupt, preventing it from being reflected to the processor.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 189 of file systick.\+c.
+
+\index{Systick\+\_\+api@{Systick\+\_\+api}!Sys\+Tick\+Int\+Enable@{Sys\+Tick\+Int\+Enable}}
+\index{Sys\+Tick\+Int\+Enable@{Sys\+Tick\+Int\+Enable}!Systick\+\_\+api@{Systick\+\_\+api}}
+\subsubsection[{\texorpdfstring{Sys\+Tick\+Int\+Enable(void)}{SysTickIntEnable(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Sys\+Tick\+Int\+Enable (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__systick__api_gae9621f9d2bcf0cfe021cd5b7ff98edcc}{}\label{group__systick__api_gae9621f9d2bcf0cfe021cd5b7ff98edcc}
+Enables the Sys\+Tick interrupt
+
+This function will enable the Sys\+Tick interrupt, allowing it to be reflected to the processor.
+
+\begin{DoxyNote}{Note}
+The Sys\+Tick interrupt handler does not need to clear the Sys\+Tick interrupt source as this is done automatically by N\+V\+IC when the interrupt handler is called.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 170 of file systick.\+c.
+
+\index{Systick\+\_\+api@{Systick\+\_\+api}!Sys\+Tick\+Int\+Register@{Sys\+Tick\+Int\+Register}}
+\index{Sys\+Tick\+Int\+Register@{Sys\+Tick\+Int\+Register}!Systick\+\_\+api@{Systick\+\_\+api}}
+\subsubsection[{\texorpdfstring{Sys\+Tick\+Int\+Register(void($\ast$pfn\+Handler)(void))}{SysTickIntRegister(void(*pfnHandler)(void))}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Sys\+Tick\+Int\+Register (
+\begin{DoxyParamCaption}
+\item[{{\bf void}($\ast$)({\bf void})}]{pfn\+Handler}
+\end{DoxyParamCaption}
+)}\hypertarget{group__systick__api_ga4921bef366ee31ca37ef271abecedcb5}{}\label{group__systick__api_ga4921bef366ee31ca37ef271abecedcb5}
+Registers an interrupt handler for the Sys\+Tick interrupt
+
+
+\begin{DoxyParams}{Parameters}
+{\em pfn\+Handler} & is a pointer to the function to be called when the Sys\+Tick interrupt occurs.\\
+\hline
+\end{DoxyParams}
+This sets the handler to be called when a Sys\+Tick interrupt occurs.
+
+\begin{DoxySeeAlso}{See also}
+See \hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()} for important information about registering \hyperlink{_g_c_c_2_m_s_p430_f449_2port_8c_ae0992854bdba99f7b163894433c32aef}{interrupt} handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 115 of file systick.\+c.
+
+\index{Systick\+\_\+api@{Systick\+\_\+api}!Sys\+Tick\+Int\+Unregister@{Sys\+Tick\+Int\+Unregister}}
+\index{Sys\+Tick\+Int\+Unregister@{Sys\+Tick\+Int\+Unregister}!Systick\+\_\+api@{Systick\+\_\+api}}
+\subsubsection[{\texorpdfstring{Sys\+Tick\+Int\+Unregister(void)}{SysTickIntUnregister(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Sys\+Tick\+Int\+Unregister (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__systick__api_ga606359e78b226889129995cf4f59ce09}{}\label{group__systick__api_ga606359e78b226889129995cf4f59ce09}
+Unregisters the interrupt handler for the Sys\+Tick interrupt
+
+This function will clear the handler to be called when a Sys\+Tick interrupt occurs.
+
+\begin{DoxySeeAlso}{See also}
+See \hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()} for important information about registering \hyperlink{_g_c_c_2_m_s_p430_f449_2port_8c_ae0992854bdba99f7b163894433c32aef}{interrupt} handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 142 of file systick.\+c.
+
+\index{Systick\+\_\+api@{Systick\+\_\+api}!Sys\+Tick\+Period\+Get@{Sys\+Tick\+Period\+Get}}
+\index{Sys\+Tick\+Period\+Get@{Sys\+Tick\+Period\+Get}!Systick\+\_\+api@{Systick\+\_\+api}}
+\subsubsection[{\texorpdfstring{Sys\+Tick\+Period\+Get(void)}{SysTickPeriodGet(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} Sys\+Tick\+Period\+Get (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__systick__api_gab72fc40f3f868232eef127c6f3adb3b2}{}\label{group__systick__api_gab72fc40f3f868232eef127c6f3adb3b2}
+Gets the period of the Sys\+Tick counter
+
+This function returns the rate at which the Sys\+Tick counter wraps; this equates to the number of processor clocks between interrupts.
+
+\begin{DoxyReturn}{Returns}
+Returns the period of the Sys\+Tick counter. 
+\end{DoxyReturn}
+
+
+Definition at line 241 of file systick.\+c.
+
+\index{Systick\+\_\+api@{Systick\+\_\+api}!Sys\+Tick\+Period\+Set@{Sys\+Tick\+Period\+Set}}
+\index{Sys\+Tick\+Period\+Set@{Sys\+Tick\+Period\+Set}!Systick\+\_\+api@{Systick\+\_\+api}}
+\subsubsection[{\texorpdfstring{Sys\+Tick\+Period\+Set(uint32\+\_\+t ui32\+Period)}{SysTickPeriodSet(uint32_t ui32Period)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Sys\+Tick\+Period\+Set (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Period}
+\end{DoxyParamCaption}
+)}\hypertarget{group__systick__api_ga5892f33d986c614769aa4cfe20bfc80d}{}\label{group__systick__api_ga5892f33d986c614769aa4cfe20bfc80d}
+Sets the period of the Sys\+Tick counter
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Period} & is the number of clock ticks in each period of the Sys\+Tick counter; must be between 1 and 16,777,216, inclusive.\\
+\hline
+\end{DoxyParams}
+This function sets the rate at which the Sys\+Tick counter wraps; this equates to the number of processor clocks between interrupts.
+
+\begin{DoxyNote}{Note}
+Calling this function does not cause the Sys\+Tick counter to reload immediately. If an immediate reload is required, the {\bfseries N\+V\+I\+C\+\_\+\+S\+T\+\_\+\+C\+U\+R\+R\+E\+NT} register must be written. Any write to this register clears the Sys\+Tick counter to 0 and will cause a reload with the {\itshape ui32\+Period} supplied here on the next clock after the Sys\+Tick is enabled.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 217 of file systick.\+c.
+
+\index{Systick\+\_\+api@{Systick\+\_\+api}!Sys\+Tick\+Value\+Get@{Sys\+Tick\+Value\+Get}}
+\index{Sys\+Tick\+Value\+Get@{Sys\+Tick\+Value\+Get}!Systick\+\_\+api@{Systick\+\_\+api}}
+\subsubsection[{\texorpdfstring{Sys\+Tick\+Value\+Get(void)}{SysTickValueGet(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} Sys\+Tick\+Value\+Get (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__systick__api_ga6da4621404c875256a99d81137626c25}{}\label{group__systick__api_ga6da4621404c875256a99d81137626c25}
+Gets the current value of the Sys\+Tick counter
+
+This function returns the current value of the Sys\+Tick counter; this will be a value between the period -\/ 1 and zero, inclusive.
+
+\begin{DoxyReturn}{Returns}
+Returns the current value of the Sys\+Tick counter. 
+\end{DoxyReturn}
+
+
+Definition at line 260 of file systick.\+c.
+

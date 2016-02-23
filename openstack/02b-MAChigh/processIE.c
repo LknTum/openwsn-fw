@@ -37,6 +37,29 @@ port_INLINE void processIE_prependMLMEIE(
    pkt->payload[1] = (payload_IE_desc.length_groupid_type >> 8) & 0xFF;
 }
 
+port_INLINE void processIE_prepend_sixtopIE(
+      OpenQueueEntry_t* pkt, 
+      uint8_t           len
+   ){
+   payload_IE_ht payload_IE_desc;
+   
+   // reserve space
+   packetfunctions_reserveHeaderSize(
+      pkt, 
+      sizeof(payload_IE_ht)
+   );
+   
+   // prepare header
+   payload_IE_desc.length_groupid_type = len;
+   payload_IE_desc.length_groupid_type |= 
+      (IANA_6TOP_IE_GROUP_ID  | IANA_6TOP_IE_GROUP_ID_TYPE); 
+   
+   // copy header
+   pkt->payload[0] = payload_IE_desc.length_groupid_type        & 0xFF;
+   pkt->payload[1] = (payload_IE_desc.length_groupid_type >> 8) & 0xFF;
+}
+
+
 //===== prepend IEs
 
 port_INLINE uint8_t processIE_prependSyncIE(OpenQueueEntry_t* pkt){
@@ -81,6 +104,99 @@ port_INLINE uint8_t processIE_prependSyncIE(OpenQueueEntry_t* pkt){
    len += 2;
    
    return len;
+}
+
+port_INLINE uint8_t processIE_prepend_sixSubIEHeader(
+    OpenQueueEntry_t*    pkt,
+    uint8_t len
+  ){
+    mlme_IE_ht mlme_subHeader;
+    //===== MLME IE header
+    // reserve space
+    packetfunctions_reserveHeaderSize(pkt, sizeof(mlme_IE_ht));
+   
+    // prepare header
+    mlme_subHeader.length_subID_type  = len;
+    mlme_subHeader.length_subID_type |= 
+        (IANA_6TOP_SUBIE_ID << MLME_IE_SUBID_SHIFT) | 
+        IEEE802154E_DESC_TYPE_SHORT;
+   
+    // copy header
+    pkt->payload[0] = mlme_subHeader.length_subID_type       & 0xFF;
+    pkt->payload[1] = (mlme_subHeader.length_subID_type >> 8)& 0xFF;
+    
+    return 2;
+}
+
+port_INLINE uint8_t processIE_prepend_sixGeneralMessage(
+    OpenQueueEntry_t*    pkt,
+    uint8_t code
+    ){
+    uint8_t    len = 0;
+    uint8_t    temp8b;
+   
+    //===== SFID
+    packetfunctions_reserveHeaderSize(pkt,sizeof(uint8_t));
+    *((uint8_t*)(pkt->payload)) = SFID_SF0;
+    len += 1;
+    
+    pkt->l2_sixtop_returnCode = code;
+  
+    //===== version & code
+    packetfunctions_reserveHeaderSize(pkt,sizeof(uint8_t));
+    temp8b  = IANA_6TOP_6P_VERSION;
+    temp8b |= code << 4;
+    *((uint8_t*)(pkt->payload)) = temp8b;
+    len += 1;
+   
+    return len;
+}
+
+port_INLINE uint8_t processIE_prepend_sixSubID(OpenQueueEntry_t*    pkt){
+    uint8_t    len = 0;
+   
+    //===== SFID
+    packetfunctions_reserveHeaderSize(pkt,sizeof(uint8_t));
+    *((uint8_t*)(pkt->payload)) = IANA_6TOP_SUBIE_ID;
+    len += 1;
+    
+    return len;
+}
+
+port_INLINE uint8_t processIE_prepend_sixCelllist(
+    OpenQueueEntry_t*    pkt,
+    cellInfo_ht*         cellList
+   ){
+    uint8_t    i;
+    uint8_t    len;
+    uint8_t    numOfCells;
+  
+    len        = 0;
+    numOfCells = 0;
+   
+    //===== cell list
+   
+    for(i=0;i<SCHEDULEIEMAXNUMCELLS;i++) {
+        if(cellList[i].linkoptions != CELLTYPE_OFF){
+            // cellobjects:
+            // - [2B] slotOffset
+            // - [2B] channelOffset
+            // - [1B] link_type
+            packetfunctions_reserveHeaderSize(pkt,4); 
+            pkt->payload[0] = (uint8_t)(cellList[i].tsNum  & 0x00FF);
+            pkt->payload[1] = (uint8_t)((cellList[i].tsNum & 0xFF00)>>8);
+            pkt->payload[2] = (uint8_t)(cellList[i].choffset  & 0x00FF);
+            pkt->payload[3] = (uint8_t)((cellList[i].choffset & 0xFF00)>>8);
+            len += 4;
+            numOfCells++;
+        }
+    }
+   
+    // record the position of cellObjects
+    pkt->l2_sixtop_numOfCells  = numOfCells;
+    pkt->l2_sixtop_cellObjects = pkt->payload;
+   
+    return len;
 }
 
 /**
@@ -646,4 +762,26 @@ port_INLINE void processIE_retrieveScheduleIE(
       localptr++;
    }
    *ptr=localptr; 
+}
+
+port_INLINE void processIE_retrieve_sixCelllist(
+    OpenQueueEntry_t*   pkt,
+    uint8_t             ptr,
+    uint8_t             length,
+    cellInfo_ht*        cellList
+    ){
+    uint8_t i=0;
+    uint8_t localptr = ptr;
+    uint8_t len = length;
+    while(len>0){
+        cellList[i].tsNum     = *((uint8_t*)(pkt->payload)+localptr);
+        cellList[i].tsNum    |= (*((uint8_t*)(pkt->payload)+localptr+1))<<8;
+        cellList[i].choffset  = *((uint8_t*)(pkt->payload)+localptr+2);
+        cellList[i].choffset |= (*((uint8_t*)(pkt->payload)+localptr+3))<<8;
+        localptr        += 4;
+        len             -= 4;
+        // mark with linkoptions as ocuppied
+        cellList[i].linkoptions = CELLTYPE_TX;
+        i++;
+    }
 }

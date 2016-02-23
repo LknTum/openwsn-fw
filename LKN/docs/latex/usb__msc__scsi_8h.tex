@@ -1,0 +1,454 @@
+\hypertarget{usb__msc__scsi_8h}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bootloader/k20/usb/usb\+\_\+msc\+\_\+scsi.h File Reference}
+\label{usb__msc__scsi_8h}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bootloader/k20/usb/usb\+\_\+msc\+\_\+scsi.\+h@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bootloader/k20/usb/usb\+\_\+msc\+\_\+scsi.\+h}}
+
+
+The file contains U\+SB Mass Stoarge S\+C\+SI layer api header function.  
+
+
+{\ttfamily \#include \char`\"{}usb\+\_\+msc.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__inquiry__command}{\+\_\+inquiry\+\_\+command}
+\item 
+struct \hyperlink{struct__request__sense__command}{\+\_\+request\+\_\+sense\+\_\+command}
+\item 
+struct \hyperlink{struct__read__format__capacity__command}{\+\_\+read\+\_\+format\+\_\+capacity\+\_\+command}
+\item 
+struct \hyperlink{struct__read__capacity__command}{\+\_\+read\+\_\+capacity\+\_\+command}
+\item 
+struct \hyperlink{struct__read__write__10__command}{\+\_\+read\+\_\+write\+\_\+10\+\_\+command}
+\item 
+struct \hyperlink{struct__inquiry__data}{\+\_\+inquiry\+\_\+data}
+\item 
+struct \hyperlink{struct__request__sense__data}{\+\_\+request\+\_\+sense\+\_\+data}
+\item 
+struct \hyperlink{struct__read__capacity__data}{\+\_\+read\+\_\+capacity\+\_\+data}
+\item 
+struct \hyperlink{struct__capacity__list__header}{\+\_\+capacity\+\_\+list\+\_\+header}
+\item 
+struct \hyperlink{struct__curr__max__capacity__desc}{\+\_\+curr\+\_\+max\+\_\+capacity\+\_\+desc}
+\item 
+struct \hyperlink{struct__formattable__cap__desc}{\+\_\+formattable\+\_\+cap\+\_\+desc}
+\item 
+struct \hyperlink{struct__mode__parameter__header}{\+\_\+mode\+\_\+parameter\+\_\+header}
+\item 
+struct \hyperlink{struct__msc__scsi__variable__struct}{\+\_\+msc\+\_\+scsi\+\_\+variable\+\_\+struct}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{usb__msc__scsi_8h_a1386a02e9e8ecefaa05d2c7a002f425a}{N\+O\+\_\+\+S\+E\+N\+SE}~(0x00)
+\item 
+\#define \hyperlink{usb__msc__scsi_8h_a0caa58c772b72659c1bbdfa2616763bb}{R\+E\+C\+O\+V\+E\+R\+E\+D\+\_\+\+E\+R\+R\+OR}~(0x01)
+\item 
+\#define \hyperlink{usb__msc__scsi_8h_a4eeea263034e2501cb1083a96a53e2d7}{N\+O\+T\+\_\+\+R\+E\+A\+DY}~(0x02)
+\item 
+\#define \hyperlink{usb__msc__scsi_8h_abe246dd9ca406119e8dec032924bcbb0}{M\+E\+D\+I\+U\+M\+\_\+\+E\+R\+R\+OR}~(0x03)
+\item 
+\#define \hyperlink{usb__msc__scsi_8h_ad3ef1fbb2e4d1301e4ee35a5b654891f}{H\+A\+R\+D\+W\+A\+R\+E\+\_\+\+E\+R\+R\+OR}~(0x04)
+\item 
+\#define \hyperlink{usb__msc__scsi_8h_abc9d47e89941c049c733d53ba26c5949}{I\+L\+L\+E\+G\+A\+L\+\_\+\+R\+E\+Q\+U\+E\+ST}~(0x05)
+\item 
+\#define \hyperlink{usb__msc__scsi_8h_adadd5c52cc22c658bcb2cf930966ab52}{U\+N\+I\+T\+\_\+\+A\+T\+T\+E\+N\+T\+I\+ON}~(0x06)
+\item 
+\#define \hyperlink{usb__msc__scsi_8h_a37d02e4d3e29d8310a651714aba5bbe2}{D\+A\+T\+A\+\_\+\+P\+R\+O\+T\+E\+CT}~(0x07)
+\item 
+\#define \hyperlink{usb__msc__scsi_8h_adad73f369924af7169e3c05c131a099e}{B\+L\+A\+N\+K\+\_\+\+C\+H\+E\+CK}~(0x08)
+\item 
+\#define \hyperlink{usb__msc__scsi_8h_a9d489eabffdd15118f3125a33e19894b}{V\+E\+N\+D\+O\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+E\+R\+R\+OR}~(0x09)
+\item 
+\#define \hyperlink{usb__msc__scsi_8h_a22916f3d3a61e8b7f7fe25da2cb73784}{A\+B\+O\+R\+T\+E\+D\+\_\+\+C\+O\+M\+M\+A\+ND}~(0x0\+B)
+\item 
+\#define \hyperlink{usb__msc__scsi_8h_a7cd72006b3fdd0c1c6ff93186cb4e91f}{V\+O\+L\+U\+M\+E\+\_\+\+O\+V\+E\+R\+F\+L\+OW}~(0x0\+D)
+\item 
+\#define \hyperlink{usb__msc__scsi_8h_a61f9bfa432cafd88bd3f7558c6ebe35b}{M\+I\+S\+C\+O\+M\+P\+A\+RE}~(0x0\+E)
+\item 
+\#define \hyperlink{usb__msc__scsi_8h_a74eca9a53f87f66c000f2fc8b23281ae}{I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+O\+P\+C\+O\+DE}~(0x20)
+\item 
+\#define \hyperlink{usb__msc__scsi_8h_ade14b05371e4cdbfcdd29a3b91579aa3}{W\+R\+I\+T\+E\+\_\+\+F\+A\+U\+LT}~(0x03)
+\item 
+\#define \hyperlink{usb__msc__scsi_8h_af8e525bcdd3be01eefef3819974dacd4}{U\+N\+R\+E\+C\+O\+V\+E\+R\+E\+D\+\_\+\+R\+E\+A\+D\+\_\+\+E\+R\+R\+OR}~(0x11)
+\item 
+\#define \hyperlink{usb__msc__scsi_8h_a13b7b9ceea0c8133053f90fef1dd7cd7}{U\+N\+K\+N\+O\+W\+N\+\_\+\+E\+R\+R\+OR}~(0x\+F\+F)
+\item 
+\#define \hyperlink{usb__msc__scsi_8h_a3bd5c6527c42cddef4a793d555258b87}{I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+P\+KT}~(0x24)
+\item 
+\#define \hyperlink{usb__msc__scsi_8h_a3d19fa933588101aa5e1833bd6edd4e7}{L\+B\+A\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+GE}~(0x21)
+\item 
+\#define \hyperlink{usb__msc__scsi_8h_aa7ea5f19ff4538709676428291d6450c}{R\+E\+Q\+\_\+\+S\+E\+N\+S\+E\+\_\+\+V\+A\+L\+I\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}~(0x70)
+\item 
+\#define \hyperlink{usb__msc__scsi_8h_a873b78e7b41b8dfd2abe322f64ed43df}{R\+E\+Q\+\_\+\+S\+E\+N\+S\+E\+\_\+\+A\+D\+D\+I\+T\+I\+O\+N\+A\+L\+\_\+\+S\+E\+N\+S\+E\+\_\+\+L\+EN}~(0x0\+A)
+\item 
+\#define \hyperlink{usb__msc__scsi_8h_a50b1b39b9ed0dd87da871c44ceafc5a0}{P\+R\+E\+V\+E\+N\+T\+\_\+\+A\+L\+L\+O\+W\+\_\+\+R\+E\+M\+O\+V\+A\+L\+\_\+\+M\+A\+SK}~(0x01)
+\item 
+\#define \hyperlink{usb__msc__scsi_8h_aa89e14a3225ee67a4cd8a7b9ff690f43}{L\+O\+A\+D\+\_\+\+E\+J\+E\+C\+T\+\_\+\+S\+T\+A\+R\+T\+\_\+\+M\+A\+SK}~(0x03)
+\item 
+\#define \hyperlink{usb__msc__scsi_8h_a1b9fddcdc55fa3284d3a7a93b8acc19b}{F\+O\+R\+M\+A\+T\+T\+E\+D\+\_\+\+M\+E\+D\+IA}~(0x02)
+\item 
+\#define \hyperlink{usb__msc__scsi_8h_a4ff07581e5775e0030e1d9156ace8b91}{U\+N\+F\+O\+R\+M\+A\+T\+T\+E\+D\+\_\+\+M\+E\+D\+IA}~(0x01)
+\item 
+\#define \hyperlink{usb__msc__scsi_8h_a00ea0a664763fe2c85c8859e0820316d}{N\+O\+\_\+\+C\+A\+R\+T\+R\+I\+D\+G\+E\+\_\+\+I\+N\+\_\+\+D\+R\+I\+VE}~(0x03)
+\item 
+\#define \hyperlink{usb__msc__scsi_8h_a54315dda44aea293ef46c5cda5f264f8}{I\+N\+Q\+U\+I\+R\+Y\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+O\+N\+\_\+\+L\+E\+N\+G\+TH}~(0x24)
+\item 
+\#define \hyperlink{usb__msc__scsi_8h_adc3ec84d3803490d5416ac4c1a74c4ee}{R\+E\+Q\+\_\+\+S\+E\+N\+S\+E\+\_\+\+D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+TH}~(18)
+\item 
+\#define \hyperlink{usb__msc__scsi_8h_aeb0895f875bd98dfcbd727c182a1b470}{R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+TH}~(0x08)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct__inquiry__command}{\+\_\+inquiry\+\_\+command} \hyperlink{usb__msc__scsi_8h_af547e85144493068eaaaa2aab0678f60}{I\+N\+Q\+U\+I\+R\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}
+\item 
+typedef struct \hyperlink{struct__inquiry__command}{\+\_\+inquiry\+\_\+command} $\ast$ \hyperlink{usb__msc__scsi_8h_a0d6febe0058e1d4307191824841c2187}{P\+T\+R\+\_\+\+I\+N\+Q\+U\+I\+R\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}
+\item 
+typedef struct \hyperlink{struct__request__sense__command}{\+\_\+request\+\_\+sense\+\_\+command} \hyperlink{usb__msc__scsi_8h_a8de16af7c36f1f61d239475480189730}{R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+S\+E\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}
+\item 
+typedef struct \hyperlink{struct__request__sense__command}{\+\_\+request\+\_\+sense\+\_\+command} $\ast$ \hyperlink{usb__msc__scsi_8h_a5af1d4b894f5781a3eaca663f15eae64}{P\+T\+R\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+S\+E\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}
+\item 
+typedef struct \hyperlink{struct__read__format__capacity__command}{\+\_\+read\+\_\+format\+\_\+capacity\+\_\+command} \hyperlink{usb__msc__scsi_8h_ad4d4ae3225faaf3a8f03680d0a821039}{R\+E\+A\+D\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}
+\item 
+typedef struct \hyperlink{struct__read__format__capacity__command}{\+\_\+read\+\_\+format\+\_\+capacity\+\_\+command} $\ast$ \hyperlink{usb__msc__scsi_8h_ab7f09f5981e17692255da3be3cff1e79}{P\+T\+R\+\_\+\+R\+E\+A\+D\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}
+\item 
+typedef struct \hyperlink{struct__read__capacity__command}{\+\_\+read\+\_\+capacity\+\_\+command} \hyperlink{usb__msc__scsi_8h_afb9cf2dd16d294aa3b2429f64ee71765}{R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}
+\item 
+typedef struct \hyperlink{struct__read__capacity__command}{\+\_\+read\+\_\+capacity\+\_\+command} $\ast$ \hyperlink{usb__msc__scsi_8h_a9aa70b38658f3e4aeb2714e5ca0f8549}{P\+T\+R\+\_\+\+R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}
+\item 
+typedef struct \hyperlink{struct__read__write__10__command}{\+\_\+read\+\_\+write\+\_\+10\+\_\+command} \hyperlink{usb__msc__scsi_8h_a84abc645d3c392d89f522fbbc68cfbb8}{R\+E\+A\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+10\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}
+\item 
+typedef struct \hyperlink{struct__read__write__10__command}{\+\_\+read\+\_\+write\+\_\+10\+\_\+command} $\ast$ \hyperlink{usb__msc__scsi_8h_a11871fcb97a69ee8fd224fc989fdc039}{P\+T\+R\+\_\+\+R\+E\+A\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+10\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}
+\item 
+typedef struct \hyperlink{struct__inquiry__data}{\+\_\+inquiry\+\_\+data} \hyperlink{usb__msc__scsi_8h_a1f09cb9c396aa31cda4ef76bf8a1f550}{I\+N\+Q\+U\+I\+R\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT}
+\item 
+typedef struct \hyperlink{struct__inquiry__data}{\+\_\+inquiry\+\_\+data} $\ast$ \hyperlink{usb__msc__scsi_8h_a36bac1d93cbda7c59ec6d8c2a047cb29}{P\+T\+R\+\_\+\+I\+N\+Q\+U\+I\+R\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT}
+\item 
+typedef struct \hyperlink{struct__request__sense__data}{\+\_\+request\+\_\+sense\+\_\+data} \hyperlink{usb__msc__scsi_8h_a0139e4680a9fc0662cc06bf80baffc17}{R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+S\+E\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT}
+\item 
+typedef struct \hyperlink{struct__request__sense__data}{\+\_\+request\+\_\+sense\+\_\+data} $\ast$ \hyperlink{usb__msc__scsi_8h_a00824707a0c997dc022c7a3278583359}{P\+T\+R\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+S\+E\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT}
+\item 
+typedef struct \hyperlink{struct__read__capacity__data}{\+\_\+read\+\_\+capacity\+\_\+data} \hyperlink{usb__msc__scsi_8h_a6d76bc39d66300c8b42f11d73bea82c1}{R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT}
+\item 
+typedef struct \hyperlink{struct__read__capacity__data}{\+\_\+read\+\_\+capacity\+\_\+data} $\ast$ \hyperlink{usb__msc__scsi_8h_a93b6fce8accee463beed639470825a58}{P\+T\+R\+\_\+\+R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT}
+\item 
+typedef struct \hyperlink{struct__capacity__list__header}{\+\_\+capacity\+\_\+list\+\_\+header} \hyperlink{usb__msc__scsi_8h_a7a11a0b8879f0fed3c13e69d9e902bfd}{C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+L\+I\+S\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+T\+R\+U\+CT}
+\item 
+typedef struct \hyperlink{struct__capacity__list__header}{\+\_\+capacity\+\_\+list\+\_\+header} $\ast$ \hyperlink{usb__msc__scsi_8h_a4ad97c0ea50b0ca011b4ede4c8a169f8}{P\+T\+R\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+L\+I\+S\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+T\+R\+U\+CT}
+\item 
+typedef struct \hyperlink{struct__curr__max__capacity__desc}{\+\_\+curr\+\_\+max\+\_\+capacity\+\_\+desc} \hyperlink{usb__msc__scsi_8h_a7d7a00a51dfcc3517e43fbaaa853cb10}{C\+U\+R\+R\+\_\+\+M\+A\+X\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+E\+S\+C\+\_\+\+S\+T\+R\+U\+CT}
+\item 
+typedef struct \hyperlink{struct__curr__max__capacity__desc}{\+\_\+curr\+\_\+max\+\_\+capacity\+\_\+desc} $\ast$ \hyperlink{usb__msc__scsi_8h_acf6fe5047c687a1d941f05282091a65b}{P\+T\+R\+\_\+\+C\+U\+R\+R\+\_\+\+M\+A\+X\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+E\+S\+C\+\_\+\+S\+T\+R\+U\+CT}
+\item 
+typedef struct \hyperlink{struct__formattable__cap__desc}{\+\_\+formattable\+\_\+cap\+\_\+desc} \hyperlink{usb__msc__scsi_8h_a64007303f2f23ce9246779e7329da41e}{F\+O\+R\+M\+A\+T\+T\+A\+B\+L\+E\+\_\+\+C\+A\+P\+\_\+\+D\+E\+SC}
+\item 
+typedef struct \hyperlink{struct__formattable__cap__desc}{\+\_\+formattable\+\_\+cap\+\_\+desc} $\ast$ \hyperlink{usb__msc__scsi_8h_a2ad8288c57a77da8bcddd6b62465cc47}{P\+T\+R\+\_\+\+F\+O\+R\+M\+A\+T\+T\+A\+B\+L\+E\+\_\+\+C\+A\+P\+\_\+\+D\+E\+SC}
+\item 
+typedef struct \hyperlink{struct__mode__parameter__header}{\+\_\+mode\+\_\+parameter\+\_\+header} \hyperlink{usb__msc__scsi_8h_a3c345bdeb8a60955718ba31a25629441}{M\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+T\+R\+U\+CT}
+\item 
+typedef struct \hyperlink{struct__mode__parameter__header}{\+\_\+mode\+\_\+parameter\+\_\+header} $\ast$ \hyperlink{usb__msc__scsi_8h_a561c5a73f5dd2cd42cfa905fc5e6a847}{P\+T\+R\+\_\+\+M\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+T\+R\+U\+CT}
+\item 
+typedef struct \hyperlink{struct__msc__scsi__variable__struct}{\+\_\+msc\+\_\+scsi\+\_\+variable\+\_\+struct} \hyperlink{usb__msc__scsi_8h_aa5935d010c18fc84cc80eaa30ea3dfc1}{M\+S\+C\+\_\+\+S\+C\+S\+I\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+S\+T\+R\+U\+CT}
+\item 
+typedef struct \hyperlink{struct__msc__scsi__variable__struct}{\+\_\+msc\+\_\+scsi\+\_\+variable\+\_\+struct} $\ast$ \hyperlink{usb__msc__scsi_8h_a1c6440c8e20322ae4be761dbb37e5a0d}{P\+T\+R\+\_\+\+M\+S\+C\+\_\+\+S\+C\+S\+I\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+S\+T\+R\+U\+CT}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The file contains U\+SB Mass Stoarge S\+C\+SI layer api header function. 
+
+\begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+May-\/08-\/2009 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!A\+B\+O\+R\+T\+E\+D\+\_\+\+C\+O\+M\+M\+A\+ND@{A\+B\+O\+R\+T\+E\+D\+\_\+\+C\+O\+M\+M\+A\+ND}}
+\index{A\+B\+O\+R\+T\+E\+D\+\_\+\+C\+O\+M\+M\+A\+ND@{A\+B\+O\+R\+T\+E\+D\+\_\+\+C\+O\+M\+M\+A\+ND}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{A\+B\+O\+R\+T\+E\+D\+\_\+\+C\+O\+M\+M\+A\+ND}{ABORTED_COMMAND}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+B\+O\+R\+T\+E\+D\+\_\+\+C\+O\+M\+M\+A\+ND~(0x0\+B)}\hypertarget{usb__msc__scsi_8h_a22916f3d3a61e8b7f7fe25da2cb73784}{}\label{usb__msc__scsi_8h_a22916f3d3a61e8b7f7fe25da2cb73784}
+
+
+Definition at line 61 of file usb\+\_\+msc\+\_\+scsi.\+h.
+
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!B\+L\+A\+N\+K\+\_\+\+C\+H\+E\+CK@{B\+L\+A\+N\+K\+\_\+\+C\+H\+E\+CK}}
+\index{B\+L\+A\+N\+K\+\_\+\+C\+H\+E\+CK@{B\+L\+A\+N\+K\+\_\+\+C\+H\+E\+CK}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{B\+L\+A\+N\+K\+\_\+\+C\+H\+E\+CK}{BLANK_CHECK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+L\+A\+N\+K\+\_\+\+C\+H\+E\+CK~(0x08)}\hypertarget{usb__msc__scsi_8h_adad73f369924af7169e3c05c131a099e}{}\label{usb__msc__scsi_8h_adad73f369924af7169e3c05c131a099e}
+
+
+Definition at line 59 of file usb\+\_\+msc\+\_\+scsi.\+h.
+
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!D\+A\+T\+A\+\_\+\+P\+R\+O\+T\+E\+CT@{D\+A\+T\+A\+\_\+\+P\+R\+O\+T\+E\+CT}}
+\index{D\+A\+T\+A\+\_\+\+P\+R\+O\+T\+E\+CT@{D\+A\+T\+A\+\_\+\+P\+R\+O\+T\+E\+CT}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{D\+A\+T\+A\+\_\+\+P\+R\+O\+T\+E\+CT}{DATA_PROTECT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+A\+T\+A\+\_\+\+P\+R\+O\+T\+E\+CT~(0x07)}\hypertarget{usb__msc__scsi_8h_a37d02e4d3e29d8310a651714aba5bbe2}{}\label{usb__msc__scsi_8h_a37d02e4d3e29d8310a651714aba5bbe2}
+
+
+Definition at line 58 of file usb\+\_\+msc\+\_\+scsi.\+h.
+
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!F\+O\+R\+M\+A\+T\+T\+E\+D\+\_\+\+M\+E\+D\+IA@{F\+O\+R\+M\+A\+T\+T\+E\+D\+\_\+\+M\+E\+D\+IA}}
+\index{F\+O\+R\+M\+A\+T\+T\+E\+D\+\_\+\+M\+E\+D\+IA@{F\+O\+R\+M\+A\+T\+T\+E\+D\+\_\+\+M\+E\+D\+IA}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{F\+O\+R\+M\+A\+T\+T\+E\+D\+\_\+\+M\+E\+D\+IA}{FORMATTED_MEDIA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+O\+R\+M\+A\+T\+T\+E\+D\+\_\+\+M\+E\+D\+IA~(0x02)}\hypertarget{usb__msc__scsi_8h_a1b9fddcdc55fa3284d3a7a93b8acc19b}{}\label{usb__msc__scsi_8h_a1b9fddcdc55fa3284d3a7a93b8acc19b}
+
+
+Definition at line 78 of file usb\+\_\+msc\+\_\+scsi.\+h.
+
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!H\+A\+R\+D\+W\+A\+R\+E\+\_\+\+E\+R\+R\+OR@{H\+A\+R\+D\+W\+A\+R\+E\+\_\+\+E\+R\+R\+OR}}
+\index{H\+A\+R\+D\+W\+A\+R\+E\+\_\+\+E\+R\+R\+OR@{H\+A\+R\+D\+W\+A\+R\+E\+\_\+\+E\+R\+R\+OR}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{H\+A\+R\+D\+W\+A\+R\+E\+\_\+\+E\+R\+R\+OR}{HARDWARE_ERROR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\+A\+R\+D\+W\+A\+R\+E\+\_\+\+E\+R\+R\+OR~(0x04)}\hypertarget{usb__msc__scsi_8h_ad3ef1fbb2e4d1301e4ee35a5b654891f}{}\label{usb__msc__scsi_8h_ad3ef1fbb2e4d1301e4ee35a5b654891f}
+
+
+Definition at line 55 of file usb\+\_\+msc\+\_\+scsi.\+h.
+
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!I\+L\+L\+E\+G\+A\+L\+\_\+\+R\+E\+Q\+U\+E\+ST@{I\+L\+L\+E\+G\+A\+L\+\_\+\+R\+E\+Q\+U\+E\+ST}}
+\index{I\+L\+L\+E\+G\+A\+L\+\_\+\+R\+E\+Q\+U\+E\+ST@{I\+L\+L\+E\+G\+A\+L\+\_\+\+R\+E\+Q\+U\+E\+ST}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{I\+L\+L\+E\+G\+A\+L\+\_\+\+R\+E\+Q\+U\+E\+ST}{ILLEGAL_REQUEST}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+L\+L\+E\+G\+A\+L\+\_\+\+R\+E\+Q\+U\+E\+ST~(0x05)}\hypertarget{usb__msc__scsi_8h_abc9d47e89941c049c733d53ba26c5949}{}\label{usb__msc__scsi_8h_abc9d47e89941c049c733d53ba26c5949}
+
+
+Definition at line 56 of file usb\+\_\+msc\+\_\+scsi.\+h.
+
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!I\+N\+Q\+U\+I\+R\+Y\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+O\+N\+\_\+\+L\+E\+N\+G\+TH@{I\+N\+Q\+U\+I\+R\+Y\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+O\+N\+\_\+\+L\+E\+N\+G\+TH}}
+\index{I\+N\+Q\+U\+I\+R\+Y\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+O\+N\+\_\+\+L\+E\+N\+G\+TH@{I\+N\+Q\+U\+I\+R\+Y\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+O\+N\+\_\+\+L\+E\+N\+G\+TH}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{I\+N\+Q\+U\+I\+R\+Y\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+O\+N\+\_\+\+L\+E\+N\+G\+TH}{INQUIRY_ALLOCATION_LENGTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+Q\+U\+I\+R\+Y\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+O\+N\+\_\+\+L\+E\+N\+G\+TH~(0x24)}\hypertarget{usb__msc__scsi_8h_a54315dda44aea293ef46c5cda5f264f8}{}\label{usb__msc__scsi_8h_a54315dda44aea293ef46c5cda5f264f8}
+
+
+Definition at line 82 of file usb\+\_\+msc\+\_\+scsi.\+h.
+
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+O\+P\+C\+O\+DE@{I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+O\+P\+C\+O\+DE}}
+\index{I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+O\+P\+C\+O\+DE@{I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+O\+P\+C\+O\+DE}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+O\+P\+C\+O\+DE}{INVALID_COMMAND_OPCODE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+O\+P\+C\+O\+DE~(0x20)}\hypertarget{usb__msc__scsi_8h_a74eca9a53f87f66c000f2fc8b23281ae}{}\label{usb__msc__scsi_8h_a74eca9a53f87f66c000f2fc8b23281ae}
+
+
+Definition at line 66 of file usb\+\_\+msc\+\_\+scsi.\+h.
+
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+P\+KT@{I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+P\+KT}}
+\index{I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+P\+KT@{I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+P\+KT}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+P\+KT}{INVALID_FIELD_IN_COMMAND_PKT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+P\+KT~(0x24)}\hypertarget{usb__msc__scsi_8h_a3bd5c6527c42cddef4a793d555258b87}{}\label{usb__msc__scsi_8h_a3bd5c6527c42cddef4a793d555258b87}
+
+
+Definition at line 70 of file usb\+\_\+msc\+\_\+scsi.\+h.
+
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!L\+B\+A\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+GE@{L\+B\+A\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+GE}}
+\index{L\+B\+A\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+GE@{L\+B\+A\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+GE}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{L\+B\+A\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+GE}{LBA_OUT_OF_RANGE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+B\+A\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+GE~(0x21)}\hypertarget{usb__msc__scsi_8h_a3d19fa933588101aa5e1833bd6edd4e7}{}\label{usb__msc__scsi_8h_a3d19fa933588101aa5e1833bd6edd4e7}
+
+
+Definition at line 71 of file usb\+\_\+msc\+\_\+scsi.\+h.
+
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!L\+O\+A\+D\+\_\+\+E\+J\+E\+C\+T\+\_\+\+S\+T\+A\+R\+T\+\_\+\+M\+A\+SK@{L\+O\+A\+D\+\_\+\+E\+J\+E\+C\+T\+\_\+\+S\+T\+A\+R\+T\+\_\+\+M\+A\+SK}}
+\index{L\+O\+A\+D\+\_\+\+E\+J\+E\+C\+T\+\_\+\+S\+T\+A\+R\+T\+\_\+\+M\+A\+SK@{L\+O\+A\+D\+\_\+\+E\+J\+E\+C\+T\+\_\+\+S\+T\+A\+R\+T\+\_\+\+M\+A\+SK}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{L\+O\+A\+D\+\_\+\+E\+J\+E\+C\+T\+\_\+\+S\+T\+A\+R\+T\+\_\+\+M\+A\+SK}{LOAD_EJECT_START_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+O\+A\+D\+\_\+\+E\+J\+E\+C\+T\+\_\+\+S\+T\+A\+R\+T\+\_\+\+M\+A\+SK~(0x03)}\hypertarget{usb__msc__scsi_8h_aa89e14a3225ee67a4cd8a7b9ff690f43}{}\label{usb__msc__scsi_8h_aa89e14a3225ee67a4cd8a7b9ff690f43}
+
+
+Definition at line 77 of file usb\+\_\+msc\+\_\+scsi.\+h.
+
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!M\+E\+D\+I\+U\+M\+\_\+\+E\+R\+R\+OR@{M\+E\+D\+I\+U\+M\+\_\+\+E\+R\+R\+OR}}
+\index{M\+E\+D\+I\+U\+M\+\_\+\+E\+R\+R\+OR@{M\+E\+D\+I\+U\+M\+\_\+\+E\+R\+R\+OR}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{M\+E\+D\+I\+U\+M\+\_\+\+E\+R\+R\+OR}{MEDIUM_ERROR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+E\+D\+I\+U\+M\+\_\+\+E\+R\+R\+OR~(0x03)}\hypertarget{usb__msc__scsi_8h_abe246dd9ca406119e8dec032924bcbb0}{}\label{usb__msc__scsi_8h_abe246dd9ca406119e8dec032924bcbb0}
+
+
+Definition at line 54 of file usb\+\_\+msc\+\_\+scsi.\+h.
+
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!M\+I\+S\+C\+O\+M\+P\+A\+RE@{M\+I\+S\+C\+O\+M\+P\+A\+RE}}
+\index{M\+I\+S\+C\+O\+M\+P\+A\+RE@{M\+I\+S\+C\+O\+M\+P\+A\+RE}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{M\+I\+S\+C\+O\+M\+P\+A\+RE}{MISCOMPARE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+I\+S\+C\+O\+M\+P\+A\+RE~(0x0\+E)}\hypertarget{usb__msc__scsi_8h_a61f9bfa432cafd88bd3f7558c6ebe35b}{}\label{usb__msc__scsi_8h_a61f9bfa432cafd88bd3f7558c6ebe35b}
+
+
+Definition at line 63 of file usb\+\_\+msc\+\_\+scsi.\+h.
+
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!N\+O\+\_\+\+C\+A\+R\+T\+R\+I\+D\+G\+E\+\_\+\+I\+N\+\_\+\+D\+R\+I\+VE@{N\+O\+\_\+\+C\+A\+R\+T\+R\+I\+D\+G\+E\+\_\+\+I\+N\+\_\+\+D\+R\+I\+VE}}
+\index{N\+O\+\_\+\+C\+A\+R\+T\+R\+I\+D\+G\+E\+\_\+\+I\+N\+\_\+\+D\+R\+I\+VE@{N\+O\+\_\+\+C\+A\+R\+T\+R\+I\+D\+G\+E\+\_\+\+I\+N\+\_\+\+D\+R\+I\+VE}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{N\+O\+\_\+\+C\+A\+R\+T\+R\+I\+D\+G\+E\+\_\+\+I\+N\+\_\+\+D\+R\+I\+VE}{NO_CARTRIDGE_IN_DRIVE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+O\+\_\+\+C\+A\+R\+T\+R\+I\+D\+G\+E\+\_\+\+I\+N\+\_\+\+D\+R\+I\+VE~(0x03)}\hypertarget{usb__msc__scsi_8h_a00ea0a664763fe2c85c8859e0820316d}{}\label{usb__msc__scsi_8h_a00ea0a664763fe2c85c8859e0820316d}
+
+
+Definition at line 80 of file usb\+\_\+msc\+\_\+scsi.\+h.
+
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!N\+O\+\_\+\+S\+E\+N\+SE@{N\+O\+\_\+\+S\+E\+N\+SE}}
+\index{N\+O\+\_\+\+S\+E\+N\+SE@{N\+O\+\_\+\+S\+E\+N\+SE}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{N\+O\+\_\+\+S\+E\+N\+SE}{NO_SENSE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+O\+\_\+\+S\+E\+N\+SE~(0x00)}\hypertarget{usb__msc__scsi_8h_a1386a02e9e8ecefaa05d2c7a002f425a}{}\label{usb__msc__scsi_8h_a1386a02e9e8ecefaa05d2c7a002f425a}
+
+
+Definition at line 51 of file usb\+\_\+msc\+\_\+scsi.\+h.
+
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!N\+O\+T\+\_\+\+R\+E\+A\+DY@{N\+O\+T\+\_\+\+R\+E\+A\+DY}}
+\index{N\+O\+T\+\_\+\+R\+E\+A\+DY@{N\+O\+T\+\_\+\+R\+E\+A\+DY}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{N\+O\+T\+\_\+\+R\+E\+A\+DY}{NOT_READY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+O\+T\+\_\+\+R\+E\+A\+DY~(0x02)}\hypertarget{usb__msc__scsi_8h_a4eeea263034e2501cb1083a96a53e2d7}{}\label{usb__msc__scsi_8h_a4eeea263034e2501cb1083a96a53e2d7}
+
+
+Definition at line 53 of file usb\+\_\+msc\+\_\+scsi.\+h.
+
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!P\+R\+E\+V\+E\+N\+T\+\_\+\+A\+L\+L\+O\+W\+\_\+\+R\+E\+M\+O\+V\+A\+L\+\_\+\+M\+A\+SK@{P\+R\+E\+V\+E\+N\+T\+\_\+\+A\+L\+L\+O\+W\+\_\+\+R\+E\+M\+O\+V\+A\+L\+\_\+\+M\+A\+SK}}
+\index{P\+R\+E\+V\+E\+N\+T\+\_\+\+A\+L\+L\+O\+W\+\_\+\+R\+E\+M\+O\+V\+A\+L\+\_\+\+M\+A\+SK@{P\+R\+E\+V\+E\+N\+T\+\_\+\+A\+L\+L\+O\+W\+\_\+\+R\+E\+M\+O\+V\+A\+L\+\_\+\+M\+A\+SK}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{P\+R\+E\+V\+E\+N\+T\+\_\+\+A\+L\+L\+O\+W\+\_\+\+R\+E\+M\+O\+V\+A\+L\+\_\+\+M\+A\+SK}{PREVENT_ALLOW_REMOVAL_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+E\+V\+E\+N\+T\+\_\+\+A\+L\+L\+O\+W\+\_\+\+R\+E\+M\+O\+V\+A\+L\+\_\+\+M\+A\+SK~(0x01)}\hypertarget{usb__msc__scsi_8h_a50b1b39b9ed0dd87da871c44ceafc5a0}{}\label{usb__msc__scsi_8h_a50b1b39b9ed0dd87da871c44ceafc5a0}
+
+
+Definition at line 76 of file usb\+\_\+msc\+\_\+scsi.\+h.
+
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+TH@{R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+TH}}
+\index{R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+TH@{R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+TH}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+TH}{READ_CAPACITY_DATA_LENGTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+TH~(0x08)}\hypertarget{usb__msc__scsi_8h_aeb0895f875bd98dfcbd727c182a1b470}{}\label{usb__msc__scsi_8h_aeb0895f875bd98dfcbd727c182a1b470}
+
+
+Definition at line 84 of file usb\+\_\+msc\+\_\+scsi.\+h.
+
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!R\+E\+C\+O\+V\+E\+R\+E\+D\+\_\+\+E\+R\+R\+OR@{R\+E\+C\+O\+V\+E\+R\+E\+D\+\_\+\+E\+R\+R\+OR}}
+\index{R\+E\+C\+O\+V\+E\+R\+E\+D\+\_\+\+E\+R\+R\+OR@{R\+E\+C\+O\+V\+E\+R\+E\+D\+\_\+\+E\+R\+R\+OR}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{R\+E\+C\+O\+V\+E\+R\+E\+D\+\_\+\+E\+R\+R\+OR}{RECOVERED_ERROR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+C\+O\+V\+E\+R\+E\+D\+\_\+\+E\+R\+R\+OR~(0x01)}\hypertarget{usb__msc__scsi_8h_a0caa58c772b72659c1bbdfa2616763bb}{}\label{usb__msc__scsi_8h_a0caa58c772b72659c1bbdfa2616763bb}
+
+
+Definition at line 52 of file usb\+\_\+msc\+\_\+scsi.\+h.
+
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!R\+E\+Q\+\_\+\+S\+E\+N\+S\+E\+\_\+\+A\+D\+D\+I\+T\+I\+O\+N\+A\+L\+\_\+\+S\+E\+N\+S\+E\+\_\+\+L\+EN@{R\+E\+Q\+\_\+\+S\+E\+N\+S\+E\+\_\+\+A\+D\+D\+I\+T\+I\+O\+N\+A\+L\+\_\+\+S\+E\+N\+S\+E\+\_\+\+L\+EN}}
+\index{R\+E\+Q\+\_\+\+S\+E\+N\+S\+E\+\_\+\+A\+D\+D\+I\+T\+I\+O\+N\+A\+L\+\_\+\+S\+E\+N\+S\+E\+\_\+\+L\+EN@{R\+E\+Q\+\_\+\+S\+E\+N\+S\+E\+\_\+\+A\+D\+D\+I\+T\+I\+O\+N\+A\+L\+\_\+\+S\+E\+N\+S\+E\+\_\+\+L\+EN}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{R\+E\+Q\+\_\+\+S\+E\+N\+S\+E\+\_\+\+A\+D\+D\+I\+T\+I\+O\+N\+A\+L\+\_\+\+S\+E\+N\+S\+E\+\_\+\+L\+EN}{REQ_SENSE_ADDITIONAL_SENSE_LEN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+Q\+\_\+\+S\+E\+N\+S\+E\+\_\+\+A\+D\+D\+I\+T\+I\+O\+N\+A\+L\+\_\+\+S\+E\+N\+S\+E\+\_\+\+L\+EN~(0x0\+A)}\hypertarget{usb__msc__scsi_8h_a873b78e7b41b8dfd2abe322f64ed43df}{}\label{usb__msc__scsi_8h_a873b78e7b41b8dfd2abe322f64ed43df}
+
+
+Definition at line 75 of file usb\+\_\+msc\+\_\+scsi.\+h.
+
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!R\+E\+Q\+\_\+\+S\+E\+N\+S\+E\+\_\+\+D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+TH@{R\+E\+Q\+\_\+\+S\+E\+N\+S\+E\+\_\+\+D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+TH}}
+\index{R\+E\+Q\+\_\+\+S\+E\+N\+S\+E\+\_\+\+D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+TH@{R\+E\+Q\+\_\+\+S\+E\+N\+S\+E\+\_\+\+D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+TH}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{R\+E\+Q\+\_\+\+S\+E\+N\+S\+E\+\_\+\+D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+TH}{REQ_SENSE_DATA_LENGTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+Q\+\_\+\+S\+E\+N\+S\+E\+\_\+\+D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+TH~(18)}\hypertarget{usb__msc__scsi_8h_adc3ec84d3803490d5416ac4c1a74c4ee}{}\label{usb__msc__scsi_8h_adc3ec84d3803490d5416ac4c1a74c4ee}
+
+
+Definition at line 83 of file usb\+\_\+msc\+\_\+scsi.\+h.
+
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!R\+E\+Q\+\_\+\+S\+E\+N\+S\+E\+\_\+\+V\+A\+L\+I\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE@{R\+E\+Q\+\_\+\+S\+E\+N\+S\+E\+\_\+\+V\+A\+L\+I\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}}
+\index{R\+E\+Q\+\_\+\+S\+E\+N\+S\+E\+\_\+\+V\+A\+L\+I\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE@{R\+E\+Q\+\_\+\+S\+E\+N\+S\+E\+\_\+\+V\+A\+L\+I\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{R\+E\+Q\+\_\+\+S\+E\+N\+S\+E\+\_\+\+V\+A\+L\+I\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}{REQ_SENSE_VALID_ERROR_CODE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+Q\+\_\+\+S\+E\+N\+S\+E\+\_\+\+V\+A\+L\+I\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE~(0x70)}\hypertarget{usb__msc__scsi_8h_aa7ea5f19ff4538709676428291d6450c}{}\label{usb__msc__scsi_8h_aa7ea5f19ff4538709676428291d6450c}
+
+
+Definition at line 74 of file usb\+\_\+msc\+\_\+scsi.\+h.
+
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!U\+N\+F\+O\+R\+M\+A\+T\+T\+E\+D\+\_\+\+M\+E\+D\+IA@{U\+N\+F\+O\+R\+M\+A\+T\+T\+E\+D\+\_\+\+M\+E\+D\+IA}}
+\index{U\+N\+F\+O\+R\+M\+A\+T\+T\+E\+D\+\_\+\+M\+E\+D\+IA@{U\+N\+F\+O\+R\+M\+A\+T\+T\+E\+D\+\_\+\+M\+E\+D\+IA}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{U\+N\+F\+O\+R\+M\+A\+T\+T\+E\+D\+\_\+\+M\+E\+D\+IA}{UNFORMATTED_MEDIA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+N\+F\+O\+R\+M\+A\+T\+T\+E\+D\+\_\+\+M\+E\+D\+IA~(0x01)}\hypertarget{usb__msc__scsi_8h_a4ff07581e5775e0030e1d9156ace8b91}{}\label{usb__msc__scsi_8h_a4ff07581e5775e0030e1d9156ace8b91}
+
+
+Definition at line 79 of file usb\+\_\+msc\+\_\+scsi.\+h.
+
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!U\+N\+I\+T\+\_\+\+A\+T\+T\+E\+N\+T\+I\+ON@{U\+N\+I\+T\+\_\+\+A\+T\+T\+E\+N\+T\+I\+ON}}
+\index{U\+N\+I\+T\+\_\+\+A\+T\+T\+E\+N\+T\+I\+ON@{U\+N\+I\+T\+\_\+\+A\+T\+T\+E\+N\+T\+I\+ON}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{U\+N\+I\+T\+\_\+\+A\+T\+T\+E\+N\+T\+I\+ON}{UNIT_ATTENTION}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+N\+I\+T\+\_\+\+A\+T\+T\+E\+N\+T\+I\+ON~(0x06)}\hypertarget{usb__msc__scsi_8h_adadd5c52cc22c658bcb2cf930966ab52}{}\label{usb__msc__scsi_8h_adadd5c52cc22c658bcb2cf930966ab52}
+
+
+Definition at line 57 of file usb\+\_\+msc\+\_\+scsi.\+h.
+
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!U\+N\+K\+N\+O\+W\+N\+\_\+\+E\+R\+R\+OR@{U\+N\+K\+N\+O\+W\+N\+\_\+\+E\+R\+R\+OR}}
+\index{U\+N\+K\+N\+O\+W\+N\+\_\+\+E\+R\+R\+OR@{U\+N\+K\+N\+O\+W\+N\+\_\+\+E\+R\+R\+OR}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{U\+N\+K\+N\+O\+W\+N\+\_\+\+E\+R\+R\+OR}{UNKNOWN_ERROR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+N\+K\+N\+O\+W\+N\+\_\+\+E\+R\+R\+OR~(0x\+F\+F)}\hypertarget{usb__msc__scsi_8h_a13b7b9ceea0c8133053f90fef1dd7cd7}{}\label{usb__msc__scsi_8h_a13b7b9ceea0c8133053f90fef1dd7cd7}
+
+
+Definition at line 69 of file usb\+\_\+msc\+\_\+scsi.\+h.
+
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!U\+N\+R\+E\+C\+O\+V\+E\+R\+E\+D\+\_\+\+R\+E\+A\+D\+\_\+\+E\+R\+R\+OR@{U\+N\+R\+E\+C\+O\+V\+E\+R\+E\+D\+\_\+\+R\+E\+A\+D\+\_\+\+E\+R\+R\+OR}}
+\index{U\+N\+R\+E\+C\+O\+V\+E\+R\+E\+D\+\_\+\+R\+E\+A\+D\+\_\+\+E\+R\+R\+OR@{U\+N\+R\+E\+C\+O\+V\+E\+R\+E\+D\+\_\+\+R\+E\+A\+D\+\_\+\+E\+R\+R\+OR}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{U\+N\+R\+E\+C\+O\+V\+E\+R\+E\+D\+\_\+\+R\+E\+A\+D\+\_\+\+E\+R\+R\+OR}{UNRECOVERED_READ_ERROR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+N\+R\+E\+C\+O\+V\+E\+R\+E\+D\+\_\+\+R\+E\+A\+D\+\_\+\+E\+R\+R\+OR~(0x11)}\hypertarget{usb__msc__scsi_8h_af8e525bcdd3be01eefef3819974dacd4}{}\label{usb__msc__scsi_8h_af8e525bcdd3be01eefef3819974dacd4}
+
+
+Definition at line 68 of file usb\+\_\+msc\+\_\+scsi.\+h.
+
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!V\+E\+N\+D\+O\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+E\+R\+R\+OR@{V\+E\+N\+D\+O\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+E\+R\+R\+OR}}
+\index{V\+E\+N\+D\+O\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+E\+R\+R\+OR@{V\+E\+N\+D\+O\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+E\+R\+R\+OR}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{V\+E\+N\+D\+O\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+E\+R\+R\+OR}{VENDOR_SPECIFIC_ERROR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+E\+N\+D\+O\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+E\+R\+R\+OR~(0x09)}\hypertarget{usb__msc__scsi_8h_a9d489eabffdd15118f3125a33e19894b}{}\label{usb__msc__scsi_8h_a9d489eabffdd15118f3125a33e19894b}
+
+
+Definition at line 60 of file usb\+\_\+msc\+\_\+scsi.\+h.
+
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!V\+O\+L\+U\+M\+E\+\_\+\+O\+V\+E\+R\+F\+L\+OW@{V\+O\+L\+U\+M\+E\+\_\+\+O\+V\+E\+R\+F\+L\+OW}}
+\index{V\+O\+L\+U\+M\+E\+\_\+\+O\+V\+E\+R\+F\+L\+OW@{V\+O\+L\+U\+M\+E\+\_\+\+O\+V\+E\+R\+F\+L\+OW}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{V\+O\+L\+U\+M\+E\+\_\+\+O\+V\+E\+R\+F\+L\+OW}{VOLUME_OVERFLOW}}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+O\+L\+U\+M\+E\+\_\+\+O\+V\+E\+R\+F\+L\+OW~(0x0\+D)}\hypertarget{usb__msc__scsi_8h_a7cd72006b3fdd0c1c6ff93186cb4e91f}{}\label{usb__msc__scsi_8h_a7cd72006b3fdd0c1c6ff93186cb4e91f}
+
+
+Definition at line 62 of file usb\+\_\+msc\+\_\+scsi.\+h.
+
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!W\+R\+I\+T\+E\+\_\+\+F\+A\+U\+LT@{W\+R\+I\+T\+E\+\_\+\+F\+A\+U\+LT}}
+\index{W\+R\+I\+T\+E\+\_\+\+F\+A\+U\+LT@{W\+R\+I\+T\+E\+\_\+\+F\+A\+U\+LT}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{W\+R\+I\+T\+E\+\_\+\+F\+A\+U\+LT}{WRITE_FAULT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\+R\+I\+T\+E\+\_\+\+F\+A\+U\+LT~(0x03)}\hypertarget{usb__msc__scsi_8h_ade14b05371e4cdbfcdd29a3b91579aa3}{}\label{usb__msc__scsi_8h_ade14b05371e4cdbfcdd29a3b91579aa3}
+
+
+Definition at line 67 of file usb\+\_\+msc\+\_\+scsi.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+L\+I\+S\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+T\+R\+U\+CT@{C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+L\+I\+S\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+T\+R\+U\+CT}}
+\index{C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+L\+I\+S\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+T\+R\+U\+CT@{C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+L\+I\+S\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+T\+R\+U\+CT}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+L\+I\+S\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+T\+R\+U\+CT}{CAPACITY_LIST_HEADER_STRUCT}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+capacity\+\_\+list\+\_\+header} {\bf C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+L\+I\+S\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+T\+R\+U\+CT}}\hypertarget{usb__msc__scsi_8h_a7a11a0b8879f0fed3c13e69d9e902bfd}{}\label{usb__msc__scsi_8h_a7a11a0b8879f0fed3c13e69d9e902bfd}
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!C\+U\+R\+R\+\_\+\+M\+A\+X\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+E\+S\+C\+\_\+\+S\+T\+R\+U\+CT@{C\+U\+R\+R\+\_\+\+M\+A\+X\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+E\+S\+C\+\_\+\+S\+T\+R\+U\+CT}}
+\index{C\+U\+R\+R\+\_\+\+M\+A\+X\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+E\+S\+C\+\_\+\+S\+T\+R\+U\+CT@{C\+U\+R\+R\+\_\+\+M\+A\+X\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+E\+S\+C\+\_\+\+S\+T\+R\+U\+CT}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{C\+U\+R\+R\+\_\+\+M\+A\+X\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+E\+S\+C\+\_\+\+S\+T\+R\+U\+CT}{CURR_MAX_CAPACITY_DESC_STRUCT}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+curr\+\_\+max\+\_\+capacity\+\_\+desc} {\bf C\+U\+R\+R\+\_\+\+M\+A\+X\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+E\+S\+C\+\_\+\+S\+T\+R\+U\+CT}}\hypertarget{usb__msc__scsi_8h_a7d7a00a51dfcc3517e43fbaaa853cb10}{}\label{usb__msc__scsi_8h_a7d7a00a51dfcc3517e43fbaaa853cb10}
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!F\+O\+R\+M\+A\+T\+T\+A\+B\+L\+E\+\_\+\+C\+A\+P\+\_\+\+D\+E\+SC@{F\+O\+R\+M\+A\+T\+T\+A\+B\+L\+E\+\_\+\+C\+A\+P\+\_\+\+D\+E\+SC}}
+\index{F\+O\+R\+M\+A\+T\+T\+A\+B\+L\+E\+\_\+\+C\+A\+P\+\_\+\+D\+E\+SC@{F\+O\+R\+M\+A\+T\+T\+A\+B\+L\+E\+\_\+\+C\+A\+P\+\_\+\+D\+E\+SC}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{F\+O\+R\+M\+A\+T\+T\+A\+B\+L\+E\+\_\+\+C\+A\+P\+\_\+\+D\+E\+SC}{FORMATTABLE_CAP_DESC}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+formattable\+\_\+cap\+\_\+desc} {\bf F\+O\+R\+M\+A\+T\+T\+A\+B\+L\+E\+\_\+\+C\+A\+P\+\_\+\+D\+E\+SC}}\hypertarget{usb__msc__scsi_8h_a64007303f2f23ce9246779e7329da41e}{}\label{usb__msc__scsi_8h_a64007303f2f23ce9246779e7329da41e}
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!I\+N\+Q\+U\+I\+R\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT@{I\+N\+Q\+U\+I\+R\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}}
+\index{I\+N\+Q\+U\+I\+R\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT@{I\+N\+Q\+U\+I\+R\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{I\+N\+Q\+U\+I\+R\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}{INQUIRY_COMMAND_STRUCT}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+inquiry\+\_\+command} {\bf I\+N\+Q\+U\+I\+R\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}}\hypertarget{usb__msc__scsi_8h_af547e85144493068eaaaa2aab0678f60}{}\label{usb__msc__scsi_8h_af547e85144493068eaaaa2aab0678f60}
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!I\+N\+Q\+U\+I\+R\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT@{I\+N\+Q\+U\+I\+R\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT}}
+\index{I\+N\+Q\+U\+I\+R\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT@{I\+N\+Q\+U\+I\+R\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{I\+N\+Q\+U\+I\+R\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT}{INQUIRY_DATA_STRUCT}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+inquiry\+\_\+data}  {\bf I\+N\+Q\+U\+I\+R\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT}}\hypertarget{usb__msc__scsi_8h_a1f09cb9c396aa31cda4ef76bf8a1f550}{}\label{usb__msc__scsi_8h_a1f09cb9c396aa31cda4ef76bf8a1f550}
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!M\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+T\+R\+U\+CT@{M\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+T\+R\+U\+CT}}
+\index{M\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+T\+R\+U\+CT@{M\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+T\+R\+U\+CT}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{M\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+T\+R\+U\+CT}{MODE_PARAMETER_HEADER_STRUCT}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+mode\+\_\+parameter\+\_\+header} {\bf M\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+T\+R\+U\+CT}}\hypertarget{usb__msc__scsi_8h_a3c345bdeb8a60955718ba31a25629441}{}\label{usb__msc__scsi_8h_a3c345bdeb8a60955718ba31a25629441}
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!M\+S\+C\+\_\+\+S\+C\+S\+I\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+S\+T\+R\+U\+CT@{M\+S\+C\+\_\+\+S\+C\+S\+I\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+S\+T\+R\+U\+CT}}
+\index{M\+S\+C\+\_\+\+S\+C\+S\+I\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+S\+T\+R\+U\+CT@{M\+S\+C\+\_\+\+S\+C\+S\+I\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+S\+T\+R\+U\+CT}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{M\+S\+C\+\_\+\+S\+C\+S\+I\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+S\+T\+R\+U\+CT}{MSC_SCSI_GLOBAL_VARIABLE_STRUCT}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+msc\+\_\+scsi\+\_\+variable\+\_\+struct} {\bf M\+S\+C\+\_\+\+S\+C\+S\+I\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+S\+T\+R\+U\+CT}}\hypertarget{usb__msc__scsi_8h_aa5935d010c18fc84cc80eaa30ea3dfc1}{}\label{usb__msc__scsi_8h_aa5935d010c18fc84cc80eaa30ea3dfc1}
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!P\+T\+R\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+L\+I\+S\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+T\+R\+U\+CT@{P\+T\+R\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+L\+I\+S\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+T\+R\+U\+CT}}
+\index{P\+T\+R\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+L\+I\+S\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+T\+R\+U\+CT@{P\+T\+R\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+L\+I\+S\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+T\+R\+U\+CT}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{P\+T\+R\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+L\+I\+S\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+T\+R\+U\+CT}{PTR_CAPACITY_LIST_HEADER_STRUCT}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+capacity\+\_\+list\+\_\+header} $\ast$ {\bf P\+T\+R\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+L\+I\+S\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+T\+R\+U\+CT}}\hypertarget{usb__msc__scsi_8h_a4ad97c0ea50b0ca011b4ede4c8a169f8}{}\label{usb__msc__scsi_8h_a4ad97c0ea50b0ca011b4ede4c8a169f8}
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!P\+T\+R\+\_\+\+C\+U\+R\+R\+\_\+\+M\+A\+X\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+E\+S\+C\+\_\+\+S\+T\+R\+U\+CT@{P\+T\+R\+\_\+\+C\+U\+R\+R\+\_\+\+M\+A\+X\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+E\+S\+C\+\_\+\+S\+T\+R\+U\+CT}}
+\index{P\+T\+R\+\_\+\+C\+U\+R\+R\+\_\+\+M\+A\+X\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+E\+S\+C\+\_\+\+S\+T\+R\+U\+CT@{P\+T\+R\+\_\+\+C\+U\+R\+R\+\_\+\+M\+A\+X\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+E\+S\+C\+\_\+\+S\+T\+R\+U\+CT}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{P\+T\+R\+\_\+\+C\+U\+R\+R\+\_\+\+M\+A\+X\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+E\+S\+C\+\_\+\+S\+T\+R\+U\+CT}{PTR_CURR_MAX_CAPACITY_DESC_STRUCT}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+curr\+\_\+max\+\_\+capacity\+\_\+desc} $\ast$ {\bf P\+T\+R\+\_\+\+C\+U\+R\+R\+\_\+\+M\+A\+X\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+E\+S\+C\+\_\+\+S\+T\+R\+U\+CT}}\hypertarget{usb__msc__scsi_8h_acf6fe5047c687a1d941f05282091a65b}{}\label{usb__msc__scsi_8h_acf6fe5047c687a1d941f05282091a65b}
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!P\+T\+R\+\_\+\+F\+O\+R\+M\+A\+T\+T\+A\+B\+L\+E\+\_\+\+C\+A\+P\+\_\+\+D\+E\+SC@{P\+T\+R\+\_\+\+F\+O\+R\+M\+A\+T\+T\+A\+B\+L\+E\+\_\+\+C\+A\+P\+\_\+\+D\+E\+SC}}
+\index{P\+T\+R\+\_\+\+F\+O\+R\+M\+A\+T\+T\+A\+B\+L\+E\+\_\+\+C\+A\+P\+\_\+\+D\+E\+SC@{P\+T\+R\+\_\+\+F\+O\+R\+M\+A\+T\+T\+A\+B\+L\+E\+\_\+\+C\+A\+P\+\_\+\+D\+E\+SC}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{P\+T\+R\+\_\+\+F\+O\+R\+M\+A\+T\+T\+A\+B\+L\+E\+\_\+\+C\+A\+P\+\_\+\+D\+E\+SC}{PTR_FORMATTABLE_CAP_DESC}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+formattable\+\_\+cap\+\_\+desc} $\ast$ {\bf P\+T\+R\+\_\+\+F\+O\+R\+M\+A\+T\+T\+A\+B\+L\+E\+\_\+\+C\+A\+P\+\_\+\+D\+E\+SC}}\hypertarget{usb__msc__scsi_8h_a2ad8288c57a77da8bcddd6b62465cc47}{}\label{usb__msc__scsi_8h_a2ad8288c57a77da8bcddd6b62465cc47}
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!P\+T\+R\+\_\+\+I\+N\+Q\+U\+I\+R\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT@{P\+T\+R\+\_\+\+I\+N\+Q\+U\+I\+R\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}}
+\index{P\+T\+R\+\_\+\+I\+N\+Q\+U\+I\+R\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT@{P\+T\+R\+\_\+\+I\+N\+Q\+U\+I\+R\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{P\+T\+R\+\_\+\+I\+N\+Q\+U\+I\+R\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}{PTR_INQUIRY_COMMAND_STRUCT}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+inquiry\+\_\+command} $\ast$  {\bf P\+T\+R\+\_\+\+I\+N\+Q\+U\+I\+R\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}}\hypertarget{usb__msc__scsi_8h_a0d6febe0058e1d4307191824841c2187}{}\label{usb__msc__scsi_8h_a0d6febe0058e1d4307191824841c2187}
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!P\+T\+R\+\_\+\+I\+N\+Q\+U\+I\+R\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT@{P\+T\+R\+\_\+\+I\+N\+Q\+U\+I\+R\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT}}
+\index{P\+T\+R\+\_\+\+I\+N\+Q\+U\+I\+R\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT@{P\+T\+R\+\_\+\+I\+N\+Q\+U\+I\+R\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{P\+T\+R\+\_\+\+I\+N\+Q\+U\+I\+R\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT}{PTR_INQUIRY_DATA_STRUCT}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+inquiry\+\_\+data} $\ast$ {\bf P\+T\+R\+\_\+\+I\+N\+Q\+U\+I\+R\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT}}\hypertarget{usb__msc__scsi_8h_a36bac1d93cbda7c59ec6d8c2a047cb29}{}\label{usb__msc__scsi_8h_a36bac1d93cbda7c59ec6d8c2a047cb29}
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!P\+T\+R\+\_\+\+M\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+T\+R\+U\+CT@{P\+T\+R\+\_\+\+M\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+T\+R\+U\+CT}}
+\index{P\+T\+R\+\_\+\+M\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+T\+R\+U\+CT@{P\+T\+R\+\_\+\+M\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+T\+R\+U\+CT}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{P\+T\+R\+\_\+\+M\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+T\+R\+U\+CT}{PTR_MODE_PARAMETER_HEADER_STRUCT}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+mode\+\_\+parameter\+\_\+header} $\ast$ {\bf P\+T\+R\+\_\+\+M\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+T\+R\+U\+CT}}\hypertarget{usb__msc__scsi_8h_a561c5a73f5dd2cd42cfa905fc5e6a847}{}\label{usb__msc__scsi_8h_a561c5a73f5dd2cd42cfa905fc5e6a847}
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!P\+T\+R\+\_\+\+M\+S\+C\+\_\+\+S\+C\+S\+I\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+S\+T\+R\+U\+CT@{P\+T\+R\+\_\+\+M\+S\+C\+\_\+\+S\+C\+S\+I\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+S\+T\+R\+U\+CT}}
+\index{P\+T\+R\+\_\+\+M\+S\+C\+\_\+\+S\+C\+S\+I\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+S\+T\+R\+U\+CT@{P\+T\+R\+\_\+\+M\+S\+C\+\_\+\+S\+C\+S\+I\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+S\+T\+R\+U\+CT}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{P\+T\+R\+\_\+\+M\+S\+C\+\_\+\+S\+C\+S\+I\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+S\+T\+R\+U\+CT}{PTR_MSC_SCSI_GLOBAL_VARIABLE_STRUCT}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+msc\+\_\+scsi\+\_\+variable\+\_\+struct} $\ast$  {\bf P\+T\+R\+\_\+\+M\+S\+C\+\_\+\+S\+C\+S\+I\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+S\+T\+R\+U\+CT}}\hypertarget{usb__msc__scsi_8h_a1c6440c8e20322ae4be761dbb37e5a0d}{}\label{usb__msc__scsi_8h_a1c6440c8e20322ae4be761dbb37e5a0d}
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!P\+T\+R\+\_\+\+R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT@{P\+T\+R\+\_\+\+R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}}
+\index{P\+T\+R\+\_\+\+R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT@{P\+T\+R\+\_\+\+R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{P\+T\+R\+\_\+\+R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}{PTR_READ_CAPACITY_COMMAND_STRUCT}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+read\+\_\+capacity\+\_\+command} $\ast$ {\bf P\+T\+R\+\_\+\+R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}}\hypertarget{usb__msc__scsi_8h_a9aa70b38658f3e4aeb2714e5ca0f8549}{}\label{usb__msc__scsi_8h_a9aa70b38658f3e4aeb2714e5ca0f8549}
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!P\+T\+R\+\_\+\+R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT@{P\+T\+R\+\_\+\+R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT}}
+\index{P\+T\+R\+\_\+\+R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT@{P\+T\+R\+\_\+\+R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{P\+T\+R\+\_\+\+R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT}{PTR_READ_CAPACITY_DATA_STRUCT}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+read\+\_\+capacity\+\_\+data} $\ast$  {\bf P\+T\+R\+\_\+\+R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT}}\hypertarget{usb__msc__scsi_8h_a93b6fce8accee463beed639470825a58}{}\label{usb__msc__scsi_8h_a93b6fce8accee463beed639470825a58}
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!P\+T\+R\+\_\+\+R\+E\+A\+D\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT@{P\+T\+R\+\_\+\+R\+E\+A\+D\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}}
+\index{P\+T\+R\+\_\+\+R\+E\+A\+D\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT@{P\+T\+R\+\_\+\+R\+E\+A\+D\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{P\+T\+R\+\_\+\+R\+E\+A\+D\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}{PTR_READ_FORMAT_CAPACITY_COMMAND_STRUCT}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+read\+\_\+format\+\_\+capacity\+\_\+command} $\ast$ {\bf P\+T\+R\+\_\+\+R\+E\+A\+D\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}}\hypertarget{usb__msc__scsi_8h_ab7f09f5981e17692255da3be3cff1e79}{}\label{usb__msc__scsi_8h_ab7f09f5981e17692255da3be3cff1e79}
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!P\+T\+R\+\_\+\+R\+E\+A\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+10\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT@{P\+T\+R\+\_\+\+R\+E\+A\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+10\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}}
+\index{P\+T\+R\+\_\+\+R\+E\+A\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+10\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT@{P\+T\+R\+\_\+\+R\+E\+A\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+10\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{P\+T\+R\+\_\+\+R\+E\+A\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+10\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}{PTR_READ_WRITE_10_COMMAND_STRUCT}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+read\+\_\+write\+\_\+10\+\_\+command} $\ast$ {\bf P\+T\+R\+\_\+\+R\+E\+A\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+10\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}}\hypertarget{usb__msc__scsi_8h_a11871fcb97a69ee8fd224fc989fdc039}{}\label{usb__msc__scsi_8h_a11871fcb97a69ee8fd224fc989fdc039}
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!P\+T\+R\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+S\+E\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT@{P\+T\+R\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+S\+E\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}}
+\index{P\+T\+R\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+S\+E\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT@{P\+T\+R\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+S\+E\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{P\+T\+R\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+S\+E\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}{PTR_REQUEST_SENSE_COMMAND_STRUCT}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+request\+\_\+sense\+\_\+command} $\ast$  {\bf P\+T\+R\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+S\+E\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}}\hypertarget{usb__msc__scsi_8h_a5af1d4b894f5781a3eaca663f15eae64}{}\label{usb__msc__scsi_8h_a5af1d4b894f5781a3eaca663f15eae64}
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!P\+T\+R\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+S\+E\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT@{P\+T\+R\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+S\+E\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT}}
+\index{P\+T\+R\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+S\+E\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT@{P\+T\+R\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+S\+E\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{P\+T\+R\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+S\+E\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT}{PTR_REQUEST_SENSE_DATA_STRUCT}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+request\+\_\+sense\+\_\+data} $\ast$ {\bf P\+T\+R\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+S\+E\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT}}\hypertarget{usb__msc__scsi_8h_a00824707a0c997dc022c7a3278583359}{}\label{usb__msc__scsi_8h_a00824707a0c997dc022c7a3278583359}
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT@{R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}}
+\index{R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT@{R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}{READ_CAPACITY_COMMAND_STRUCT}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+read\+\_\+capacity\+\_\+command}  {\bf R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}}\hypertarget{usb__msc__scsi_8h_afb9cf2dd16d294aa3b2429f64ee71765}{}\label{usb__msc__scsi_8h_afb9cf2dd16d294aa3b2429f64ee71765}
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT@{R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT}}
+\index{R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT@{R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT}{READ_CAPACITY_DATA_STRUCT}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+read\+\_\+capacity\+\_\+data} {\bf R\+E\+A\+D\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT}}\hypertarget{usb__msc__scsi_8h_a6d76bc39d66300c8b42f11d73bea82c1}{}\label{usb__msc__scsi_8h_a6d76bc39d66300c8b42f11d73bea82c1}
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!R\+E\+A\+D\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT@{R\+E\+A\+D\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}}
+\index{R\+E\+A\+D\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT@{R\+E\+A\+D\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{R\+E\+A\+D\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}{READ_FORMAT_CAPACITY_COMMAND_STRUCT}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+read\+\_\+format\+\_\+capacity\+\_\+command}  {\bf R\+E\+A\+D\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}}\hypertarget{usb__msc__scsi_8h_ad4d4ae3225faaf3a8f03680d0a821039}{}\label{usb__msc__scsi_8h_ad4d4ae3225faaf3a8f03680d0a821039}
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!R\+E\+A\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+10\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT@{R\+E\+A\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+10\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}}
+\index{R\+E\+A\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+10\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT@{R\+E\+A\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+10\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{R\+E\+A\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+10\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}{READ_WRITE_10_COMMAND_STRUCT}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+read\+\_\+write\+\_\+10\+\_\+command} {\bf R\+E\+A\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+10\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}}\hypertarget{usb__msc__scsi_8h_a84abc645d3c392d89f522fbbc68cfbb8}{}\label{usb__msc__scsi_8h_a84abc645d3c392d89f522fbbc68cfbb8}
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+S\+E\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+S\+E\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}}
+\index{R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+S\+E\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+S\+E\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+S\+E\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}{REQUEST_SENSE_COMMAND_STRUCT}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+request\+\_\+sense\+\_\+command} {\bf R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+S\+E\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+T\+R\+U\+CT}}\hypertarget{usb__msc__scsi_8h_a8de16af7c36f1f61d239475480189730}{}\label{usb__msc__scsi_8h_a8de16af7c36f1f61d239475480189730}
+\index{usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}!R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+S\+E\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+S\+E\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT}}
+\index{R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+S\+E\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+S\+E\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT}!usb\+\_\+msc\+\_\+scsi.\+h@{usb\+\_\+msc\+\_\+scsi.\+h}}
+\subsubsection[{\texorpdfstring{R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+S\+E\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT}{REQUEST_SENSE_DATA_STRUCT}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+request\+\_\+sense\+\_\+data} {\bf R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+N\+S\+E\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+U\+CT}}\hypertarget{usb__msc__scsi_8h_a0139e4680a9fc0662cc06bf80baffc17}{}\label{usb__msc__scsi_8h_a0139e4680a9fc0662cc06bf80baffc17}

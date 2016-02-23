@@ -1,0 +1,71 @@
+\hypertarget{01bsp__debugpins_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/common/01bsp\+\_\+debugpins/01bsp\+\_\+debugpins.c File Reference}
+\label{01bsp__debugpins_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/common/01bsp\+\_\+debugpins/01bsp\+\_\+debugpins.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/common/01bsp\+\_\+debugpins/01bsp\+\_\+debugpins.\+c}}
+{\ttfamily \#include \char`\"{}stdint.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stdio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}debugpins.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leds.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{01bsp__debugpins_8c_a888986c59385bb63dec14be78b842481}{some\+\_\+delay} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em This is a program to verify the correct functionality of the \char`\"{}debugpins\char`\"{} bsp module. \end{DoxyCompactList}\item 
+int \hyperlink{01bsp__debugpins_8c_ad0caa506af897a3ebe6699aa0c0da367}{mote\+\_\+main} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em The program starts executing here. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{01bsp\+\_\+debugpins.\+c@{01bsp\+\_\+debugpins.\+c}!mote\+\_\+main@{mote\+\_\+main}}
+\index{mote\+\_\+main@{mote\+\_\+main}!01bsp\+\_\+debugpins.\+c@{01bsp\+\_\+debugpins.\+c}}
+\subsubsection[{\texorpdfstring{mote\+\_\+main(void)}{mote_main(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int mote\+\_\+main (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{01bsp__debugpins_8c_ad0caa506af897a3ebe6699aa0c0da367}{}\label{01bsp__debugpins_8c_ad0caa506af897a3ebe6699aa0c0da367}
+
+
+The program starts executing here. 
+
+Z1-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+W\+S\+N430v13b-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+Telos\+B-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+Python-\/based emulation of the mote\textquotesingle{}s power supply.
+
+iot-\/lab\+\_\+\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+iot-\/lab\+\_\+\+A8-\/\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+G\+I\+N\+A-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+e\+Z430-\/\+R\+F2500-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module. 
+
+Definition at line 27 of file 01bsp\+\_\+debugpins.\+c.
+
+\index{01bsp\+\_\+debugpins.\+c@{01bsp\+\_\+debugpins.\+c}!some\+\_\+delay@{some\+\_\+delay}}
+\index{some\+\_\+delay@{some\+\_\+delay}!01bsp\+\_\+debugpins.\+c@{01bsp\+\_\+debugpins.\+c}}
+\subsubsection[{\texorpdfstring{some\+\_\+delay(void)}{some_delay(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} some\+\_\+delay (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{01bsp__debugpins_8c_a888986c59385bb63dec14be78b842481}{}\label{01bsp__debugpins_8c_a888986c59385bb63dec14be78b842481}
+
+
+This is a program to verify the correct functionality of the \char`\"{}debugpins\char`\"{} bsp module. 
+
+\begin{DoxyNote}{Note}
+\+: Since the bsp modules for different platforms have the same declaration, you can use this project with any platform
+\end{DoxyNote}
+Load this program on your board. When you run it, the error L\+ED should blink. Use a logic analyzer to see the activity on the 6 debug pins; one after another they will transition 4 times.
+
+\begin{DoxyAuthor}{Author}
+Chuang Qian \href{mailto:cqian@berkeley.edu}{\tt cqian@berkeley.\+edu}, May 2012. 
+\end{DoxyAuthor}
+
+
+Definition at line 67 of file 01bsp\+\_\+debugpins.\+c.
+

@@ -1,0 +1,223 @@
+\hypertarget{group___large_range_accel}{}\section{Large\+Range\+Accel}
+\label{group___large_range_accel}\index{Large\+Range\+Accel@{Large\+Range\+Accel}}
+
+
+Driver for the large range accelerometer of the G\+I\+N\+A2.\+2b/c board.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___large_range_accel_ga499806d09c3f3cb347485f2d2fdd8109}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+I2\+C\+\_\+\+A\+D\+DR}~0x18
+\item 
+\#define \hyperlink{group___large_range_accel_gacd1efbafb14d386c92ce50b2d2579c3a}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+X\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR}~0x00
+\item 
+\#define \hyperlink{group___large_range_accel_gafab7fa16bb9ad7279dbfdfc9d5031ed6}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+X\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR}~0x01
+\item 
+\#define \hyperlink{group___large_range_accel_gaa77060f6e42c8098fe1effe7b3cd7e1c}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Y\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR}~0x02
+\item 
+\#define \hyperlink{group___large_range_accel_gadcd595bc0cf70e4ccbaa95416bb1478d}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Y\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR}~0x03
+\item 
+\#define \hyperlink{group___large_range_accel_ga2f703895b5e8bb9c1c198f3d3d729517}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Z\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR}~0x04
+\item 
+\#define \hyperlink{group___large_range_accel_ga8f15d6b621ca7e17be0f97debda3dd12}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Z\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR}~0x05
+\item 
+\#define \hyperlink{group___large_range_accel_gaf01dc77ef045d9c8c90b94bc34be612b}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+A\+U\+X\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR}~0x06
+\item 
+\#define \hyperlink{group___large_range_accel_gab048042c0057ef6f8f1d153eca6b91ea}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+A\+U\+X\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR}~0x07
+\item 
+\#define \hyperlink{group___large_range_accel_ga8a6470f4fd5b0b53bcbc3a7526689e07}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+R\+E\+S\+E\+T\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+D\+DR}~0x0A
+\item 
+\#define \hyperlink{group___large_range_accel_ga65a40840ee50d20d2318864e88f3ceb1}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+C\+\_\+\+A\+D\+DR}~0x0C
+\item 
+\#define \hyperlink{group___large_range_accel_ga253286907acd8e477925fdb068fcd3bd}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+B\+\_\+\+A\+D\+DR}~0x0D
+\item 
+\#define \hyperlink{group___large_range_accel_gad2fa6db2d889c7ab1c8605db2ea71d61}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+A\+\_\+\+A\+D\+DR}~0x0E
+\item 
+\#define \hyperlink{group___large_range_accel_ga2979b53d21452bab4f9bcb36c9569b42}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+C\+\_\+\+S\+E\+T\+T\+I\+NG}~0x\+E0
+\item 
+\#define \hyperlink{group___large_range_accel_ga78294423504092bfda6f63240b4ad652}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+B\+\_\+\+S\+E\+T\+T\+I\+NG}~0x\+C0
+\item 
+\#define \hyperlink{group___large_range_accel_gafa85c087d02fe049ae15bc4138c4a5d7}{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+B\+\_\+\+S\+L\+E\+EP}~0x80
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___large_range_accel_ga363832787b3cf9f181d19bb3367a2aae}{large\+\_\+range\+\_\+accel\+\_\+init} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___large_range_accel_ga3ebaa7e20e2127b059900954a8a7cf15}{large\+\_\+range\+\_\+accel\+\_\+disable} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___large_range_accel_gaa586d4fc95efaa90700ae7f80925bfc5}{large\+\_\+range\+\_\+accel\+\_\+get\+\_\+config} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___large_range_accel_ga6dd63e2fe61e53a9cecea5c4ba14a72c}{large\+\_\+range\+\_\+accel\+\_\+get\+\_\+measurement} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$space\+To\+Write)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Driver for the large range accelerometer of the G\+I\+N\+A2.\+2b/c board. 
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, August 2010 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\index{Large\+Range\+Accel@{Large\+Range\+Accel}!L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+I2\+C\+\_\+\+A\+D\+DR@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+I2\+C\+\_\+\+A\+D\+DR}}
+\index{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+I2\+C\+\_\+\+A\+D\+DR@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+I2\+C\+\_\+\+A\+D\+DR}!Large\+Range\+Accel@{Large\+Range\+Accel}}
+\subsubsection[{\texorpdfstring{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+I2\+C\+\_\+\+A\+D\+DR}{LARGE_RANGE_ACCEL_I2C_ADDR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+I2\+C\+\_\+\+A\+D\+DR~0x18}\hypertarget{group___large_range_accel_ga499806d09c3f3cb347485f2d2fdd8109}{}\label{group___large_range_accel_ga499806d09c3f3cb347485f2d2fdd8109}
+
+
+Definition at line 18 of file large\+\_\+range\+\_\+accel.\+h.
+
+\index{Large\+Range\+Accel@{Large\+Range\+Accel}!L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+A\+U\+X\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+A\+U\+X\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR}}
+\index{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+A\+U\+X\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+A\+U\+X\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR}!Large\+Range\+Accel@{Large\+Range\+Accel}}
+\subsubsection[{\texorpdfstring{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+A\+U\+X\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR}{LARGE_RANGE_ACCEL_REG_AUXOUT_H_ADDR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+A\+U\+X\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR~0x06}\hypertarget{group___large_range_accel_gaf01dc77ef045d9c8c90b94bc34be612b}{}\label{group___large_range_accel_gaf01dc77ef045d9c8c90b94bc34be612b}
+
+
+Definition at line 27 of file large\+\_\+range\+\_\+accel.\+h.
+
+\index{Large\+Range\+Accel@{Large\+Range\+Accel}!L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+A\+U\+X\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+A\+U\+X\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR}}
+\index{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+A\+U\+X\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+A\+U\+X\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR}!Large\+Range\+Accel@{Large\+Range\+Accel}}
+\subsubsection[{\texorpdfstring{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+A\+U\+X\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR}{LARGE_RANGE_ACCEL_REG_AUXOUT_L_ADDR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+A\+U\+X\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR~0x07}\hypertarget{group___large_range_accel_gab048042c0057ef6f8f1d153eca6b91ea}{}\label{group___large_range_accel_gab048042c0057ef6f8f1d153eca6b91ea}
+
+
+Definition at line 28 of file large\+\_\+range\+\_\+accel.\+h.
+
+\index{Large\+Range\+Accel@{Large\+Range\+Accel}!L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+A\+\_\+\+A\+D\+DR@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+A\+\_\+\+A\+D\+DR}}
+\index{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+A\+\_\+\+A\+D\+DR@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+A\+\_\+\+A\+D\+DR}!Large\+Range\+Accel@{Large\+Range\+Accel}}
+\subsubsection[{\texorpdfstring{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+A\+\_\+\+A\+D\+DR}{LARGE_RANGE_ACCEL_REG_CTRL_REGA_ADDR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+A\+\_\+\+A\+D\+DR~0x0E}\hypertarget{group___large_range_accel_gad2fa6db2d889c7ab1c8605db2ea71d61}{}\label{group___large_range_accel_gad2fa6db2d889c7ab1c8605db2ea71d61}
+
+
+Definition at line 32 of file large\+\_\+range\+\_\+accel.\+h.
+
+\index{Large\+Range\+Accel@{Large\+Range\+Accel}!L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+B\+\_\+\+A\+D\+DR@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+B\+\_\+\+A\+D\+DR}}
+\index{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+B\+\_\+\+A\+D\+DR@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+B\+\_\+\+A\+D\+DR}!Large\+Range\+Accel@{Large\+Range\+Accel}}
+\subsubsection[{\texorpdfstring{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+B\+\_\+\+A\+D\+DR}{LARGE_RANGE_ACCEL_REG_CTRL_REGB_ADDR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+B\+\_\+\+A\+D\+DR~0x0D}\hypertarget{group___large_range_accel_ga253286907acd8e477925fdb068fcd3bd}{}\label{group___large_range_accel_ga253286907acd8e477925fdb068fcd3bd}
+
+
+Definition at line 31 of file large\+\_\+range\+\_\+accel.\+h.
+
+\index{Large\+Range\+Accel@{Large\+Range\+Accel}!L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+B\+\_\+\+S\+E\+T\+T\+I\+NG@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+B\+\_\+\+S\+E\+T\+T\+I\+NG}}
+\index{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+B\+\_\+\+S\+E\+T\+T\+I\+NG@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+B\+\_\+\+S\+E\+T\+T\+I\+NG}!Large\+Range\+Accel@{Large\+Range\+Accel}}
+\subsubsection[{\texorpdfstring{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+B\+\_\+\+S\+E\+T\+T\+I\+NG}{LARGE_RANGE_ACCEL_REG_CTRL_REGB_SETTING}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+B\+\_\+\+S\+E\+T\+T\+I\+NG~0x\+C0}\hypertarget{group___large_range_accel_ga78294423504092bfda6f63240b4ad652}{}\label{group___large_range_accel_ga78294423504092bfda6f63240b4ad652}
+
+
+Definition at line 41 of file large\+\_\+range\+\_\+accel.\+h.
+
+\index{Large\+Range\+Accel@{Large\+Range\+Accel}!L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+B\+\_\+\+S\+L\+E\+EP@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+B\+\_\+\+S\+L\+E\+EP}}
+\index{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+B\+\_\+\+S\+L\+E\+EP@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+B\+\_\+\+S\+L\+E\+EP}!Large\+Range\+Accel@{Large\+Range\+Accel}}
+\subsubsection[{\texorpdfstring{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+B\+\_\+\+S\+L\+E\+EP}{LARGE_RANGE_ACCEL_REG_CTRL_REGB_SLEEP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+B\+\_\+\+S\+L\+E\+EP~0x80}\hypertarget{group___large_range_accel_gafa85c087d02fe049ae15bc4138c4a5d7}{}\label{group___large_range_accel_gafa85c087d02fe049ae15bc4138c4a5d7}
+
+
+Definition at line 48 of file large\+\_\+range\+\_\+accel.\+h.
+
+\index{Large\+Range\+Accel@{Large\+Range\+Accel}!L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+C\+\_\+\+A\+D\+DR@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+C\+\_\+\+A\+D\+DR}}
+\index{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+C\+\_\+\+A\+D\+DR@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+C\+\_\+\+A\+D\+DR}!Large\+Range\+Accel@{Large\+Range\+Accel}}
+\subsubsection[{\texorpdfstring{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+C\+\_\+\+A\+D\+DR}{LARGE_RANGE_ACCEL_REG_CTRL_REGC_ADDR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+C\+\_\+\+A\+D\+DR~0x0C}\hypertarget{group___large_range_accel_ga65a40840ee50d20d2318864e88f3ceb1}{}\label{group___large_range_accel_ga65a40840ee50d20d2318864e88f3ceb1}
+
+
+Definition at line 30 of file large\+\_\+range\+\_\+accel.\+h.
+
+\index{Large\+Range\+Accel@{Large\+Range\+Accel}!L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+C\+\_\+\+S\+E\+T\+T\+I\+NG@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+C\+\_\+\+S\+E\+T\+T\+I\+NG}}
+\index{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+C\+\_\+\+S\+E\+T\+T\+I\+NG@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+C\+\_\+\+S\+E\+T\+T\+I\+NG}!Large\+Range\+Accel@{Large\+Range\+Accel}}
+\subsubsection[{\texorpdfstring{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+C\+\_\+\+S\+E\+T\+T\+I\+NG}{LARGE_RANGE_ACCEL_REG_CTRL_REGC_SETTING}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+C\+\_\+\+S\+E\+T\+T\+I\+NG~0x\+E0}\hypertarget{group___large_range_accel_ga2979b53d21452bab4f9bcb36c9569b42}{}\label{group___large_range_accel_ga2979b53d21452bab4f9bcb36c9569b42}
+
+
+Definition at line 35 of file large\+\_\+range\+\_\+accel.\+h.
+
+\index{Large\+Range\+Accel@{Large\+Range\+Accel}!L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+R\+E\+S\+E\+T\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+D\+DR@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+R\+E\+S\+E\+T\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+D\+DR}}
+\index{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+R\+E\+S\+E\+T\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+D\+DR@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+R\+E\+S\+E\+T\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+D\+DR}!Large\+Range\+Accel@{Large\+Range\+Accel}}
+\subsubsection[{\texorpdfstring{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+R\+E\+S\+E\+T\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+D\+DR}{LARGE_RANGE_ACCEL_REG_RESET_WRITE_ADDR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+R\+E\+S\+E\+T\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+D\+DR~0x0A}\hypertarget{group___large_range_accel_ga8a6470f4fd5b0b53bcbc3a7526689e07}{}\label{group___large_range_accel_ga8a6470f4fd5b0b53bcbc3a7526689e07}
+
+
+Definition at line 29 of file large\+\_\+range\+\_\+accel.\+h.
+
+\index{Large\+Range\+Accel@{Large\+Range\+Accel}!L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+X\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+X\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR}}
+\index{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+X\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+X\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR}!Large\+Range\+Accel@{Large\+Range\+Accel}}
+\subsubsection[{\texorpdfstring{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+X\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR}{LARGE_RANGE_ACCEL_REG_XOUT_H_ADDR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+X\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR~0x00}\hypertarget{group___large_range_accel_gacd1efbafb14d386c92ce50b2d2579c3a}{}\label{group___large_range_accel_gacd1efbafb14d386c92ce50b2d2579c3a}
+
+
+Definition at line 21 of file large\+\_\+range\+\_\+accel.\+h.
+
+\index{Large\+Range\+Accel@{Large\+Range\+Accel}!L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+X\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+X\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR}}
+\index{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+X\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+X\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR}!Large\+Range\+Accel@{Large\+Range\+Accel}}
+\subsubsection[{\texorpdfstring{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+X\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR}{LARGE_RANGE_ACCEL_REG_XOUT_L_ADDR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+X\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR~0x01}\hypertarget{group___large_range_accel_gafab7fa16bb9ad7279dbfdfc9d5031ed6}{}\label{group___large_range_accel_gafab7fa16bb9ad7279dbfdfc9d5031ed6}
+
+
+Definition at line 22 of file large\+\_\+range\+\_\+accel.\+h.
+
+\index{Large\+Range\+Accel@{Large\+Range\+Accel}!L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Y\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Y\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR}}
+\index{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Y\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Y\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR}!Large\+Range\+Accel@{Large\+Range\+Accel}}
+\subsubsection[{\texorpdfstring{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Y\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR}{LARGE_RANGE_ACCEL_REG_YOUT_H_ADDR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Y\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR~0x02}\hypertarget{group___large_range_accel_gaa77060f6e42c8098fe1effe7b3cd7e1c}{}\label{group___large_range_accel_gaa77060f6e42c8098fe1effe7b3cd7e1c}
+
+
+Definition at line 23 of file large\+\_\+range\+\_\+accel.\+h.
+
+\index{Large\+Range\+Accel@{Large\+Range\+Accel}!L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Y\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Y\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR}}
+\index{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Y\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Y\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR}!Large\+Range\+Accel@{Large\+Range\+Accel}}
+\subsubsection[{\texorpdfstring{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Y\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR}{LARGE_RANGE_ACCEL_REG_YOUT_L_ADDR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Y\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR~0x03}\hypertarget{group___large_range_accel_gadcd595bc0cf70e4ccbaa95416bb1478d}{}\label{group___large_range_accel_gadcd595bc0cf70e4ccbaa95416bb1478d}
+
+
+Definition at line 24 of file large\+\_\+range\+\_\+accel.\+h.
+
+\index{Large\+Range\+Accel@{Large\+Range\+Accel}!L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Z\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Z\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR}}
+\index{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Z\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Z\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR}!Large\+Range\+Accel@{Large\+Range\+Accel}}
+\subsubsection[{\texorpdfstring{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Z\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR}{LARGE_RANGE_ACCEL_REG_ZOUT_H_ADDR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Z\+O\+U\+T\+\_\+\+H\+\_\+\+A\+D\+DR~0x04}\hypertarget{group___large_range_accel_ga2f703895b5e8bb9c1c198f3d3d729517}{}\label{group___large_range_accel_ga2f703895b5e8bb9c1c198f3d3d729517}
+
+
+Definition at line 25 of file large\+\_\+range\+\_\+accel.\+h.
+
+\index{Large\+Range\+Accel@{Large\+Range\+Accel}!L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Z\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Z\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR}}
+\index{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Z\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR@{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Z\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR}!Large\+Range\+Accel@{Large\+Range\+Accel}}
+\subsubsection[{\texorpdfstring{L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Z\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR}{LARGE_RANGE_ACCEL_REG_ZOUT_L_ADDR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+A\+R\+G\+E\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+G\+\_\+\+Z\+O\+U\+T\+\_\+\+L\+\_\+\+A\+D\+DR~0x05}\hypertarget{group___large_range_accel_ga8f15d6b621ca7e17be0f97debda3dd12}{}\label{group___large_range_accel_ga8f15d6b621ca7e17be0f97debda3dd12}
+
+
+Definition at line 26 of file large\+\_\+range\+\_\+accel.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{Large\+Range\+Accel@{Large\+Range\+Accel}!large\+\_\+range\+\_\+accel\+\_\+disable@{large\+\_\+range\+\_\+accel\+\_\+disable}}
+\index{large\+\_\+range\+\_\+accel\+\_\+disable@{large\+\_\+range\+\_\+accel\+\_\+disable}!Large\+Range\+Accel@{Large\+Range\+Accel}}
+\subsubsection[{\texorpdfstring{large\+\_\+range\+\_\+accel\+\_\+disable()}{large_range_accel_disable()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} large\+\_\+range\+\_\+accel\+\_\+disable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___large_range_accel_ga3ebaa7e20e2127b059900954a8a7cf15}{}\label{group___large_range_accel_ga3ebaa7e20e2127b059900954a8a7cf15}
+
+
+Definition at line 30 of file large\+\_\+range\+\_\+accel.\+c.
+
+\index{Large\+Range\+Accel@{Large\+Range\+Accel}!large\+\_\+range\+\_\+accel\+\_\+get\+\_\+config@{large\+\_\+range\+\_\+accel\+\_\+get\+\_\+config}}
+\index{large\+\_\+range\+\_\+accel\+\_\+get\+\_\+config@{large\+\_\+range\+\_\+accel\+\_\+get\+\_\+config}!Large\+Range\+Accel@{Large\+Range\+Accel}}
+\subsubsection[{\texorpdfstring{large\+\_\+range\+\_\+accel\+\_\+get\+\_\+config()}{large_range_accel_get_config()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} large\+\_\+range\+\_\+accel\+\_\+get\+\_\+config (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___large_range_accel_gaa586d4fc95efaa90700ae7f80925bfc5}{}\label{group___large_range_accel_gaa586d4fc95efaa90700ae7f80925bfc5}
+
+
+Definition at line 35 of file large\+\_\+range\+\_\+accel.\+c.
+
+\index{Large\+Range\+Accel@{Large\+Range\+Accel}!large\+\_\+range\+\_\+accel\+\_\+get\+\_\+measurement@{large\+\_\+range\+\_\+accel\+\_\+get\+\_\+measurement}}
+\index{large\+\_\+range\+\_\+accel\+\_\+get\+\_\+measurement@{large\+\_\+range\+\_\+accel\+\_\+get\+\_\+measurement}!Large\+Range\+Accel@{Large\+Range\+Accel}}
+\subsubsection[{\texorpdfstring{large\+\_\+range\+\_\+accel\+\_\+get\+\_\+measurement(uint8\+\_\+t $\ast$space\+To\+Write)}{large_range_accel_get_measurement(uint8_t *spaceToWrite)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} large\+\_\+range\+\_\+accel\+\_\+get\+\_\+measurement (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t} $\ast$}]{space\+To\+Write}
+\end{DoxyParamCaption}
+)}\hypertarget{group___large_range_accel_ga6dd63e2fe61e53a9cecea5c4ba14a72c}{}\label{group___large_range_accel_ga6dd63e2fe61e53a9cecea5c4ba14a72c}
+
+
+Definition at line 48 of file large\+\_\+range\+\_\+accel.\+c.
+
+\index{Large\+Range\+Accel@{Large\+Range\+Accel}!large\+\_\+range\+\_\+accel\+\_\+init@{large\+\_\+range\+\_\+accel\+\_\+init}}
+\index{large\+\_\+range\+\_\+accel\+\_\+init@{large\+\_\+range\+\_\+accel\+\_\+init}!Large\+Range\+Accel@{Large\+Range\+Accel}}
+\subsubsection[{\texorpdfstring{large\+\_\+range\+\_\+accel\+\_\+init()}{large_range_accel_init()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} large\+\_\+range\+\_\+accel\+\_\+init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___large_range_accel_ga363832787b3cf9f181d19bb3367a2aae}{}\label{group___large_range_accel_ga363832787b3cf9f181d19bb3367a2aae}
+
+
+Definition at line 18 of file large\+\_\+range\+\_\+accel.\+c.
+

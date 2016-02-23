@@ -1,0 +1,83 @@
+\hypertarget{group___i_c_m_pv6}{}\section{I\+C\+M\+Pv6}
+\label{group___i_c_m_pv6}\index{I\+C\+M\+Pv6@{I\+C\+M\+Pv6}}
+
+
+I\+C\+M\+Pv6 common definitions.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_i_c_m_pv6__ht}{I\+C\+M\+Pv6\+\_\+ht}
+\item 
+struct \hyperlink{struct_i_c_m_pv6___r_a__ht}{I\+C\+M\+Pv6\+\_\+\+R\+A\+\_\+ht}
+\item 
+struct \hyperlink{struct_i_c_m_pv6__64bprefix__option__ht}{I\+C\+M\+Pv6\+\_\+64bprefix\+\_\+option\+\_\+ht}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i_c_m_pv6_ga9b95cb157223a7055d984734d0a808a6}{icmpv6\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{group___i_c_m_pv6_ga3415aa981903be4fee8052a07e87bd7f}{icmpv6\+\_\+send} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i_c_m_pv6_gae528a32af88598b7f56514e3c1ddea3e}{icmpv6\+\_\+send\+Done} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{disk_8c_ad018a3100b2dabad325a0800152db297}{error})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i_c_m_pv6_ga2b5a2c1c1f7e47888b32e19f973d3953}{icmpv6\+\_\+receive} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+I\+C\+M\+Pv6 common definitions. 
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, August 2010 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\index{I\+C\+M\+Pv6@{I\+C\+M\+Pv6}!icmpv6\+\_\+init@{icmpv6\+\_\+init}}
+\index{icmpv6\+\_\+init@{icmpv6\+\_\+init}!I\+C\+M\+Pv6@{I\+C\+M\+Pv6}}
+\subsubsection[{\texorpdfstring{icmpv6\+\_\+init(void)}{icmpv6_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} icmpv6\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i_c_m_pv6_ga9b95cb157223a7055d984734d0a808a6}{}\label{group___i_c_m_pv6_ga9b95cb157223a7055d984734d0a808a6}
+
+
+Definition at line 15 of file icmpv6.\+c.
+
+\index{I\+C\+M\+Pv6@{I\+C\+M\+Pv6}!icmpv6\+\_\+receive@{icmpv6\+\_\+receive}}
+\index{icmpv6\+\_\+receive@{icmpv6\+\_\+receive}!I\+C\+M\+Pv6@{I\+C\+M\+Pv6}}
+\subsubsection[{\texorpdfstring{icmpv6\+\_\+receive(\+Open\+Queue\+Entry\+\_\+t $\ast$msg)}{icmpv6_receive(OpenQueueEntry_t *msg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} icmpv6\+\_\+receive (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i_c_m_pv6_ga2b5a2c1c1f7e47888b32e19f973d3953}{}\label{group___i_c_m_pv6_ga2b5a2c1c1f7e47888b32e19f973d3953}
+
+
+Definition at line 44 of file icmpv6.\+c.
+
+\index{I\+C\+M\+Pv6@{I\+C\+M\+Pv6}!icmpv6\+\_\+send@{icmpv6\+\_\+send}}
+\index{icmpv6\+\_\+send@{icmpv6\+\_\+send}!I\+C\+M\+Pv6@{I\+C\+M\+Pv6}}
+\subsubsection[{\texorpdfstring{icmpv6\+\_\+send(\+Open\+Queue\+Entry\+\_\+t $\ast$msg)}{icmpv6_send(OpenQueueEntry_t *msg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf owerror\+\_\+t} icmpv6\+\_\+send (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i_c_m_pv6_ga3415aa981903be4fee8052a07e87bd7f}{}\label{group___i_c_m_pv6_ga3415aa981903be4fee8052a07e87bd7f}
+
+
+Definition at line 18 of file icmpv6.\+c.
+
+\index{I\+C\+M\+Pv6@{I\+C\+M\+Pv6}!icmpv6\+\_\+send\+Done@{icmpv6\+\_\+send\+Done}}
+\index{icmpv6\+\_\+send\+Done@{icmpv6\+\_\+send\+Done}!I\+C\+M\+Pv6@{I\+C\+M\+Pv6}}
+\subsubsection[{\texorpdfstring{icmpv6\+\_\+send\+Done(\+Open\+Queue\+Entry\+\_\+t $\ast$msg, owerror\+\_\+t error)}{icmpv6_sendDone(OpenQueueEntry_t *msg, owerror_t error)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} icmpv6\+\_\+send\+Done (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg, }
+\item[{{\bf owerror\+\_\+t}}]{error}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i_c_m_pv6_gae528a32af88598b7f56514e3c1ddea3e}{}\label{group___i_c_m_pv6_gae528a32af88598b7f56514e3c1ddea3e}
+
+
+Definition at line 24 of file icmpv6.\+c.
+

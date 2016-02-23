@@ -1,0 +1,112 @@
+\hypertarget{cstorm_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openapps/cstorm/cstorm.c File Reference}
+\label{cstorm_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openapps/cstorm/cstorm.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openapps/cstorm/cstorm.\+c}}
+{\ttfamily \#include \char`\"{}opendefs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cstorm.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}opencoap.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}opentimers.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}openqueue.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}packetfunctions.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}openserial.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}openrandom.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}scheduler.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}I\+E\+E\+E802154\+E.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}idmanager.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{cstorm_8c_a5202ca0d288ed97ef76302e4ed7ce252}{cstorm\+\_\+receive} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{structcoap__header__iht}{coap\+\_\+header\+\_\+iht} $\ast$coap\+\_\+header, \hyperlink{structcoap__option__iht}{coap\+\_\+option\+\_\+iht} $\ast$coap\+\_\+options)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{cstorm_8c_ac7c9cce98f1a7e9a37a21389114880b0}{cstorm\+\_\+timer\+\_\+cb} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{cstorm_8c_a002016d70223b5141d4eaac3ad6e9f8a}{cstorm\+\_\+task\+\_\+cb} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{cstorm_8c_a307786b2401693f998e6f694f9dfc9a4}{cstorm\+\_\+send\+Done} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{disk_8c_ad018a3100b2dabad325a0800152db297}{error})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__cstorm_gab21f3761c1099686b82c1981bf1588fc}{cstorm\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{cstorm_8c_a434dc0b1c1314f3cba7fd1b46c53a0cb}{cstorm\+\_\+path0} \mbox{[}$\,$\mbox{]} = \char`\"{}storm\char`\"{}
+\item 
+const \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{cstorm_8c_a38319dad64112bd9b47d35199c2fa25a}{cstorm\+\_\+payload} \mbox{[}$\,$\mbox{]} = \char`\"{}Open\+W\+SN\char`\"{}
+\item 
+\hyperlink{structcstorm__vars__t}{cstorm\+\_\+vars\+\_\+t} \hyperlink{cstorm_8c_acadf9fa6d066bdffe9c7a6f495029261}{cstorm\+\_\+vars}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{cstorm.\+c@{cstorm.\+c}!cstorm\+\_\+receive@{cstorm\+\_\+receive}}
+\index{cstorm\+\_\+receive@{cstorm\+\_\+receive}!cstorm.\+c@{cstorm.\+c}}
+\subsubsection[{\texorpdfstring{cstorm\+\_\+receive(\+Open\+Queue\+Entry\+\_\+t $\ast$msg, coap\+\_\+header\+\_\+iht $\ast$coap\+\_\+header, coap\+\_\+option\+\_\+iht $\ast$coap\+\_\+options)}{cstorm_receive(OpenQueueEntry_t *msg, coap_header_iht *coap_header, coap_option_iht *coap_options)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf owerror\+\_\+t} cstorm\+\_\+receive (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg, }
+\item[{{\bf coap\+\_\+header\+\_\+iht} $\ast$}]{coap\+\_\+header, }
+\item[{{\bf coap\+\_\+option\+\_\+iht} $\ast$}]{coap\+\_\+options}
+\end{DoxyParamCaption}
+)}\hypertarget{cstorm_8c_a5202ca0d288ed97ef76302e4ed7ce252}{}\label{cstorm_8c_a5202ca0d288ed97ef76302e4ed7ce252}
+
+
+Definition at line 71 of file cstorm.\+c.
+
+\index{cstorm.\+c@{cstorm.\+c}!cstorm\+\_\+send\+Done@{cstorm\+\_\+send\+Done}}
+\index{cstorm\+\_\+send\+Done@{cstorm\+\_\+send\+Done}!cstorm.\+c@{cstorm.\+c}}
+\subsubsection[{\texorpdfstring{cstorm\+\_\+send\+Done(\+Open\+Queue\+Entry\+\_\+t $\ast$msg, owerror\+\_\+t error)}{cstorm_sendDone(OpenQueueEntry_t *msg, owerror_t error)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} cstorm\+\_\+send\+Done (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg, }
+\item[{{\bf owerror\+\_\+t}}]{error}
+\end{DoxyParamCaption}
+)}\hypertarget{cstorm_8c_a307786b2401693f998e6f694f9dfc9a4}{}\label{cstorm_8c_a307786b2401693f998e6f694f9dfc9a4}
+
+
+Definition at line 235 of file cstorm.\+c.
+
+\index{cstorm.\+c@{cstorm.\+c}!cstorm\+\_\+task\+\_\+cb@{cstorm\+\_\+task\+\_\+cb}}
+\index{cstorm\+\_\+task\+\_\+cb@{cstorm\+\_\+task\+\_\+cb}!cstorm.\+c@{cstorm.\+c}}
+\subsubsection[{\texorpdfstring{cstorm\+\_\+task\+\_\+cb(void)}{cstorm_task_cb(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} cstorm\+\_\+task\+\_\+cb (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{cstorm_8c_a002016d70223b5141d4eaac3ad6e9f8a}{}\label{cstorm_8c_a002016d70223b5141d4eaac3ad6e9f8a}
+
+
+Definition at line 148 of file cstorm.\+c.
+
+\index{cstorm.\+c@{cstorm.\+c}!cstorm\+\_\+timer\+\_\+cb@{cstorm\+\_\+timer\+\_\+cb}}
+\index{cstorm\+\_\+timer\+\_\+cb@{cstorm\+\_\+timer\+\_\+cb}!cstorm.\+c@{cstorm.\+c}}
+\subsubsection[{\texorpdfstring{cstorm\+\_\+timer\+\_\+cb(void)}{cstorm_timer_cb(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} cstorm\+\_\+timer\+\_\+cb (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{cstorm_8c_ac7c9cce98f1a7e9a37a21389114880b0}{}\label{cstorm_8c_ac7c9cce98f1a7e9a37a21389114880b0}
+\begin{DoxyNote}{Note}
+timer fired, but we don\textquotesingle{}t want to execute task in I\+SR mode instead, push task to scheduler with Co\+AP priority, and let scheduler take care of it. 
+\end{DoxyNote}
+
+
+Definition at line 144 of file cstorm.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{cstorm.\+c@{cstorm.\+c}!cstorm\+\_\+path0@{cstorm\+\_\+path0}}
+\index{cstorm\+\_\+path0@{cstorm\+\_\+path0}!cstorm.\+c@{cstorm.\+c}}
+\subsubsection[{\texorpdfstring{cstorm\+\_\+path0}{cstorm_path0}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint8\+\_\+t} cstorm\+\_\+path0\mbox{[}$\,$\mbox{]} = \char`\"{}storm\char`\"{}}\hypertarget{cstorm_8c_a434dc0b1c1314f3cba7fd1b46c53a0cb}{}\label{cstorm_8c_a434dc0b1c1314f3cba7fd1b46c53a0cb}
+
+
+Definition at line 16 of file cstorm.\+c.
+
+\index{cstorm.\+c@{cstorm.\+c}!cstorm\+\_\+payload@{cstorm\+\_\+payload}}
+\index{cstorm\+\_\+payload@{cstorm\+\_\+payload}!cstorm.\+c@{cstorm.\+c}}
+\subsubsection[{\texorpdfstring{cstorm\+\_\+payload}{cstorm_payload}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint8\+\_\+t} cstorm\+\_\+payload\mbox{[}$\,$\mbox{]} = \char`\"{}Open\+W\+SN\char`\"{}}\hypertarget{cstorm_8c_a38319dad64112bd9b47d35199c2fa25a}{}\label{cstorm_8c_a38319dad64112bd9b47d35199c2fa25a}
+
+
+Definition at line 17 of file cstorm.\+c.
+
+\index{cstorm.\+c@{cstorm.\+c}!cstorm\+\_\+vars@{cstorm\+\_\+vars}}
+\index{cstorm\+\_\+vars@{cstorm\+\_\+vars}!cstorm.\+c@{cstorm.\+c}}
+\subsubsection[{\texorpdfstring{cstorm\+\_\+vars}{cstorm_vars}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cstorm\+\_\+vars\+\_\+t} cstorm\+\_\+vars}\hypertarget{cstorm_8c_acadf9fa6d066bdffe9c7a6f495029261}{}\label{cstorm_8c_acadf9fa6d066bdffe9c7a6f495029261}
+
+
+Definition at line 25 of file cstorm.\+c.
+

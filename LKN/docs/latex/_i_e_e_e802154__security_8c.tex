@@ -1,0 +1,280 @@
+\hypertarget{_i_e_e_e802154__security_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/02a-\/\+M\+A\+Clow/\+I\+E\+E\+E802154\+\_\+security.c File Reference}
+\label{_i_e_e_e802154__security_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/02a-\/\+M\+A\+Clow/\+I\+E\+E\+E802154\+\_\+security.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/02a-\/\+M\+A\+Clow/\+I\+E\+E\+E802154\+\_\+security.\+c}}
+{\ttfamily \#include \char`\"{}packetfunctions.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}crypto\+\_\+engine.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}I\+E\+E\+E802154.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}I\+E\+E\+E802154\+E.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}idmanager.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}openserial.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}I\+E\+E\+E802154\+\_\+security.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154__security_8c_aebfafb8811eab0c7a3175d3254b47b88}{I\+E\+E\+E802154\+\_\+security\+\_\+get\+Frame\+Counter} (\hyperlink{opendefs_8h_af2fecf66c5a2c01ec313af8ce18bf4b9}{mac\+Frame\+Counter\+\_\+t} reference, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$array)
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{_i_e_e_e802154__security_8c_abdffd375a8fabdc80100961a4be2ea52}{I\+E\+E\+E802154\+\_\+security\+\_\+auth\+Length\+Checking} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} security\+Level)
+\begin{DoxyCompactList}\small\item\em Identification of the length of the M\+IC based on the security Level in the frame. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{_i_e_e_e802154__security_8c_a34ae0cac05d3fde1a67bffe331a5651f}{I\+E\+E\+E802154\+\_\+security\+\_\+aux\+Length\+Checking} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} Key\+Id\+Mode, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} frame\+Counter\+Suppression, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} frame\+Counter\+Size)
+\begin{DoxyCompactList}\small\item\em Identification of the length of the I\+E\+E\+E802.\+15.\+4 Auxiliary Security Header. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{_i_e_e_e802154__security_8c_a87d0532b1dfef60f6d7c602b16d50bc4}{I\+E\+E\+E802154\+\_\+security\+\_\+incoming\+Key\+Usage\+Policy\+Checking} (\hyperlink{structm__key_descriptor}{m\+\_\+key\+Descriptor} $\ast$key\+Descriptor, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} frame\+Type, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} cfi)
+\begin{DoxyCompactList}\small\item\em Verify if the key used to protect the frame has been used properly. Each key can be used to secure a particular frame type, according to security policies defined in the initialization phase and stored in the Mac Key Table. The procedure verifies if the frame type parameter associated to the key is the same than the packet for which the key has been used and returns T\+R\+UE if the check is verified, F\+A\+L\+SE otherwise. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{_i_e_e_e802154__security_8c_a597cc059278b417f0947d161a34758fc}{I\+E\+E\+E802154\+\_\+security\+\_\+incoming\+Security\+Level\+Checking} (\hyperlink{structm__security_level_descriptor}{m\+\_\+security\+Level\+Descriptor} $\ast$seclevdesc, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} seclevel, \hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} exempt)
+\begin{DoxyCompactList}\small\item\em Verify if the Security Level of the incoming Frame conforms to local security policies, i.\+e., it is between the allowed security levels. \end{DoxyCompactList}\item 
+\hyperlink{structm__security_level_descriptor}{m\+\_\+security\+Level\+Descriptor} $\ast$ \hyperlink{_i_e_e_e802154__security_8c_a41d94465362554322edce5f634d2abff}{I\+E\+E\+E802154\+\_\+security\+\_\+security\+Level\+Descriptor\+Lookup} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} frame\+Type, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} cfi)
+\begin{DoxyCompactList}\small\item\em Searching for the Security Level Descriptor. \end{DoxyCompactList}\item 
+\hyperlink{structm__device_descriptor}{m\+\_\+device\+Descriptor} $\ast$ \hyperlink{_i_e_e_e802154__security_8c_ae689b74e5d354ff0a4d9d541382180b3}{I\+E\+E\+E802154\+\_\+security\+\_\+device\+Descriptor\+Lookup} (\hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$Address, \hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$P\+A\+N\+Id, \hyperlink{structm__key_descriptor}{m\+\_\+key\+Descriptor} $\ast$key\+Descriptor)
+\begin{DoxyCompactList}\small\item\em Searching for the Device Descriptor. \end{DoxyCompactList}\item 
+\hyperlink{structm__key_descriptor}{m\+\_\+key\+Descriptor} $\ast$ \hyperlink{_i_e_e_e802154__security_8c_adbd2a6dcbcece7029f3ca3cc032ceb13}{I\+E\+E\+E802154\+\_\+security\+\_\+key\+Descriptor\+Lookup} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} Key\+Id\+Mode, \hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$key\+Source, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} Key\+Index, \hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$Device\+Address, \hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} $\ast$pan\+ID, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} frame\+Type)
+\begin{DoxyCompactList}\small\item\em Searching for the Key Descriptor. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154__security_8c_ae4730fe1b72ff3ca3f421fae0c5f45f5}{I\+E\+E\+E802154\+\_\+security\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Initialization of security tables and parameters. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154__security_8c_a37f2e29dc28c65dc17f1aac872056610}{I\+E\+E\+E802154\+\_\+security\+\_\+prepend\+Auxiliary\+Security\+Header} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Adding of Auxiliary Security Header to the I\+E\+E\+E802.\+15.\+4 M\+AC header. \end{DoxyCompactList}\item 
+\hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{_i_e_e_e802154__security_8c_a8f44e4764f0e2e79ab10735bf1d5e5ea}{I\+E\+E\+E802154\+\_\+security\+\_\+outgoing\+Frame\+Security} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Key searching and encryption/authentication operations. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_i_e_e_e802154__security_8c_ab1294d0afc581e0b8bedd555cadefe91}{I\+E\+E\+E802154\+\_\+security\+\_\+retrieve\+Auxiliary\+Security\+Header} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{structieee802154__header__iht}{ieee802154\+\_\+header\+\_\+iht} $\ast$tempheader)
+\begin{DoxyCompactList}\small\item\em Parsing of I\+E\+E\+E802.\+15.\+4 Auxiliary Security Header. \end{DoxyCompactList}\item 
+\hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{_i_e_e_e802154__security_8c_af6359014414916414f7fbdeda1a37838}{I\+E\+E\+E802154\+\_\+security\+\_\+incoming\+Frame} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Identification of the key used to protect the frame and unsecuring operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structieee802154__security__vars__t}{ieee802154\+\_\+security\+\_\+vars\+\_\+t} \hyperlink{_i_e_e_e802154__security_8c_a5e28b1063fec0047a06fa78fefe1f79e}{ieee802154\+\_\+security\+\_\+vars}
+\begin{DoxyCompactList}\small\item\em Security operations defined by I\+E\+E\+E802.\+15.\+4e standard. \end{DoxyCompactList}\item 
+const struct \hyperlink{structieee802154__security__driver}{ieee802154\+\_\+security\+\_\+driver} \hyperlink{group___i_e_e_e802154_gaa8b8110923d0b01d2a16234ef052908e}{I\+E\+E\+E802154\+\_\+security}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{I\+E\+E\+E802154\+\_\+security.\+c@{I\+E\+E\+E802154\+\_\+security.\+c}!I\+E\+E\+E802154\+\_\+security\+\_\+auth\+Length\+Checking@{I\+E\+E\+E802154\+\_\+security\+\_\+auth\+Length\+Checking}}
+\index{I\+E\+E\+E802154\+\_\+security\+\_\+auth\+Length\+Checking@{I\+E\+E\+E802154\+\_\+security\+\_\+auth\+Length\+Checking}!I\+E\+E\+E802154\+\_\+security.\+c@{I\+E\+E\+E802154\+\_\+security.\+c}}
+\subsubsection[{\texorpdfstring{I\+E\+E\+E802154\+\_\+security\+\_\+auth\+Length\+Checking(uint8\+\_\+t security\+Level)}{IEEE802154_security_authLengthChecking(uint8_t securityLevel)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} I\+E\+E\+E802154\+\_\+security\+\_\+auth\+Length\+Checking (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{security\+Level}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154__security_8c_abdffd375a8fabdc80100961a4be2ea52}{}\label{_i_e_e_e802154__security_8c_abdffd375a8fabdc80100961a4be2ea52}
+
+
+Identification of the length of the M\+IC based on the security Level in the frame. 
+
+
+
+Definition at line 653 of file I\+E\+E\+E802154\+\_\+security.\+c.
+
+\index{I\+E\+E\+E802154\+\_\+security.\+c@{I\+E\+E\+E802154\+\_\+security.\+c}!I\+E\+E\+E802154\+\_\+security\+\_\+aux\+Length\+Checking@{I\+E\+E\+E802154\+\_\+security\+\_\+aux\+Length\+Checking}}
+\index{I\+E\+E\+E802154\+\_\+security\+\_\+aux\+Length\+Checking@{I\+E\+E\+E802154\+\_\+security\+\_\+aux\+Length\+Checking}!I\+E\+E\+E802154\+\_\+security.\+c@{I\+E\+E\+E802154\+\_\+security.\+c}}
+\subsubsection[{\texorpdfstring{I\+E\+E\+E802154\+\_\+security\+\_\+aux\+Length\+Checking(uint8\+\_\+t Key\+Id\+Mode, uint8\+\_\+t frame\+Counter\+Suppression, uint8\+\_\+t frame\+Counter\+Size)}{IEEE802154_security_auxLengthChecking(uint8_t KeyIdMode, uint8_t frameCounterSuppression, uint8_t frameCounterSize)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} I\+E\+E\+E802154\+\_\+security\+\_\+aux\+Length\+Checking (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{Key\+Id\+Mode, }
+\item[{{\bf uint8\+\_\+t}}]{frame\+Counter\+Suppression, }
+\item[{{\bf uint8\+\_\+t}}]{frame\+Counter\+Size}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154__security_8c_a34ae0cac05d3fde1a67bffe331a5651f}{}\label{_i_e_e_e802154__security_8c_a34ae0cac05d3fde1a67bffe331a5651f}
+
+
+Identification of the length of the I\+E\+E\+E802.\+15.\+4 Auxiliary Security Header. 
+
+
+
+Definition at line 681 of file I\+E\+E\+E802154\+\_\+security.\+c.
+
+\index{I\+E\+E\+E802154\+\_\+security.\+c@{I\+E\+E\+E802154\+\_\+security.\+c}!I\+E\+E\+E802154\+\_\+security\+\_\+device\+Descriptor\+Lookup@{I\+E\+E\+E802154\+\_\+security\+\_\+device\+Descriptor\+Lookup}}
+\index{I\+E\+E\+E802154\+\_\+security\+\_\+device\+Descriptor\+Lookup@{I\+E\+E\+E802154\+\_\+security\+\_\+device\+Descriptor\+Lookup}!I\+E\+E\+E802154\+\_\+security.\+c@{I\+E\+E\+E802154\+\_\+security.\+c}}
+\subsubsection[{\texorpdfstring{I\+E\+E\+E802154\+\_\+security\+\_\+device\+Descriptor\+Lookup(open\+\_\+addr\+\_\+t $\ast$\+Address, open\+\_\+addr\+\_\+t $\ast$\+P\+A\+N\+Id, m\+\_\+key\+Descriptor $\ast$key\+Descriptor)}{IEEE802154_security_deviceDescriptorLookup(open_addr_t *Address, open_addr_t *PANId, m_keyDescriptor *keyDescriptor)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf m\+\_\+device\+Descriptor} $\ast$ I\+E\+E\+E802154\+\_\+security\+\_\+device\+Descriptor\+Lookup (
+\begin{DoxyParamCaption}
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{address, }
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{P\+A\+N\+ID, }
+\item[{{\bf m\+\_\+key\+Descriptor} $\ast$}]{key\+Descriptor}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154__security_8c_ae689b74e5d354ff0a4d9d541382180b3}{}\label{_i_e_e_e802154__security_8c_ae689b74e5d354ff0a4d9d541382180b3}
+
+
+Searching for the Device Descriptor. 
+
+
+
+Definition at line 813 of file I\+E\+E\+E802154\+\_\+security.\+c.
+
+\index{I\+E\+E\+E802154\+\_\+security.\+c@{I\+E\+E\+E802154\+\_\+security.\+c}!I\+E\+E\+E802154\+\_\+security\+\_\+get\+Frame\+Counter@{I\+E\+E\+E802154\+\_\+security\+\_\+get\+Frame\+Counter}}
+\index{I\+E\+E\+E802154\+\_\+security\+\_\+get\+Frame\+Counter@{I\+E\+E\+E802154\+\_\+security\+\_\+get\+Frame\+Counter}!I\+E\+E\+E802154\+\_\+security.\+c@{I\+E\+E\+E802154\+\_\+security.\+c}}
+\subsubsection[{\texorpdfstring{I\+E\+E\+E802154\+\_\+security\+\_\+get\+Frame\+Counter(mac\+Frame\+Counter\+\_\+t reference, uint8\+\_\+t $\ast$array)}{IEEE802154_security_getFrameCounter(macFrameCounter_t reference, uint8_t *array)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I\+E\+E\+E802154\+\_\+security\+\_\+get\+Frame\+Counter (
+\begin{DoxyParamCaption}
+\item[{{\bf mac\+Frame\+Counter\+\_\+t}}]{reference, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{array}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154__security_8c_aebfafb8811eab0c7a3175d3254b47b88}{}\label{_i_e_e_e802154__security_8c_aebfafb8811eab0c7a3175d3254b47b88}
+
+
+Definition at line 906 of file I\+E\+E\+E802154\+\_\+security.\+c.
+
+\index{I\+E\+E\+E802154\+\_\+security.\+c@{I\+E\+E\+E802154\+\_\+security.\+c}!I\+E\+E\+E802154\+\_\+security\+\_\+incoming\+Frame@{I\+E\+E\+E802154\+\_\+security\+\_\+incoming\+Frame}}
+\index{I\+E\+E\+E802154\+\_\+security\+\_\+incoming\+Frame@{I\+E\+E\+E802154\+\_\+security\+\_\+incoming\+Frame}!I\+E\+E\+E802154\+\_\+security.\+c@{I\+E\+E\+E802154\+\_\+security.\+c}}
+\subsubsection[{\texorpdfstring{I\+E\+E\+E802154\+\_\+security\+\_\+incoming\+Frame(\+Open\+Queue\+Entry\+\_\+t $\ast$msg)}{IEEE802154_security_incomingFrame(OpenQueueEntry_t *msg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf owerror\+\_\+t} I\+E\+E\+E802154\+\_\+security\+\_\+incoming\+Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154__security_8c_af6359014414916414f7fbdeda1a37838}{}\label{_i_e_e_e802154__security_8c_af6359014414916414f7fbdeda1a37838}
+
+
+Identification of the key used to protect the frame and unsecuring operations. 
+
+
+
+Definition at line 507 of file I\+E\+E\+E802154\+\_\+security.\+c.
+
+\index{I\+E\+E\+E802154\+\_\+security.\+c@{I\+E\+E\+E802154\+\_\+security.\+c}!I\+E\+E\+E802154\+\_\+security\+\_\+incoming\+Key\+Usage\+Policy\+Checking@{I\+E\+E\+E802154\+\_\+security\+\_\+incoming\+Key\+Usage\+Policy\+Checking}}
+\index{I\+E\+E\+E802154\+\_\+security\+\_\+incoming\+Key\+Usage\+Policy\+Checking@{I\+E\+E\+E802154\+\_\+security\+\_\+incoming\+Key\+Usage\+Policy\+Checking}!I\+E\+E\+E802154\+\_\+security.\+c@{I\+E\+E\+E802154\+\_\+security.\+c}}
+\subsubsection[{\texorpdfstring{I\+E\+E\+E802154\+\_\+security\+\_\+incoming\+Key\+Usage\+Policy\+Checking(m\+\_\+key\+Descriptor $\ast$key\+Descriptor, uint8\+\_\+t frame\+Type, uint8\+\_\+t cfi)}{IEEE802154_security_incomingKeyUsagePolicyChecking(m_keyDescriptor *keyDescriptor, uint8_t frameType, uint8_t cfi)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} I\+E\+E\+E802154\+\_\+security\+\_\+incoming\+Key\+Usage\+Policy\+Checking (
+\begin{DoxyParamCaption}
+\item[{{\bf m\+\_\+key\+Descriptor} $\ast$}]{keydesc, }
+\item[{{\bf uint8\+\_\+t}}]{frame\+Type, }
+\item[{{\bf uint8\+\_\+t}}]{cfi}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154__security_8c_a87d0532b1dfef60f6d7c602b16d50bc4}{}\label{_i_e_e_e802154__security_8c_a87d0532b1dfef60f6d7c602b16d50bc4}
+
+
+Verify if the key used to protect the frame has been used properly. Each key can be used to secure a particular frame type, according to security policies defined in the initialization phase and stored in the Mac Key Table. The procedure verifies if the frame type parameter associated to the key is the same than the packet for which the key has been used and returns T\+R\+UE if the check is verified, F\+A\+L\+SE otherwise. 
+
+
+
+Definition at line 725 of file I\+E\+E\+E802154\+\_\+security.\+c.
+
+\index{I\+E\+E\+E802154\+\_\+security.\+c@{I\+E\+E\+E802154\+\_\+security.\+c}!I\+E\+E\+E802154\+\_\+security\+\_\+incoming\+Security\+Level\+Checking@{I\+E\+E\+E802154\+\_\+security\+\_\+incoming\+Security\+Level\+Checking}}
+\index{I\+E\+E\+E802154\+\_\+security\+\_\+incoming\+Security\+Level\+Checking@{I\+E\+E\+E802154\+\_\+security\+\_\+incoming\+Security\+Level\+Checking}!I\+E\+E\+E802154\+\_\+security.\+c@{I\+E\+E\+E802154\+\_\+security.\+c}}
+\subsubsection[{\texorpdfstring{I\+E\+E\+E802154\+\_\+security\+\_\+incoming\+Security\+Level\+Checking(m\+\_\+security\+Level\+Descriptor $\ast$seclevdesc, uint8\+\_\+t seclevel, bool exempt)}{IEEE802154_security_incomingSecurityLevelChecking(m_securityLevelDescriptor *seclevdesc, uint8_t seclevel, bool exempt)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} I\+E\+E\+E802154\+\_\+security\+\_\+incoming\+Security\+Level\+Checking (
+\begin{DoxyParamCaption}
+\item[{{\bf m\+\_\+security\+Level\+Descriptor} $\ast$}]{sec\+Lev\+Desc, }
+\item[{{\bf uint8\+\_\+t}}]{sec\+Level, }
+\item[{{\bf bool}}]{exempt}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154__security_8c_a597cc059278b417f0947d161a34758fc}{}\label{_i_e_e_e802154__security_8c_a597cc059278b417f0947d161a34758fc}
+
+
+Verify if the Security Level of the incoming Frame conforms to local security policies, i.\+e., it is between the allowed security levels. 
+
+
+
+Definition at line 752 of file I\+E\+E\+E802154\+\_\+security.\+c.
+
+\index{I\+E\+E\+E802154\+\_\+security.\+c@{I\+E\+E\+E802154\+\_\+security.\+c}!I\+E\+E\+E802154\+\_\+security\+\_\+init@{I\+E\+E\+E802154\+\_\+security\+\_\+init}}
+\index{I\+E\+E\+E802154\+\_\+security\+\_\+init@{I\+E\+E\+E802154\+\_\+security\+\_\+init}!I\+E\+E\+E802154\+\_\+security.\+c@{I\+E\+E\+E802154\+\_\+security.\+c}}
+\subsubsection[{\texorpdfstring{I\+E\+E\+E802154\+\_\+security\+\_\+init(void)}{IEEE802154_security_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I\+E\+E\+E802154\+\_\+security\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154__security_8c_ae4730fe1b72ff3ca3f421fae0c5f45f5}{}\label{_i_e_e_e802154__security_8c_ae4730fe1b72ff3ca3f421fae0c5f45f5}
+
+
+Initialization of security tables and parameters. 
+
+
+
+Definition at line 62 of file I\+E\+E\+E802154\+\_\+security.\+c.
+
+\index{I\+E\+E\+E802154\+\_\+security.\+c@{I\+E\+E\+E802154\+\_\+security.\+c}!I\+E\+E\+E802154\+\_\+security\+\_\+key\+Descriptor\+Lookup@{I\+E\+E\+E802154\+\_\+security\+\_\+key\+Descriptor\+Lookup}}
+\index{I\+E\+E\+E802154\+\_\+security\+\_\+key\+Descriptor\+Lookup@{I\+E\+E\+E802154\+\_\+security\+\_\+key\+Descriptor\+Lookup}!I\+E\+E\+E802154\+\_\+security.\+c@{I\+E\+E\+E802154\+\_\+security.\+c}}
+\subsubsection[{\texorpdfstring{I\+E\+E\+E802154\+\_\+security\+\_\+key\+Descriptor\+Lookup(uint8\+\_\+t Key\+Id\+Mode, open\+\_\+addr\+\_\+t $\ast$key\+Source, uint8\+\_\+t Key\+Index, open\+\_\+addr\+\_\+t $\ast$\+Device\+Address, open\+\_\+addr\+\_\+t $\ast$pan\+I\+D, uint8\+\_\+t frame\+Type)}{IEEE802154_security_keyDescriptorLookup(uint8_t KeyIdMode, open_addr_t *keySource, uint8_t KeyIndex, open_addr_t *DeviceAddress, open_addr_t *panID, uint8_t frameType)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf m\+\_\+key\+Descriptor} $\ast$ I\+E\+E\+E802154\+\_\+security\+\_\+key\+Descriptor\+Lookup (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{Key\+Id\+Mode, }
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{key\+Source, }
+\item[{{\bf uint8\+\_\+t}}]{Key\+Index, }
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{Device\+Address, }
+\item[{{\bf open\+\_\+addr\+\_\+t} $\ast$}]{pan\+ID, }
+\item[{{\bf uint8\+\_\+t}}]{frame\+Type}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154__security_8c_adbd2a6dcbcece7029f3ca3cc032ceb13}{}\label{_i_e_e_e802154__security_8c_adbd2a6dcbcece7029f3ca3cc032ceb13}
+
+
+Searching for the Key Descriptor. 
+
+
+
+Definition at line 838 of file I\+E\+E\+E802154\+\_\+security.\+c.
+
+\index{I\+E\+E\+E802154\+\_\+security.\+c@{I\+E\+E\+E802154\+\_\+security.\+c}!I\+E\+E\+E802154\+\_\+security\+\_\+outgoing\+Frame\+Security@{I\+E\+E\+E802154\+\_\+security\+\_\+outgoing\+Frame\+Security}}
+\index{I\+E\+E\+E802154\+\_\+security\+\_\+outgoing\+Frame\+Security@{I\+E\+E\+E802154\+\_\+security\+\_\+outgoing\+Frame\+Security}!I\+E\+E\+E802154\+\_\+security.\+c@{I\+E\+E\+E802154\+\_\+security.\+c}}
+\subsubsection[{\texorpdfstring{I\+E\+E\+E802154\+\_\+security\+\_\+outgoing\+Frame\+Security(\+Open\+Queue\+Entry\+\_\+t $\ast$msg)}{IEEE802154_security_outgoingFrameSecurity(OpenQueueEntry_t *msg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf owerror\+\_\+t} I\+E\+E\+E802154\+\_\+security\+\_\+outgoing\+Frame\+Security (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154__security_8c_a8f44e4764f0e2e79ab10735bf1d5e5ea}{}\label{_i_e_e_e802154__security_8c_a8f44e4764f0e2e79ab10735bf1d5e5ea}
+
+
+Key searching and encryption/authentication operations. 
+
+
+
+Definition at line 282 of file I\+E\+E\+E802154\+\_\+security.\+c.
+
+\index{I\+E\+E\+E802154\+\_\+security.\+c@{I\+E\+E\+E802154\+\_\+security.\+c}!I\+E\+E\+E802154\+\_\+security\+\_\+prepend\+Auxiliary\+Security\+Header@{I\+E\+E\+E802154\+\_\+security\+\_\+prepend\+Auxiliary\+Security\+Header}}
+\index{I\+E\+E\+E802154\+\_\+security\+\_\+prepend\+Auxiliary\+Security\+Header@{I\+E\+E\+E802154\+\_\+security\+\_\+prepend\+Auxiliary\+Security\+Header}!I\+E\+E\+E802154\+\_\+security.\+c@{I\+E\+E\+E802154\+\_\+security.\+c}}
+\subsubsection[{\texorpdfstring{I\+E\+E\+E802154\+\_\+security\+\_\+prepend\+Auxiliary\+Security\+Header(\+Open\+Queue\+Entry\+\_\+t $\ast$msg)}{IEEE802154_security_prependAuxiliarySecurityHeader(OpenQueueEntry_t *msg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I\+E\+E\+E802154\+\_\+security\+\_\+prepend\+Auxiliary\+Security\+Header (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154__security_8c_a37f2e29dc28c65dc17f1aac872056610}{}\label{_i_e_e_e802154__security_8c_a37f2e29dc28c65dc17f1aac872056610}
+
+
+Adding of Auxiliary Security Header to the I\+E\+E\+E802.\+15.\+4 M\+AC header. 
+
+
+
+Definition at line 190 of file I\+E\+E\+E802154\+\_\+security.\+c.
+
+\index{I\+E\+E\+E802154\+\_\+security.\+c@{I\+E\+E\+E802154\+\_\+security.\+c}!I\+E\+E\+E802154\+\_\+security\+\_\+retrieve\+Auxiliary\+Security\+Header@{I\+E\+E\+E802154\+\_\+security\+\_\+retrieve\+Auxiliary\+Security\+Header}}
+\index{I\+E\+E\+E802154\+\_\+security\+\_\+retrieve\+Auxiliary\+Security\+Header@{I\+E\+E\+E802154\+\_\+security\+\_\+retrieve\+Auxiliary\+Security\+Header}!I\+E\+E\+E802154\+\_\+security.\+c@{I\+E\+E\+E802154\+\_\+security.\+c}}
+\subsubsection[{\texorpdfstring{I\+E\+E\+E802154\+\_\+security\+\_\+retrieve\+Auxiliary\+Security\+Header(\+Open\+Queue\+Entry\+\_\+t $\ast$msg, ieee802154\+\_\+header\+\_\+iht $\ast$tempheader)}{IEEE802154_security_retrieveAuxiliarySecurityHeader(OpenQueueEntry_t *msg, ieee802154_header_iht *tempheader)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I\+E\+E\+E802154\+\_\+security\+\_\+retrieve\+Auxiliary\+Security\+Header (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg, }
+\item[{{\bf ieee802154\+\_\+header\+\_\+iht} $\ast$}]{tempheader}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154__security_8c_ab1294d0afc581e0b8bedd555cadefe91}{}\label{_i_e_e_e802154__security_8c_ab1294d0afc581e0b8bedd555cadefe91}
+
+
+Parsing of I\+E\+E\+E802.\+15.\+4 Auxiliary Security Header. 
+
+
+
+Definition at line 403 of file I\+E\+E\+E802154\+\_\+security.\+c.
+
+\index{I\+E\+E\+E802154\+\_\+security.\+c@{I\+E\+E\+E802154\+\_\+security.\+c}!I\+E\+E\+E802154\+\_\+security\+\_\+security\+Level\+Descriptor\+Lookup@{I\+E\+E\+E802154\+\_\+security\+\_\+security\+Level\+Descriptor\+Lookup}}
+\index{I\+E\+E\+E802154\+\_\+security\+\_\+security\+Level\+Descriptor\+Lookup@{I\+E\+E\+E802154\+\_\+security\+\_\+security\+Level\+Descriptor\+Lookup}!I\+E\+E\+E802154\+\_\+security.\+c@{I\+E\+E\+E802154\+\_\+security.\+c}}
+\subsubsection[{\texorpdfstring{I\+E\+E\+E802154\+\_\+security\+\_\+security\+Level\+Descriptor\+Lookup(uint8\+\_\+t frame\+Type, uint8\+\_\+t cfi)}{IEEE802154_security_securityLevelDescriptorLookup(uint8_t frameType, uint8_t cfi)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf m\+\_\+security\+Level\+Descriptor} $\ast$ I\+E\+E\+E802154\+\_\+security\+\_\+security\+Level\+Descriptor\+Lookup (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{frame\+Type, }
+\item[{{\bf uint8\+\_\+t}}]{cfi}
+\end{DoxyParamCaption}
+)}\hypertarget{_i_e_e_e802154__security_8c_a41d94465362554322edce5f634d2abff}{}\label{_i_e_e_e802154__security_8c_a41d94465362554322edce5f634d2abff}
+
+
+Searching for the Security Level Descriptor. 
+
+
+
+Definition at line 784 of file I\+E\+E\+E802154\+\_\+security.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{I\+E\+E\+E802154\+\_\+security.\+c@{I\+E\+E\+E802154\+\_\+security.\+c}!ieee802154\+\_\+security\+\_\+vars@{ieee802154\+\_\+security\+\_\+vars}}
+\index{ieee802154\+\_\+security\+\_\+vars@{ieee802154\+\_\+security\+\_\+vars}!I\+E\+E\+E802154\+\_\+security.\+c@{I\+E\+E\+E802154\+\_\+security.\+c}}
+\subsubsection[{\texorpdfstring{ieee802154\+\_\+security\+\_\+vars}{ieee802154_security_vars}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ieee802154\+\_\+security\+\_\+vars\+\_\+t} ieee802154\+\_\+security\+\_\+vars}\hypertarget{_i_e_e_e802154__security_8c_a5e28b1063fec0047a06fa78fefe1f79e}{}\label{_i_e_e_e802154__security_8c_a5e28b1063fec0047a06fa78fefe1f79e}
+
+
+Security operations defined by I\+E\+E\+E802.\+15.\+4e standard. 
+
+\begin{DoxyAuthor}{Author}
+Savio Sciancalepore \href{mailto:savio.sciancalepore@poliba.it}{\tt savio.\+sciancalepore@poliba.\+it}, June 2015. 
+
+Giuseppe Piro \href{mailto:giuseppe.piro@poliba.it}{\tt giuseppe.\+piro@poliba.\+it} June 2015. 
+
+Gennaro Boggia \href{mailto:gennaro.boggia@poliba.it}{\tt gennaro.\+boggia@poliba.\+it} June 2015. 
+
+Luigi Alfredo Grieco \href{mailto:alfredo.grieco@poliba.it}{\tt alfredo.\+grieco@poliba.\+it}, June 2015. 
+
+Malisa Vucinic \href{mailto:malishav@gmail.com}{\tt malishav@gmail.\+com}, June 2015. 
+\end{DoxyAuthor}
+
+
+Definition at line 23 of file I\+E\+E\+E802154\+\_\+security.\+c.
+

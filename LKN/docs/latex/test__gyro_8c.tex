@@ -1,0 +1,151 @@
+\hypertarget{test__gyro_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/gina/old/test\+\_\+gyro.c File Reference}
+\label{test__gyro_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/gina/old/test\+\_\+gyro.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/gina/old/test\+\_\+gyro.\+c}}
+{\ttfamily \#include \char`\"{}msp430x26x.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stdint.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leds.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}opendefs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gyro.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{test__gyro_8c_a6288eba0f8e8ad3ab1544ad731eb7667}{main} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em This is a standalone test program for the L\+E\+Ds and 32k\+Hz crystal of the G\+I\+NA board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{test__gyro_8c_a0b7376bd990c1c391e87f98cc294a416}{gyro\+\_\+data} \mbox{[}8\mbox{]}
+\begin{DoxyCompactList}\small\item\em This is a standalone test program for the gyroscope of the G\+I\+N\+A2.\+2b/c board. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{test__gyro_8c_a6bd95140398cc8f4b44157b17d6ba31e}{temperature}
+\item 
+\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{test__gyro_8c_ada47adc498bbf25af687c892f1f968f7}{gyro\+\_\+x}
+\item 
+\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{test__gyro_8c_a24d555d498aeb5ed0d86c5ff4fe68337}{gyro\+\_\+y}
+\item 
+\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{test__gyro_8c_af3bd9645fa69f9dde0fccedb9a36f93d}{gyro\+\_\+z}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{test\+\_\+gyro.\+c@{test\+\_\+gyro.\+c}!main@{main}}
+\index{main@{main}!test\+\_\+gyro.\+c@{test\+\_\+gyro.\+c}}
+\subsubsection[{\texorpdfstring{main(void)}{main(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} main (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test__gyro_8c_a6288eba0f8e8ad3ab1544ad731eb7667}{}\label{test__gyro_8c_a6288eba0f8e8ad3ab1544ad731eb7667}
+
+
+This is a standalone test program for the L\+E\+Ds and 32k\+Hz crystal of the G\+I\+NA board. 
+
+\begin{DoxyNote}{Note}
+The term \char`\"{}crystal\char`\"{} is usually written \char`\"{}\+X\+T\+A\+L\char`\"{} by embedded geeks.
+\end{DoxyNote}
+Download the program to a G\+I\+NA board, run it, you should see the 4 L\+E\+Ds blinking in sequence with a 500ms period.
+
+The digital outputs are\+:
+\begin{DoxyItemize}
+\item P2.\+0\+: red L\+ED
+\item P2.\+1\+: green L\+ED
+\item P2.\+2\+: blue L\+ED
+\item P2.\+3\+: red L\+ED
+\end{DoxyItemize}
+
+The \char`\"{}inputs\char`\"{} are\+:
+\begin{DoxyItemize}
+\item X\+IN, X\+O\+UT\+: 32768\+Hz crystal oscillator
+\end{DoxyItemize}
+
+The debug pins are\+:
+\begin{DoxyItemize}
+\item P5.\+6 output the A\+C\+LK (should be 32768\+Hz)
+\item P1.\+1 toggles when interrupt T\+I\+M\+E\+R\+A0\+\_\+\+V\+E\+C\+T\+OR fires
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, February 2012 The program starts executing here.
+\end{DoxyAuthor}
+This is a standalone test program for the L\+E\+Ds and 32k\+Hz crystal of the G\+I\+NA board.
+
+The digital U\+A\+RT interface is\+:
+\begin{DoxyItemize}
+\item P3.\+7\+: A1\+\_\+\+S\+O\+M\+I\+\_\+\+RX
+\item P3.\+8\+: A1\+\_\+\+S\+O\+M\+I\+\_\+\+TX
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, February 2012 The program starts executing here. 
+\end{DoxyAuthor}
+
+
+Definition at line 40 of file test\+\_\+gyro.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{test\+\_\+gyro.\+c@{test\+\_\+gyro.\+c}!gyro\+\_\+data@{gyro\+\_\+data}}
+\index{gyro\+\_\+data@{gyro\+\_\+data}!test\+\_\+gyro.\+c@{test\+\_\+gyro.\+c}}
+\subsubsection[{\texorpdfstring{gyro\+\_\+data}{gyro_data}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} gyro\+\_\+data\mbox{[}8\mbox{]}}\hypertarget{test__gyro_8c_a0b7376bd990c1c391e87f98cc294a416}{}\label{test__gyro_8c_a0b7376bd990c1c391e87f98cc294a416}
+
+
+This is a standalone test program for the gyroscope of the G\+I\+N\+A2.\+2b/c board. 
+
+Download the program to a G\+I\+NA board, run it, and break after a few seconds at the line indicated in the code. Use the Watch Window to see the value of the variables \textquotesingle{}temperature\textquotesingle{}, \textquotesingle{}gyro\+\_\+x\textquotesingle{}, \textquotesingle{}gyro\+\_\+y\textquotesingle{} and \textquotesingle{}gyro\+\_\+z\textquotesingle{}.
+
+The digital connection is done through two-\/wire I2C serial bus\+:
+\begin{DoxyItemize}
+\item P5.\+2\+: B1\+\_\+\+I2\+C\+\_\+\+S\+CL
+\item P5.\+1\+: B1\+\_\+\+I2\+C\+\_\+\+S\+DA
+\end{DoxyItemize}
+
+The digital input is\+:
+\begin{DoxyItemize}
+\item P1.\+5\+: interrupt (not used)
+\end{DoxyItemize}
+
+The debug pins are\+:
+\begin{DoxyItemize}
+\item P1.\+1\+: toggles at every measurement
+\item P1.\+2\+: on during initial configuration
+\item P1.\+3\+: toggles upon an U\+S\+C\+I\+A\+B1\+T\+X\+\_\+\+V\+E\+C\+T\+OR interrupt (in ti\+\_\+i2c.\+c)
+\item P1.\+4\+: toggles upon an U\+S\+C\+I\+A\+B1\+R\+X\+\_\+\+V\+E\+C\+T\+OR interrupt (in ti\+\_\+i2c.\+c)
+\end{DoxyItemize}
+
+Speed\+: one measurement takes $\sim$293us
+
+\begin{DoxyAuthor}{Author}
+Leo Keselman \href{mailto:lkeselman@berkeley.edu}{\tt lkeselman@berkeley.\+edu}, July 2010 
+
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, August 2010 
+\end{DoxyAuthor}
+
+
+Definition at line 34 of file test\+\_\+gyro.\+c.
+
+\index{test\+\_\+gyro.\+c@{test\+\_\+gyro.\+c}!gyro\+\_\+x@{gyro\+\_\+x}}
+\index{gyro\+\_\+x@{gyro\+\_\+x}!test\+\_\+gyro.\+c@{test\+\_\+gyro.\+c}}
+\subsubsection[{\texorpdfstring{gyro\+\_\+x}{gyro_x}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\+\_\+t} gyro\+\_\+x}\hypertarget{test__gyro_8c_ada47adc498bbf25af687c892f1f968f7}{}\label{test__gyro_8c_ada47adc498bbf25af687c892f1f968f7}
+
+
+Definition at line 36 of file test\+\_\+gyro.\+c.
+
+\index{test\+\_\+gyro.\+c@{test\+\_\+gyro.\+c}!gyro\+\_\+y@{gyro\+\_\+y}}
+\index{gyro\+\_\+y@{gyro\+\_\+y}!test\+\_\+gyro.\+c@{test\+\_\+gyro.\+c}}
+\subsubsection[{\texorpdfstring{gyro\+\_\+y}{gyro_y}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\+\_\+t} gyro\+\_\+y}\hypertarget{test__gyro_8c_a24d555d498aeb5ed0d86c5ff4fe68337}{}\label{test__gyro_8c_a24d555d498aeb5ed0d86c5ff4fe68337}
+
+
+Definition at line 37 of file test\+\_\+gyro.\+c.
+
+\index{test\+\_\+gyro.\+c@{test\+\_\+gyro.\+c}!gyro\+\_\+z@{gyro\+\_\+z}}
+\index{gyro\+\_\+z@{gyro\+\_\+z}!test\+\_\+gyro.\+c@{test\+\_\+gyro.\+c}}
+\subsubsection[{\texorpdfstring{gyro\+\_\+z}{gyro_z}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\+\_\+t} gyro\+\_\+z}\hypertarget{test__gyro_8c_af3bd9645fa69f9dde0fccedb9a36f93d}{}\label{test__gyro_8c_af3bd9645fa69f9dde0fccedb9a36f93d}
+
+
+Definition at line 38 of file test\+\_\+gyro.\+c.
+
+\index{test\+\_\+gyro.\+c@{test\+\_\+gyro.\+c}!temperature@{temperature}}
+\index{temperature@{temperature}!test\+\_\+gyro.\+c@{test\+\_\+gyro.\+c}}
+\subsubsection[{\texorpdfstring{temperature}{temperature}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\+\_\+t} temperature}\hypertarget{test__gyro_8c_a6bd95140398cc8f4b44157b17d6ba31e}{}\label{test__gyro_8c_a6bd95140398cc8f4b44157b17d6ba31e}
+
+
+Definition at line 35 of file test\+\_\+gyro.\+c.
+

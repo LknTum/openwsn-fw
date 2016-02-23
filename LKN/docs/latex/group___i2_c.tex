@@ -1,0 +1,244 @@
+\hypertarget{group___i2_c}{}\section{I2C}
+\label{group___i2_c}\index{I2C@{I2C}}
+
+
+Driver for the I2C bus, initialy downloaded from Texas Instruments, heavily modified since.  
+
+
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___i2_c___exported___types}{I2\+C\+\_\+\+Exported\+\_\+\+Types}
+\item 
+\hyperlink{group___i2_c___exported___constants}{I2\+C\+\_\+\+Exported\+\_\+\+Constants}
+\item 
+\hyperlink{group___i2_c___exported___macros}{I2\+C\+\_\+\+Exported\+\_\+\+Macros}
+\item 
+\hyperlink{group___i2_c___exported___functions}{I2\+C\+\_\+\+Exported\+\_\+\+Functions}
+\item 
+\hyperlink{group___i2_c___private___types_definitions}{I2\+C\+\_\+\+Private\+\_\+\+Types\+Definitions}
+\item 
+\hyperlink{group___i2_c___private___defines}{I2\+C\+\_\+\+Private\+\_\+\+Defines}
+\item 
+\hyperlink{group___i2_c___private___macros}{I2\+C Private Macros}
+\item 
+\hyperlink{group___i2_c___private___variables}{I2\+C\+\_\+\+Private\+\_\+\+Variables}
+\item 
+\hyperlink{group___i2_c___private___function_prototypes}{I2\+C\+\_\+\+Private\+\_\+\+Function\+Prototypes}
+\item 
+\hyperlink{group___i2_c___private___functions}{I2\+C\+\_\+\+Private\+\_\+\+Functions}
+\item 
+\hyperlink{group___i2_c___public___types}{I2\+C Public Types}
+\item 
+\hyperlink{group___i2_c___public___functions}{I2\+C Public Functions}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___i2_c_gafb9001a03955fc02cf3bbf44bcd8d975}{I2\+C\+\_\+\+P\+R\+E\+S\+C\+A\+LE}~0x26
+\item 
+\#define \hyperlink{group___i2_c_gad5f4d29f56fdf15e6d198a3383dfcc0f}{I2\+C\+\_\+\+B\+U\+S\+\_\+\+F\+R\+E\+E\+\_\+\+T\+I\+ME}~100
+\item 
+\#define \hyperlink{group___i2_c_ga526d580d324bce60a3e964066fae77e3}{S\+D\+A\+\_\+\+P\+IN}~0x02
+\item 
+\#define \hyperlink{group___i2_c_ga06c967e78bcedcee909a70764f879433}{S\+C\+L\+\_\+\+P\+IN}~0x04
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i2_c_ga5730d9445429351b9f750084c5cb5aae}{i2c\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i2_c_ga460462394097795883ce49312648f8a6}{i2c\+\_\+read\+\_\+registers} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} bus\+\_\+num, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} slave\+\_\+addr, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} reg\+\_\+addr, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} num\+Bytes, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$space\+To\+Write)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i2_c_ga3d674f0d94dcf5c755869bc6762dafef}{i2c\+\_\+write\+\_\+register} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} bus\+\_\+num, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} slave\+\_\+addr, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} length, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$data)
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{group___i2_c_ga8f793e884b17bebb70615748dbf6434a}{i2c\+\_\+slave\+\_\+present} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} bus\+\_\+num, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} slave\+\_\+address)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i2_c_ga846c148c6c939378ab9db213af23b1ea}{i2c\+\_\+read\+\_\+byte} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} address, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$\hyperlink{_p_e___types_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte})
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group___i2_c_ga6c5d53542049a3b17a6c0f5c42b3f9f7}{i2c\+\_\+read\+\_\+bytes} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} address, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$buffer, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} length)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i2_c_ga6d9ff5e4b9a1909ada86224581be53b4}{i2c\+\_\+write\+\_\+byte} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} address, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{_p_e___types_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte})
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group___i2_c_ga2842bfa37d44e63d1777822400677387}{i2c\+\_\+write\+\_\+bytes} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} address, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$buffer, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} length)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i2_c_gaec8c11d47885868ae7931ad990d5db74}{isr\+\_\+i2c\+\_\+tx} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} bus\+\_\+num)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___i2_c_gab51d1ed9826f852ce34df92b6ab3bab5}{isr\+\_\+i2c\+\_\+rx} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} bus\+\_\+num)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Driver for the I2C bus, initialy downloaded from Texas Instruments, heavily modified since. 
+
+I2C driver modules.
+
+\begin{DoxyAuthor}{Author}
+Uli Kretzschmar, Texas Instruments Deutschland GmbH, November 2007 
+
+Hoam Chung, June 2010 
+
+Leo Keselman \href{mailto:lkeselman@berkeley.edu}{\tt lkeselman@berkeley.\+edu}, July 2010 
+
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, August 2010 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\index{I2C@{I2C}!I2\+C\+\_\+\+B\+U\+S\+\_\+\+F\+R\+E\+E\+\_\+\+T\+I\+ME@{I2\+C\+\_\+\+B\+U\+S\+\_\+\+F\+R\+E\+E\+\_\+\+T\+I\+ME}}
+\index{I2\+C\+\_\+\+B\+U\+S\+\_\+\+F\+R\+E\+E\+\_\+\+T\+I\+ME@{I2\+C\+\_\+\+B\+U\+S\+\_\+\+F\+R\+E\+E\+\_\+\+T\+I\+ME}!I2C@{I2C}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+B\+U\+S\+\_\+\+F\+R\+E\+E\+\_\+\+T\+I\+ME}{I2C_BUS_FREE_TIME}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+B\+U\+S\+\_\+\+F\+R\+E\+E\+\_\+\+T\+I\+ME~100}\hypertarget{group___i2_c_gad5f4d29f56fdf15e6d198a3383dfcc0f}{}\label{group___i2_c_gad5f4d29f56fdf15e6d198a3383dfcc0f}
+
+
+Definition at line 16 of file i2c.\+h.
+
+\index{I2C@{I2C}!I2\+C\+\_\+\+P\+R\+E\+S\+C\+A\+LE@{I2\+C\+\_\+\+P\+R\+E\+S\+C\+A\+LE}}
+\index{I2\+C\+\_\+\+P\+R\+E\+S\+C\+A\+LE@{I2\+C\+\_\+\+P\+R\+E\+S\+C\+A\+LE}!I2C@{I2C}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+P\+R\+E\+S\+C\+A\+LE}{I2C_PRESCALE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+P\+R\+E\+S\+C\+A\+LE~0x26}\hypertarget{group___i2_c_gafb9001a03955fc02cf3bbf44bcd8d975}{}\label{group___i2_c_gafb9001a03955fc02cf3bbf44bcd8d975}
+
+
+Definition at line 15 of file i2c.\+h.
+
+\index{I2C@{I2C}!S\+C\+L\+\_\+\+P\+IN@{S\+C\+L\+\_\+\+P\+IN}}
+\index{S\+C\+L\+\_\+\+P\+IN@{S\+C\+L\+\_\+\+P\+IN}!I2C@{I2C}}
+\subsubsection[{\texorpdfstring{S\+C\+L\+\_\+\+P\+IN}{SCL_PIN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+C\+L\+\_\+\+P\+IN~0x04}\hypertarget{group___i2_c_ga06c967e78bcedcee909a70764f879433}{}\label{group___i2_c_ga06c967e78bcedcee909a70764f879433}
+
+
+Definition at line 18 of file i2c.\+h.
+
+\index{I2C@{I2C}!S\+D\+A\+\_\+\+P\+IN@{S\+D\+A\+\_\+\+P\+IN}}
+\index{S\+D\+A\+\_\+\+P\+IN@{S\+D\+A\+\_\+\+P\+IN}!I2C@{I2C}}
+\subsubsection[{\texorpdfstring{S\+D\+A\+\_\+\+P\+IN}{SDA_PIN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+A\+\_\+\+P\+IN~0x02}\hypertarget{group___i2_c_ga526d580d324bce60a3e964066fae77e3}{}\label{group___i2_c_ga526d580d324bce60a3e964066fae77e3}
+
+
+Definition at line 17 of file i2c.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{I2C@{I2C}!i2c\+\_\+init@{i2c\+\_\+init}}
+\index{i2c\+\_\+init@{i2c\+\_\+init}!I2C@{I2C}}
+\subsubsection[{\texorpdfstring{i2c\+\_\+init(void)}{i2c_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} i2c\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i2_c_ga5730d9445429351b9f750084c5cb5aae}{}\label{group___i2_c_ga5730d9445429351b9f750084c5cb5aae}
+
+
+Definition at line 47 of file i2c.\+c.
+
+\index{I2C@{I2C}!i2c\+\_\+read\+\_\+byte@{i2c\+\_\+read\+\_\+byte}}
+\index{i2c\+\_\+read\+\_\+byte@{i2c\+\_\+read\+\_\+byte}!I2C@{I2C}}
+\subsubsection[{\texorpdfstring{i2c\+\_\+read\+\_\+byte(uint8\+\_\+t address, uint8\+\_\+t $\ast$byte)}{i2c_read_byte(uint8_t address, uint8_t *byte)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} i2c\+\_\+read\+\_\+byte (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{address, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{byte}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i2_c_ga846c148c6c939378ab9db213af23b1ea}{}\label{group___i2_c_ga846c148c6c939378ab9db213af23b1ea}
+
+
+Definition at line 68 of file i2c.\+c.
+
+\index{I2C@{I2C}!i2c\+\_\+read\+\_\+bytes@{i2c\+\_\+read\+\_\+bytes}}
+\index{i2c\+\_\+read\+\_\+bytes@{i2c\+\_\+read\+\_\+bytes}!I2C@{I2C}}
+\subsubsection[{\texorpdfstring{i2c\+\_\+read\+\_\+bytes(uint8\+\_\+t address, uint8\+\_\+t $\ast$buffer, uint32\+\_\+t length)}{i2c_read_bytes(uint8_t address, uint8_t *buffer, uint32_t length)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} i2c\+\_\+read\+\_\+bytes (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{address, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{buffer, }
+\item[{{\bf uint32\+\_\+t}}]{length}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i2_c_ga6c5d53542049a3b17a6c0f5c42b3f9f7}{}\label{group___i2_c_ga6c5d53542049a3b17a6c0f5c42b3f9f7}
+
+
+Definition at line 93 of file i2c.\+c.
+
+\index{I2C@{I2C}!i2c\+\_\+read\+\_\+registers@{i2c\+\_\+read\+\_\+registers}}
+\index{i2c\+\_\+read\+\_\+registers@{i2c\+\_\+read\+\_\+registers}!I2C@{I2C}}
+\subsubsection[{\texorpdfstring{i2c\+\_\+read\+\_\+registers(uint8\+\_\+t bus\+\_\+num, uint8\+\_\+t slave\+\_\+addr, uint8\+\_\+t reg\+\_\+addr, uint8\+\_\+t num\+Bytes, uint8\+\_\+t $\ast$space\+To\+Write)}{i2c_read_registers(uint8_t bus_num, uint8_t slave_addr, uint8_t reg_addr, uint8_t numBytes, uint8_t *spaceToWrite)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} i2c\+\_\+read\+\_\+registers (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{bus\+\_\+num, }
+\item[{{\bf uint8\+\_\+t}}]{slave\+\_\+addr, }
+\item[{{\bf uint8\+\_\+t}}]{reg\+\_\+addr, }
+\item[{{\bf uint8\+\_\+t}}]{num\+Bytes, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{space\+To\+Write}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i2_c_ga460462394097795883ce49312648f8a6}{}\label{group___i2_c_ga460462394097795883ce49312648f8a6}
+
+
+Definition at line 101 of file i2c.\+c.
+
+\index{I2C@{I2C}!i2c\+\_\+slave\+\_\+present@{i2c\+\_\+slave\+\_\+present}}
+\index{i2c\+\_\+slave\+\_\+present@{i2c\+\_\+slave\+\_\+present}!I2C@{I2C}}
+\subsubsection[{\texorpdfstring{i2c\+\_\+slave\+\_\+present(uint8\+\_\+t bus\+\_\+num, uint8\+\_\+t slave\+\_\+address)}{i2c_slave_present(uint8_t bus_num, uint8_t slave_address)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} i2c\+\_\+slave\+\_\+present (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{bus\+\_\+num, }
+\item[{{\bf uint8\+\_\+t}}]{slave\+\_\+address}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i2_c_ga8f793e884b17bebb70615748dbf6434a}{}\label{group___i2_c_ga8f793e884b17bebb70615748dbf6434a}
+This function is used to look for a slave address on the I2C bus. It sends a S\+T\+A\+RT and S\+T\+OP condition back-\/to-\/back and wait for an A\+CK from the slave
+
+IN\+: uint8\+\_\+t slave\+\_\+address =$>$ Slave Address O\+UT\+: uint8\+\_\+t =$>$ 0\+: address was not found, 1\+: address found 
+
+Definition at line 133 of file i2c.\+c.
+
+\index{I2C@{I2C}!i2c\+\_\+write\+\_\+byte@{i2c\+\_\+write\+\_\+byte}}
+\index{i2c\+\_\+write\+\_\+byte@{i2c\+\_\+write\+\_\+byte}!I2C@{I2C}}
+\subsubsection[{\texorpdfstring{i2c\+\_\+write\+\_\+byte(uint8\+\_\+t address, uint8\+\_\+t byte)}{i2c_write_byte(uint8_t address, uint8_t byte)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} i2c\+\_\+write\+\_\+byte (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{address, }
+\item[{{\bf uint8\+\_\+t}}]{byte}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i2_c_ga6d9ff5e4b9a1909ada86224581be53b4}{}\label{group___i2_c_ga6d9ff5e4b9a1909ada86224581be53b4}
+
+
+Definition at line 126 of file i2c.\+c.
+
+\index{I2C@{I2C}!i2c\+\_\+write\+\_\+bytes@{i2c\+\_\+write\+\_\+bytes}}
+\index{i2c\+\_\+write\+\_\+bytes@{i2c\+\_\+write\+\_\+bytes}!I2C@{I2C}}
+\subsubsection[{\texorpdfstring{i2c\+\_\+write\+\_\+bytes(uint8\+\_\+t address, uint8\+\_\+t $\ast$buffer, uint32\+\_\+t length)}{i2c_write_bytes(uint8_t address, uint8_t *buffer, uint32_t length)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} i2c\+\_\+write\+\_\+bytes (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{address, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{buffer, }
+\item[{{\bf uint32\+\_\+t}}]{length}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i2_c_ga2842bfa37d44e63d1777822400677387}{}\label{group___i2_c_ga2842bfa37d44e63d1777822400677387}
+
+
+Definition at line 150 of file i2c.\+c.
+
+\index{I2C@{I2C}!i2c\+\_\+write\+\_\+register@{i2c\+\_\+write\+\_\+register}}
+\index{i2c\+\_\+write\+\_\+register@{i2c\+\_\+write\+\_\+register}!I2C@{I2C}}
+\subsubsection[{\texorpdfstring{i2c\+\_\+write\+\_\+register(uint8\+\_\+t bus\+\_\+num, uint8\+\_\+t slave\+\_\+addr, uint8\+\_\+t length, uint8\+\_\+t $\ast$data)}{i2c_write_register(uint8_t bus_num, uint8_t slave_addr, uint8_t length, uint8_t *data)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} i2c\+\_\+write\+\_\+register (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{bus\+\_\+num, }
+\item[{{\bf uint8\+\_\+t}}]{slave\+\_\+addr, }
+\item[{{\bf uint8\+\_\+t}}]{length, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i2_c_ga3d674f0d94dcf5c755869bc6762dafef}{}\label{group___i2_c_ga3d674f0d94dcf5c755869bc6762dafef}
+data contains the register as a first element if needed. Note that i2c is a transport mechanism and whether there is a register as a first param or not is app/device dependent 
+
+Definition at line 90 of file i2c.\+c.
+
+\index{I2C@{I2C}!isr\+\_\+i2c\+\_\+rx@{isr\+\_\+i2c\+\_\+rx}}
+\index{isr\+\_\+i2c\+\_\+rx@{isr\+\_\+i2c\+\_\+rx}!I2C@{I2C}}
+\subsubsection[{\texorpdfstring{isr\+\_\+i2c\+\_\+rx(uint8\+\_\+t bus\+\_\+num)}{isr_i2c_rx(uint8_t bus_num)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} isr\+\_\+i2c\+\_\+rx (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{bus\+\_\+num}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i2_c_gab51d1ed9826f852ce34df92b6ab3bab5}{}\label{group___i2_c_gab51d1ed9826f852ce34df92b6ab3bab5}
+
+
+Definition at line 250 of file i2c.\+c.
+
+\index{I2C@{I2C}!isr\+\_\+i2c\+\_\+tx@{isr\+\_\+i2c\+\_\+tx}}
+\index{isr\+\_\+i2c\+\_\+tx@{isr\+\_\+i2c\+\_\+tx}!I2C@{I2C}}
+\subsubsection[{\texorpdfstring{isr\+\_\+i2c\+\_\+tx(uint8\+\_\+t bus\+\_\+num)}{isr_i2c_tx(uint8_t bus_num)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} isr\+\_\+i2c\+\_\+tx (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{bus\+\_\+num}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i2_c_gaec8c11d47885868ae7931ad990d5db74}{}\label{group___i2_c_gaec8c11d47885868ae7931ad990d5db74}
+
+
+Definition at line 259 of file i2c.\+c.
+

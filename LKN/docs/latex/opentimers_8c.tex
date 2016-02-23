@@ -1,0 +1,67 @@
+\hypertarget{opentimers_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/drivers/common/opentimers.c File Reference}
+\label{opentimers_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/drivers/common/opentimers.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/drivers/common/opentimers.\+c}}
+{\ttfamily \#include \char`\"{}opendefs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}opentimers.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bsp\+\_\+timer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leds.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{opentimers_8c_aa8ad535f582f6be4348e9206688f3419}{opentimers\+\_\+timer\+\_\+callback} ()
+\begin{DoxyCompactList}\small\item\em Function called when the hardware timer expires. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___open_timers_gaf3d3dd8b046f104fd2fc8c3ccc31a80c}{opentimers\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em Initialize this module. \end{DoxyCompactList}\item 
+\hyperlink{group___open_timers_gae5ca9e65d270cdfa4bc74008d96d69ab}{opentimer\+\_\+id\+\_\+t} \hyperlink{group___open_timers_gaa66975435aec29368f203e1c07218a0d}{opentimers\+\_\+start} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} duration, \hyperlink{group___open_timers_ga66e6b1d10289945ae9284d769f136e59}{timer\+\_\+type\+\_\+t} type, \hyperlink{group___open_timers_gad4702b7e72b77cd1d6cf3a63c0db9df8}{time\+\_\+type\+\_\+t} timetype, \hyperlink{group___open_timers_ga93a6f1f7e03cd8ad88cbd9509db173cf}{opentimers\+\_\+cbt} \hyperlink{k20_2bsp_2sctimer_8c_a5771d3f574543a9990943a0fcb713929}{callback})
+\begin{DoxyCompactList}\small\item\em Start a timer. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___open_timers_gac160b81d1e558b7b11c95fe419ecf3ed}{opentimers\+\_\+set\+Period} (\hyperlink{group___open_timers_gae5ca9e65d270cdfa4bc74008d96d69ab}{opentimer\+\_\+id\+\_\+t} id, \hyperlink{group___open_timers_gad4702b7e72b77cd1d6cf3a63c0db9df8}{time\+\_\+type\+\_\+t} timetype, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} new\+Duration)
+\begin{DoxyCompactList}\small\item\em Replace the period of a running timer. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___open_timers_ga1310b613ecc237238624df341c71bb7d}{opentimers\+\_\+stop} (\hyperlink{group___open_timers_gae5ca9e65d270cdfa4bc74008d96d69ab}{opentimer\+\_\+id\+\_\+t} id)
+\begin{DoxyCompactList}\small\item\em Stop a running timer. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___open_timers_gadd9e89367c4769f448443ad4910c7396}{opentimers\+\_\+restart} (\hyperlink{group___open_timers_gae5ca9e65d270cdfa4bc74008d96d69ab}{opentimer\+\_\+id\+\_\+t} id)
+\begin{DoxyCompactList}\small\item\em Restart a stop timer. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___open_timers_ga311e64b9f72f4cf7fc73109784a56e3a}{opentimers\+\_\+sleep\+Time\+Compesation} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} sleep\+Time)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structopentimers__vars__t}{opentimers\+\_\+vars\+\_\+t} \hyperlink{opentimers_8c_a914fe622e5947e9f6dd91d52469950a2}{opentimers\+\_\+vars}
+\begin{DoxyCompactList}\small\item\em Definition of the \char`\"{}opentimers\char`\"{} driver. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{opentimers.\+c@{opentimers.\+c}!opentimers\+\_\+timer\+\_\+callback@{opentimers\+\_\+timer\+\_\+callback}}
+\index{opentimers\+\_\+timer\+\_\+callback@{opentimers\+\_\+timer\+\_\+callback}!opentimers.\+c@{opentimers.\+c}}
+\subsubsection[{\texorpdfstring{opentimers\+\_\+timer\+\_\+callback()}{opentimers_timer_callback()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} opentimers\+\_\+timer\+\_\+callback (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{opentimers_8c_aa8ad535f582f6be4348e9206688f3419}{}\label{opentimers_8c_aa8ad535f582f6be4348e9206688f3419}
+
+
+Function called when the hardware timer expires. 
+
+Executed in interrupt mode.
+
+This function maps the expiration event to possibly multiple timers, calls the corresponding callback(s), and restarts the hardware timer with the next timer to expire. 
+
+Definition at line 199 of file opentimers.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{opentimers.\+c@{opentimers.\+c}!opentimers\+\_\+vars@{opentimers\+\_\+vars}}
+\index{opentimers\+\_\+vars@{opentimers\+\_\+vars}!opentimers.\+c@{opentimers.\+c}}
+\subsubsection[{\texorpdfstring{opentimers\+\_\+vars}{opentimers_vars}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf opentimers\+\_\+vars\+\_\+t} opentimers\+\_\+vars}\hypertarget{opentimers_8c_a914fe622e5947e9f6dd91d52469950a2}{}\label{opentimers_8c_a914fe622e5947e9f6dd91d52469950a2}
+
+
+Definition of the \char`\"{}opentimers\char`\"{} driver. 
+
+This driver uses a single hardware timer, which it virtualizes to support at most M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+T\+I\+M\+E\+RS timers.
+
+\begin{DoxyAuthor}{Author}
+Xavi Vilajosana \href{mailto:xvilajosana@eecs.berkeley.edu}{\tt xvilajosana@eecs.\+berkeley.\+edu}, March 2012. 
+\end{DoxyAuthor}
+
+
+Definition at line 19 of file opentimers.\+c.
+

@@ -1,0 +1,110 @@
+\hypertarget{bsp__timer__obj_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/python/bsp\+\_\+timer\+\_\+obj.c File Reference}
+\label{bsp__timer__obj_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/python/bsp\+\_\+timer\+\_\+obj.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/python/bsp\+\_\+timer\+\_\+obj.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}bsp\+\_\+timer\+\_\+obj.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{bsp__timer__obj_8c_aab240b03a3df60e3dd8b1ba7486c4b28}{bsp\+\_\+timer\+\_\+set\+\_\+callback} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self, \hyperlink{openwsnmodule__obj_8h_a217f88f41d2d57897598ce4147c80419}{bsp\+\_\+timer\+\_\+cbt} cb)
+\begin{DoxyCompactList}\small\item\em Python-\/specific definition of the \char`\"{}bsp\+\_\+timer\char`\"{} bsp module. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{bsp__timer__obj_8c_ac9c7de08f062c51c88bcd69b030a72bf}{bsp\+\_\+timer\+\_\+init} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{bsp__timer__obj_8c_a6983ee2bbb4ac479df052e7b53fa5c2f}{bsp\+\_\+timer\+\_\+reset} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{bsp__timer__obj_8c_a55353e06e7a8dcc1aef0957944b02201}{bsp\+\_\+timer\+\_\+schedule\+In} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self, \hyperlink{z1_2board__info_8h_abe66b9c1c60db84f2a99f2b827275f24}{P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} delay\+Ticks)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{bsp__timer__obj_8c_a98659aa02efca17bd1ddf624dae3ba15}{bsp\+\_\+timer\+\_\+cancel\+\_\+schedule} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self)
+\item 
+\hyperlink{z1_2board__info_8h_abe66b9c1c60db84f2a99f2b827275f24}{P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} \hyperlink{bsp__timer__obj_8c_ae796c1d02a85e845ed88d1fbee9dcbd6}{bsp\+\_\+timer\+\_\+get\+\_\+current\+Value} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self)
+\item 
+\hyperlink{group__board_gac9ebdcc0a4f3c8422f5f4f0fbbe0ded0}{kick\+\_\+scheduler\+\_\+t} \hyperlink{bsp__timer__obj_8c_adc2f5664d679050f4baa25c5d9bf9c9d}{bsp\+\_\+timer\+\_\+isr} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{bsp\+\_\+timer\+\_\+obj.\+c@{bsp\+\_\+timer\+\_\+obj.\+c}!bsp\+\_\+timer\+\_\+cancel\+\_\+schedule@{bsp\+\_\+timer\+\_\+cancel\+\_\+schedule}}
+\index{bsp\+\_\+timer\+\_\+cancel\+\_\+schedule@{bsp\+\_\+timer\+\_\+cancel\+\_\+schedule}!bsp\+\_\+timer\+\_\+obj.\+c@{bsp\+\_\+timer\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{bsp\+\_\+timer\+\_\+cancel\+\_\+schedule(\+Open\+Mote $\ast$self)}{bsp_timer_cancel_schedule(OpenMote *self)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} bsp\+\_\+timer\+\_\+cancel\+\_\+schedule (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{bsp__timer__obj_8c_a98659aa02efca17bd1ddf624dae3ba15}{}\label{bsp__timer__obj_8c_a98659aa02efca17bd1ddf624dae3ba15}
+
+
+Definition at line 87 of file bsp\+\_\+timer\+\_\+obj.\+c.
+
+\index{bsp\+\_\+timer\+\_\+obj.\+c@{bsp\+\_\+timer\+\_\+obj.\+c}!bsp\+\_\+timer\+\_\+get\+\_\+current\+Value@{bsp\+\_\+timer\+\_\+get\+\_\+current\+Value}}
+\index{bsp\+\_\+timer\+\_\+get\+\_\+current\+Value@{bsp\+\_\+timer\+\_\+get\+\_\+current\+Value}!bsp\+\_\+timer\+\_\+obj.\+c@{bsp\+\_\+timer\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{bsp\+\_\+timer\+\_\+get\+\_\+current\+Value(\+Open\+Mote $\ast$self)}{bsp_timer_get_currentValue(OpenMote *self)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} bsp\+\_\+timer\+\_\+get\+\_\+current\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{bsp__timer__obj_8c_ae796c1d02a85e845ed88d1fbee9dcbd6}{}\label{bsp__timer__obj_8c_ae796c1d02a85e845ed88d1fbee9dcbd6}
+
+
+Definition at line 107 of file bsp\+\_\+timer\+\_\+obj.\+c.
+
+\index{bsp\+\_\+timer\+\_\+obj.\+c@{bsp\+\_\+timer\+\_\+obj.\+c}!bsp\+\_\+timer\+\_\+init@{bsp\+\_\+timer\+\_\+init}}
+\index{bsp\+\_\+timer\+\_\+init@{bsp\+\_\+timer\+\_\+init}!bsp\+\_\+timer\+\_\+obj.\+c@{bsp\+\_\+timer\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{bsp\+\_\+timer\+\_\+init(\+Open\+Mote $\ast$self)}{bsp_timer_init(OpenMote *self)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} bsp\+\_\+timer\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{bsp__timer__obj_8c_ac9c7de08f062c51c88bcd69b030a72bf}{}\label{bsp__timer__obj_8c_ac9c7de08f062c51c88bcd69b030a72bf}
+
+
+Definition at line 24 of file bsp\+\_\+timer\+\_\+obj.\+c.
+
+\index{bsp\+\_\+timer\+\_\+obj.\+c@{bsp\+\_\+timer\+\_\+obj.\+c}!bsp\+\_\+timer\+\_\+isr@{bsp\+\_\+timer\+\_\+isr}}
+\index{bsp\+\_\+timer\+\_\+isr@{bsp\+\_\+timer\+\_\+isr}!bsp\+\_\+timer\+\_\+obj.\+c@{bsp\+\_\+timer\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{bsp\+\_\+timer\+\_\+isr(\+Open\+Mote $\ast$self)}{bsp_timer_isr(OpenMote *self)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf kick\+\_\+scheduler\+\_\+t} bsp\+\_\+timer\+\_\+isr (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{bsp__timer__obj_8c_adc2f5664d679050f4baa25c5d9bf9c9d}{}\label{bsp__timer__obj_8c_adc2f5664d679050f4baa25c5d9bf9c9d}
+
+
+Definition at line 134 of file bsp\+\_\+timer\+\_\+obj.\+c.
+
+\index{bsp\+\_\+timer\+\_\+obj.\+c@{bsp\+\_\+timer\+\_\+obj.\+c}!bsp\+\_\+timer\+\_\+reset@{bsp\+\_\+timer\+\_\+reset}}
+\index{bsp\+\_\+timer\+\_\+reset@{bsp\+\_\+timer\+\_\+reset}!bsp\+\_\+timer\+\_\+obj.\+c@{bsp\+\_\+timer\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{bsp\+\_\+timer\+\_\+reset(\+Open\+Mote $\ast$self)}{bsp_timer_reset(OpenMote *self)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} bsp\+\_\+timer\+\_\+reset (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{bsp__timer__obj_8c_a6983ee2bbb4ac479df052e7b53fa5c2f}{}\label{bsp__timer__obj_8c_a6983ee2bbb4ac479df052e7b53fa5c2f}
+
+
+Definition at line 44 of file bsp\+\_\+timer\+\_\+obj.\+c.
+
+\index{bsp\+\_\+timer\+\_\+obj.\+c@{bsp\+\_\+timer\+\_\+obj.\+c}!bsp\+\_\+timer\+\_\+schedule\+In@{bsp\+\_\+timer\+\_\+schedule\+In}}
+\index{bsp\+\_\+timer\+\_\+schedule\+In@{bsp\+\_\+timer\+\_\+schedule\+In}!bsp\+\_\+timer\+\_\+obj.\+c@{bsp\+\_\+timer\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{bsp\+\_\+timer\+\_\+schedule\+In(\+Open\+Mote $\ast$self, P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H delay\+Ticks)}{bsp_timer_scheduleIn(OpenMote *self, PORT_TIMER_WIDTH delayTicks)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} bsp\+\_\+timer\+\_\+schedule\+In (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self, }
+\item[{{\bf P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH}}]{delay\+Ticks}
+\end{DoxyParamCaption}
+)}\hypertarget{bsp__timer__obj_8c_a55353e06e7a8dcc1aef0957944b02201}{}\label{bsp__timer__obj_8c_a55353e06e7a8dcc1aef0957944b02201}
+
+
+Definition at line 64 of file bsp\+\_\+timer\+\_\+obj.\+c.
+
+\index{bsp\+\_\+timer\+\_\+obj.\+c@{bsp\+\_\+timer\+\_\+obj.\+c}!bsp\+\_\+timer\+\_\+set\+\_\+callback@{bsp\+\_\+timer\+\_\+set\+\_\+callback}}
+\index{bsp\+\_\+timer\+\_\+set\+\_\+callback@{bsp\+\_\+timer\+\_\+set\+\_\+callback}!bsp\+\_\+timer\+\_\+obj.\+c@{bsp\+\_\+timer\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{bsp\+\_\+timer\+\_\+set\+\_\+callback(\+Open\+Mote $\ast$self, bsp\+\_\+timer\+\_\+cbt cb)}{bsp_timer_set_callback(OpenMote *self, bsp_timer_cbt cb)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} bsp\+\_\+timer\+\_\+set\+\_\+callback (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self, }
+\item[{{\bf bsp\+\_\+timer\+\_\+cbt}}]{cb}
+\end{DoxyParamCaption}
+)}\hypertarget{bsp__timer__obj_8c_aab240b03a3df60e3dd8b1ba7486c4b28}{}\label{bsp__timer__obj_8c_aab240b03a3df60e3dd8b1ba7486c4b28}
+
+
+Python-\/specific definition of the \char`\"{}bsp\+\_\+timer\char`\"{} bsp module. 
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, May 2013. 
+\end{DoxyAuthor}
+
+
+Definition at line 18 of file bsp\+\_\+timer\+\_\+obj.\+c.
+

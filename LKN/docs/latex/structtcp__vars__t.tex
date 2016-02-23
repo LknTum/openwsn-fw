@@ -1,0 +1,114 @@
+\hypertarget{structtcp__vars__t}{}\section{tcp\+\_\+vars\+\_\+t Struct Reference}
+\label{structtcp__vars__t}\index{tcp\+\_\+vars\+\_\+t@{tcp\+\_\+vars\+\_\+t}}
+
+
+{\ttfamily \#include $<$opentcp.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{structtcp__vars__t_afd22d93533fe0d6c76a578697cc1dea3}{state}
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{structtcp__vars__t_a7425973b98b5e3d201e0c527111722d6}{my\+Seq\+Num}
+\item 
+\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{structtcp__vars__t_a27e7c0cfeeb60f0fbace53a0d1f84868}{my\+Port}
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{structtcp__vars__t_aebf341acc3d7c2ab9f954437f4ea974e}{his\+Next\+Seq\+Num}
+\item 
+\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{structtcp__vars__t_a6c0d1c9874d0f6dd01b6a90b094de8d6}{his\+Port}
+\item 
+\hyperlink{structopen__addr__t}{open\+\_\+addr\+\_\+t} \hyperlink{structtcp__vars__t_a844854565e6e9f990097576d4fb18cb0}{his\+I\+Pv6\+Address}
+\item 
+\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$ \hyperlink{structtcp__vars__t_a5170824574c33f3c7ddcfb4417b5a8e8}{data\+To\+Send}
+\item 
+\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$ \hyperlink{structtcp__vars__t_af774183effd1c202ca02a3bcb8ef9023}{data\+Received}
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{structtcp__vars__t_a375b45dfa99594ab77a4cef064cca624}{timer\+Started}
+\item 
+\hyperlink{group___open_timers_gae5ca9e65d270cdfa4bc74008d96d69ab}{opentimer\+\_\+id\+\_\+t} \hyperlink{structtcp__vars__t_a0902d2e84e93de3d1e81cd119feb6b8f}{timer\+Id}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 105 of file opentcp.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\index{tcp\+\_\+vars\+\_\+t@{tcp\+\_\+vars\+\_\+t}!data\+Received@{data\+Received}}
+\index{data\+Received@{data\+Received}!tcp\+\_\+vars\+\_\+t@{tcp\+\_\+vars\+\_\+t}}
+\subsubsection[{\texorpdfstring{data\+Received}{dataReceived}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Open\+Queue\+Entry\+\_\+t}$\ast$ tcp\+\_\+vars\+\_\+t\+::data\+Received}\hypertarget{structtcp__vars__t_af774183effd1c202ca02a3bcb8ef9023}{}\label{structtcp__vars__t_af774183effd1c202ca02a3bcb8ef9023}
+
+
+Definition at line 113 of file opentcp.\+h.
+
+\index{tcp\+\_\+vars\+\_\+t@{tcp\+\_\+vars\+\_\+t}!data\+To\+Send@{data\+To\+Send}}
+\index{data\+To\+Send@{data\+To\+Send}!tcp\+\_\+vars\+\_\+t@{tcp\+\_\+vars\+\_\+t}}
+\subsubsection[{\texorpdfstring{data\+To\+Send}{dataToSend}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Open\+Queue\+Entry\+\_\+t}$\ast$ tcp\+\_\+vars\+\_\+t\+::data\+To\+Send}\hypertarget{structtcp__vars__t_a5170824574c33f3c7ddcfb4417b5a8e8}{}\label{structtcp__vars__t_a5170824574c33f3c7ddcfb4417b5a8e8}
+
+
+Definition at line 112 of file opentcp.\+h.
+
+\index{tcp\+\_\+vars\+\_\+t@{tcp\+\_\+vars\+\_\+t}!his\+I\+Pv6\+Address@{his\+I\+Pv6\+Address}}
+\index{his\+I\+Pv6\+Address@{his\+I\+Pv6\+Address}!tcp\+\_\+vars\+\_\+t@{tcp\+\_\+vars\+\_\+t}}
+\subsubsection[{\texorpdfstring{his\+I\+Pv6\+Address}{hisIPv6Address}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf open\+\_\+addr\+\_\+t} tcp\+\_\+vars\+\_\+t\+::his\+I\+Pv6\+Address}\hypertarget{structtcp__vars__t_a844854565e6e9f990097576d4fb18cb0}{}\label{structtcp__vars__t_a844854565e6e9f990097576d4fb18cb0}
+
+
+Definition at line 111 of file opentcp.\+h.
+
+\index{tcp\+\_\+vars\+\_\+t@{tcp\+\_\+vars\+\_\+t}!his\+Next\+Seq\+Num@{his\+Next\+Seq\+Num}}
+\index{his\+Next\+Seq\+Num@{his\+Next\+Seq\+Num}!tcp\+\_\+vars\+\_\+t@{tcp\+\_\+vars\+\_\+t}}
+\subsubsection[{\texorpdfstring{his\+Next\+Seq\+Num}{hisNextSeqNum}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} tcp\+\_\+vars\+\_\+t\+::his\+Next\+Seq\+Num}\hypertarget{structtcp__vars__t_aebf341acc3d7c2ab9f954437f4ea974e}{}\label{structtcp__vars__t_aebf341acc3d7c2ab9f954437f4ea974e}
+
+
+Definition at line 109 of file opentcp.\+h.
+
+\index{tcp\+\_\+vars\+\_\+t@{tcp\+\_\+vars\+\_\+t}!his\+Port@{his\+Port}}
+\index{his\+Port@{his\+Port}!tcp\+\_\+vars\+\_\+t@{tcp\+\_\+vars\+\_\+t}}
+\subsubsection[{\texorpdfstring{his\+Port}{hisPort}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\+\_\+t} tcp\+\_\+vars\+\_\+t\+::his\+Port}\hypertarget{structtcp__vars__t_a6c0d1c9874d0f6dd01b6a90b094de8d6}{}\label{structtcp__vars__t_a6c0d1c9874d0f6dd01b6a90b094de8d6}
+
+
+Definition at line 110 of file opentcp.\+h.
+
+\index{tcp\+\_\+vars\+\_\+t@{tcp\+\_\+vars\+\_\+t}!my\+Port@{my\+Port}}
+\index{my\+Port@{my\+Port}!tcp\+\_\+vars\+\_\+t@{tcp\+\_\+vars\+\_\+t}}
+\subsubsection[{\texorpdfstring{my\+Port}{myPort}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\+\_\+t} tcp\+\_\+vars\+\_\+t\+::my\+Port}\hypertarget{structtcp__vars__t_a27e7c0cfeeb60f0fbace53a0d1f84868}{}\label{structtcp__vars__t_a27e7c0cfeeb60f0fbace53a0d1f84868}
+
+
+Definition at line 108 of file opentcp.\+h.
+
+\index{tcp\+\_\+vars\+\_\+t@{tcp\+\_\+vars\+\_\+t}!my\+Seq\+Num@{my\+Seq\+Num}}
+\index{my\+Seq\+Num@{my\+Seq\+Num}!tcp\+\_\+vars\+\_\+t@{tcp\+\_\+vars\+\_\+t}}
+\subsubsection[{\texorpdfstring{my\+Seq\+Num}{mySeqNum}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} tcp\+\_\+vars\+\_\+t\+::my\+Seq\+Num}\hypertarget{structtcp__vars__t_a7425973b98b5e3d201e0c527111722d6}{}\label{structtcp__vars__t_a7425973b98b5e3d201e0c527111722d6}
+
+
+Definition at line 107 of file opentcp.\+h.
+
+\index{tcp\+\_\+vars\+\_\+t@{tcp\+\_\+vars\+\_\+t}!state@{state}}
+\index{state@{state}!tcp\+\_\+vars\+\_\+t@{tcp\+\_\+vars\+\_\+t}}
+\subsubsection[{\texorpdfstring{state}{state}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} tcp\+\_\+vars\+\_\+t\+::state}\hypertarget{structtcp__vars__t_afd22d93533fe0d6c76a578697cc1dea3}{}\label{structtcp__vars__t_afd22d93533fe0d6c76a578697cc1dea3}
+
+
+Definition at line 106 of file opentcp.\+h.
+
+\index{tcp\+\_\+vars\+\_\+t@{tcp\+\_\+vars\+\_\+t}!timer\+Id@{timer\+Id}}
+\index{timer\+Id@{timer\+Id}!tcp\+\_\+vars\+\_\+t@{tcp\+\_\+vars\+\_\+t}}
+\subsubsection[{\texorpdfstring{timer\+Id}{timerId}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf opentimer\+\_\+id\+\_\+t} tcp\+\_\+vars\+\_\+t\+::timer\+Id}\hypertarget{structtcp__vars__t_a0902d2e84e93de3d1e81cd119feb6b8f}{}\label{structtcp__vars__t_a0902d2e84e93de3d1e81cd119feb6b8f}
+
+
+Definition at line 115 of file opentcp.\+h.
+
+\index{tcp\+\_\+vars\+\_\+t@{tcp\+\_\+vars\+\_\+t}!timer\+Started@{timer\+Started}}
+\index{timer\+Started@{timer\+Started}!tcp\+\_\+vars\+\_\+t@{tcp\+\_\+vars\+\_\+t}}
+\subsubsection[{\texorpdfstring{timer\+Started}{timerStarted}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} tcp\+\_\+vars\+\_\+t\+::timer\+Started}\hypertarget{structtcp__vars__t_a375b45dfa99594ab77a4cef064cca624}{}\label{structtcp__vars__t_a375b45dfa99594ab77a4cef064cca624}
+
+
+Definition at line 114 of file opentcp.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/04-\/\+T\+R\+A\+N/\hyperlink{opentcp_8h}{opentcp.\+h}\end{DoxyCompactItemize}

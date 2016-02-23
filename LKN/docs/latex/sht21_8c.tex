@@ -1,0 +1,327 @@
+\hypertarget{sht21_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/chips/sht21/sht21.c File Reference}
+\label{sht21_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/chips/sht21/sht21.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/chips/sht21/sht21.\+c}}
+{\ttfamily \#include \char`\"{}stdint.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stdbool.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}i2c.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sht21.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{sht21_8c_a723677e3c84e35951814d0d097793b50}{S\+H\+T21\+\_\+\+A\+D\+D\+R\+E\+SS}~( 0x40 )
+\item 
+\#define \hyperlink{sht21_8c_a47c737d46acb7fa929ae8756928b9322}{S\+H\+T21\+\_\+\+U\+S\+E\+R\+\_\+\+R\+E\+G\+\_\+\+R\+E\+AD}~( 0x\+E7 )
+\item 
+\#define \hyperlink{sht21_8c_ae5241f65dba03e0a2cb249c59ae07e44}{S\+H\+T21\+\_\+\+U\+S\+E\+R\+\_\+\+R\+E\+G\+\_\+\+W\+R\+I\+TE}~( 0x\+E6 )
+\item 
+\#define \hyperlink{sht21_8c_a865835be27094872151650648d769dfd}{S\+H\+T21\+\_\+\+U\+S\+E\+R\+\_\+\+R\+E\+G\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+B\+I\+TS}~( 0x38 )
+\item 
+\#define \hyperlink{sht21_8c_ae4f559f45f850b0978cb0354d2a816e4}{S\+H\+T21\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+12b\+\_\+14b}~( (0 $<$$<$ 7) $\vert$ (0 $<$$<$ 0) )
+\item 
+\#define \hyperlink{sht21_8c_ac938165b3731e330eed42a0a977c2324}{S\+H\+T21\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+8b\+\_\+12b}~( (0 $<$$<$ 7) $\vert$ (1 $<$$<$ 0) )
+\item 
+\#define \hyperlink{sht21_8c_ae47355f42c927ed87e048a0fc137f5aa}{S\+H\+T21\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+10b\+\_\+13b}~( (1 $<$$<$ 7) $\vert$ (0 $<$$<$ 0) )
+\item 
+\#define \hyperlink{sht21_8c_a0e821670cbe4474a95566c5859fd92f3}{S\+H\+T21\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+11b\+\_\+11b}~( (1 $<$$<$ 7) $\vert$ (1 $<$$<$ 0) )
+\item 
+\#define \hyperlink{sht21_8c_a1ad51e935e31b4a9850e34f19cc87ee4}{S\+H\+T21\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+A\+B\+O\+V\+E\+\_\+2\+V25}~( 0 $<$$<$ 6 )
+\item 
+\#define \hyperlink{sht21_8c_aac9b7832ed758a0d7798e4db2ae201d0}{S\+H\+T21\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+B\+E\+L\+O\+W\+\_\+2\+V25}~( 1 $<$$<$ 6 )
+\item 
+\#define \hyperlink{sht21_8c_aee8a616bc352d0840f716d0fd4d7e0e2}{S\+H\+T21\+\_\+\+O\+N\+C\+H\+I\+P\+\_\+\+H\+E\+A\+T\+E\+R\+\_\+\+E\+N\+A\+B\+LE}~( 1 $<$$<$ 2 )
+\item 
+\#define \hyperlink{sht21_8c_a806a7fb72608f631f418017d6f875191}{S\+H\+T21\+\_\+\+O\+N\+C\+H\+I\+P\+\_\+\+H\+E\+A\+T\+E\+R\+\_\+\+D\+I\+S\+A\+B\+LE}~( 0 $<$$<$ 2 )
+\item 
+\#define \hyperlink{sht21_8c_aa5b0f837c7a644e9eec445d24a63c978}{S\+H\+T21\+\_\+\+O\+T\+P\+\_\+\+R\+E\+L\+O\+A\+D\+\_\+\+E\+N\+A\+B\+LE}~( 0 $<$$<$ 1 )
+\item 
+\#define \hyperlink{sht21_8c_ae2ea4c8bc93f143bc0f8d895fd85e287}{S\+H\+T21\+\_\+\+O\+T\+P\+\_\+\+R\+E\+L\+O\+A\+D\+\_\+\+D\+I\+S\+A\+B\+LE}~( 1 $<$$<$ 1 )
+\item 
+\#define \hyperlink{sht21_8c_ab6cb48873ee1fe89a9f32635409aae6b}{S\+H\+T21\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E\+\_\+\+H\+M\+\_\+\+C\+MD}~( 0x\+E3 )
+\item 
+\#define \hyperlink{sht21_8c_a4ad4e13a4a0d7c36cd86c5236acca381}{S\+H\+T21\+\_\+\+H\+U\+M\+I\+D\+I\+T\+Y\+\_\+\+H\+M\+\_\+\+C\+MD}~( 0x\+E5 )
+\item 
+\#define \hyperlink{sht21_8c_a61ebda7bca1cb93d502989f9fd3f7482}{S\+H\+T21\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E\+\_\+\+N\+H\+M\+\_\+\+C\+MD}~( 0x\+F3 )
+\item 
+\#define \hyperlink{sht21_8c_a277214e08bab4e0d2daca9b76e8fa8f6}{S\+H\+T21\+\_\+\+H\+U\+M\+I\+D\+I\+T\+Y\+\_\+\+N\+H\+M\+\_\+\+C\+MD}~( 0x\+F5 )
+\item 
+\#define \hyperlink{sht21_8c_a002319802e4731e910e8ca9dd56f18e2}{S\+H\+T21\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+MD}~( 0x\+F\+E )
+\item 
+\#define \hyperlink{sht21_8c_ad4f2a26f35fcb674ceef01522a83fa3f}{S\+H\+T21\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+SK}~( 0x\+F\+C )
+\item 
+\#define \hyperlink{sht21_8c_a4fb5317bab93a92316fb5804d37537ca}{S\+H\+T21\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+N\+F\+IG}
+\item 
+\#define \hyperlink{sht21_8c_a2997948311e7ccae9fff38e978513d72}{S\+H\+T21\+\_\+\+U\+S\+E\+R\+\_\+\+C\+O\+N\+F\+IG}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{sht21_8c_a6b880c0246c32de09557a377f62abcdc}{sht21\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{sht21_8c_a12240ccb03b6a47c498893adc3b2c829}{sht21\+\_\+reset} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{sht21_8c_a0487ed4f2ac1a5177a301c0880edb22b}{sht21\+\_\+is\+\_\+present} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{sht21_8c_a4f3974720ab7e9cb3a972361f98140a5}{sht21\+\_\+read\+\_\+temperature} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+float \hyperlink{sht21_8c_ab2057c38b5dbd04aa65726400f69a049}{sht21\+\_\+convert\+\_\+temperature} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{test__sensitive__accel__temperature_8c_a6bd95140398cc8f4b44157b17d6ba31e}{temperature})
+\item 
+\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{sht21_8c_afdc55ecc4a8497fd3fd6264f94f43f6e}{sht21\+\_\+read\+\_\+humidity} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+float \hyperlink{sht21_8c_a9ffe68ab0a6fe9ba56591a7e183343b2}{sht21\+\_\+convert\+\_\+humidity} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} humidity)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Device drivers for S\+H\+T21 temperature and humidity sensor in Open\+Mote-\/\+C\+C2538. \begin{DoxyAuthor}{Author}
+Pere Tuset, \hyperlink{struct_open_mote}{Open\+Mote} \href{mailto:peretuset@openmote.com}{\tt peretuset@openmote.\+com} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\index{sht21.\+c@{sht21.\+c}!S\+H\+T21\+\_\+\+A\+D\+D\+R\+E\+SS@{S\+H\+T21\+\_\+\+A\+D\+D\+R\+E\+SS}}
+\index{S\+H\+T21\+\_\+\+A\+D\+D\+R\+E\+SS@{S\+H\+T21\+\_\+\+A\+D\+D\+R\+E\+SS}!sht21.\+c@{sht21.\+c}}
+\subsubsection[{\texorpdfstring{S\+H\+T21\+\_\+\+A\+D\+D\+R\+E\+SS}{SHT21_ADDRESS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+T21\+\_\+\+A\+D\+D\+R\+E\+SS~( 0x40 )}\hypertarget{sht21_8c_a723677e3c84e35951814d0d097793b50}{}\label{sht21_8c_a723677e3c84e35951814d0d097793b50}
+
+
+Definition at line 16 of file sht21.\+c.
+
+\index{sht21.\+c@{sht21.\+c}!S\+H\+T21\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+A\+B\+O\+V\+E\+\_\+2\+V25@{S\+H\+T21\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+A\+B\+O\+V\+E\+\_\+2\+V25}}
+\index{S\+H\+T21\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+A\+B\+O\+V\+E\+\_\+2\+V25@{S\+H\+T21\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+A\+B\+O\+V\+E\+\_\+2\+V25}!sht21.\+c@{sht21.\+c}}
+\subsubsection[{\texorpdfstring{S\+H\+T21\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+A\+B\+O\+V\+E\+\_\+2\+V25}{SHT21_BATTERY_ABOVE_2V25}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+T21\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+A\+B\+O\+V\+E\+\_\+2\+V25~( 0 $<$$<$ 6 )}\hypertarget{sht21_8c_a1ad51e935e31b4a9850e34f19cc87ee4}{}\label{sht21_8c_a1ad51e935e31b4a9850e34f19cc87ee4}
+
+
+Definition at line 26 of file sht21.\+c.
+
+\index{sht21.\+c@{sht21.\+c}!S\+H\+T21\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+B\+E\+L\+O\+W\+\_\+2\+V25@{S\+H\+T21\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+B\+E\+L\+O\+W\+\_\+2\+V25}}
+\index{S\+H\+T21\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+B\+E\+L\+O\+W\+\_\+2\+V25@{S\+H\+T21\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+B\+E\+L\+O\+W\+\_\+2\+V25}!sht21.\+c@{sht21.\+c}}
+\subsubsection[{\texorpdfstring{S\+H\+T21\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+B\+E\+L\+O\+W\+\_\+2\+V25}{SHT21_BATTERY_BELOW_2V25}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+T21\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+B\+E\+L\+O\+W\+\_\+2\+V25~( 1 $<$$<$ 6 )}\hypertarget{sht21_8c_aac9b7832ed758a0d7798e4db2ae201d0}{}\label{sht21_8c_aac9b7832ed758a0d7798e4db2ae201d0}
+
+
+Definition at line 27 of file sht21.\+c.
+
+\index{sht21.\+c@{sht21.\+c}!S\+H\+T21\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+N\+F\+IG@{S\+H\+T21\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+N\+F\+IG}}
+\index{S\+H\+T21\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+N\+F\+IG@{S\+H\+T21\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+N\+F\+IG}!sht21.\+c@{sht21.\+c}}
+\subsubsection[{\texorpdfstring{S\+H\+T21\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+N\+F\+IG}{SHT21_DEFAULT_CONFIG}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+T21\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+N\+F\+IG}\hypertarget{sht21_8c_a4fb5317bab93a92316fb5804d37537ca}{}\label{sht21_8c_a4fb5317bab93a92316fb5804d37537ca}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+( \hyperlink{sht21_8c_ae4f559f45f850b0978cb0354d2a816e4}{SHT21\_RESOLUTION\_12b\_14b} | \(\backslash\)
+                                          SHT21\_ONCHIP\_HEATER\_DISABLE | \(\backslash\)
+                                          SHT21\_BATTERY\_ABOVE\_2V25 | \(\backslash\)
+                                          SHT21\_OTP\_RELOAD\_DISABLE )
+\end{DoxyCode}
+
+
+Definition at line 41 of file sht21.\+c.
+
+\index{sht21.\+c@{sht21.\+c}!S\+H\+T21\+\_\+\+H\+U\+M\+I\+D\+I\+T\+Y\+\_\+\+H\+M\+\_\+\+C\+MD@{S\+H\+T21\+\_\+\+H\+U\+M\+I\+D\+I\+T\+Y\+\_\+\+H\+M\+\_\+\+C\+MD}}
+\index{S\+H\+T21\+\_\+\+H\+U\+M\+I\+D\+I\+T\+Y\+\_\+\+H\+M\+\_\+\+C\+MD@{S\+H\+T21\+\_\+\+H\+U\+M\+I\+D\+I\+T\+Y\+\_\+\+H\+M\+\_\+\+C\+MD}!sht21.\+c@{sht21.\+c}}
+\subsubsection[{\texorpdfstring{S\+H\+T21\+\_\+\+H\+U\+M\+I\+D\+I\+T\+Y\+\_\+\+H\+M\+\_\+\+C\+MD}{SHT21_HUMIDITY_HM_CMD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+T21\+\_\+\+H\+U\+M\+I\+D\+I\+T\+Y\+\_\+\+H\+M\+\_\+\+C\+MD~( 0x\+E5 )}\hypertarget{sht21_8c_a4ad4e13a4a0d7c36cd86c5236acca381}{}\label{sht21_8c_a4ad4e13a4a0d7c36cd86c5236acca381}
+
+
+Definition at line 34 of file sht21.\+c.
+
+\index{sht21.\+c@{sht21.\+c}!S\+H\+T21\+\_\+\+H\+U\+M\+I\+D\+I\+T\+Y\+\_\+\+N\+H\+M\+\_\+\+C\+MD@{S\+H\+T21\+\_\+\+H\+U\+M\+I\+D\+I\+T\+Y\+\_\+\+N\+H\+M\+\_\+\+C\+MD}}
+\index{S\+H\+T21\+\_\+\+H\+U\+M\+I\+D\+I\+T\+Y\+\_\+\+N\+H\+M\+\_\+\+C\+MD@{S\+H\+T21\+\_\+\+H\+U\+M\+I\+D\+I\+T\+Y\+\_\+\+N\+H\+M\+\_\+\+C\+MD}!sht21.\+c@{sht21.\+c}}
+\subsubsection[{\texorpdfstring{S\+H\+T21\+\_\+\+H\+U\+M\+I\+D\+I\+T\+Y\+\_\+\+N\+H\+M\+\_\+\+C\+MD}{SHT21_HUMIDITY_NHM_CMD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+T21\+\_\+\+H\+U\+M\+I\+D\+I\+T\+Y\+\_\+\+N\+H\+M\+\_\+\+C\+MD~( 0x\+F5 )}\hypertarget{sht21_8c_a277214e08bab4e0d2daca9b76e8fa8f6}{}\label{sht21_8c_a277214e08bab4e0d2daca9b76e8fa8f6}
+
+
+Definition at line 36 of file sht21.\+c.
+
+\index{sht21.\+c@{sht21.\+c}!S\+H\+T21\+\_\+\+O\+N\+C\+H\+I\+P\+\_\+\+H\+E\+A\+T\+E\+R\+\_\+\+D\+I\+S\+A\+B\+LE@{S\+H\+T21\+\_\+\+O\+N\+C\+H\+I\+P\+\_\+\+H\+E\+A\+T\+E\+R\+\_\+\+D\+I\+S\+A\+B\+LE}}
+\index{S\+H\+T21\+\_\+\+O\+N\+C\+H\+I\+P\+\_\+\+H\+E\+A\+T\+E\+R\+\_\+\+D\+I\+S\+A\+B\+LE@{S\+H\+T21\+\_\+\+O\+N\+C\+H\+I\+P\+\_\+\+H\+E\+A\+T\+E\+R\+\_\+\+D\+I\+S\+A\+B\+LE}!sht21.\+c@{sht21.\+c}}
+\subsubsection[{\texorpdfstring{S\+H\+T21\+\_\+\+O\+N\+C\+H\+I\+P\+\_\+\+H\+E\+A\+T\+E\+R\+\_\+\+D\+I\+S\+A\+B\+LE}{SHT21_ONCHIP_HEATER_DISABLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+T21\+\_\+\+O\+N\+C\+H\+I\+P\+\_\+\+H\+E\+A\+T\+E\+R\+\_\+\+D\+I\+S\+A\+B\+LE~( 0 $<$$<$ 2 )}\hypertarget{sht21_8c_a806a7fb72608f631f418017d6f875191}{}\label{sht21_8c_a806a7fb72608f631f418017d6f875191}
+
+
+Definition at line 29 of file sht21.\+c.
+
+\index{sht21.\+c@{sht21.\+c}!S\+H\+T21\+\_\+\+O\+N\+C\+H\+I\+P\+\_\+\+H\+E\+A\+T\+E\+R\+\_\+\+E\+N\+A\+B\+LE@{S\+H\+T21\+\_\+\+O\+N\+C\+H\+I\+P\+\_\+\+H\+E\+A\+T\+E\+R\+\_\+\+E\+N\+A\+B\+LE}}
+\index{S\+H\+T21\+\_\+\+O\+N\+C\+H\+I\+P\+\_\+\+H\+E\+A\+T\+E\+R\+\_\+\+E\+N\+A\+B\+LE@{S\+H\+T21\+\_\+\+O\+N\+C\+H\+I\+P\+\_\+\+H\+E\+A\+T\+E\+R\+\_\+\+E\+N\+A\+B\+LE}!sht21.\+c@{sht21.\+c}}
+\subsubsection[{\texorpdfstring{S\+H\+T21\+\_\+\+O\+N\+C\+H\+I\+P\+\_\+\+H\+E\+A\+T\+E\+R\+\_\+\+E\+N\+A\+B\+LE}{SHT21_ONCHIP_HEATER_ENABLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+T21\+\_\+\+O\+N\+C\+H\+I\+P\+\_\+\+H\+E\+A\+T\+E\+R\+\_\+\+E\+N\+A\+B\+LE~( 1 $<$$<$ 2 )}\hypertarget{sht21_8c_aee8a616bc352d0840f716d0fd4d7e0e2}{}\label{sht21_8c_aee8a616bc352d0840f716d0fd4d7e0e2}
+
+
+Definition at line 28 of file sht21.\+c.
+
+\index{sht21.\+c@{sht21.\+c}!S\+H\+T21\+\_\+\+O\+T\+P\+\_\+\+R\+E\+L\+O\+A\+D\+\_\+\+D\+I\+S\+A\+B\+LE@{S\+H\+T21\+\_\+\+O\+T\+P\+\_\+\+R\+E\+L\+O\+A\+D\+\_\+\+D\+I\+S\+A\+B\+LE}}
+\index{S\+H\+T21\+\_\+\+O\+T\+P\+\_\+\+R\+E\+L\+O\+A\+D\+\_\+\+D\+I\+S\+A\+B\+LE@{S\+H\+T21\+\_\+\+O\+T\+P\+\_\+\+R\+E\+L\+O\+A\+D\+\_\+\+D\+I\+S\+A\+B\+LE}!sht21.\+c@{sht21.\+c}}
+\subsubsection[{\texorpdfstring{S\+H\+T21\+\_\+\+O\+T\+P\+\_\+\+R\+E\+L\+O\+A\+D\+\_\+\+D\+I\+S\+A\+B\+LE}{SHT21_OTP_RELOAD_DISABLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+T21\+\_\+\+O\+T\+P\+\_\+\+R\+E\+L\+O\+A\+D\+\_\+\+D\+I\+S\+A\+B\+LE~( 1 $<$$<$ 1 )}\hypertarget{sht21_8c_ae2ea4c8bc93f143bc0f8d895fd85e287}{}\label{sht21_8c_ae2ea4c8bc93f143bc0f8d895fd85e287}
+
+
+Definition at line 31 of file sht21.\+c.
+
+\index{sht21.\+c@{sht21.\+c}!S\+H\+T21\+\_\+\+O\+T\+P\+\_\+\+R\+E\+L\+O\+A\+D\+\_\+\+E\+N\+A\+B\+LE@{S\+H\+T21\+\_\+\+O\+T\+P\+\_\+\+R\+E\+L\+O\+A\+D\+\_\+\+E\+N\+A\+B\+LE}}
+\index{S\+H\+T21\+\_\+\+O\+T\+P\+\_\+\+R\+E\+L\+O\+A\+D\+\_\+\+E\+N\+A\+B\+LE@{S\+H\+T21\+\_\+\+O\+T\+P\+\_\+\+R\+E\+L\+O\+A\+D\+\_\+\+E\+N\+A\+B\+LE}!sht21.\+c@{sht21.\+c}}
+\subsubsection[{\texorpdfstring{S\+H\+T21\+\_\+\+O\+T\+P\+\_\+\+R\+E\+L\+O\+A\+D\+\_\+\+E\+N\+A\+B\+LE}{SHT21_OTP_RELOAD_ENABLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+T21\+\_\+\+O\+T\+P\+\_\+\+R\+E\+L\+O\+A\+D\+\_\+\+E\+N\+A\+B\+LE~( 0 $<$$<$ 1 )}\hypertarget{sht21_8c_aa5b0f837c7a644e9eec445d24a63c978}{}\label{sht21_8c_aa5b0f837c7a644e9eec445d24a63c978}
+
+
+Definition at line 30 of file sht21.\+c.
+
+\index{sht21.\+c@{sht21.\+c}!S\+H\+T21\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+MD@{S\+H\+T21\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+MD}}
+\index{S\+H\+T21\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+MD@{S\+H\+T21\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+MD}!sht21.\+c@{sht21.\+c}}
+\subsubsection[{\texorpdfstring{S\+H\+T21\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+MD}{SHT21_RESET_CMD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+T21\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+MD~( 0x\+F\+E )}\hypertarget{sht21_8c_a002319802e4731e910e8ca9dd56f18e2}{}\label{sht21_8c_a002319802e4731e910e8ca9dd56f18e2}
+
+
+Definition at line 37 of file sht21.\+c.
+
+\index{sht21.\+c@{sht21.\+c}!S\+H\+T21\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+10b\+\_\+13b@{S\+H\+T21\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+10b\+\_\+13b}}
+\index{S\+H\+T21\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+10b\+\_\+13b@{S\+H\+T21\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+10b\+\_\+13b}!sht21.\+c@{sht21.\+c}}
+\subsubsection[{\texorpdfstring{S\+H\+T21\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+10b\+\_\+13b}{SHT21_RESOLUTION_10b_13b}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+T21\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+10b\+\_\+13b~( (1 $<$$<$ 7) $\vert$ (0 $<$$<$ 0) )}\hypertarget{sht21_8c_ae47355f42c927ed87e048a0fc137f5aa}{}\label{sht21_8c_ae47355f42c927ed87e048a0fc137f5aa}
+
+
+Definition at line 24 of file sht21.\+c.
+
+\index{sht21.\+c@{sht21.\+c}!S\+H\+T21\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+11b\+\_\+11b@{S\+H\+T21\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+11b\+\_\+11b}}
+\index{S\+H\+T21\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+11b\+\_\+11b@{S\+H\+T21\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+11b\+\_\+11b}!sht21.\+c@{sht21.\+c}}
+\subsubsection[{\texorpdfstring{S\+H\+T21\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+11b\+\_\+11b}{SHT21_RESOLUTION_11b_11b}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+T21\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+11b\+\_\+11b~( (1 $<$$<$ 7) $\vert$ (1 $<$$<$ 0) )}\hypertarget{sht21_8c_a0e821670cbe4474a95566c5859fd92f3}{}\label{sht21_8c_a0e821670cbe4474a95566c5859fd92f3}
+
+
+Definition at line 25 of file sht21.\+c.
+
+\index{sht21.\+c@{sht21.\+c}!S\+H\+T21\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+12b\+\_\+14b@{S\+H\+T21\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+12b\+\_\+14b}}
+\index{S\+H\+T21\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+12b\+\_\+14b@{S\+H\+T21\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+12b\+\_\+14b}!sht21.\+c@{sht21.\+c}}
+\subsubsection[{\texorpdfstring{S\+H\+T21\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+12b\+\_\+14b}{SHT21_RESOLUTION_12b_14b}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+T21\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+12b\+\_\+14b~( (0 $<$$<$ 7) $\vert$ (0 $<$$<$ 0) )}\hypertarget{sht21_8c_ae4f559f45f850b0978cb0354d2a816e4}{}\label{sht21_8c_ae4f559f45f850b0978cb0354d2a816e4}
+
+
+Definition at line 22 of file sht21.\+c.
+
+\index{sht21.\+c@{sht21.\+c}!S\+H\+T21\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+8b\+\_\+12b@{S\+H\+T21\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+8b\+\_\+12b}}
+\index{S\+H\+T21\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+8b\+\_\+12b@{S\+H\+T21\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+8b\+\_\+12b}!sht21.\+c@{sht21.\+c}}
+\subsubsection[{\texorpdfstring{S\+H\+T21\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+8b\+\_\+12b}{SHT21_RESOLUTION_8b_12b}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+T21\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+O\+N\+\_\+8b\+\_\+12b~( (0 $<$$<$ 7) $\vert$ (1 $<$$<$ 0) )}\hypertarget{sht21_8c_ac938165b3731e330eed42a0a977c2324}{}\label{sht21_8c_ac938165b3731e330eed42a0a977c2324}
+
+
+Definition at line 23 of file sht21.\+c.
+
+\index{sht21.\+c@{sht21.\+c}!S\+H\+T21\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+SK@{S\+H\+T21\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+SK}}
+\index{S\+H\+T21\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+SK@{S\+H\+T21\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+SK}!sht21.\+c@{sht21.\+c}}
+\subsubsection[{\texorpdfstring{S\+H\+T21\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+SK}{SHT21_STATUS_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+T21\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+SK~( 0x\+F\+C )}\hypertarget{sht21_8c_ad4f2a26f35fcb674ceef01522a83fa3f}{}\label{sht21_8c_ad4f2a26f35fcb674ceef01522a83fa3f}
+
+
+Definition at line 39 of file sht21.\+c.
+
+\index{sht21.\+c@{sht21.\+c}!S\+H\+T21\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E\+\_\+\+H\+M\+\_\+\+C\+MD@{S\+H\+T21\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E\+\_\+\+H\+M\+\_\+\+C\+MD}}
+\index{S\+H\+T21\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E\+\_\+\+H\+M\+\_\+\+C\+MD@{S\+H\+T21\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E\+\_\+\+H\+M\+\_\+\+C\+MD}!sht21.\+c@{sht21.\+c}}
+\subsubsection[{\texorpdfstring{S\+H\+T21\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E\+\_\+\+H\+M\+\_\+\+C\+MD}{SHT21_TEMPERATURE_HM_CMD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+T21\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E\+\_\+\+H\+M\+\_\+\+C\+MD~( 0x\+E3 )}\hypertarget{sht21_8c_ab6cb48873ee1fe89a9f32635409aae6b}{}\label{sht21_8c_ab6cb48873ee1fe89a9f32635409aae6b}
+
+
+Definition at line 33 of file sht21.\+c.
+
+\index{sht21.\+c@{sht21.\+c}!S\+H\+T21\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E\+\_\+\+N\+H\+M\+\_\+\+C\+MD@{S\+H\+T21\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E\+\_\+\+N\+H\+M\+\_\+\+C\+MD}}
+\index{S\+H\+T21\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E\+\_\+\+N\+H\+M\+\_\+\+C\+MD@{S\+H\+T21\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E\+\_\+\+N\+H\+M\+\_\+\+C\+MD}!sht21.\+c@{sht21.\+c}}
+\subsubsection[{\texorpdfstring{S\+H\+T21\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E\+\_\+\+N\+H\+M\+\_\+\+C\+MD}{SHT21_TEMPERATURE_NHM_CMD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+T21\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E\+\_\+\+N\+H\+M\+\_\+\+C\+MD~( 0x\+F3 )}\hypertarget{sht21_8c_a61ebda7bca1cb93d502989f9fd3f7482}{}\label{sht21_8c_a61ebda7bca1cb93d502989f9fd3f7482}
+
+
+Definition at line 35 of file sht21.\+c.
+
+\index{sht21.\+c@{sht21.\+c}!S\+H\+T21\+\_\+\+U\+S\+E\+R\+\_\+\+C\+O\+N\+F\+IG@{S\+H\+T21\+\_\+\+U\+S\+E\+R\+\_\+\+C\+O\+N\+F\+IG}}
+\index{S\+H\+T21\+\_\+\+U\+S\+E\+R\+\_\+\+C\+O\+N\+F\+IG@{S\+H\+T21\+\_\+\+U\+S\+E\+R\+\_\+\+C\+O\+N\+F\+IG}!sht21.\+c@{sht21.\+c}}
+\subsubsection[{\texorpdfstring{S\+H\+T21\+\_\+\+U\+S\+E\+R\+\_\+\+C\+O\+N\+F\+IG}{SHT21_USER_CONFIG}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+T21\+\_\+\+U\+S\+E\+R\+\_\+\+C\+O\+N\+F\+IG}\hypertarget{sht21_8c_a2997948311e7ccae9fff38e978513d72}{}\label{sht21_8c_a2997948311e7ccae9fff38e978513d72}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+( \hyperlink{sht21_8c_ac938165b3731e330eed42a0a977c2324}{SHT21\_RESOLUTION\_8b\_12b} | \(\backslash\)
+                                          SHT21\_ONCHIP\_HEATER\_DISABLE | \(\backslash\)
+                                          SHT21\_BATTERY\_ABOVE\_2V25 | \(\backslash\)
+                                          SHT21\_OTP\_RELOAD\_DISABLE )
+\end{DoxyCode}
+
+
+Definition at line 46 of file sht21.\+c.
+
+\index{sht21.\+c@{sht21.\+c}!S\+H\+T21\+\_\+\+U\+S\+E\+R\+\_\+\+R\+E\+G\+\_\+\+R\+E\+AD@{S\+H\+T21\+\_\+\+U\+S\+E\+R\+\_\+\+R\+E\+G\+\_\+\+R\+E\+AD}}
+\index{S\+H\+T21\+\_\+\+U\+S\+E\+R\+\_\+\+R\+E\+G\+\_\+\+R\+E\+AD@{S\+H\+T21\+\_\+\+U\+S\+E\+R\+\_\+\+R\+E\+G\+\_\+\+R\+E\+AD}!sht21.\+c@{sht21.\+c}}
+\subsubsection[{\texorpdfstring{S\+H\+T21\+\_\+\+U\+S\+E\+R\+\_\+\+R\+E\+G\+\_\+\+R\+E\+AD}{SHT21_USER_REG_READ}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+T21\+\_\+\+U\+S\+E\+R\+\_\+\+R\+E\+G\+\_\+\+R\+E\+AD~( 0x\+E7 )}\hypertarget{sht21_8c_a47c737d46acb7fa929ae8756928b9322}{}\label{sht21_8c_a47c737d46acb7fa929ae8756928b9322}
+
+
+Definition at line 18 of file sht21.\+c.
+
+\index{sht21.\+c@{sht21.\+c}!S\+H\+T21\+\_\+\+U\+S\+E\+R\+\_\+\+R\+E\+G\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+B\+I\+TS@{S\+H\+T21\+\_\+\+U\+S\+E\+R\+\_\+\+R\+E\+G\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+B\+I\+TS}}
+\index{S\+H\+T21\+\_\+\+U\+S\+E\+R\+\_\+\+R\+E\+G\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+B\+I\+TS@{S\+H\+T21\+\_\+\+U\+S\+E\+R\+\_\+\+R\+E\+G\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+B\+I\+TS}!sht21.\+c@{sht21.\+c}}
+\subsubsection[{\texorpdfstring{S\+H\+T21\+\_\+\+U\+S\+E\+R\+\_\+\+R\+E\+G\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+B\+I\+TS}{SHT21_USER_REG_RESERVED_BITS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+T21\+\_\+\+U\+S\+E\+R\+\_\+\+R\+E\+G\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+B\+I\+TS~( 0x38 )}\hypertarget{sht21_8c_a865835be27094872151650648d769dfd}{}\label{sht21_8c_a865835be27094872151650648d769dfd}
+
+
+Definition at line 20 of file sht21.\+c.
+
+\index{sht21.\+c@{sht21.\+c}!S\+H\+T21\+\_\+\+U\+S\+E\+R\+\_\+\+R\+E\+G\+\_\+\+W\+R\+I\+TE@{S\+H\+T21\+\_\+\+U\+S\+E\+R\+\_\+\+R\+E\+G\+\_\+\+W\+R\+I\+TE}}
+\index{S\+H\+T21\+\_\+\+U\+S\+E\+R\+\_\+\+R\+E\+G\+\_\+\+W\+R\+I\+TE@{S\+H\+T21\+\_\+\+U\+S\+E\+R\+\_\+\+R\+E\+G\+\_\+\+W\+R\+I\+TE}!sht21.\+c@{sht21.\+c}}
+\subsubsection[{\texorpdfstring{S\+H\+T21\+\_\+\+U\+S\+E\+R\+\_\+\+R\+E\+G\+\_\+\+W\+R\+I\+TE}{SHT21_USER_REG_WRITE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+T21\+\_\+\+U\+S\+E\+R\+\_\+\+R\+E\+G\+\_\+\+W\+R\+I\+TE~( 0x\+E6 )}\hypertarget{sht21_8c_ae5241f65dba03e0a2cb249c59ae07e44}{}\label{sht21_8c_ae5241f65dba03e0a2cb249c59ae07e44}
+
+
+Definition at line 19 of file sht21.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{sht21.\+c@{sht21.\+c}!sht21\+\_\+convert\+\_\+humidity@{sht21\+\_\+convert\+\_\+humidity}}
+\index{sht21\+\_\+convert\+\_\+humidity@{sht21\+\_\+convert\+\_\+humidity}!sht21.\+c@{sht21.\+c}}
+\subsubsection[{\texorpdfstring{sht21\+\_\+convert\+\_\+humidity(uint16\+\_\+t humidity)}{sht21_convert_humidity(uint16_t humidity)}}]{\setlength{\rightskip}{0pt plus 5cm}float sht21\+\_\+convert\+\_\+humidity (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t}}]{humidity}
+\end{DoxyParamCaption}
+)}\hypertarget{sht21_8c_a9ffe68ab0a6fe9ba56591a7e183343b2}{}\label{sht21_8c_a9ffe68ab0a6fe9ba56591a7e183343b2}
+
+
+Definition at line 139 of file sht21.\+c.
+
+\index{sht21.\+c@{sht21.\+c}!sht21\+\_\+convert\+\_\+temperature@{sht21\+\_\+convert\+\_\+temperature}}
+\index{sht21\+\_\+convert\+\_\+temperature@{sht21\+\_\+convert\+\_\+temperature}!sht21.\+c@{sht21.\+c}}
+\subsubsection[{\texorpdfstring{sht21\+\_\+convert\+\_\+temperature(uint16\+\_\+t temperature)}{sht21_convert_temperature(uint16_t temperature)}}]{\setlength{\rightskip}{0pt plus 5cm}float sht21\+\_\+convert\+\_\+temperature (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t}}]{temperature}
+\end{DoxyParamCaption}
+)}\hypertarget{sht21_8c_ab2057c38b5dbd04aa65726400f69a049}{}\label{sht21_8c_ab2057c38b5dbd04aa65726400f69a049}
+
+
+Definition at line 117 of file sht21.\+c.
+
+\index{sht21.\+c@{sht21.\+c}!sht21\+\_\+init@{sht21\+\_\+init}}
+\index{sht21\+\_\+init@{sht21\+\_\+init}!sht21.\+c@{sht21.\+c}}
+\subsubsection[{\texorpdfstring{sht21\+\_\+init(void)}{sht21_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sht21\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{sht21_8c_a6b880c0246c32de09557a377f62abcdc}{}\label{sht21_8c_a6b880c0246c32de09557a377f62abcdc}
+
+
+Definition at line 59 of file sht21.\+c.
+
+\index{sht21.\+c@{sht21.\+c}!sht21\+\_\+is\+\_\+present@{sht21\+\_\+is\+\_\+present}}
+\index{sht21\+\_\+is\+\_\+present@{sht21\+\_\+is\+\_\+present}!sht21.\+c@{sht21.\+c}}
+\subsubsection[{\texorpdfstring{sht21\+\_\+is\+\_\+present(void)}{sht21_is_present(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} sht21\+\_\+is\+\_\+present (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{sht21_8c_a0487ed4f2ac1a5177a301c0880edb22b}{}\label{sht21_8c_a0487ed4f2ac1a5177a301c0880edb22b}
+
+
+Definition at line 88 of file sht21.\+c.
+
+\index{sht21.\+c@{sht21.\+c}!sht21\+\_\+read\+\_\+humidity@{sht21\+\_\+read\+\_\+humidity}}
+\index{sht21\+\_\+read\+\_\+humidity@{sht21\+\_\+read\+\_\+humidity}!sht21.\+c@{sht21.\+c}}
+\subsubsection[{\texorpdfstring{sht21\+\_\+read\+\_\+humidity(void)}{sht21_read_humidity(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\+\_\+t} sht21\+\_\+read\+\_\+humidity (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{sht21_8c_afdc55ecc4a8497fd3fd6264f94f43f6e}{}\label{sht21_8c_afdc55ecc4a8497fd3fd6264f94f43f6e}
+
+
+Definition at line 126 of file sht21.\+c.
+
+\index{sht21.\+c@{sht21.\+c}!sht21\+\_\+read\+\_\+temperature@{sht21\+\_\+read\+\_\+temperature}}
+\index{sht21\+\_\+read\+\_\+temperature@{sht21\+\_\+read\+\_\+temperature}!sht21.\+c@{sht21.\+c}}
+\subsubsection[{\texorpdfstring{sht21\+\_\+read\+\_\+temperature(void)}{sht21_read_temperature(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\+\_\+t} sht21\+\_\+read\+\_\+temperature (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{sht21_8c_a4f3974720ab7e9cb3a972361f98140a5}{}\label{sht21_8c_a4f3974720ab7e9cb3a972361f98140a5}
+
+
+Definition at line 104 of file sht21.\+c.
+
+\index{sht21.\+c@{sht21.\+c}!sht21\+\_\+reset@{sht21\+\_\+reset}}
+\index{sht21\+\_\+reset@{sht21\+\_\+reset}!sht21.\+c@{sht21.\+c}}
+\subsubsection[{\texorpdfstring{sht21\+\_\+reset(void)}{sht21_reset(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sht21\+\_\+reset (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{sht21_8c_a12240ccb03b6a47c498893adc3b2c829}{}\label{sht21_8c_a12240ccb03b6a47c498893adc3b2c829}
+
+
+Definition at line 83 of file sht21.\+c.
+

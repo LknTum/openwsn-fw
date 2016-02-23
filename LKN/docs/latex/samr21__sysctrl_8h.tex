@@ -1,0 +1,285 @@
+\hypertarget{samr21__sysctrl_8h}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/samr21\+\_\+xpro/drivers/inc/samr21\+\_\+sysctrl.h File Reference}
+\label{samr21__sysctrl_8h}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/samr21\+\_\+xpro/drivers/inc/samr21\+\_\+sysctrl.\+h@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/samr21\+\_\+xpro/drivers/inc/samr21\+\_\+sysctrl.\+h}}
+{\ttfamily \#include \char`\"{}base\+\_\+type.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{samr21__sysctrl_8h_afa18f416d398bc000d55ce98d66ef5fc}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+F\+L\+A\+S\+H\+\_\+\+W\+A\+I\+T\+\_\+\+S\+T\+A\+TE}~(2)
+\item 
+\#define \hyperlink{samr21__sysctrl_8h_af7bee1e0f08674130bebbed7091807e6}{D\+F\+L\+L\+\_\+\+M\+U\+L\+\_\+\+V\+AL}~(1024)
+\item 
+\#define \hyperlink{samr21__sysctrl_8h_a2efa448f78486cf4ee51a2de852ba95d}{D\+F\+L\+L\+\_\+\+I\+N\+P\+U\+T\+\_\+\+C\+L\+O\+CK}~G\+C\+L\+K\+\_\+\+C\+L\+K\+C\+T\+R\+L\+\_\+\+G\+E\+N\+\_\+\+G\+C\+L\+K2
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{samr21__sysctrl_8h_a1ab9bb87560ad127ed982591b7d67311}{gclk\+\_\+generator} \{ \hyperlink{samr21__sysctrl_8h_a1ab9bb87560ad127ed982591b7d67311a66f60c7b34b5fc16a9845d83370f7231}{G\+C\+L\+K\+\_\+\+G\+E\+N\+E\+R\+A\+T\+O\+R\+\_\+0}
+ \}\begin{DoxyCompactList}\small\item\em List of available G\+C\+LK generators. \end{DoxyCompactList}
+\item 
+enum \hyperlink{samr21__sysctrl_8h_a6a5226fe65f283da094a3d1bd6c5692f}{system\+\_\+xosc32k\+\_\+startup} \{ \\*
+\hyperlink{samr21__sysctrl_8h_a6a5226fe65f283da094a3d1bd6c5692faa91d598f764710a4266770238e413717}{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+0}, 
+\hyperlink{samr21__sysctrl_8h_a6a5226fe65f283da094a3d1bd6c5692fa762b4a74172784915df68700e51d4e0f}{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+32}, 
+\hyperlink{samr21__sysctrl_8h_a6a5226fe65f283da094a3d1bd6c5692fafa1cf29c3c5c3f74d1a2ffdd7c3199e3}{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+2048}, 
+\hyperlink{samr21__sysctrl_8h_a6a5226fe65f283da094a3d1bd6c5692fa6c5f69164630ba16faa100873bd73dc0}{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+4096}, 
+\\*
+\hyperlink{samr21__sysctrl_8h_a6a5226fe65f283da094a3d1bd6c5692fae9d3c139f5442c2ba949a8d04ee7d38e}{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+16384}, 
+\hyperlink{samr21__sysctrl_8h_a6a5226fe65f283da094a3d1bd6c5692fa78dab161af7b89436e8efde14b12b087}{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+32768}, 
+\hyperlink{samr21__sysctrl_8h_a6a5226fe65f283da094a3d1bd6c5692fa7205636a0c4b4d7bc1b1aad12aaf9a49}{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+65536}, 
+\hyperlink{samr21__sysctrl_8h_a6a5226fe65f283da094a3d1bd6c5692fab44c3b77e6d8a8e49a1ed5b474eca9c2}{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+131072}
+ \}\begin{DoxyCompactList}\small\item\em Available start-\/up times for the X\+O\+S\+C32K. \end{DoxyCompactList}
+\item 
+enum \hyperlink{samr21__sysctrl_8h_a1ee1b0be167bd253038400d9c6d0cbef}{system\+\_\+osc8m\+\_\+div} \{ \hyperlink{samr21__sysctrl_8h_a1ee1b0be167bd253038400d9c6d0cbefa564fc679b9f90127b6666b6bced33463}{S\+Y\+S\+T\+E\+M\+\_\+\+O\+S\+C8\+M\+\_\+\+D\+I\+V\+\_\+1}, 
+\hyperlink{samr21__sysctrl_8h_a1ee1b0be167bd253038400d9c6d0cbefa5484854b8a0bb16902b603dd8024d76d}{S\+Y\+S\+T\+E\+M\+\_\+\+O\+S\+C8\+M\+\_\+\+D\+I\+V\+\_\+2}, 
+\hyperlink{samr21__sysctrl_8h_a1ee1b0be167bd253038400d9c6d0cbefa6f70022cf44a05a464d1a5af02ceed1b}{S\+Y\+S\+T\+E\+M\+\_\+\+O\+S\+C8\+M\+\_\+\+D\+I\+V\+\_\+4}, 
+\hyperlink{samr21__sysctrl_8h_a1ee1b0be167bd253038400d9c6d0cbefa23f917a883d385d557b7e9ee9b80e14c}{S\+Y\+S\+T\+E\+M\+\_\+\+O\+S\+C8\+M\+\_\+\+D\+I\+V\+\_\+8}
+ \}\begin{DoxyCompactList}\small\item\em Division prescalers for the internal 8\+M\+Hz system clock. \end{DoxyCompactList}
+\item 
+enum \hyperlink{samr21__sysctrl_8h_a30e9b73868506309f3dc4935fbe9ce4b}{system\+\_\+main\+\_\+clock\+\_\+div} \{ \\*
+\hyperlink{samr21__sysctrl_8h_a30e9b73868506309f3dc4935fbe9ce4baa4e9b93b809ddfbdffb13f72da94c1d7}{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+1}, 
+\hyperlink{samr21__sysctrl_8h_a30e9b73868506309f3dc4935fbe9ce4ba6b64d2dd96c00b24b5abe48c605959c4}{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+2}, 
+\hyperlink{samr21__sysctrl_8h_a30e9b73868506309f3dc4935fbe9ce4ba6e6564b4069b1d0a3244697b525c516b}{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+4}, 
+\hyperlink{samr21__sysctrl_8h_a30e9b73868506309f3dc4935fbe9ce4baa88dc289422295f74b1be13341bae02d}{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+8}, 
+\\*
+\hyperlink{samr21__sysctrl_8h_a30e9b73868506309f3dc4935fbe9ce4ba6742ac478e6df1a9999bc1852ac90ea9}{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+16}, 
+\hyperlink{samr21__sysctrl_8h_a30e9b73868506309f3dc4935fbe9ce4ba739314ab4a798f75c254214f9c64f23b}{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+32}, 
+\hyperlink{samr21__sysctrl_8h_a30e9b73868506309f3dc4935fbe9ce4bae988c4e7ef255b846e552da9c9b4e11b}{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+64}, 
+\hyperlink{samr21__sysctrl_8h_a30e9b73868506309f3dc4935fbe9ce4baec6efb1ec57e2967ff513074e145d110}{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+128}
+ \}\begin{DoxyCompactList}\small\item\em Main C\+PU and A\+P\+B/\+A\+HB bus clock source prescaler values. \end{DoxyCompactList}
+\item 
+enum \hyperlink{samr21__sysctrl_8h_af264d9ce05843104cb8a393b1d9ddfa2}{system\+\_\+clock\+\_\+dfll\+\_\+loop\+\_\+mode} \{ \hyperlink{samr21__sysctrl_8h_af264d9ce05843104cb8a393b1d9ddfa2a3d9e15bfd0803e41da1f59f8b699184a}{S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+F\+L\+L\+\_\+\+L\+O\+O\+P\+\_\+\+M\+O\+D\+E\+\_\+\+O\+P\+EN}, 
+\hyperlink{samr21__sysctrl_8h_af264d9ce05843104cb8a393b1d9ddfa2a1a18e1d9233792ba5e4663c978d7a46b}{S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+F\+L\+L\+\_\+\+L\+O\+O\+P\+\_\+\+M\+O\+D\+E\+\_\+\+C\+L\+O\+S\+ED}, 
+\hyperlink{samr21__sysctrl_8h_af264d9ce05843104cb8a393b1d9ddfa2a2051ae06e14cd38c4a7f12a130464a79}{S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+F\+L\+L\+\_\+\+L\+O\+O\+P\+\_\+\+M\+O\+D\+E\+\_\+\+U\+S\+B\+\_\+\+R\+E\+C\+O\+V\+E\+RY} = (1 $<$$<$ 5)
+ \}\begin{DoxyCompactList}\small\item\em Operating modes of the D\+F\+LL clock source. \end{DoxyCompactList}
+\item 
+enum \hyperlink{samr21__sysctrl_8h_a6a75333c00b88a5da14eb9ba5ead2be1}{system\+\_\+sleepmode} \{ \hyperlink{samr21__sysctrl_8h_a6a75333c00b88a5da14eb9ba5ead2be1a273e166ed48d972d58d5d6e5466b7977}{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+I\+D\+L\+E\+\_\+0}, 
+\hyperlink{samr21__sysctrl_8h_a6a75333c00b88a5da14eb9ba5ead2be1ada43603665b981de310962b380ff2b62}{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+I\+D\+L\+E\+\_\+1}, 
+\hyperlink{samr21__sysctrl_8h_a6a75333c00b88a5da14eb9ba5ead2be1a7b03cf170b0a7b1b2335a270fbcb5df3}{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+I\+D\+L\+E\+\_\+2}, 
+\hyperlink{samr21__sysctrl_8h_a6a75333c00b88a5da14eb9ba5ead2be1a446eddfe38bc09277ed1863ffac261e3}{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+S\+T\+A\+N\+D\+BY}
+ \}\begin{DoxyCompactList}\small\item\em Device sleep modes. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{samr21__sysctrl_8h_a02fbef4ca042a3a926a687e81ddf3b61}{sys\+\_\+clock\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em sys\+\_\+clock\+\_\+init Function to initialize the system clock \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!D\+F\+L\+L\+\_\+\+I\+N\+P\+U\+T\+\_\+\+C\+L\+O\+CK@{D\+F\+L\+L\+\_\+\+I\+N\+P\+U\+T\+\_\+\+C\+L\+O\+CK}}
+\index{D\+F\+L\+L\+\_\+\+I\+N\+P\+U\+T\+\_\+\+C\+L\+O\+CK@{D\+F\+L\+L\+\_\+\+I\+N\+P\+U\+T\+\_\+\+C\+L\+O\+CK}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}
+\subsubsection[{\texorpdfstring{D\+F\+L\+L\+\_\+\+I\+N\+P\+U\+T\+\_\+\+C\+L\+O\+CK}{DFLL_INPUT_CLOCK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+F\+L\+L\+\_\+\+I\+N\+P\+U\+T\+\_\+\+C\+L\+O\+CK~G\+C\+L\+K\+\_\+\+C\+L\+K\+C\+T\+R\+L\+\_\+\+G\+E\+N\+\_\+\+G\+C\+L\+K2}\hypertarget{samr21__sysctrl_8h_a2efa448f78486cf4ee51a2de852ba95d}{}\label{samr21__sysctrl_8h_a2efa448f78486cf4ee51a2de852ba95d}
+
+
+Definition at line 48 of file samr21\+\_\+sysctrl.\+h.
+
+\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!D\+F\+L\+L\+\_\+\+M\+U\+L\+\_\+\+V\+AL@{D\+F\+L\+L\+\_\+\+M\+U\+L\+\_\+\+V\+AL}}
+\index{D\+F\+L\+L\+\_\+\+M\+U\+L\+\_\+\+V\+AL@{D\+F\+L\+L\+\_\+\+M\+U\+L\+\_\+\+V\+AL}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}
+\subsubsection[{\texorpdfstring{D\+F\+L\+L\+\_\+\+M\+U\+L\+\_\+\+V\+AL}{DFLL_MUL_VAL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+F\+L\+L\+\_\+\+M\+U\+L\+\_\+\+V\+AL~(1024)}\hypertarget{samr21__sysctrl_8h_af7bee1e0f08674130bebbed7091807e6}{}\label{samr21__sysctrl_8h_af7bee1e0f08674130bebbed7091807e6}
+
+
+Definition at line 45 of file samr21\+\_\+sysctrl.\+h.
+
+\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+F\+L\+A\+S\+H\+\_\+\+W\+A\+I\+T\+\_\+\+S\+T\+A\+TE@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+F\+L\+A\+S\+H\+\_\+\+W\+A\+I\+T\+\_\+\+S\+T\+A\+TE}}
+\index{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+F\+L\+A\+S\+H\+\_\+\+W\+A\+I\+T\+\_\+\+S\+T\+A\+TE@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+F\+L\+A\+S\+H\+\_\+\+W\+A\+I\+T\+\_\+\+S\+T\+A\+TE}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}
+\subsubsection[{\texorpdfstring{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+F\+L\+A\+S\+H\+\_\+\+W\+A\+I\+T\+\_\+\+S\+T\+A\+TE}{INTERNAL_FLASH_WAIT_STATE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+F\+L\+A\+S\+H\+\_\+\+W\+A\+I\+T\+\_\+\+S\+T\+A\+TE~(2)}\hypertarget{samr21__sysctrl_8h_afa18f416d398bc000d55ce98d66ef5fc}{}\label{samr21__sysctrl_8h_afa18f416d398bc000d55ce98d66ef5fc}
+Copyright (c) 2014 Atmel Corporation. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item The name of Atmel may not be used to endorse or promote products derived from this software without specific prior written permission.
+\item This software may only be redistributed and used in connection with an Atmel microcontroller product.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE. 
+
+Definition at line 42 of file samr21\+\_\+sysctrl.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!gclk\+\_\+generator@{gclk\+\_\+generator}}
+\index{gclk\+\_\+generator@{gclk\+\_\+generator}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}
+\subsubsection[{\texorpdfstring{gclk\+\_\+generator}{gclk_generator}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf gclk\+\_\+generator}}\hypertarget{samr21__sysctrl_8h_a1ab9bb87560ad127ed982591b7d67311}{}\label{samr21__sysctrl_8h_a1ab9bb87560ad127ed982591b7d67311}
+
+
+List of available G\+C\+LK generators. 
+
+List of Available G\+C\+LK generators. This enum is used in the peripheral device drivers to select the G\+C\+LK generator to be used for its operation.
+
+The number of G\+C\+LK generators available is device dependent. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{G\+C\+L\+K\+\_\+\+G\+E\+N\+E\+R\+A\+T\+O\+R\+\_\+0@{G\+C\+L\+K\+\_\+\+G\+E\+N\+E\+R\+A\+T\+O\+R\+\_\+0}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!G\+C\+L\+K\+\_\+\+G\+E\+N\+E\+R\+A\+T\+O\+R\+\_\+0@{G\+C\+L\+K\+\_\+\+G\+E\+N\+E\+R\+A\+T\+O\+R\+\_\+0}}\item[{\em 
+G\+C\+L\+K\+\_\+\+G\+E\+N\+E\+R\+A\+T\+O\+R\+\_\+0\hypertarget{samr21__sysctrl_8h_a1ab9bb87560ad127ed982591b7d67311a66f60c7b34b5fc16a9845d83370f7231}{}\label{samr21__sysctrl_8h_a1ab9bb87560ad127ed982591b7d67311a66f60c7b34b5fc16a9845d83370f7231}
+}]G\+C\+LK generator channel 0. \end{description}
+\end{Desc}
+
+
+Definition at line 59 of file samr21\+\_\+sysctrl.\+h.
+
+\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!system\+\_\+clock\+\_\+dfll\+\_\+loop\+\_\+mode@{system\+\_\+clock\+\_\+dfll\+\_\+loop\+\_\+mode}}
+\index{system\+\_\+clock\+\_\+dfll\+\_\+loop\+\_\+mode@{system\+\_\+clock\+\_\+dfll\+\_\+loop\+\_\+mode}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}
+\subsubsection[{\texorpdfstring{system\+\_\+clock\+\_\+dfll\+\_\+loop\+\_\+mode}{system_clock_dfll_loop_mode}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf system\+\_\+clock\+\_\+dfll\+\_\+loop\+\_\+mode}}\hypertarget{samr21__sysctrl_8h_af264d9ce05843104cb8a393b1d9ddfa2}{}\label{samr21__sysctrl_8h_af264d9ce05843104cb8a393b1d9ddfa2}
+
+
+Operating modes of the D\+F\+LL clock source. 
+
+Available operating modes of the D\+F\+LL clock source module, \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+F\+L\+L\+\_\+\+L\+O\+O\+P\+\_\+\+M\+O\+D\+E\+\_\+\+O\+P\+EN@{S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+F\+L\+L\+\_\+\+L\+O\+O\+P\+\_\+\+M\+O\+D\+E\+\_\+\+O\+P\+EN}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+F\+L\+L\+\_\+\+L\+O\+O\+P\+\_\+\+M\+O\+D\+E\+\_\+\+O\+P\+EN@{S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+F\+L\+L\+\_\+\+L\+O\+O\+P\+\_\+\+M\+O\+D\+E\+\_\+\+O\+P\+EN}}\item[{\em 
+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+F\+L\+L\+\_\+\+L\+O\+O\+P\+\_\+\+M\+O\+D\+E\+\_\+\+O\+P\+EN\hypertarget{samr21__sysctrl_8h_af264d9ce05843104cb8a393b1d9ddfa2a3d9e15bfd0803e41da1f59f8b699184a}{}\label{samr21__sysctrl_8h_af264d9ce05843104cb8a393b1d9ddfa2a3d9e15bfd0803e41da1f59f8b699184a}
+}]The D\+F\+LL is operating in open loop mode with no feedback \index{S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+F\+L\+L\+\_\+\+L\+O\+O\+P\+\_\+\+M\+O\+D\+E\+\_\+\+C\+L\+O\+S\+ED@{S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+F\+L\+L\+\_\+\+L\+O\+O\+P\+\_\+\+M\+O\+D\+E\+\_\+\+C\+L\+O\+S\+ED}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+F\+L\+L\+\_\+\+L\+O\+O\+P\+\_\+\+M\+O\+D\+E\+\_\+\+C\+L\+O\+S\+ED@{S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+F\+L\+L\+\_\+\+L\+O\+O\+P\+\_\+\+M\+O\+D\+E\+\_\+\+C\+L\+O\+S\+ED}}\item[{\em 
+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+F\+L\+L\+\_\+\+L\+O\+O\+P\+\_\+\+M\+O\+D\+E\+\_\+\+C\+L\+O\+S\+ED\hypertarget{samr21__sysctrl_8h_af264d9ce05843104cb8a393b1d9ddfa2a1a18e1d9233792ba5e4663c978d7a46b}{}\label{samr21__sysctrl_8h_af264d9ce05843104cb8a393b1d9ddfa2a1a18e1d9233792ba5e4663c978d7a46b}
+}]The D\+F\+LL is operating in closed loop mode with frequency feedback from a low frequency reference clock \index{S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+F\+L\+L\+\_\+\+L\+O\+O\+P\+\_\+\+M\+O\+D\+E\+\_\+\+U\+S\+B\+\_\+\+R\+E\+C\+O\+V\+E\+RY@{S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+F\+L\+L\+\_\+\+L\+O\+O\+P\+\_\+\+M\+O\+D\+E\+\_\+\+U\+S\+B\+\_\+\+R\+E\+C\+O\+V\+E\+RY}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+F\+L\+L\+\_\+\+L\+O\+O\+P\+\_\+\+M\+O\+D\+E\+\_\+\+U\+S\+B\+\_\+\+R\+E\+C\+O\+V\+E\+RY@{S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+F\+L\+L\+\_\+\+L\+O\+O\+P\+\_\+\+M\+O\+D\+E\+\_\+\+U\+S\+B\+\_\+\+R\+E\+C\+O\+V\+E\+RY}}\item[{\em 
+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+F\+L\+L\+\_\+\+L\+O\+O\+P\+\_\+\+M\+O\+D\+E\+\_\+\+U\+S\+B\+\_\+\+R\+E\+C\+O\+V\+E\+RY\hypertarget{samr21__sysctrl_8h_af264d9ce05843104cb8a393b1d9ddfa2a2051ae06e14cd38c4a7f12a130464a79}{}\label{samr21__sysctrl_8h_af264d9ce05843104cb8a393b1d9ddfa2a2051ae06e14cd38c4a7f12a130464a79}
+}]The D\+F\+LL is operating in U\+SB recovery mode with frequency feedback from U\+SB S\+OF \end{description}
+\end{Desc}
+
+
+Definition at line 198 of file samr21\+\_\+sysctrl.\+h.
+
+\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!system\+\_\+main\+\_\+clock\+\_\+div@{system\+\_\+main\+\_\+clock\+\_\+div}}
+\index{system\+\_\+main\+\_\+clock\+\_\+div@{system\+\_\+main\+\_\+clock\+\_\+div}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}
+\subsubsection[{\texorpdfstring{system\+\_\+main\+\_\+clock\+\_\+div}{system_main_clock_div}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf system\+\_\+main\+\_\+clock\+\_\+div}}\hypertarget{samr21__sysctrl_8h_a30e9b73868506309f3dc4935fbe9ce4b}{}\label{samr21__sysctrl_8h_a30e9b73868506309f3dc4935fbe9ce4b}
+
+
+Main C\+PU and A\+P\+B/\+A\+HB bus clock source prescaler values. 
+
+Available division ratios for the C\+PU and A\+P\+B/\+A\+HB bus clocks. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+1@{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+1}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+1@{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+1}}\item[{\em 
+S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+1\hypertarget{samr21__sysctrl_8h_a30e9b73868506309f3dc4935fbe9ce4baa4e9b93b809ddfbdffb13f72da94c1d7}{}\label{samr21__sysctrl_8h_a30e9b73868506309f3dc4935fbe9ce4baa4e9b93b809ddfbdffb13f72da94c1d7}
+}]Divide Main clock by 1 \index{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+2@{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+2}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+2@{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+2}}\item[{\em 
+S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+2\hypertarget{samr21__sysctrl_8h_a30e9b73868506309f3dc4935fbe9ce4ba6b64d2dd96c00b24b5abe48c605959c4}{}\label{samr21__sysctrl_8h_a30e9b73868506309f3dc4935fbe9ce4ba6b64d2dd96c00b24b5abe48c605959c4}
+}]Divide Main clock by 2 \index{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+4@{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+4}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+4@{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+4}}\item[{\em 
+S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+4\hypertarget{samr21__sysctrl_8h_a30e9b73868506309f3dc4935fbe9ce4ba6e6564b4069b1d0a3244697b525c516b}{}\label{samr21__sysctrl_8h_a30e9b73868506309f3dc4935fbe9ce4ba6e6564b4069b1d0a3244697b525c516b}
+}]Divide Main clock by 4 \index{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+8@{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+8}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+8@{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+8}}\item[{\em 
+S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+8\hypertarget{samr21__sysctrl_8h_a30e9b73868506309f3dc4935fbe9ce4baa88dc289422295f74b1be13341bae02d}{}\label{samr21__sysctrl_8h_a30e9b73868506309f3dc4935fbe9ce4baa88dc289422295f74b1be13341bae02d}
+}]Divide Main clock by 8 \index{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+16@{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+16}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+16@{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+16}}\item[{\em 
+S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+16\hypertarget{samr21__sysctrl_8h_a30e9b73868506309f3dc4935fbe9ce4ba6742ac478e6df1a9999bc1852ac90ea9}{}\label{samr21__sysctrl_8h_a30e9b73868506309f3dc4935fbe9ce4ba6742ac478e6df1a9999bc1852ac90ea9}
+}]Divide Main clock by 16 \index{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+32@{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+32}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+32@{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+32}}\item[{\em 
+S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+32\hypertarget{samr21__sysctrl_8h_a30e9b73868506309f3dc4935fbe9ce4ba739314ab4a798f75c254214f9c64f23b}{}\label{samr21__sysctrl_8h_a30e9b73868506309f3dc4935fbe9ce4ba739314ab4a798f75c254214f9c64f23b}
+}]Divide Main clock by 32 \index{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+64@{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+64}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+64@{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+64}}\item[{\em 
+S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+64\hypertarget{samr21__sysctrl_8h_a30e9b73868506309f3dc4935fbe9ce4bae988c4e7ef255b846e552da9c9b4e11b}{}\label{samr21__sysctrl_8h_a30e9b73868506309f3dc4935fbe9ce4bae988c4e7ef255b846e552da9c9b4e11b}
+}]Divide Main clock by 64 \index{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+128@{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+128}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+128@{S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+128}}\item[{\em 
+S\+Y\+S\+T\+E\+M\+\_\+\+M\+A\+I\+N\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+\_\+128\hypertarget{samr21__sysctrl_8h_a30e9b73868506309f3dc4935fbe9ce4baec6efb1ec57e2967ff513074e145d110}{}\label{samr21__sysctrl_8h_a30e9b73868506309f3dc4935fbe9ce4baec6efb1ec57e2967ff513074e145d110}
+}]Divide Main clock by 128 \end{description}
+\end{Desc}
+
+
+Definition at line 174 of file samr21\+\_\+sysctrl.\+h.
+
+\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!system\+\_\+osc8m\+\_\+div@{system\+\_\+osc8m\+\_\+div}}
+\index{system\+\_\+osc8m\+\_\+div@{system\+\_\+osc8m\+\_\+div}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}
+\subsubsection[{\texorpdfstring{system\+\_\+osc8m\+\_\+div}{system_osc8m_div}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf system\+\_\+osc8m\+\_\+div}}\hypertarget{samr21__sysctrl_8h_a1ee1b0be167bd253038400d9c6d0cbef}{}\label{samr21__sysctrl_8h_a1ee1b0be167bd253038400d9c6d0cbef}
+
+
+Division prescalers for the internal 8\+M\+Hz system clock. 
+
+Available prescalers for the internal 8\+M\+Hz (nominal) system clock. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+Y\+S\+T\+E\+M\+\_\+\+O\+S\+C8\+M\+\_\+\+D\+I\+V\+\_\+1@{S\+Y\+S\+T\+E\+M\+\_\+\+O\+S\+C8\+M\+\_\+\+D\+I\+V\+\_\+1}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!S\+Y\+S\+T\+E\+M\+\_\+\+O\+S\+C8\+M\+\_\+\+D\+I\+V\+\_\+1@{S\+Y\+S\+T\+E\+M\+\_\+\+O\+S\+C8\+M\+\_\+\+D\+I\+V\+\_\+1}}\item[{\em 
+S\+Y\+S\+T\+E\+M\+\_\+\+O\+S\+C8\+M\+\_\+\+D\+I\+V\+\_\+1\hypertarget{samr21__sysctrl_8h_a1ee1b0be167bd253038400d9c6d0cbefa564fc679b9f90127b6666b6bced33463}{}\label{samr21__sysctrl_8h_a1ee1b0be167bd253038400d9c6d0cbefa564fc679b9f90127b6666b6bced33463}
+}]Do not divide the 8\+M\+Hz RC oscillator output \index{S\+Y\+S\+T\+E\+M\+\_\+\+O\+S\+C8\+M\+\_\+\+D\+I\+V\+\_\+2@{S\+Y\+S\+T\+E\+M\+\_\+\+O\+S\+C8\+M\+\_\+\+D\+I\+V\+\_\+2}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!S\+Y\+S\+T\+E\+M\+\_\+\+O\+S\+C8\+M\+\_\+\+D\+I\+V\+\_\+2@{S\+Y\+S\+T\+E\+M\+\_\+\+O\+S\+C8\+M\+\_\+\+D\+I\+V\+\_\+2}}\item[{\em 
+S\+Y\+S\+T\+E\+M\+\_\+\+O\+S\+C8\+M\+\_\+\+D\+I\+V\+\_\+2\hypertarget{samr21__sysctrl_8h_a1ee1b0be167bd253038400d9c6d0cbefa5484854b8a0bb16902b603dd8024d76d}{}\label{samr21__sysctrl_8h_a1ee1b0be167bd253038400d9c6d0cbefa5484854b8a0bb16902b603dd8024d76d}
+}]Divide the 8\+M\+Hz RC oscillator output by 2 \index{S\+Y\+S\+T\+E\+M\+\_\+\+O\+S\+C8\+M\+\_\+\+D\+I\+V\+\_\+4@{S\+Y\+S\+T\+E\+M\+\_\+\+O\+S\+C8\+M\+\_\+\+D\+I\+V\+\_\+4}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!S\+Y\+S\+T\+E\+M\+\_\+\+O\+S\+C8\+M\+\_\+\+D\+I\+V\+\_\+4@{S\+Y\+S\+T\+E\+M\+\_\+\+O\+S\+C8\+M\+\_\+\+D\+I\+V\+\_\+4}}\item[{\em 
+S\+Y\+S\+T\+E\+M\+\_\+\+O\+S\+C8\+M\+\_\+\+D\+I\+V\+\_\+4\hypertarget{samr21__sysctrl_8h_a1ee1b0be167bd253038400d9c6d0cbefa6f70022cf44a05a464d1a5af02ceed1b}{}\label{samr21__sysctrl_8h_a1ee1b0be167bd253038400d9c6d0cbefa6f70022cf44a05a464d1a5af02ceed1b}
+}]Divide the 8\+M\+Hz RC oscillator output by 4 \index{S\+Y\+S\+T\+E\+M\+\_\+\+O\+S\+C8\+M\+\_\+\+D\+I\+V\+\_\+8@{S\+Y\+S\+T\+E\+M\+\_\+\+O\+S\+C8\+M\+\_\+\+D\+I\+V\+\_\+8}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!S\+Y\+S\+T\+E\+M\+\_\+\+O\+S\+C8\+M\+\_\+\+D\+I\+V\+\_\+8@{S\+Y\+S\+T\+E\+M\+\_\+\+O\+S\+C8\+M\+\_\+\+D\+I\+V\+\_\+8}}\item[{\em 
+S\+Y\+S\+T\+E\+M\+\_\+\+O\+S\+C8\+M\+\_\+\+D\+I\+V\+\_\+8\hypertarget{samr21__sysctrl_8h_a1ee1b0be167bd253038400d9c6d0cbefa23f917a883d385d557b7e9ee9b80e14c}{}\label{samr21__sysctrl_8h_a1ee1b0be167bd253038400d9c6d0cbefa23f917a883d385d557b7e9ee9b80e14c}
+}]Divide the 8\+M\+Hz RC oscillator output by 8 \end{description}
+\end{Desc}
+
+
+Definition at line 158 of file samr21\+\_\+sysctrl.\+h.
+
+\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!system\+\_\+sleepmode@{system\+\_\+sleepmode}}
+\index{system\+\_\+sleepmode@{system\+\_\+sleepmode}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}
+\subsubsection[{\texorpdfstring{system\+\_\+sleepmode}{system_sleepmode}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf system\+\_\+sleepmode}}\hypertarget{samr21__sysctrl_8h_a6a75333c00b88a5da14eb9ba5ead2be1}{}\label{samr21__sysctrl_8h_a6a75333c00b88a5da14eb9ba5ead2be1}
+
+
+Device sleep modes. 
+
+List of available sleep modes in the device. A table of clocks available in different sleep modes can be found in asfdoc\+\_\+sam0\+\_\+system\+\_\+module\+\_\+overview\+\_\+sleep\+\_\+mode. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+I\+D\+L\+E\+\_\+0@{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+I\+D\+L\+E\+\_\+0}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+I\+D\+L\+E\+\_\+0@{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+I\+D\+L\+E\+\_\+0}}\item[{\em 
+S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+I\+D\+L\+E\+\_\+0\hypertarget{samr21__sysctrl_8h_a6a75333c00b88a5da14eb9ba5ead2be1a273e166ed48d972d58d5d6e5466b7977}{}\label{samr21__sysctrl_8h_a6a75333c00b88a5da14eb9ba5ead2be1a273e166ed48d972d58d5d6e5466b7977}
+}]I\+D\+LE 0 sleep mode. \index{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+I\+D\+L\+E\+\_\+1@{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+I\+D\+L\+E\+\_\+1}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+I\+D\+L\+E\+\_\+1@{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+I\+D\+L\+E\+\_\+1}}\item[{\em 
+S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+I\+D\+L\+E\+\_\+1\hypertarget{samr21__sysctrl_8h_a6a75333c00b88a5da14eb9ba5ead2be1ada43603665b981de310962b380ff2b62}{}\label{samr21__sysctrl_8h_a6a75333c00b88a5da14eb9ba5ead2be1ada43603665b981de310962b380ff2b62}
+}]I\+D\+LE 1 sleep mode. \index{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+I\+D\+L\+E\+\_\+2@{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+I\+D\+L\+E\+\_\+2}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+I\+D\+L\+E\+\_\+2@{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+I\+D\+L\+E\+\_\+2}}\item[{\em 
+S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+I\+D\+L\+E\+\_\+2\hypertarget{samr21__sysctrl_8h_a6a75333c00b88a5da14eb9ba5ead2be1a7b03cf170b0a7b1b2335a270fbcb5df3}{}\label{samr21__sysctrl_8h_a6a75333c00b88a5da14eb9ba5ead2be1a7b03cf170b0a7b1b2335a270fbcb5df3}
+}]I\+D\+LE 2 sleep mode. \index{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+S\+T\+A\+N\+D\+BY@{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+S\+T\+A\+N\+D\+BY}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+S\+T\+A\+N\+D\+BY@{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+S\+T\+A\+N\+D\+BY}}\item[{\em 
+S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+S\+T\+A\+N\+D\+BY\hypertarget{samr21__sysctrl_8h_a6a75333c00b88a5da14eb9ba5ead2be1a446eddfe38bc09277ed1863ffac261e3}{}\label{samr21__sysctrl_8h_a6a75333c00b88a5da14eb9ba5ead2be1a446eddfe38bc09277ed1863ffac261e3}
+}]Standby sleep mode. \end{description}
+\end{Desc}
+
+
+Definition at line 218 of file samr21\+\_\+sysctrl.\+h.
+
+\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!system\+\_\+xosc32k\+\_\+startup@{system\+\_\+xosc32k\+\_\+startup}}
+\index{system\+\_\+xosc32k\+\_\+startup@{system\+\_\+xosc32k\+\_\+startup}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}
+\subsubsection[{\texorpdfstring{system\+\_\+xosc32k\+\_\+startup}{system_xosc32k_startup}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf system\+\_\+xosc32k\+\_\+startup}}\hypertarget{samr21__sysctrl_8h_a6a5226fe65f283da094a3d1bd6c5692f}{}\label{samr21__sysctrl_8h_a6a5226fe65f283da094a3d1bd6c5692f}
+
+
+Available start-\/up times for the X\+O\+S\+C32K. 
+
+Available external 32\+K\+Hz oscillator start-\/up times, as a number of external clock cycles. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+0@{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+0}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+0@{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+0}}\item[{\em 
+S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+0\hypertarget{samr21__sysctrl_8h_a6a5226fe65f283da094a3d1bd6c5692faa91d598f764710a4266770238e413717}{}\label{samr21__sysctrl_8h_a6a5226fe65f283da094a3d1bd6c5692faa91d598f764710a4266770238e413717}
+}]Wait 0 clock cycles until the clock source is considered stable \index{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+32@{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+32}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+32@{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+32}}\item[{\em 
+S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+32\hypertarget{samr21__sysctrl_8h_a6a5226fe65f283da094a3d1bd6c5692fa762b4a74172784915df68700e51d4e0f}{}\label{samr21__sysctrl_8h_a6a5226fe65f283da094a3d1bd6c5692fa762b4a74172784915df68700e51d4e0f}
+}]Wait 32 clock cycles until the clock source is considered stable \index{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+2048@{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+2048}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+2048@{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+2048}}\item[{\em 
+S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+2048\hypertarget{samr21__sysctrl_8h_a6a5226fe65f283da094a3d1bd6c5692fafa1cf29c3c5c3f74d1a2ffdd7c3199e3}{}\label{samr21__sysctrl_8h_a6a5226fe65f283da094a3d1bd6c5692fafa1cf29c3c5c3f74d1a2ffdd7c3199e3}
+}]Wait 2048 clock cycles until the clock source is considered stable \index{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+4096@{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+4096}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+4096@{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+4096}}\item[{\em 
+S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+4096\hypertarget{samr21__sysctrl_8h_a6a5226fe65f283da094a3d1bd6c5692fa6c5f69164630ba16faa100873bd73dc0}{}\label{samr21__sysctrl_8h_a6a5226fe65f283da094a3d1bd6c5692fa6c5f69164630ba16faa100873bd73dc0}
+}]Wait 4096 clock cycles until the clock source is considered stable \index{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+16384@{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+16384}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+16384@{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+16384}}\item[{\em 
+S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+16384\hypertarget{samr21__sysctrl_8h_a6a5226fe65f283da094a3d1bd6c5692fae9d3c139f5442c2ba949a8d04ee7d38e}{}\label{samr21__sysctrl_8h_a6a5226fe65f283da094a3d1bd6c5692fae9d3c139f5442c2ba949a8d04ee7d38e}
+}]Wait 16384 clock cycles until the clock source is considered stable \index{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+32768@{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+32768}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+32768@{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+32768}}\item[{\em 
+S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+32768\hypertarget{samr21__sysctrl_8h_a6a5226fe65f283da094a3d1bd6c5692fa78dab161af7b89436e8efde14b12b087}{}\label{samr21__sysctrl_8h_a6a5226fe65f283da094a3d1bd6c5692fa78dab161af7b89436e8efde14b12b087}
+}]Wait 32768 clock cycles until the clock source is considered stable \index{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+65536@{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+65536}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+65536@{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+65536}}\item[{\em 
+S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+65536\hypertarget{samr21__sysctrl_8h_a6a5226fe65f283da094a3d1bd6c5692fa7205636a0c4b4d7bc1b1aad12aaf9a49}{}\label{samr21__sysctrl_8h_a6a5226fe65f283da094a3d1bd6c5692fa7205636a0c4b4d7bc1b1aad12aaf9a49}
+}]Wait 65536 clock cycles until the clock source is considered stable \index{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+131072@{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+131072}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+131072@{S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+131072}}\item[{\em 
+S\+Y\+S\+T\+E\+M\+\_\+\+X\+O\+S\+C32\+K\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+131072\hypertarget{samr21__sysctrl_8h_a6a5226fe65f283da094a3d1bd6c5692fab44c3b77e6d8a8e49a1ed5b474eca9c2}{}\label{samr21__sysctrl_8h_a6a5226fe65f283da094a3d1bd6c5692fab44c3b77e6d8a8e49a1ed5b474eca9c2}
+}]Wait 131072 clock cycles until the clock source is considered stable \end{description}
+\end{Desc}
+
+
+Definition at line 134 of file samr21\+\_\+sysctrl.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}!sys\+\_\+clock\+\_\+init@{sys\+\_\+clock\+\_\+init}}
+\index{sys\+\_\+clock\+\_\+init@{sys\+\_\+clock\+\_\+init}!samr21\+\_\+sysctrl.\+h@{samr21\+\_\+sysctrl.\+h}}
+\subsubsection[{\texorpdfstring{sys\+\_\+clock\+\_\+init(void)}{sys_clock_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sys\+\_\+clock\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{samr21__sysctrl_8h_a02fbef4ca042a3a926a687e81ddf3b61}{}\label{samr21__sysctrl_8h_a02fbef4ca042a3a926a687e81ddf3b61}
+
+
+sys\+\_\+clock\+\_\+init Function to initialize the system clock 
+
+This function will initialize the clock domain and sub-\/modules
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 55 of file samr21\+\_\+sysctrl.\+c.
+

@@ -1,0 +1,317 @@
+\hypertarget{samr21__xpro_2board_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/samr21\+\_\+xpro/board.c File Reference}
+\label{samr21__xpro_2board_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/samr21\+\_\+xpro/board.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/samr21\+\_\+xpro/board.\+c}}
+{\ttfamily \#include \char`\"{}sam.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}samr21\+\_\+extint.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}samr21\+\_\+flash.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}samr21\+\_\+gclk.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}samr21\+\_\+gpio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}samr21\+\_\+radio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}samr21\+\_\+spi.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}samr21\+\_\+sysctrl.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}samr21\+\_\+timer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}samr21\+\_\+uart.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cm0plus\+\_\+interrupt.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}base\+\_\+type.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}uart.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}opentimers.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}radiotimer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}radio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bsp\+\_\+timer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}spi.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}debugpins.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leds.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}delay.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{samr21__xpro_2board_8c_a21e9ead4cdffee390ba95997c431fdc2}{R\+S\+T\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+T\+H\+\_\+\+US}~(10)
+\item 
+\#define \hyperlink{samr21__xpro_2board_8c_aa853f9bdb44ef6e28c46a8964aec4887}{P\+\_\+\+O\+N\+\_\+\+T\+O\+\_\+\+C\+L\+K\+M\+\_\+\+A\+V\+A\+I\+L\+A\+B\+L\+E\+\_\+\+T\+Y\+P\+\_\+\+US}~(330)
+\item 
+\#define \hyperlink{samr21__xpro_2board_8c_ac60b4e712a34e9c85938bf4553048ce3}{T\+R\+X\+\_\+\+E\+X\+T\+\_\+\+I\+N\+T\+\_\+\+CH}~(0)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{samr21__xpro_2board_8c_a250f6a5899d659eb4f937ca9ceef255b}{mote\+\_\+main} ()
+\begin{DoxyCompactList}\small\item\em The program starts executing here. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{samr21__xpro_2board_8c_a80e10f1c042a8257bdf71685f6b1cb88}{rf\+\_\+interface\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{samr21__xpro_2board_8c_acef6dd444cb6560da652897ee43ab306}{buttons\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+int \hyperlink{samr21__xpro_2board_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__board_ga916f2adc2080b4fe88034086d107a8dc}{board\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em E\+L\+D\+O\+R\+A\+D\+O-\/specific definition of the \char`\"{}board\char`\"{} bsp module. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__board_ga052cfe534a52d7f046e311d4adec00a8}{board\+\_\+sleep} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__board_gafbd0c8dccf10506bd3912960c8cba369}{board\+\_\+reset} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{samr21__xpro_2board_8c_a76e5eda536b5f9d2a6b77698717dd2c4}{ext\+\_\+int0\+\_\+callback} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{samr21\+\_\+xpro/board.\+c@{samr21\+\_\+xpro/board.\+c}!P\+\_\+\+O\+N\+\_\+\+T\+O\+\_\+\+C\+L\+K\+M\+\_\+\+A\+V\+A\+I\+L\+A\+B\+L\+E\+\_\+\+T\+Y\+P\+\_\+\+US@{P\+\_\+\+O\+N\+\_\+\+T\+O\+\_\+\+C\+L\+K\+M\+\_\+\+A\+V\+A\+I\+L\+A\+B\+L\+E\+\_\+\+T\+Y\+P\+\_\+\+US}}
+\index{P\+\_\+\+O\+N\+\_\+\+T\+O\+\_\+\+C\+L\+K\+M\+\_\+\+A\+V\+A\+I\+L\+A\+B\+L\+E\+\_\+\+T\+Y\+P\+\_\+\+US@{P\+\_\+\+O\+N\+\_\+\+T\+O\+\_\+\+C\+L\+K\+M\+\_\+\+A\+V\+A\+I\+L\+A\+B\+L\+E\+\_\+\+T\+Y\+P\+\_\+\+US}!samr21\+\_\+xpro/board.\+c@{samr21\+\_\+xpro/board.\+c}}
+\subsubsection[{\texorpdfstring{P\+\_\+\+O\+N\+\_\+\+T\+O\+\_\+\+C\+L\+K\+M\+\_\+\+A\+V\+A\+I\+L\+A\+B\+L\+E\+\_\+\+T\+Y\+P\+\_\+\+US}{P_ON_TO_CLKM_AVAILABLE_TYP_US}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+\_\+\+O\+N\+\_\+\+T\+O\+\_\+\+C\+L\+K\+M\+\_\+\+A\+V\+A\+I\+L\+A\+B\+L\+E\+\_\+\+T\+Y\+P\+\_\+\+US~(330)}\hypertarget{samr21__xpro_2board_8c_aa853f9bdb44ef6e28c46a8964aec4887}{}\label{samr21__xpro_2board_8c_aa853f9bdb44ef6e28c46a8964aec4887}
+
+
+Definition at line 67 of file board.\+c.
+
+\index{samr21\+\_\+xpro/board.\+c@{samr21\+\_\+xpro/board.\+c}!R\+S\+T\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+T\+H\+\_\+\+US@{R\+S\+T\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+T\+H\+\_\+\+US}}
+\index{R\+S\+T\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+T\+H\+\_\+\+US@{R\+S\+T\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+T\+H\+\_\+\+US}!samr21\+\_\+xpro/board.\+c@{samr21\+\_\+xpro/board.\+c}}
+\subsubsection[{\texorpdfstring{R\+S\+T\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+T\+H\+\_\+\+US}{RST_PULSE_WIDTH_US}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+S\+T\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+T\+H\+\_\+\+US~(10)}\hypertarget{samr21__xpro_2board_8c_a21e9ead4cdffee390ba95997c431fdc2}{}\label{samr21__xpro_2board_8c_a21e9ead4cdffee390ba95997c431fdc2}
+Copyright (c) 2014 Atmel Corporation. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item The name of Atmel may not be used to endorse or promote products derived from this software without specific prior written permission.
+\item This software may only be redistributed and used in connection with an Atmel microcontroller product.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE. 
+
+Definition at line 64 of file board.\+c.
+
+\index{samr21\+\_\+xpro/board.\+c@{samr21\+\_\+xpro/board.\+c}!T\+R\+X\+\_\+\+E\+X\+T\+\_\+\+I\+N\+T\+\_\+\+CH@{T\+R\+X\+\_\+\+E\+X\+T\+\_\+\+I\+N\+T\+\_\+\+CH}}
+\index{T\+R\+X\+\_\+\+E\+X\+T\+\_\+\+I\+N\+T\+\_\+\+CH@{T\+R\+X\+\_\+\+E\+X\+T\+\_\+\+I\+N\+T\+\_\+\+CH}!samr21\+\_\+xpro/board.\+c@{samr21\+\_\+xpro/board.\+c}}
+\subsubsection[{\texorpdfstring{T\+R\+X\+\_\+\+E\+X\+T\+\_\+\+I\+N\+T\+\_\+\+CH}{TRX_EXT_INT_CH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+R\+X\+\_\+\+E\+X\+T\+\_\+\+I\+N\+T\+\_\+\+CH~(0)}\hypertarget{samr21__xpro_2board_8c_ac60b4e712a34e9c85938bf4553048ce3}{}\label{samr21__xpro_2board_8c_ac60b4e712a34e9c85938bf4553048ce3}
+
+
+Definition at line 69 of file board.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{samr21\+\_\+xpro/board.\+c@{samr21\+\_\+xpro/board.\+c}!buttons\+\_\+init@{buttons\+\_\+init}}
+\index{buttons\+\_\+init@{buttons\+\_\+init}!samr21\+\_\+xpro/board.\+c@{samr21\+\_\+xpro/board.\+c}}
+\subsubsection[{\texorpdfstring{buttons\+\_\+init(void)}{buttons_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} buttons\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{samr21__xpro_2board_8c_acef6dd444cb6560da652897ee43ab306}{}\label{samr21__xpro_2board_8c_acef6dd444cb6560da652897ee43ab306}
+\index{samr21\+\_\+xpro/board.\+c@{samr21\+\_\+xpro/board.\+c}!ext\+\_\+int0\+\_\+callback@{ext\+\_\+int0\+\_\+callback}}
+\index{ext\+\_\+int0\+\_\+callback@{ext\+\_\+int0\+\_\+callback}!samr21\+\_\+xpro/board.\+c@{samr21\+\_\+xpro/board.\+c}}
+\subsubsection[{\texorpdfstring{ext\+\_\+int0\+\_\+callback(void)}{ext_int0_callback(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} ext\+\_\+int0\+\_\+callback (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{samr21__xpro_2board_8c_a76e5eda536b5f9d2a6b77698717dd2c4}{}\label{samr21__xpro_2board_8c_a76e5eda536b5f9d2a6b77698717dd2c4}
+
+
+Definition at line 239 of file board.\+c.
+
+\index{samr21\+\_\+xpro/board.\+c@{samr21\+\_\+xpro/board.\+c}!main@{main}}
+\index{main@{main}!samr21\+\_\+xpro/board.\+c@{samr21\+\_\+xpro/board.\+c}}
+\subsubsection[{\texorpdfstring{main(void)}{main(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{samr21__xpro_2board_8c_a840291bc02cba5474a4cb46a9b9566fe}{}\label{samr21__xpro_2board_8c_a840291bc02cba5474a4cb46a9b9566fe}
+
+
+Definition at line 87 of file board.\+c.
+
+\index{samr21\+\_\+xpro/board.\+c@{samr21\+\_\+xpro/board.\+c}!mote\+\_\+main@{mote\+\_\+main}}
+\index{mote\+\_\+main@{mote\+\_\+main}!samr21\+\_\+xpro/board.\+c@{samr21\+\_\+xpro/board.\+c}}
+\subsubsection[{\texorpdfstring{mote\+\_\+main()}{mote_main()}}]{\setlength{\rightskip}{0pt plus 5cm}int mote\+\_\+main (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{samr21__xpro_2board_8c_a250f6a5899d659eb4f937ca9ceef255b}{}\label{samr21__xpro_2board_8c_a250f6a5899d659eb4f937ca9ceef255b}
+
+
+The program starts executing here. 
+
+Python-\/based emulation of the mote\textquotesingle{}s power supply.
+
+iot-\/lab\+\_\+\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+iot-\/lab\+\_\+\+A8-\/\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+G\+I\+N\+A-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+e\+Z430-\/\+R\+F2500-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+Python-\/based emulation of the mote\textquotesingle{}s power supply.
+
+iot-\/lab\+\_\+\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+iot-\/lab\+\_\+\+A8-\/\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+G\+I\+N\+A-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+e\+Z430-\/\+R\+F2500-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+The program starts executing here.
+
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+\begin{DoxyNote}{Note}
+\+: Since the bsp modules for different platforms have the same declaration, you can use this project with any platform.
+\end{DoxyNote}
+Load this program on your boards. The L\+E\+Ds should start blinking furiously.
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, February 2012 The program starts executing here.
+\end{DoxyAuthor}
+Python-\/based emulation of the mote\textquotesingle{}s power supply.
+
+iot-\/lab\+\_\+\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+iot-\/lab\+\_\+\+A8-\/\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+G\+I\+N\+A-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+e\+Z430-\/\+R\+F2500-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+The program starts executing here.
+
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+Python-\/based emulation of the mote\textquotesingle{}s power supply.
+
+iot-\/lab\+\_\+\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+iot-\/lab\+\_\+\+A8-\/\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+G\+I\+N\+A-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+e\+Z430-\/\+R\+F2500-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+The program starts executing here.
+
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+Since the driver modules for different platforms have the same declaration, you can use this project with any platform.
+
+This application allows you to verify the correct functioning of the opentimers drivers. It starts 3 periodic timers, with periods A\+P\+P\+\_\+\+D\+L\+Y\+\_\+\+T\+I\+M\+E\+R0\+\_\+ms, A\+P\+P\+\_\+\+D\+L\+Y\+\_\+\+T\+I\+M\+E\+R1\+\_\+ms and A\+P\+P\+\_\+\+D\+L\+Y\+\_\+\+T\+I\+M\+E\+R2\+\_\+ms. Each timer is attached an L\+ED (error. radio and sync). When you run the application, you should see the L\+E\+Ds \char`\"{}counting\char`\"{}.
+
+\begin{DoxyAuthor}{Author}
+Pere Tuset \href{mailto:peretuset@openmote.com}{\tt peretuset@openmote.\+com}, January 2015.
+\end{DoxyAuthor}
+Python-\/based emulation of the mote\textquotesingle{}s power supply.
+
+iot-\/lab\+\_\+\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+iot-\/lab\+\_\+\+A8-\/\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+G\+I\+N\+A-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+e\+Z430-\/\+R\+F2500-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+The program starts executing here.
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, February 2012. 
+
+Chang Tengfei \href{mailto:tengfei.chang@gmail.com}{\tt tengfei.\+chang@gmail.\+com}, July 2012. 
+
+Alaeddine Weslati \href{mailto:alaeddine.weslati@inria.fr}{\tt alaeddine.\+weslati@inria.\+fr}, August 2013.
+\end{DoxyAuthor}
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+\begin{DoxyNote}{Note}
+\+: Since the bsp modules for different platforms have the same declaration, you can use this project with any platform.
+\end{DoxyNote}
+Load this program on your boards. The L\+E\+Ds should start blinking furiously.
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, February 2012 The program starts executing here.
+\end{DoxyAuthor}
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+Since the driver modules for different platforms have the same declaration, you can use this project with any platform.
+
+This application allows you to verify the correct functioning of the opentimers drivers. It starts 3 periodic timers, with periods A\+P\+P\+\_\+\+D\+L\+Y\+\_\+\+T\+I\+M\+E\+R0\+\_\+ms, A\+P\+P\+\_\+\+D\+L\+Y\+\_\+\+T\+I\+M\+E\+R1\+\_\+ms and A\+P\+P\+\_\+\+D\+L\+Y\+\_\+\+T\+I\+M\+E\+R2\+\_\+ms. Each timer is attached an L\+ED (error. radio and sync). When you run the application, you should see the L\+E\+Ds \char`\"{}counting\char`\"{}.
+
+\begin{DoxyAuthor}{Author}
+Pere Tuset \href{mailto:peretuset@openmote.com}{\tt peretuset@openmote.\+com}, January 2015.
+\end{DoxyAuthor}
+Python-\/based emulation of the mote\textquotesingle{}s power supply.
+
+iot-\/lab\+\_\+\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+iot-\/lab\+\_\+\+A8-\/\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+G\+I\+N\+A-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+e\+Z430-\/\+R\+F2500-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+The program starts executing here.
+
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, August 2010
+\end{DoxyAuthor}
+Python-\/based emulation of the mote\textquotesingle{}s power supply.
+
+iot-\/lab\+\_\+\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+iot-\/lab\+\_\+\+A8-\/\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+G\+I\+N\+A-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+e\+Z430-\/\+R\+F2500-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+The program starts executing here.
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, February 2012. 
+
+Chang Tengfei \href{mailto:tengfei.chang@gmail.com}{\tt tengfei.\+chang@gmail.\+com}, July 2012. 
+
+Alaeddine Weslati \href{mailto:alaeddine.weslati@inria.fr}{\tt alaeddine.\+weslati@inria.\+fr}, August 2013.
+\end{DoxyAuthor}
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+\begin{DoxyNote}{Note}
+\+: Since the bsp modules for different platforms have the same declaration, you can use this project with any platform.
+\end{DoxyNote}
+Load this program on your boards. The L\+E\+Ds should start blinking furiously.
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, February 2012 The program starts executing here.
+\end{DoxyAuthor}
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+Since the driver modules for different platforms have the same declaration, you can use this project with any platform.
+
+This application allows you to verify the correct functioning of the opentimers drivers. It starts 3 periodic timers, with periods A\+P\+P\+\_\+\+D\+L\+Y\+\_\+\+T\+I\+M\+E\+R0\+\_\+ms, A\+P\+P\+\_\+\+D\+L\+Y\+\_\+\+T\+I\+M\+E\+R1\+\_\+ms and A\+P\+P\+\_\+\+D\+L\+Y\+\_\+\+T\+I\+M\+E\+R2\+\_\+ms. Each timer is attached an L\+ED (error. radio and sync). When you run the application, you should see the L\+E\+Ds \char`\"{}counting\char`\"{}.
+
+\begin{DoxyAuthor}{Author}
+Pere Tuset \href{mailto:peretuset@openmote.com}{\tt peretuset@openmote.\+com}, January 2015.
+\end{DoxyAuthor}
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, August 2010 
+\end{DoxyAuthor}
+
+
+Definition at line 83 of file 00std\+\_\+low\+\_\+power\+\_\+mode.\+c.
+
+\index{samr21\+\_\+xpro/board.\+c@{samr21\+\_\+xpro/board.\+c}!rf\+\_\+interface\+\_\+init@{rf\+\_\+interface\+\_\+init}}
+\index{rf\+\_\+interface\+\_\+init@{rf\+\_\+interface\+\_\+init}!samr21\+\_\+xpro/board.\+c@{samr21\+\_\+xpro/board.\+c}}
+\subsubsection[{\texorpdfstring{rf\+\_\+interface\+\_\+init(void)}{rf_interface_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} rf\+\_\+interface\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{samr21__xpro_2board_8c_a80e10f1c042a8257bdf71685f6b1cb88}{}\label{samr21__xpro_2board_8c_a80e10f1c042a8257bdf71685f6b1cb88}
+
+
+Definition at line 154 of file board.\+c.
+

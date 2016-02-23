@@ -1,0 +1,84 @@
+\hypertarget{structipv6__hopbyhop__iht}{}\section{ipv6\+\_\+hopbyhop\+\_\+iht Struct Reference}
+\label{structipv6__hopbyhop__iht}\index{ipv6\+\_\+hopbyhop\+\_\+iht@{ipv6\+\_\+hopbyhop\+\_\+iht}}
+
+
+I\+Pv6 hop-\/by-\/hop option.  
+
+
+
+
+{\ttfamily \#include $<$iphc.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{structipv6__hopbyhop__iht_a84ded5a6acf93585a72afb6c076378d3}{headerlen}
+\begin{DoxyCompactList}\small\item\em Counter for internal use. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{structipv6__hopbyhop__iht_a10cac8444dcacb21635e9b460d68874c}{next\+\_\+header\+\_\+compressed}
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{structipv6__hopbyhop__iht_a80be6ddea14a217b2d4192868a1e61ae}{lowpan\+\_\+nhc}
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{structipv6__hopbyhop__iht_a22de87aa82608d6222ea1dfd254ca29c}{next\+Header}
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{structipv6__hopbyhop__iht_af74b3cb3f3fbaaa924299aefa0def813}{Hdr\+Ext\+Len}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+I\+Pv6 hop-\/by-\/hop option. 
+
+The Hop-\/by-\/\+Hop Options header is used to carry optional information that must be examined by every node along a packet\textquotesingle{}s delivery path. The Hop-\/by-\/\+Hop Options header is identified by a Next Header value of 0 in the I\+Pv6 header.
+
+Per \href{http://tools.ietf.org/html/rfc6282#section-4.2,}{\tt http\+://tools.\+ietf.\+org/html/rfc6282\#section-\/4.\+2,} the first 7 bits serve as an identifier for the I\+Pv6 Extension Header immediately following the L\+O\+W\+P\+A\+N\+\_\+\+N\+HC octet. The remaining bit indicates whether or not the following header utilizes L\+O\+W\+P\+A\+N\+\_\+\+N\+HC encoding.
+
+The Length field contained in a compressed I\+Pv6 Extension Header indicates the number of octets that pertain to the (compressed) extension header following the Length field. Note that this changes the Length field definition in \mbox{[}R\+F\+C2460\mbox{]} from indicating the header size in 8-\/octet units, not including the first 8 octets. Changing the Length field to be in units of octets removes wasteful internal fragmentation. 
+
+Definition at line 194 of file iphc.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\index{ipv6\+\_\+hopbyhop\+\_\+iht@{ipv6\+\_\+hopbyhop\+\_\+iht}!Hdr\+Ext\+Len@{Hdr\+Ext\+Len}}
+\index{Hdr\+Ext\+Len@{Hdr\+Ext\+Len}!ipv6\+\_\+hopbyhop\+\_\+iht@{ipv6\+\_\+hopbyhop\+\_\+iht}}
+\subsubsection[{\texorpdfstring{Hdr\+Ext\+Len}{HdrExtLen}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} ipv6\+\_\+hopbyhop\+\_\+iht\+::\+Hdr\+Ext\+Len}\hypertarget{structipv6__hopbyhop__iht_af74b3cb3f3fbaaa924299aefa0def813}{}\label{structipv6__hopbyhop__iht_af74b3cb3f3fbaaa924299aefa0def813}
+
+
+Definition at line 199 of file iphc.\+h.
+
+\index{ipv6\+\_\+hopbyhop\+\_\+iht@{ipv6\+\_\+hopbyhop\+\_\+iht}!headerlen@{headerlen}}
+\index{headerlen@{headerlen}!ipv6\+\_\+hopbyhop\+\_\+iht@{ipv6\+\_\+hopbyhop\+\_\+iht}}
+\subsubsection[{\texorpdfstring{headerlen}{headerlen}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} ipv6\+\_\+hopbyhop\+\_\+iht\+::headerlen}\hypertarget{structipv6__hopbyhop__iht_a84ded5a6acf93585a72afb6c076378d3}{}\label{structipv6__hopbyhop__iht_a84ded5a6acf93585a72afb6c076378d3}
+
+
+Counter for internal use. 
+
+
+
+Definition at line 195 of file iphc.\+h.
+
+\index{ipv6\+\_\+hopbyhop\+\_\+iht@{ipv6\+\_\+hopbyhop\+\_\+iht}!lowpan\+\_\+nhc@{lowpan\+\_\+nhc}}
+\index{lowpan\+\_\+nhc@{lowpan\+\_\+nhc}!ipv6\+\_\+hopbyhop\+\_\+iht@{ipv6\+\_\+hopbyhop\+\_\+iht}}
+\subsubsection[{\texorpdfstring{lowpan\+\_\+nhc}{lowpan_nhc}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} ipv6\+\_\+hopbyhop\+\_\+iht\+::lowpan\+\_\+nhc}\hypertarget{structipv6__hopbyhop__iht_a80be6ddea14a217b2d4192868a1e61ae}{}\label{structipv6__hopbyhop__iht_a80be6ddea14a217b2d4192868a1e61ae}
+
+
+Definition at line 197 of file iphc.\+h.
+
+\index{ipv6\+\_\+hopbyhop\+\_\+iht@{ipv6\+\_\+hopbyhop\+\_\+iht}!next\+\_\+header\+\_\+compressed@{next\+\_\+header\+\_\+compressed}}
+\index{next\+\_\+header\+\_\+compressed@{next\+\_\+header\+\_\+compressed}!ipv6\+\_\+hopbyhop\+\_\+iht@{ipv6\+\_\+hopbyhop\+\_\+iht}}
+\subsubsection[{\texorpdfstring{next\+\_\+header\+\_\+compressed}{next_header_compressed}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} ipv6\+\_\+hopbyhop\+\_\+iht\+::next\+\_\+header\+\_\+compressed}\hypertarget{structipv6__hopbyhop__iht_a10cac8444dcacb21635e9b460d68874c}{}\label{structipv6__hopbyhop__iht_a10cac8444dcacb21635e9b460d68874c}
+
+
+Definition at line 196 of file iphc.\+h.
+
+\index{ipv6\+\_\+hopbyhop\+\_\+iht@{ipv6\+\_\+hopbyhop\+\_\+iht}!next\+Header@{next\+Header}}
+\index{next\+Header@{next\+Header}!ipv6\+\_\+hopbyhop\+\_\+iht@{ipv6\+\_\+hopbyhop\+\_\+iht}}
+\subsubsection[{\texorpdfstring{next\+Header}{nextHeader}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} ipv6\+\_\+hopbyhop\+\_\+iht\+::next\+Header}\hypertarget{structipv6__hopbyhop__iht_a22de87aa82608d6222ea1dfd254ca29c}{}\label{structipv6__hopbyhop__iht_a22de87aa82608d6222ea1dfd254ca29c}
+
+
+Definition at line 198 of file iphc.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/03a-\/\+I\+P\+H\+C/\hyperlink{iphc_8h}{iphc.\+h}\end{DoxyCompactItemize}

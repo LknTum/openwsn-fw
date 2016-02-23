@@ -84,6 +84,7 @@ enum {
    IANA_ICMPv6_RA                      =  134,
    IANA_ICMPv6_RA_PREFIX_INFORMATION   =    3,
    IANA_ICMPv6_RPL                     =  155,
+   IANA_ICMPv6_RPL_DIS                 = 0x00,
    IANA_ICMPv6_RPL_DIO                 = 0x01,
    IANA_ICMPv6_RPL_DAO                 = 0x02,
    IANA_RSVP                           =   46,
@@ -310,6 +311,12 @@ typedef struct {
    uint8_t*      l2_scheduleIE_cellObjects;      // pointer to the start of cell Objects in scheduleIE
    uint8_t       l2_scheduleIE_numOfCells;       // number of cells were going to be scheduled or removed.
    uint8_t       l2_scheduleIE_frameID;          // frameID in scheduleIE
+   uint8_t*      l2_sixtop_cellObjects;          // pointer to the start of cell Objects in 6P
+   uint8_t       l2_sixtop_numOfCells;           // number of cells were going to be scheduled or removed.
+   uint8_t       l2_sixtop_frameID;              // frameID in 6P
+   uint8_t       l2_sixtop_requestCommand;       // request Command in 6P
+   uint8_t       l2_sixtop_returnCode;           // return code in 6P
+   
    uint8_t*      l2_ASNpayload;                  // pointer to the ASN in EB
    uint8_t       l2_joinPriority;                // the join priority received in EB
    bool          l2_IEListPresent;               //did have IE field?

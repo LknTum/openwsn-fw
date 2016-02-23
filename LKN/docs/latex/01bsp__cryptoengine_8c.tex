@@ -1,0 +1,172 @@
+\hypertarget{01bsp__cryptoengine_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/common/01bsp\+\_\+cryptoengine/01bsp\+\_\+cryptoengine.c File Reference}
+\label{01bsp__cryptoengine_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/common/01bsp\+\_\+cryptoengine/01bsp\+\_\+cryptoengine.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/common/01bsp\+\_\+cryptoengine/01bsp\+\_\+cryptoengine.\+c}}
+{\ttfamily \#include \char`\"{}stdint.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stdio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}crypto\+\_\+engine.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leds.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bsp\+\_\+timer.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structaes__ecb__suite__t}{aes\+\_\+ecb\+\_\+suite\+\_\+t}
+\item 
+struct \hyperlink{structaes__ccms__enc__suite__t}{aes\+\_\+ccms\+\_\+enc\+\_\+suite\+\_\+t}
+\item 
+struct \hyperlink{structaes__ccms__dec__suite__t}{aes\+\_\+ccms\+\_\+dec\+\_\+suite\+\_\+t}
+\item 
+struct \hyperlink{structaes__ccms__auth__forward__suite__t}{aes\+\_\+ccms\+\_\+auth\+\_\+forward\+\_\+suite\+\_\+t}
+\item 
+struct \hyperlink{structaes__ctr__suite__t}{aes\+\_\+ctr\+\_\+suite\+\_\+t}
+\item 
+struct \hyperlink{structaes__cbc__suite__t}{aes\+\_\+cbc\+\_\+suite\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{01bsp__cryptoengine_8c_a39cdf8d4b91a8b073e57dd59ffe7b29c}{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+E\+CB}~1
+\begin{DoxyCompactList}\small\item\em This is a program which shows how to use the C\+R\+Y\+P\+T\+O\+\_\+\+E\+N\+G\+I\+NE driver and runs some tests in order to verify different crypto implementations. \end{DoxyCompactList}\item 
+\#define \hyperlink{01bsp__cryptoengine_8c_a102a035c2577d642511c31715d52d1ba}{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+C\+M\+S\+\_\+\+E\+NC}~1
+\item 
+\#define \hyperlink{01bsp__cryptoengine_8c_a5e843805ecbd1e1798b1093f896eed75}{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+C\+M\+S\+\_\+\+D\+EC}~1
+\item 
+\#define \hyperlink{01bsp__cryptoengine_8c_a75d8ffd1c56ec0443bd62cb5beea867f}{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+C\+M\+S\+\_\+\+A\+U\+T\+H\+\_\+\+F\+O\+R\+W\+A\+RD}~1
+\item 
+\#define \hyperlink{01bsp__cryptoengine_8c_ae1aa3adfffb8f9ac73671e3782aca482}{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+C\+M\+S\+\_\+\+A\+U\+T\+H\+\_\+\+I\+N\+V\+E\+R\+SE}~1
+\item 
+\#define \hyperlink{01bsp__cryptoengine_8c_a7f5936891483a614b79c3b94492582a6}{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+TR}~1
+\item 
+\#define \hyperlink{01bsp__cryptoengine_8c_a35bada5f9472921ec14e750c9c920f3f}{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+BC}~1
+\item 
+\#define \hyperlink{01bsp__cryptoengine_8c_ac992ff1ef9e7c5c188ab48e9c786e02b}{T\+E\+S\+T\+\_\+\+B\+E\+N\+C\+H\+M\+A\+R\+K\+\_\+\+C\+C\+MS}~1
+\item 
+\#define \hyperlink{01bsp__cryptoengine_8c_aa6d4621dba5b6d96e2eebfccce8bcf8a}{A\+\_\+\+L\+EN}~30
+\item 
+\#define \hyperlink{01bsp__cryptoengine_8c_a27394ea5de7e764ea3d878b4c43ad405}{M\+\_\+\+L\+EN}~91
+\item 
+\#define \hyperlink{01bsp__cryptoengine_8c_a415167a842f3b3014a33a23b3cf746a9}{T\+A\+G\+\_\+\+L\+EN}~4
+\item 
+\#define \hyperlink{01bsp__cryptoengine_8c_aa73214aa5f2f94f63d90bb4e3d99fe53}{L}~2
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{01bsp__cryptoengine_8c_ad0caa506af897a3ebe6699aa0c0da367}{mote\+\_\+main} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em The program starts executing here. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{01bsp\+\_\+cryptoengine.\+c@{01bsp\+\_\+cryptoengine.\+c}!A\+\_\+\+L\+EN@{A\+\_\+\+L\+EN}}
+\index{A\+\_\+\+L\+EN@{A\+\_\+\+L\+EN}!01bsp\+\_\+cryptoengine.\+c@{01bsp\+\_\+cryptoengine.\+c}}
+\subsubsection[{\texorpdfstring{A\+\_\+\+L\+EN}{A_LEN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+\_\+\+L\+EN~30}\hypertarget{01bsp__cryptoengine_8c_aa6d4621dba5b6d96e2eebfccce8bcf8a}{}\label{01bsp__cryptoengine_8c_aa6d4621dba5b6d96e2eebfccce8bcf8a}
+\index{01bsp\+\_\+cryptoengine.\+c@{01bsp\+\_\+cryptoengine.\+c}!L@{L}}
+\index{L@{L}!01bsp\+\_\+cryptoengine.\+c@{01bsp\+\_\+cryptoengine.\+c}}
+\subsubsection[{\texorpdfstring{L}{L}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L~2}\hypertarget{01bsp__cryptoengine_8c_aa73214aa5f2f94f63d90bb4e3d99fe53}{}\label{01bsp__cryptoengine_8c_aa73214aa5f2f94f63d90bb4e3d99fe53}
+\index{01bsp\+\_\+cryptoengine.\+c@{01bsp\+\_\+cryptoengine.\+c}!M\+\_\+\+L\+EN@{M\+\_\+\+L\+EN}}
+\index{M\+\_\+\+L\+EN@{M\+\_\+\+L\+EN}!01bsp\+\_\+cryptoengine.\+c@{01bsp\+\_\+cryptoengine.\+c}}
+\subsubsection[{\texorpdfstring{M\+\_\+\+L\+EN}{M_LEN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+\_\+\+L\+EN~91}\hypertarget{01bsp__cryptoengine_8c_a27394ea5de7e764ea3d878b4c43ad405}{}\label{01bsp__cryptoengine_8c_a27394ea5de7e764ea3d878b4c43ad405}
+\index{01bsp\+\_\+cryptoengine.\+c@{01bsp\+\_\+cryptoengine.\+c}!T\+A\+G\+\_\+\+L\+EN@{T\+A\+G\+\_\+\+L\+EN}}
+\index{T\+A\+G\+\_\+\+L\+EN@{T\+A\+G\+\_\+\+L\+EN}!01bsp\+\_\+cryptoengine.\+c@{01bsp\+\_\+cryptoengine.\+c}}
+\subsubsection[{\texorpdfstring{T\+A\+G\+\_\+\+L\+EN}{TAG_LEN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+A\+G\+\_\+\+L\+EN~4}\hypertarget{01bsp__cryptoengine_8c_a415167a842f3b3014a33a23b3cf746a9}{}\label{01bsp__cryptoengine_8c_a415167a842f3b3014a33a23b3cf746a9}
+\index{01bsp\+\_\+cryptoengine.\+c@{01bsp\+\_\+cryptoengine.\+c}!T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+BC@{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+BC}}
+\index{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+BC@{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+BC}!01bsp\+\_\+cryptoengine.\+c@{01bsp\+\_\+cryptoengine.\+c}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+BC}{TEST_AES_CBC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+BC~1}\hypertarget{01bsp__cryptoengine_8c_a35bada5f9472921ec14e750c9c920f3f}{}\label{01bsp__cryptoengine_8c_a35bada5f9472921ec14e750c9c920f3f}
+
+
+Definition at line 28 of file 01bsp\+\_\+cryptoengine.\+c.
+
+\index{01bsp\+\_\+cryptoengine.\+c@{01bsp\+\_\+cryptoengine.\+c}!T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+C\+M\+S\+\_\+\+A\+U\+T\+H\+\_\+\+F\+O\+R\+W\+A\+RD@{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+C\+M\+S\+\_\+\+A\+U\+T\+H\+\_\+\+F\+O\+R\+W\+A\+RD}}
+\index{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+C\+M\+S\+\_\+\+A\+U\+T\+H\+\_\+\+F\+O\+R\+W\+A\+RD@{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+C\+M\+S\+\_\+\+A\+U\+T\+H\+\_\+\+F\+O\+R\+W\+A\+RD}!01bsp\+\_\+cryptoengine.\+c@{01bsp\+\_\+cryptoengine.\+c}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+C\+M\+S\+\_\+\+A\+U\+T\+H\+\_\+\+F\+O\+R\+W\+A\+RD}{TEST_AES_CCMS_AUTH_FORWARD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+C\+M\+S\+\_\+\+A\+U\+T\+H\+\_\+\+F\+O\+R\+W\+A\+RD~1}\hypertarget{01bsp__cryptoengine_8c_a75d8ffd1c56ec0443bd62cb5beea867f}{}\label{01bsp__cryptoengine_8c_a75d8ffd1c56ec0443bd62cb5beea867f}
+
+
+Definition at line 25 of file 01bsp\+\_\+cryptoengine.\+c.
+
+\index{01bsp\+\_\+cryptoengine.\+c@{01bsp\+\_\+cryptoengine.\+c}!T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+C\+M\+S\+\_\+\+A\+U\+T\+H\+\_\+\+I\+N\+V\+E\+R\+SE@{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+C\+M\+S\+\_\+\+A\+U\+T\+H\+\_\+\+I\+N\+V\+E\+R\+SE}}
+\index{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+C\+M\+S\+\_\+\+A\+U\+T\+H\+\_\+\+I\+N\+V\+E\+R\+SE@{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+C\+M\+S\+\_\+\+A\+U\+T\+H\+\_\+\+I\+N\+V\+E\+R\+SE}!01bsp\+\_\+cryptoengine.\+c@{01bsp\+\_\+cryptoengine.\+c}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+C\+M\+S\+\_\+\+A\+U\+T\+H\+\_\+\+I\+N\+V\+E\+R\+SE}{TEST_AES_CCMS_AUTH_INVERSE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+C\+M\+S\+\_\+\+A\+U\+T\+H\+\_\+\+I\+N\+V\+E\+R\+SE~1}\hypertarget{01bsp__cryptoengine_8c_ae1aa3adfffb8f9ac73671e3782aca482}{}\label{01bsp__cryptoengine_8c_ae1aa3adfffb8f9ac73671e3782aca482}
+
+
+Definition at line 26 of file 01bsp\+\_\+cryptoengine.\+c.
+
+\index{01bsp\+\_\+cryptoengine.\+c@{01bsp\+\_\+cryptoengine.\+c}!T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+C\+M\+S\+\_\+\+D\+EC@{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+C\+M\+S\+\_\+\+D\+EC}}
+\index{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+C\+M\+S\+\_\+\+D\+EC@{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+C\+M\+S\+\_\+\+D\+EC}!01bsp\+\_\+cryptoengine.\+c@{01bsp\+\_\+cryptoengine.\+c}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+C\+M\+S\+\_\+\+D\+EC}{TEST_AES_CCMS_DEC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+C\+M\+S\+\_\+\+D\+EC~1}\hypertarget{01bsp__cryptoengine_8c_a5e843805ecbd1e1798b1093f896eed75}{}\label{01bsp__cryptoengine_8c_a5e843805ecbd1e1798b1093f896eed75}
+
+
+Definition at line 24 of file 01bsp\+\_\+cryptoengine.\+c.
+
+\index{01bsp\+\_\+cryptoengine.\+c@{01bsp\+\_\+cryptoengine.\+c}!T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+C\+M\+S\+\_\+\+E\+NC@{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+C\+M\+S\+\_\+\+E\+NC}}
+\index{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+C\+M\+S\+\_\+\+E\+NC@{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+C\+M\+S\+\_\+\+E\+NC}!01bsp\+\_\+cryptoengine.\+c@{01bsp\+\_\+cryptoengine.\+c}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+C\+M\+S\+\_\+\+E\+NC}{TEST_AES_CCMS_ENC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+C\+M\+S\+\_\+\+E\+NC~1}\hypertarget{01bsp__cryptoengine_8c_a102a035c2577d642511c31715d52d1ba}{}\label{01bsp__cryptoengine_8c_a102a035c2577d642511c31715d52d1ba}
+
+
+Definition at line 23 of file 01bsp\+\_\+cryptoengine.\+c.
+
+\index{01bsp\+\_\+cryptoengine.\+c@{01bsp\+\_\+cryptoengine.\+c}!T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+TR@{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+TR}}
+\index{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+TR@{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+TR}!01bsp\+\_\+cryptoengine.\+c@{01bsp\+\_\+cryptoengine.\+c}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+TR}{TEST_AES_CTR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+C\+TR~1}\hypertarget{01bsp__cryptoengine_8c_a7f5936891483a614b79c3b94492582a6}{}\label{01bsp__cryptoengine_8c_a7f5936891483a614b79c3b94492582a6}
+
+
+Definition at line 27 of file 01bsp\+\_\+cryptoengine.\+c.
+
+\index{01bsp\+\_\+cryptoengine.\+c@{01bsp\+\_\+cryptoengine.\+c}!T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+E\+CB@{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+E\+CB}}
+\index{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+E\+CB@{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+E\+CB}!01bsp\+\_\+cryptoengine.\+c@{01bsp\+\_\+cryptoengine.\+c}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+E\+CB}{TEST_AES_ECB}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+E\+S\+T\+\_\+\+A\+E\+S\+\_\+\+E\+CB~1}\hypertarget{01bsp__cryptoengine_8c_a39cdf8d4b91a8b073e57dd59ffe7b29c}{}\label{01bsp__cryptoengine_8c_a39cdf8d4b91a8b073e57dd59ffe7b29c}
+
+
+This is a program which shows how to use the C\+R\+Y\+P\+T\+O\+\_\+\+E\+N\+G\+I\+NE driver and runs some tests in order to verify different crypto implementations. 
+
+\begin{DoxyNote}{Note}
+\+: You can use this project with any platform but be careful to declare the C\+R\+Y\+P\+T\+O\+\_\+\+E\+N\+G\+I\+NE implementation for the board that you want to test.
+\end{DoxyNote}
+Load this program on your boards. Radio L\+ED will stay on indefinitely if all tests passed. If there was an error, we use the Error L\+ED to signal.
+
+\begin{DoxyAuthor}{Author}
+Malisa Vucinic \href{mailto:malishav@gmail.com}{\tt malishav@gmail.\+com}, March 2015. 
+\end{DoxyAuthor}
+
+
+Definition at line 22 of file 01bsp\+\_\+cryptoengine.\+c.
+
+\index{01bsp\+\_\+cryptoengine.\+c@{01bsp\+\_\+cryptoengine.\+c}!T\+E\+S\+T\+\_\+\+B\+E\+N\+C\+H\+M\+A\+R\+K\+\_\+\+C\+C\+MS@{T\+E\+S\+T\+\_\+\+B\+E\+N\+C\+H\+M\+A\+R\+K\+\_\+\+C\+C\+MS}}
+\index{T\+E\+S\+T\+\_\+\+B\+E\+N\+C\+H\+M\+A\+R\+K\+\_\+\+C\+C\+MS@{T\+E\+S\+T\+\_\+\+B\+E\+N\+C\+H\+M\+A\+R\+K\+\_\+\+C\+C\+MS}!01bsp\+\_\+cryptoengine.\+c@{01bsp\+\_\+cryptoengine.\+c}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+B\+E\+N\+C\+H\+M\+A\+R\+K\+\_\+\+C\+C\+MS}{TEST_BENCHMARK_CCMS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+E\+S\+T\+\_\+\+B\+E\+N\+C\+H\+M\+A\+R\+K\+\_\+\+C\+C\+MS~1}\hypertarget{01bsp__cryptoengine_8c_ac992ff1ef9e7c5c188ab48e9c786e02b}{}\label{01bsp__cryptoengine_8c_ac992ff1ef9e7c5c188ab48e9c786e02b}
+
+
+Definition at line 29 of file 01bsp\+\_\+cryptoengine.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{01bsp\+\_\+cryptoengine.\+c@{01bsp\+\_\+cryptoengine.\+c}!mote\+\_\+main@{mote\+\_\+main}}
+\index{mote\+\_\+main@{mote\+\_\+main}!01bsp\+\_\+cryptoengine.\+c@{01bsp\+\_\+cryptoengine.\+c}}
+\subsubsection[{\texorpdfstring{mote\+\_\+main(void)}{mote_main(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int mote\+\_\+main (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{01bsp__cryptoengine_8c_ad0caa506af897a3ebe6699aa0c0da367}{}\label{01bsp__cryptoengine_8c_ad0caa506af897a3ebe6699aa0c0da367}
+
+
+The program starts executing here. 
+
+Z1-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+W\+S\+N430v13b-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+Telos\+B-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+Python-\/based emulation of the mote\textquotesingle{}s power supply.
+
+iot-\/lab\+\_\+\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+iot-\/lab\+\_\+\+A8-\/\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+G\+I\+N\+A-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+e\+Z430-\/\+R\+F2500-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module. 
+
+Definition at line 263 of file 01bsp\+\_\+cryptoengine.\+c.
+

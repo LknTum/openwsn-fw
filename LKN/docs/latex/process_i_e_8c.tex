@@ -1,0 +1,220 @@
+\hypertarget{process_i_e_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/02b-\/\+M\+A\+Chigh/process\+IE.c File Reference}
+\label{process_i_e_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/02b-\/\+M\+A\+Chigh/process\+I\+E.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/02b-\/\+M\+A\+Chigh/process\+I\+E.\+c}}
+{\ttfamily \#include \char`\"{}opendefs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}process\+I\+E.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sixtop.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}idmanager.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}openserial.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}I\+E\+E\+E802154.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}openqueue.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}neighbors.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}I\+E\+E\+E802154\+E.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}schedule.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}scheduler.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}packetfunctions.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{toolchain__defs_8h_ac176b886c94b2cf591ec32600fb61a07}{port\+\_\+\+I\+N\+L\+I\+NE} \hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{process_i_e_8c_af2c15db442312d2ec03a6d2e92faa070}{process\+I\+E\+\_\+prepend\+M\+L\+M\+E\+IE} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$pkt, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} len)
+\item 
+\hyperlink{toolchain__defs_8h_ac176b886c94b2cf591ec32600fb61a07}{port\+\_\+\+I\+N\+L\+I\+NE} \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{process_i_e_8c_a4b0d70a9619e3ae1e480745a065f3567}{process\+I\+E\+\_\+prepend\+Sync\+IE} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$pkt)
+\item 
+\hyperlink{toolchain__defs_8h_ac176b886c94b2cf591ec32600fb61a07}{port\+\_\+\+I\+N\+L\+I\+NE} \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{process_i_e_8c_a330740e3120d11f6bf195892367c419d}{process\+I\+E\+\_\+prepend\+Slotframe\+Link\+IE} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$pkt)
+\begin{DoxyCompactList}\small\item\em The function aggregates the information relative to the scheduling of the different motes into a single outgoing message. \end{DoxyCompactList}\item 
+\hyperlink{toolchain__defs_8h_ac176b886c94b2cf591ec32600fb61a07}{port\+\_\+\+I\+N\+L\+I\+NE} \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{process_i_e_8c_a30121bddc8e9bb3a6718c7bb3d2ea1a7}{process\+I\+E\+\_\+prepend\+T\+S\+C\+H\+Timeslot\+IE} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$pkt)
+\item 
+\hyperlink{toolchain__defs_8h_ac176b886c94b2cf591ec32600fb61a07}{port\+\_\+\+I\+N\+L\+I\+NE} \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{process_i_e_8c_a45547afb25ee14d5675d21cdc762dd27}{process\+I\+E\+\_\+prepend\+Channel\+Hopping\+IE} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$pkt)
+\item 
+\hyperlink{toolchain__defs_8h_ac176b886c94b2cf591ec32600fb61a07}{port\+\_\+\+I\+N\+L\+I\+NE} \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{process_i_e_8c_a2e3d58d561920fe7a6e64c9893ff9797}{process\+I\+E\+\_\+prepend\+Opcode\+IE} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$pkt, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} u\+Res\+Command\+ID)
+\item 
+\hyperlink{toolchain__defs_8h_ac176b886c94b2cf591ec32600fb61a07}{port\+\_\+\+I\+N\+L\+I\+NE} \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{process_i_e_8c_a60f943dfd49853b3cf80cffbcc677df4}{process\+I\+E\+\_\+prepend\+Bandwidth\+IE} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$pkt, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} num\+Of\+Links, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} slotframe\+ID)
+\item 
+\hyperlink{toolchain__defs_8h_ac176b886c94b2cf591ec32600fb61a07}{port\+\_\+\+I\+N\+L\+I\+NE} \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{process_i_e_8c_a08b1cfe6cc3d5a4ed4cd1da70e8372f8}{process\+I\+E\+\_\+prepend\+Schedule\+IE} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$pkt, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} type, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} frame\+ID, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} flag, \hyperlink{structcell_info__ht}{cell\+Info\+\_\+ht} $\ast$cell\+List)
+\item 
+\hyperlink{toolchain__defs_8h_ac176b886c94b2cf591ec32600fb61a07}{port\+\_\+\+I\+N\+L\+I\+NE} \hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{process_i_e_8c_acdea9f9aff1d609b8de0feedac04b627}{process\+I\+E\+\_\+retrieve\+Slotframe\+Link\+IE} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$pkt, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Retrieves the link scheduling from a given packet. \end{DoxyCompactList}\item 
+\hyperlink{toolchain__defs_8h_ac176b886c94b2cf591ec32600fb61a07}{port\+\_\+\+I\+N\+L\+I\+NE} \hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{process_i_e_8c_ab9e675fb885910775733ab6dda66a426}{process\+I\+E\+\_\+retrieve\+Opcode\+IE} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$pkt, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$ptr, \hyperlink{structopcode___i_e__ht}{opcode\+\_\+\+I\+E\+\_\+ht} $\ast$opcode\+Info)
+\item 
+\hyperlink{toolchain__defs_8h_ac176b886c94b2cf591ec32600fb61a07}{port\+\_\+\+I\+N\+L\+I\+NE} \hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{process_i_e_8c_a956ab0a46ffb559e7405411ef3eceae1}{process\+I\+E\+\_\+retrieve\+Bandwidth\+IE} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$pkt, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$ptr, \hyperlink{structbandwidth___i_e__ht}{bandwidth\+\_\+\+I\+E\+\_\+ht} $\ast$bandwidth\+Info)
+\item 
+\hyperlink{toolchain__defs_8h_ac176b886c94b2cf591ec32600fb61a07}{port\+\_\+\+I\+N\+L\+I\+NE} \hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{process_i_e_8c_ad5484a02fc6818e5a129ce20d7162d03}{process\+I\+E\+\_\+retrieve\+Schedule\+IE} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$pkt, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$ptr, \hyperlink{structschedule___i_e__ht}{schedule\+\_\+\+I\+E\+\_\+ht} $\ast$schedule\+Info)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{process\+I\+E.\+c@{process\+I\+E.\+c}!process\+I\+E\+\_\+prepend\+Bandwidth\+IE@{process\+I\+E\+\_\+prepend\+Bandwidth\+IE}}
+\index{process\+I\+E\+\_\+prepend\+Bandwidth\+IE@{process\+I\+E\+\_\+prepend\+Bandwidth\+IE}!process\+I\+E.\+c@{process\+I\+E.\+c}}
+\subsubsection[{\texorpdfstring{process\+I\+E\+\_\+prepend\+Bandwidth\+I\+E(\+Open\+Queue\+Entry\+\_\+t $\ast$pkt, uint8\+\_\+t num\+Of\+Links, uint8\+\_\+t slotframe\+I\+D)}{processIE_prependBandwidthIE(OpenQueueEntry_t *pkt, uint8_t numOfLinks, uint8_t slotframeID)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf uint8\+\_\+t} process\+I\+E\+\_\+prepend\+Bandwidth\+IE (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{pkt, }
+\item[{{\bf uint8\+\_\+t}}]{num\+Of\+Links, }
+\item[{{\bf uint8\+\_\+t}}]{slotframe\+ID}
+\end{DoxyParamCaption}
+)}\hypertarget{process_i_e_8c_a60f943dfd49853b3cf80cffbcc677df4}{}\label{process_i_e_8c_a60f943dfd49853b3cf80cffbcc677df4}
+
+
+Definition at line 276 of file process\+I\+E.\+c.
+
+\index{process\+I\+E.\+c@{process\+I\+E.\+c}!process\+I\+E\+\_\+prepend\+Channel\+Hopping\+IE@{process\+I\+E\+\_\+prepend\+Channel\+Hopping\+IE}}
+\index{process\+I\+E\+\_\+prepend\+Channel\+Hopping\+IE@{process\+I\+E\+\_\+prepend\+Channel\+Hopping\+IE}!process\+I\+E.\+c@{process\+I\+E.\+c}}
+\subsubsection[{\texorpdfstring{process\+I\+E\+\_\+prepend\+Channel\+Hopping\+I\+E(\+Open\+Queue\+Entry\+\_\+t $\ast$pkt)}{processIE_prependChannelHoppingIE(OpenQueueEntry_t *pkt)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf uint8\+\_\+t} process\+I\+E\+\_\+prepend\+Channel\+Hopping\+IE (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{pkt}
+\end{DoxyParamCaption}
+)}\hypertarget{process_i_e_8c_a45547afb25ee14d5675d21cdc762dd27}{}\label{process_i_e_8c_a45547afb25ee14d5675d21cdc762dd27}
+
+
+Definition at line 204 of file process\+I\+E.\+c.
+
+\index{process\+I\+E.\+c@{process\+I\+E.\+c}!process\+I\+E\+\_\+prepend\+M\+L\+M\+E\+IE@{process\+I\+E\+\_\+prepend\+M\+L\+M\+E\+IE}}
+\index{process\+I\+E\+\_\+prepend\+M\+L\+M\+E\+IE@{process\+I\+E\+\_\+prepend\+M\+L\+M\+E\+IE}!process\+I\+E.\+c@{process\+I\+E.\+c}}
+\subsubsection[{\texorpdfstring{process\+I\+E\+\_\+prepend\+M\+L\+M\+E\+I\+E(\+Open\+Queue\+Entry\+\_\+t $\ast$pkt, uint8\+\_\+t len)}{processIE_prependMLMEIE(OpenQueueEntry_t *pkt, uint8_t len)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} process\+I\+E\+\_\+prepend\+M\+L\+M\+E\+IE (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{pkt, }
+\item[{{\bf uint8\+\_\+t}}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{process_i_e_8c_af2c15db442312d2ec03a6d2e92faa070}{}\label{process_i_e_8c_af2c15db442312d2ec03a6d2e92faa070}
+
+
+Definition at line 18 of file process\+I\+E.\+c.
+
+\index{process\+I\+E.\+c@{process\+I\+E.\+c}!process\+I\+E\+\_\+prepend\+Opcode\+IE@{process\+I\+E\+\_\+prepend\+Opcode\+IE}}
+\index{process\+I\+E\+\_\+prepend\+Opcode\+IE@{process\+I\+E\+\_\+prepend\+Opcode\+IE}!process\+I\+E.\+c@{process\+I\+E.\+c}}
+\subsubsection[{\texorpdfstring{process\+I\+E\+\_\+prepend\+Opcode\+I\+E(\+Open\+Queue\+Entry\+\_\+t $\ast$pkt, uint8\+\_\+t u\+Res\+Command\+I\+D)}{processIE_prependOpcodeIE(OpenQueueEntry_t *pkt, uint8_t uResCommandID)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf uint8\+\_\+t} process\+I\+E\+\_\+prepend\+Opcode\+IE (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{pkt, }
+\item[{{\bf uint8\+\_\+t}}]{u\+Res\+Command\+ID}
+\end{DoxyParamCaption}
+)}\hypertarget{process_i_e_8c_a2e3d58d561920fe7a6e64c9893ff9797}{}\label{process_i_e_8c_a2e3d58d561920fe7a6e64c9893ff9797}
+
+
+Definition at line 237 of file process\+I\+E.\+c.
+
+\index{process\+I\+E.\+c@{process\+I\+E.\+c}!process\+I\+E\+\_\+prepend\+Schedule\+IE@{process\+I\+E\+\_\+prepend\+Schedule\+IE}}
+\index{process\+I\+E\+\_\+prepend\+Schedule\+IE@{process\+I\+E\+\_\+prepend\+Schedule\+IE}!process\+I\+E.\+c@{process\+I\+E.\+c}}
+\subsubsection[{\texorpdfstring{process\+I\+E\+\_\+prepend\+Schedule\+I\+E(\+Open\+Queue\+Entry\+\_\+t $\ast$pkt, uint8\+\_\+t type, uint8\+\_\+t frame\+I\+D, uint8\+\_\+t flag, cell\+Info\+\_\+ht $\ast$cell\+List)}{processIE_prependScheduleIE(OpenQueueEntry_t *pkt, uint8_t type, uint8_t frameID, uint8_t flag, cellInfo_ht *cellList)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf uint8\+\_\+t} process\+I\+E\+\_\+prepend\+Schedule\+IE (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{pkt, }
+\item[{{\bf uint8\+\_\+t}}]{type, }
+\item[{{\bf uint8\+\_\+t}}]{frame\+ID, }
+\item[{{\bf uint8\+\_\+t}}]{flag, }
+\item[{{\bf cell\+Info\+\_\+ht} $\ast$}]{cell\+List}
+\end{DoxyParamCaption}
+)}\hypertarget{process_i_e_8c_a08b1cfe6cc3d5a4ed4cd1da70e8372f8}{}\label{process_i_e_8c_a08b1cfe6cc3d5a4ed4cd1da70e8372f8}
+
+
+Definition at line 328 of file process\+I\+E.\+c.
+
+\index{process\+I\+E.\+c@{process\+I\+E.\+c}!process\+I\+E\+\_\+prepend\+Slotframe\+Link\+IE@{process\+I\+E\+\_\+prepend\+Slotframe\+Link\+IE}}
+\index{process\+I\+E\+\_\+prepend\+Slotframe\+Link\+IE@{process\+I\+E\+\_\+prepend\+Slotframe\+Link\+IE}!process\+I\+E.\+c@{process\+I\+E.\+c}}
+\subsubsection[{\texorpdfstring{process\+I\+E\+\_\+prepend\+Slotframe\+Link\+I\+E(\+Open\+Queue\+Entry\+\_\+t $\ast$pkt)}{processIE_prependSlotframeLinkIE(OpenQueueEntry_t *pkt)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf uint8\+\_\+t} process\+I\+E\+\_\+prepend\+Slotframe\+Link\+IE (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{pkt}
+\end{DoxyParamCaption}
+)}\hypertarget{process_i_e_8c_a330740e3120d11f6bf195892367c419d}{}\label{process_i_e_8c_a330740e3120d11f6bf195892367c419d}
+
+
+The function aggregates the information relative to the scheduling of the different motes into a single outgoing message. 
+
+\begin{DoxyRefDesc}{L\+K\+N-\/\+Samu}
+\item[\hyperlink{_l_k_n_code_edits__LKN_code_edits000018}{L\+K\+N-\/\+Samu}]We modified the function such that additional parameters concerning the link options and target address could be added to the packet. In particular, the 6-\/th element of the payload (payload\mbox{[}5\mbox{]}) will be used to store the address of the link-\/scheduling, and the link\+Option contains meaningful information about the link state.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em Packet} & that is going to be sent. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 93 of file process\+I\+E.\+c.
+
+\index{process\+I\+E.\+c@{process\+I\+E.\+c}!process\+I\+E\+\_\+prepend\+Sync\+IE@{process\+I\+E\+\_\+prepend\+Sync\+IE}}
+\index{process\+I\+E\+\_\+prepend\+Sync\+IE@{process\+I\+E\+\_\+prepend\+Sync\+IE}!process\+I\+E.\+c@{process\+I\+E.\+c}}
+\subsubsection[{\texorpdfstring{process\+I\+E\+\_\+prepend\+Sync\+I\+E(\+Open\+Queue\+Entry\+\_\+t $\ast$pkt)}{processIE_prependSyncIE(OpenQueueEntry_t *pkt)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf uint8\+\_\+t} process\+I\+E\+\_\+prepend\+Sync\+IE (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{pkt}
+\end{DoxyParamCaption}
+)}\hypertarget{process_i_e_8c_a4b0d70a9619e3ae1e480745a065f3567}{}\label{process_i_e_8c_a4b0d70a9619e3ae1e480745a065f3567}
+
+
+Definition at line 42 of file process\+I\+E.\+c.
+
+\index{process\+I\+E.\+c@{process\+I\+E.\+c}!process\+I\+E\+\_\+prepend\+T\+S\+C\+H\+Timeslot\+IE@{process\+I\+E\+\_\+prepend\+T\+S\+C\+H\+Timeslot\+IE}}
+\index{process\+I\+E\+\_\+prepend\+T\+S\+C\+H\+Timeslot\+IE@{process\+I\+E\+\_\+prepend\+T\+S\+C\+H\+Timeslot\+IE}!process\+I\+E.\+c@{process\+I\+E.\+c}}
+\subsubsection[{\texorpdfstring{process\+I\+E\+\_\+prepend\+T\+S\+C\+H\+Timeslot\+I\+E(\+Open\+Queue\+Entry\+\_\+t $\ast$pkt)}{processIE_prependTSCHTimeslotIE(OpenQueueEntry_t *pkt)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf uint8\+\_\+t} process\+I\+E\+\_\+prepend\+T\+S\+C\+H\+Timeslot\+IE (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{pkt}
+\end{DoxyParamCaption}
+)}\hypertarget{process_i_e_8c_a30121bddc8e9bb3a6718c7bb3d2ea1a7}{}\label{process_i_e_8c_a30121bddc8e9bb3a6718c7bb3d2ea1a7}
+
+
+Definition at line 172 of file process\+I\+E.\+c.
+
+\index{process\+I\+E.\+c@{process\+I\+E.\+c}!process\+I\+E\+\_\+retrieve\+Bandwidth\+IE@{process\+I\+E\+\_\+retrieve\+Bandwidth\+IE}}
+\index{process\+I\+E\+\_\+retrieve\+Bandwidth\+IE@{process\+I\+E\+\_\+retrieve\+Bandwidth\+IE}!process\+I\+E.\+c@{process\+I\+E.\+c}}
+\subsubsection[{\texorpdfstring{process\+I\+E\+\_\+retrieve\+Bandwidth\+I\+E(\+Open\+Queue\+Entry\+\_\+t $\ast$pkt, uint8\+\_\+t $\ast$ptr, bandwidth\+\_\+\+I\+E\+\_\+ht $\ast$bandwidth\+Info)}{processIE_retrieveBandwidthIE(OpenQueueEntry_t *pkt, uint8_t *ptr, bandwidth_IE_ht *bandwidthInfo)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} process\+I\+E\+\_\+retrieve\+Bandwidth\+IE (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{pkt, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{ptr, }
+\item[{{\bf bandwidth\+\_\+\+I\+E\+\_\+ht} $\ast$}]{bandwidth\+Info}
+\end{DoxyParamCaption}
+)}\hypertarget{process_i_e_8c_a956ab0a46ffb559e7405411ef3eceae1}{}\label{process_i_e_8c_a956ab0a46ffb559e7405411ef3eceae1}
+
+
+Definition at line 569 of file process\+I\+E.\+c.
+
+\index{process\+I\+E.\+c@{process\+I\+E.\+c}!process\+I\+E\+\_\+retrieve\+Opcode\+IE@{process\+I\+E\+\_\+retrieve\+Opcode\+IE}}
+\index{process\+I\+E\+\_\+retrieve\+Opcode\+IE@{process\+I\+E\+\_\+retrieve\+Opcode\+IE}!process\+I\+E.\+c@{process\+I\+E.\+c}}
+\subsubsection[{\texorpdfstring{process\+I\+E\+\_\+retrieve\+Opcode\+I\+E(\+Open\+Queue\+Entry\+\_\+t $\ast$pkt, uint8\+\_\+t $\ast$ptr, opcode\+\_\+\+I\+E\+\_\+ht $\ast$opcode\+Info)}{processIE_retrieveOpcodeIE(OpenQueueEntry_t *pkt, uint8_t *ptr, opcode_IE_ht *opcodeInfo)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} process\+I\+E\+\_\+retrieve\+Opcode\+IE (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{pkt, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{ptr, }
+\item[{{\bf opcode\+\_\+\+I\+E\+\_\+ht} $\ast$}]{opcode\+Info}
+\end{DoxyParamCaption}
+)}\hypertarget{process_i_e_8c_ab9e675fb885910775733ab6dda66a426}{}\label{process_i_e_8c_ab9e675fb885910775733ab6dda66a426}
+
+
+Definition at line 554 of file process\+I\+E.\+c.
+
+\index{process\+I\+E.\+c@{process\+I\+E.\+c}!process\+I\+E\+\_\+retrieve\+Schedule\+IE@{process\+I\+E\+\_\+retrieve\+Schedule\+IE}}
+\index{process\+I\+E\+\_\+retrieve\+Schedule\+IE@{process\+I\+E\+\_\+retrieve\+Schedule\+IE}!process\+I\+E.\+c@{process\+I\+E.\+c}}
+\subsubsection[{\texorpdfstring{process\+I\+E\+\_\+retrieve\+Schedule\+I\+E(\+Open\+Queue\+Entry\+\_\+t $\ast$pkt, uint8\+\_\+t $\ast$ptr, schedule\+\_\+\+I\+E\+\_\+ht $\ast$schedule\+Info)}{processIE_retrieveScheduleIE(OpenQueueEntry_t *pkt, uint8_t *ptr, schedule_IE_ht *scheduleInfo)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} process\+I\+E\+\_\+retrieve\+Schedule\+IE (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{pkt, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{ptr, }
+\item[{{\bf schedule\+\_\+\+I\+E\+\_\+ht} $\ast$}]{schedule\+Info}
+\end{DoxyParamCaption}
+)}\hypertarget{process_i_e_8c_ad5484a02fc6818e5a129ce20d7162d03}{}\label{process_i_e_8c_ad5484a02fc6818e5a129ce20d7162d03}
+
+
+Definition at line 589 of file process\+I\+E.\+c.
+
+\index{process\+I\+E.\+c@{process\+I\+E.\+c}!process\+I\+E\+\_\+retrieve\+Slotframe\+Link\+IE@{process\+I\+E\+\_\+retrieve\+Slotframe\+Link\+IE}}
+\index{process\+I\+E\+\_\+retrieve\+Slotframe\+Link\+IE@{process\+I\+E\+\_\+retrieve\+Slotframe\+Link\+IE}!process\+I\+E.\+c@{process\+I\+E.\+c}}
+\subsubsection[{\texorpdfstring{process\+I\+E\+\_\+retrieve\+Slotframe\+Link\+I\+E(\+Open\+Queue\+Entry\+\_\+t $\ast$pkt, uint8\+\_\+t $\ast$ptr)}{processIE_retrieveSlotframeLinkIE(OpenQueueEntry_t *pkt, uint8_t *ptr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+\_\+\+I\+N\+L\+I\+NE} {\bf void} process\+I\+E\+\_\+retrieve\+Slotframe\+Link\+IE (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{pkt, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{process_i_e_8c_acdea9f9aff1d609b8de0feedac04b627}{}\label{process_i_e_8c_acdea9f9aff1d609b8de0feedac04b627}
+
+
+Retrieves the link scheduling from a given packet. 
+
+\begin{DoxyRefDesc}{L\+K\+N-\/\+Samu}
+\item[\hyperlink{_l_k_n_code_edits__LKN_code_edits000019}{L\+K\+N-\/\+Samu}]Our modification enables the extraction of the neigh\+Addr and link\+Info information, previously included in the IE. In this way, we add to every new active slot the information about the target mote\textquotesingle{}s address and link options.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em Packet} & where to extract the link scheduling from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New scheduling information as active slots 
+\end{DoxyReturn}
+
+
+Definition at line 454 of file process\+I\+E.\+c.
+

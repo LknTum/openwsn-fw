@@ -1,0 +1,56 @@
+\hypertarget{pwm_8h}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/drivers/gina/pwm.h File Reference}
+\label{pwm_8h}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/drivers/gina/pwm.\+h@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/drivers/gina/pwm.\+h}}
+{\ttfamily \#include \char`\"{}msp430x26x.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___p_w_m_ga96e506808fe48663a74abcafdcbfdc7e}{P\+W\+M\+P\+E\+R\+I\+OD}~6000
+\item 
+\#define \hyperlink{group___p_w_m_ga6f330c196a65bb05fd5b7fff59d6f62f}{P\+W\+M\+M\+IN}~2000
+\item 
+\#define \hyperlink{group___p_w_m_ga29eaa7ea340aed6c94c8208f548c4ac8}{P\+W\+M\+M\+AX}~4000
+\item 
+\#define \hyperlink{group___p_w_m_ga7a4ad06a2bcb1065209a117ea09bbfbf}{P\+W\+M0}~3000
+\item 
+\#define \hyperlink{group___p_w_m_ga4fda1cf5b4a72bd805a203b9665a155b}{P\+W\+M\+M\+A\+XD}~1000
+\item 
+\#define \hyperlink{group___p_w_m_ga314546c7b69b0cbb81eb8e251790163a}{P\+W\+M\+B\+UF}~300
+\item 
+\#define \hyperlink{group___p_w_m_gaeee77a1eb6566203ee0ff9f73793eef0}{M\+O\+T\+O\+R\+P\+E\+R\+I\+OD}~800
+\item 
+\#define \hyperlink{group___p_w_m_gae1c41fe7d060099ebab9cee16893eac0}{M\+O\+T\+O\+R\+M\+AX}~800
+\item 
+\#define \hyperlink{group___p_w_m_ga1f92d617a268ea424ebbd4e964ed2c7a}{M\+O\+T\+O\+R\+M\+IN}~0
+\item 
+\#define \hyperlink{group___p_w_m_ga4583b6e199cc79c08de94b1406783626}{pwm\+\_\+getservo}(which)~T\+B\+C\+CR\#\#which
+\item 
+\#define \hyperlink{group___p_w_m_ga3377aa8203e3df46d08640cc1c7fae78}{pwm\+\_\+getmotor}(which)~T\+A\+C\+CR\#\#which
+\item 
+\#define \hyperlink{group___p_w_m_ga0f59b97f507f6ddda8b5ba4e641fb015}{P\+W\+M\+\_\+\+W\+A\+IT}~\hyperlink{group___p_w_m_ga354856dbd0205dcf3768b19da8f692d9}{pwm\+\_\+tick} = 0; while (!\hyperlink{group___p_w_m_ga354856dbd0205dcf3768b19da8f692d9}{pwm\+\_\+tick})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___p_w_m_ga1e8fdae3fd7118582ffa427dad05b6e1}{pwm\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___p_w_m_ga5047a45bb0e8e868a84cbe6c6d5f8ec8}{pwm\+\_\+config} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___p_w_m_ga1007676a796e66917174f4aae48672a4}{pwm\+\_\+setservo} (int which, int val)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___p_w_m_ga273dc39cb6630062cb86ca6dcd38c1f9}{pwm\+\_\+setmotor} (int which, int val)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___p_w_m_ga2fbeacc158dbff42bb85bfa3bcac0f21}{pwm\+\_\+nexttick} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___p_w_m_gaec0e6063a08c462c71a366b64ee2947f}{pwm\+\_\+sleep} (int ticks)
+\item 
+int \hyperlink{group___p_w_m_ga34e9c25fc21fdabeafb7fcfa033be383}{pwm\+\_\+test} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___p_w_m_ga769007174508dba2248cdc0a66e888fa}{pwm\+\_\+squiggle} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile char \hyperlink{group___p_w_m_ga354856dbd0205dcf3768b19da8f692d9}{pwm\+\_\+tick}
+\item 
+volatile int \hyperlink{group___p_w_m_ga9e95213338963b42b5a83712d32d3828}{pwm\+\_\+button\+\_\+debounce}
+\end{DoxyCompactItemize}

@@ -1,0 +1,263 @@
+\hypertarget{group___g_p_i_o___exported___functions}{}\section{G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions}
+\label{group___g_p_i_o___exported___functions}\index{G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions@{G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___g_p_i_o___exported___functions_gaa60bdf3182c44b5fa818f237042f52ee}{G\+P\+I\+O\+\_\+\+De\+Init} (\hyperlink{struct_g_p_i_o___type_def}{G\+P\+I\+O\+\_\+\+Type\+Def} $\ast$G\+P\+I\+Ox)
+\begin{DoxyCompactList}\small\item\em Deinitializes the G\+P\+I\+Ox peripheral registers to their default reset values. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___g_p_i_o___exported___functions_ga7f645e6b6146818c3d6c19021e70170c}{G\+P\+I\+O\+\_\+\+A\+F\+I\+O\+De\+Init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Deinitializes the Alternate Functions (remap, event control and E\+X\+TI configuration) registers to their default reset values. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___g_p_i_o___exported___functions_ga71abf9404261370d03cca449b88d3a65}{G\+P\+I\+O\+\_\+\+Init} (\hyperlink{struct_g_p_i_o___type_def}{G\+P\+I\+O\+\_\+\+Type\+Def} $\ast$G\+P\+I\+Ox, \hyperlink{struct_g_p_i_o___init_type_def}{G\+P\+I\+O\+\_\+\+Init\+Type\+Def} $\ast$G\+P\+I\+O\+\_\+\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Initializes the G\+P\+I\+Ox peripheral according to the specified parameters in the G\+P\+I\+O\+\_\+\+Init\+Struct. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___g_p_i_o___exported___functions_gab28de41278e7f8c63d0851e2733b10df}{G\+P\+I\+O\+\_\+\+Struct\+Init} (\hyperlink{struct_g_p_i_o___init_type_def}{G\+P\+I\+O\+\_\+\+Init\+Type\+Def} $\ast$G\+P\+I\+O\+\_\+\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Fills each G\+P\+I\+O\+\_\+\+Init\+Struct member with its default value. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{group___g_p_i_o___exported___functions_ga139a33adc8409288e9f193bbebb5a0f7}{G\+P\+I\+O\+\_\+\+Read\+Input\+Data} (\hyperlink{struct_g_p_i_o___type_def}{G\+P\+I\+O\+\_\+\+Type\+Def} $\ast$G\+P\+I\+Ox)
+\begin{DoxyCompactList}\small\item\em Reads the specified G\+P\+IO input data port. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{group___g_p_i_o___exported___functions_gaf8938a34280b7dc3e39872a7c17bb323}{G\+P\+I\+O\+\_\+\+Read\+Output\+Data} (\hyperlink{struct_g_p_i_o___type_def}{G\+P\+I\+O\+\_\+\+Type\+Def} $\ast$G\+P\+I\+Ox)
+\begin{DoxyCompactList}\small\item\em Reads the specified G\+P\+IO output data port. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___g_p_i_o___exported___functions_ga935f31ed7a86c6cb594cf34313b4b7af}{G\+P\+I\+O\+\_\+\+Event\+Output\+Config} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} G\+P\+I\+O\+\_\+\+Port\+Source, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} G\+P\+I\+O\+\_\+\+Pin\+Source)
+\begin{DoxyCompactList}\small\item\em Selects the G\+P\+IO pin used as Event output. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___g_p_i_o___exported___functions_gaf13ab3d59e467df44b492f1cdfe2f588}{G\+P\+I\+O\+\_\+\+Event\+Output\+Cmd} (\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_ac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} New\+State)
+\begin{DoxyCompactList}\small\item\em Enables or disables the Event Output. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___g_p_i_o___exported___functions_ga8c1f13646d7418827378032a584da653}{G\+P\+I\+O\+\_\+\+E\+X\+T\+I\+Line\+Config} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} G\+P\+I\+O\+\_\+\+Port\+Source, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} G\+P\+I\+O\+\_\+\+Pin\+Source)
+\begin{DoxyCompactList}\small\item\em Selects the G\+P\+IO pin used as E\+X\+TI Line. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions@{G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions}!G\+P\+I\+O\+\_\+\+A\+F\+I\+O\+De\+Init@{G\+P\+I\+O\+\_\+\+A\+F\+I\+O\+De\+Init}}
+\index{G\+P\+I\+O\+\_\+\+A\+F\+I\+O\+De\+Init@{G\+P\+I\+O\+\_\+\+A\+F\+I\+O\+De\+Init}!G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions@{G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{G\+P\+I\+O\+\_\+\+A\+F\+I\+O\+De\+Init(void)}{GPIO_AFIODeInit(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} G\+P\+I\+O\+\_\+\+A\+F\+I\+O\+De\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_p_i_o___exported___functions_ga7f645e6b6146818c3d6c19021e70170c}{}\label{group___g_p_i_o___exported___functions_ga7f645e6b6146818c3d6c19021e70170c}
+
+
+Deinitializes the Alternate Functions (remap, event control and E\+X\+TI configuration) registers to their default reset values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 107 of file stm32f10x\+\_\+gpio.\+c.
+
+\index{G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions@{G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions}!G\+P\+I\+O\+\_\+\+De\+Init@{G\+P\+I\+O\+\_\+\+De\+Init}}
+\index{G\+P\+I\+O\+\_\+\+De\+Init@{G\+P\+I\+O\+\_\+\+De\+Init}!G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions@{G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{G\+P\+I\+O\+\_\+\+De\+Init(\+G\+P\+I\+O\+\_\+\+Type\+Def $\ast$\+G\+P\+I\+Ox)}{GPIO_DeInit(GPIO_TypeDef *GPIOx)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} G\+P\+I\+O\+\_\+\+De\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+P\+I\+O\+\_\+\+Type\+Def} $\ast$}]{G\+P\+I\+Ox}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_p_i_o___exported___functions_gaa60bdf3182c44b5fa818f237042f52ee}{}\label{group___g_p_i_o___exported___functions_gaa60bdf3182c44b5fa818f237042f52ee}
+
+
+Deinitializes the G\+P\+I\+Ox peripheral registers to their default reset values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G\+P\+I\+Ox} & where x can be (A..G) to select the G\+P\+IO peripheral. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 51 of file stm32f10x\+\_\+gpio.\+c.
+
+\index{G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions@{G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions}!G\+P\+I\+O\+\_\+\+Event\+Output\+Cmd@{G\+P\+I\+O\+\_\+\+Event\+Output\+Cmd}}
+\index{G\+P\+I\+O\+\_\+\+Event\+Output\+Cmd@{G\+P\+I\+O\+\_\+\+Event\+Output\+Cmd}!G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions@{G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{G\+P\+I\+O\+\_\+\+Event\+Output\+Cmd(\+Functional\+State New\+State)}{GPIO_EventOutputCmd(FunctionalState NewState)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} G\+P\+I\+O\+\_\+\+Event\+Output\+Cmd (
+\begin{DoxyParamCaption}
+\item[{{\bf Functional\+State}}]{New\+State}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_p_i_o___exported___functions_gaf13ab3d59e467df44b492f1cdfe2f588}{}\label{group___g_p_i_o___exported___functions_gaf13ab3d59e467df44b492f1cdfe2f588}
+
+
+Enables or disables the Event Output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em New\+State} & new state of the Event output. This parameter can be\+: E\+N\+A\+B\+LE or D\+I\+S\+A\+B\+LE. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 476 of file stm32f10x\+\_\+gpio.\+c.
+
+\index{G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions@{G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions}!G\+P\+I\+O\+\_\+\+Event\+Output\+Config@{G\+P\+I\+O\+\_\+\+Event\+Output\+Config}}
+\index{G\+P\+I\+O\+\_\+\+Event\+Output\+Config@{G\+P\+I\+O\+\_\+\+Event\+Output\+Config}!G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions@{G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{G\+P\+I\+O\+\_\+\+Event\+Output\+Config(uint8\+\_\+t G\+P\+I\+O\+\_\+\+Port\+Source, uint8\+\_\+t G\+P\+I\+O\+\_\+\+Pin\+Source)}{GPIO_EventOutputConfig(uint8_t GPIO_PortSource, uint8_t GPIO_PinSource)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} G\+P\+I\+O\+\_\+\+Event\+Output\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{G\+P\+I\+O\+\_\+\+Port\+Source, }
+\item[{{\bf u8}}]{G\+P\+I\+O\+\_\+\+Pin\+Source}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_p_i_o___exported___functions_ga935f31ed7a86c6cb594cf34313b4b7af}{}\label{group___g_p_i_o___exported___functions_ga935f31ed7a86c6cb594cf34313b4b7af}
+
+
+Selects the G\+P\+IO pin used as Event output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G\+P\+I\+O\+\_\+\+Port\+Source} & selects the G\+P\+IO port to be used as source for Event output. This parameter can be G\+P\+I\+O\+\_\+\+Port\+Source\+G\+P\+I\+Ox where x can be (A..E). \\
+\hline
+{\em G\+P\+I\+O\+\_\+\+Pin\+Source} & specifies the pin for the Event output. This parameter can be G\+P\+I\+O\+\_\+\+Pin\+Sourcex where x can be (0..15). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 451 of file stm32f10x\+\_\+gpio.\+c.
+
+\index{G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions@{G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions}!G\+P\+I\+O\+\_\+\+E\+X\+T\+I\+Line\+Config@{G\+P\+I\+O\+\_\+\+E\+X\+T\+I\+Line\+Config}}
+\index{G\+P\+I\+O\+\_\+\+E\+X\+T\+I\+Line\+Config@{G\+P\+I\+O\+\_\+\+E\+X\+T\+I\+Line\+Config}!G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions@{G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{G\+P\+I\+O\+\_\+\+E\+X\+T\+I\+Line\+Config(uint8\+\_\+t G\+P\+I\+O\+\_\+\+Port\+Source, uint8\+\_\+t G\+P\+I\+O\+\_\+\+Pin\+Source)}{GPIO_EXTILineConfig(uint8_t GPIO_PortSource, uint8_t GPIO_PinSource)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} G\+P\+I\+O\+\_\+\+E\+X\+T\+I\+Line\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{G\+P\+I\+O\+\_\+\+Port\+Source, }
+\item[{{\bf u8}}]{G\+P\+I\+O\+\_\+\+Pin\+Source}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_p_i_o___exported___functions_ga8c1f13646d7418827378032a584da653}{}\label{group___g_p_i_o___exported___functions_ga8c1f13646d7418827378032a584da653}
+
+
+Selects the G\+P\+IO pin used as E\+X\+TI Line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G\+P\+I\+O\+\_\+\+Port\+Source} & selects the G\+P\+IO port to be used as source for E\+X\+TI lines. This parameter can be G\+P\+I\+O\+\_\+\+Port\+Source\+G\+P\+I\+Ox where x can be (A..G). \\
+\hline
+{\em G\+P\+I\+O\+\_\+\+Pin\+Source} & specifies the E\+X\+TI line to be configured. This parameter can be G\+P\+I\+O\+\_\+\+Pin\+Sourcex where x can be (0..15). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 569 of file stm32f10x\+\_\+gpio.\+c.
+
+\index{G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions@{G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions}!G\+P\+I\+O\+\_\+\+Init@{G\+P\+I\+O\+\_\+\+Init}}
+\index{G\+P\+I\+O\+\_\+\+Init@{G\+P\+I\+O\+\_\+\+Init}!G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions@{G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{G\+P\+I\+O\+\_\+\+Init(\+G\+P\+I\+O\+\_\+\+Type\+Def $\ast$\+G\+P\+I\+Ox, G\+P\+I\+O\+\_\+\+Init\+Type\+Def $\ast$\+G\+P\+I\+O\+\_\+\+Init\+Struct)}{GPIO_Init(GPIO_TypeDef *GPIOx, GPIO_InitTypeDef *GPIO_InitStruct)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} G\+P\+I\+O\+\_\+\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+P\+I\+O\+\_\+\+Type\+Def} $\ast$}]{G\+P\+I\+Ox, }
+\item[{{\bf G\+P\+I\+O\+\_\+\+Init\+Type\+Def} $\ast$}]{G\+P\+I\+O\+\_\+\+Init\+Struct}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_p_i_o___exported___functions_ga71abf9404261370d03cca449b88d3a65}{}\label{group___g_p_i_o___exported___functions_ga71abf9404261370d03cca449b88d3a65}
+
+
+Initializes the G\+P\+I\+Ox peripheral according to the specified parameters in the G\+P\+I\+O\+\_\+\+Init\+Struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G\+P\+I\+Ox} & where x can be (A..G) to select the G\+P\+IO peripheral. \\
+\hline
+{\em G\+P\+I\+O\+\_\+\+Init\+Struct} & pointer to a \hyperlink{struct_g_p_i_o___init_type_def}{G\+P\+I\+O\+\_\+\+Init\+Type\+Def} structure that contains the configuration information for the specified G\+P\+IO peripheral. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 124 of file stm32f10x\+\_\+gpio.\+c.
+
+\index{G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions@{G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions}!G\+P\+I\+O\+\_\+\+Read\+Input\+Data@{G\+P\+I\+O\+\_\+\+Read\+Input\+Data}}
+\index{G\+P\+I\+O\+\_\+\+Read\+Input\+Data@{G\+P\+I\+O\+\_\+\+Read\+Input\+Data}!G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions@{G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{G\+P\+I\+O\+\_\+\+Read\+Input\+Data(\+G\+P\+I\+O\+\_\+\+Type\+Def $\ast$\+G\+P\+I\+Ox)}{GPIO_ReadInputData(GPIO_TypeDef *GPIOx)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\+\_\+t} G\+P\+I\+O\+\_\+\+Read\+Input\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+P\+I\+O\+\_\+\+Type\+Def} $\ast$}]{G\+P\+I\+Ox}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_p_i_o___exported___functions_ga139a33adc8409288e9f193bbebb5a0f7}{}\label{group___g_p_i_o___exported___functions_ga139a33adc8409288e9f193bbebb5a0f7}
+
+
+Reads the specified G\+P\+IO input data port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G\+P\+I\+Ox} & where x can be (A..G) to select the G\+P\+IO peripheral. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em G\+P\+IO} & input data port value. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 272 of file stm32f10x\+\_\+gpio.\+c.
+
+\index{G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions@{G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions}!G\+P\+I\+O\+\_\+\+Read\+Output\+Data@{G\+P\+I\+O\+\_\+\+Read\+Output\+Data}}
+\index{G\+P\+I\+O\+\_\+\+Read\+Output\+Data@{G\+P\+I\+O\+\_\+\+Read\+Output\+Data}!G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions@{G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{G\+P\+I\+O\+\_\+\+Read\+Output\+Data(\+G\+P\+I\+O\+\_\+\+Type\+Def $\ast$\+G\+P\+I\+Ox)}{GPIO_ReadOutputData(GPIO_TypeDef *GPIOx)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\+\_\+t} G\+P\+I\+O\+\_\+\+Read\+Output\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+P\+I\+O\+\_\+\+Type\+Def} $\ast$}]{G\+P\+I\+Ox}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_p_i_o___exported___functions_gaf8938a34280b7dc3e39872a7c17bb323}{}\label{group___g_p_i_o___exported___functions_gaf8938a34280b7dc3e39872a7c17bb323}
+
+
+Reads the specified G\+P\+IO output data port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G\+P\+I\+Ox} & where x can be (A..G) to select the G\+P\+IO peripheral. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em G\+P\+IO} & output data port value. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 315 of file stm32f10x\+\_\+gpio.\+c.
+
+\index{G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions@{G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions}!G\+P\+I\+O\+\_\+\+Struct\+Init@{G\+P\+I\+O\+\_\+\+Struct\+Init}}
+\index{G\+P\+I\+O\+\_\+\+Struct\+Init@{G\+P\+I\+O\+\_\+\+Struct\+Init}!G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions@{G\+P\+I\+O\+\_\+\+Exported\+\_\+\+Functions}}
+\subsubsection[{\texorpdfstring{G\+P\+I\+O\+\_\+\+Struct\+Init(\+G\+P\+I\+O\+\_\+\+Init\+Type\+Def $\ast$\+G\+P\+I\+O\+\_\+\+Init\+Struct)}{GPIO_StructInit(GPIO_InitTypeDef *GPIO_InitStruct)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} G\+P\+I\+O\+\_\+\+Struct\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+P\+I\+O\+\_\+\+Init\+Type\+Def} $\ast$}]{G\+P\+I\+O\+\_\+\+Init\+Struct}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_p_i_o___exported___functions_gab28de41278e7f8c63d0851e2733b10df}{}\label{group___g_p_i_o___exported___functions_gab28de41278e7f8c63d0851e2733b10df}
+
+
+Fills each G\+P\+I\+O\+\_\+\+Init\+Struct member with its default value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G\+P\+I\+O\+\_\+\+Init\+Struct} & \+: pointer to a \hyperlink{struct_g_p_i_o___init_type_def}{G\+P\+I\+O\+\_\+\+Init\+Type\+Def} structure which will be initialized. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 229 of file stm32f10x\+\_\+gpio.\+c.
+

@@ -1,0 +1,105 @@
+\hypertarget{sht21_8h}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/chips/sht21/sht21.h File Reference}
+\label{sht21_8h}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/chips/sht21/sht21.\+h@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/chips/sht21/sht21.\+h}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{sht21_8h_a6b880c0246c32de09557a377f62abcdc}{sht21\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{sht21_8h_a12240ccb03b6a47c498893adc3b2c829}{sht21\+\_\+reset} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{sht21_8h_a0487ed4f2ac1a5177a301c0880edb22b}{sht21\+\_\+is\+\_\+present} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{sht21_8h_a4f3974720ab7e9cb3a972361f98140a5}{sht21\+\_\+read\+\_\+temperature} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+float \hyperlink{sht21_8h_ab2057c38b5dbd04aa65726400f69a049}{sht21\+\_\+convert\+\_\+temperature} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{test__sensitive__accel__temperature_8c_a6bd95140398cc8f4b44157b17d6ba31e}{temperature})
+\item 
+\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{sht21_8h_afdc55ecc4a8497fd3fd6264f94f43f6e}{sht21\+\_\+read\+\_\+humidity} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+float \hyperlink{sht21_8h_a9ffe68ab0a6fe9ba56591a7e183343b2}{sht21\+\_\+convert\+\_\+humidity} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} humidity)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Device drivers for S\+H\+T21 temperature and humidity sensor in Open\+Mote-\/\+C\+C2538. \begin{DoxyAuthor}{Author}
+Pere Tuset, \hyperlink{struct_open_mote}{Open\+Mote} \href{mailto:peretuset@openmote.com}{\tt peretuset@openmote.\+com} 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\index{sht21.\+h@{sht21.\+h}!sht21\+\_\+convert\+\_\+humidity@{sht21\+\_\+convert\+\_\+humidity}}
+\index{sht21\+\_\+convert\+\_\+humidity@{sht21\+\_\+convert\+\_\+humidity}!sht21.\+h@{sht21.\+h}}
+\subsubsection[{\texorpdfstring{sht21\+\_\+convert\+\_\+humidity(uint16\+\_\+t humidity)}{sht21_convert_humidity(uint16_t humidity)}}]{\setlength{\rightskip}{0pt plus 5cm}float sht21\+\_\+convert\+\_\+humidity (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t}}]{humidity}
+\end{DoxyParamCaption}
+)}\hypertarget{sht21_8h_a9ffe68ab0a6fe9ba56591a7e183343b2}{}\label{sht21_8h_a9ffe68ab0a6fe9ba56591a7e183343b2}
+
+
+Definition at line 139 of file sht21.\+c.
+
+\index{sht21.\+h@{sht21.\+h}!sht21\+\_\+convert\+\_\+temperature@{sht21\+\_\+convert\+\_\+temperature}}
+\index{sht21\+\_\+convert\+\_\+temperature@{sht21\+\_\+convert\+\_\+temperature}!sht21.\+h@{sht21.\+h}}
+\subsubsection[{\texorpdfstring{sht21\+\_\+convert\+\_\+temperature(uint16\+\_\+t temperature)}{sht21_convert_temperature(uint16_t temperature)}}]{\setlength{\rightskip}{0pt plus 5cm}float sht21\+\_\+convert\+\_\+temperature (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t}}]{temperature}
+\end{DoxyParamCaption}
+)}\hypertarget{sht21_8h_ab2057c38b5dbd04aa65726400f69a049}{}\label{sht21_8h_ab2057c38b5dbd04aa65726400f69a049}
+
+
+Definition at line 117 of file sht21.\+c.
+
+\index{sht21.\+h@{sht21.\+h}!sht21\+\_\+init@{sht21\+\_\+init}}
+\index{sht21\+\_\+init@{sht21\+\_\+init}!sht21.\+h@{sht21.\+h}}
+\subsubsection[{\texorpdfstring{sht21\+\_\+init(void)}{sht21_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sht21\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{sht21_8h_a6b880c0246c32de09557a377f62abcdc}{}\label{sht21_8h_a6b880c0246c32de09557a377f62abcdc}
+
+
+Definition at line 59 of file sht21.\+c.
+
+\index{sht21.\+h@{sht21.\+h}!sht21\+\_\+is\+\_\+present@{sht21\+\_\+is\+\_\+present}}
+\index{sht21\+\_\+is\+\_\+present@{sht21\+\_\+is\+\_\+present}!sht21.\+h@{sht21.\+h}}
+\subsubsection[{\texorpdfstring{sht21\+\_\+is\+\_\+present(void)}{sht21_is_present(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} sht21\+\_\+is\+\_\+present (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{sht21_8h_a0487ed4f2ac1a5177a301c0880edb22b}{}\label{sht21_8h_a0487ed4f2ac1a5177a301c0880edb22b}
+
+
+Definition at line 88 of file sht21.\+c.
+
+\index{sht21.\+h@{sht21.\+h}!sht21\+\_\+read\+\_\+humidity@{sht21\+\_\+read\+\_\+humidity}}
+\index{sht21\+\_\+read\+\_\+humidity@{sht21\+\_\+read\+\_\+humidity}!sht21.\+h@{sht21.\+h}}
+\subsubsection[{\texorpdfstring{sht21\+\_\+read\+\_\+humidity(void)}{sht21_read_humidity(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\+\_\+t} sht21\+\_\+read\+\_\+humidity (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{sht21_8h_afdc55ecc4a8497fd3fd6264f94f43f6e}{}\label{sht21_8h_afdc55ecc4a8497fd3fd6264f94f43f6e}
+
+
+Definition at line 126 of file sht21.\+c.
+
+\index{sht21.\+h@{sht21.\+h}!sht21\+\_\+read\+\_\+temperature@{sht21\+\_\+read\+\_\+temperature}}
+\index{sht21\+\_\+read\+\_\+temperature@{sht21\+\_\+read\+\_\+temperature}!sht21.\+h@{sht21.\+h}}
+\subsubsection[{\texorpdfstring{sht21\+\_\+read\+\_\+temperature(void)}{sht21_read_temperature(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\+\_\+t} sht21\+\_\+read\+\_\+temperature (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{sht21_8h_a4f3974720ab7e9cb3a972361f98140a5}{}\label{sht21_8h_a4f3974720ab7e9cb3a972361f98140a5}
+
+
+Definition at line 104 of file sht21.\+c.
+
+\index{sht21.\+h@{sht21.\+h}!sht21\+\_\+reset@{sht21\+\_\+reset}}
+\index{sht21\+\_\+reset@{sht21\+\_\+reset}!sht21.\+h@{sht21.\+h}}
+\subsubsection[{\texorpdfstring{sht21\+\_\+reset(void)}{sht21_reset(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sht21\+\_\+reset (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{sht21_8h_a12240ccb03b6a47c498893adc3b2c829}{}\label{sht21_8h_a12240ccb03b6a47c498893adc3b2c829}
+
+
+Definition at line 83 of file sht21.\+c.
+

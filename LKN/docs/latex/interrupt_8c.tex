@@ -1,0 +1,43 @@
+\hypertarget{interrupt_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/source/interrupt.c File Reference}
+\label{interrupt_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/source/interrupt.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/source/interrupt.\+c}}
+{\ttfamily \#include $<$headers/hw\+\_\+ints.\+h$>$}\\*
+{\ttfamily \#include $<$headers/hw\+\_\+nvic.\+h$>$}\\*
+{\ttfamily \#include $<$headers/hw\+\_\+sys\+\_\+ctrl.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}cpu.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}debug.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}interrupt.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group__interrupt__api_gae3724c6b65b8461cf0441f09b13fadf5}{Int\+Master\+Disable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Interrupt, \hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}($\ast$pfn\+Handler)(\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}))
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__interrupt__api_ga5dffc81c27c005f83e9bfc30f775982a}{Int\+Unregister} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Interrupt)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__interrupt__api_ga341c2244311b2c8c84b0a5546fc3dff1}{Int\+Priority\+Grouping\+Set} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Bits)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__interrupt__api_ga86595146bc7ea51280d5abbb45fcf02a}{Int\+Priority\+Grouping\+Get} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__interrupt__api_ga0432ddf52557352ac987f7dd211c2017}{Int\+Priority\+Set} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Interrupt, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Priority)
+\item 
+\hyperlink{_p_e___types_8h_adb828ef50c2dbb783109824e94cf6c47}{int32\+\_\+t} \hyperlink{group__interrupt__api_gac6a7849e23f4a84c1bcaad2e9bcc27b2}{Int\+Priority\+Get} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Interrupt)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__interrupt__api_ga49fc9c3d1a0f8c42a20249f8c5d360ce}{Int\+Enable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Interrupt)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__interrupt__api_ga9af6b00884dc44e92b3d05ff821b5334}{Int\+Disable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Interrupt)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__interrupt__api_gafe17b56764bff1bcb95bd53acde4ac98}{Int\+Pend\+Set} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Interrupt)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__interrupt__api_gab708e168ca0f1f554bb141e5b0fd1bdc}{Int\+Pend\+Clear} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Interrupt)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__interrupt__api_ga61b8f34d64c588f632509406b50e4f68}{Int\+Priority\+Mask\+Set} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Priority\+Mask)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__interrupt__api_gad39b7d4927274abf42c57767218af279}{Int\+Priority\+Mask\+Get} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__interrupt__api_gaed713eb279610590f58f1c92fad1e470}{Int\+Alt\+Map\+Enable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__interrupt__api_gac3ded0b0930ee1dd48bf3c76b2f606b7}{Int\+Alt\+Map\+Disable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group__interrupt__api_ga82a249100f849b2880421db4ee4b312d}{Int\+Alt\+Map\+Is\+Enabled} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}

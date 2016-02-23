@@ -1,0 +1,125 @@
+\hypertarget{croutine_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/kernel/freertos/\+Free\+R\+T\+O\+S\+V8.1.2/\+Free\+R\+T\+O\+S/\+Source/croutine.c File Reference}
+\label{croutine_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/kernel/freertos/\+Free\+R\+T\+O\+S\+V8.\+1.\+2/\+Free\+R\+T\+O\+S/\+Source/croutine.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/kernel/freertos/\+Free\+R\+T\+O\+S\+V8.\+1.\+2/\+Free\+R\+T\+O\+S/\+Source/croutine.\+c}}
+{\ttfamily \#include \char`\"{}Free\+R\+T\+O\+S.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}task.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}croutine.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{croutine_8c_af83ae66545da77ec6586aa26e148ea92}{cor\+I\+N\+I\+T\+I\+A\+L\+\_\+\+S\+T\+A\+TE}~( 0 )
+\item 
+\#define \hyperlink{croutine_8c_a519a6c0be5113965abd718b31068c114}{prv\+Add\+Co\+Routine\+To\+Ready\+Queue}(px\+C\+R\+CB)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_g_c_c_2_a_r_m___c_m3_2portmacro_8h_a46fb21e00ae0729d7515c0fbf2269796}{Base\+Type\+\_\+t} \hyperlink{croutine_8c_ae0e03637a3d2c134e9b52006f353d8c0}{x\+Co\+Routine\+Create} (\hyperlink{croutine_8h_a397a7505718dd366d8411ce324c49758}{cr\+C\+O\+R\+O\+U\+T\+I\+N\+E\+\_\+\+C\+O\+DE} px\+Co\+Routine\+Code, \hyperlink{_g_c_c_2_a_r_m___c_m3_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{U\+Base\+Type\+\_\+t} ux\+Priority, \hyperlink{_g_c_c_2_a_r_m___c_m3_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{U\+Base\+Type\+\_\+t} ux\+Index)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{croutine_8c_a6b5b1c5857d38b79c96636754208e32d}{v\+Co\+Routine\+Add\+To\+Delayed\+List} (\hyperlink{_g_c_c_2_a_r_m___c_m3_2portmacro_8h_aa69c48c6e902ce54f70886e6573c92a9}{Tick\+Type\+\_\+t} x\+Ticks\+To\+Delay, \hyperlink{list_8h_afd590ef6400071b4d63d65ef90bea7f4}{List\+\_\+t} $\ast$px\+Event\+List)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{croutine_8c_a5333c649a2c063006ca3cd7a3b5b9240}{v\+Co\+Routine\+Schedule} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{_g_c_c_2_a_r_m___c_m3_2portmacro_8h_a46fb21e00ae0729d7515c0fbf2269796}{Base\+Type\+\_\+t} \hyperlink{croutine_8c_af2a96db518b18f5a7e1cd2fdf3c82873}{x\+Co\+Routine\+Remove\+From\+Event\+List} (const \hyperlink{list_8h_afd590ef6400071b4d63d65ef90bea7f4}{List\+\_\+t} $\ast$px\+Event\+List)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{croutine_8h_a4d7cfb67be3465d9caeadd21c19e4401}{C\+R\+C\+B\+\_\+t} $\ast$ \hyperlink{croutine_8c_a5c98e8fadab0a46ba44aa324b5cbeab0}{px\+Current\+Co\+Routine} = \hyperlink{group___l_p_c___types___public___macros_ga070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{croutine.\+c@{croutine.\+c}!cor\+I\+N\+I\+T\+I\+A\+L\+\_\+\+S\+T\+A\+TE@{cor\+I\+N\+I\+T\+I\+A\+L\+\_\+\+S\+T\+A\+TE}}
+\index{cor\+I\+N\+I\+T\+I\+A\+L\+\_\+\+S\+T\+A\+TE@{cor\+I\+N\+I\+T\+I\+A\+L\+\_\+\+S\+T\+A\+TE}!croutine.\+c@{croutine.\+c}}
+\subsubsection[{\texorpdfstring{cor\+I\+N\+I\+T\+I\+A\+L\+\_\+\+S\+T\+A\+TE}{corINITIAL_STATE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cor\+I\+N\+I\+T\+I\+A\+L\+\_\+\+S\+T\+A\+TE~( 0 )}\hypertarget{croutine_8c_af83ae66545da77ec6586aa26e148ea92}{}\label{croutine_8c_af83ae66545da77ec6586aa26e148ea92}
+
+
+Definition at line 93 of file croutine.\+c.
+
+\index{croutine.\+c@{croutine.\+c}!prv\+Add\+Co\+Routine\+To\+Ready\+Queue@{prv\+Add\+Co\+Routine\+To\+Ready\+Queue}}
+\index{prv\+Add\+Co\+Routine\+To\+Ready\+Queue@{prv\+Add\+Co\+Routine\+To\+Ready\+Queue}!croutine.\+c@{croutine.\+c}}
+\subsubsection[{\texorpdfstring{prv\+Add\+Co\+Routine\+To\+Ready\+Queue}{prvAddCoRoutineToReadyQueue}}]{\setlength{\rightskip}{0pt plus 5cm}\#define prv\+Add\+Co\+Routine\+To\+Ready\+Queue(
+\begin{DoxyParamCaption}
+\item[{}]{px\+C\+R\+CB}
+\end{DoxyParamCaption}
+)}\hypertarget{croutine_8c_a519a6c0be5113965abd718b31068c114}{}\label{croutine_8c_a519a6c0be5113965abd718b31068c114}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                                                                                                   
+      \(\backslash\)
+    if( pxCRCB->uxPriority > uxTopCoRoutineReadyPriority )                                                          
+      \(\backslash\)
+    \{                                                                                                               
+      \(\backslash\)
+        uxTopCoRoutineReadyPriority = pxCRCB->uxPriority;                                                           
+      \(\backslash\)
+    \}                                                                                                               
+      \hyperlink{list_8h_a3240bc0f43fcf755be02bfc6de7dc6ef}{\(\backslash\)}
+\hyperlink{list_8h_a3240bc0f43fcf755be02bfc6de7dc6ef}{    vListInsertEnd}( ( \hyperlink{structx_l_i_s_t}{List\_t} * ) &( pxReadyCoRoutineLists[ pxCRCB->uxPriority ] ), &( 
+      pxCRCB->xGenericListItem ) );    \(\backslash\)
+\}
+\end{DoxyCode}
+
+
+Definition at line 102 of file croutine.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{croutine.\+c@{croutine.\+c}!v\+Co\+Routine\+Add\+To\+Delayed\+List@{v\+Co\+Routine\+Add\+To\+Delayed\+List}}
+\index{v\+Co\+Routine\+Add\+To\+Delayed\+List@{v\+Co\+Routine\+Add\+To\+Delayed\+List}!croutine.\+c@{croutine.\+c}}
+\subsubsection[{\texorpdfstring{v\+Co\+Routine\+Add\+To\+Delayed\+List(\+Tick\+Type\+\_\+t x\+Ticks\+To\+Delay, List\+\_\+t $\ast$px\+Event\+List)}{vCoRoutineAddToDelayedList(TickType_t xTicksToDelay, List_t *pxEventList)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} v\+Co\+Routine\+Add\+To\+Delayed\+List (
+\begin{DoxyParamCaption}
+\item[{{\bf Tick\+Type\+\_\+t}}]{x\+Ticks\+To\+Delay, }
+\item[{{\bf List\+\_\+t} $\ast$}]{px\+Event\+List}
+\end{DoxyParamCaption}
+)}\hypertarget{croutine_8c_a6b5b1c5857d38b79c96636754208e32d}{}\label{croutine_8c_a6b5b1c5857d38b79c96636754208e32d}
+
+
+Definition at line 194 of file croutine.\+c.
+
+\index{croutine.\+c@{croutine.\+c}!v\+Co\+Routine\+Schedule@{v\+Co\+Routine\+Schedule}}
+\index{v\+Co\+Routine\+Schedule@{v\+Co\+Routine\+Schedule}!croutine.\+c@{croutine.\+c}}
+\subsubsection[{\texorpdfstring{v\+Co\+Routine\+Schedule(void)}{vCoRoutineSchedule(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} v\+Co\+Routine\+Schedule (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{croutine_8c_a5333c649a2c063006ca3cd7a3b5b9240}{}\label{croutine_8c_a5333c649a2c063006ca3cd7a3b5b9240}
+
+
+Definition at line 313 of file croutine.\+c.
+
+\index{croutine.\+c@{croutine.\+c}!x\+Co\+Routine\+Create@{x\+Co\+Routine\+Create}}
+\index{x\+Co\+Routine\+Create@{x\+Co\+Routine\+Create}!croutine.\+c@{croutine.\+c}}
+\subsubsection[{\texorpdfstring{x\+Co\+Routine\+Create(cr\+C\+O\+R\+O\+U\+T\+I\+N\+E\+\_\+\+C\+O\+D\+E px\+Co\+Routine\+Code, U\+Base\+Type\+\_\+t ux\+Priority, U\+Base\+Type\+\_\+t ux\+Index)}{xCoRoutineCreate(crCOROUTINE_CODE pxCoRoutineCode, UBaseType_t uxPriority, UBaseType_t uxIndex)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Base\+Type\+\_\+t} x\+Co\+Routine\+Create (
+\begin{DoxyParamCaption}
+\item[{{\bf cr\+C\+O\+R\+O\+U\+T\+I\+N\+E\+\_\+\+C\+O\+DE}}]{px\+Co\+Routine\+Code, }
+\item[{{\bf U\+Base\+Type\+\_\+t}}]{ux\+Priority, }
+\item[{{\bf U\+Base\+Type\+\_\+t}}]{ux\+Index}
+\end{DoxyParamCaption}
+)}\hypertarget{croutine_8c_ae0e03637a3d2c134e9b52006f353d8c0}{}\label{croutine_8c_ae0e03637a3d2c134e9b52006f353d8c0}
+
+
+Definition at line 137 of file croutine.\+c.
+
+\index{croutine.\+c@{croutine.\+c}!x\+Co\+Routine\+Remove\+From\+Event\+List@{x\+Co\+Routine\+Remove\+From\+Event\+List}}
+\index{x\+Co\+Routine\+Remove\+From\+Event\+List@{x\+Co\+Routine\+Remove\+From\+Event\+List}!croutine.\+c@{croutine.\+c}}
+\subsubsection[{\texorpdfstring{x\+Co\+Routine\+Remove\+From\+Event\+List(const List\+\_\+t $\ast$px\+Event\+List)}{xCoRoutineRemoveFromEventList(const List_t *pxEventList)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Base\+Type\+\_\+t} x\+Co\+Routine\+Remove\+From\+Event\+List (
+\begin{DoxyParamCaption}
+\item[{const {\bf List\+\_\+t} $\ast$}]{px\+Event\+List}
+\end{DoxyParamCaption}
+)}\hypertarget{croutine_8c_af2a96db518b18f5a7e1cd2fdf3c82873}{}\label{croutine_8c_af2a96db518b18f5a7e1cd2fdf3c82873}
+
+
+Definition at line 363 of file croutine.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{croutine.\+c@{croutine.\+c}!px\+Current\+Co\+Routine@{px\+Current\+Co\+Routine}}
+\index{px\+Current\+Co\+Routine@{px\+Current\+Co\+Routine}!croutine.\+c@{croutine.\+c}}
+\subsubsection[{\texorpdfstring{px\+Current\+Co\+Routine}{pxCurrentCoRoutine}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+R\+C\+B\+\_\+t}$\ast$ px\+Current\+Co\+Routine = {\bf N\+U\+LL}}\hypertarget{croutine_8c_a5c98e8fadab0a46ba44aa324b5cbeab0}{}\label{croutine_8c_a5c98e8fadab0a46ba44aa324b5cbeab0}
+
+
+Definition at line 88 of file croutine.\+c.
+

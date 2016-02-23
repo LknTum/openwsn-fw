@@ -1,0 +1,174 @@
+\hypertarget{k20_2bsp_2spi_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/k20/bsp/spi.c File Reference}
+\label{k20_2bsp_2spi_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/k20/bsp/spi.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/k20/bsp/spi.\+c}}
+{\ttfamily \#include \char`\"{}spi.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structspi__vars__t}{spi\+\_\+vars\+\_\+t}
+\begin{DoxyCompactList}\small\item\em agilefox definition of the \char`\"{}spi\char`\"{} bsp module (based on openmote\+S\+T\+M32 code). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{k20_2bsp_2spi_8c_a5342c4a13c76190b7d8d17a03a36347a}{S\+P\+I\+\_\+\+S\+P\+E\+E\+D\+\_\+\+K\+HZ}~6000
+\begin{DoxyCompactList}\small\item\em K20-\/specific definition of the \char`\"{}spi\char`\"{} bsp module. \end{DoxyCompactList}\item 
+\#define \hyperlink{k20_2bsp_2spi_8c_af0641b4b173b6b9487e9d189cbff4c74}{S\+P\+I\+\_\+\+I\+N\+T\+E\+R\+D\+A\+T\+A\+\_\+\+D\+E\+L\+AY}~5
+\item 
+\#define \hyperlink{k20_2bsp_2spi_8c_a726b3239ebbbea463980429987477346}{S\+P\+I\+\_\+\+S\+E\+T\+U\+P\+\_\+\+D\+E\+L\+AY}~5
+\item 
+\#define \hyperlink{k20_2bsp_2spi_8c_a96bb47f9527c287530c943d735e2f701}{S\+P\+I\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+P\+OL}~0
+\item 
+\#define \hyperlink{k20_2bsp_2spi_8c_aa3a9807e986488689013efaaa4aa7bbb}{S\+P\+I\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+P\+HA}~0
+\item 
+\#define \hyperlink{k20_2bsp_2spi_8c_ad315c5b0bf1d3cd5a38b85b54f45d8a2}{S\+P\+I\+\_\+\+C\+S\+\_\+\+P\+IN}~0
+\item 
+\#define \hyperlink{k20_2bsp_2spi_8c_a7523ee9a997610e55aa3e7ec250872b3}{S\+P\+I\+\_\+\+C\+S\+\_\+\+P\+I\+N\+\_\+\+M\+A\+SK}~(1$<$$<$\hyperlink{k20_2bsp_2spi_8c_ad315c5b0bf1d3cd5a38b85b54f45d8a2}{S\+P\+I\+\_\+\+C\+S\+\_\+\+P\+IN})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{k20_2bsp_2spi_8c_a5db0aceecaf7db5fbe2984e88fef3734}{spi\+\_\+init} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{k20_2bsp_2spi_8c_ac2fb3e956c783d2d4d5e7e418aa6fff0}{spi\+\_\+txrx} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$buf\+Tx, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} lenbuf\+Tx, \hyperlink{spi_8h_acc3b28d69cd1e029d05f77aa7d1ede06}{spi\+\_\+return\+\_\+t} return\+Type, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$buf\+Rx, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} max\+Len\+Buf\+Rx, \hyperlink{spi_8h_af5f18ca9b261f81e8649655fa1bdb3a2}{spi\+\_\+first\+\_\+t} is\+First, \hyperlink{spi_8h_a6a8a77d768dca340b71324f2aec66a97}{spi\+\_\+last\+\_\+t} is\+Last)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{k20_2bsp_2spi_8c_a74f99ed82e709d26232db563617b3928}{\+\_\+spi\+\_\+isr} ()
+\item 
+\hyperlink{group__board_gac9ebdcc0a4f3c8422f5f4f0fbbe0ded0}{kick\+\_\+scheduler\+\_\+t} \hyperlink{k20_2bsp_2spi_8c_ab223e51ca99573247ba26ec69fd1a6a4}{spi\+\_\+isr} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structspi__vars__t}{spi\+\_\+vars\+\_\+t} \hyperlink{k20_2bsp_2spi_8c_a8b57112149902842e4be27339bba4ce1}{spi\+\_\+vars}
+\item 
+\hyperlink{k20_2bsp_2spi_8c_afa903166338643c124cbdceb5fdd0919}{periph\+\_\+clk\+\_\+khz}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{k20/bsp/spi.\+c@{k20/bsp/spi.\+c}!S\+P\+I\+\_\+\+C\+S\+\_\+\+P\+IN@{S\+P\+I\+\_\+\+C\+S\+\_\+\+P\+IN}}
+\index{S\+P\+I\+\_\+\+C\+S\+\_\+\+P\+IN@{S\+P\+I\+\_\+\+C\+S\+\_\+\+P\+IN}!k20/bsp/spi.\+c@{k20/bsp/spi.\+c}}
+\subsubsection[{\texorpdfstring{S\+P\+I\+\_\+\+C\+S\+\_\+\+P\+IN}{SPI_CS_PIN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+P\+I\+\_\+\+C\+S\+\_\+\+P\+IN~0}\hypertarget{k20_2bsp_2spi_8c_ad315c5b0bf1d3cd5a38b85b54f45d8a2}{}\label{k20_2bsp_2spi_8c_ad315c5b0bf1d3cd5a38b85b54f45d8a2}
+
+
+Definition at line 21 of file spi.\+c.
+
+\index{k20/bsp/spi.\+c@{k20/bsp/spi.\+c}!S\+P\+I\+\_\+\+C\+S\+\_\+\+P\+I\+N\+\_\+\+M\+A\+SK@{S\+P\+I\+\_\+\+C\+S\+\_\+\+P\+I\+N\+\_\+\+M\+A\+SK}}
+\index{S\+P\+I\+\_\+\+C\+S\+\_\+\+P\+I\+N\+\_\+\+M\+A\+SK@{S\+P\+I\+\_\+\+C\+S\+\_\+\+P\+I\+N\+\_\+\+M\+A\+SK}!k20/bsp/spi.\+c@{k20/bsp/spi.\+c}}
+\subsubsection[{\texorpdfstring{S\+P\+I\+\_\+\+C\+S\+\_\+\+P\+I\+N\+\_\+\+M\+A\+SK}{SPI_CS_PIN_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+P\+I\+\_\+\+C\+S\+\_\+\+P\+I\+N\+\_\+\+M\+A\+SK~(1$<$$<${\bf S\+P\+I\+\_\+\+C\+S\+\_\+\+P\+IN})}\hypertarget{k20_2bsp_2spi_8c_a7523ee9a997610e55aa3e7ec250872b3}{}\label{k20_2bsp_2spi_8c_a7523ee9a997610e55aa3e7ec250872b3}
+
+
+Definition at line 22 of file spi.\+c.
+
+\index{k20/bsp/spi.\+c@{k20/bsp/spi.\+c}!S\+P\+I\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+P\+HA@{S\+P\+I\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+P\+HA}}
+\index{S\+P\+I\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+P\+HA@{S\+P\+I\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+P\+HA}!k20/bsp/spi.\+c@{k20/bsp/spi.\+c}}
+\subsubsection[{\texorpdfstring{S\+P\+I\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+P\+HA}{SPI_DEFAULT_CPHA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+P\+I\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+P\+HA~0}\hypertarget{k20_2bsp_2spi_8c_aa3a9807e986488689013efaaa4aa7bbb}{}\label{k20_2bsp_2spi_8c_aa3a9807e986488689013efaaa4aa7bbb}
+
+
+Definition at line 19 of file spi.\+c.
+
+\index{k20/bsp/spi.\+c@{k20/bsp/spi.\+c}!S\+P\+I\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+P\+OL@{S\+P\+I\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+P\+OL}}
+\index{S\+P\+I\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+P\+OL@{S\+P\+I\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+P\+OL}!k20/bsp/spi.\+c@{k20/bsp/spi.\+c}}
+\subsubsection[{\texorpdfstring{S\+P\+I\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+P\+OL}{SPI_DEFAULT_CPOL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+P\+I\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+P\+OL~0}\hypertarget{k20_2bsp_2spi_8c_a96bb47f9527c287530c943d735e2f701}{}\label{k20_2bsp_2spi_8c_a96bb47f9527c287530c943d735e2f701}
+
+
+Definition at line 18 of file spi.\+c.
+
+\index{k20/bsp/spi.\+c@{k20/bsp/spi.\+c}!S\+P\+I\+\_\+\+I\+N\+T\+E\+R\+D\+A\+T\+A\+\_\+\+D\+E\+L\+AY@{S\+P\+I\+\_\+\+I\+N\+T\+E\+R\+D\+A\+T\+A\+\_\+\+D\+E\+L\+AY}}
+\index{S\+P\+I\+\_\+\+I\+N\+T\+E\+R\+D\+A\+T\+A\+\_\+\+D\+E\+L\+AY@{S\+P\+I\+\_\+\+I\+N\+T\+E\+R\+D\+A\+T\+A\+\_\+\+D\+E\+L\+AY}!k20/bsp/spi.\+c@{k20/bsp/spi.\+c}}
+\subsubsection[{\texorpdfstring{S\+P\+I\+\_\+\+I\+N\+T\+E\+R\+D\+A\+T\+A\+\_\+\+D\+E\+L\+AY}{SPI_INTERDATA_DELAY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+P\+I\+\_\+\+I\+N\+T\+E\+R\+D\+A\+T\+A\+\_\+\+D\+E\+L\+AY~5}\hypertarget{k20_2bsp_2spi_8c_af0641b4b173b6b9487e9d189cbff4c74}{}\label{k20_2bsp_2spi_8c_af0641b4b173b6b9487e9d189cbff4c74}
+
+
+Definition at line 15 of file spi.\+c.
+
+\index{k20/bsp/spi.\+c@{k20/bsp/spi.\+c}!S\+P\+I\+\_\+\+S\+E\+T\+U\+P\+\_\+\+D\+E\+L\+AY@{S\+P\+I\+\_\+\+S\+E\+T\+U\+P\+\_\+\+D\+E\+L\+AY}}
+\index{S\+P\+I\+\_\+\+S\+E\+T\+U\+P\+\_\+\+D\+E\+L\+AY@{S\+P\+I\+\_\+\+S\+E\+T\+U\+P\+\_\+\+D\+E\+L\+AY}!k20/bsp/spi.\+c@{k20/bsp/spi.\+c}}
+\subsubsection[{\texorpdfstring{S\+P\+I\+\_\+\+S\+E\+T\+U\+P\+\_\+\+D\+E\+L\+AY}{SPI_SETUP_DELAY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+P\+I\+\_\+\+S\+E\+T\+U\+P\+\_\+\+D\+E\+L\+AY~5}\hypertarget{k20_2bsp_2spi_8c_a726b3239ebbbea463980429987477346}{}\label{k20_2bsp_2spi_8c_a726b3239ebbbea463980429987477346}
+
+
+Definition at line 16 of file spi.\+c.
+
+\index{k20/bsp/spi.\+c@{k20/bsp/spi.\+c}!S\+P\+I\+\_\+\+S\+P\+E\+E\+D\+\_\+\+K\+HZ@{S\+P\+I\+\_\+\+S\+P\+E\+E\+D\+\_\+\+K\+HZ}}
+\index{S\+P\+I\+\_\+\+S\+P\+E\+E\+D\+\_\+\+K\+HZ@{S\+P\+I\+\_\+\+S\+P\+E\+E\+D\+\_\+\+K\+HZ}!k20/bsp/spi.\+c@{k20/bsp/spi.\+c}}
+\subsubsection[{\texorpdfstring{S\+P\+I\+\_\+\+S\+P\+E\+E\+D\+\_\+\+K\+HZ}{SPI_SPEED_KHZ}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+P\+I\+\_\+\+S\+P\+E\+E\+D\+\_\+\+K\+HZ~6000}\hypertarget{k20_2bsp_2spi_8c_a5342c4a13c76190b7d8d17a03a36347a}{}\label{k20_2bsp_2spi_8c_a5342c4a13c76190b7d8d17a03a36347a}
+
+
+K20-\/specific definition of the \char`\"{}spi\char`\"{} bsp module. 
+
+\begin{DoxyAuthor}{Author}
+Xavi Vilajosana \href{mailto:xvilajosana@eecs.berkeley.edu}{\tt xvilajosana@eecs.\+berkeley.\+edu}, May 2012. 
+\end{DoxyAuthor}
+
+
+Definition at line 14 of file spi.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{k20/bsp/spi.\+c@{k20/bsp/spi.\+c}!\+\_\+spi\+\_\+isr@{\+\_\+spi\+\_\+isr}}
+\index{\+\_\+spi\+\_\+isr@{\+\_\+spi\+\_\+isr}!k20/bsp/spi.\+c@{k20/bsp/spi.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+spi\+\_\+isr()}{_spi_isr()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} \+\_\+spi\+\_\+isr (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{k20_2bsp_2spi_8c_a74f99ed82e709d26232db563617b3928}{}\label{k20_2bsp_2spi_8c_a74f99ed82e709d26232db563617b3928}
+
+
+Definition at line 256 of file spi.\+c.
+
+\index{k20/bsp/spi.\+c@{k20/bsp/spi.\+c}!spi\+\_\+init@{spi\+\_\+init}}
+\index{spi\+\_\+init@{spi\+\_\+init}!k20/bsp/spi.\+c@{k20/bsp/spi.\+c}}
+\subsubsection[{\texorpdfstring{spi\+\_\+init()}{spi_init()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} spi\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{k20_2bsp_2spi_8c_a5db0aceecaf7db5fbe2984e88fef3734}{}\label{k20_2bsp_2spi_8c_a5db0aceecaf7db5fbe2984e88fef3734}
+
+
+Definition at line 53 of file spi.\+c.
+
+\index{k20/bsp/spi.\+c@{k20/bsp/spi.\+c}!spi\+\_\+isr@{spi\+\_\+isr}}
+\index{spi\+\_\+isr@{spi\+\_\+isr}!k20/bsp/spi.\+c@{k20/bsp/spi.\+c}}
+\subsubsection[{\texorpdfstring{spi\+\_\+isr()}{spi_isr()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf kick\+\_\+scheduler\+\_\+t} spi\+\_\+isr (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{k20_2bsp_2spi_8c_ab223e51ca99573247ba26ec69fd1a6a4}{}\label{k20_2bsp_2spi_8c_ab223e51ca99573247ba26ec69fd1a6a4}
+
+
+Definition at line 261 of file spi.\+c.
+
+\index{k20/bsp/spi.\+c@{k20/bsp/spi.\+c}!spi\+\_\+txrx@{spi\+\_\+txrx}}
+\index{spi\+\_\+txrx@{spi\+\_\+txrx}!k20/bsp/spi.\+c@{k20/bsp/spi.\+c}}
+\subsubsection[{\texorpdfstring{spi\+\_\+txrx(uint8\+\_\+t $\ast$buf\+Tx, uint8\+\_\+t lenbuf\+Tx, spi\+\_\+return\+\_\+t return\+Type, uint8\+\_\+t $\ast$buf\+Rx, uint8\+\_\+t max\+Len\+Buf\+Rx, spi\+\_\+first\+\_\+t is\+First, spi\+\_\+last\+\_\+t is\+Last)}{spi_txrx(uint8_t *bufTx, uint8_t lenbufTx, spi_return_t returnType, uint8_t *bufRx, uint8_t maxLenBufRx, spi_first_t isFirst, spi_last_t isLast)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} spi\+\_\+txrx (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t} $\ast$}]{buf\+Tx, }
+\item[{{\bf uint8\+\_\+t}}]{lenbuf\+Tx, }
+\item[{{\bf spi\+\_\+return\+\_\+t}}]{return\+Type, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{buf\+Rx, }
+\item[{{\bf uint8\+\_\+t}}]{max\+Len\+Buf\+Rx, }
+\item[{{\bf spi\+\_\+first\+\_\+t}}]{is\+First, }
+\item[{{\bf spi\+\_\+last\+\_\+t}}]{is\+Last}
+\end{DoxyParamCaption}
+)}\hypertarget{k20_2bsp_2spi_8c_ac2fb3e956c783d2d4d5e7e418aa6fff0}{}\label{k20_2bsp_2spi_8c_ac2fb3e956c783d2d4d5e7e418aa6fff0}
+
+
+Definition at line 154 of file spi.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{k20/bsp/spi.\+c@{k20/bsp/spi.\+c}!periph\+\_\+clk\+\_\+khz@{periph\+\_\+clk\+\_\+khz}}
+\index{periph\+\_\+clk\+\_\+khz@{periph\+\_\+clk\+\_\+khz}!k20/bsp/spi.\+c@{k20/bsp/spi.\+c}}
+\subsubsection[{\texorpdfstring{periph\+\_\+clk\+\_\+khz}{periph_clk_khz}}]{\setlength{\rightskip}{0pt plus 5cm}periph\+\_\+clk\+\_\+khz}\hypertarget{k20_2bsp_2spi_8c_afa903166338643c124cbdceb5fdd0919}{}\label{k20_2bsp_2spi_8c_afa903166338643c124cbdceb5fdd0919}
+
+
+Definition at line 22 of file sysinit.\+c.
+
+\index{k20/bsp/spi.\+c@{k20/bsp/spi.\+c}!spi\+\_\+vars@{spi\+\_\+vars}}
+\index{spi\+\_\+vars@{spi\+\_\+vars}!k20/bsp/spi.\+c@{k20/bsp/spi.\+c}}
+\subsubsection[{\texorpdfstring{spi\+\_\+vars}{spi_vars}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf spi\+\_\+vars\+\_\+t} spi\+\_\+vars}\hypertarget{k20_2bsp_2spi_8c_a8b57112149902842e4be27339bba4ce1}{}\label{k20_2bsp_2spi_8c_a8b57112149902842e4be27339bba4ce1}
+
+
+Definition at line 44 of file spi.\+c.
+

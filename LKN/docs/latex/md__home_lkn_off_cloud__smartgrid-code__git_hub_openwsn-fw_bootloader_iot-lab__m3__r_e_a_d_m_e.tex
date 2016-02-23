@@ -1,0 +1,63 @@
+The B\+SL script {\ttfamily \hyperlink{iotlab-m3-bsl_8py}{iotlab-\/m3-\/bsl.\+py}} for iot-\/lab\+\_\+\+M3 nodes is a Python version of the {\ttfamily do\+Flash.\+sh} \href{https://github.com/adjih/exp-iotlab/blob/master/tools/misc/doFlash.sh}{\tt script} with additions regarding {\ttfamily openocd} handling.
+
+The {\ttfamily do\+Flash.\+sh} script is itself an adaptation of code from the \href{https://github.com/iot-lab/openlab/tree/master/platform}{\tt Io\+T-\/lab team}.
+
+The Open\+O\+CD config file {\ttfamily iotlab-\/m3.\+cfg} is a copy of \href{https://github.com/iot-lab/openlab/blob/master/platform/scripts/iotlab-m3.cfg}{\tt iotlab-\/m3.\+cfg}; the same license and copyright applies.
+
+We are grateful to Cedric Adjih and the Io\+T-\/lab team, in particular Roger Pissard-\/\+Gibollet and Gaetan Harter, for their help and for making this code available.
+
+\subsection*{Program the Io\+T-\/lab\+\_\+\+M3 in Windows }
+
+
+\begin{DoxyEnumerate}
+\item Download {\ttfamily openocd} Windows binary package from \href{http://openocd.org/}{\tt http\+://openocd.\+org/}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Extract to {\ttfamily C\+:\textbackslash{}openocd} (or similar)
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Add {\ttfamily C\+:\textbackslash{}openocd\textbackslash{}bin} (32-\/bit Windows) or {\ttfamily C\+:\textbackslash{}openocd\textbackslash{}bin-\/x64} (64-\/bit Windows) to your Windows {\ttfamily P\+A\+TH} environment variable.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Rename the openocd executable from {\ttfamily openocd-\/xxx-\/x.\+x.\+x.\+exe} to {\ttfamily openocd.\+exe}. The Open\+W\+SN bootloader Python script expects {\ttfamily openocd.\+exe} to be found in the {\ttfamily P\+A\+TH}. You can test all is OK by typing {\ttfamily openocd.\+exe} in a Windows command prompt.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Positions the switch on the Io\+T-\/lab\+\_\+\+M3 mote in the position {\itshape away} from the U\+SB connector.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Connect the Io\+T-\/lab\+\_\+\+M3 mote to the U\+SB port of your Windows computer.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Download Zadig from \href{http://zadig.akeo.ie/}{\tt http\+://zadig.\+akeo.\+ie/}. This will use to install the {\ttfamily libusb-\/win32} drivers openocd requires.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Open the Zadig executable. Click {\ttfamily Options} $>$ {\ttfamily List All Devices}.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Two entries corresponding to the same {\ttfamily Io\+T-\/lab\+\_\+\+M3} node should appear\+:
+\begin{DoxyEnumerate}
+\item {\ttfamily M3 (Interface 0)}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item {\ttfamily M3 (Interface 1)}
+\end{DoxyEnumerate}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item For interfacing with openocd, one of the two ports must be associated with the Open\+O\+CD {\ttfamily usb-\/win32\+\_\+ft2232} driver available in the Open\+O\+CD installation (see \href{https://github.com/hikob/openlab/wiki/Installation-Notes-for-Windows-Users}{\tt tutorial}). We will use {\ttfamily M3 (Interface 0)}.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Select {\ttfamily M3 (Interface 0)} from the drop down list in Zadig. Select {\ttfamily libusb-\/win32 (xxx)} driver and click on the button to replace/install the driver for this interface. Once this is done successfully, openocd in Windows can interact with Io\+T-\/lab\+\_\+\+M3 node and flash it.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item To reprogram the mote, use the usual Open\+W\+SN build scripts. Navigate to the {\ttfamily openwsn-\/fw/} directory and type {\ttfamily scons board=iot-\/lab\+\_\+\+M3 toolchain=armgcc bootload=0}
+\end{DoxyEnumerate}
+
+N\+O\+TE\+: openocd does not support flashing using typical {\ttfamily /dev/tty\+U\+S\+B$\ast$} or {\ttfamily C\+O\+MX} interfaces. The Python script will flash the first Io\+T-\/lab\+\_\+\+M3 node connected to the PC, independent from the {\ttfamily bootload=} argument value.
+
+\subsection*{Program the Io\+T-\/lab\+\_\+\+M3 in Linux }
+
+
+\begin{DoxyEnumerate}
+\item install openocd by issuing \textquotesingle{}sudo apt-\/get install openocd\textquotesingle{}
+\item To flash, use the same Open\+W\+SN workflow as in the Windows instructions above. 
+\end{DoxyEnumerate}

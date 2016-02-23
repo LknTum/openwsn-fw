@@ -1,0 +1,123 @@
+\hypertarget{opencoap_8h}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/04-\/\+T\+R\+A\+N/opencoap.h File Reference}
+\label{opencoap_8h}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/04-\/\+T\+R\+A\+N/opencoap.\+h@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openstack/04-\/\+T\+R\+A\+N/opencoap.\+h}}
+{\ttfamily \#include \char`\"{}opentimers.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structcoap__header__iht}{coap\+\_\+header\+\_\+iht}
+\item 
+struct \hyperlink{structcoap__option__iht}{coap\+\_\+option\+\_\+iht}
+\item 
+struct \hyperlink{structcoap__resource__desc__t}{coap\+\_\+resource\+\_\+desc\+\_\+t}
+\item 
+struct \hyperlink{structopencoap__vars__t}{opencoap\+\_\+vars\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__open_coap_ga3155afe0b07d32f0fb33faabc0ea0ec6}{M\+A\+X\+\_\+\+C\+O\+A\+P\+\_\+\+O\+P\+T\+I\+O\+NS}~10
+\begin{DoxyCompactList}\small\item\em the maximum number of options in a RX\textquotesingle{}ed Co\+AP message \end{DoxyCompactList}\item 
+\#define \hyperlink{group__open_coap_gac74ba1d96b0defa127ca13247884a8d4}{C\+O\+A\+P\+\_\+\+M\+A\+X\+\_\+\+T\+KL}~8
+\item 
+\#define \hyperlink{group__open_coap_gab4e38910080deed0a5df4aec116d3999}{C\+O\+A\+P\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+M\+A\+R\+K\+ER}~0x\+FF
+\item 
+\#define \hyperlink{group__open_coap_ga0cc059ba01b6be3d8abe18cc96ab2221}{C\+O\+A\+P\+\_\+\+V\+E\+R\+S\+I\+ON}~1
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t}($\ast$ \hyperlink{group__open_coap_gac41957963dd35c0f62acbb44f369fa61}{callback\+Rx\+\_\+cbt}) (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{structcoap__header__iht}{coap\+\_\+header\+\_\+iht} $\ast$coap\+\_\+header, \hyperlink{structcoap__option__iht}{coap\+\_\+option\+\_\+iht} $\ast$coap\+\_\+options)
+\item 
+typedef \hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}($\ast$ \hyperlink{group__open_coap_ga62a54b4b86c9835fe33d997b069193bc}{callback\+Send\+Done\+\_\+cbt}) (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{disk_8c_ad018a3100b2dabad325a0800152db297}{error})
+\item 
+typedef struct \hyperlink{structcoap__resource__desc__t}{coap\+\_\+resource\+\_\+desc\+\_\+t} \hyperlink{group__open_coap_ga507ec6b3ff0f2c55b7965a3a243c4fd0}{coap\+\_\+resource\+\_\+desc\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__open_coap_gafb608e0d646391b17d00513242200087}{coap\+\_\+type\+\_\+t} \{ \hyperlink{group__open_coap_ggafb608e0d646391b17d00513242200087a65c04ee4847d0c595238079ac9564e8d}{C\+O\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+ON} = 0, 
+\hyperlink{group__open_coap_ggafb608e0d646391b17d00513242200087a26b4b8fe681ea0720d68e1711741e073}{C\+O\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+ON} = 1, 
+\hyperlink{group__open_coap_ggafb608e0d646391b17d00513242200087a7b2fe2187018bce9132af2763b57307d}{C\+O\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+CK} = 2, 
+\hyperlink{group__open_coap_ggafb608e0d646391b17d00513242200087a924098f5424116957c8cf549c50ff066}{C\+O\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+ES} = 3
+ \}
+\item 
+enum \hyperlink{group__open_coap_gae99fde61d59e68af70c6bcd0c7b0256f}{coap\+\_\+code\+\_\+t} \{ \\*
+\hyperlink{group__open_coap_ggae99fde61d59e68af70c6bcd0c7b0256fad23d0c658ea18ce7e1dd8f1f4be0e7ec}{C\+O\+A\+P\+\_\+\+C\+O\+D\+E\+\_\+\+E\+M\+P\+TY} = 0, 
+\hyperlink{group__open_coap_ggae99fde61d59e68af70c6bcd0c7b0256faee813557f5b6ce3f2605ea60509447ee}{C\+O\+A\+P\+\_\+\+C\+O\+D\+E\+\_\+\+R\+E\+Q\+\_\+\+G\+ET} = 1, 
+\hyperlink{group__open_coap_ggae99fde61d59e68af70c6bcd0c7b0256faf2caaa1bc9e105a08052339a30a8c8a3}{C\+O\+A\+P\+\_\+\+C\+O\+D\+E\+\_\+\+R\+E\+Q\+\_\+\+P\+O\+ST} = 2, 
+\hyperlink{group__open_coap_ggae99fde61d59e68af70c6bcd0c7b0256fae340c702a79200fad8b4ae3dc207a4cb}{C\+O\+A\+P\+\_\+\+C\+O\+D\+E\+\_\+\+R\+E\+Q\+\_\+\+P\+UT} = 3, 
+\\*
+\hyperlink{group__open_coap_ggae99fde61d59e68af70c6bcd0c7b0256fab58ccb57cab7604f22c4b0a8f869dd37}{C\+O\+A\+P\+\_\+\+C\+O\+D\+E\+\_\+\+R\+E\+Q\+\_\+\+D\+E\+L\+E\+TE} = 4, 
+\hyperlink{group__open_coap_ggae99fde61d59e68af70c6bcd0c7b0256fa4df5a42ae3703e135f2c51cb9bece412}{C\+O\+A\+P\+\_\+\+C\+O\+D\+E\+\_\+\+R\+E\+S\+P\+\_\+\+C\+R\+E\+A\+T\+ED} = 65, 
+\hyperlink{group__open_coap_ggae99fde61d59e68af70c6bcd0c7b0256fa4c66de8dbed39024c4d24f079f419df0}{C\+O\+A\+P\+\_\+\+C\+O\+D\+E\+\_\+\+R\+E\+S\+P\+\_\+\+D\+E\+L\+E\+T\+ED} = 66, 
+\hyperlink{group__open_coap_ggae99fde61d59e68af70c6bcd0c7b0256fa57f67a6e1de8273c6a59ae68e02fc844}{C\+O\+A\+P\+\_\+\+C\+O\+D\+E\+\_\+\+R\+E\+S\+P\+\_\+\+V\+A\+L\+ID} = 67, 
+\\*
+\hyperlink{group__open_coap_ggae99fde61d59e68af70c6bcd0c7b0256fac980e3068cfccc3a5b3c08fc847ed349}{C\+O\+A\+P\+\_\+\+C\+O\+D\+E\+\_\+\+R\+E\+S\+P\+\_\+\+C\+H\+A\+N\+G\+ED} = 68, 
+\hyperlink{group__open_coap_ggae99fde61d59e68af70c6bcd0c7b0256fa27e8e136b607d81c8f9cbbcc892db046}{C\+O\+A\+P\+\_\+\+C\+O\+D\+E\+\_\+\+R\+E\+S\+P\+\_\+\+C\+O\+N\+T\+E\+NT} = 69, 
+\hyperlink{group__open_coap_ggae99fde61d59e68af70c6bcd0c7b0256facf8fb9fbc56e2053ab4ada884bbd0c09}{C\+O\+A\+P\+\_\+\+C\+O\+D\+E\+\_\+\+R\+E\+S\+P\+\_\+\+B\+A\+D\+R\+EQ} = 128, 
+\hyperlink{group__open_coap_ggae99fde61d59e68af70c6bcd0c7b0256fa1e80eb762859e91ca40c6d150985069e}{C\+O\+A\+P\+\_\+\+C\+O\+D\+E\+\_\+\+R\+E\+S\+P\+\_\+\+U\+N\+A\+U\+T\+H\+O\+R\+I\+Z\+ED} = 129, 
+\\*
+\hyperlink{group__open_coap_ggae99fde61d59e68af70c6bcd0c7b0256fa9486b10d11f22b898c7e8ef3595c2a4b}{C\+O\+A\+P\+\_\+\+C\+O\+D\+E\+\_\+\+R\+E\+S\+P\+\_\+\+B\+A\+D\+O\+P\+T\+I\+ON} = 130, 
+\hyperlink{group__open_coap_ggae99fde61d59e68af70c6bcd0c7b0256faeda5c2a149c5d007d7d881bcd368cc66}{C\+O\+A\+P\+\_\+\+C\+O\+D\+E\+\_\+\+R\+E\+S\+P\+\_\+\+F\+O\+R\+B\+I\+D\+D\+EN} = 131, 
+\hyperlink{group__open_coap_ggae99fde61d59e68af70c6bcd0c7b0256fa8f34d21872bb3ab0339c9e2816a4c114}{C\+O\+A\+P\+\_\+\+C\+O\+D\+E\+\_\+\+R\+E\+S\+P\+\_\+\+N\+O\+T\+F\+O\+U\+ND} = 132, 
+\hyperlink{group__open_coap_ggae99fde61d59e68af70c6bcd0c7b0256fa7d6b3f39e38f2d69ab7820772570a67f}{C\+O\+A\+P\+\_\+\+C\+O\+D\+E\+\_\+\+R\+E\+S\+P\+\_\+\+M\+E\+T\+H\+O\+D\+N\+O\+T\+A\+L\+L\+O\+W\+ED} = 133, 
+\\*
+\hyperlink{group__open_coap_ggae99fde61d59e68af70c6bcd0c7b0256fa640d3a42e249605e32c9b71d7d7d12cd}{C\+O\+A\+P\+\_\+\+C\+O\+D\+E\+\_\+\+R\+E\+S\+P\+\_\+\+P\+R\+E\+C\+O\+N\+D\+F\+A\+I\+L\+ED} = 140, 
+\hyperlink{group__open_coap_ggae99fde61d59e68af70c6bcd0c7b0256fa07b49fa617733f4da4d503f01ad2283c}{C\+O\+A\+P\+\_\+\+C\+O\+D\+E\+\_\+\+R\+E\+S\+P\+\_\+\+R\+E\+Q\+T\+O\+O\+L\+A\+R\+GE} = 141, 
+\hyperlink{group__open_coap_ggae99fde61d59e68af70c6bcd0c7b0256fa6eb39d897f3a73234b2bfa7c925ffeca}{C\+O\+A\+P\+\_\+\+C\+O\+D\+E\+\_\+\+R\+E\+S\+P\+\_\+\+U\+N\+S\+U\+P\+P\+M\+E\+D\+I\+A\+T\+Y\+PE} = 143, 
+\hyperlink{group__open_coap_ggae99fde61d59e68af70c6bcd0c7b0256fac1608678da628ec577acfcbc8f1e2bb0}{C\+O\+A\+P\+\_\+\+C\+O\+D\+E\+\_\+\+R\+E\+S\+P\+\_\+\+S\+E\+R\+V\+E\+R\+E\+R\+R\+OR} = 160, 
+\\*
+\hyperlink{group__open_coap_ggae99fde61d59e68af70c6bcd0c7b0256fa667526f036e6721a1edd8deaf28c27bd}{C\+O\+A\+P\+\_\+\+C\+O\+D\+E\+\_\+\+R\+E\+S\+P\+\_\+\+N\+O\+T\+I\+M\+P\+L\+E\+M\+E\+N\+T\+ED} = 161, 
+\hyperlink{group__open_coap_ggae99fde61d59e68af70c6bcd0c7b0256fac5f6381cb7c7351dfb5cca0ed6a5ab83}{C\+O\+A\+P\+\_\+\+C\+O\+D\+E\+\_\+\+R\+E\+S\+P\+\_\+\+B\+A\+D\+G\+A\+T\+E\+W\+AY} = 162, 
+\hyperlink{group__open_coap_ggae99fde61d59e68af70c6bcd0c7b0256fafe0932a9eccda4acd776bf29c89276b1}{C\+O\+A\+P\+\_\+\+C\+O\+D\+E\+\_\+\+R\+E\+S\+P\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE} = 163, 
+\hyperlink{group__open_coap_ggae99fde61d59e68af70c6bcd0c7b0256fa8ff33be7084159f8fc5594e6f41e3740}{C\+O\+A\+P\+\_\+\+C\+O\+D\+E\+\_\+\+R\+E\+S\+P\+\_\+\+G\+W\+T\+I\+M\+E\+O\+UT} = 164, 
+\\*
+\hyperlink{group__open_coap_ggae99fde61d59e68af70c6bcd0c7b0256fa5acd962d666c451c0053b86555e39f09}{C\+O\+A\+P\+\_\+\+C\+O\+D\+E\+\_\+\+R\+E\+S\+P\+\_\+\+P\+R\+O\+X\+Y\+I\+N\+G\+N\+O\+T\+S\+U\+PP} = 165
+ \}
+\item 
+enum \hyperlink{group__open_coap_ga809c9a7522aa7e4726b4a95ccdb2833b}{coap\+\_\+option\+\_\+t} \{ \\*
+\hyperlink{group__open_coap_gga809c9a7522aa7e4726b4a95ccdb2833ba6f1c9871b73e1ce158e1f671393cdcdc}{C\+O\+A\+P\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+N\+O\+NE} = 0, 
+\hyperlink{group__open_coap_gga809c9a7522aa7e4726b4a95ccdb2833ba9f7901f5b91c312b84adfa610ffdfce7}{C\+O\+A\+P\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+N\+U\+M\+\_\+\+I\+F\+M\+A\+T\+CH} = 1, 
+\hyperlink{group__open_coap_gga809c9a7522aa7e4726b4a95ccdb2833baa8389f3015218b9b418e89d1214f18a7}{C\+O\+A\+P\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+N\+U\+M\+\_\+\+U\+R\+I\+H\+O\+ST} = 3, 
+\hyperlink{group__open_coap_gga809c9a7522aa7e4726b4a95ccdb2833ba9d495f2b02838985081c1e470a04feb2}{C\+O\+A\+P\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+N\+U\+M\+\_\+\+E\+T\+AG} = 4, 
+\\*
+\hyperlink{group__open_coap_gga809c9a7522aa7e4726b4a95ccdb2833baa0efddd89894e9d5499fb6104ade8181}{C\+O\+A\+P\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+N\+U\+M\+\_\+\+I\+F\+N\+O\+N\+E\+M\+A\+T\+CH} = 5, 
+\hyperlink{group__open_coap_gga809c9a7522aa7e4726b4a95ccdb2833ba6471be06a48e3bffb30274052ee3381c}{C\+O\+A\+P\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+N\+U\+M\+\_\+\+U\+R\+I\+P\+O\+RT} = 7, 
+\hyperlink{group__open_coap_gga809c9a7522aa7e4726b4a95ccdb2833ba4ee718814051f694c7ae236965c6536f}{C\+O\+A\+P\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+N\+U\+M\+\_\+\+L\+O\+C\+A\+T\+I\+O\+N\+P\+A\+TH} = 8, 
+\hyperlink{group__open_coap_gga809c9a7522aa7e4726b4a95ccdb2833ba38d8e0fc51d8055261081086cf0691cb}{C\+O\+A\+P\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+N\+U\+M\+\_\+\+U\+R\+I\+P\+A\+TH} = 11, 
+\\*
+\hyperlink{group__open_coap_gga809c9a7522aa7e4726b4a95ccdb2833bae59c8e513355b8fa14ea7149971f3a00}{C\+O\+A\+P\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+N\+U\+M\+\_\+\+C\+O\+N\+T\+E\+N\+T\+F\+O\+R\+M\+AT} = 12, 
+\hyperlink{group__open_coap_gga809c9a7522aa7e4726b4a95ccdb2833ba5da32446e8a58275277ec87556c1d457}{C\+O\+A\+P\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+N\+U\+M\+\_\+\+M\+A\+X\+A\+GE} = 14, 
+\hyperlink{group__open_coap_gga809c9a7522aa7e4726b4a95ccdb2833bab3039cd2da76c4a490307b9f56e262fa}{C\+O\+A\+P\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+N\+U\+M\+\_\+\+U\+R\+I\+Q\+U\+E\+RY} = 15, 
+\hyperlink{group__open_coap_gga809c9a7522aa7e4726b4a95ccdb2833ba68083aabd42f07eff26a8f437b73b399}{C\+O\+A\+P\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+N\+U\+M\+\_\+\+A\+C\+C\+E\+PT} = 16, 
+\\*
+\hyperlink{group__open_coap_gga809c9a7522aa7e4726b4a95ccdb2833ba0588bac7e805aaac1bb1eec2094cf49a}{C\+O\+A\+P\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+N\+U\+M\+\_\+\+L\+O\+C\+A\+T\+I\+O\+N\+Q\+U\+E\+RY} = 20, 
+\hyperlink{group__open_coap_gga809c9a7522aa7e4726b4a95ccdb2833ba4332c205fc8ebbe6f3a946c2bd8e00a3}{C\+O\+A\+P\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+N\+U\+M\+\_\+\+P\+R\+O\+X\+Y\+U\+RI} = 35, 
+\hyperlink{group__open_coap_gga809c9a7522aa7e4726b4a95ccdb2833ba8a4439e4549f41301a471c6990bf76b9}{C\+O\+A\+P\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+N\+U\+M\+\_\+\+P\+R\+O\+X\+Y\+S\+C\+H\+E\+ME} = 39
+ \}
+\item 
+enum \hyperlink{group__open_coap_gaef18a213b721e5f11a0d12b394be1084}{coap\+\_\+media\+\_\+type\+\_\+t} \{ \\*
+\hyperlink{group__open_coap_ggaef18a213b721e5f11a0d12b394be1084a3eb620ed79f0fd008e1a099781f138e4}{C\+O\+A\+P\+\_\+\+M\+E\+D\+T\+Y\+P\+E\+\_\+\+T\+E\+X\+T\+P\+L\+A\+IN} = 0, 
+\hyperlink{group__open_coap_ggaef18a213b721e5f11a0d12b394be1084a4e096f618637348ab356c70524d1ddb9}{C\+O\+A\+P\+\_\+\+M\+E\+D\+T\+Y\+P\+E\+\_\+\+A\+P\+P\+L\+I\+N\+K\+F\+O\+R\+M\+AT} = 40, 
+\hyperlink{group__open_coap_ggaef18a213b721e5f11a0d12b394be1084ae086860d7a2cce52fafa75db92c08b92}{C\+O\+A\+P\+\_\+\+M\+E\+D\+T\+Y\+P\+E\+\_\+\+A\+P\+P\+X\+ML} = 41, 
+\hyperlink{group__open_coap_ggaef18a213b721e5f11a0d12b394be1084a0b140215aaa7e8763a81ff69218fef19}{C\+O\+A\+P\+\_\+\+M\+E\+D\+T\+Y\+P\+E\+\_\+\+A\+P\+P\+O\+C\+T\+E\+T\+S\+T\+R\+E\+AM} = 42, 
+\\*
+\hyperlink{group__open_coap_ggaef18a213b721e5f11a0d12b394be1084ad5bae428b527387f8a7b329a6283f8e5}{C\+O\+A\+P\+\_\+\+M\+E\+D\+T\+Y\+P\+E\+\_\+\+A\+P\+P\+E\+XI} = 47, 
+\hyperlink{group__open_coap_ggaef18a213b721e5f11a0d12b394be1084acb5118bf020133735067e07700b57c15}{C\+O\+A\+P\+\_\+\+M\+E\+D\+T\+Y\+P\+E\+\_\+\+A\+P\+P\+J\+S\+ON} = 50
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__open_coap_ga53a859522b159c54e76dc8a20cbdd3ff}{opencoap\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Initialize this module. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__open_coap_gaaa4778341676139ae72ad5dd515a816d}{opencoap\+\_\+receive} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Indicate a Co\+AP messages was received. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__open_coap_gad576f6262590140be3771817a151fc45}{opencoap\+\_\+send\+Done} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{disk_8c_ad018a3100b2dabad325a0800152db297}{error})
+\begin{DoxyCompactList}\small\item\em Indicates that the Co\+AP response has been sent. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__open_coap_ga3cbc2d2d4a78ae1474cd5105ebc7b3a8}{opencoap\+\_\+write\+Links} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} component\+ID)
+\begin{DoxyCompactList}\small\item\em Writes the links to all the resources on this mote into the message. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__open_coap_ga82e1d3e8b96366e52348c479f7582c0d}{opencoap\+\_\+register} (\hyperlink{structcoap__resource__desc__t}{coap\+\_\+resource\+\_\+desc\+\_\+t} $\ast$desc)
+\begin{DoxyCompactList}\small\item\em Register a new Co\+AP resource. \end{DoxyCompactList}\item 
+\hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{group__open_coap_gaa4a1f14228086a934a38230eb0254323}{opencoap\+\_\+send} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{group__open_coap_gafb608e0d646391b17d00513242200087}{coap\+\_\+type\+\_\+t} type, \hyperlink{group__open_coap_gae99fde61d59e68af70c6bcd0c7b0256f}{coap\+\_\+code\+\_\+t} code, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} num\+Options, \hyperlink{structcoap__resource__desc__t}{coap\+\_\+resource\+\_\+desc\+\_\+t} $\ast$desc\+Sender)
+\begin{DoxyCompactList}\small\item\em Send a Co\+AP request. \end{DoxyCompactList}\end{DoxyCompactItemize}

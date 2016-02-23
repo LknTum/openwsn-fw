@@ -1,0 +1,68 @@
+\hypertarget{pka_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/source/pka.c File Reference}
+\label{pka_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/source/pka.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/source/pka.\+c}}
+{\ttfamily \#include $<$headers/hw\+\_\+ints.\+h$>$}\\*
+{\ttfamily \#include $<$headers/hw\+\_\+memmap.\+h$>$}\\*
+{\ttfamily \#include $<$headers/hw\+\_\+pka.\+h$>$}\\*
+{\ttfamily \#include $<$headers/hw\+\_\+types.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}interrupt.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pka.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sys\+\_\+ctrl.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}debug.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__pka__driver_ga070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}~((\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}$\ast$)0)
+\item 
+\#define \hyperlink{group__pka__driver_ga4cb93e92891ad7120992f05616e0a77f}{P\+K\+A\+\_\+\+M\+A\+X\+\_\+\+C\+U\+R\+V\+E\+\_\+\+S\+I\+Z\+E\+\_\+32\+\_\+\+B\+I\+T\+\_\+\+W\+O\+RD}~12
+\item 
+\#define \hyperlink{group__pka__driver_ga38ce8bc8a86da72caa13bc9476b9fc41}{P\+K\+A\+\_\+\+M\+A\+X\+\_\+\+L\+E\+N\+\_\+\+I\+N\+\_\+32\+\_\+\+B\+I\+T\+\_\+\+W\+O\+RD}~\hyperlink{group__pka__driver_ga4cb93e92891ad7120992f05616e0a77f}{P\+K\+A\+\_\+\+M\+A\+X\+\_\+\+C\+U\+R\+V\+E\+\_\+\+S\+I\+Z\+E\+\_\+32\+\_\+\+B\+I\+T\+\_\+\+W\+O\+RD}
+\item 
+\#define \hyperlink{group__pka__driver_ga587496a1c16227ec2861c0f5d8f786e9}{P\+K\+A\+\_\+\+R\+A\+M\+\_\+\+S\+I\+ZE}~2000
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__pka__driver_gaed47ea15b15663675629b0e0388afede}{P\+K\+A\+Enable\+Int} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__pka__driver_ga332c572585f555dc982817a355284f70}{P\+K\+A\+Disable\+Int} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__pka__driver_gaac0d2e55a0331401d91eb645e043d333}{P\+K\+A\+Clear\+Int} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__pka__driver_ga8e873132638c12c2ac9fca35a36013d6}{P\+K\+A\+Reg\+Int} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}($\ast$pfn\+Handler)(\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}))
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__pka__driver_ga2d21625a6c77aee8721066476a68275d}{P\+K\+A\+Un\+Reg\+Int} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_ga82d30b6e54d4e06c2fd871dbefbf90c5}{P\+K\+A\+Get\+Ops\+Status} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_gadcb3179ff4f5d836e35d9b4505220787}{P\+K\+A\+Big\+Num\+Mod\+Start} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+B\+Num, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+B\+N\+Size, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Modulus, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Mod\+Size, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Result\+Vector)
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_ga23ee9b245d913950bdab98fb80e72f16}{P\+K\+A\+Big\+Num\+Mod\+Get\+Result} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Result\+Buf, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Size, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Res\+Vector\+Loc)
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_ga6b8827a49b626e7c90608ecbbc59e2b0}{P\+K\+A\+Big\+Num\+Cmp\+Start} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+B\+Num1, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+B\+Num2, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Size)
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_ga0b7348fb8033dfcb8a1584dfb064bf3f}{P\+K\+A\+Big\+Num\+Cmp\+Get\+Result} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_ga789ed728264b5f3d5b411ca72615e470}{P\+K\+A\+Big\+Num\+Inv\+Mod\+Start} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+B\+Num, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+B\+N\+Size, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Modulus, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Size, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Result\+Vector)
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_gaeb5b970ba8ccea84761f2b84ffc3408e}{P\+K\+A\+Big\+Num\+Inv\+Mod\+Get\+Result} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Result\+Buf, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Size, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Res\+Vector\+Loc)
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_gab72dd0782a8e971133dfc94b267881a1}{P\+K\+A\+Big\+Num\+Multiply\+Start} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Xplicand, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Xplicand\+Size, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Xplier, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Xplier\+Size, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Result\+Vector)
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_ga4891923a934ab7b9e174fdfd014665c6}{P\+K\+A\+Big\+Num\+Mult\+Get\+Result} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Result\+Buf, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Len, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Res\+Vector\+Loc)
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_ga41ae8dff39418d7499db8555a2a4b592}{P\+K\+A\+Big\+Num\+Add\+Start} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+B\+N1, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+B\+N1\+Size, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+B\+N2, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+B\+N2\+Size, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Result\+Vector)
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_ga77cf473c12e2c506e6753dacfd3bf219}{P\+K\+A\+Big\+Num\+Add\+Get\+Result} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Result\+Buf, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Len, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Res\+Vector\+Loc)
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_ga99c8ab12e5a5fcba7f63ad0d2f9a98dd}{P\+K\+A\+E\+C\+C\+Multiply\+Start} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Scalar, \hyperlink{pka_8h_ad8a0d9ffc3dc89cecf35c8fac620a030}{t\+E\+C\+Pt} $\ast$pt\+Ec\+Pt, \hyperlink{ecc__curveinfo_8h_a17a628519ae5ba49f5cf62decade4dcb}{t\+E\+C\+C\+Curve\+Info} $\ast$pt\+Curve, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Result\+Vector)
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_ga8ed171250f4b3a26e1f8268a41503450}{P\+K\+A\+E\+C\+C\+Multiply\+Get\+Result} (\hyperlink{pka_8h_ad8a0d9ffc3dc89cecf35c8fac620a030}{t\+E\+C\+Pt} $\ast$pt\+Out\+Ec\+Pt, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Res\+Vector\+Loc)
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_ga37519c82259a12764cb68cb265bc09c9}{P\+K\+A\+E\+C\+C\+Mult\+Gen\+Pt\+Start} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Scalar, \hyperlink{ecc__curveinfo_8h_a17a628519ae5ba49f5cf62decade4dcb}{t\+E\+C\+C\+Curve\+Info} $\ast$pt\+Curve, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Result\+Vector)
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_ga5fe2796e884a65a75bb1732831e0bca9}{P\+K\+A\+E\+C\+C\+Mult\+Gen\+Pt\+Get\+Result} (\hyperlink{pka_8h_ad8a0d9ffc3dc89cecf35c8fac620a030}{t\+E\+C\+Pt} $\ast$pt\+Out\+Ec\+Pt, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Res\+Vector\+Loc)
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_gab12f37d870c923e7800d0523c40442a6}{P\+K\+A\+E\+C\+C\+Add\+Start} (\hyperlink{pka_8h_ad8a0d9ffc3dc89cecf35c8fac620a030}{t\+E\+C\+Pt} $\ast$pt\+Ec\+Pt1, \hyperlink{pka_8h_ad8a0d9ffc3dc89cecf35c8fac620a030}{t\+E\+C\+Pt} $\ast$pt\+Ec\+Pt2, \hyperlink{ecc__curveinfo_8h_a17a628519ae5ba49f5cf62decade4dcb}{t\+E\+C\+C\+Curve\+Info} $\ast$pt\+Curve, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Result\+Vector)
+\item 
+\hyperlink{pka_8h_a94af1eb5fa0257508f865b5e40de4ed3}{t\+P\+K\+A\+Status} \hyperlink{group__pka__driver_ga4fe3c47d5600bd8e8b073a19ec96d258}{P\+K\+A\+E\+C\+C\+Add\+Get\+Result} (\hyperlink{pka_8h_ad8a0d9ffc3dc89cecf35c8fac620a030}{t\+E\+C\+Pt} $\ast$pt\+Out\+Ec\+Pt, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Res\+Vector\+Loc)
+\end{DoxyCompactItemize}

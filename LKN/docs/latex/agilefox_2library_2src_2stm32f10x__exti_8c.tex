@@ -1,0 +1,95 @@
+\hypertarget{agilefox_2library_2src_2stm32f10x__exti_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/agilefox/library/src/stm32f10x\+\_\+exti.c File Reference}
+\label{agilefox_2library_2src_2stm32f10x__exti_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/agilefox/library/src/stm32f10x\+\_\+exti.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/agilefox/library/src/stm32f10x\+\_\+exti.\+c}}
+{\ttfamily \#include \char`\"{}stm32f10x\+\_\+exti.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__exti_8c_a7b0c50de49bcaa711c1e310219b97281}{E\+X\+T\+I\+\_\+\+Line\+None}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00000)  /$\ast$ No interrupt selected $\ast$/
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___e_x_t_i___exported___functions_ga07072e339cb9ecb9cd9d4b94afc9f317}{E\+X\+T\+I\+\_\+\+De\+Init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Deinitializes the E\+X\+TI peripheral registers to their default reset values. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___e_x_t_i___exported___functions_ga8c9ce6352a3a2dfc8fc9287cb24c6501}{E\+X\+T\+I\+\_\+\+Init} (\hyperlink{struct_e_x_t_i___init_type_def}{E\+X\+T\+I\+\_\+\+Init\+Type\+Def} $\ast$E\+X\+T\+I\+\_\+\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Initializes the E\+X\+TI peripheral according to the specified parameters in the E\+X\+T\+I\+\_\+\+Init\+Struct. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___e_x_t_i___exported___functions_ga86b9e662d18a2f829999cfb26aa7ca20}{E\+X\+T\+I\+\_\+\+Struct\+Init} (\hyperlink{struct_e_x_t_i___init_type_def}{E\+X\+T\+I\+\_\+\+Init\+Type\+Def} $\ast$E\+X\+T\+I\+\_\+\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Fills each E\+X\+T\+I\+\_\+\+Init\+Struct member with its reset value. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__exti_8c_a566c1344d3fd381fbe632cf94215e6a8}{E\+X\+T\+I\+\_\+\+Generate\+S\+W\+Interrupt} (\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} E\+X\+T\+I\+\_\+\+Line)
+\item 
+\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a89136caac2e14c55151f527ac02daaff}{Flag\+Status} \hyperlink{agilefox_2library_2src_2stm32f10x__exti_8c_ae77b6e34d4390d78a23f4f04408da376}{E\+X\+T\+I\+\_\+\+Get\+Flag\+Status} (\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} E\+X\+T\+I\+\_\+\+Line)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__exti_8c_ace67c5ecdb79218bf97aabb9ef329175}{E\+X\+T\+I\+\_\+\+Clear\+Flag} (\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} E\+X\+T\+I\+\_\+\+Line)
+\item 
+\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_aacbd7ed539db0aacd973a0f6eca34074}{I\+T\+Status} \hyperlink{agilefox_2library_2src_2stm32f10x__exti_8c_aff95c8ec7492dc9ed5c336b87cda56ba}{E\+X\+T\+I\+\_\+\+Get\+I\+T\+Status} (\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} E\+X\+T\+I\+\_\+\+Line)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__exti_8c_a432bccc2e35b79fff94cd1165a437f63}{E\+X\+T\+I\+\_\+\+Clear\+I\+T\+Pending\+Bit} (\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} E\+X\+T\+I\+\_\+\+Line)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{agilefox/library/src/stm32f10x\+\_\+exti.\+c@{agilefox/library/src/stm32f10x\+\_\+exti.\+c}!E\+X\+T\+I\+\_\+\+Line\+None@{E\+X\+T\+I\+\_\+\+Line\+None}}
+\index{E\+X\+T\+I\+\_\+\+Line\+None@{E\+X\+T\+I\+\_\+\+Line\+None}!agilefox/library/src/stm32f10x\+\_\+exti.\+c@{agilefox/library/src/stm32f10x\+\_\+exti.\+c}}
+\subsubsection[{\texorpdfstring{E\+X\+T\+I\+\_\+\+Line\+None}{EXTI_LineNone}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+T\+I\+\_\+\+Line\+None~(({\bf u32})0x00000)  /$\ast$ No interrupt selected $\ast$/}\hypertarget{agilefox_2library_2src_2stm32f10x__exti_8c_a7b0c50de49bcaa711c1e310219b97281}{}\label{agilefox_2library_2src_2stm32f10x__exti_8c_a7b0c50de49bcaa711c1e310219b97281}
+
+
+Definition at line 21 of file stm32f10x\+\_\+exti.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{agilefox/library/src/stm32f10x\+\_\+exti.\+c@{agilefox/library/src/stm32f10x\+\_\+exti.\+c}!E\+X\+T\+I\+\_\+\+Clear\+Flag@{E\+X\+T\+I\+\_\+\+Clear\+Flag}}
+\index{E\+X\+T\+I\+\_\+\+Clear\+Flag@{E\+X\+T\+I\+\_\+\+Clear\+Flag}!agilefox/library/src/stm32f10x\+\_\+exti.\+c@{agilefox/library/src/stm32f10x\+\_\+exti.\+c}}
+\subsubsection[{\texorpdfstring{E\+X\+T\+I\+\_\+\+Clear\+Flag(u32 E\+X\+T\+I\+\_\+\+Line)}{EXTI_ClearFlag(u32 EXTI_Line)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} E\+X\+T\+I\+\_\+\+Clear\+Flag (
+\begin{DoxyParamCaption}
+\item[{{\bf u32}}]{E\+X\+T\+I\+\_\+\+Line}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__exti_8c_ace67c5ecdb79218bf97aabb9ef329175}{}\label{agilefox_2library_2src_2stm32f10x__exti_8c_ace67c5ecdb79218bf97aabb9ef329175}
+
+
+Definition at line 164 of file stm32f10x\+\_\+exti.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+exti.\+c@{agilefox/library/src/stm32f10x\+\_\+exti.\+c}!E\+X\+T\+I\+\_\+\+Clear\+I\+T\+Pending\+Bit@{E\+X\+T\+I\+\_\+\+Clear\+I\+T\+Pending\+Bit}}
+\index{E\+X\+T\+I\+\_\+\+Clear\+I\+T\+Pending\+Bit@{E\+X\+T\+I\+\_\+\+Clear\+I\+T\+Pending\+Bit}!agilefox/library/src/stm32f10x\+\_\+exti.\+c@{agilefox/library/src/stm32f10x\+\_\+exti.\+c}}
+\subsubsection[{\texorpdfstring{E\+X\+T\+I\+\_\+\+Clear\+I\+T\+Pending\+Bit(u32 E\+X\+T\+I\+\_\+\+Line)}{EXTI_ClearITPendingBit(u32 EXTI_Line)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} E\+X\+T\+I\+\_\+\+Clear\+I\+T\+Pending\+Bit (
+\begin{DoxyParamCaption}
+\item[{{\bf u32}}]{E\+X\+T\+I\+\_\+\+Line}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__exti_8c_a432bccc2e35b79fff94cd1165a437f63}{}\label{agilefox_2library_2src_2stm32f10x__exti_8c_a432bccc2e35b79fff94cd1165a437f63}
+
+
+Definition at line 211 of file stm32f10x\+\_\+exti.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+exti.\+c@{agilefox/library/src/stm32f10x\+\_\+exti.\+c}!E\+X\+T\+I\+\_\+\+Generate\+S\+W\+Interrupt@{E\+X\+T\+I\+\_\+\+Generate\+S\+W\+Interrupt}}
+\index{E\+X\+T\+I\+\_\+\+Generate\+S\+W\+Interrupt@{E\+X\+T\+I\+\_\+\+Generate\+S\+W\+Interrupt}!agilefox/library/src/stm32f10x\+\_\+exti.\+c@{agilefox/library/src/stm32f10x\+\_\+exti.\+c}}
+\subsubsection[{\texorpdfstring{E\+X\+T\+I\+\_\+\+Generate\+S\+W\+Interrupt(u32 E\+X\+T\+I\+\_\+\+Line)}{EXTI_GenerateSWInterrupt(u32 EXTI_Line)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} E\+X\+T\+I\+\_\+\+Generate\+S\+W\+Interrupt (
+\begin{DoxyParamCaption}
+\item[{{\bf u32}}]{E\+X\+T\+I\+\_\+\+Line}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__exti_8c_a566c1344d3fd381fbe632cf94215e6a8}{}\label{agilefox_2library_2src_2stm32f10x__exti_8c_a566c1344d3fd381fbe632cf94215e6a8}
+
+
+Definition at line 120 of file stm32f10x\+\_\+exti.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+exti.\+c@{agilefox/library/src/stm32f10x\+\_\+exti.\+c}!E\+X\+T\+I\+\_\+\+Get\+Flag\+Status@{E\+X\+T\+I\+\_\+\+Get\+Flag\+Status}}
+\index{E\+X\+T\+I\+\_\+\+Get\+Flag\+Status@{E\+X\+T\+I\+\_\+\+Get\+Flag\+Status}!agilefox/library/src/stm32f10x\+\_\+exti.\+c@{agilefox/library/src/stm32f10x\+\_\+exti.\+c}}
+\subsubsection[{\texorpdfstring{E\+X\+T\+I\+\_\+\+Get\+Flag\+Status(u32 E\+X\+T\+I\+\_\+\+Line)}{EXTI_GetFlagStatus(u32 EXTI_Line)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Flag\+Status} E\+X\+T\+I\+\_\+\+Get\+Flag\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf u32}}]{E\+X\+T\+I\+\_\+\+Line}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__exti_8c_ae77b6e34d4390d78a23f4f04408da376}{}\label{agilefox_2library_2src_2stm32f10x__exti_8c_ae77b6e34d4390d78a23f4f04408da376}
+
+
+Definition at line 137 of file stm32f10x\+\_\+exti.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+exti.\+c@{agilefox/library/src/stm32f10x\+\_\+exti.\+c}!E\+X\+T\+I\+\_\+\+Get\+I\+T\+Status@{E\+X\+T\+I\+\_\+\+Get\+I\+T\+Status}}
+\index{E\+X\+T\+I\+\_\+\+Get\+I\+T\+Status@{E\+X\+T\+I\+\_\+\+Get\+I\+T\+Status}!agilefox/library/src/stm32f10x\+\_\+exti.\+c@{agilefox/library/src/stm32f10x\+\_\+exti.\+c}}
+\subsubsection[{\texorpdfstring{E\+X\+T\+I\+\_\+\+Get\+I\+T\+Status(u32 E\+X\+T\+I\+\_\+\+Line)}{EXTI_GetITStatus(u32 EXTI_Line)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+T\+Status} E\+X\+T\+I\+\_\+\+Get\+I\+T\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf u32}}]{E\+X\+T\+I\+\_\+\+Line}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__exti_8c_aff95c8ec7492dc9ed5c336b87cda56ba}{}\label{agilefox_2library_2src_2stm32f10x__exti_8c_aff95c8ec7492dc9ed5c336b87cda56ba}
+
+
+Definition at line 181 of file stm32f10x\+\_\+exti.\+c.
+

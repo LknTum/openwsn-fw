@@ -1,0 +1,113 @@
+\hypertarget{01bsp__eui64_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/common/01bsp\+\_\+eui64/01bsp\+\_\+eui64.c File Reference}
+\label{01bsp__eui64_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/common/01bsp\+\_\+eui64/01bsp\+\_\+eui64.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/common/01bsp\+\_\+eui64/01bsp\+\_\+eui64.\+c}}
+{\ttfamily \#include \char`\"{}stdint.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stdio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}uart.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}eui64.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapp__vars__t}{app\+\_\+vars\+\_\+t}
+\begin{DoxyCompactList}\small\item\em This program shows the use of the \char`\"{}spi\char`\"{} bsp module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{01bsp__eui64_8c_ac7259841fcc9a73b4039664d8e872df8}{cb\+\_\+uart\+Tx\+Done} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{01bsp__eui64_8c_ac74da9e3eaa937998301625d7acd206d}{cb\+\_\+uart\+Rx\+Cb} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+int \hyperlink{01bsp__eui64_8c_ad0caa506af897a3ebe6699aa0c0da367}{mote\+\_\+main} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em The program starts executing here. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{01bsp__eui64_8c_a980869135c21c512094317d2ccd6e054}{lookup} \mbox{[}$\,$\mbox{]} = \{\textquotesingle{}0\textquotesingle{},\textquotesingle{}1\textquotesingle{},\textquotesingle{}2\textquotesingle{},\textquotesingle{}3\textquotesingle{},\textquotesingle{}4\textquotesingle{},\textquotesingle{}5\textquotesingle{},\textquotesingle{}6\textquotesingle{},\textquotesingle{}7\textquotesingle{},\textquotesingle{}8\textquotesingle{},\textquotesingle{}9\textquotesingle{},\textquotesingle{}a\textquotesingle{},\textquotesingle{}b\textquotesingle{},\textquotesingle{}c\textquotesingle{},\textquotesingle{}d\textquotesingle{},\textquotesingle{}e\textquotesingle{},\textquotesingle{}f\textquotesingle{}\}
+\begin{DoxyCompactList}\small\item\em This is a program which shows how to use the bsp modules to read the E\+U\+I64 and leds. \end{DoxyCompactList}\item 
+\hyperlink{structapp__vars__t}{app\+\_\+vars\+\_\+t} \hyperlink{01bsp__eui64_8c_a8a1b0b7ccff92c7f1d8961997cd2c913}{app\+\_\+vars}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{01bsp\+\_\+eui64.\+c@{01bsp\+\_\+eui64.\+c}!cb\+\_\+uart\+Rx\+Cb@{cb\+\_\+uart\+Rx\+Cb}}
+\index{cb\+\_\+uart\+Rx\+Cb@{cb\+\_\+uart\+Rx\+Cb}!01bsp\+\_\+eui64.\+c@{01bsp\+\_\+eui64.\+c}}
+\subsubsection[{\texorpdfstring{cb\+\_\+uart\+Rx\+Cb(void)}{cb_uartRxCb(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} cb\+\_\+uart\+Rx\+Cb (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{01bsp__eui64_8c_ac74da9e3eaa937998301625d7acd206d}{}\label{01bsp__eui64_8c_ac74da9e3eaa937998301625d7acd206d}
+
+
+Definition at line 98 of file 01bsp\+\_\+eui64.\+c.
+
+\index{01bsp\+\_\+eui64.\+c@{01bsp\+\_\+eui64.\+c}!cb\+\_\+uart\+Tx\+Done@{cb\+\_\+uart\+Tx\+Done}}
+\index{cb\+\_\+uart\+Tx\+Done@{cb\+\_\+uart\+Tx\+Done}!01bsp\+\_\+eui64.\+c@{01bsp\+\_\+eui64.\+c}}
+\subsubsection[{\texorpdfstring{cb\+\_\+uart\+Tx\+Done(void)}{cb_uartTxDone(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} cb\+\_\+uart\+Tx\+Done (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{01bsp__eui64_8c_ac7259841fcc9a73b4039664d8e872df8}{}\label{01bsp__eui64_8c_ac7259841fcc9a73b4039664d8e872df8}
+
+
+Definition at line 89 of file 01bsp\+\_\+eui64.\+c.
+
+\index{01bsp\+\_\+eui64.\+c@{01bsp\+\_\+eui64.\+c}!mote\+\_\+main@{mote\+\_\+main}}
+\index{mote\+\_\+main@{mote\+\_\+main}!01bsp\+\_\+eui64.\+c@{01bsp\+\_\+eui64.\+c}}
+\subsubsection[{\texorpdfstring{mote\+\_\+main(void)}{mote_main(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int mote\+\_\+main (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{01bsp__eui64_8c_ad0caa506af897a3ebe6699aa0c0da367}{}\label{01bsp__eui64_8c_ad0caa506af897a3ebe6699aa0c0da367}
+
+
+The program starts executing here. 
+
+Z1-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+W\+S\+N430v13b-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+Telos\+B-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+Python-\/based emulation of the mote\textquotesingle{}s power supply.
+
+iot-\/lab\+\_\+\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+iot-\/lab\+\_\+\+A8-\/\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+G\+I\+N\+A-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+e\+Z430-\/\+R\+F2500-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module. 
+
+Definition at line 47 of file 01bsp\+\_\+eui64.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{01bsp\+\_\+eui64.\+c@{01bsp\+\_\+eui64.\+c}!app\+\_\+vars@{app\+\_\+vars}}
+\index{app\+\_\+vars@{app\+\_\+vars}!01bsp\+\_\+eui64.\+c@{01bsp\+\_\+eui64.\+c}}
+\subsubsection[{\texorpdfstring{app\+\_\+vars}{app_vars}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf app\+\_\+vars\+\_\+t} app\+\_\+vars}\hypertarget{01bsp__eui64_8c_a8a1b0b7ccff92c7f1d8961997cd2c913}{}\label{01bsp__eui64_8c_a8a1b0b7ccff92c7f1d8961997cd2c913}
+
+
+Definition at line 35 of file 01bsp\+\_\+eui64.\+c.
+
+\index{01bsp\+\_\+eui64.\+c@{01bsp\+\_\+eui64.\+c}!lookup@{lookup}}
+\index{lookup@{lookup}!01bsp\+\_\+eui64.\+c@{01bsp\+\_\+eui64.\+c}}
+\subsubsection[{\texorpdfstring{lookup}{lookup}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} lookup\mbox{[}$\,$\mbox{]} = \{\textquotesingle{}0\textquotesingle{},\textquotesingle{}1\textquotesingle{},\textquotesingle{}2\textquotesingle{},\textquotesingle{}3\textquotesingle{},\textquotesingle{}4\textquotesingle{},\textquotesingle{}5\textquotesingle{},\textquotesingle{}6\textquotesingle{},\textquotesingle{}7\textquotesingle{},\textquotesingle{}8\textquotesingle{},\textquotesingle{}9\textquotesingle{},\textquotesingle{}a\textquotesingle{},\textquotesingle{}b\textquotesingle{},\textquotesingle{}c\textquotesingle{},\textquotesingle{}d\textquotesingle{},\textquotesingle{}e\textquotesingle{},\textquotesingle{}f\textquotesingle{}\}}\hypertarget{01bsp__eui64_8c_a980869135c21c512094317d2ccd6e054}{}\label{01bsp__eui64_8c_a980869135c21c512094317d2ccd6e054}
+
+
+This is a program which shows how to use the bsp modules to read the E\+U\+I64 and leds. 
+
+\begin{DoxyNote}{Note}
+\+: Since the bsp modules for different platforms have the same declaration, you can use this project with any platform.
+\end{DoxyNote}
+Load this program on your boards. The L\+E\+Ds should start blinking furiously.
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, August 2014. 
+\end{DoxyAuthor}
+
+
+Definition at line 23 of file 01bsp\+\_\+eui64.\+c.
+

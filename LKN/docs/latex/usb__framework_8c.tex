@@ -1,0 +1,369 @@
+\hypertarget{usb__framework_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bootloader/k20/usb/usb\+\_\+framework.c File Reference}
+\label{usb__framework_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bootloader/k20/usb/usb\+\_\+framework.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bootloader/k20/usb/usb\+\_\+framework.\+c}}
+
+
+The file contains U\+SB stack framework module implementation.  
+
+
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\+\_\+class.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\+\_\+framework.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\+\_\+descriptor.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{usb__framework_8c_a31ddcaf3081c89a3c616512ef78df430}{U\+S\+B\+\_\+\+Control\+\_\+\+Service} (\hyperlink{usb__devapi_8h_a1b6158f49686b4829eb2386f33bd721c}{P\+T\+R\+\_\+\+U\+S\+B\+\_\+\+D\+E\+V\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+T\+R\+U\+CT} event)
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+Control\+\_\+\+Service\+\_\+\+Handler}\par
+{\em The function is used to send a response to the Host based.
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller\+\_\+\+ID} & \+: Controller ID \\
+\hline
+{\em status} & \+: Status of request \\
+\hline
+{\em setup\+\_\+packet} & \+: Setup packet received \\
+\hline
+{\em data} & \+: Data to be send back \\
+\hline
+{\em size} & \+: Size to be returned\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function sends a response to the data received on the control endpoint. the request is decoded in the control service }\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+Strd\+\_\+\+Req\+\_\+\+Get\+\_\+\+Status}\par
+{\em This function is called in response to Get Status request
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller\+\_\+\+ID} & \+: Controller ID \\
+\hline
+{\em setup\+\_\+packet} & \+: Setup packet received \\
+\hline
+{\em data} & \+: Data to be send back \\
+\hline
+{\em size} & \+: Size to be returned\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status\+: U\+S\+B\+\_\+\+OK \+: When Successfull Others \+: When Error
+\end{DoxyReturn}
+This is a ch9 request and is called by the host to know the status of the device, the interface and the endpoint }\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+Strd\+\_\+\+Req\+\_\+\+Feature}\par
+{\em This function is called in response to Clear or Set Feature request
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller\+\_\+\+ID} & \+: Controller ID \\
+\hline
+{\em setup\+\_\+packet} & \+: Setup packet received \\
+\hline
+{\em data} & \+: Data to be send back \\
+\hline
+{\em size} & \+: Size to be returned\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status\+: U\+S\+B\+\_\+\+OK \+: When Successfull Others \+: When Error
+\end{DoxyReturn}
+This is a ch9 request, used to set/clear a feature on the device (device\+\_\+remote\+\_\+wakeup and test\+\_\+mode) or on the endpoint(ep halt) }\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+Strd\+\_\+\+Req\+\_\+\+Set\+\_\+\+Address}\par
+{\em This function is called in response to Set Address request
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller\+\_\+\+ID} & \+: Controller ID \\
+\hline
+{\em setup\+\_\+packet} & \+: Setup packet received \\
+\hline
+{\em data} & \+: Data to be send back \\
+\hline
+{\em size} & \+: Size to be returned\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status\+: U\+S\+B\+\_\+\+OK \+: When Successfull Others \+: When Error
+\end{DoxyReturn}
+This is a ch9 request, saves the new address in a global variable. this address is assigned to the device after this transaction completes }\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+Strd\+\_\+\+Req\+\_\+\+Assign\+\_\+\+Address}\par
+{\em This function assigns the address to the Device
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller\+\_\+\+ID} & \+: Controller ID\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status U\+S\+B\+\_\+\+OK\+: Always
+\end{DoxyReturn}
+This function assigns the new address and is called (from the control service) after the set address transaction completes }\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+Strd\+\_\+\+Req\+\_\+\+Get\+\_\+\+Config}\par
+{\em This function is called in response to Get Config request
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller\+\_\+\+ID} & \+: Controller ID \\
+\hline
+{\em setup\+\_\+packet} & \+: Setup packet received \\
+\hline
+{\em data} & \+: Data to be send back \\
+\hline
+{\em size} & \+: Size to be returned\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status\+: U\+S\+B\+\_\+\+OK \+: Always
+\end{DoxyReturn}
+This is a ch9 request and is used to know the currently used configuration }\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+Strd\+\_\+\+Req\+\_\+\+Set\+\_\+\+Config}\par
+{\em This function is called in response to Set Config request
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller\+\_\+\+ID} & \+: Controller ID \\
+\hline
+{\em setup\+\_\+packet} & \+: Setup packet received \\
+\hline
+{\em data} & \+: Data to be send back \\
+\hline
+{\em size} & \+: Size to be returned\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status\+: U\+S\+B\+\_\+\+OK \+: When Successfull Others \+: When Error
+\end{DoxyReturn}
+This is a ch9 request and is used by the host to set the new configuration }\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+Strd\+\_\+\+Req\+\_\+\+Get\+\_\+\+Interface}\par
+{\em This function is called in response to Get Interface request
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller\+\_\+\+ID} & \+: Controller ID \\
+\hline
+{\em setup\+\_\+packet} & \+: Setup packet received \\
+\hline
+{\em data} & \+: Data to be send back \\
+\hline
+{\em size} & \+: Size to be returned\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status\+: U\+S\+B\+\_\+\+OK \+: When Successfull Others \+: When Error
+\end{DoxyReturn}
+This is a ch9 request and is used to know the current interface }\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+Strd\+\_\+\+Req\+\_\+\+Set\+\_\+\+Interface}\par
+{\em This function is called in response to Set Interface request
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller\+\_\+\+ID} & \+: Controller ID \\
+\hline
+{\em setup\+\_\+packet} & \+: Setup packet received \\
+\hline
+{\em data} & \+: Data to be send back \\
+\hline
+{\em size} & \+: Size to be returned\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status\+: U\+S\+B\+\_\+\+OK \+: Always
+\end{DoxyReturn}
+This is a ch9 request and is used by the host to set the interface }\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+Strd\+\_\+\+Req\+\_\+\+Sync\+\_\+\+Frame}\par
+{\em This function is called in response to Sync Frame request
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller\+\_\+\+ID} & \+: Controller ID \\
+\hline
+{\em setup\+\_\+packet} & \+: Setup packet received \\
+\hline
+{\em data} & \+: Data to be send back \\
+\hline
+{\em size} & \+: Size to be returned\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status\+: U\+S\+B\+\_\+\+OK \+: When Successfull Others \+: When Error
+\end{DoxyReturn}
+This req is used to set and then report an ep\textquotesingle{}s synchronization frame }\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+Std\+\_\+\+Req\+\_\+\+Get\+\_\+\+Descriptor}\par
+{\em This function is called in response to Get Descriptor request
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller\+\_\+\+ID} & \+: Controller ID \\
+\hline
+{\em setup\+\_\+packet} & \+: Setup packet received \\
+\hline
+{\em data} & \+: Data to be send back \\
+\hline
+{\em size} & \+: Size to be returned\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status\+: U\+S\+B\+\_\+\+OK \+: When Successfull Others \+: When Error
+\end{DoxyReturn}
+This is a ch9 request and is used to send the descriptor requested by the host }\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+Framework\+\_\+\+Init}\par
+{\em The function initializes the Class Module
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller\+\_\+\+ID} & \+: Controller ID \\
+\hline
+{\em class\+\_\+callback} & \+: Class callback pointer \\
+\hline
+{\em other\+\_\+req\+\_\+callback} & Other Request Callback\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status U\+S\+B\+\_\+\+OK \+: When Successfull Others \+: Errors
+\end{DoxyReturn}
+This function registers the service on the control endpoint }\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} \hyperlink{usb__framework_8c_ad31f0628e034d3b088565bfbf52d6f46}{U\+S\+B\+\_\+\+Framework\+\_\+\+Init} (\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} controller\+\_\+\+ID, U\+S\+B\+\_\+\+C\+L\+A\+S\+S\+\_\+\+C\+A\+L\+L\+B\+A\+CK class\+\_\+callback, U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+F\+U\+NC other\+\_\+req\+\_\+callback)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+Framework\+\_\+\+De\+Init}\par
+{\em The function De-\/initializes the Class Module
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller\+\_\+\+ID} & \+: Controller ID\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status U\+S\+B\+\_\+\+OK \+: When Successfull Others \+: Errors
+\end{DoxyReturn}
+This function unregisters control service }\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} \hyperlink{usb__framework_8c_ace5eaab57a46098edc90376dffd15d69}{U\+S\+B\+\_\+\+Framework\+\_\+\+De\+Init} (\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} controller\+\_\+\+ID)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf U\+S\+B\+\_\+\+Framework\+\_\+\+Reset}\par
+{\em The function resets the framework
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller\+\_\+\+ID} & \+: Controller ID\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status U\+S\+B\+\_\+\+OK \+: When Successfull
+\end{DoxyReturn}
+This function is used to reset the framework module }\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} \hyperlink{usb__framework_8c_a6675c14f8f38d4f88a8ea4379784e725}{U\+S\+B\+\_\+\+Framework\+\_\+\+Reset} (\hyperlink{types_8h_ad3209046c23f739a81581c10a4be7d92}{uint\+\_\+8} controller\+\_\+\+ID)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_a7670a4e8a07d9ebb00411948b0bbf86d}{boolean} const \hyperlink{usb__framework_8c_a0437ea8ae1538d56fb3b99e3273ef17c}{g\+\_\+validate\+\_\+request} \mbox{[}\hyperlink{usb__framework_8h_a349a507b13516ac34cbfb36490b19f7c}{M\+A\+X\+\_\+\+S\+T\+R\+D\+\_\+\+R\+EQ}\mbox{]}\mbox{[}3\mbox{]}
+\item 
+U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+F\+U\+NC const \hyperlink{usb__framework_8c_a38e362f7d784cd6bbc16c681ef754ec4}{g\+\_\+standard\+\_\+request} \mbox{[}\hyperlink{usb__framework_8h_a349a507b13516ac34cbfb36490b19f7c}{M\+A\+X\+\_\+\+S\+T\+R\+D\+\_\+\+R\+EQ}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The file contains U\+SB stack framework module implementation. 
+
+\begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\index{usb\+\_\+framework.\+c@{usb\+\_\+framework.\+c}!U\+S\+B\+\_\+\+Control\+\_\+\+Service@{U\+S\+B\+\_\+\+Control\+\_\+\+Service}}
+\index{U\+S\+B\+\_\+\+Control\+\_\+\+Service@{U\+S\+B\+\_\+\+Control\+\_\+\+Service}!usb\+\_\+framework.\+c@{usb\+\_\+framework.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+Control\+\_\+\+Service(\+P\+T\+R\+\_\+\+U\+S\+B\+\_\+\+D\+E\+V\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+T\+R\+U\+C\+T event)}{USB_Control_Service(PTR_USB_DEV_EVENT_STRUCT event)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+S\+B\+\_\+\+Control\+\_\+\+Service (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+T\+R\+\_\+\+U\+S\+B\+\_\+\+D\+E\+V\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+T\+R\+U\+CT}}]{event}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__framework_8c_a31ddcaf3081c89a3c616512ef78df430}{}\label{usb__framework_8c_a31ddcaf3081c89a3c616512ef78df430}
+
+
+Definition at line 433 of file usb\+\_\+framework.\+c.
+
+\index{usb\+\_\+framework.\+c@{usb\+\_\+framework.\+c}!U\+S\+B\+\_\+\+Framework\+\_\+\+De\+Init@{U\+S\+B\+\_\+\+Framework\+\_\+\+De\+Init}}
+\index{U\+S\+B\+\_\+\+Framework\+\_\+\+De\+Init@{U\+S\+B\+\_\+\+Framework\+\_\+\+De\+Init}!usb\+\_\+framework.\+c@{usb\+\_\+framework.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+Framework\+\_\+\+De\+Init(uint\+\_\+8 controller\+\_\+\+I\+D)}{USB_Framework_DeInit(uint_8 controller_ID)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint\+\_\+8} U\+S\+B\+\_\+\+Framework\+\_\+\+De\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf uint\+\_\+8}}]{controller\+\_\+\+ID}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__framework_8c_ace5eaab57a46098edc90376dffd15d69}{}\label{usb__framework_8c_ace5eaab57a46098edc90376dffd15d69}
+
+
+Definition at line 324 of file usb\+\_\+framework.\+c.
+
+\index{usb\+\_\+framework.\+c@{usb\+\_\+framework.\+c}!U\+S\+B\+\_\+\+Framework\+\_\+\+Init@{U\+S\+B\+\_\+\+Framework\+\_\+\+Init}}
+\index{U\+S\+B\+\_\+\+Framework\+\_\+\+Init@{U\+S\+B\+\_\+\+Framework\+\_\+\+Init}!usb\+\_\+framework.\+c@{usb\+\_\+framework.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+Framework\+\_\+\+Init(uint\+\_\+8 controller\+\_\+\+I\+D, U\+S\+B\+\_\+\+C\+L\+A\+S\+S\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K class\+\_\+callback, U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+F\+U\+N\+C other\+\_\+req\+\_\+callback)}{USB_Framework_Init(uint_8 controller_ID, USB_CLASS_CALLBACK class_callback, USB_REQ_FUNC other_req_callback)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint\+\_\+8} U\+S\+B\+\_\+\+Framework\+\_\+\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf uint\+\_\+8}}]{controller\+\_\+\+ID, }
+\item[{U\+S\+B\+\_\+\+C\+L\+A\+S\+S\+\_\+\+C\+A\+L\+L\+B\+A\+CK}]{class\+\_\+callback, }
+\item[{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+F\+U\+NC}]{other\+\_\+req\+\_\+callback}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__framework_8c_ad31f0628e034d3b088565bfbf52d6f46}{}\label{usb__framework_8c_ad31f0628e034d3b088565bfbf52d6f46}
+
+
+Definition at line 283 of file usb\+\_\+framework.\+c.
+
+\index{usb\+\_\+framework.\+c@{usb\+\_\+framework.\+c}!U\+S\+B\+\_\+\+Framework\+\_\+\+Reset@{U\+S\+B\+\_\+\+Framework\+\_\+\+Reset}}
+\index{U\+S\+B\+\_\+\+Framework\+\_\+\+Reset@{U\+S\+B\+\_\+\+Framework\+\_\+\+Reset}!usb\+\_\+framework.\+c@{usb\+\_\+framework.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+Framework\+\_\+\+Reset(uint\+\_\+8 controller\+\_\+\+I\+D)}{USB_Framework_Reset(uint_8 controller_ID)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint\+\_\+8} U\+S\+B\+\_\+\+Framework\+\_\+\+Reset (
+\begin{DoxyParamCaption}
+\item[{{\bf uint\+\_\+8}}]{controller\+\_\+\+ID}
+\end{DoxyParamCaption}
+)}\hypertarget{usb__framework_8c_a6675c14f8f38d4f88a8ea4379784e725}{}\label{usb__framework_8c_a6675c14f8f38d4f88a8ea4379784e725}
+
+
+Definition at line 380 of file usb\+\_\+framework.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{usb\+\_\+framework.\+c@{usb\+\_\+framework.\+c}!g\+\_\+standard\+\_\+request@{g\+\_\+standard\+\_\+request}}
+\index{g\+\_\+standard\+\_\+request@{g\+\_\+standard\+\_\+request}!usb\+\_\+framework.\+c@{usb\+\_\+framework.\+c}}
+\subsubsection[{\texorpdfstring{g\+\_\+standard\+\_\+request}{g_standard_request}}]{\setlength{\rightskip}{0pt plus 5cm}U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+F\+U\+NC const g\+\_\+standard\+\_\+request\mbox{[}{\bf M\+A\+X\+\_\+\+S\+T\+R\+D\+\_\+\+R\+EQ}\mbox{]}}\hypertarget{usb__framework_8c_a38e362f7d784cd6bbc16c681ef754ec4}{}\label{usb__framework_8c_a38e362f7d784cd6bbc16c681ef754ec4}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+\{
+    USB\_Strd\_Req\_Get\_Status,
+    USB\_Strd\_Req\_Feature,
+    \hyperlink{arm__cm4_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL},
+    USB\_Strd\_Req\_Feature,
+    \hyperlink{arm__cm4_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL},
+    USB\_Strd\_Req\_Set\_Address,
+    USB\_Strd\_Req\_Get\_Descriptor,
+    \hyperlink{arm__cm4_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL},
+    USB\_Strd\_Req\_Get\_Config,
+    USB\_Strd\_Req\_Set\_Config,
+    USB\_Strd\_Req\_Get\_Interface,
+    USB\_Strd\_Req\_Set\_Interface,
+    USB\_Strd\_Req\_Sync\_Frame
+\}
+\end{DoxyCode}
+
+
+Definition at line 246 of file usb\+\_\+framework.\+c.
+
+\index{usb\+\_\+framework.\+c@{usb\+\_\+framework.\+c}!g\+\_\+validate\+\_\+request@{g\+\_\+validate\+\_\+request}}
+\index{g\+\_\+validate\+\_\+request@{g\+\_\+validate\+\_\+request}!usb\+\_\+framework.\+c@{usb\+\_\+framework.\+c}}
+\subsubsection[{\texorpdfstring{g\+\_\+validate\+\_\+request}{g_validate_request}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} const g\+\_\+validate\+\_\+request\mbox{[}{\bf M\+A\+X\+\_\+\+S\+T\+R\+D\+\_\+\+R\+EQ}\mbox{]}\mbox{[}3\mbox{]}}\hypertarget{usb__framework_8c_a0437ea8ae1538d56fb3b99e3273ef17c}{}\label{usb__framework_8c_a0437ea8ae1538d56fb3b99e3273ef17c}
+
+
+Definition at line 74 of file usb\+\_\+framework.\+c.
+

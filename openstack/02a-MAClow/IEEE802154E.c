@@ -73,7 +73,7 @@ bool     ieee154e_processIEs(OpenQueueEntry_t* pkt, uint16_t* lenIE);
 // ASN handling
 void     incrementAsnOffset(void);
 void     ieee154e_syncSlotOffset(void);
-void 	 ieee154e_syncAsnOffset();
+void 	 ieee154e_syncAsnOffset(void);
 void     asnStoreFromEB(uint8_t* asn);
 void     joinPriorityStoreFromEB(uint8_t jp);
 
@@ -1997,7 +1997,7 @@ port_INLINE void ieee154e_syncSlotOffset() {
 }
 ///@internal [LKN-slotOffset-synch]
 
-port_INLINE void ieee154e_syncAsnOffset() {
+port_INLINE void ieee154e_syncAsnOffset(void) {
    frameLength_t availableChannels;
    uint32_t asnOffset;
 
@@ -2013,7 +2013,7 @@ port_INLINE void ieee154e_syncAsnOffset() {
    asnOffset = asnOffset + ieee154e_vars.asn.bytes0and1;
    asnOffset = asnOffset % availableChannels;
 
-   ieee154e_vars.asnOffset       =(uint8_t) asnOffset;
+   ieee154e_vars.asnOffset = (uint8_t) asnOffset;
 }
 
 
@@ -2035,6 +2035,14 @@ void ieee154e_setSingleChannel(uint8_t channel){
 
 void ieee154e_setIsSecurityEnabled(bool isEnabled){
     ieee154e_vars.isSecurityEnabled = isEnabled;
+}
+
+void ieee154e_setSlotDuration(uint16_t duration){
+    ieee154e_vars.slotDuration = duration;
+}
+
+uint16_t ieee154e_getSlotDuration(){
+    return ieee154e_vars.slotDuration;
 }
 
 // timeslot template handling

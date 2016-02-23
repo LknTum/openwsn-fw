@@ -1,0 +1,111 @@
+\hypertarget{cc2420__crypto_8h}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/chips/cc2420/cc2420\+\_\+crypto.h File Reference}
+\label{cc2420__crypto_8h}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/chips/cc2420/cc2420\+\_\+crypto.\+h@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/chips/cc2420/cc2420\+\_\+crypto.\+h}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{cc2420__crypto_8h_af8a4dc0c33f517f5e8a74d7b215c01fb}{C\+C2420\+\_\+\+S\+E\+C\+C\+T\+R\+L0\+\_\+\+S\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+D\+I\+S\+A\+B\+LE}~0
+\begin{DoxyCompactList}\small\item\em C\+C2420-\/specific crypto library with hardware acceleration. \end{DoxyCompactList}\item 
+\#define \hyperlink{cc2420__crypto_8h_ac6d5bd4b9e17f8f0bd4b17a9c0f899fd}{C\+C2420\+\_\+\+S\+E\+C\+C\+T\+R\+L0\+\_\+\+S\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+C\+B\+C\+\_\+\+M\+AC}~1
+\item 
+\#define \hyperlink{cc2420__crypto_8h_ac98426b82b7d3063bc20b3dc45d94b49}{C\+C2420\+\_\+\+S\+E\+C\+C\+T\+R\+L0\+\_\+\+S\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+C\+TR}~2
+\item 
+\#define \hyperlink{cc2420__crypto_8h_a265cec38940db4c40da0d41aab7416ea}{C\+C2420\+\_\+\+S\+E\+C\+C\+T\+R\+L0\+\_\+\+S\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+C\+CM}~3
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{cc2420__crypto_8h_a5376e4bb2b5bdf20892e093799c593f1}{cc2420\+\_\+crypto\+\_\+aes\+\_\+ecb\+\_\+enc} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$buffer, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$key)
+\item 
+\hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{cc2420__crypto_8h_aae86b85e60cf6b67f1a36ec7b44d99c5}{cc2420\+\_\+crypto\+\_\+ccms\+\_\+enc} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$a, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} len\+\_\+a, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$m, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$len\+\_\+m, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$nonce, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} l, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} key\mbox{[}16\mbox{]}, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} len\+\_\+mac)
+\item 
+\hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{cc2420__crypto_8h_a57d0af3287f8d6819d9659fb423ccf6f}{cc2420\+\_\+crypto\+\_\+ccms\+\_\+dec} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$a, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} len\+\_\+a, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$m, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$len\+\_\+m, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$nonce, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} l, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} key\mbox{[}16\mbox{]}, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} len\+\_\+mac)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{cc2420\+\_\+crypto.\+h@{cc2420\+\_\+crypto.\+h}!C\+C2420\+\_\+\+S\+E\+C\+C\+T\+R\+L0\+\_\+\+S\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+C\+B\+C\+\_\+\+M\+AC@{C\+C2420\+\_\+\+S\+E\+C\+C\+T\+R\+L0\+\_\+\+S\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+C\+B\+C\+\_\+\+M\+AC}}
+\index{C\+C2420\+\_\+\+S\+E\+C\+C\+T\+R\+L0\+\_\+\+S\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+C\+B\+C\+\_\+\+M\+AC@{C\+C2420\+\_\+\+S\+E\+C\+C\+T\+R\+L0\+\_\+\+S\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+C\+B\+C\+\_\+\+M\+AC}!cc2420\+\_\+crypto.\+h@{cc2420\+\_\+crypto.\+h}}
+\subsubsection[{\texorpdfstring{C\+C2420\+\_\+\+S\+E\+C\+C\+T\+R\+L0\+\_\+\+S\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+C\+B\+C\+\_\+\+M\+AC}{CC2420_SECCTRL0_SEC_MODE_CBC_MAC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C2420\+\_\+\+S\+E\+C\+C\+T\+R\+L0\+\_\+\+S\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+C\+B\+C\+\_\+\+M\+AC~1}\hypertarget{cc2420__crypto_8h_ac6d5bd4b9e17f8f0bd4b17a9c0f899fd}{}\label{cc2420__crypto_8h_ac6d5bd4b9e17f8f0bd4b17a9c0f899fd}
+
+
+Definition at line 12 of file cc2420\+\_\+crypto.\+h.
+
+\index{cc2420\+\_\+crypto.\+h@{cc2420\+\_\+crypto.\+h}!C\+C2420\+\_\+\+S\+E\+C\+C\+T\+R\+L0\+\_\+\+S\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+C\+CM@{C\+C2420\+\_\+\+S\+E\+C\+C\+T\+R\+L0\+\_\+\+S\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+C\+CM}}
+\index{C\+C2420\+\_\+\+S\+E\+C\+C\+T\+R\+L0\+\_\+\+S\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+C\+CM@{C\+C2420\+\_\+\+S\+E\+C\+C\+T\+R\+L0\+\_\+\+S\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+C\+CM}!cc2420\+\_\+crypto.\+h@{cc2420\+\_\+crypto.\+h}}
+\subsubsection[{\texorpdfstring{C\+C2420\+\_\+\+S\+E\+C\+C\+T\+R\+L0\+\_\+\+S\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+C\+CM}{CC2420_SECCTRL0_SEC_MODE_CCM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C2420\+\_\+\+S\+E\+C\+C\+T\+R\+L0\+\_\+\+S\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+C\+CM~3}\hypertarget{cc2420__crypto_8h_a265cec38940db4c40da0d41aab7416ea}{}\label{cc2420__crypto_8h_a265cec38940db4c40da0d41aab7416ea}
+
+
+Definition at line 14 of file cc2420\+\_\+crypto.\+h.
+
+\index{cc2420\+\_\+crypto.\+h@{cc2420\+\_\+crypto.\+h}!C\+C2420\+\_\+\+S\+E\+C\+C\+T\+R\+L0\+\_\+\+S\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+C\+TR@{C\+C2420\+\_\+\+S\+E\+C\+C\+T\+R\+L0\+\_\+\+S\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+C\+TR}}
+\index{C\+C2420\+\_\+\+S\+E\+C\+C\+T\+R\+L0\+\_\+\+S\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+C\+TR@{C\+C2420\+\_\+\+S\+E\+C\+C\+T\+R\+L0\+\_\+\+S\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+C\+TR}!cc2420\+\_\+crypto.\+h@{cc2420\+\_\+crypto.\+h}}
+\subsubsection[{\texorpdfstring{C\+C2420\+\_\+\+S\+E\+C\+C\+T\+R\+L0\+\_\+\+S\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+C\+TR}{CC2420_SECCTRL0_SEC_MODE_CTR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C2420\+\_\+\+S\+E\+C\+C\+T\+R\+L0\+\_\+\+S\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+C\+TR~2}\hypertarget{cc2420__crypto_8h_ac98426b82b7d3063bc20b3dc45d94b49}{}\label{cc2420__crypto_8h_ac98426b82b7d3063bc20b3dc45d94b49}
+
+
+Definition at line 13 of file cc2420\+\_\+crypto.\+h.
+
+\index{cc2420\+\_\+crypto.\+h@{cc2420\+\_\+crypto.\+h}!C\+C2420\+\_\+\+S\+E\+C\+C\+T\+R\+L0\+\_\+\+S\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+D\+I\+S\+A\+B\+LE@{C\+C2420\+\_\+\+S\+E\+C\+C\+T\+R\+L0\+\_\+\+S\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+D\+I\+S\+A\+B\+LE}}
+\index{C\+C2420\+\_\+\+S\+E\+C\+C\+T\+R\+L0\+\_\+\+S\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+D\+I\+S\+A\+B\+LE@{C\+C2420\+\_\+\+S\+E\+C\+C\+T\+R\+L0\+\_\+\+S\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+D\+I\+S\+A\+B\+LE}!cc2420\+\_\+crypto.\+h@{cc2420\+\_\+crypto.\+h}}
+\subsubsection[{\texorpdfstring{C\+C2420\+\_\+\+S\+E\+C\+C\+T\+R\+L0\+\_\+\+S\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+D\+I\+S\+A\+B\+LE}{CC2420_SECCTRL0_SEC_MODE_DISABLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C2420\+\_\+\+S\+E\+C\+C\+T\+R\+L0\+\_\+\+S\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+D\+I\+S\+A\+B\+LE~0}\hypertarget{cc2420__crypto_8h_af8a4dc0c33f517f5e8a74d7b215c01fb}{}\label{cc2420__crypto_8h_af8a4dc0c33f517f5e8a74d7b215c01fb}
+
+
+C\+C2420-\/specific crypto library with hardware acceleration. 
+
+\begin{DoxyAuthor}{Author}
+Malisa Vucinic \href{mailto:malishav@gmail.com}{\tt malishav@gmail.\+com}, April 2015. 
+\end{DoxyAuthor}
+
+
+Definition at line 11 of file cc2420\+\_\+crypto.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{cc2420\+\_\+crypto.\+h@{cc2420\+\_\+crypto.\+h}!cc2420\+\_\+crypto\+\_\+aes\+\_\+ecb\+\_\+enc@{cc2420\+\_\+crypto\+\_\+aes\+\_\+ecb\+\_\+enc}}
+\index{cc2420\+\_\+crypto\+\_\+aes\+\_\+ecb\+\_\+enc@{cc2420\+\_\+crypto\+\_\+aes\+\_\+ecb\+\_\+enc}!cc2420\+\_\+crypto.\+h@{cc2420\+\_\+crypto.\+h}}
+\subsubsection[{\texorpdfstring{cc2420\+\_\+crypto\+\_\+aes\+\_\+ecb\+\_\+enc(uint8\+\_\+t $\ast$buffer, uint8\+\_\+t $\ast$key)}{cc2420_crypto_aes_ecb_enc(uint8_t *buffer, uint8_t *key)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf owerror\+\_\+t} cc2420\+\_\+crypto\+\_\+aes\+\_\+ecb\+\_\+enc (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t} $\ast$}]{buffer, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{key}
+\end{DoxyParamCaption}
+)}\hypertarget{cc2420__crypto_8h_a5376e4bb2b5bdf20892e093799c593f1}{}\label{cc2420__crypto_8h_a5376e4bb2b5bdf20892e093799c593f1}
+
+
+Definition at line 51 of file cc2420\+\_\+crypto.\+c.
+
+\index{cc2420\+\_\+crypto.\+h@{cc2420\+\_\+crypto.\+h}!cc2420\+\_\+crypto\+\_\+ccms\+\_\+dec@{cc2420\+\_\+crypto\+\_\+ccms\+\_\+dec}}
+\index{cc2420\+\_\+crypto\+\_\+ccms\+\_\+dec@{cc2420\+\_\+crypto\+\_\+ccms\+\_\+dec}!cc2420\+\_\+crypto.\+h@{cc2420\+\_\+crypto.\+h}}
+\subsubsection[{\texorpdfstring{cc2420\+\_\+crypto\+\_\+ccms\+\_\+dec(uint8\+\_\+t $\ast$a, uint8\+\_\+t len\+\_\+a, uint8\+\_\+t $\ast$m, uint8\+\_\+t $\ast$len\+\_\+m, uint8\+\_\+t $\ast$nonce, uint8\+\_\+t l, uint8\+\_\+t key[16], uint8\+\_\+t len\+\_\+mac)}{cc2420_crypto_ccms_dec(uint8_t *a, uint8_t len_a, uint8_t *m, uint8_t *len_m, uint8_t *nonce, uint8_t l, uint8_t key[16], uint8_t len_mac)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf owerror\+\_\+t} cc2420\+\_\+crypto\+\_\+ccms\+\_\+dec (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t} $\ast$}]{a, }
+\item[{{\bf uint8\+\_\+t}}]{len\+\_\+a, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{m, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{len\+\_\+m, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{nonce, }
+\item[{{\bf uint8\+\_\+t}}]{l, }
+\item[{{\bf uint8\+\_\+t}}]{key\mbox{[}16\mbox{]}, }
+\item[{{\bf uint8\+\_\+t}}]{len\+\_\+mac}
+\end{DoxyParamCaption}
+)}\hypertarget{cc2420__crypto_8h_a57d0af3287f8d6819d9659fb423ccf6f}{}\label{cc2420__crypto_8h_a57d0af3287f8d6819d9659fb423ccf6f}
+
+
+Definition at line 77 of file cc2420\+\_\+crypto.\+c.
+
+\index{cc2420\+\_\+crypto.\+h@{cc2420\+\_\+crypto.\+h}!cc2420\+\_\+crypto\+\_\+ccms\+\_\+enc@{cc2420\+\_\+crypto\+\_\+ccms\+\_\+enc}}
+\index{cc2420\+\_\+crypto\+\_\+ccms\+\_\+enc@{cc2420\+\_\+crypto\+\_\+ccms\+\_\+enc}!cc2420\+\_\+crypto.\+h@{cc2420\+\_\+crypto.\+h}}
+\subsubsection[{\texorpdfstring{cc2420\+\_\+crypto\+\_\+ccms\+\_\+enc(uint8\+\_\+t $\ast$a, uint8\+\_\+t len\+\_\+a, uint8\+\_\+t $\ast$m, uint8\+\_\+t $\ast$len\+\_\+m, uint8\+\_\+t $\ast$nonce, uint8\+\_\+t l, uint8\+\_\+t key[16], uint8\+\_\+t len\+\_\+mac)}{cc2420_crypto_ccms_enc(uint8_t *a, uint8_t len_a, uint8_t *m, uint8_t *len_m, uint8_t *nonce, uint8_t l, uint8_t key[16], uint8_t len_mac)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf owerror\+\_\+t} cc2420\+\_\+crypto\+\_\+ccms\+\_\+enc (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t} $\ast$}]{a, }
+\item[{{\bf uint8\+\_\+t}}]{len\+\_\+a, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{m, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{len\+\_\+m, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{nonce, }
+\item[{{\bf uint8\+\_\+t}}]{l, }
+\item[{{\bf uint8\+\_\+t}}]{key\mbox{[}16\mbox{]}, }
+\item[{{\bf uint8\+\_\+t}}]{len\+\_\+mac}
+\end{DoxyParamCaption}
+)}\hypertarget{cc2420__crypto_8h_aae86b85e60cf6b67f1a36ec7b44d99c5}{}\label{cc2420__crypto_8h_aae86b85e60cf6b67f1a36ec7b44d99c5}
+
+
+Definition at line 152 of file cc2420\+\_\+crypto.\+c.
+

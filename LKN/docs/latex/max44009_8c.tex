@@ -1,0 +1,371 @@
+\hypertarget{max44009_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/chips/max44009/max44009.c File Reference}
+\label{max44009_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/chips/max44009/max44009.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/chips/max44009/max44009.\+c}}
+{\ttfamily \#include \char`\"{}i2c.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}max44009.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{max44009_8c_af6dca61f08ab5da1e736353b8441cf0e}{M\+A\+X44009\+\_\+\+A\+D\+D\+R\+E\+SS}~( 0x4\+A )
+\item 
+\#define \hyperlink{max44009_8c_a598fcae3f90619da2738ce40ca9ffe64}{M\+A\+X44009\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}~( 0x00 )
+\item 
+\#define \hyperlink{max44009_8c_ae92495d6826a43fd8aac4205f9604cc2}{M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+D\+DR}~( 0x00 )
+\item 
+\#define \hyperlink{max44009_8c_a4a588242eefd9b555e82466bc8f4c595}{M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+A\+D\+DR}~( 0x01 )
+\item 
+\#define \hyperlink{max44009_8c_ab2259772312d767f2884f15fb756010f}{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+A\+D\+DR}~( 0x02 )
+\item 
+\#define \hyperlink{max44009_8c_ab46036622c6707604a30a3e3dbd5b64d}{M\+A\+X44009\+\_\+\+L\+U\+X\+\_\+\+H\+I\+G\+H\+\_\+\+A\+D\+DR}~( 0x03 )
+\item 
+\#define \hyperlink{max44009_8c_a0ab3732e8aaa11ff8af9547c6102037f}{M\+A\+X44009\+\_\+\+L\+U\+X\+\_\+\+L\+O\+W\+\_\+\+A\+D\+DR}~( 0x04 )
+\item 
+\#define \hyperlink{max44009_8c_aa662e156c817ee0364e650fe64f4dd7c}{M\+A\+X44009\+\_\+\+T\+H\+R\+\_\+\+H\+I\+G\+H\+\_\+\+A\+D\+DR}~( 0x05 )
+\item 
+\#define \hyperlink{max44009_8c_afcb602a8e53ae25125633f2278871f1c}{M\+A\+X44009\+\_\+\+T\+H\+R\+\_\+\+L\+O\+W\+\_\+\+A\+D\+DR}~( 0x06 )
+\item 
+\#define \hyperlink{max44009_8c_a8c48d7474b97573d22094c3f86d27b1d}{M\+A\+X44009\+\_\+\+T\+H\+R\+\_\+\+T\+I\+M\+E\+R\+\_\+\+A\+D\+DR}~( 0x07 )
+\item 
+\#define \hyperlink{max44009_8c_abcf5060ad60188ccd5218b46d66f504c}{M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+O\+FF}~( 0x00 )
+\item 
+\#define \hyperlink{max44009_8c_afbfedbb0e4d53d3c28d45180550982b6}{M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+ON}~( 0x01 )
+\item 
+\#define \hyperlink{max44009_8c_a4e004989ec54ab7a541ef4d186d955b2}{M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+D\+I\+S\+A\+B\+L\+ED}~( 0x00 )
+\item 
+\#define \hyperlink{max44009_8c_a63dad45ff5a91aaa55711ede0890b771}{M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+E\+N\+A\+B\+L\+ED}~( 0x01 )
+\item 
+\#define \hyperlink{max44009_8c_ae5d7e6e75a18cd61a4dbc6e636c64933}{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+E\+F\+A\+U\+LT}~( 0 $<$$<$ 7 )
+\item 
+\#define \hyperlink{max44009_8c_a068814b8163ddcc455dea25355ef82c1}{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+O\+N\+T\+I\+N\+U\+O\+US}~( 1 $<$$<$ 7 )
+\item 
+\#define \hyperlink{max44009_8c_a68fd91047d0b4e8a33446ea7347a0da6}{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+A\+U\+TO}~( 0 $<$$<$ 6 )
+\item 
+\#define \hyperlink{max44009_8c_ad60fdef0d4ef115db11942a7c7870eb0}{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+A\+N\+U\+AL}~( 1 $<$$<$ 6 )
+\item 
+\#define \hyperlink{max44009_8c_aa576b6ae42fd6acbbc7d0d656a65fdda}{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+D\+R\+\_\+\+N\+O\+R\+M\+AL}~( 0 $<$$<$ 3 )
+\item 
+\#define \hyperlink{max44009_8c_a7fe2bcfa40b57b61e255b8fe61ee556c}{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+D\+R\+\_\+\+D\+I\+V\+I\+D\+ED}~( 1 $<$$<$ 3 )
+\item 
+\#define \hyperlink{max44009_8c_a740d31deb3480ece5f787c42b66ab909}{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+800ms}~( 0 $<$$<$ 0 )
+\item 
+\#define \hyperlink{max44009_8c_ae62b5ea1854d7de424839ad4a9c6873b}{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+400ms}~( 1 $<$$<$ 0 )
+\item 
+\#define \hyperlink{max44009_8c_af9158c270d6793acc288898be4b3f0cf}{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+200ms}~( 2 $<$$<$ 0 )
+\item 
+\#define \hyperlink{max44009_8c_a01824b73cad09549c54f50c14bd4d64b}{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+100ms}~( 3 $<$$<$ 0 )
+\item 
+\#define \hyperlink{max44009_8c_a144def72991ef19fde58e9a31d7a261f}{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+50ms}~( 4 $<$$<$ 0 )
+\item 
+\#define \hyperlink{max44009_8c_a72111060b2bb47b9c56a9cbb2ee0d280}{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+25ms}~( 5 $<$$<$ 0 )
+\item 
+\#define \hyperlink{max44009_8c_ac0e49016c0f5a76ecca8d32443aba127}{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+12ms}~( 6 $<$$<$ 0 )
+\item 
+\#define \hyperlink{max44009_8c_aa60336843847e81350dd5d7e57ec56ac}{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+6ms}~( 7 $<$$<$ 0 )
+\item 
+\#define \hyperlink{max44009_8c_adaec9063e45ee2c9721dd25d1bd33188}{M\+A\+X44009\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}
+\item 
+\#define \hyperlink{max44009_8c_ac8e1d23b6bbe8bb59a9fc96df8e0f178}{M\+A\+X44009\+\_\+\+U\+S\+E\+R\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{max44009_8c_a18b236ab59622c09777caa592f8f580e}{max44009\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{max44009_8c_a93144a6e048d9e589b8c5cbbf27e5891}{max44009\+\_\+reset} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{max44009_8c_a34354f7e180b3425af27c2b642bbf926}{max44009\+\_\+is\+\_\+present} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{max44009_8c_a718268b3699c2a534f0963162ee79c1a}{max44009\+\_\+read\+\_\+light} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+float \hyperlink{max44009_8c_a8428ccd96069381a6b8ee5af327ae62b}{max44009\+\_\+convert\+\_\+light} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} lux)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Device drivers for M\+A\+X44009 light sensor in Open\+Mote-\/\+C\+C2538. \begin{DoxyAuthor}{Author}
+Pere Tuset, \hyperlink{struct_open_mote}{Open\+Mote} \href{mailto:peretuset@openmote.com}{\tt peretuset@openmote.\+com} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\index{max44009.\+c@{max44009.\+c}!M\+A\+X44009\+\_\+\+A\+D\+D\+R\+E\+SS@{M\+A\+X44009\+\_\+\+A\+D\+D\+R\+E\+SS}}
+\index{M\+A\+X44009\+\_\+\+A\+D\+D\+R\+E\+SS@{M\+A\+X44009\+\_\+\+A\+D\+D\+R\+E\+SS}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X44009\+\_\+\+A\+D\+D\+R\+E\+SS}{MAX44009_ADDRESS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X44009\+\_\+\+A\+D\+D\+R\+E\+SS~( 0x4\+A )}\hypertarget{max44009_8c_af6dca61f08ab5da1e736353b8441cf0e}{}\label{max44009_8c_af6dca61f08ab5da1e736353b8441cf0e}
+
+
+Definition at line 14 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+A\+D\+DR@{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+A\+D\+DR}}
+\index{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+A\+D\+DR@{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+A\+D\+DR}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+A\+D\+DR}{MAX44009_CONFIG_ADDR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+A\+D\+DR~( 0x02 )}\hypertarget{max44009_8c_ab2259772312d767f2884f15fb756010f}{}\label{max44009_8c_ab2259772312d767f2884f15fb756010f}
+
+
+Definition at line 20 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+A\+U\+TO@{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+A\+U\+TO}}
+\index{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+A\+U\+TO@{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+A\+U\+TO}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+A\+U\+TO}{MAX44009_CONFIG_AUTO}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+A\+U\+TO~( 0 $<$$<$ 6 )}\hypertarget{max44009_8c_a68fd91047d0b4e8a33446ea7347a0da6}{}\label{max44009_8c_a68fd91047d0b4e8a33446ea7347a0da6}
+
+
+Definition at line 36 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+D\+R\+\_\+\+D\+I\+V\+I\+D\+ED@{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+D\+R\+\_\+\+D\+I\+V\+I\+D\+ED}}
+\index{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+D\+R\+\_\+\+D\+I\+V\+I\+D\+ED@{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+D\+R\+\_\+\+D\+I\+V\+I\+D\+ED}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+D\+R\+\_\+\+D\+I\+V\+I\+D\+ED}{MAX44009_CONFIG_CDR_DIVIDED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+D\+R\+\_\+\+D\+I\+V\+I\+D\+ED~( 1 $<$$<$ 3 )}\hypertarget{max44009_8c_a7fe2bcfa40b57b61e255b8fe61ee556c}{}\label{max44009_8c_a7fe2bcfa40b57b61e255b8fe61ee556c}
+
+
+Definition at line 39 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+D\+R\+\_\+\+N\+O\+R\+M\+AL@{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+D\+R\+\_\+\+N\+O\+R\+M\+AL}}
+\index{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+D\+R\+\_\+\+N\+O\+R\+M\+AL@{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+D\+R\+\_\+\+N\+O\+R\+M\+AL}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+D\+R\+\_\+\+N\+O\+R\+M\+AL}{MAX44009_CONFIG_CDR_NORMAL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+D\+R\+\_\+\+N\+O\+R\+M\+AL~( 0 $<$$<$ 3 )}\hypertarget{max44009_8c_aa576b6ae42fd6acbbc7d0d656a65fdda}{}\label{max44009_8c_aa576b6ae42fd6acbbc7d0d656a65fdda}
+
+
+Definition at line 38 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+O\+N\+T\+I\+N\+U\+O\+US@{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+O\+N\+T\+I\+N\+U\+O\+US}}
+\index{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+O\+N\+T\+I\+N\+U\+O\+US@{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+O\+N\+T\+I\+N\+U\+O\+US}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+O\+N\+T\+I\+N\+U\+O\+US}{MAX44009_CONFIG_CONTINUOUS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+C\+O\+N\+T\+I\+N\+U\+O\+US~( 1 $<$$<$ 7 )}\hypertarget{max44009_8c_a068814b8163ddcc455dea25355ef82c1}{}\label{max44009_8c_a068814b8163ddcc455dea25355ef82c1}
+
+
+Definition at line 35 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+E\+F\+A\+U\+LT@{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+E\+F\+A\+U\+LT}}
+\index{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+E\+F\+A\+U\+LT@{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+E\+F\+A\+U\+LT}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+E\+F\+A\+U\+LT}{MAX44009_CONFIG_DEFAULT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+E\+F\+A\+U\+LT~( 0 $<$$<$ 7 )}\hypertarget{max44009_8c_ae5d7e6e75a18cd61a4dbc6e636c64933}{}\label{max44009_8c_ae5d7e6e75a18cd61a4dbc6e636c64933}
+
+
+Definition at line 34 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+100ms@{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+100ms}}
+\index{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+100ms@{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+100ms}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+100ms}{MAX44009_CONFIG_INTEGRATION_100ms}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+100ms~( 3 $<$$<$ 0 )}\hypertarget{max44009_8c_a01824b73cad09549c54f50c14bd4d64b}{}\label{max44009_8c_a01824b73cad09549c54f50c14bd4d64b}
+
+
+Definition at line 43 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+12ms@{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+12ms}}
+\index{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+12ms@{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+12ms}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+12ms}{MAX44009_CONFIG_INTEGRATION_12ms}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+12ms~( 6 $<$$<$ 0 )}\hypertarget{max44009_8c_ac0e49016c0f5a76ecca8d32443aba127}{}\label{max44009_8c_ac0e49016c0f5a76ecca8d32443aba127}
+
+
+Definition at line 46 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+200ms@{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+200ms}}
+\index{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+200ms@{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+200ms}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+200ms}{MAX44009_CONFIG_INTEGRATION_200ms}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+200ms~( 2 $<$$<$ 0 )}\hypertarget{max44009_8c_af9158c270d6793acc288898be4b3f0cf}{}\label{max44009_8c_af9158c270d6793acc288898be4b3f0cf}
+
+
+Definition at line 42 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+25ms@{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+25ms}}
+\index{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+25ms@{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+25ms}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+25ms}{MAX44009_CONFIG_INTEGRATION_25ms}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+25ms~( 5 $<$$<$ 0 )}\hypertarget{max44009_8c_a72111060b2bb47b9c56a9cbb2ee0d280}{}\label{max44009_8c_a72111060b2bb47b9c56a9cbb2ee0d280}
+
+
+Definition at line 45 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+400ms@{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+400ms}}
+\index{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+400ms@{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+400ms}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+400ms}{MAX44009_CONFIG_INTEGRATION_400ms}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+400ms~( 1 $<$$<$ 0 )}\hypertarget{max44009_8c_ae62b5ea1854d7de424839ad4a9c6873b}{}\label{max44009_8c_ae62b5ea1854d7de424839ad4a9c6873b}
+
+
+Definition at line 41 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+50ms@{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+50ms}}
+\index{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+50ms@{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+50ms}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+50ms}{MAX44009_CONFIG_INTEGRATION_50ms}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+50ms~( 4 $<$$<$ 0 )}\hypertarget{max44009_8c_a144def72991ef19fde58e9a31d7a261f}{}\label{max44009_8c_a144def72991ef19fde58e9a31d7a261f}
+
+
+Definition at line 44 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+6ms@{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+6ms}}
+\index{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+6ms@{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+6ms}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+6ms}{MAX44009_CONFIG_INTEGRATION_6ms}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+6ms~( 7 $<$$<$ 0 )}\hypertarget{max44009_8c_aa60336843847e81350dd5d7e57ec56ac}{}\label{max44009_8c_aa60336843847e81350dd5d7e57ec56ac}
+
+
+Definition at line 47 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+800ms@{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+800ms}}
+\index{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+800ms@{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+800ms}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+800ms}{MAX44009_CONFIG_INTEGRATION_800ms}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+800ms~( 0 $<$$<$ 0 )}\hypertarget{max44009_8c_a740d31deb3480ece5f787c42b66ab909}{}\label{max44009_8c_a740d31deb3480ece5f787c42b66ab909}
+
+
+Definition at line 40 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+A\+N\+U\+AL@{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+A\+N\+U\+AL}}
+\index{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+A\+N\+U\+AL@{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+A\+N\+U\+AL}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+A\+N\+U\+AL}{MAX44009_CONFIG_MANUAL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X44009\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+A\+N\+U\+AL~( 1 $<$$<$ 6 )}\hypertarget{max44009_8c_ad60fdef0d4ef115db11942a7c7870eb0}{}\label{max44009_8c_ad60fdef0d4ef115db11942a7c7870eb0}
+
+
+Definition at line 37 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!M\+A\+X44009\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON@{M\+A\+X44009\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}}
+\index{M\+A\+X44009\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON@{M\+A\+X44009\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X44009\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}{MAX44009_DEFAULT_CONFIGURATION}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X44009\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}\hypertarget{max44009_8c_adaec9063e45ee2c9721dd25d1bd33188}{}\label{max44009_8c_adaec9063e45ee2c9721dd25d1bd33188}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+( \hyperlink{max44009_8c_ae5d7e6e75a18cd61a4dbc6e636c64933}{MAX44009\_CONFIG\_DEFAULT} | \(\backslash\)
+                                              MAX44009\_CONFIG\_AUTO | \(\backslash\)
+                                              MAX44009\_CONFIG\_CDR\_NORMAL | \(\backslash\)
+                                              MAX44009\_CONFIG\_INTEGRATION\_100ms )
+\end{DoxyCode}
+
+
+Definition at line 50 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+D\+I\+S\+A\+B\+L\+ED@{M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+D\+I\+S\+A\+B\+L\+ED}}
+\index{M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+D\+I\+S\+A\+B\+L\+ED@{M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+D\+I\+S\+A\+B\+L\+ED}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+D\+I\+S\+A\+B\+L\+ED}{MAX44009_INT_DISABLED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+D\+I\+S\+A\+B\+L\+ED~( 0x00 )}\hypertarget{max44009_8c_a4e004989ec54ab7a541ef4d186d955b2}{}\label{max44009_8c_a4e004989ec54ab7a541ef4d186d955b2}
+
+
+Definition at line 30 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+A\+D\+DR@{M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+A\+D\+DR}}
+\index{M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+A\+D\+DR@{M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+A\+D\+DR}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+A\+D\+DR}{MAX44009_INT_ENABLE_ADDR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+A\+D\+DR~( 0x01 )}\hypertarget{max44009_8c_a4a588242eefd9b555e82466bc8f4c595}{}\label{max44009_8c_a4a588242eefd9b555e82466bc8f4c595}
+
+
+Definition at line 19 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+E\+N\+A\+B\+L\+ED@{M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\index{M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+E\+N\+A\+B\+L\+ED@{M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+E\+N\+A\+B\+L\+ED}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+E\+N\+A\+B\+L\+ED}{MAX44009_INT_ENABLED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+E\+N\+A\+B\+L\+ED~( 0x01 )}\hypertarget{max44009_8c_a63dad45ff5a91aaa55711ede0890b771}{}\label{max44009_8c_a63dad45ff5a91aaa55711ede0890b771}
+
+
+Definition at line 31 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+D\+DR@{M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+D\+DR}}
+\index{M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+D\+DR@{M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+D\+DR}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+D\+DR}{MAX44009_INT_STATUS_ADDR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+D\+DR~( 0x00 )}\hypertarget{max44009_8c_ae92495d6826a43fd8aac4205f9604cc2}{}\label{max44009_8c_ae92495d6826a43fd8aac4205f9604cc2}
+
+
+Definition at line 18 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+O\+FF@{M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+O\+FF}}
+\index{M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+O\+FF@{M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+O\+FF}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+O\+FF}{MAX44009_INT_STATUS_OFF}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+O\+FF~( 0x00 )}\hypertarget{max44009_8c_abcf5060ad60188ccd5218b46d66f504c}{}\label{max44009_8c_abcf5060ad60188ccd5218b46d66f504c}
+
+
+Definition at line 28 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+ON@{M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+ON}}
+\index{M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+ON@{M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+ON}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+ON}{MAX44009_INT_STATUS_ON}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X44009\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+ON~( 0x01 )}\hypertarget{max44009_8c_afbfedbb0e4d53d3c28d45180550982b6}{}\label{max44009_8c_afbfedbb0e4d53d3c28d45180550982b6}
+
+
+Definition at line 29 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!M\+A\+X44009\+\_\+\+L\+U\+X\+\_\+\+H\+I\+G\+H\+\_\+\+A\+D\+DR@{M\+A\+X44009\+\_\+\+L\+U\+X\+\_\+\+H\+I\+G\+H\+\_\+\+A\+D\+DR}}
+\index{M\+A\+X44009\+\_\+\+L\+U\+X\+\_\+\+H\+I\+G\+H\+\_\+\+A\+D\+DR@{M\+A\+X44009\+\_\+\+L\+U\+X\+\_\+\+H\+I\+G\+H\+\_\+\+A\+D\+DR}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X44009\+\_\+\+L\+U\+X\+\_\+\+H\+I\+G\+H\+\_\+\+A\+D\+DR}{MAX44009_LUX_HIGH_ADDR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X44009\+\_\+\+L\+U\+X\+\_\+\+H\+I\+G\+H\+\_\+\+A\+D\+DR~( 0x03 )}\hypertarget{max44009_8c_ab46036622c6707604a30a3e3dbd5b64d}{}\label{max44009_8c_ab46036622c6707604a30a3e3dbd5b64d}
+
+
+Definition at line 21 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!M\+A\+X44009\+\_\+\+L\+U\+X\+\_\+\+L\+O\+W\+\_\+\+A\+D\+DR@{M\+A\+X44009\+\_\+\+L\+U\+X\+\_\+\+L\+O\+W\+\_\+\+A\+D\+DR}}
+\index{M\+A\+X44009\+\_\+\+L\+U\+X\+\_\+\+L\+O\+W\+\_\+\+A\+D\+DR@{M\+A\+X44009\+\_\+\+L\+U\+X\+\_\+\+L\+O\+W\+\_\+\+A\+D\+DR}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X44009\+\_\+\+L\+U\+X\+\_\+\+L\+O\+W\+\_\+\+A\+D\+DR}{MAX44009_LUX_LOW_ADDR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X44009\+\_\+\+L\+U\+X\+\_\+\+L\+O\+W\+\_\+\+A\+D\+DR~( 0x04 )}\hypertarget{max44009_8c_a0ab3732e8aaa11ff8af9547c6102037f}{}\label{max44009_8c_a0ab3732e8aaa11ff8af9547c6102037f}
+
+
+Definition at line 22 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!M\+A\+X44009\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND@{M\+A\+X44009\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}}
+\index{M\+A\+X44009\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND@{M\+A\+X44009\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X44009\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}{MAX44009_NOT_FOUND}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X44009\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND~( 0x00 )}\hypertarget{max44009_8c_a598fcae3f90619da2738ce40ca9ffe64}{}\label{max44009_8c_a598fcae3f90619da2738ce40ca9ffe64}
+
+
+Definition at line 15 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!M\+A\+X44009\+\_\+\+T\+H\+R\+\_\+\+H\+I\+G\+H\+\_\+\+A\+D\+DR@{M\+A\+X44009\+\_\+\+T\+H\+R\+\_\+\+H\+I\+G\+H\+\_\+\+A\+D\+DR}}
+\index{M\+A\+X44009\+\_\+\+T\+H\+R\+\_\+\+H\+I\+G\+H\+\_\+\+A\+D\+DR@{M\+A\+X44009\+\_\+\+T\+H\+R\+\_\+\+H\+I\+G\+H\+\_\+\+A\+D\+DR}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X44009\+\_\+\+T\+H\+R\+\_\+\+H\+I\+G\+H\+\_\+\+A\+D\+DR}{MAX44009_THR_HIGH_ADDR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X44009\+\_\+\+T\+H\+R\+\_\+\+H\+I\+G\+H\+\_\+\+A\+D\+DR~( 0x05 )}\hypertarget{max44009_8c_aa662e156c817ee0364e650fe64f4dd7c}{}\label{max44009_8c_aa662e156c817ee0364e650fe64f4dd7c}
+
+
+Definition at line 23 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!M\+A\+X44009\+\_\+\+T\+H\+R\+\_\+\+L\+O\+W\+\_\+\+A\+D\+DR@{M\+A\+X44009\+\_\+\+T\+H\+R\+\_\+\+L\+O\+W\+\_\+\+A\+D\+DR}}
+\index{M\+A\+X44009\+\_\+\+T\+H\+R\+\_\+\+L\+O\+W\+\_\+\+A\+D\+DR@{M\+A\+X44009\+\_\+\+T\+H\+R\+\_\+\+L\+O\+W\+\_\+\+A\+D\+DR}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X44009\+\_\+\+T\+H\+R\+\_\+\+L\+O\+W\+\_\+\+A\+D\+DR}{MAX44009_THR_LOW_ADDR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X44009\+\_\+\+T\+H\+R\+\_\+\+L\+O\+W\+\_\+\+A\+D\+DR~( 0x06 )}\hypertarget{max44009_8c_afcb602a8e53ae25125633f2278871f1c}{}\label{max44009_8c_afcb602a8e53ae25125633f2278871f1c}
+
+
+Definition at line 24 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!M\+A\+X44009\+\_\+\+T\+H\+R\+\_\+\+T\+I\+M\+E\+R\+\_\+\+A\+D\+DR@{M\+A\+X44009\+\_\+\+T\+H\+R\+\_\+\+T\+I\+M\+E\+R\+\_\+\+A\+D\+DR}}
+\index{M\+A\+X44009\+\_\+\+T\+H\+R\+\_\+\+T\+I\+M\+E\+R\+\_\+\+A\+D\+DR@{M\+A\+X44009\+\_\+\+T\+H\+R\+\_\+\+T\+I\+M\+E\+R\+\_\+\+A\+D\+DR}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X44009\+\_\+\+T\+H\+R\+\_\+\+T\+I\+M\+E\+R\+\_\+\+A\+D\+DR}{MAX44009_THR_TIMER_ADDR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X44009\+\_\+\+T\+H\+R\+\_\+\+T\+I\+M\+E\+R\+\_\+\+A\+D\+DR~( 0x07 )}\hypertarget{max44009_8c_a8c48d7474b97573d22094c3f86d27b1d}{}\label{max44009_8c_a8c48d7474b97573d22094c3f86d27b1d}
+
+
+Definition at line 25 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!M\+A\+X44009\+\_\+\+U\+S\+E\+R\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON@{M\+A\+X44009\+\_\+\+U\+S\+E\+R\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}}
+\index{M\+A\+X44009\+\_\+\+U\+S\+E\+R\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON@{M\+A\+X44009\+\_\+\+U\+S\+E\+R\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X44009\+\_\+\+U\+S\+E\+R\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}{MAX44009_USER_CONFIGURATION}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X44009\+\_\+\+U\+S\+E\+R\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}\hypertarget{max44009_8c_ac8e1d23b6bbe8bb59a9fc96df8e0f178}{}\label{max44009_8c_ac8e1d23b6bbe8bb59a9fc96df8e0f178}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+( \hyperlink{max44009_8c_ae5d7e6e75a18cd61a4dbc6e636c64933}{MAX44009\_CONFIG\_DEFAULT} | \(\backslash\)
+                                              MAX44009\_CONFIG\_MANUAL | \(\backslash\)
+                                              MAX44009\_CONFIG\_CDR\_NORMAL | \(\backslash\)
+                                              MAX44009\_CONFIG\_INTEGRATION\_100ms )
+\end{DoxyCode}
+
+
+Definition at line 56 of file max44009.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{max44009.\+c@{max44009.\+c}!max44009\+\_\+convert\+\_\+light@{max44009\+\_\+convert\+\_\+light}}
+\index{max44009\+\_\+convert\+\_\+light@{max44009\+\_\+convert\+\_\+light}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{max44009\+\_\+convert\+\_\+light(uint16\+\_\+t lux)}{max44009_convert_light(uint16_t lux)}}]{\setlength{\rightskip}{0pt plus 5cm}float max44009\+\_\+convert\+\_\+light (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t}}]{lux}
+\end{DoxyParamCaption}
+)}\hypertarget{max44009_8c_a8428ccd96069381a6b8ee5af327ae62b}{}\label{max44009_8c_a8428ccd96069381a6b8ee5af327ae62b}
+
+
+Definition at line 129 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!max44009\+\_\+init@{max44009\+\_\+init}}
+\index{max44009\+\_\+init@{max44009\+\_\+init}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{max44009\+\_\+init(void)}{max44009_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} max44009\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{max44009_8c_a18b236ab59622c09777caa592f8f580e}{}\label{max44009_8c_a18b236ab59622c09777caa592f8f580e}
+
+
+Definition at line 69 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!max44009\+\_\+is\+\_\+present@{max44009\+\_\+is\+\_\+present}}
+\index{max44009\+\_\+is\+\_\+present@{max44009\+\_\+is\+\_\+present}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{max44009\+\_\+is\+\_\+present(void)}{max44009_is_present(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} max44009\+\_\+is\+\_\+present (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{max44009_8c_a34354f7e180b3425af27c2b642bbf926}{}\label{max44009_8c_a34354f7e180b3425af27c2b642bbf926}
+
+
+Definition at line 101 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!max44009\+\_\+read\+\_\+light@{max44009\+\_\+read\+\_\+light}}
+\index{max44009\+\_\+read\+\_\+light@{max44009\+\_\+read\+\_\+light}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{max44009\+\_\+read\+\_\+light(void)}{max44009_read_light(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\+\_\+t} max44009\+\_\+read\+\_\+light (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{max44009_8c_a718268b3699c2a534f0963162ee79c1a}{}\label{max44009_8c_a718268b3699c2a534f0963162ee79c1a}
+
+
+Definition at line 111 of file max44009.\+c.
+
+\index{max44009.\+c@{max44009.\+c}!max44009\+\_\+reset@{max44009\+\_\+reset}}
+\index{max44009\+\_\+reset@{max44009\+\_\+reset}!max44009.\+c@{max44009.\+c}}
+\subsubsection[{\texorpdfstring{max44009\+\_\+reset(void)}{max44009_reset(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} max44009\+\_\+reset (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{max44009_8c_a93144a6e048d9e589b8c5cbbf27e5891}{}\label{max44009_8c_a93144a6e048d9e589b8c5cbbf27e5891}
+
+
+Definition at line 85 of file max44009.\+c.
+

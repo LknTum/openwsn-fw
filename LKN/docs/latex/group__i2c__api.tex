@@ -1,0 +1,744 @@
+\hypertarget{group__i2c__api}{}\section{I2c\+\_\+api}
+\label{group__i2c__api}\index{I2c\+\_\+api@{I2c\+\_\+api}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_ga28996e36955ae56b9c312b961278d762}{I2\+C\+Master\+Init\+Exp\+Clk} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+I2\+C\+Clk, \hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} b\+Fast)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_gab138e14c2fe1d19972e388b8638fb695}{I2\+C\+Slave\+Init} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Slave\+Addr)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_gaceb8f026728b5c8d5675f641caedfb29}{I2\+C\+Master\+Enable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_ga6f51060e7ecc4f4005e9314a877ae4b6}{I2\+C\+Slave\+Enable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_gabf229e58f06ff0a26bf66e9cdbf03b56}{I2\+C\+Master\+Disable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_ga00570b245dfe33620b0a89c398c2b8a1}{I2\+C\+Slave\+Disable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_ga09748a62aec2f3d3932f8a77b09ee173}{I2\+C\+Int\+Register} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}($\ast$pfn\+Handler)(\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}))
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_gaa38ca79293a55d707ab9f9b267cb3a79}{I2\+C\+Int\+Unregister} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_ga32985d6ecd7d84e9d43be6c785c251de}{I2\+C\+Master\+Int\+Enable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_ga8fa9624c175df164a71363cd166e2334}{I2\+C\+Slave\+Int\+Enable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_gab494128420a09f0b7c655abc87f8abef}{I2\+C\+Slave\+Int\+Enable\+Ex} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Int\+Flags)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_ga1f0cc727842bdd9155bc1d9176dfa1b9}{I2\+C\+Master\+Int\+Disable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_ga97acbac40ff7f1264eea653937a32873}{I2\+C\+Slave\+Int\+Disable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_ga99fc364d6ab5bfa82937baf24d72998a}{I2\+C\+Slave\+Int\+Disable\+Ex} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Int\+Flags)
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group__i2c__api_gafddb655219602836b383085de8b5268f}{I2\+C\+Master\+Int\+Status} (\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} b\+Masked)
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group__i2c__api_gaba86c1d914f9f6941249f3745e6fa0ab}{I2\+C\+Slave\+Int\+Status} (\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} b\+Masked)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__i2c__api_ga3ba869ee9bb1ecbd6335c998f2670f7d}{I2\+C\+Slave\+Int\+Status\+Ex} (\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} b\+Masked)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_gadb05446393293b14cc86211fb5e59b8d}{I2\+C\+Master\+Int\+Clear} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_ga86727bec16400449cb39a6341b42c7a9}{I2\+C\+Slave\+Int\+Clear} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_ga962968207faa0b75d3fcf792310e7877}{I2\+C\+Slave\+Int\+Clear\+Ex} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Int\+Flags)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_ga95d82808b2a27cd139698efbec513a67}{I2\+C\+Master\+Slave\+Addr\+Set} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Slave\+Addr, \hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} b\+Receive)
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group__i2c__api_gaf5e83323ac50e404b712aa2161a75b40}{I2\+C\+Master\+Busy} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group__i2c__api_gaf97ea5be165c207bc792fa5bd7331243}{I2\+C\+Master\+Bus\+Busy} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_ga041714345a1a2d7d94917fe881061d3f}{I2\+C\+Master\+Control} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Cmd)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__i2c__api_gabb8efce4d819b7601821eb56595eb249}{I2\+C\+Master\+Err} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_gaefd4234aea3087471598f756beaab58d}{I2\+C\+Master\+Data\+Put} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Data)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__i2c__api_ga59fdaa345b115e6783e8fb6770b9a9b1}{I2\+C\+Master\+Data\+Get} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__i2c__api_ga54348958f4ebd7ab18dd1216c04ecf4a}{I2\+C\+Slave\+Status} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__i2c__api_ga24bae55695361f212fd85a58086f1f9f}{I2\+C\+Slave\+Data\+Put} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Data)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__i2c__api_gadab69d241a3db8eb9de1075cbc49d134}{I2\+C\+Slave\+Data\+Get} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{I2c\+\_\+api@{I2c\+\_\+api}!I2\+C\+Int\+Register@{I2\+C\+Int\+Register}}
+\index{I2\+C\+Int\+Register@{I2\+C\+Int\+Register}!I2c\+\_\+api@{I2c\+\_\+api}}
+\subsubsection[{\texorpdfstring{I2\+C\+Int\+Register(void($\ast$pfn\+Handler)(void))}{I2CIntRegister(void(*pfnHandler)(void))}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I2\+C\+Int\+Register (
+\begin{DoxyParamCaption}
+\item[{{\bf void}($\ast$)({\bf void})}]{pfn\+Handler}
+\end{DoxyParamCaption}
+)}\hypertarget{group__i2c__api_ga09748a62aec2f3d3932f8a77b09ee173}{}\label{group__i2c__api_ga09748a62aec2f3d3932f8a77b09ee173}
+Registers an interrupt handler for the I2C module
+
+
+\begin{DoxyParams}{Parameters}
+{\em pfn\+Handler} & is a pointer to the function to be called when the I2C interrupt occurs.\\
+\hline
+\end{DoxyParams}
+This function sets the handler to be called when an I2C interrupt occurs. This function enables the global interrupt in the interrupt controller; specific I2C interrupts must be enabled through \hyperlink{group__i2c__api_ga32985d6ecd7d84e9d43be6c785c251de}{I2\+C\+Master\+Int\+Enable()} and \hyperlink{group__i2c__api_ga8fa9624c175df164a71363cd166e2334}{I2\+C\+Slave\+Int\+Enable()}. If necessary, the interrupt handler must clear the interrupt source through \hyperlink{group__i2c__api_gadb05446393293b14cc86211fb5e59b8d}{I2\+C\+Master\+Int\+Clear()} and \hyperlink{group__i2c__api_ga86727bec16400449cb39a6341b42c7a9}{I2\+C\+Slave\+Int\+Clear()}.
+
+\begin{DoxySeeAlso}{See also}
+See \hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()} for important information about registering \hyperlink{_g_c_c_2_m_s_p430_f449_2port_8c_ae0992854bdba99f7b163894433c32aef}{interrupt} handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 249 of file i2c\+\_\+lib.\+c.
+
+\index{I2c\+\_\+api@{I2c\+\_\+api}!I2\+C\+Int\+Unregister@{I2\+C\+Int\+Unregister}}
+\index{I2\+C\+Int\+Unregister@{I2\+C\+Int\+Unregister}!I2c\+\_\+api@{I2c\+\_\+api}}
+\subsubsection[{\texorpdfstring{I2\+C\+Int\+Unregister(void)}{I2CIntUnregister(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I2\+C\+Int\+Unregister (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__i2c__api_gaa38ca79293a55d707ab9f9b267cb3a79}{}\label{group__i2c__api_gaa38ca79293a55d707ab9f9b267cb3a79}
+Unregisters an interrupt handler for the I2C module
+
+This function clears the handler to be called when an I2C interrupt occurs. The function also masks off the interrupt in the interrupt controller so that the interrupt handler no longer is called.
+
+\begin{DoxySeeAlso}{See also}
+See \hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()} for important information about registering \hyperlink{_g_c_c_2_m_s_p430_f449_2port_8c_ae0992854bdba99f7b163894433c32aef}{interrupt} handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 277 of file i2c\+\_\+lib.\+c.
+
+\index{I2c\+\_\+api@{I2c\+\_\+api}!I2\+C\+Master\+Bus\+Busy@{I2\+C\+Master\+Bus\+Busy}}
+\index{I2\+C\+Master\+Bus\+Busy@{I2\+C\+Master\+Bus\+Busy}!I2c\+\_\+api@{I2c\+\_\+api}}
+\subsubsection[{\texorpdfstring{I2\+C\+Master\+Bus\+Busy(void)}{I2CMasterBusBusy(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} I2\+C\+Master\+Bus\+Busy (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__i2c__api_gaf97ea5be165c207bc792fa5bd7331243}{}\label{group__i2c__api_gaf97ea5be165c207bc792fa5bd7331243}
+Indicates whether or not the I2C bus is busy
+
+This function returns an indication of whether or not the I2C bus is busy. This function can be used in a multimaster environment to determine if another master is currently using the bus.
+
+\begin{DoxyReturn}{Returns}
+Returns {\bfseries true} if the I2C bus is busy; otherwise, returns {\bfseries false} 
+\end{DoxyReturn}
+
+
+Definition at line 676 of file i2c\+\_\+lib.\+c.
+
+\index{I2c\+\_\+api@{I2c\+\_\+api}!I2\+C\+Master\+Busy@{I2\+C\+Master\+Busy}}
+\index{I2\+C\+Master\+Busy@{I2\+C\+Master\+Busy}!I2c\+\_\+api@{I2c\+\_\+api}}
+\subsubsection[{\texorpdfstring{I2\+C\+Master\+Busy(void)}{I2CMasterBusy(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} I2\+C\+Master\+Busy (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__i2c__api_gaf5e83323ac50e404b712aa2161a75b40}{}\label{group__i2c__api_gaf5e83323ac50e404b712aa2161a75b40}
+Indicates whether or not the I2C master is busy
+
+This function returns an indication of whether or not the I2C master is busy transmitting or receiving data.
+
+\begin{DoxyReturn}{Returns}
+Returns {\bfseries true} if the I2C master is busy; otherwise, returns {\bfseries false} 
+\end{DoxyReturn}
+
+
+Definition at line 648 of file i2c\+\_\+lib.\+c.
+
+\index{I2c\+\_\+api@{I2c\+\_\+api}!I2\+C\+Master\+Control@{I2\+C\+Master\+Control}}
+\index{I2\+C\+Master\+Control@{I2\+C\+Master\+Control}!I2c\+\_\+api@{I2c\+\_\+api}}
+\subsubsection[{\texorpdfstring{I2\+C\+Master\+Control(uint32\+\_\+t ui32\+Cmd)}{I2CMasterControl(uint32_t ui32Cmd)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I2\+C\+Master\+Control (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Cmd}
+\end{DoxyParamCaption}
+)}\hypertarget{group__i2c__api_ga041714345a1a2d7d94917fe881061d3f}{}\label{group__i2c__api_ga041714345a1a2d7d94917fe881061d3f}
+Controls the state of the I2C master module
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Cmd} & command to be issued to the I2C master module\\
+\hline
+\end{DoxyParams}
+This function is used to control the state of the master module send and receive operations. The {\itshape ui32\+Cmd} parameter can be one of the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+S\+E\+ND} 
+\item {\bfseries I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+R\+E\+C\+E\+I\+VE} 
+\item {\bfseries I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+S\+T\+A\+RT} 
+\item {\bfseries I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+C\+O\+NT} 
+\item {\bfseries I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+F\+I\+N\+I\+SH} 
+\item {\bfseries I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+S\+E\+N\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+OP} 
+\item {\bfseries I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+S\+T\+A\+RT} 
+\item {\bfseries I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+C\+O\+NT} 
+\item {\bfseries I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+F\+I\+N\+I\+SH} 
+\item {\bfseries I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+C\+M\+D\+\_\+\+B\+U\+R\+S\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+OP} 
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 716 of file i2c\+\_\+lib.\+c.
+
+\index{I2c\+\_\+api@{I2c\+\_\+api}!I2\+C\+Master\+Data\+Get@{I2\+C\+Master\+Data\+Get}}
+\index{I2\+C\+Master\+Data\+Get@{I2\+C\+Master\+Data\+Get}!I2c\+\_\+api@{I2c\+\_\+api}}
+\subsubsection[{\texorpdfstring{I2\+C\+Master\+Data\+Get(void)}{I2CMasterDataGet(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} I2\+C\+Master\+Data\+Get (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__i2c__api_ga59fdaa345b115e6783e8fb6770b9a9b1}{}\label{group__i2c__api_ga59fdaa345b115e6783e8fb6770b9a9b1}
+Receives a byte that has been sent to the I2C master
+
+This function reads a byte of data from the I2C master data register.
+
+\begin{DoxyReturn}{Returns}
+Returns the byte received from by the I2C master, cast as an uint32\+\_\+t 
+\end{DoxyReturn}
+
+
+Definition at line 817 of file i2c\+\_\+lib.\+c.
+
+\index{I2c\+\_\+api@{I2c\+\_\+api}!I2\+C\+Master\+Data\+Put@{I2\+C\+Master\+Data\+Put}}
+\index{I2\+C\+Master\+Data\+Put@{I2\+C\+Master\+Data\+Put}!I2c\+\_\+api@{I2c\+\_\+api}}
+\subsubsection[{\texorpdfstring{I2\+C\+Master\+Data\+Put(uint8\+\_\+t ui8\+Data)}{I2CMasterDataPut(uint8_t ui8Data)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I2\+C\+Master\+Data\+Put (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{ui8\+Data}
+\end{DoxyParamCaption}
+)}\hypertarget{group__i2c__api_gaefd4234aea3087471598f756beaab58d}{}\label{group__i2c__api_gaefd4234aea3087471598f756beaab58d}
+Transmits a byte from the I2C master
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui8\+Data} & data to be transmitted from the I2C master\\
+\hline
+\end{DoxyParams}
+This function places the supplied data into I2C master data register.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 798 of file i2c\+\_\+lib.\+c.
+
+\index{I2c\+\_\+api@{I2c\+\_\+api}!I2\+C\+Master\+Disable@{I2\+C\+Master\+Disable}}
+\index{I2\+C\+Master\+Disable@{I2\+C\+Master\+Disable}!I2c\+\_\+api@{I2c\+\_\+api}}
+\subsubsection[{\texorpdfstring{I2\+C\+Master\+Disable(void)}{I2CMasterDisable(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I2\+C\+Master\+Disable (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__i2c__api_gabf229e58f06ff0a26bf66e9cdbf03b56}{}\label{group__i2c__api_gabf229e58f06ff0a26bf66e9cdbf03b56}
+Disables the I2C master block
+
+This function disables operation of the I2C master block.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 198 of file i2c\+\_\+lib.\+c.
+
+\index{I2c\+\_\+api@{I2c\+\_\+api}!I2\+C\+Master\+Enable@{I2\+C\+Master\+Enable}}
+\index{I2\+C\+Master\+Enable@{I2\+C\+Master\+Enable}!I2c\+\_\+api@{I2c\+\_\+api}}
+\subsubsection[{\texorpdfstring{I2\+C\+Master\+Enable(void)}{I2CMasterEnable(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I2\+C\+Master\+Enable (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__i2c__api_gaceb8f026728b5c8d5675f641caedfb29}{}\label{group__i2c__api_gaceb8f026728b5c8d5675f641caedfb29}
+Enables the I2C Master block
+
+This function will enable operation of the I2C Master block.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 157 of file i2c\+\_\+lib.\+c.
+
+\index{I2c\+\_\+api@{I2c\+\_\+api}!I2\+C\+Master\+Err@{I2\+C\+Master\+Err}}
+\index{I2\+C\+Master\+Err@{I2\+C\+Master\+Err}!I2c\+\_\+api@{I2c\+\_\+api}}
+\subsubsection[{\texorpdfstring{I2\+C\+Master\+Err(void)}{I2CMasterErr(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} I2\+C\+Master\+Err (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__i2c__api_gabb8efce4d819b7601821eb56595eb249}{}\label{group__i2c__api_gabb8efce4d819b7601821eb56595eb249}
+Gets the error status of the I2C master module
+
+This function is obtains the error status of the master module send and receive operations.
+
+\begin{DoxyReturn}{Returns}
+Returns the error status as one of the following values\+:
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item {\bfseries I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+N\+O\+NE} 
+\item {\bfseries I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+A\+D\+D\+R\+\_\+\+A\+CK} 
+\item {\bfseries I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+D\+A\+T\+A\+\_\+\+A\+CK} 
+\item {\bfseries I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+E\+R\+R\+\_\+\+A\+R\+B\+\_\+\+L\+O\+ST} 
+\end{DoxyItemize}
+
+Definition at line 754 of file i2c\+\_\+lib.\+c.
+
+\index{I2c\+\_\+api@{I2c\+\_\+api}!I2\+C\+Master\+Init\+Exp\+Clk@{I2\+C\+Master\+Init\+Exp\+Clk}}
+\index{I2\+C\+Master\+Init\+Exp\+Clk@{I2\+C\+Master\+Init\+Exp\+Clk}!I2c\+\_\+api@{I2c\+\_\+api}}
+\subsubsection[{\texorpdfstring{I2\+C\+Master\+Init\+Exp\+Clk(uint32\+\_\+t ui32\+I2\+C\+Clk, bool b\+Fast)}{I2CMasterInitExpClk(uint32_t ui32I2CClk, bool bFast)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I2\+C\+Master\+Init\+Exp\+Clk (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+I2\+C\+Clk, }
+\item[{{\bf bool}}]{b\+Fast}
+\end{DoxyParamCaption}
+)}\hypertarget{group__i2c__api_ga28996e36955ae56b9c312b961278d762}{}\label{group__i2c__api_ga28996e36955ae56b9c312b961278d762}
+Initializes the I2C master block
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+I2\+C\+Clk} & is the rate of the clock supplied to the I2C module. \\
+\hline
+{\em b\+Fast} & set up for fast data transfers\\
+\hline
+\end{DoxyParams}
+This function initializes operation of the I2C master block. Upon successful initialization of the I2C block, this functionhas set the bus speed for the master, and has enabled the I2C master block.
+
+If the parameter {\itshape b\+Fast} is {\bfseries true}, then the master block will be set up to transfer data at 400 kbps; otherwise, it will be set up to transfer data at 100 kbps.
+
+The peripheral clock will be the same as the processor clock. This will be the value returned by \hyperlink{group__sysctl__api_ga9ad809b6591f052d72dde7b1fb1f6eed}{Sys\+Ctrl\+Clock\+Get()}, or it can be explicitly hardcoded if it is constant and known (to save the code/execution overhead of a call to \hyperlink{group__sysctl__api_ga9ad809b6591f052d72dde7b1fb1f6eed}{Sys\+Ctrl\+Clock\+Get()}).
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 80 of file i2c\+\_\+lib.\+c.
+
+\index{I2c\+\_\+api@{I2c\+\_\+api}!I2\+C\+Master\+Int\+Clear@{I2\+C\+Master\+Int\+Clear}}
+\index{I2\+C\+Master\+Int\+Clear@{I2\+C\+Master\+Int\+Clear}!I2c\+\_\+api@{I2c\+\_\+api}}
+\subsubsection[{\texorpdfstring{I2\+C\+Master\+Int\+Clear(void)}{I2CMasterIntClear(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I2\+C\+Master\+Int\+Clear (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__i2c__api_gadb05446393293b14cc86211fb5e59b8d}{}\label{group__i2c__api_gadb05446393293b14cc86211fb5e59b8d}
+Clears I2C master interrupt sources
+
+This function clears the I2C master interrupt source, so that it no longer asserts. This must be done in the interrupt handler to keep it from being called again immediately upon exit.
+
+\begin{DoxyNote}{Note}
+Because there is a write buffer in the Cortex-\/\+M3 processor, it may take several clock cycles before the interrupt source is actually cleared. Therefore, it is recommended that the interrupt source be cleared early in the interrupt handler (as opposed to the very last action) to avoid returning from the interrupt handler before the interrupt source is actually cleared. Failure to do so may result in the interrupt handler being immediately reentered (because the interrupt controller still sees the interrupt source asserted).
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 532 of file i2c\+\_\+lib.\+c.
+
+\index{I2c\+\_\+api@{I2c\+\_\+api}!I2\+C\+Master\+Int\+Disable@{I2\+C\+Master\+Int\+Disable}}
+\index{I2\+C\+Master\+Int\+Disable@{I2\+C\+Master\+Int\+Disable}!I2c\+\_\+api@{I2c\+\_\+api}}
+\subsubsection[{\texorpdfstring{I2\+C\+Master\+Int\+Disable(void)}{I2CMasterIntDisable(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I2\+C\+Master\+Int\+Disable (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__i2c__api_ga1f0cc727842bdd9155bc1d9176dfa1b9}{}\label{group__i2c__api_ga1f0cc727842bdd9155bc1d9176dfa1b9}
+Disables the I2C master interrupt
+
+This function disables the I2C master interrupt source.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 364 of file i2c\+\_\+lib.\+c.
+
+\index{I2c\+\_\+api@{I2c\+\_\+api}!I2\+C\+Master\+Int\+Enable@{I2\+C\+Master\+Int\+Enable}}
+\index{I2\+C\+Master\+Int\+Enable@{I2\+C\+Master\+Int\+Enable}!I2c\+\_\+api@{I2c\+\_\+api}}
+\subsubsection[{\texorpdfstring{I2\+C\+Master\+Int\+Enable(void)}{I2CMasterIntEnable(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I2\+C\+Master\+Int\+Enable (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__i2c__api_ga32985d6ecd7d84e9d43be6c785c251de}{}\label{group__i2c__api_ga32985d6ecd7d84e9d43be6c785c251de}
+Enables the I2C Master interrupt
+
+This function enables the I2C Master interrupt source.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 300 of file i2c\+\_\+lib.\+c.
+
+\index{I2c\+\_\+api@{I2c\+\_\+api}!I2\+C\+Master\+Int\+Status@{I2\+C\+Master\+Int\+Status}}
+\index{I2\+C\+Master\+Int\+Status@{I2\+C\+Master\+Int\+Status}!I2c\+\_\+api@{I2c\+\_\+api}}
+\subsubsection[{\texorpdfstring{I2\+C\+Master\+Int\+Status(bool b\+Masked)}{I2CMasterIntStatus(bool bMasked)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} I2\+C\+Master\+Int\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{b\+Masked}
+\end{DoxyParamCaption}
+)}\hypertarget{group__i2c__api_gafddb655219602836b383085de8b5268f}{}\label{group__i2c__api_gafddb655219602836b383085de8b5268f}
+Gets the current I2C master interrupt status
+
+
+\begin{DoxyParams}{Parameters}
+{\em b\+Masked} & is false if the raw interrupt status is requested and true if the masked interrupt status is requested.\\
+\hline
+\end{DoxyParams}
+This function returns the interrupt status for the I2C master module. Either the raw interrupt status or the status of interrupts that are allowed to reflect to the processor can be returned.
+
+\begin{DoxyReturn}{Returns}
+Returns the current interrupt status, returned as {\bfseries true} if active or {\bfseries false} if not active. 
+\end{DoxyReturn}
+
+
+Definition at line 431 of file i2c\+\_\+lib.\+c.
+
+\index{I2c\+\_\+api@{I2c\+\_\+api}!I2\+C\+Master\+Slave\+Addr\+Set@{I2\+C\+Master\+Slave\+Addr\+Set}}
+\index{I2\+C\+Master\+Slave\+Addr\+Set@{I2\+C\+Master\+Slave\+Addr\+Set}!I2c\+\_\+api@{I2c\+\_\+api}}
+\subsubsection[{\texorpdfstring{I2\+C\+Master\+Slave\+Addr\+Set(uint8\+\_\+t ui8\+Slave\+Addr, bool b\+Receive)}{I2CMasterSlaveAddrSet(uint8_t ui8SlaveAddr, bool bReceive)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I2\+C\+Master\+Slave\+Addr\+Set (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{ui8\+Slave\+Addr, }
+\item[{{\bf bool}}]{b\+Receive}
+\end{DoxyParamCaption}
+)}\hypertarget{group__i2c__api_ga95d82808b2a27cd139698efbec513a67}{}\label{group__i2c__api_ga95d82808b2a27cd139698efbec513a67}
+Sets the address that the I2C master places on the bus
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui8\+Slave\+Addr} & 7-\/bit slave address \\
+\hline
+{\em b\+Receive} & flag indicating the type of communication with the slave\\
+\hline
+\end{DoxyParams}
+This function sets the address that the I2C master places on the bus when initiating a transaction. When the {\itshape b\+Receive} parameter is set to {\bfseries true}, the address indicates that the I2C master is initiating a read from the slave; otherwise, the address indicates that the I2C master is initiating a write to the slave.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 623 of file i2c\+\_\+lib.\+c.
+
+\index{I2c\+\_\+api@{I2c\+\_\+api}!I2\+C\+Slave\+Data\+Get@{I2\+C\+Slave\+Data\+Get}}
+\index{I2\+C\+Slave\+Data\+Get@{I2\+C\+Slave\+Data\+Get}!I2c\+\_\+api@{I2c\+\_\+api}}
+\subsubsection[{\texorpdfstring{I2\+C\+Slave\+Data\+Get(void)}{I2CSlaveDataGet(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} I2\+C\+Slave\+Data\+Get (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__i2c__api_gadab69d241a3db8eb9de1075cbc49d134}{}\label{group__i2c__api_gadab69d241a3db8eb9de1075cbc49d134}
+Receives a byte that has been sent to the I2C slave
+
+This function reads a byte of data from the I2C slave data register.
+
+\begin{DoxyReturn}{Returns}
+Returns the byte received from by the I2C slave, cast as an uint32\+\_\+t. 
+\end{DoxyReturn}
+
+
+Definition at line 886 of file i2c\+\_\+lib.\+c.
+
+\index{I2c\+\_\+api@{I2c\+\_\+api}!I2\+C\+Slave\+Data\+Put@{I2\+C\+Slave\+Data\+Put}}
+\index{I2\+C\+Slave\+Data\+Put@{I2\+C\+Slave\+Data\+Put}!I2c\+\_\+api@{I2c\+\_\+api}}
+\subsubsection[{\texorpdfstring{I2\+C\+Slave\+Data\+Put(uint8\+\_\+t ui8\+Data)}{I2CSlaveDataPut(uint8_t ui8Data)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I2\+C\+Slave\+Data\+Put (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{ui8\+Data}
+\end{DoxyParamCaption}
+)}\hypertarget{group__i2c__api_ga24bae55695361f212fd85a58086f1f9f}{}\label{group__i2c__api_ga24bae55695361f212fd85a58086f1f9f}
+Transmits a byte from the I2C slave
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui8\+Data} & data to be transmitted from the I2C slave\\
+\hline
+\end{DoxyParams}
+This function places the supplied data into I2C slave data register.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 867 of file i2c\+\_\+lib.\+c.
+
+\index{I2c\+\_\+api@{I2c\+\_\+api}!I2\+C\+Slave\+Disable@{I2\+C\+Slave\+Disable}}
+\index{I2\+C\+Slave\+Disable@{I2\+C\+Slave\+Disable}!I2c\+\_\+api@{I2c\+\_\+api}}
+\subsubsection[{\texorpdfstring{I2\+C\+Slave\+Disable(void)}{I2CSlaveDisable(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I2\+C\+Slave\+Disable (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__i2c__api_ga00570b245dfe33620b0a89c398c2b8a1}{}\label{group__i2c__api_ga00570b245dfe33620b0a89c398c2b8a1}
+Disables the I2C slave block
+
+This function disables operation of the I2C slave block.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 216 of file i2c\+\_\+lib.\+c.
+
+\index{I2c\+\_\+api@{I2c\+\_\+api}!I2\+C\+Slave\+Enable@{I2\+C\+Slave\+Enable}}
+\index{I2\+C\+Slave\+Enable@{I2\+C\+Slave\+Enable}!I2c\+\_\+api@{I2c\+\_\+api}}
+\subsubsection[{\texorpdfstring{I2\+C\+Slave\+Enable(void)}{I2CSlaveEnable(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I2\+C\+Slave\+Enable (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__i2c__api_ga6f51060e7ecc4f4005e9314a877ae4b6}{}\label{group__i2c__api_ga6f51060e7ecc4f4005e9314a877ae4b6}
+Enables the I2C slave block
+
+This function enables operation of the I2C slave block.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 175 of file i2c\+\_\+lib.\+c.
+
+\index{I2c\+\_\+api@{I2c\+\_\+api}!I2\+C\+Slave\+Init@{I2\+C\+Slave\+Init}}
+\index{I2\+C\+Slave\+Init@{I2\+C\+Slave\+Init}!I2c\+\_\+api@{I2c\+\_\+api}}
+\subsubsection[{\texorpdfstring{I2\+C\+Slave\+Init(uint8\+\_\+t ui8\+Slave\+Addr)}{I2CSlaveInit(uint8_t ui8SlaveAddr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I2\+C\+Slave\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{ui8\+Slave\+Addr}
+\end{DoxyParamCaption}
+)}\hypertarget{group__i2c__api_gab138e14c2fe1d19972e388b8638fb695}{}\label{group__i2c__api_gab138e14c2fe1d19972e388b8638fb695}
+Initializes the I2C slave block
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui8\+Slave\+Addr} & 7-\/bit slave address\\
+\hline
+\end{DoxyParams}
+This function initializes operation of the I2C slave block. Upon successful initialization of the I2C blocks, this function has set the slave address has enabled the I2C slave block.
+
+The parameter {\itshape ui8\+Slave\+Addr} is the value that will be compared against the slave address sent by an I2C master.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 129 of file i2c\+\_\+lib.\+c.
+
+\index{I2c\+\_\+api@{I2c\+\_\+api}!I2\+C\+Slave\+Int\+Clear@{I2\+C\+Slave\+Int\+Clear}}
+\index{I2\+C\+Slave\+Int\+Clear@{I2\+C\+Slave\+Int\+Clear}!I2c\+\_\+api@{I2c\+\_\+api}}
+\subsubsection[{\texorpdfstring{I2\+C\+Slave\+Int\+Clear(void)}{I2CSlaveIntClear(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I2\+C\+Slave\+Int\+Clear (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__i2c__api_ga86727bec16400449cb39a6341b42c7a9}{}\label{group__i2c__api_ga86727bec16400449cb39a6341b42c7a9}
+Clears I2C slave interrupt sources
+
+This function clears the I2C slave interrupt source, so that it no longer asserts. This must be done in the interrupt handler to keep it from being recalled immediately upon exit.
+
+\begin{DoxyNote}{Note}
+Because there is a write buffer in the Cortex-\/\+M3 processor, it may take several clock cycles before the interrupt source is actually cleared. Therefore, it is recommended that the interrupt source be cleared early in the interrupt handler (as opposed to the very last action) to avoid returning from the interrupt handler before the interrupt source is actually cleared. Failure to do so may result in the interrupt handler being immediately reentered (because the interrupt controller still sees the interrupt source asserted).
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 564 of file i2c\+\_\+lib.\+c.
+
+\index{I2c\+\_\+api@{I2c\+\_\+api}!I2\+C\+Slave\+Int\+Clear\+Ex@{I2\+C\+Slave\+Int\+Clear\+Ex}}
+\index{I2\+C\+Slave\+Int\+Clear\+Ex@{I2\+C\+Slave\+Int\+Clear\+Ex}!I2c\+\_\+api@{I2c\+\_\+api}}
+\subsubsection[{\texorpdfstring{I2\+C\+Slave\+Int\+Clear\+Ex(uint32\+\_\+t ui32\+Int\+Flags)}{I2CSlaveIntClearEx(uint32_t ui32IntFlags)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I2\+C\+Slave\+Int\+Clear\+Ex (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Int\+Flags}
+\end{DoxyParamCaption}
+)}\hypertarget{group__i2c__api_ga962968207faa0b75d3fcf792310e7877}{}\label{group__i2c__api_ga962968207faa0b75d3fcf792310e7877}
+Clears the I2C slave interrupt sources
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Int\+Flags} & is a bit mask of the interrupt sources to be cleared.\\
+\hline
+\end{DoxyParams}
+This function clears the specified I2C Slave interrupt sources, so that they no longer assert. This must be done in the interrupt handler to keep it from being called again immediately upon exit.
+
+The {\itshape ui32\+Int\+Flags} parameter has the same definition as the {\itshape ui32\+Int\+Flags} parameter to \hyperlink{group__i2c__api_gab494128420a09f0b7c655abc87f8abef}{I2\+C\+Slave\+Int\+Enable\+Ex()}.
+
+\begin{DoxyNote}{Note}
+Because there is a write buffer in the Cortex-\/\+M3 processor, it may take several clock cycles before the interrupt source is actually cleared. Therefore, it is recommended that the interrupt source be cleared early in the interrupt handler (as opposed to the very last action) to avoid returning from the interrupt handler before the interrupt source is actually cleared. Failure to do so may result in the interrupt handler being immediately reentered (because the interrupt controller still sees the interrupt source asserted).
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 598 of file i2c\+\_\+lib.\+c.
+
+\index{I2c\+\_\+api@{I2c\+\_\+api}!I2\+C\+Slave\+Int\+Disable@{I2\+C\+Slave\+Int\+Disable}}
+\index{I2\+C\+Slave\+Int\+Disable@{I2\+C\+Slave\+Int\+Disable}!I2c\+\_\+api@{I2c\+\_\+api}}
+\subsubsection[{\texorpdfstring{I2\+C\+Slave\+Int\+Disable(void)}{I2CSlaveIntDisable(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I2\+C\+Slave\+Int\+Disable (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__i2c__api_ga97acbac40ff7f1264eea653937a32873}{}\label{group__i2c__api_ga97acbac40ff7f1264eea653937a32873}
+Disables the I2C Slave interrupt
+
+This function disables the I2C Slave interrupt source
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 382 of file i2c\+\_\+lib.\+c.
+
+\index{I2c\+\_\+api@{I2c\+\_\+api}!I2\+C\+Slave\+Int\+Disable\+Ex@{I2\+C\+Slave\+Int\+Disable\+Ex}}
+\index{I2\+C\+Slave\+Int\+Disable\+Ex@{I2\+C\+Slave\+Int\+Disable\+Ex}!I2c\+\_\+api@{I2c\+\_\+api}}
+\subsubsection[{\texorpdfstring{I2\+C\+Slave\+Int\+Disable\+Ex(uint32\+\_\+t ui32\+Int\+Flags)}{I2CSlaveIntDisableEx(uint32_t ui32IntFlags)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I2\+C\+Slave\+Int\+Disable\+Ex (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Int\+Flags}
+\end{DoxyParamCaption}
+)}\hypertarget{group__i2c__api_ga99fc364d6ab5bfa82937baf24d72998a}{}\label{group__i2c__api_ga99fc364d6ab5bfa82937baf24d72998a}
+Disables individual I2C slave interrupt sources
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Int\+Flags} & is the bit mask of the interrupt sources to be disabled.\\
+\hline
+\end{DoxyParams}
+This function disables the indicated I2C slave interrupt sources. Only the sources that are enabled can be reflected to the processor interrupt; disabled sources have no effect on the processor.
+
+The {\itshape ui32\+Int\+Flags} parameter has the same definition as the {\itshape ui32\+Int\+Flags} parameter to \hyperlink{group__i2c__api_gab494128420a09f0b7c655abc87f8abef}{I2\+C\+Slave\+Int\+Enable\+Ex()}.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 407 of file i2c\+\_\+lib.\+c.
+
+\index{I2c\+\_\+api@{I2c\+\_\+api}!I2\+C\+Slave\+Int\+Enable@{I2\+C\+Slave\+Int\+Enable}}
+\index{I2\+C\+Slave\+Int\+Enable@{I2\+C\+Slave\+Int\+Enable}!I2c\+\_\+api@{I2c\+\_\+api}}
+\subsubsection[{\texorpdfstring{I2\+C\+Slave\+Int\+Enable(void)}{I2CSlaveIntEnable(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I2\+C\+Slave\+Int\+Enable (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__i2c__api_ga8fa9624c175df164a71363cd166e2334}{}\label{group__i2c__api_ga8fa9624c175df164a71363cd166e2334}
+Enables the I2C Slave interrupt
+
+This function enables the I2C Slave interrupt source.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 318 of file i2c\+\_\+lib.\+c.
+
+\index{I2c\+\_\+api@{I2c\+\_\+api}!I2\+C\+Slave\+Int\+Enable\+Ex@{I2\+C\+Slave\+Int\+Enable\+Ex}}
+\index{I2\+C\+Slave\+Int\+Enable\+Ex@{I2\+C\+Slave\+Int\+Enable\+Ex}!I2c\+\_\+api@{I2c\+\_\+api}}
+\subsubsection[{\texorpdfstring{I2\+C\+Slave\+Int\+Enable\+Ex(uint32\+\_\+t ui32\+Int\+Flags)}{I2CSlaveIntEnableEx(uint32_t ui32IntFlags)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I2\+C\+Slave\+Int\+Enable\+Ex (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Int\+Flags}
+\end{DoxyParamCaption}
+)}\hypertarget{group__i2c__api_gab494128420a09f0b7c655abc87f8abef}{}\label{group__i2c__api_gab494128420a09f0b7c655abc87f8abef}
+Enables individual I2C slave interrupt sources
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Int\+Flags} & is the bit mask of the interrupt sources to be enabled.\\
+\hline
+\end{DoxyParams}
+This function enables the indicated I2C slave interrupt sources. Only the sources that are enabled can be reflected to the processor interrupt; disabled sources have no effect on the processor.
+
+The {\itshape ui32\+Int\+Flags} parameter is the logical OR of any of the following\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+N\+T\+\_\+\+S\+T\+OP} Stop condition detected interrupt
+\item {\bfseries I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+RT} Start condition detected interrupt
+\item {\bfseries I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+N\+T\+\_\+\+D\+A\+TA} Data interrupt
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 346 of file i2c\+\_\+lib.\+c.
+
+\index{I2c\+\_\+api@{I2c\+\_\+api}!I2\+C\+Slave\+Int\+Status@{I2\+C\+Slave\+Int\+Status}}
+\index{I2\+C\+Slave\+Int\+Status@{I2\+C\+Slave\+Int\+Status}!I2c\+\_\+api@{I2c\+\_\+api}}
+\subsubsection[{\texorpdfstring{I2\+C\+Slave\+Int\+Status(bool b\+Masked)}{I2CSlaveIntStatus(bool bMasked)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} I2\+C\+Slave\+Int\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{b\+Masked}
+\end{DoxyParamCaption}
+)}\hypertarget{group__i2c__api_gaba86c1d914f9f6941249f3745e6fa0ab}{}\label{group__i2c__api_gaba86c1d914f9f6941249f3745e6fa0ab}
+Gets the current I2C slave interrupt status
+
+
+\begin{DoxyParams}{Parameters}
+{\em b\+Masked} & is false if the raw interrupt status is requested and true if the masked interrupt status is requested.\\
+\hline
+\end{DoxyParams}
+This function returns the interrupt status for the I2C slave module. Either the raw interrupt status or the status of interrupts that are allowed to reflect to the processor can be returned.
+
+\begin{DoxyReturn}{Returns}
+Returns the current interrupt status, returned as {\bfseries true} if active or {\bfseries false} if not active. 
+\end{DoxyReturn}
+
+
+Definition at line 463 of file i2c\+\_\+lib.\+c.
+
+\index{I2c\+\_\+api@{I2c\+\_\+api}!I2\+C\+Slave\+Int\+Status\+Ex@{I2\+C\+Slave\+Int\+Status\+Ex}}
+\index{I2\+C\+Slave\+Int\+Status\+Ex@{I2\+C\+Slave\+Int\+Status\+Ex}!I2c\+\_\+api@{I2c\+\_\+api}}
+\subsubsection[{\texorpdfstring{I2\+C\+Slave\+Int\+Status\+Ex(bool b\+Masked)}{I2CSlaveIntStatusEx(bool bMasked)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} I2\+C\+Slave\+Int\+Status\+Ex (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{b\+Masked}
+\end{DoxyParamCaption}
+)}\hypertarget{group__i2c__api_ga3ba869ee9bb1ecbd6335c998f2670f7d}{}\label{group__i2c__api_ga3ba869ee9bb1ecbd6335c998f2670f7d}
+Gets the current I2C slave interrupt status
+
+
+\begin{DoxyParams}{Parameters}
+{\em b\+Masked} & is false if the raw interrupt status is requested and true if the masked interrupt status is requested.\\
+\hline
+\end{DoxyParams}
+This function returns the interrupt status for the I2C slave module. Either the raw interrupt status or the status of interrupts that are allowed to reflect to the processor can be returned.
+
+\begin{DoxyReturn}{Returns}
+Returns the current interrupt status, enumerated as a bit field of values described in \hyperlink{group__i2c__api_gab494128420a09f0b7c655abc87f8abef}{I2\+C\+Slave\+Int\+Enable\+Ex()}. 
+\end{DoxyReturn}
+
+
+Definition at line 495 of file i2c\+\_\+lib.\+c.
+
+\index{I2c\+\_\+api@{I2c\+\_\+api}!I2\+C\+Slave\+Status@{I2\+C\+Slave\+Status}}
+\index{I2\+C\+Slave\+Status@{I2\+C\+Slave\+Status}!I2c\+\_\+api@{I2c\+\_\+api}}
+\subsubsection[{\texorpdfstring{I2\+C\+Slave\+Status(void)}{I2CSlaveStatus(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} I2\+C\+Slave\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__i2c__api_ga54348958f4ebd7ab18dd1216c04ecf4a}{}\label{group__i2c__api_ga54348958f4ebd7ab18dd1216c04ecf4a}
+Gets the I2C slave module status
+
+This function returns the action requested from a master, if any. Possible values are\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+N\+O\+NE} 
+\item {\bfseries I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+R\+R\+EQ} 
+\item {\bfseries I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+T\+R\+EQ} 
+\item {\bfseries I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+R\+R\+E\+Q\+\_\+\+F\+BR} 
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+Returns {\bfseries I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+N\+O\+NE} to indicate that no action has been requested of the I2C slave module, {\bfseries I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+R\+R\+EQ} to indicate that an I2C master has sent data to the I2C slave module, {\bfseries I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+T\+R\+EQ} to indicate that an I2C master has requested that the I2C slave module send data, and {\bfseries I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+A\+C\+T\+\_\+\+R\+R\+E\+Q\+\_\+\+F\+BR} to indicate that an I2C master has sent data to the I2C slave and the first byte following the address of the slave has been received. 
+\end{DoxyReturn}
+
+
+Definition at line 847 of file i2c\+\_\+lib.\+c.
+

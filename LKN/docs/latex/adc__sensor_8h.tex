@@ -1,0 +1,75 @@
+\hypertarget{adc__sensor_8h}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/adc\+\_\+sensor.h File Reference}
+\label{adc__sensor_8h}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/adc\+\_\+sensor.\+h@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/adc\+\_\+sensor.\+h}}
+{\ttfamily \#include \char`\"{}board\+\_\+info.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{adc__sensor_8h_ad113637a23e84776ca17e5c0b080f5d5}{adc\+\_\+sensor\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Declaration of the Open\+Mote-\/\+C\+C2538 A\+DC temperature sensor driver. \end{DoxyCompactList}\item 
+\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} \hyperlink{adc__sensor_8h_a38e5f40027f7aa684ecc11fd4e1fea54}{adc\+\_\+sens\+\_\+read\+\_\+temperature} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Read rough data from sensor. \end{DoxyCompactList}\item 
+float \hyperlink{adc__sensor_8h_a4a11f5be9c34a3870bd7b5a6109487cd}{adc\+\_\+sens\+\_\+convert\+\_\+temperature} (\hyperlink{_p_e___types_8h_a1f1825b69244eb3ad2c7165ddc99c956}{uint16\+\_\+t} cputemp)
+\begin{DoxyCompactList}\small\item\em Convert rough data to human understandable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{adc\+\_\+sensor.\+h@{adc\+\_\+sensor.\+h}!adc\+\_\+sens\+\_\+convert\+\_\+temperature@{adc\+\_\+sens\+\_\+convert\+\_\+temperature}}
+\index{adc\+\_\+sens\+\_\+convert\+\_\+temperature@{adc\+\_\+sens\+\_\+convert\+\_\+temperature}!adc\+\_\+sensor.\+h@{adc\+\_\+sensor.\+h}}
+\subsubsection[{\texorpdfstring{adc\+\_\+sens\+\_\+convert\+\_\+temperature(uint16\+\_\+t cputemp)}{adc_sens_convert_temperature(uint16_t cputemp)}}]{\setlength{\rightskip}{0pt plus 5cm}float adc\+\_\+sens\+\_\+convert\+\_\+temperature (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t}}]{cputemp}
+\end{DoxyParamCaption}
+)}\hypertarget{adc__sensor_8h_a4a11f5be9c34a3870bd7b5a6109487cd}{}\label{adc__sensor_8h_a4a11f5be9c34a3870bd7b5a6109487cd}
+
+
+Convert rough data to human understandable. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em cputemp} & rough data. \\
+\hline
+\mbox{\tt out}  & {\em the} & number of registered Open\+Sensors. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 52 of file adc\+\_\+sensor.\+c.
+
+\index{adc\+\_\+sensor.\+h@{adc\+\_\+sensor.\+h}!adc\+\_\+sens\+\_\+read\+\_\+temperature@{adc\+\_\+sens\+\_\+read\+\_\+temperature}}
+\index{adc\+\_\+sens\+\_\+read\+\_\+temperature@{adc\+\_\+sens\+\_\+read\+\_\+temperature}!adc\+\_\+sensor.\+h@{adc\+\_\+sensor.\+h}}
+\subsubsection[{\texorpdfstring{adc\+\_\+sens\+\_\+read\+\_\+temperature(void)}{adc_sens_read_temperature(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\+\_\+t} adc\+\_\+sens\+\_\+read\+\_\+temperature (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{adc__sensor_8h_a38e5f40027f7aa684ecc11fd4e1fea54}{}\label{adc__sensor_8h_a38e5f40027f7aa684ecc11fd4e1fea54}
+
+
+Read rough data from sensor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em ui16\+Dummy} & rough data. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 38 of file adc\+\_\+sensor.\+c.
+
+\index{adc\+\_\+sensor.\+h@{adc\+\_\+sensor.\+h}!adc\+\_\+sensor\+\_\+init@{adc\+\_\+sensor\+\_\+init}}
+\index{adc\+\_\+sensor\+\_\+init@{adc\+\_\+sensor\+\_\+init}!adc\+\_\+sensor.\+h@{adc\+\_\+sensor.\+h}}
+\subsubsection[{\texorpdfstring{adc\+\_\+sensor\+\_\+init(void)}{adc_sensor_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} adc\+\_\+sensor\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{adc__sensor_8h_ad113637a23e84776ca17e5c0b080f5d5}{}\label{adc__sensor_8h_ad113637a23e84776ca17e5c0b080f5d5}
+
+
+Declaration of the Open\+Mote-\/\+C\+C2538 A\+DC temperature sensor driver. 
+
+\begin{DoxyAuthor}{Author}
+Nicola Accettura \href{mailto:nicola.accettura@eecs.berkeley.edu}{\tt nicola.\+accettura@eecs.\+berkeley.\+edu}, March 2015.
+\end{DoxyAuthor}
+Declaration of the Open\+Mote-\/\+C\+C2538 A\+DC temperature sensor driver. 
+
+Definition at line 27 of file adc\+\_\+sensor.\+c.
+

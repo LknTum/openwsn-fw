@@ -1,0 +1,1554 @@
+\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/agilefox/library/src/stm32f10x\+\_\+tim.c File Reference}
+\label{agilefox_2library_2src_2stm32f10x__tim_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/agilefox/library/src/stm32f10x\+\_\+tim.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+{\ttfamily \#include \char`\"{}stm32f10x\+\_\+tim.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stm32f10x\+\_\+rcc.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_ac18fbe79496f77ad0542a5c6e294c53d}{C\+R1\+\_\+\+C\+E\+N\+\_\+\+Set}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x0001)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a02a982a5dda4b0838f4d9b349d52f6c6}{C\+R1\+\_\+\+C\+E\+N\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x03\+F\+E)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a47817d9bbab4ac004ea5ad6279582880}{C\+R1\+\_\+\+U\+D\+I\+S\+\_\+\+Set}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x0002)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a703370bb14538c9c5418212d7c4bc7c4}{C\+R1\+\_\+\+U\+D\+I\+S\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x03\+F\+D)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a5e49e1b411e7549446c00085599f8097}{C\+R1\+\_\+\+U\+R\+S\+\_\+\+Set}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x0004)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_aac2672cb0750f864c04fbf605740a363}{C\+R1\+\_\+\+U\+R\+S\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x03\+F\+B)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a52863f5582d1300cfed3917c28fdd54c}{C\+R1\+\_\+\+O\+P\+M\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x03\+F7)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_abeee2af7fbf0a99ac964123e5bb18758}{C\+R1\+\_\+\+Counter\+Mode\+\_\+\+Mask}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x038\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a5e64ebe99ac687eca40ab1a4795ef14d}{C\+R1\+\_\+\+A\+R\+P\+E\+\_\+\+Set}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x0080)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_aedc0a58b1f45adc3516639c0ee2448ff}{C\+R1\+\_\+\+A\+R\+P\+E\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x037\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a538def6149c2f2ba4f51d460fa570e70}{C\+R1\+\_\+\+C\+K\+D\+\_\+\+Mask}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x00\+F\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_ada5e4738b732acf99d362c0354447553}{C\+R2\+\_\+\+C\+C\+P\+C\+\_\+\+Set}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x0001)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_aedff26fc7326f8615a1d26056f720dba}{C\+R2\+\_\+\+C\+C\+P\+C\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F\+F\+F\+E)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a1a865e975d4887a2914a55296318a5f5}{C\+R2\+\_\+\+C\+C\+U\+S\+\_\+\+Set}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x0004)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a70acd2545010ddd9504b79131c408a8a}{C\+R2\+\_\+\+C\+C\+U\+S\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F\+F\+F\+B)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a6ea9f533ad626499903c5f6a8cbd3f8d}{C\+R2\+\_\+\+C\+C\+D\+S\+\_\+\+Set}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x0008)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a71b1fc7b09f41839b1cf6419b5e65ca8}{C\+R2\+\_\+\+C\+C\+D\+S\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F\+F\+F7)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a1856105ab8e852476943e141754cf490}{C\+R2\+\_\+\+M\+M\+S\+\_\+\+Mask}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F\+F8\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a221c7c7e5f02b418bfd0079a8f804c6c}{C\+R2\+\_\+\+T\+I1\+S\+\_\+\+Set}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x0080)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_acb26375759d874e9bec6f41ecbb7a15c}{C\+R2\+\_\+\+T\+I1\+S\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F\+F7\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a776bfffad574604cc2dd78942f459b21}{C\+R2\+\_\+\+O\+I\+S1\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x7\+E\+F\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a13c40ed91ad0851dbdb238c234ba6167}{C\+R2\+\_\+\+O\+I\+S1\+N\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x7\+D\+F\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a75375e2c2664894bab7bfd1747f5ef16}{C\+R2\+\_\+\+O\+I\+S2\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x7\+B\+F\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_afbb985ba0db913d5a9628795e89d0e50}{C\+R2\+\_\+\+O\+I\+S2\+N\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x77\+F\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a4b911f9f36284fcb32b6a9ce1719b9ca}{C\+R2\+\_\+\+O\+I\+S3\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x6\+F\+F\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_ac518739d1d528bbc9ffa4c97d79106b5}{C\+R2\+\_\+\+O\+I\+S3\+N\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x5\+F\+F\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a1ad1790338a847a3c93e7097fc9f0cd6}{C\+R2\+\_\+\+O\+I\+S4\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x3\+F\+F\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_aaf5725e139cf4b4fd6435ad976b42c01}{S\+M\+C\+R\+\_\+\+S\+M\+S\+\_\+\+Mask}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F\+F\+F8)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a43819484b70fd8f2f2aa02d4131c9841}{S\+M\+C\+R\+\_\+\+E\+T\+R\+\_\+\+Mask}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x00\+F\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_ad1ac0bc658a0b58c10eb165ee6fb680c}{S\+M\+C\+R\+\_\+\+T\+S\+\_\+\+Mask}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F\+F8\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a7ae6b3dd3548086e3cd7b11e8d0ec8a1}{S\+M\+C\+R\+\_\+\+M\+S\+M\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F\+F7\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_aafac3a652fab0b08a46a5573e175d036}{S\+M\+C\+R\+\_\+\+E\+C\+E\+\_\+\+Set}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x4000)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a32c366a9099df870d239a06872cfee55}{C\+C\+M\+R\+\_\+\+C\+C13\+S\+\_\+\+Mask}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F\+F\+F\+C)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a0c2ba99068a6cd6b414904d6eb420464}{C\+C\+M\+R\+\_\+\+C\+C24\+S\+\_\+\+Mask}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F\+C\+F\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a5a7105b0a0354355e49a871990ea9207}{C\+C\+M\+R\+\_\+\+T\+I13\+Direct\+\_\+\+Set}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x0001)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_ad46271ae5c7bcb0eb2e9774d0a6760a1}{C\+C\+M\+R\+\_\+\+T\+I24\+Direct\+\_\+\+Set}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x0100)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_ae08bb91e072d05319551819c666bae32}{C\+C\+M\+R\+\_\+\+O\+C13\+F\+E\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F\+F\+F\+B)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a49eea5c0195e7c00d0d857e7faf07c21}{C\+C\+M\+R\+\_\+\+O\+C24\+F\+E\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F\+B\+F\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a0adcd3e447236ec542f04d370c7c198f}{C\+C\+M\+R\+\_\+\+O\+C13\+P\+E\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F\+F\+F7)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a41087d7e196128a300027b0e64e6f988}{C\+C\+M\+R\+\_\+\+O\+C24\+P\+E\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F7\+F\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_acb6186909f79263506a6d98c4a894dc6}{C\+C\+M\+R\+\_\+\+O\+C13\+M\+\_\+\+Mask}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F\+F8\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_ab16aa61b9d4b6e04f49e9854d62762eb}{C\+C\+M\+R\+\_\+\+O\+C24\+M\+\_\+\+Mask}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x8\+F\+F\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a98bc8ff591eeb9ba9c904815560f2f4d}{C\+C\+M\+R\+\_\+\+O\+C13\+C\+E\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F\+F7\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a6186dce2e47580b09343d4e96e25445e}{C\+C\+M\+R\+\_\+\+O\+C24\+C\+E\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x7\+F\+F\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a135b5fae59e4fafa5aac5be77d5999ca}{C\+C\+M\+R\+\_\+\+I\+C13\+P\+S\+C\+\_\+\+Mask}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F\+F\+F3)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_ae717dce561974802cb770f0868954a33}{C\+C\+M\+R\+\_\+\+I\+C24\+P\+S\+C\+\_\+\+Mask}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F3\+F\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a133760bacec5ac07f9daf7a0b248ef0b}{C\+C\+M\+R\+\_\+\+I\+C13\+F\+\_\+\+Mask}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F\+F0\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a0481da3f85a1f67a61648e713e5bd973}{C\+C\+M\+R\+\_\+\+I\+C24\+F\+\_\+\+Mask}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x0\+F\+F\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a76469c9f56da4e7705336a6ac0248196}{C\+C\+M\+R\+\_\+\+Offset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x0018)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a17c4ed624aa62f19fd496c3f3bd61137}{C\+C\+E\+R\+\_\+\+C\+C\+E\+\_\+\+Set}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x0001)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a167dfdf613827d1fdf2e4152497b4bd5}{C\+C\+E\+R\+\_\+\+C\+C\+N\+E\+\_\+\+Set}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x0004)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a65c8f38033acf1f5cadb1a4c59fc2c33}{C\+C\+E\+R\+\_\+\+C\+C1\+P\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F\+F\+F\+D)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a621d694025fc1ff69b45df2c3e087a78}{C\+C\+E\+R\+\_\+\+C\+C2\+P\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F\+F\+D\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a14de79a9016495e222503d90f4155219}{C\+C\+E\+R\+\_\+\+C\+C3\+P\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F\+D\+F\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a6ad098d5a7eedd0530c6bd5633ad7c94}{C\+C\+E\+R\+\_\+\+C\+C4\+P\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+D\+F\+F\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a43961996ba5977f458e59fba93585f7a}{C\+C\+E\+R\+\_\+\+C\+C1\+N\+P\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F\+F\+F7)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a540f8397e415170856f5b5d4b1738930}{C\+C\+E\+R\+\_\+\+C\+C2\+N\+P\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F\+F7\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a0cd784bce174af224bc3c73089ecc44c}{C\+C\+E\+R\+\_\+\+C\+C3\+N\+P\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F7\+F\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a2eed6d77d832f4df8f5b52b3259f45ce}{C\+C\+E\+R\+\_\+\+C\+C1\+E\+\_\+\+Set}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x0001)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a5a7f6b403ee529e7d997b1111d03ad4a}{C\+C\+E\+R\+\_\+\+C\+C1\+E\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F\+F\+F\+E)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_ad09a5fb2b4ff4ab50f1233eefbd22b6a}{C\+C\+E\+R\+\_\+\+C\+C1\+N\+E\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F\+F\+F\+B)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_aadebfb2b853f388522a66b1875fef963}{C\+C\+E\+R\+\_\+\+C\+C2\+E\+\_\+\+Set}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x0010)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a5b2b07b37959ca598f6a91c06b7966ef}{C\+C\+E\+R\+\_\+\+C\+C2\+E\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F\+F\+E\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a9fc725e8030a1cb63803e645630bcfc3}{C\+C\+E\+R\+\_\+\+C\+C2\+N\+E\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F\+F\+B\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a9ea867afa9a0ec6c16acd89be22c70ac}{C\+C\+E\+R\+\_\+\+C\+C3\+E\+\_\+\+Set}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x0100)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_af2713f1b8c70989059e706908bd82be2}{C\+C\+E\+R\+\_\+\+C\+C3\+E\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F\+E\+F\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a23bd9dc014fe362f37d0572c15895421}{C\+C\+E\+R\+\_\+\+C\+C3\+N\+E\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+F\+B\+F\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a2b9c9ebf876b571224824038b06a4e1b}{C\+C\+E\+R\+\_\+\+C\+C4\+E\+\_\+\+Set}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x1000)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a20e43ce83aef8595d90526f1116d811b}{C\+C\+E\+R\+\_\+\+C\+C4\+E\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x\+E\+F\+F\+F)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a2e5d5f3d039f6966ba6d3a8e92ca41df}{B\+D\+T\+R\+\_\+\+M\+O\+E\+\_\+\+Set}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x8000)
+\item 
+\#define \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a6ebf2c6795809b4c33e65e2ca8e54ef4}{B\+D\+T\+R\+\_\+\+M\+O\+E\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16})0x7\+F\+F\+F)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___t_i_m___exported___functions_ga1659cc0ce503ac151568e0c7c02b1ba5}{T\+I\+M\+\_\+\+De\+Init} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx)
+\begin{DoxyCompactList}\small\item\em Deinitializes the T\+I\+Mx peripheral registers to their default reset values. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___t_i_m___exported___functions_ga83fd58c9416802d9638bbe1715c98932}{T\+I\+M\+\_\+\+Time\+Base\+Init} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{struct_t_i_m___time_base_init_type_def}{T\+I\+M\+\_\+\+Time\+Base\+Init\+Type\+Def} $\ast$T\+I\+M\+\_\+\+Time\+Base\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Initializes the T\+I\+Mx Time Base Unit peripheral according to the specified parameters in the T\+I\+M\+\_\+\+Time\+Base\+Init\+Struct. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___t_i_m___exported___functions_gafcdb6ff00158862aef7fed5e7a554a3e}{T\+I\+M\+\_\+\+O\+C1\+Init} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{struct_t_i_m___o_c_init_type_def}{T\+I\+M\+\_\+\+O\+C\+Init\+Type\+Def} $\ast$T\+I\+M\+\_\+\+O\+C\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Initializes the T\+I\+Mx Channel1 according to the specified parameters in the T\+I\+M\+\_\+\+O\+C\+Init\+Struct. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___t_i_m___exported___functions_ga2017455121d910d6ff63ac6f219842c5}{T\+I\+M\+\_\+\+O\+C2\+Init} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{struct_t_i_m___o_c_init_type_def}{T\+I\+M\+\_\+\+O\+C\+Init\+Type\+Def} $\ast$T\+I\+M\+\_\+\+O\+C\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Initializes the T\+I\+Mx Channel2 according to the specified parameters in the T\+I\+M\+\_\+\+O\+C\+Init\+Struct. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___t_i_m___exported___functions_ga90d4a358d4e6d4c5ed17dc1d6beb5f30}{T\+I\+M\+\_\+\+O\+C3\+Init} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{struct_t_i_m___o_c_init_type_def}{T\+I\+M\+\_\+\+O\+C\+Init\+Type\+Def} $\ast$T\+I\+M\+\_\+\+O\+C\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Initializes the T\+I\+Mx Channel3 according to the specified parameters in the T\+I\+M\+\_\+\+O\+C\+Init\+Struct. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___t_i_m___exported___functions_ga64571ebbb58cac39a9e760050175f11c}{T\+I\+M\+\_\+\+O\+C4\+Init} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{struct_t_i_m___o_c_init_type_def}{T\+I\+M\+\_\+\+O\+C\+Init\+Type\+Def} $\ast$T\+I\+M\+\_\+\+O\+C\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Initializes the T\+I\+Mx Channel4 according to the specified parameters in the T\+I\+M\+\_\+\+O\+C\+Init\+Struct. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___t_i_m___exported___functions_ga9e6a153dd6552e4e1188eba227316f7f}{T\+I\+M\+\_\+\+I\+C\+Init} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{struct_t_i_m___i_c_init_type_def}{T\+I\+M\+\_\+\+I\+C\+Init\+Type\+Def} $\ast$T\+I\+M\+\_\+\+I\+C\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Initializes the T\+IM peripheral according to the specified parameters in the T\+I\+M\+\_\+\+I\+C\+Init\+Struct. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___t_i_m___exported___functions_gaa71f9296556310f85628d6c748a06475}{T\+I\+M\+\_\+\+P\+W\+M\+I\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{struct_t_i_m___i_c_init_type_def}{T\+I\+M\+\_\+\+I\+C\+Init\+Type\+Def} $\ast$T\+I\+M\+\_\+\+I\+C\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Configures the T\+IM peripheral according to the specified parameters in the T\+I\+M\+\_\+\+I\+C\+Init\+Struct to measure an external P\+WM signal. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___t_i_m___exported___functions_ga3df4ba3f0727f63ce621e2b2e6035d4f}{T\+I\+M\+\_\+\+B\+D\+T\+R\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{struct_t_i_m___b_d_t_r_init_type_def}{T\+I\+M\+\_\+\+B\+D\+T\+R\+Init\+Type\+Def} $\ast$T\+I\+M\+\_\+\+B\+D\+T\+R\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Configures the\+: Break feature, dead time, Lock level, the O\+S\+SI, the O\+S\+SR State and the A\+O\+E(automatic output enable). \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___t_i_m___exported___functions_ga1556a0b9a5d53506875fd7de0cbc6b1f}{T\+I\+M\+\_\+\+Time\+Base\+Struct\+Init} (\hyperlink{struct_t_i_m___time_base_init_type_def}{T\+I\+M\+\_\+\+Time\+Base\+Init\+Type\+Def} $\ast$T\+I\+M\+\_\+\+Time\+Base\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Fills each T\+I\+M\+\_\+\+Time\+Base\+Init\+Struct member with its default value. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___t_i_m___exported___functions_ga394683c78ae02837882e36014e11643e}{T\+I\+M\+\_\+\+O\+C\+Struct\+Init} (\hyperlink{struct_t_i_m___o_c_init_type_def}{T\+I\+M\+\_\+\+O\+C\+Init\+Type\+Def} $\ast$T\+I\+M\+\_\+\+O\+C\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Fills each T\+I\+M\+\_\+\+O\+C\+Init\+Struct member with its default value. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___t_i_m___exported___functions_ga5005dac8e4e8a4c7fc2a0ef05b77cc50}{T\+I\+M\+\_\+\+I\+C\+Struct\+Init} (\hyperlink{struct_t_i_m___i_c_init_type_def}{T\+I\+M\+\_\+\+I\+C\+Init\+Type\+Def} $\ast$T\+I\+M\+\_\+\+I\+C\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Fills each T\+I\+M\+\_\+\+I\+C\+Init\+Struct member with its default value. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___t_i_m___exported___functions_gaea0f49938cda8ae0738162194798afc6}{T\+I\+M\+\_\+\+B\+D\+T\+R\+Struct\+Init} (\hyperlink{struct_t_i_m___b_d_t_r_init_type_def}{T\+I\+M\+\_\+\+B\+D\+T\+R\+Init\+Type\+Def} $\ast$T\+I\+M\+\_\+\+B\+D\+T\+R\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Fills each T\+I\+M\+\_\+\+B\+D\+T\+R\+Init\+Struct member with its default value. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___t_i_m___exported___functions_ga2bdc275bcbd2ce9d1ba632e6c89896b7}{T\+I\+M\+\_\+\+Cmd} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_ac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} New\+State)
+\begin{DoxyCompactList}\small\item\em Enables or disables the specified T\+IM peripheral. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___t_i_m___exported___functions_ga3e59ebced2ab8e0b817c460f1670e97d}{T\+I\+M\+\_\+\+Ctrl\+P\+W\+M\+Outputs} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_ac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} New\+State)
+\begin{DoxyCompactList}\small\item\em Enables or disables the T\+IM peripheral Main Outputs. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a42967f9b08dc149346cc72e699110184}{T\+I\+M\+\_\+\+I\+T\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+IT, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_ac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} New\+State)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a0d8fd398f0152cbca30efd6dfcebeb1b}{T\+I\+M\+\_\+\+Generate\+Event} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+Event\+Source)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a7e3de141bdf5ae70f4a04853f6cf1590}{T\+I\+M\+\_\+\+D\+M\+A\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+D\+M\+A\+Base, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+D\+M\+A\+Burst\+Length)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_ac961275a78de716feca693d4aa98a626}{T\+I\+M\+\_\+\+D\+M\+A\+Cmd} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+D\+M\+A\+Source, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_ac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} New\+State)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___t_i_m___exported___functions_ga2394f0221709c0659874f9a4184cf86e}{T\+I\+M\+\_\+\+Internal\+Clock\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx)
+\begin{DoxyCompactList}\small\item\em Configures the T\+I\+Mx internal Clock. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_ae23c75f2714f5f7d527312b80f10edcc}{T\+I\+M\+\_\+\+I\+T\+Rx\+External\+Clock\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+Input\+Trigger\+Source)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a89ab1b52bca32f8b4074a29c6df72b6c}{T\+I\+M\+\_\+\+T\+Ix\+External\+Clock\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+T\+Ix\+External\+C\+L\+K\+Source, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+I\+C\+Polarity, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} I\+C\+Filter)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a32ec2e6c9473c796c7fbbaec98d83104}{T\+I\+M\+\_\+\+E\+T\+R\+Clock\+Mode1\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+Ext\+T\+R\+G\+Prescaler, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+Ext\+T\+R\+G\+Polarity, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} Ext\+T\+R\+G\+Filter)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_ab27b1e3f2118eca505f77ef82471b4c6}{T\+I\+M\+\_\+\+E\+T\+R\+Clock\+Mode2\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+Ext\+T\+R\+G\+Prescaler, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+Ext\+T\+R\+G\+Polarity, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} Ext\+T\+R\+G\+Filter)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a53ccd2ccc46844ca32f28406956030c8}{T\+I\+M\+\_\+\+E\+T\+R\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+Ext\+T\+R\+G\+Prescaler, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+Ext\+T\+R\+G\+Polarity, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} Ext\+T\+R\+G\+Filter)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a2dfb5d67b00b5ce78bf2cacbe99ca977}{T\+I\+M\+\_\+\+Prescaler\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} Prescaler, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+P\+S\+C\+Reload\+Mode)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a8659326e5208148d2d97897beb625e65}{T\+I\+M\+\_\+\+Counter\+Mode\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+Counter\+Mode)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a7839f297b973f919caf3d9018a55b198}{T\+I\+M\+\_\+\+Select\+Input\+Trigger} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+Input\+Trigger\+Source)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a19bacbc681216fa072a6998a8eba6a63}{T\+I\+M\+\_\+\+Encoder\+Interface\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+Encoder\+Mode, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+I\+C1\+Polarity, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+I\+C2\+Polarity)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a44810f769a54b18a3084409530a8af6c}{T\+I\+M\+\_\+\+Forced\+O\+C1\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+Forced\+Action)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a510b82c065ed5fe01ed6eb16742de90d}{T\+I\+M\+\_\+\+Forced\+O\+C2\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+Forced\+Action)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a4c03c0a169f7d2e49a0d4d627957aaf5}{T\+I\+M\+\_\+\+Forced\+O\+C3\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+Forced\+Action)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a497b2f93b97f562ac12357d84b138c32}{T\+I\+M\+\_\+\+Forced\+O\+C4\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+Forced\+Action)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___t_i_m___exported___functions_ga42b44b9fc2b0798d733720dd6bac1ac0}{T\+I\+M\+\_\+\+A\+R\+R\+Preload\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_ac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} New\+State)
+\begin{DoxyCompactList}\small\item\em Enables or disables T\+I\+Mx peripheral Preload register on A\+RR. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___t_i_m___exported___functions_gaff2e7f9959b1b36e830df028c14accc8}{T\+I\+M\+\_\+\+Select\+C\+OM} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_ac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} New\+State)
+\begin{DoxyCompactList}\small\item\em Selects the T\+IM peripheral Commutation event. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___t_i_m___exported___functions_ga5273cb65acb885fe7982827b1c6b7d75}{T\+I\+M\+\_\+\+Select\+C\+C\+D\+MA} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_ac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} New\+State)
+\begin{DoxyCompactList}\small\item\em Selects the T\+I\+Mx peripheral Capture Compare D\+MA source. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___t_i_m___exported___functions_ga0a935254e44312b1d78e8684a58db3c1}{T\+I\+M\+\_\+\+C\+C\+Preload\+Control} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_ac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} New\+State)
+\begin{DoxyCompactList}\small\item\em Sets or Resets the T\+IM peripheral Capture Compare Preload Control bit. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_aa0dce2a8c2a39de75ed329ec66221fb1}{T\+I\+M\+\_\+\+O\+C1\+Preload\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+O\+C\+Preload)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a82e515fc2e35591b935df1703df32cb1}{T\+I\+M\+\_\+\+O\+C2\+Preload\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+O\+C\+Preload)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a1fef39a919a791ab4581222172422c00}{T\+I\+M\+\_\+\+O\+C3\+Preload\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+O\+C\+Preload)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_ae43879b2803ebba1b6fe9442aa13f82e}{T\+I\+M\+\_\+\+O\+C4\+Preload\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+O\+C\+Preload)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a73409668c0e20fdfaa7a695a98862fa5}{T\+I\+M\+\_\+\+O\+C1\+Fast\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+O\+C\+Fast)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_ab76706a969184d577e392ef9df24ec59}{T\+I\+M\+\_\+\+O\+C2\+Fast\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+O\+C\+Fast)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a656195e8477b82de0d67e4a0fbf74100}{T\+I\+M\+\_\+\+O\+C3\+Fast\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+O\+C\+Fast)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a65f4006d25d77e0c6bf4822280ed6075}{T\+I\+M\+\_\+\+O\+C4\+Fast\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+O\+C\+Fast)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_afccf4b46c777a14d2f4c18cbd3d57b99}{T\+I\+M\+\_\+\+Clear\+O\+C1\+Ref} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+O\+C\+Clear)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a05f1e18871869f114981f2a92b2e4c7f}{T\+I\+M\+\_\+\+Clear\+O\+C2\+Ref} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+O\+C\+Clear)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_af8e1a9098ba6d13caa325f11896bdf12}{T\+I\+M\+\_\+\+Clear\+O\+C3\+Ref} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+O\+C\+Clear)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a2fabb6a316cc4490823c08af173f9877}{T\+I\+M\+\_\+\+Clear\+O\+C4\+Ref} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+O\+C\+Clear)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_ac96b0230495fe17f8fff942375586f09}{T\+I\+M\+\_\+\+O\+C1\+Polarity\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+O\+C\+Polarity)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a8eecb7d018e7211413a496b5a6c456ac}{T\+I\+M\+\_\+\+O\+C1\+N\+Polarity\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+O\+C\+N\+Polarity)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a9b4541f4366cb9ed0084344b324c9958}{T\+I\+M\+\_\+\+O\+C2\+Polarity\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+O\+C\+Polarity)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_ac3099cedfab44efd0aea96d1cd80c2bb}{T\+I\+M\+\_\+\+O\+C2\+N\+Polarity\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+O\+C\+N\+Polarity)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a0d835bbd759dead2ff8c3c6a30c257e7}{T\+I\+M\+\_\+\+O\+C3\+Polarity\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+O\+C\+Polarity)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_ae4c853a559aa72b65878fad7eebd624d}{T\+I\+M\+\_\+\+O\+C3\+N\+Polarity\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+O\+C\+N\+Polarity)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a8df11deb5514519bb3192dfdaaf96f5e}{T\+I\+M\+\_\+\+O\+C4\+Polarity\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+O\+C\+Polarity)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_aeeef2c74f0da2b651fe7fcf7cad39b2a}{T\+I\+M\+\_\+\+C\+Cx\+Cmd} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+Channel, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+C\+Cx)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a8fd04c222bcc3c68d0687e8f87254859}{T\+I\+M\+\_\+\+C\+Cx\+N\+Cmd} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+Channel, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+C\+CxN)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a08970d171728172b651afb40bea5450c}{T\+I\+M\+\_\+\+Select\+O\+CxM} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+Channel, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+O\+C\+Mode)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___t_i_m___exported___functions_gace2384dd33e849a054f61b8e1fc7e7c3}{T\+I\+M\+\_\+\+Update\+Disable\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_ac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} New\+State)
+\begin{DoxyCompactList}\small\item\em Enables or Disables the T\+I\+Mx Update event. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_ae9520f93707e6dce84be94a4a586a394}{T\+I\+M\+\_\+\+Update\+Request\+Config} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+Update\+Source)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___t_i_m___exported___functions_ga42c2d1025a3937c9d9f38631af86ffa4}{T\+I\+M\+\_\+\+Select\+Hall\+Sensor} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_ac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} New\+State)
+\begin{DoxyCompactList}\small\item\em Enables or disables the T\+I\+Mx\textquotesingle{}s Hall sensor interface. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_ad2d707cecdaf745a5de8804af146da7c}{T\+I\+M\+\_\+\+Select\+One\+Pulse\+Mode} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+O\+P\+Mode)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_aa3c433d0fece419c0d0c14dbe12542ae}{T\+I\+M\+\_\+\+Select\+Output\+Trigger} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+T\+R\+G\+O\+Source)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_ac0fbaf936965b8ea5b3167a9b74ae79b}{T\+I\+M\+\_\+\+Select\+Slave\+Mode} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+Slave\+Mode)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_abf157dc686630ac6b652c0b89a3c2e63}{T\+I\+M\+\_\+\+Select\+Master\+Slave\+Mode} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+Master\+Slave\+Mode)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_ae574e7d4b63b3c7076b8ce6ac42ad849}{T\+I\+M\+\_\+\+Set\+Counter} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} Counter)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a6fe279e57247752e9aa675fafa0ef668}{T\+I\+M\+\_\+\+Set\+Autoreload} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} Autoreload)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_ac6bdeafcb904d30a1262b1e0c743dd76}{T\+I\+M\+\_\+\+Set\+Compare1} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} Compare1)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a45acec34cc0967864e51a4cdf9f94457}{T\+I\+M\+\_\+\+Set\+Compare2} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} Compare2)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_ae646fc198387123426d400e9d17fb4fa}{T\+I\+M\+\_\+\+Set\+Compare3} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} Compare3)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a1a2b18f149e3992df52e18c7e82b517b}{T\+I\+M\+\_\+\+Set\+Compare4} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} Compare4)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_ab7a8a7a17dbbb9f7cafe4a14ab5883a4}{T\+I\+M\+\_\+\+Set\+I\+C1\+Prescaler} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+I\+C\+P\+SC)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a4d129af8043d59993c008568f70e93ab}{T\+I\+M\+\_\+\+Set\+I\+C2\+Prescaler} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+I\+C\+P\+SC)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a6e0105e34ca4cb8d4128e121d4a7f31c}{T\+I\+M\+\_\+\+Set\+I\+C3\+Prescaler} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+I\+C\+P\+SC)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a7ab03cac37efa31da6bfb4c9c9c68498}{T\+I\+M\+\_\+\+Set\+I\+C4\+Prescaler} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+I\+C\+P\+SC)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_aea2d92475510376e3f5ef1cb6bb2aaaa}{T\+I\+M\+\_\+\+Set\+Clock\+Division} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+C\+KD)
+\item 
+\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} \hyperlink{group___t_i_m___exported___functions_ga29eb9f7151ceea94c3988539a5ee91cf}{T\+I\+M\+\_\+\+Get\+Capture1} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx)
+\begin{DoxyCompactList}\small\item\em Gets the T\+I\+Mx Input Capture 1 value. \end{DoxyCompactList}\item 
+\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} \hyperlink{group___t_i_m___exported___functions_ga437fcf00ee9d0a9df9150cc120efc5ad}{T\+I\+M\+\_\+\+Get\+Capture2} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx)
+\begin{DoxyCompactList}\small\item\em Gets the T\+I\+Mx Input Capture 2 value. \end{DoxyCompactList}\item 
+\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} \hyperlink{group___t_i_m___exported___functions_gab71d1d3d8a15f3be9e74dca51fcca5fa}{T\+I\+M\+\_\+\+Get\+Capture3} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx)
+\begin{DoxyCompactList}\small\item\em Gets the T\+I\+Mx Input Capture 3 value. \end{DoxyCompactList}\item 
+\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} \hyperlink{group___t_i_m___exported___functions_ga09049af04c8345849c6f82ccfae242a6}{T\+I\+M\+\_\+\+Get\+Capture4} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx)
+\begin{DoxyCompactList}\small\item\em Gets the T\+I\+Mx Input Capture 4 value. \end{DoxyCompactList}\item 
+\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} \hyperlink{group___t_i_m___exported___functions_gab6826b144ae70e206f51ae8af5318a93}{T\+I\+M\+\_\+\+Get\+Counter} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx)
+\begin{DoxyCompactList}\small\item\em Gets the T\+I\+Mx Counter value. \end{DoxyCompactList}\item 
+\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} \hyperlink{group___t_i_m___exported___functions_ga427eb6e533480e02a27cd0ca876183d6}{T\+I\+M\+\_\+\+Get\+Prescaler} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx)
+\begin{DoxyCompactList}\small\item\em Gets the T\+I\+Mx Prescaler value. \end{DoxyCompactList}\item 
+\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a89136caac2e14c55151f527ac02daaff}{Flag\+Status} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_af27ba3098f365ba121c47e4b8f563ffd}{T\+I\+M\+\_\+\+Get\+Flag\+Status} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+F\+L\+AG)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a3991326f06129117cf68ae147abbce2e}{T\+I\+M\+\_\+\+Clear\+Flag} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+F\+L\+AG)
+\item 
+\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_aacbd7ed539db0aacd973a0f6eca34074}{I\+T\+Status} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_a3944563cf9eb8613bb907489dd76cca1}{T\+I\+M\+\_\+\+Get\+I\+T\+Status} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+IT)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{agilefox_2library_2src_2stm32f10x__tim_8c_aa214e1cbbb7287d332c47b4a9168f0e8}{T\+I\+M\+\_\+\+Clear\+I\+T\+Pending\+Bit} (\hyperlink{struct_t_i_m___type_def}{T\+I\+M\+\_\+\+Type\+Def} $\ast$T\+I\+Mx, \hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16} T\+I\+M\+\_\+\+IT)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!B\+D\+T\+R\+\_\+\+M\+O\+E\+\_\+\+Reset@{B\+D\+T\+R\+\_\+\+M\+O\+E\+\_\+\+Reset}}
+\index{B\+D\+T\+R\+\_\+\+M\+O\+E\+\_\+\+Reset@{B\+D\+T\+R\+\_\+\+M\+O\+E\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{B\+D\+T\+R\+\_\+\+M\+O\+E\+\_\+\+Reset}{BDTR_MOE_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+D\+T\+R\+\_\+\+M\+O\+E\+\_\+\+Reset~(({\bf u16})0x7\+F\+F\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a6ebf2c6795809b4c33e65e2ca8e54ef4}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a6ebf2c6795809b4c33e65e2ca8e54ef4}
+
+
+Definition at line 109 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!B\+D\+T\+R\+\_\+\+M\+O\+E\+\_\+\+Set@{B\+D\+T\+R\+\_\+\+M\+O\+E\+\_\+\+Set}}
+\index{B\+D\+T\+R\+\_\+\+M\+O\+E\+\_\+\+Set@{B\+D\+T\+R\+\_\+\+M\+O\+E\+\_\+\+Set}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{B\+D\+T\+R\+\_\+\+M\+O\+E\+\_\+\+Set}{BDTR_MOE_Set}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+D\+T\+R\+\_\+\+M\+O\+E\+\_\+\+Set~(({\bf u16})0x8000)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a2e5d5f3d039f6966ba6d3a8e92ca41df}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a2e5d5f3d039f6966ba6d3a8e92ca41df}
+
+
+Definition at line 108 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+E\+R\+\_\+\+C\+C1\+E\+\_\+\+Reset@{C\+C\+E\+R\+\_\+\+C\+C1\+E\+\_\+\+Reset}}
+\index{C\+C\+E\+R\+\_\+\+C\+C1\+E\+\_\+\+Reset@{C\+C\+E\+R\+\_\+\+C\+C1\+E\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+E\+R\+\_\+\+C\+C1\+E\+\_\+\+Reset}{CCER_CC1E_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+E\+R\+\_\+\+C\+C1\+E\+\_\+\+Reset~(({\bf u16})0x\+F\+F\+F\+E)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a5a7f6b403ee529e7d997b1111d03ad4a}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a5a7f6b403ee529e7d997b1111d03ad4a}
+
+
+Definition at line 91 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+E\+R\+\_\+\+C\+C1\+E\+\_\+\+Set@{C\+C\+E\+R\+\_\+\+C\+C1\+E\+\_\+\+Set}}
+\index{C\+C\+E\+R\+\_\+\+C\+C1\+E\+\_\+\+Set@{C\+C\+E\+R\+\_\+\+C\+C1\+E\+\_\+\+Set}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+E\+R\+\_\+\+C\+C1\+E\+\_\+\+Set}{CCER_CC1E_Set}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+E\+R\+\_\+\+C\+C1\+E\+\_\+\+Set~(({\bf u16})0x0001)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a2eed6d77d832f4df8f5b52b3259f45ce}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a2eed6d77d832f4df8f5b52b3259f45ce}
+
+
+Definition at line 90 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+E\+R\+\_\+\+C\+C1\+N\+E\+\_\+\+Reset@{C\+C\+E\+R\+\_\+\+C\+C1\+N\+E\+\_\+\+Reset}}
+\index{C\+C\+E\+R\+\_\+\+C\+C1\+N\+E\+\_\+\+Reset@{C\+C\+E\+R\+\_\+\+C\+C1\+N\+E\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+E\+R\+\_\+\+C\+C1\+N\+E\+\_\+\+Reset}{CCER_CC1NE_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+E\+R\+\_\+\+C\+C1\+N\+E\+\_\+\+Reset~(({\bf u16})0x\+F\+F\+F\+B)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_ad09a5fb2b4ff4ab50f1233eefbd22b6a}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_ad09a5fb2b4ff4ab50f1233eefbd22b6a}
+
+
+Definition at line 93 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+E\+R\+\_\+\+C\+C1\+N\+P\+\_\+\+Reset@{C\+C\+E\+R\+\_\+\+C\+C1\+N\+P\+\_\+\+Reset}}
+\index{C\+C\+E\+R\+\_\+\+C\+C1\+N\+P\+\_\+\+Reset@{C\+C\+E\+R\+\_\+\+C\+C1\+N\+P\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+E\+R\+\_\+\+C\+C1\+N\+P\+\_\+\+Reset}{CCER_CC1NP_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+E\+R\+\_\+\+C\+C1\+N\+P\+\_\+\+Reset~(({\bf u16})0x\+F\+F\+F7)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a43961996ba5977f458e59fba93585f7a}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a43961996ba5977f458e59fba93585f7a}
+
+
+Definition at line 86 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+E\+R\+\_\+\+C\+C1\+P\+\_\+\+Reset@{C\+C\+E\+R\+\_\+\+C\+C1\+P\+\_\+\+Reset}}
+\index{C\+C\+E\+R\+\_\+\+C\+C1\+P\+\_\+\+Reset@{C\+C\+E\+R\+\_\+\+C\+C1\+P\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+E\+R\+\_\+\+C\+C1\+P\+\_\+\+Reset}{CCER_CC1P_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+E\+R\+\_\+\+C\+C1\+P\+\_\+\+Reset~(({\bf u16})0x\+F\+F\+F\+D)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a65c8f38033acf1f5cadb1a4c59fc2c33}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a65c8f38033acf1f5cadb1a4c59fc2c33}
+
+
+Definition at line 81 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+E\+R\+\_\+\+C\+C2\+E\+\_\+\+Reset@{C\+C\+E\+R\+\_\+\+C\+C2\+E\+\_\+\+Reset}}
+\index{C\+C\+E\+R\+\_\+\+C\+C2\+E\+\_\+\+Reset@{C\+C\+E\+R\+\_\+\+C\+C2\+E\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+E\+R\+\_\+\+C\+C2\+E\+\_\+\+Reset}{CCER_CC2E_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+E\+R\+\_\+\+C\+C2\+E\+\_\+\+Reset~(({\bf u16})0x\+F\+F\+E\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a5b2b07b37959ca598f6a91c06b7966ef}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a5b2b07b37959ca598f6a91c06b7966ef}
+
+
+Definition at line 96 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+E\+R\+\_\+\+C\+C2\+E\+\_\+\+Set@{C\+C\+E\+R\+\_\+\+C\+C2\+E\+\_\+\+Set}}
+\index{C\+C\+E\+R\+\_\+\+C\+C2\+E\+\_\+\+Set@{C\+C\+E\+R\+\_\+\+C\+C2\+E\+\_\+\+Set}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+E\+R\+\_\+\+C\+C2\+E\+\_\+\+Set}{CCER_CC2E_Set}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+E\+R\+\_\+\+C\+C2\+E\+\_\+\+Set~(({\bf u16})0x0010)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_aadebfb2b853f388522a66b1875fef963}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_aadebfb2b853f388522a66b1875fef963}
+
+
+Definition at line 95 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+E\+R\+\_\+\+C\+C2\+N\+E\+\_\+\+Reset@{C\+C\+E\+R\+\_\+\+C\+C2\+N\+E\+\_\+\+Reset}}
+\index{C\+C\+E\+R\+\_\+\+C\+C2\+N\+E\+\_\+\+Reset@{C\+C\+E\+R\+\_\+\+C\+C2\+N\+E\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+E\+R\+\_\+\+C\+C2\+N\+E\+\_\+\+Reset}{CCER_CC2NE_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+E\+R\+\_\+\+C\+C2\+N\+E\+\_\+\+Reset~(({\bf u16})0x\+F\+F\+B\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a9fc725e8030a1cb63803e645630bcfc3}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a9fc725e8030a1cb63803e645630bcfc3}
+
+
+Definition at line 98 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+E\+R\+\_\+\+C\+C2\+N\+P\+\_\+\+Reset@{C\+C\+E\+R\+\_\+\+C\+C2\+N\+P\+\_\+\+Reset}}
+\index{C\+C\+E\+R\+\_\+\+C\+C2\+N\+P\+\_\+\+Reset@{C\+C\+E\+R\+\_\+\+C\+C2\+N\+P\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+E\+R\+\_\+\+C\+C2\+N\+P\+\_\+\+Reset}{CCER_CC2NP_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+E\+R\+\_\+\+C\+C2\+N\+P\+\_\+\+Reset~(({\bf u16})0x\+F\+F7\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a540f8397e415170856f5b5d4b1738930}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a540f8397e415170856f5b5d4b1738930}
+
+
+Definition at line 87 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+E\+R\+\_\+\+C\+C2\+P\+\_\+\+Reset@{C\+C\+E\+R\+\_\+\+C\+C2\+P\+\_\+\+Reset}}
+\index{C\+C\+E\+R\+\_\+\+C\+C2\+P\+\_\+\+Reset@{C\+C\+E\+R\+\_\+\+C\+C2\+P\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+E\+R\+\_\+\+C\+C2\+P\+\_\+\+Reset}{CCER_CC2P_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+E\+R\+\_\+\+C\+C2\+P\+\_\+\+Reset~(({\bf u16})0x\+F\+F\+D\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a621d694025fc1ff69b45df2c3e087a78}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a621d694025fc1ff69b45df2c3e087a78}
+
+
+Definition at line 82 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+E\+R\+\_\+\+C\+C3\+E\+\_\+\+Reset@{C\+C\+E\+R\+\_\+\+C\+C3\+E\+\_\+\+Reset}}
+\index{C\+C\+E\+R\+\_\+\+C\+C3\+E\+\_\+\+Reset@{C\+C\+E\+R\+\_\+\+C\+C3\+E\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+E\+R\+\_\+\+C\+C3\+E\+\_\+\+Reset}{CCER_CC3E_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+E\+R\+\_\+\+C\+C3\+E\+\_\+\+Reset~(({\bf u16})0x\+F\+E\+F\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_af2713f1b8c70989059e706908bd82be2}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_af2713f1b8c70989059e706908bd82be2}
+
+
+Definition at line 101 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+E\+R\+\_\+\+C\+C3\+E\+\_\+\+Set@{C\+C\+E\+R\+\_\+\+C\+C3\+E\+\_\+\+Set}}
+\index{C\+C\+E\+R\+\_\+\+C\+C3\+E\+\_\+\+Set@{C\+C\+E\+R\+\_\+\+C\+C3\+E\+\_\+\+Set}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+E\+R\+\_\+\+C\+C3\+E\+\_\+\+Set}{CCER_CC3E_Set}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+E\+R\+\_\+\+C\+C3\+E\+\_\+\+Set~(({\bf u16})0x0100)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a9ea867afa9a0ec6c16acd89be22c70ac}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a9ea867afa9a0ec6c16acd89be22c70ac}
+
+
+Definition at line 100 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+E\+R\+\_\+\+C\+C3\+N\+E\+\_\+\+Reset@{C\+C\+E\+R\+\_\+\+C\+C3\+N\+E\+\_\+\+Reset}}
+\index{C\+C\+E\+R\+\_\+\+C\+C3\+N\+E\+\_\+\+Reset@{C\+C\+E\+R\+\_\+\+C\+C3\+N\+E\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+E\+R\+\_\+\+C\+C3\+N\+E\+\_\+\+Reset}{CCER_CC3NE_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+E\+R\+\_\+\+C\+C3\+N\+E\+\_\+\+Reset~(({\bf u16})0x\+F\+B\+F\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a23bd9dc014fe362f37d0572c15895421}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a23bd9dc014fe362f37d0572c15895421}
+
+
+Definition at line 103 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+E\+R\+\_\+\+C\+C3\+N\+P\+\_\+\+Reset@{C\+C\+E\+R\+\_\+\+C\+C3\+N\+P\+\_\+\+Reset}}
+\index{C\+C\+E\+R\+\_\+\+C\+C3\+N\+P\+\_\+\+Reset@{C\+C\+E\+R\+\_\+\+C\+C3\+N\+P\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+E\+R\+\_\+\+C\+C3\+N\+P\+\_\+\+Reset}{CCER_CC3NP_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+E\+R\+\_\+\+C\+C3\+N\+P\+\_\+\+Reset~(({\bf u16})0x\+F7\+F\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a0cd784bce174af224bc3c73089ecc44c}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a0cd784bce174af224bc3c73089ecc44c}
+
+
+Definition at line 88 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+E\+R\+\_\+\+C\+C3\+P\+\_\+\+Reset@{C\+C\+E\+R\+\_\+\+C\+C3\+P\+\_\+\+Reset}}
+\index{C\+C\+E\+R\+\_\+\+C\+C3\+P\+\_\+\+Reset@{C\+C\+E\+R\+\_\+\+C\+C3\+P\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+E\+R\+\_\+\+C\+C3\+P\+\_\+\+Reset}{CCER_CC3P_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+E\+R\+\_\+\+C\+C3\+P\+\_\+\+Reset~(({\bf u16})0x\+F\+D\+F\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a14de79a9016495e222503d90f4155219}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a14de79a9016495e222503d90f4155219}
+
+
+Definition at line 83 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+E\+R\+\_\+\+C\+C4\+E\+\_\+\+Reset@{C\+C\+E\+R\+\_\+\+C\+C4\+E\+\_\+\+Reset}}
+\index{C\+C\+E\+R\+\_\+\+C\+C4\+E\+\_\+\+Reset@{C\+C\+E\+R\+\_\+\+C\+C4\+E\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+E\+R\+\_\+\+C\+C4\+E\+\_\+\+Reset}{CCER_CC4E_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+E\+R\+\_\+\+C\+C4\+E\+\_\+\+Reset~(({\bf u16})0x\+E\+F\+F\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a20e43ce83aef8595d90526f1116d811b}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a20e43ce83aef8595d90526f1116d811b}
+
+
+Definition at line 106 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+E\+R\+\_\+\+C\+C4\+E\+\_\+\+Set@{C\+C\+E\+R\+\_\+\+C\+C4\+E\+\_\+\+Set}}
+\index{C\+C\+E\+R\+\_\+\+C\+C4\+E\+\_\+\+Set@{C\+C\+E\+R\+\_\+\+C\+C4\+E\+\_\+\+Set}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+E\+R\+\_\+\+C\+C4\+E\+\_\+\+Set}{CCER_CC4E_Set}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+E\+R\+\_\+\+C\+C4\+E\+\_\+\+Set~(({\bf u16})0x1000)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a2b9c9ebf876b571224824038b06a4e1b}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a2b9c9ebf876b571224824038b06a4e1b}
+
+
+Definition at line 105 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+E\+R\+\_\+\+C\+C4\+P\+\_\+\+Reset@{C\+C\+E\+R\+\_\+\+C\+C4\+P\+\_\+\+Reset}}
+\index{C\+C\+E\+R\+\_\+\+C\+C4\+P\+\_\+\+Reset@{C\+C\+E\+R\+\_\+\+C\+C4\+P\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+E\+R\+\_\+\+C\+C4\+P\+\_\+\+Reset}{CCER_CC4P_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+E\+R\+\_\+\+C\+C4\+P\+\_\+\+Reset~(({\bf u16})0x\+D\+F\+F\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a6ad098d5a7eedd0530c6bd5633ad7c94}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a6ad098d5a7eedd0530c6bd5633ad7c94}
+
+
+Definition at line 84 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+E\+R\+\_\+\+C\+C\+E\+\_\+\+Set@{C\+C\+E\+R\+\_\+\+C\+C\+E\+\_\+\+Set}}
+\index{C\+C\+E\+R\+\_\+\+C\+C\+E\+\_\+\+Set@{C\+C\+E\+R\+\_\+\+C\+C\+E\+\_\+\+Set}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+E\+R\+\_\+\+C\+C\+E\+\_\+\+Set}{CCER_CCE_Set}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+E\+R\+\_\+\+C\+C\+E\+\_\+\+Set~(({\bf u16})0x0001)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a17c4ed624aa62f19fd496c3f3bd61137}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a17c4ed624aa62f19fd496c3f3bd61137}
+
+
+Definition at line 78 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+E\+R\+\_\+\+C\+C\+N\+E\+\_\+\+Set@{C\+C\+E\+R\+\_\+\+C\+C\+N\+E\+\_\+\+Set}}
+\index{C\+C\+E\+R\+\_\+\+C\+C\+N\+E\+\_\+\+Set@{C\+C\+E\+R\+\_\+\+C\+C\+N\+E\+\_\+\+Set}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+E\+R\+\_\+\+C\+C\+N\+E\+\_\+\+Set}{CCER_CCNE_Set}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+E\+R\+\_\+\+C\+C\+N\+E\+\_\+\+Set~(({\bf u16})0x0004)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a167dfdf613827d1fdf2e4152497b4bd5}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a167dfdf613827d1fdf2e4152497b4bd5}
+
+
+Definition at line 79 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+M\+R\+\_\+\+C\+C13\+S\+\_\+\+Mask@{C\+C\+M\+R\+\_\+\+C\+C13\+S\+\_\+\+Mask}}
+\index{C\+C\+M\+R\+\_\+\+C\+C13\+S\+\_\+\+Mask@{C\+C\+M\+R\+\_\+\+C\+C13\+S\+\_\+\+Mask}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+M\+R\+\_\+\+C\+C13\+S\+\_\+\+Mask}{CCMR_CC13S_Mask}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+M\+R\+\_\+\+C\+C13\+S\+\_\+\+Mask~(({\bf u16})0x\+F\+F\+F\+C)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a32c366a9099df870d239a06872cfee55}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a32c366a9099df870d239a06872cfee55}
+
+
+Definition at line 58 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+M\+R\+\_\+\+C\+C24\+S\+\_\+\+Mask@{C\+C\+M\+R\+\_\+\+C\+C24\+S\+\_\+\+Mask}}
+\index{C\+C\+M\+R\+\_\+\+C\+C24\+S\+\_\+\+Mask@{C\+C\+M\+R\+\_\+\+C\+C24\+S\+\_\+\+Mask}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+M\+R\+\_\+\+C\+C24\+S\+\_\+\+Mask}{CCMR_CC24S_Mask}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+M\+R\+\_\+\+C\+C24\+S\+\_\+\+Mask~(({\bf u16})0x\+F\+C\+F\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a0c2ba99068a6cd6b414904d6eb420464}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a0c2ba99068a6cd6b414904d6eb420464}
+
+
+Definition at line 59 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+M\+R\+\_\+\+I\+C13\+F\+\_\+\+Mask@{C\+C\+M\+R\+\_\+\+I\+C13\+F\+\_\+\+Mask}}
+\index{C\+C\+M\+R\+\_\+\+I\+C13\+F\+\_\+\+Mask@{C\+C\+M\+R\+\_\+\+I\+C13\+F\+\_\+\+Mask}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+M\+R\+\_\+\+I\+C13\+F\+\_\+\+Mask}{CCMR_IC13F_Mask}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+M\+R\+\_\+\+I\+C13\+F\+\_\+\+Mask~(({\bf u16})0x\+F\+F0\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a133760bacec5ac07f9daf7a0b248ef0b}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a133760bacec5ac07f9daf7a0b248ef0b}
+
+
+Definition at line 74 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+M\+R\+\_\+\+I\+C13\+P\+S\+C\+\_\+\+Mask@{C\+C\+M\+R\+\_\+\+I\+C13\+P\+S\+C\+\_\+\+Mask}}
+\index{C\+C\+M\+R\+\_\+\+I\+C13\+P\+S\+C\+\_\+\+Mask@{C\+C\+M\+R\+\_\+\+I\+C13\+P\+S\+C\+\_\+\+Mask}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+M\+R\+\_\+\+I\+C13\+P\+S\+C\+\_\+\+Mask}{CCMR_IC13PSC_Mask}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+M\+R\+\_\+\+I\+C13\+P\+S\+C\+\_\+\+Mask~(({\bf u16})0x\+F\+F\+F3)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a135b5fae59e4fafa5aac5be77d5999ca}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a135b5fae59e4fafa5aac5be77d5999ca}
+
+
+Definition at line 72 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+M\+R\+\_\+\+I\+C24\+F\+\_\+\+Mask@{C\+C\+M\+R\+\_\+\+I\+C24\+F\+\_\+\+Mask}}
+\index{C\+C\+M\+R\+\_\+\+I\+C24\+F\+\_\+\+Mask@{C\+C\+M\+R\+\_\+\+I\+C24\+F\+\_\+\+Mask}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+M\+R\+\_\+\+I\+C24\+F\+\_\+\+Mask}{CCMR_IC24F_Mask}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+M\+R\+\_\+\+I\+C24\+F\+\_\+\+Mask~(({\bf u16})0x0\+F\+F\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a0481da3f85a1f67a61648e713e5bd973}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a0481da3f85a1f67a61648e713e5bd973}
+
+
+Definition at line 75 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+M\+R\+\_\+\+I\+C24\+P\+S\+C\+\_\+\+Mask@{C\+C\+M\+R\+\_\+\+I\+C24\+P\+S\+C\+\_\+\+Mask}}
+\index{C\+C\+M\+R\+\_\+\+I\+C24\+P\+S\+C\+\_\+\+Mask@{C\+C\+M\+R\+\_\+\+I\+C24\+P\+S\+C\+\_\+\+Mask}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+M\+R\+\_\+\+I\+C24\+P\+S\+C\+\_\+\+Mask}{CCMR_IC24PSC_Mask}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+M\+R\+\_\+\+I\+C24\+P\+S\+C\+\_\+\+Mask~(({\bf u16})0x\+F3\+F\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_ae717dce561974802cb770f0868954a33}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_ae717dce561974802cb770f0868954a33}
+
+
+Definition at line 73 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+M\+R\+\_\+\+O\+C13\+C\+E\+\_\+\+Reset@{C\+C\+M\+R\+\_\+\+O\+C13\+C\+E\+\_\+\+Reset}}
+\index{C\+C\+M\+R\+\_\+\+O\+C13\+C\+E\+\_\+\+Reset@{C\+C\+M\+R\+\_\+\+O\+C13\+C\+E\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+M\+R\+\_\+\+O\+C13\+C\+E\+\_\+\+Reset}{CCMR_OC13CE_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+M\+R\+\_\+\+O\+C13\+C\+E\+\_\+\+Reset~(({\bf u16})0x\+F\+F7\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a98bc8ff591eeb9ba9c904815560f2f4d}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a98bc8ff591eeb9ba9c904815560f2f4d}
+
+
+Definition at line 69 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+M\+R\+\_\+\+O\+C13\+F\+E\+\_\+\+Reset@{C\+C\+M\+R\+\_\+\+O\+C13\+F\+E\+\_\+\+Reset}}
+\index{C\+C\+M\+R\+\_\+\+O\+C13\+F\+E\+\_\+\+Reset@{C\+C\+M\+R\+\_\+\+O\+C13\+F\+E\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+M\+R\+\_\+\+O\+C13\+F\+E\+\_\+\+Reset}{CCMR_OC13FE_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+M\+R\+\_\+\+O\+C13\+F\+E\+\_\+\+Reset~(({\bf u16})0x\+F\+F\+F\+B)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_ae08bb91e072d05319551819c666bae32}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_ae08bb91e072d05319551819c666bae32}
+
+
+Definition at line 62 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+M\+R\+\_\+\+O\+C13\+M\+\_\+\+Mask@{C\+C\+M\+R\+\_\+\+O\+C13\+M\+\_\+\+Mask}}
+\index{C\+C\+M\+R\+\_\+\+O\+C13\+M\+\_\+\+Mask@{C\+C\+M\+R\+\_\+\+O\+C13\+M\+\_\+\+Mask}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+M\+R\+\_\+\+O\+C13\+M\+\_\+\+Mask}{CCMR_OC13M_Mask}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+M\+R\+\_\+\+O\+C13\+M\+\_\+\+Mask~(({\bf u16})0x\+F\+F8\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_acb6186909f79263506a6d98c4a894dc6}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_acb6186909f79263506a6d98c4a894dc6}
+
+
+Definition at line 66 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+M\+R\+\_\+\+O\+C13\+P\+E\+\_\+\+Reset@{C\+C\+M\+R\+\_\+\+O\+C13\+P\+E\+\_\+\+Reset}}
+\index{C\+C\+M\+R\+\_\+\+O\+C13\+P\+E\+\_\+\+Reset@{C\+C\+M\+R\+\_\+\+O\+C13\+P\+E\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+M\+R\+\_\+\+O\+C13\+P\+E\+\_\+\+Reset}{CCMR_OC13PE_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+M\+R\+\_\+\+O\+C13\+P\+E\+\_\+\+Reset~(({\bf u16})0x\+F\+F\+F7)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a0adcd3e447236ec542f04d370c7c198f}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a0adcd3e447236ec542f04d370c7c198f}
+
+
+Definition at line 64 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+M\+R\+\_\+\+O\+C24\+C\+E\+\_\+\+Reset@{C\+C\+M\+R\+\_\+\+O\+C24\+C\+E\+\_\+\+Reset}}
+\index{C\+C\+M\+R\+\_\+\+O\+C24\+C\+E\+\_\+\+Reset@{C\+C\+M\+R\+\_\+\+O\+C24\+C\+E\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+M\+R\+\_\+\+O\+C24\+C\+E\+\_\+\+Reset}{CCMR_OC24CE_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+M\+R\+\_\+\+O\+C24\+C\+E\+\_\+\+Reset~(({\bf u16})0x7\+F\+F\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a6186dce2e47580b09343d4e96e25445e}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a6186dce2e47580b09343d4e96e25445e}
+
+
+Definition at line 70 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+M\+R\+\_\+\+O\+C24\+F\+E\+\_\+\+Reset@{C\+C\+M\+R\+\_\+\+O\+C24\+F\+E\+\_\+\+Reset}}
+\index{C\+C\+M\+R\+\_\+\+O\+C24\+F\+E\+\_\+\+Reset@{C\+C\+M\+R\+\_\+\+O\+C24\+F\+E\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+M\+R\+\_\+\+O\+C24\+F\+E\+\_\+\+Reset}{CCMR_OC24FE_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+M\+R\+\_\+\+O\+C24\+F\+E\+\_\+\+Reset~(({\bf u16})0x\+F\+B\+F\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a49eea5c0195e7c00d0d857e7faf07c21}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a49eea5c0195e7c00d0d857e7faf07c21}
+
+
+Definition at line 63 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+M\+R\+\_\+\+O\+C24\+M\+\_\+\+Mask@{C\+C\+M\+R\+\_\+\+O\+C24\+M\+\_\+\+Mask}}
+\index{C\+C\+M\+R\+\_\+\+O\+C24\+M\+\_\+\+Mask@{C\+C\+M\+R\+\_\+\+O\+C24\+M\+\_\+\+Mask}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+M\+R\+\_\+\+O\+C24\+M\+\_\+\+Mask}{CCMR_OC24M_Mask}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+M\+R\+\_\+\+O\+C24\+M\+\_\+\+Mask~(({\bf u16})0x8\+F\+F\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_ab16aa61b9d4b6e04f49e9854d62762eb}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_ab16aa61b9d4b6e04f49e9854d62762eb}
+
+
+Definition at line 67 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+M\+R\+\_\+\+O\+C24\+P\+E\+\_\+\+Reset@{C\+C\+M\+R\+\_\+\+O\+C24\+P\+E\+\_\+\+Reset}}
+\index{C\+C\+M\+R\+\_\+\+O\+C24\+P\+E\+\_\+\+Reset@{C\+C\+M\+R\+\_\+\+O\+C24\+P\+E\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+M\+R\+\_\+\+O\+C24\+P\+E\+\_\+\+Reset}{CCMR_OC24PE_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+M\+R\+\_\+\+O\+C24\+P\+E\+\_\+\+Reset~(({\bf u16})0x\+F7\+F\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a41087d7e196128a300027b0e64e6f988}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a41087d7e196128a300027b0e64e6f988}
+
+
+Definition at line 65 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+M\+R\+\_\+\+Offset@{C\+C\+M\+R\+\_\+\+Offset}}
+\index{C\+C\+M\+R\+\_\+\+Offset@{C\+C\+M\+R\+\_\+\+Offset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+M\+R\+\_\+\+Offset}{CCMR_Offset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+M\+R\+\_\+\+Offset~(({\bf u16})0x0018)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a76469c9f56da4e7705336a6ac0248196}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a76469c9f56da4e7705336a6ac0248196}
+
+
+Definition at line 77 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+M\+R\+\_\+\+T\+I13\+Direct\+\_\+\+Set@{C\+C\+M\+R\+\_\+\+T\+I13\+Direct\+\_\+\+Set}}
+\index{C\+C\+M\+R\+\_\+\+T\+I13\+Direct\+\_\+\+Set@{C\+C\+M\+R\+\_\+\+T\+I13\+Direct\+\_\+\+Set}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+M\+R\+\_\+\+T\+I13\+Direct\+\_\+\+Set}{CCMR_TI13Direct_Set}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+M\+R\+\_\+\+T\+I13\+Direct\+\_\+\+Set~(({\bf u16})0x0001)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a5a7105b0a0354355e49a871990ea9207}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a5a7105b0a0354355e49a871990ea9207}
+
+
+Definition at line 60 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+C\+M\+R\+\_\+\+T\+I24\+Direct\+\_\+\+Set@{C\+C\+M\+R\+\_\+\+T\+I24\+Direct\+\_\+\+Set}}
+\index{C\+C\+M\+R\+\_\+\+T\+I24\+Direct\+\_\+\+Set@{C\+C\+M\+R\+\_\+\+T\+I24\+Direct\+\_\+\+Set}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+C\+M\+R\+\_\+\+T\+I24\+Direct\+\_\+\+Set}{CCMR_TI24Direct_Set}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C\+M\+R\+\_\+\+T\+I24\+Direct\+\_\+\+Set~(({\bf u16})0x0100)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_ad46271ae5c7bcb0eb2e9774d0a6760a1}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_ad46271ae5c7bcb0eb2e9774d0a6760a1}
+
+
+Definition at line 61 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+R1\+\_\+\+A\+R\+P\+E\+\_\+\+Reset@{C\+R1\+\_\+\+A\+R\+P\+E\+\_\+\+Reset}}
+\index{C\+R1\+\_\+\+A\+R\+P\+E\+\_\+\+Reset@{C\+R1\+\_\+\+A\+R\+P\+E\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+R1\+\_\+\+A\+R\+P\+E\+\_\+\+Reset}{CR1_ARPE_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R1\+\_\+\+A\+R\+P\+E\+\_\+\+Reset~(({\bf u16})0x037\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_aedc0a58b1f45adc3516639c0ee2448ff}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_aedc0a58b1f45adc3516639c0ee2448ff}
+
+
+Definition at line 32 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+R1\+\_\+\+A\+R\+P\+E\+\_\+\+Set@{C\+R1\+\_\+\+A\+R\+P\+E\+\_\+\+Set}}
+\index{C\+R1\+\_\+\+A\+R\+P\+E\+\_\+\+Set@{C\+R1\+\_\+\+A\+R\+P\+E\+\_\+\+Set}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+R1\+\_\+\+A\+R\+P\+E\+\_\+\+Set}{CR1_ARPE_Set}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R1\+\_\+\+A\+R\+P\+E\+\_\+\+Set~(({\bf u16})0x0080)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a5e64ebe99ac687eca40ab1a4795ef14d}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a5e64ebe99ac687eca40ab1a4795ef14d}
+
+
+Definition at line 31 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+R1\+\_\+\+C\+E\+N\+\_\+\+Reset@{C\+R1\+\_\+\+C\+E\+N\+\_\+\+Reset}}
+\index{C\+R1\+\_\+\+C\+E\+N\+\_\+\+Reset@{C\+R1\+\_\+\+C\+E\+N\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+R1\+\_\+\+C\+E\+N\+\_\+\+Reset}{CR1_CEN_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R1\+\_\+\+C\+E\+N\+\_\+\+Reset~(({\bf u16})0x03\+F\+E)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a02a982a5dda4b0838f4d9b349d52f6c6}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a02a982a5dda4b0838f4d9b349d52f6c6}
+
+
+Definition at line 24 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+R1\+\_\+\+C\+E\+N\+\_\+\+Set@{C\+R1\+\_\+\+C\+E\+N\+\_\+\+Set}}
+\index{C\+R1\+\_\+\+C\+E\+N\+\_\+\+Set@{C\+R1\+\_\+\+C\+E\+N\+\_\+\+Set}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+R1\+\_\+\+C\+E\+N\+\_\+\+Set}{CR1_CEN_Set}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R1\+\_\+\+C\+E\+N\+\_\+\+Set~(({\bf u16})0x0001)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_ac18fbe79496f77ad0542a5c6e294c53d}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_ac18fbe79496f77ad0542a5c6e294c53d}
+
+
+Definition at line 23 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+R1\+\_\+\+C\+K\+D\+\_\+\+Mask@{C\+R1\+\_\+\+C\+K\+D\+\_\+\+Mask}}
+\index{C\+R1\+\_\+\+C\+K\+D\+\_\+\+Mask@{C\+R1\+\_\+\+C\+K\+D\+\_\+\+Mask}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+R1\+\_\+\+C\+K\+D\+\_\+\+Mask}{CR1_CKD_Mask}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R1\+\_\+\+C\+K\+D\+\_\+\+Mask~(({\bf u16})0x00\+F\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a538def6149c2f2ba4f51d460fa570e70}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a538def6149c2f2ba4f51d460fa570e70}
+
+
+Definition at line 33 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+R1\+\_\+\+Counter\+Mode\+\_\+\+Mask@{C\+R1\+\_\+\+Counter\+Mode\+\_\+\+Mask}}
+\index{C\+R1\+\_\+\+Counter\+Mode\+\_\+\+Mask@{C\+R1\+\_\+\+Counter\+Mode\+\_\+\+Mask}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+R1\+\_\+\+Counter\+Mode\+\_\+\+Mask}{CR1_CounterMode_Mask}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R1\+\_\+\+Counter\+Mode\+\_\+\+Mask~(({\bf u16})0x038\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_abeee2af7fbf0a99ac964123e5bb18758}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_abeee2af7fbf0a99ac964123e5bb18758}
+
+
+Definition at line 30 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+R1\+\_\+\+O\+P\+M\+\_\+\+Reset@{C\+R1\+\_\+\+O\+P\+M\+\_\+\+Reset}}
+\index{C\+R1\+\_\+\+O\+P\+M\+\_\+\+Reset@{C\+R1\+\_\+\+O\+P\+M\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+R1\+\_\+\+O\+P\+M\+\_\+\+Reset}{CR1_OPM_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R1\+\_\+\+O\+P\+M\+\_\+\+Reset~(({\bf u16})0x03\+F7)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a52863f5582d1300cfed3917c28fdd54c}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a52863f5582d1300cfed3917c28fdd54c}
+
+
+Definition at line 29 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+R1\+\_\+\+U\+D\+I\+S\+\_\+\+Reset@{C\+R1\+\_\+\+U\+D\+I\+S\+\_\+\+Reset}}
+\index{C\+R1\+\_\+\+U\+D\+I\+S\+\_\+\+Reset@{C\+R1\+\_\+\+U\+D\+I\+S\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+R1\+\_\+\+U\+D\+I\+S\+\_\+\+Reset}{CR1_UDIS_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R1\+\_\+\+U\+D\+I\+S\+\_\+\+Reset~(({\bf u16})0x03\+F\+D)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a703370bb14538c9c5418212d7c4bc7c4}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a703370bb14538c9c5418212d7c4bc7c4}
+
+
+Definition at line 26 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+R1\+\_\+\+U\+D\+I\+S\+\_\+\+Set@{C\+R1\+\_\+\+U\+D\+I\+S\+\_\+\+Set}}
+\index{C\+R1\+\_\+\+U\+D\+I\+S\+\_\+\+Set@{C\+R1\+\_\+\+U\+D\+I\+S\+\_\+\+Set}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+R1\+\_\+\+U\+D\+I\+S\+\_\+\+Set}{CR1_UDIS_Set}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R1\+\_\+\+U\+D\+I\+S\+\_\+\+Set~(({\bf u16})0x0002)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a47817d9bbab4ac004ea5ad6279582880}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a47817d9bbab4ac004ea5ad6279582880}
+
+
+Definition at line 25 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+R1\+\_\+\+U\+R\+S\+\_\+\+Reset@{C\+R1\+\_\+\+U\+R\+S\+\_\+\+Reset}}
+\index{C\+R1\+\_\+\+U\+R\+S\+\_\+\+Reset@{C\+R1\+\_\+\+U\+R\+S\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+R1\+\_\+\+U\+R\+S\+\_\+\+Reset}{CR1_URS_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R1\+\_\+\+U\+R\+S\+\_\+\+Reset~(({\bf u16})0x03\+F\+B)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_aac2672cb0750f864c04fbf605740a363}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_aac2672cb0750f864c04fbf605740a363}
+
+
+Definition at line 28 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+R1\+\_\+\+U\+R\+S\+\_\+\+Set@{C\+R1\+\_\+\+U\+R\+S\+\_\+\+Set}}
+\index{C\+R1\+\_\+\+U\+R\+S\+\_\+\+Set@{C\+R1\+\_\+\+U\+R\+S\+\_\+\+Set}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+R1\+\_\+\+U\+R\+S\+\_\+\+Set}{CR1_URS_Set}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R1\+\_\+\+U\+R\+S\+\_\+\+Set~(({\bf u16})0x0004)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a5e49e1b411e7549446c00085599f8097}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a5e49e1b411e7549446c00085599f8097}
+
+
+Definition at line 27 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+R2\+\_\+\+C\+C\+D\+S\+\_\+\+Reset@{C\+R2\+\_\+\+C\+C\+D\+S\+\_\+\+Reset}}
+\index{C\+R2\+\_\+\+C\+C\+D\+S\+\_\+\+Reset@{C\+R2\+\_\+\+C\+C\+D\+S\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+R2\+\_\+\+C\+C\+D\+S\+\_\+\+Reset}{CR2_CCDS_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R2\+\_\+\+C\+C\+D\+S\+\_\+\+Reset~(({\bf u16})0x\+F\+F\+F7)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a71b1fc7b09f41839b1cf6419b5e65ca8}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a71b1fc7b09f41839b1cf6419b5e65ca8}
+
+
+Definition at line 40 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+R2\+\_\+\+C\+C\+D\+S\+\_\+\+Set@{C\+R2\+\_\+\+C\+C\+D\+S\+\_\+\+Set}}
+\index{C\+R2\+\_\+\+C\+C\+D\+S\+\_\+\+Set@{C\+R2\+\_\+\+C\+C\+D\+S\+\_\+\+Set}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+R2\+\_\+\+C\+C\+D\+S\+\_\+\+Set}{CR2_CCDS_Set}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R2\+\_\+\+C\+C\+D\+S\+\_\+\+Set~(({\bf u16})0x0008)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a6ea9f533ad626499903c5f6a8cbd3f8d}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a6ea9f533ad626499903c5f6a8cbd3f8d}
+
+
+Definition at line 39 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+R2\+\_\+\+C\+C\+P\+C\+\_\+\+Reset@{C\+R2\+\_\+\+C\+C\+P\+C\+\_\+\+Reset}}
+\index{C\+R2\+\_\+\+C\+C\+P\+C\+\_\+\+Reset@{C\+R2\+\_\+\+C\+C\+P\+C\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+R2\+\_\+\+C\+C\+P\+C\+\_\+\+Reset}{CR2_CCPC_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R2\+\_\+\+C\+C\+P\+C\+\_\+\+Reset~(({\bf u16})0x\+F\+F\+F\+E)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_aedff26fc7326f8615a1d26056f720dba}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_aedff26fc7326f8615a1d26056f720dba}
+
+
+Definition at line 36 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+R2\+\_\+\+C\+C\+P\+C\+\_\+\+Set@{C\+R2\+\_\+\+C\+C\+P\+C\+\_\+\+Set}}
+\index{C\+R2\+\_\+\+C\+C\+P\+C\+\_\+\+Set@{C\+R2\+\_\+\+C\+C\+P\+C\+\_\+\+Set}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+R2\+\_\+\+C\+C\+P\+C\+\_\+\+Set}{CR2_CCPC_Set}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R2\+\_\+\+C\+C\+P\+C\+\_\+\+Set~(({\bf u16})0x0001)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_ada5e4738b732acf99d362c0354447553}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_ada5e4738b732acf99d362c0354447553}
+
+
+Definition at line 35 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+R2\+\_\+\+C\+C\+U\+S\+\_\+\+Reset@{C\+R2\+\_\+\+C\+C\+U\+S\+\_\+\+Reset}}
+\index{C\+R2\+\_\+\+C\+C\+U\+S\+\_\+\+Reset@{C\+R2\+\_\+\+C\+C\+U\+S\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+R2\+\_\+\+C\+C\+U\+S\+\_\+\+Reset}{CR2_CCUS_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R2\+\_\+\+C\+C\+U\+S\+\_\+\+Reset~(({\bf u16})0x\+F\+F\+F\+B)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a70acd2545010ddd9504b79131c408a8a}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a70acd2545010ddd9504b79131c408a8a}
+
+
+Definition at line 38 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+R2\+\_\+\+C\+C\+U\+S\+\_\+\+Set@{C\+R2\+\_\+\+C\+C\+U\+S\+\_\+\+Set}}
+\index{C\+R2\+\_\+\+C\+C\+U\+S\+\_\+\+Set@{C\+R2\+\_\+\+C\+C\+U\+S\+\_\+\+Set}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+R2\+\_\+\+C\+C\+U\+S\+\_\+\+Set}{CR2_CCUS_Set}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R2\+\_\+\+C\+C\+U\+S\+\_\+\+Set~(({\bf u16})0x0004)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a1a865e975d4887a2914a55296318a5f5}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a1a865e975d4887a2914a55296318a5f5}
+
+
+Definition at line 37 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+R2\+\_\+\+M\+M\+S\+\_\+\+Mask@{C\+R2\+\_\+\+M\+M\+S\+\_\+\+Mask}}
+\index{C\+R2\+\_\+\+M\+M\+S\+\_\+\+Mask@{C\+R2\+\_\+\+M\+M\+S\+\_\+\+Mask}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+R2\+\_\+\+M\+M\+S\+\_\+\+Mask}{CR2_MMS_Mask}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R2\+\_\+\+M\+M\+S\+\_\+\+Mask~(({\bf u16})0x\+F\+F8\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a1856105ab8e852476943e141754cf490}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a1856105ab8e852476943e141754cf490}
+
+
+Definition at line 41 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+R2\+\_\+\+O\+I\+S1\+\_\+\+Reset@{C\+R2\+\_\+\+O\+I\+S1\+\_\+\+Reset}}
+\index{C\+R2\+\_\+\+O\+I\+S1\+\_\+\+Reset@{C\+R2\+\_\+\+O\+I\+S1\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+R2\+\_\+\+O\+I\+S1\+\_\+\+Reset}{CR2_OIS1_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R2\+\_\+\+O\+I\+S1\+\_\+\+Reset~(({\bf u16})0x7\+E\+F\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a776bfffad574604cc2dd78942f459b21}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a776bfffad574604cc2dd78942f459b21}
+
+
+Definition at line 44 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+R2\+\_\+\+O\+I\+S1\+N\+\_\+\+Reset@{C\+R2\+\_\+\+O\+I\+S1\+N\+\_\+\+Reset}}
+\index{C\+R2\+\_\+\+O\+I\+S1\+N\+\_\+\+Reset@{C\+R2\+\_\+\+O\+I\+S1\+N\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+R2\+\_\+\+O\+I\+S1\+N\+\_\+\+Reset}{CR2_OIS1N_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R2\+\_\+\+O\+I\+S1\+N\+\_\+\+Reset~(({\bf u16})0x7\+D\+F\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a13c40ed91ad0851dbdb238c234ba6167}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a13c40ed91ad0851dbdb238c234ba6167}
+
+
+Definition at line 45 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+R2\+\_\+\+O\+I\+S2\+\_\+\+Reset@{C\+R2\+\_\+\+O\+I\+S2\+\_\+\+Reset}}
+\index{C\+R2\+\_\+\+O\+I\+S2\+\_\+\+Reset@{C\+R2\+\_\+\+O\+I\+S2\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+R2\+\_\+\+O\+I\+S2\+\_\+\+Reset}{CR2_OIS2_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R2\+\_\+\+O\+I\+S2\+\_\+\+Reset~(({\bf u16})0x7\+B\+F\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a75375e2c2664894bab7bfd1747f5ef16}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a75375e2c2664894bab7bfd1747f5ef16}
+
+
+Definition at line 46 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+R2\+\_\+\+O\+I\+S2\+N\+\_\+\+Reset@{C\+R2\+\_\+\+O\+I\+S2\+N\+\_\+\+Reset}}
+\index{C\+R2\+\_\+\+O\+I\+S2\+N\+\_\+\+Reset@{C\+R2\+\_\+\+O\+I\+S2\+N\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+R2\+\_\+\+O\+I\+S2\+N\+\_\+\+Reset}{CR2_OIS2N_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R2\+\_\+\+O\+I\+S2\+N\+\_\+\+Reset~(({\bf u16})0x77\+F\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_afbb985ba0db913d5a9628795e89d0e50}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_afbb985ba0db913d5a9628795e89d0e50}
+
+
+Definition at line 47 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+R2\+\_\+\+O\+I\+S3\+\_\+\+Reset@{C\+R2\+\_\+\+O\+I\+S3\+\_\+\+Reset}}
+\index{C\+R2\+\_\+\+O\+I\+S3\+\_\+\+Reset@{C\+R2\+\_\+\+O\+I\+S3\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+R2\+\_\+\+O\+I\+S3\+\_\+\+Reset}{CR2_OIS3_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R2\+\_\+\+O\+I\+S3\+\_\+\+Reset~(({\bf u16})0x6\+F\+F\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a4b911f9f36284fcb32b6a9ce1719b9ca}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a4b911f9f36284fcb32b6a9ce1719b9ca}
+
+
+Definition at line 48 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+R2\+\_\+\+O\+I\+S3\+N\+\_\+\+Reset@{C\+R2\+\_\+\+O\+I\+S3\+N\+\_\+\+Reset}}
+\index{C\+R2\+\_\+\+O\+I\+S3\+N\+\_\+\+Reset@{C\+R2\+\_\+\+O\+I\+S3\+N\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+R2\+\_\+\+O\+I\+S3\+N\+\_\+\+Reset}{CR2_OIS3N_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R2\+\_\+\+O\+I\+S3\+N\+\_\+\+Reset~(({\bf u16})0x5\+F\+F\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_ac518739d1d528bbc9ffa4c97d79106b5}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_ac518739d1d528bbc9ffa4c97d79106b5}
+
+
+Definition at line 49 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+R2\+\_\+\+O\+I\+S4\+\_\+\+Reset@{C\+R2\+\_\+\+O\+I\+S4\+\_\+\+Reset}}
+\index{C\+R2\+\_\+\+O\+I\+S4\+\_\+\+Reset@{C\+R2\+\_\+\+O\+I\+S4\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+R2\+\_\+\+O\+I\+S4\+\_\+\+Reset}{CR2_OIS4_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R2\+\_\+\+O\+I\+S4\+\_\+\+Reset~(({\bf u16})0x3\+F\+F\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a1ad1790338a847a3c93e7097fc9f0cd6}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a1ad1790338a847a3c93e7097fc9f0cd6}
+
+
+Definition at line 50 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+R2\+\_\+\+T\+I1\+S\+\_\+\+Reset@{C\+R2\+\_\+\+T\+I1\+S\+\_\+\+Reset}}
+\index{C\+R2\+\_\+\+T\+I1\+S\+\_\+\+Reset@{C\+R2\+\_\+\+T\+I1\+S\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+R2\+\_\+\+T\+I1\+S\+\_\+\+Reset}{CR2_TI1S_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R2\+\_\+\+T\+I1\+S\+\_\+\+Reset~(({\bf u16})0x\+F\+F7\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_acb26375759d874e9bec6f41ecbb7a15c}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_acb26375759d874e9bec6f41ecbb7a15c}
+
+
+Definition at line 43 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!C\+R2\+\_\+\+T\+I1\+S\+\_\+\+Set@{C\+R2\+\_\+\+T\+I1\+S\+\_\+\+Set}}
+\index{C\+R2\+\_\+\+T\+I1\+S\+\_\+\+Set@{C\+R2\+\_\+\+T\+I1\+S\+\_\+\+Set}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{C\+R2\+\_\+\+T\+I1\+S\+\_\+\+Set}{CR2_TI1S_Set}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R2\+\_\+\+T\+I1\+S\+\_\+\+Set~(({\bf u16})0x0080)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a221c7c7e5f02b418bfd0079a8f804c6c}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a221c7c7e5f02b418bfd0079a8f804c6c}
+
+
+Definition at line 42 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!S\+M\+C\+R\+\_\+\+E\+C\+E\+\_\+\+Set@{S\+M\+C\+R\+\_\+\+E\+C\+E\+\_\+\+Set}}
+\index{S\+M\+C\+R\+\_\+\+E\+C\+E\+\_\+\+Set@{S\+M\+C\+R\+\_\+\+E\+C\+E\+\_\+\+Set}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{S\+M\+C\+R\+\_\+\+E\+C\+E\+\_\+\+Set}{SMCR_ECE_Set}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+M\+C\+R\+\_\+\+E\+C\+E\+\_\+\+Set~(({\bf u16})0x4000)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_aafac3a652fab0b08a46a5573e175d036}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_aafac3a652fab0b08a46a5573e175d036}
+
+
+Definition at line 56 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!S\+M\+C\+R\+\_\+\+E\+T\+R\+\_\+\+Mask@{S\+M\+C\+R\+\_\+\+E\+T\+R\+\_\+\+Mask}}
+\index{S\+M\+C\+R\+\_\+\+E\+T\+R\+\_\+\+Mask@{S\+M\+C\+R\+\_\+\+E\+T\+R\+\_\+\+Mask}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{S\+M\+C\+R\+\_\+\+E\+T\+R\+\_\+\+Mask}{SMCR_ETR_Mask}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+M\+C\+R\+\_\+\+E\+T\+R\+\_\+\+Mask~(({\bf u16})0x00\+F\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a43819484b70fd8f2f2aa02d4131c9841}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a43819484b70fd8f2f2aa02d4131c9841}
+
+
+Definition at line 53 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!S\+M\+C\+R\+\_\+\+M\+S\+M\+\_\+\+Reset@{S\+M\+C\+R\+\_\+\+M\+S\+M\+\_\+\+Reset}}
+\index{S\+M\+C\+R\+\_\+\+M\+S\+M\+\_\+\+Reset@{S\+M\+C\+R\+\_\+\+M\+S\+M\+\_\+\+Reset}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{S\+M\+C\+R\+\_\+\+M\+S\+M\+\_\+\+Reset}{SMCR_MSM_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+M\+C\+R\+\_\+\+M\+S\+M\+\_\+\+Reset~(({\bf u16})0x\+F\+F7\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a7ae6b3dd3548086e3cd7b11e8d0ec8a1}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a7ae6b3dd3548086e3cd7b11e8d0ec8a1}
+
+
+Definition at line 55 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!S\+M\+C\+R\+\_\+\+S\+M\+S\+\_\+\+Mask@{S\+M\+C\+R\+\_\+\+S\+M\+S\+\_\+\+Mask}}
+\index{S\+M\+C\+R\+\_\+\+S\+M\+S\+\_\+\+Mask@{S\+M\+C\+R\+\_\+\+S\+M\+S\+\_\+\+Mask}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{S\+M\+C\+R\+\_\+\+S\+M\+S\+\_\+\+Mask}{SMCR_SMS_Mask}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+M\+C\+R\+\_\+\+S\+M\+S\+\_\+\+Mask~(({\bf u16})0x\+F\+F\+F8)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_aaf5725e139cf4b4fd6435ad976b42c01}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_aaf5725e139cf4b4fd6435ad976b42c01}
+
+
+Definition at line 52 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!S\+M\+C\+R\+\_\+\+T\+S\+\_\+\+Mask@{S\+M\+C\+R\+\_\+\+T\+S\+\_\+\+Mask}}
+\index{S\+M\+C\+R\+\_\+\+T\+S\+\_\+\+Mask@{S\+M\+C\+R\+\_\+\+T\+S\+\_\+\+Mask}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{S\+M\+C\+R\+\_\+\+T\+S\+\_\+\+Mask}{SMCR_TS_Mask}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+M\+C\+R\+\_\+\+T\+S\+\_\+\+Mask~(({\bf u16})0x\+F\+F8\+F)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_ad1ac0bc658a0b58c10eb165ee6fb680c}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_ad1ac0bc658a0b58c10eb165ee6fb680c}
+
+
+Definition at line 54 of file stm32f10x\+\_\+tim.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+C\+Cx\+Cmd@{T\+I\+M\+\_\+\+C\+Cx\+Cmd}}
+\index{T\+I\+M\+\_\+\+C\+Cx\+Cmd@{T\+I\+M\+\_\+\+C\+Cx\+Cmd}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+C\+Cx\+Cmd(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+Channel, u16 T\+I\+M\+\_\+\+C\+Cx)}{TIM_CCxCmd(TIM_TypeDef *TIMx, u16 TIM_Channel, u16 TIM_CCx)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+C\+Cx\+Cmd (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+Channel, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+C\+Cx}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_aeeef2c74f0da2b651fe7fcf7cad39b2a}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_aeeef2c74f0da2b651fe7fcf7cad39b2a}
+
+
+Definition at line 2254 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+C\+Cx\+N\+Cmd@{T\+I\+M\+\_\+\+C\+Cx\+N\+Cmd}}
+\index{T\+I\+M\+\_\+\+C\+Cx\+N\+Cmd@{T\+I\+M\+\_\+\+C\+Cx\+N\+Cmd}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+C\+Cx\+N\+Cmd(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+Channel, u16 T\+I\+M\+\_\+\+C\+Cx\+N)}{TIM_CCxNCmd(TIM_TypeDef *TIMx, u16 TIM_Channel, u16 TIM_CCxN)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+C\+Cx\+N\+Cmd (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+Channel, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+C\+CxN}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a8fd04c222bcc3c68d0687e8f87254859}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a8fd04c222bcc3c68d0687e8f87254859}
+
+
+Definition at line 2282 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Clear\+Flag@{T\+I\+M\+\_\+\+Clear\+Flag}}
+\index{T\+I\+M\+\_\+\+Clear\+Flag@{T\+I\+M\+\_\+\+Clear\+Flag}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Clear\+Flag(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+F\+L\+A\+G)}{TIM_ClearFlag(TIM_TypeDef *TIMx, u16 TIM_FLAG)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Clear\+Flag (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+F\+L\+AG}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a3991326f06129117cf68ae147abbce2e}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a3991326f06129117cf68ae147abbce2e}
+
+
+Definition at line 2950 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Clear\+I\+T\+Pending\+Bit@{T\+I\+M\+\_\+\+Clear\+I\+T\+Pending\+Bit}}
+\index{T\+I\+M\+\_\+\+Clear\+I\+T\+Pending\+Bit@{T\+I\+M\+\_\+\+Clear\+I\+T\+Pending\+Bit}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Clear\+I\+T\+Pending\+Bit(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+I\+T)}{TIM_ClearITPendingBit(TIM_TypeDef *TIMx, u16 TIM_IT)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Clear\+I\+T\+Pending\+Bit (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+IT}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_aa214e1cbbb7287d332c47b4a9168f0e8}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_aa214e1cbbb7287d332c47b4a9168f0e8}
+
+
+Definition at line 3021 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Clear\+O\+C1\+Ref@{T\+I\+M\+\_\+\+Clear\+O\+C1\+Ref}}
+\index{T\+I\+M\+\_\+\+Clear\+O\+C1\+Ref@{T\+I\+M\+\_\+\+Clear\+O\+C1\+Ref}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Clear\+O\+C1\+Ref(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+O\+C\+Clear)}{TIM_ClearOC1Ref(TIM_TypeDef *TIMx, u16 TIM_OCClear)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Clear\+O\+C1\+Ref (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+O\+C\+Clear}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_afccf4b46c777a14d2f4c18cbd3d57b99}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_afccf4b46c777a14d2f4c18cbd3d57b99}
+
+
+Definition at line 1915 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Clear\+O\+C2\+Ref@{T\+I\+M\+\_\+\+Clear\+O\+C2\+Ref}}
+\index{T\+I\+M\+\_\+\+Clear\+O\+C2\+Ref@{T\+I\+M\+\_\+\+Clear\+O\+C2\+Ref}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Clear\+O\+C2\+Ref(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+O\+C\+Clear)}{TIM_ClearOC2Ref(TIM_TypeDef *TIMx, u16 TIM_OCClear)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Clear\+O\+C2\+Ref (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+O\+C\+Clear}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a05f1e18871869f114981f2a92b2e4c7f}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a05f1e18871869f114981f2a92b2e4c7f}
+
+
+Definition at line 1947 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Clear\+O\+C3\+Ref@{T\+I\+M\+\_\+\+Clear\+O\+C3\+Ref}}
+\index{T\+I\+M\+\_\+\+Clear\+O\+C3\+Ref@{T\+I\+M\+\_\+\+Clear\+O\+C3\+Ref}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Clear\+O\+C3\+Ref(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+O\+C\+Clear)}{TIM_ClearOC3Ref(TIM_TypeDef *TIMx, u16 TIM_OCClear)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Clear\+O\+C3\+Ref (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+O\+C\+Clear}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_af8e1a9098ba6d13caa325f11896bdf12}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_af8e1a9098ba6d13caa325f11896bdf12}
+
+
+Definition at line 1979 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Clear\+O\+C4\+Ref@{T\+I\+M\+\_\+\+Clear\+O\+C4\+Ref}}
+\index{T\+I\+M\+\_\+\+Clear\+O\+C4\+Ref@{T\+I\+M\+\_\+\+Clear\+O\+C4\+Ref}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Clear\+O\+C4\+Ref(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+O\+C\+Clear)}{TIM_ClearOC4Ref(TIM_TypeDef *TIMx, u16 TIM_OCClear)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Clear\+O\+C4\+Ref (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+O\+C\+Clear}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a2fabb6a316cc4490823c08af173f9877}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a2fabb6a316cc4490823c08af173f9877}
+
+
+Definition at line 2011 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Counter\+Mode\+Config@{T\+I\+M\+\_\+\+Counter\+Mode\+Config}}
+\index{T\+I\+M\+\_\+\+Counter\+Mode\+Config@{T\+I\+M\+\_\+\+Counter\+Mode\+Config}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Counter\+Mode\+Config(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+Counter\+Mode)}{TIM_CounterModeConfig(TIM_TypeDef *TIMx, u16 TIM_CounterMode)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Counter\+Mode\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+Counter\+Mode}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a8659326e5208148d2d97897beb625e65}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a8659326e5208148d2d97897beb625e65}
+
+
+Definition at line 1266 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+D\+M\+A\+Cmd@{T\+I\+M\+\_\+\+D\+M\+A\+Cmd}}
+\index{T\+I\+M\+\_\+\+D\+M\+A\+Cmd@{T\+I\+M\+\_\+\+D\+M\+A\+Cmd}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+D\+M\+A\+Cmd(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+D\+M\+A\+Source, Functional\+State New\+State)}{TIM_DMACmd(TIM_TypeDef *TIMx, u16 TIM_DMASource, FunctionalState NewState)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+D\+M\+A\+Cmd (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+D\+M\+A\+Source, }
+\item[{{\bf Functional\+State}}]{New\+State}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_ac961275a78de716feca693d4aa98a626}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_ac961275a78de716feca693d4aa98a626}
+
+
+Definition at line 988 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+D\+M\+A\+Config@{T\+I\+M\+\_\+\+D\+M\+A\+Config}}
+\index{T\+I\+M\+\_\+\+D\+M\+A\+Config@{T\+I\+M\+\_\+\+D\+M\+A\+Config}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+D\+M\+A\+Config(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+D\+M\+A\+Base, u16 T\+I\+M\+\_\+\+D\+M\+A\+Burst\+Length)}{TIM_DMAConfig(TIM_TypeDef *TIMx, u16 TIM_DMABase, u16 TIM_DMABurstLength)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+D\+M\+A\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+D\+M\+A\+Base, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+D\+M\+A\+Burst\+Length}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a7e3de141bdf5ae70f4a04853f6cf1590}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a7e3de141bdf5ae70f4a04853f6cf1590}
+
+
+Definition at line 959 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Encoder\+Interface\+Config@{T\+I\+M\+\_\+\+Encoder\+Interface\+Config}}
+\index{T\+I\+M\+\_\+\+Encoder\+Interface\+Config@{T\+I\+M\+\_\+\+Encoder\+Interface\+Config}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Encoder\+Interface\+Config(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+Encoder\+Mode, u16 T\+I\+M\+\_\+\+I\+C1\+Polarity, u16 T\+I\+M\+\_\+\+I\+C2\+Polarity)}{TIM_EncoderInterfaceConfig(TIM_TypeDef *TIMx, u16 TIM_EncoderMode, u16 TIM_IC1Polarity, u16 TIM_IC2Polarity)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Encoder\+Interface\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+Encoder\+Mode, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+I\+C1\+Polarity, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+I\+C2\+Polarity}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a19bacbc681216fa072a6998a8eba6a63}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a19bacbc681216fa072a6998a8eba6a63}
+
+
+Definition at line 1349 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+E\+T\+R\+Clock\+Mode1\+Config@{T\+I\+M\+\_\+\+E\+T\+R\+Clock\+Mode1\+Config}}
+\index{T\+I\+M\+\_\+\+E\+T\+R\+Clock\+Mode1\+Config@{T\+I\+M\+\_\+\+E\+T\+R\+Clock\+Mode1\+Config}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+E\+T\+R\+Clock\+Mode1\+Config(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+Ext\+T\+R\+G\+Prescaler, u16 T\+I\+M\+\_\+\+Ext\+T\+R\+G\+Polarity, u16 Ext\+T\+R\+G\+Filter)}{TIM_ETRClockMode1Config(TIM_TypeDef *TIMx, u16 TIM_ExtTRGPrescaler, u16 TIM_ExtTRGPolarity, u16 ExtTRGFilter)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+E\+T\+R\+Clock\+Mode1\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+Ext\+T\+R\+G\+Prescaler, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+Ext\+T\+R\+G\+Polarity, }
+\item[{{\bf u16}}]{Ext\+T\+R\+G\+Filter}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a32ec2e6c9473c796c7fbbaec98d83104}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a32ec2e6c9473c796c7fbbaec98d83104}
+
+
+Definition at line 1115 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+E\+T\+R\+Clock\+Mode2\+Config@{T\+I\+M\+\_\+\+E\+T\+R\+Clock\+Mode2\+Config}}
+\index{T\+I\+M\+\_\+\+E\+T\+R\+Clock\+Mode2\+Config@{T\+I\+M\+\_\+\+E\+T\+R\+Clock\+Mode2\+Config}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+E\+T\+R\+Clock\+Mode2\+Config(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+Ext\+T\+R\+G\+Prescaler, u16 T\+I\+M\+\_\+\+Ext\+T\+R\+G\+Polarity, u16 Ext\+T\+R\+G\+Filter)}{TIM_ETRClockMode2Config(TIM_TypeDef *TIMx, u16 TIM_ExtTRGPrescaler, u16 TIM_ExtTRGPolarity, u16 ExtTRGFilter)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+E\+T\+R\+Clock\+Mode2\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+Ext\+T\+R\+G\+Prescaler, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+Ext\+T\+R\+G\+Polarity, }
+\item[{{\bf u16}}]{Ext\+T\+R\+G\+Filter}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_ab27b1e3f2118eca505f77ef82471b4c6}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_ab27b1e3f2118eca505f77ef82471b4c6}
+
+
+Definition at line 1165 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+E\+T\+R\+Config@{T\+I\+M\+\_\+\+E\+T\+R\+Config}}
+\index{T\+I\+M\+\_\+\+E\+T\+R\+Config@{T\+I\+M\+\_\+\+E\+T\+R\+Config}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+E\+T\+R\+Config(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+Ext\+T\+R\+G\+Prescaler, u16 T\+I\+M\+\_\+\+Ext\+T\+R\+G\+Polarity, u16 Ext\+T\+R\+G\+Filter)}{TIM_ETRConfig(TIM_TypeDef *TIMx, u16 TIM_ExtTRGPrescaler, u16 TIM_ExtTRGPolarity, u16 ExtTRGFilter)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+E\+T\+R\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+Ext\+T\+R\+G\+Prescaler, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+Ext\+T\+R\+G\+Polarity, }
+\item[{{\bf u16}}]{Ext\+T\+R\+G\+Filter}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a53ccd2ccc46844ca32f28406956030c8}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a53ccd2ccc46844ca32f28406956030c8}
+
+
+Definition at line 1201 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Forced\+O\+C1\+Config@{T\+I\+M\+\_\+\+Forced\+O\+C1\+Config}}
+\index{T\+I\+M\+\_\+\+Forced\+O\+C1\+Config@{T\+I\+M\+\_\+\+Forced\+O\+C1\+Config}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Forced\+O\+C1\+Config(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+Forced\+Action)}{TIM_ForcedOC1Config(TIM_TypeDef *TIMx, u16 TIM_ForcedAction)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Forced\+O\+C1\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+Forced\+Action}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a44810f769a54b18a3084409530a8af6c}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a44810f769a54b18a3084409530a8af6c}
+
+
+Definition at line 1407 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Forced\+O\+C2\+Config@{T\+I\+M\+\_\+\+Forced\+O\+C2\+Config}}
+\index{T\+I\+M\+\_\+\+Forced\+O\+C2\+Config@{T\+I\+M\+\_\+\+Forced\+O\+C2\+Config}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Forced\+O\+C2\+Config(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+Forced\+Action)}{TIM_ForcedOC2Config(TIM_TypeDef *TIMx, u16 TIM_ForcedAction)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Forced\+O\+C2\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+Forced\+Action}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a510b82c065ed5fe01ed6eb16742de90d}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a510b82c065ed5fe01ed6eb16742de90d}
+
+
+Definition at line 1441 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Forced\+O\+C3\+Config@{T\+I\+M\+\_\+\+Forced\+O\+C3\+Config}}
+\index{T\+I\+M\+\_\+\+Forced\+O\+C3\+Config@{T\+I\+M\+\_\+\+Forced\+O\+C3\+Config}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Forced\+O\+C3\+Config(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+Forced\+Action)}{TIM_ForcedOC3Config(TIM_TypeDef *TIMx, u16 TIM_ForcedAction)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Forced\+O\+C3\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+Forced\+Action}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a4c03c0a169f7d2e49a0d4d627957aaf5}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a4c03c0a169f7d2e49a0d4d627957aaf5}
+
+
+Definition at line 1475 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Forced\+O\+C4\+Config@{T\+I\+M\+\_\+\+Forced\+O\+C4\+Config}}
+\index{T\+I\+M\+\_\+\+Forced\+O\+C4\+Config@{T\+I\+M\+\_\+\+Forced\+O\+C4\+Config}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Forced\+O\+C4\+Config(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+Forced\+Action)}{TIM_ForcedOC4Config(TIM_TypeDef *TIMx, u16 TIM_ForcedAction)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Forced\+O\+C4\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+Forced\+Action}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a497b2f93b97f562ac12357d84b138c32}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a497b2f93b97f562ac12357d84b138c32}
+
+
+Definition at line 1509 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Generate\+Event@{T\+I\+M\+\_\+\+Generate\+Event}}
+\index{T\+I\+M\+\_\+\+Generate\+Event@{T\+I\+M\+\_\+\+Generate\+Event}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Generate\+Event(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+Event\+Source)}{TIM_GenerateEvent(TIM_TypeDef *TIMx, u16 TIM_EventSource)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Generate\+Event (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+Event\+Source}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a0d8fd398f0152cbca30efd6dfcebeb1b}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a0d8fd398f0152cbca30efd6dfcebeb1b}
+
+
+Definition at line 928 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Get\+Flag\+Status@{T\+I\+M\+\_\+\+Get\+Flag\+Status}}
+\index{T\+I\+M\+\_\+\+Get\+Flag\+Status@{T\+I\+M\+\_\+\+Get\+Flag\+Status}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Get\+Flag\+Status(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+F\+L\+A\+G)}{TIM_GetFlagStatus(TIM_TypeDef *TIMx, u16 TIM_FLAG)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Flag\+Status} T\+I\+M\+\_\+\+Get\+Flag\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+F\+L\+AG}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_af27ba3098f365ba121c47e4b8f563ffd}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_af27ba3098f365ba121c47e4b8f563ffd}
+
+
+Definition at line 2909 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Get\+I\+T\+Status@{T\+I\+M\+\_\+\+Get\+I\+T\+Status}}
+\index{T\+I\+M\+\_\+\+Get\+I\+T\+Status@{T\+I\+M\+\_\+\+Get\+I\+T\+Status}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Get\+I\+T\+Status(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+I\+T)}{TIM_GetITStatus(TIM_TypeDef *TIMx, u16 TIM_IT)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+T\+Status} T\+I\+M\+\_\+\+Get\+I\+T\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+IT}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a3944563cf9eb8613bb907489dd76cca1}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a3944563cf9eb8613bb907489dd76cca1}
+
+
+Definition at line 2978 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+I\+T\+Config@{T\+I\+M\+\_\+\+I\+T\+Config}}
+\index{T\+I\+M\+\_\+\+I\+T\+Config@{T\+I\+M\+\_\+\+I\+T\+Config}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+I\+T\+Config(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+I\+T, Functional\+State New\+State)}{TIM_ITConfig(TIM_TypeDef *TIMx, u16 TIM_IT, FunctionalState NewState)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+I\+T\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+IT, }
+\item[{{\bf Functional\+State}}]{New\+State}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a42967f9b08dc149346cc72e699110184}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a42967f9b08dc149346cc72e699110184}
+
+
+Definition at line 893 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+I\+T\+Rx\+External\+Clock\+Config@{T\+I\+M\+\_\+\+I\+T\+Rx\+External\+Clock\+Config}}
+\index{T\+I\+M\+\_\+\+I\+T\+Rx\+External\+Clock\+Config@{T\+I\+M\+\_\+\+I\+T\+Rx\+External\+Clock\+Config}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+I\+T\+Rx\+External\+Clock\+Config(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+Input\+Trigger\+Source)}{TIM_ITRxExternalClockConfig(TIM_TypeDef *TIMx, u16 TIM_InputTriggerSource)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+I\+T\+Rx\+External\+Clock\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+Input\+Trigger\+Source}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_ae23c75f2714f5f7d527312b80f10edcc}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_ae23c75f2714f5f7d527312b80f10edcc}
+
+
+Definition at line 1038 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+O\+C1\+Fast\+Config@{T\+I\+M\+\_\+\+O\+C1\+Fast\+Config}}
+\index{T\+I\+M\+\_\+\+O\+C1\+Fast\+Config@{T\+I\+M\+\_\+\+O\+C1\+Fast\+Config}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+O\+C1\+Fast\+Config(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+O\+C\+Fast)}{TIM_OC1FastConfig(TIM_TypeDef *TIMx, u16 TIM_OCFast)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+O\+C1\+Fast\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+O\+C\+Fast}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a73409668c0e20fdfaa7a695a98862fa5}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a73409668c0e20fdfaa7a695a98862fa5}
+
+
+Definition at line 1783 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+O\+C1\+N\+Polarity\+Config@{T\+I\+M\+\_\+\+O\+C1\+N\+Polarity\+Config}}
+\index{T\+I\+M\+\_\+\+O\+C1\+N\+Polarity\+Config@{T\+I\+M\+\_\+\+O\+C1\+N\+Polarity\+Config}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+O\+C1\+N\+Polarity\+Config(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+O\+C\+N\+Polarity)}{TIM_OC1NPolarityConfig(TIM_TypeDef *TIMx, u16 TIM_OCNPolarity)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+O\+C1\+N\+Polarity\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+O\+C\+N\+Polarity}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a8eecb7d018e7211413a496b5a6c456ac}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a8eecb7d018e7211413a496b5a6c456ac}
+
+
+Definition at line 2072 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+O\+C1\+Polarity\+Config@{T\+I\+M\+\_\+\+O\+C1\+Polarity\+Config}}
+\index{T\+I\+M\+\_\+\+O\+C1\+Polarity\+Config@{T\+I\+M\+\_\+\+O\+C1\+Polarity\+Config}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+O\+C1\+Polarity\+Config(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+O\+C\+Polarity)}{TIM_OC1PolarityConfig(TIM_TypeDef *TIMx, u16 TIM_OCPolarity)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+O\+C1\+Polarity\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+O\+C\+Polarity}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_ac96b0230495fe17f8fff942375586f09}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_ac96b0230495fe17f8fff942375586f09}
+
+
+Definition at line 2043 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+O\+C1\+Preload\+Config@{T\+I\+M\+\_\+\+O\+C1\+Preload\+Config}}
+\index{T\+I\+M\+\_\+\+O\+C1\+Preload\+Config@{T\+I\+M\+\_\+\+O\+C1\+Preload\+Config}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+O\+C1\+Preload\+Config(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+O\+C\+Preload)}{TIM_OC1PreloadConfig(TIM_TypeDef *TIMx, u16 TIM_OCPreload)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+O\+C1\+Preload\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+O\+C\+Preload}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_aa0dce2a8c2a39de75ed329ec66221fb1}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_aa0dce2a8c2a39de75ed329ec66221fb1}
+
+
+Definition at line 1652 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+O\+C2\+Fast\+Config@{T\+I\+M\+\_\+\+O\+C2\+Fast\+Config}}
+\index{T\+I\+M\+\_\+\+O\+C2\+Fast\+Config@{T\+I\+M\+\_\+\+O\+C2\+Fast\+Config}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+O\+C2\+Fast\+Config(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+O\+C\+Fast)}{TIM_OC2FastConfig(TIM_TypeDef *TIMx, u16 TIM_OCFast)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+O\+C2\+Fast\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+O\+C\+Fast}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_ab76706a969184d577e392ef9df24ec59}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_ab76706a969184d577e392ef9df24ec59}
+
+
+Definition at line 1816 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+O\+C2\+N\+Polarity\+Config@{T\+I\+M\+\_\+\+O\+C2\+N\+Polarity\+Config}}
+\index{T\+I\+M\+\_\+\+O\+C2\+N\+Polarity\+Config@{T\+I\+M\+\_\+\+O\+C2\+N\+Polarity\+Config}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+O\+C2\+N\+Polarity\+Config(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+O\+C\+N\+Polarity)}{TIM_OC2NPolarityConfig(TIM_TypeDef *TIMx, u16 TIM_OCNPolarity)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+O\+C2\+N\+Polarity\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+O\+C\+N\+Polarity}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_ac3099cedfab44efd0aea96d1cd80c2bb}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_ac3099cedfab44efd0aea96d1cd80c2bb}
+
+
+Definition at line 2131 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+O\+C2\+Polarity\+Config@{T\+I\+M\+\_\+\+O\+C2\+Polarity\+Config}}
+\index{T\+I\+M\+\_\+\+O\+C2\+Polarity\+Config@{T\+I\+M\+\_\+\+O\+C2\+Polarity\+Config}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+O\+C2\+Polarity\+Config(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+O\+C\+Polarity)}{TIM_OC2PolarityConfig(TIM_TypeDef *TIMx, u16 TIM_OCPolarity)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+O\+C2\+Polarity\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+O\+C\+Polarity}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a9b4541f4366cb9ed0084344b324c9958}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a9b4541f4366cb9ed0084344b324c9958}
+
+
+Definition at line 2102 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+O\+C2\+Preload\+Config@{T\+I\+M\+\_\+\+O\+C2\+Preload\+Config}}
+\index{T\+I\+M\+\_\+\+O\+C2\+Preload\+Config@{T\+I\+M\+\_\+\+O\+C2\+Preload\+Config}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+O\+C2\+Preload\+Config(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+O\+C\+Preload)}{TIM_OC2PreloadConfig(TIM_TypeDef *TIMx, u16 TIM_OCPreload)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+O\+C2\+Preload\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+O\+C\+Preload}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a82e515fc2e35591b935df1703df32cb1}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a82e515fc2e35591b935df1703df32cb1}
+
+
+Definition at line 1685 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+O\+C3\+Fast\+Config@{T\+I\+M\+\_\+\+O\+C3\+Fast\+Config}}
+\index{T\+I\+M\+\_\+\+O\+C3\+Fast\+Config@{T\+I\+M\+\_\+\+O\+C3\+Fast\+Config}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+O\+C3\+Fast\+Config(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+O\+C\+Fast)}{TIM_OC3FastConfig(TIM_TypeDef *TIMx, u16 TIM_OCFast)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+O\+C3\+Fast\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+O\+C\+Fast}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a656195e8477b82de0d67e4a0fbf74100}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a656195e8477b82de0d67e4a0fbf74100}
+
+
+Definition at line 1849 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+O\+C3\+N\+Polarity\+Config@{T\+I\+M\+\_\+\+O\+C3\+N\+Polarity\+Config}}
+\index{T\+I\+M\+\_\+\+O\+C3\+N\+Polarity\+Config@{T\+I\+M\+\_\+\+O\+C3\+N\+Polarity\+Config}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+O\+C3\+N\+Polarity\+Config(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+O\+C\+N\+Polarity)}{TIM_OC3NPolarityConfig(TIM_TypeDef *TIMx, u16 TIM_OCNPolarity)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+O\+C3\+N\+Polarity\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+O\+C\+N\+Polarity}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_ae4c853a559aa72b65878fad7eebd624d}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_ae4c853a559aa72b65878fad7eebd624d}
+
+
+Definition at line 2190 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+O\+C3\+Polarity\+Config@{T\+I\+M\+\_\+\+O\+C3\+Polarity\+Config}}
+\index{T\+I\+M\+\_\+\+O\+C3\+Polarity\+Config@{T\+I\+M\+\_\+\+O\+C3\+Polarity\+Config}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+O\+C3\+Polarity\+Config(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+O\+C\+Polarity)}{TIM_OC3PolarityConfig(TIM_TypeDef *TIMx, u16 TIM_OCPolarity)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+O\+C3\+Polarity\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+O\+C\+Polarity}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a0d835bbd759dead2ff8c3c6a30c257e7}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a0d835bbd759dead2ff8c3c6a30c257e7}
+
+
+Definition at line 2161 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+O\+C3\+Preload\+Config@{T\+I\+M\+\_\+\+O\+C3\+Preload\+Config}}
+\index{T\+I\+M\+\_\+\+O\+C3\+Preload\+Config@{T\+I\+M\+\_\+\+O\+C3\+Preload\+Config}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+O\+C3\+Preload\+Config(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+O\+C\+Preload)}{TIM_OC3PreloadConfig(TIM_TypeDef *TIMx, u16 TIM_OCPreload)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+O\+C3\+Preload\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+O\+C\+Preload}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a1fef39a919a791ab4581222172422c00}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a1fef39a919a791ab4581222172422c00}
+
+
+Definition at line 1718 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+O\+C4\+Fast\+Config@{T\+I\+M\+\_\+\+O\+C4\+Fast\+Config}}
+\index{T\+I\+M\+\_\+\+O\+C4\+Fast\+Config@{T\+I\+M\+\_\+\+O\+C4\+Fast\+Config}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+O\+C4\+Fast\+Config(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+O\+C\+Fast)}{TIM_OC4FastConfig(TIM_TypeDef *TIMx, u16 TIM_OCFast)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+O\+C4\+Fast\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+O\+C\+Fast}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a65f4006d25d77e0c6bf4822280ed6075}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a65f4006d25d77e0c6bf4822280ed6075}
+
+
+Definition at line 1882 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+O\+C4\+Polarity\+Config@{T\+I\+M\+\_\+\+O\+C4\+Polarity\+Config}}
+\index{T\+I\+M\+\_\+\+O\+C4\+Polarity\+Config@{T\+I\+M\+\_\+\+O\+C4\+Polarity\+Config}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+O\+C4\+Polarity\+Config(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+O\+C\+Polarity)}{TIM_OC4PolarityConfig(TIM_TypeDef *TIMx, u16 TIM_OCPolarity)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+O\+C4\+Polarity\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+O\+C\+Polarity}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a8df11deb5514519bb3192dfdaaf96f5e}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a8df11deb5514519bb3192dfdaaf96f5e}
+
+
+Definition at line 2220 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+O\+C4\+Preload\+Config@{T\+I\+M\+\_\+\+O\+C4\+Preload\+Config}}
+\index{T\+I\+M\+\_\+\+O\+C4\+Preload\+Config@{T\+I\+M\+\_\+\+O\+C4\+Preload\+Config}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+O\+C4\+Preload\+Config(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+O\+C\+Preload)}{TIM_OC4PreloadConfig(TIM_TypeDef *TIMx, u16 TIM_OCPreload)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+O\+C4\+Preload\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+O\+C\+Preload}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_ae43879b2803ebba1b6fe9442aa13f82e}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_ae43879b2803ebba1b6fe9442aa13f82e}
+
+
+Definition at line 1751 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Prescaler\+Config@{T\+I\+M\+\_\+\+Prescaler\+Config}}
+\index{T\+I\+M\+\_\+\+Prescaler\+Config@{T\+I\+M\+\_\+\+Prescaler\+Config}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Prescaler\+Config(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 Prescaler, u16 T\+I\+M\+\_\+\+P\+S\+C\+Reload\+Mode)}{TIM_PrescalerConfig(TIM_TypeDef *TIMx, u16 Prescaler, u16 TIM_PSCReloadMode)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Prescaler\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{Prescaler, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+P\+S\+C\+Reload\+Mode}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a2dfb5d67b00b5ce78bf2cacbe99ca977}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a2dfb5d67b00b5ce78bf2cacbe99ca977}
+
+
+Definition at line 1238 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Select\+Input\+Trigger@{T\+I\+M\+\_\+\+Select\+Input\+Trigger}}
+\index{T\+I\+M\+\_\+\+Select\+Input\+Trigger@{T\+I\+M\+\_\+\+Select\+Input\+Trigger}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Select\+Input\+Trigger(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+Input\+Trigger\+Source)}{TIM_SelectInputTrigger(TIM_TypeDef *TIMx, u16 TIM_InputTriggerSource)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Select\+Input\+Trigger (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+Input\+Trigger\+Source}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a7839f297b973f919caf3d9018a55b198}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a7839f297b973f919caf3d9018a55b198}
+
+
+Definition at line 1304 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Select\+Master\+Slave\+Mode@{T\+I\+M\+\_\+\+Select\+Master\+Slave\+Mode}}
+\index{T\+I\+M\+\_\+\+Select\+Master\+Slave\+Mode@{T\+I\+M\+\_\+\+Select\+Master\+Slave\+Mode}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Select\+Master\+Slave\+Mode(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+Master\+Slave\+Mode)}{TIM_SelectMasterSlaveMode(TIM_TypeDef *TIMx, u16 TIM_MasterSlaveMode)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Select\+Master\+Slave\+Mode (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+Master\+Slave\+Mode}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_abf157dc686630ac6b652c0b89a3c2e63}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_abf157dc686630ac6b652c0b89a3c2e63}
+
+
+Definition at line 2532 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Select\+O\+CxM@{T\+I\+M\+\_\+\+Select\+O\+CxM}}
+\index{T\+I\+M\+\_\+\+Select\+O\+CxM@{T\+I\+M\+\_\+\+Select\+O\+CxM}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Select\+O\+Cx\+M(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+Channel, u16 T\+I\+M\+\_\+\+O\+C\+Mode)}{TIM_SelectOCxM(TIM_TypeDef *TIMx, u16 TIM_Channel, u16 TIM_OCMode)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Select\+O\+CxM (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+Channel, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+O\+C\+Mode}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a08970d171728172b651afb40bea5450c}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a08970d171728172b651afb40bea5450c}
+
+
+Definition at line 2322 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Select\+One\+Pulse\+Mode@{T\+I\+M\+\_\+\+Select\+One\+Pulse\+Mode}}
+\index{T\+I\+M\+\_\+\+Select\+One\+Pulse\+Mode@{T\+I\+M\+\_\+\+Select\+One\+Pulse\+Mode}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Select\+One\+Pulse\+Mode(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+O\+P\+Mode)}{TIM_SelectOnePulseMode(TIM_TypeDef *TIMx, u16 TIM_OPMode)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Select\+One\+Pulse\+Mode (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+O\+P\+Mode}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_ad2d707cecdaf745a5de8804af146da7c}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_ad2d707cecdaf745a5de8804af146da7c}
+
+
+Definition at line 2445 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Select\+Output\+Trigger@{T\+I\+M\+\_\+\+Select\+Output\+Trigger}}
+\index{T\+I\+M\+\_\+\+Select\+Output\+Trigger@{T\+I\+M\+\_\+\+Select\+Output\+Trigger}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Select\+Output\+Trigger(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+T\+R\+G\+O\+Source)}{TIM_SelectOutputTrigger(TIM_TypeDef *TIMx, u16 TIM_TRGOSource)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Select\+Output\+Trigger (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+T\+R\+G\+O\+Source}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_aa3c433d0fece419c0d0c14dbe12542ae}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_aa3c433d0fece419c0d0c14dbe12542ae}
+
+
+Definition at line 2478 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Select\+Slave\+Mode@{T\+I\+M\+\_\+\+Select\+Slave\+Mode}}
+\index{T\+I\+M\+\_\+\+Select\+Slave\+Mode@{T\+I\+M\+\_\+\+Select\+Slave\+Mode}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Select\+Slave\+Mode(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+Slave\+Mode)}{TIM_SelectSlaveMode(TIM_TypeDef *TIMx, u16 TIM_SlaveMode)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Select\+Slave\+Mode (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+Slave\+Mode}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_ac0fbaf936965b8ea5b3167a9b74ae79b}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_ac0fbaf936965b8ea5b3167a9b74ae79b}
+
+
+Definition at line 2506 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Set\+Autoreload@{T\+I\+M\+\_\+\+Set\+Autoreload}}
+\index{T\+I\+M\+\_\+\+Set\+Autoreload@{T\+I\+M\+\_\+\+Set\+Autoreload}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Set\+Autoreload(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 Autoreload)}{TIM_SetAutoreload(TIM_TypeDef *TIMx, u16 Autoreload)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Set\+Autoreload (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{Autoreload}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a6fe279e57247752e9aa675fafa0ef668}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a6fe279e57247752e9aa675fafa0ef668}
+
+
+Definition at line 2570 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Set\+Clock\+Division@{T\+I\+M\+\_\+\+Set\+Clock\+Division}}
+\index{T\+I\+M\+\_\+\+Set\+Clock\+Division@{T\+I\+M\+\_\+\+Set\+Clock\+Division}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Set\+Clock\+Division(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+C\+K\+D)}{TIM_SetClockDivision(TIM_TypeDef *TIMx, u16 TIM_CKD)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Set\+Clock\+Division (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+C\+KD}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_aea2d92475510376e3f5ef1cb6bb2aaaa}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_aea2d92475510376e3f5ef1cb6bb2aaaa}
+
+
+Definition at line 2776 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Set\+Compare1@{T\+I\+M\+\_\+\+Set\+Compare1}}
+\index{T\+I\+M\+\_\+\+Set\+Compare1@{T\+I\+M\+\_\+\+Set\+Compare1}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Set\+Compare1(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 Compare1)}{TIM_SetCompare1(TIM_TypeDef *TIMx, u16 Compare1)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Set\+Compare1 (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{Compare1}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_ac6bdeafcb904d30a1262b1e0c743dd76}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_ac6bdeafcb904d30a1262b1e0c743dd76}
+
+
+Definition at line 2588 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Set\+Compare2@{T\+I\+M\+\_\+\+Set\+Compare2}}
+\index{T\+I\+M\+\_\+\+Set\+Compare2@{T\+I\+M\+\_\+\+Set\+Compare2}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Set\+Compare2(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 Compare2)}{TIM_SetCompare2(TIM_TypeDef *TIMx, u16 Compare2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Set\+Compare2 (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{Compare2}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a45acec34cc0967864e51a4cdf9f94457}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a45acec34cc0967864e51a4cdf9f94457}
+
+
+Definition at line 2606 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Set\+Compare3@{T\+I\+M\+\_\+\+Set\+Compare3}}
+\index{T\+I\+M\+\_\+\+Set\+Compare3@{T\+I\+M\+\_\+\+Set\+Compare3}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Set\+Compare3(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 Compare3)}{TIM_SetCompare3(TIM_TypeDef *TIMx, u16 Compare3)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Set\+Compare3 (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{Compare3}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_ae646fc198387123426d400e9d17fb4fa}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_ae646fc198387123426d400e9d17fb4fa}
+
+
+Definition at line 2624 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Set\+Compare4@{T\+I\+M\+\_\+\+Set\+Compare4}}
+\index{T\+I\+M\+\_\+\+Set\+Compare4@{T\+I\+M\+\_\+\+Set\+Compare4}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Set\+Compare4(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 Compare4)}{TIM_SetCompare4(TIM_TypeDef *TIMx, u16 Compare4)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Set\+Compare4 (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{Compare4}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a1a2b18f149e3992df52e18c7e82b517b}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a1a2b18f149e3992df52e18c7e82b517b}
+
+
+Definition at line 2642 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Set\+Counter@{T\+I\+M\+\_\+\+Set\+Counter}}
+\index{T\+I\+M\+\_\+\+Set\+Counter@{T\+I\+M\+\_\+\+Set\+Counter}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Set\+Counter(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 Counter)}{TIM_SetCounter(TIM_TypeDef *TIMx, u16 Counter)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Set\+Counter (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{Counter}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_ae574e7d4b63b3c7076b8ce6ac42ad849}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_ae574e7d4b63b3c7076b8ce6ac42ad849}
+
+
+Definition at line 2553 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Set\+I\+C1\+Prescaler@{T\+I\+M\+\_\+\+Set\+I\+C1\+Prescaler}}
+\index{T\+I\+M\+\_\+\+Set\+I\+C1\+Prescaler@{T\+I\+M\+\_\+\+Set\+I\+C1\+Prescaler}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Set\+I\+C1\+Prescaler(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+I\+C\+P\+S\+C)}{TIM_SetIC1Prescaler(TIM_TypeDef *TIMx, u16 TIM_ICPSC)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Set\+I\+C1\+Prescaler (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+I\+C\+P\+SC}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_ab7a8a7a17dbbb9f7cafe4a14ab5883a4}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_ab7a8a7a17dbbb9f7cafe4a14ab5883a4}
+
+
+Definition at line 2666 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Set\+I\+C2\+Prescaler@{T\+I\+M\+\_\+\+Set\+I\+C2\+Prescaler}}
+\index{T\+I\+M\+\_\+\+Set\+I\+C2\+Prescaler@{T\+I\+M\+\_\+\+Set\+I\+C2\+Prescaler}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Set\+I\+C2\+Prescaler(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+I\+C\+P\+S\+C)}{TIM_SetIC2Prescaler(TIM_TypeDef *TIMx, u16 TIM_ICPSC)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Set\+I\+C2\+Prescaler (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+I\+C\+P\+SC}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a4d129af8043d59993c008568f70e93ab}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a4d129af8043d59993c008568f70e93ab}
+
+
+Definition at line 2694 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Set\+I\+C3\+Prescaler@{T\+I\+M\+\_\+\+Set\+I\+C3\+Prescaler}}
+\index{T\+I\+M\+\_\+\+Set\+I\+C3\+Prescaler@{T\+I\+M\+\_\+\+Set\+I\+C3\+Prescaler}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Set\+I\+C3\+Prescaler(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+I\+C\+P\+S\+C)}{TIM_SetIC3Prescaler(TIM_TypeDef *TIMx, u16 TIM_ICPSC)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Set\+I\+C3\+Prescaler (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+I\+C\+P\+SC}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a6e0105e34ca4cb8d4128e121d4a7f31c}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a6e0105e34ca4cb8d4128e121d4a7f31c}
+
+
+Definition at line 2722 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Set\+I\+C4\+Prescaler@{T\+I\+M\+\_\+\+Set\+I\+C4\+Prescaler}}
+\index{T\+I\+M\+\_\+\+Set\+I\+C4\+Prescaler@{T\+I\+M\+\_\+\+Set\+I\+C4\+Prescaler}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Set\+I\+C4\+Prescaler(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+I\+C\+P\+S\+C)}{TIM_SetIC4Prescaler(TIM_TypeDef *TIMx, u16 TIM_ICPSC)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Set\+I\+C4\+Prescaler (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+I\+C\+P\+SC}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a7ab03cac37efa31da6bfb4c9c9c68498}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a7ab03cac37efa31da6bfb4c9c9c68498}
+
+
+Definition at line 2750 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+T\+Ix\+External\+Clock\+Config@{T\+I\+M\+\_\+\+T\+Ix\+External\+Clock\+Config}}
+\index{T\+I\+M\+\_\+\+T\+Ix\+External\+Clock\+Config@{T\+I\+M\+\_\+\+T\+Ix\+External\+Clock\+Config}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+T\+Ix\+External\+Clock\+Config(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+T\+Ix\+External\+C\+L\+K\+Source, u16 T\+I\+M\+\_\+\+I\+C\+Polarity, u16 I\+C\+Filter)}{TIM_TIxExternalClockConfig(TIM_TypeDef *TIMx, u16 TIM_TIxExternalCLKSource, u16 TIM_ICPolarity, u16 ICFilter)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+T\+Ix\+External\+Clock\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+T\+Ix\+External\+C\+L\+K\+Source, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+I\+C\+Polarity, }
+\item[{{\bf u16}}]{I\+C\+Filter}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_a89ab1b52bca32f8b4074a29c6df72b6c}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_a89ab1b52bca32f8b4074a29c6df72b6c}
+
+
+Definition at line 1069 of file stm32f10x\+\_\+tim.\+c.
+
+\index{agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}!T\+I\+M\+\_\+\+Update\+Request\+Config@{T\+I\+M\+\_\+\+Update\+Request\+Config}}
+\index{T\+I\+M\+\_\+\+Update\+Request\+Config@{T\+I\+M\+\_\+\+Update\+Request\+Config}!agilefox/library/src/stm32f10x\+\_\+tim.\+c@{agilefox/library/src/stm32f10x\+\_\+tim.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+\_\+\+Update\+Request\+Config(\+T\+I\+M\+\_\+\+Type\+Def $\ast$\+T\+I\+Mx, u16 T\+I\+M\+\_\+\+Update\+Source)}{TIM_UpdateRequestConfig(TIM_TypeDef *TIMx, u16 TIM_UpdateSource)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M\+\_\+\+Update\+Request\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+M\+\_\+\+Type\+Def} $\ast$}]{T\+I\+Mx, }
+\item[{{\bf u16}}]{T\+I\+M\+\_\+\+Update\+Source}
+\end{DoxyParamCaption}
+)}\hypertarget{agilefox_2library_2src_2stm32f10x__tim_8c_ae9520f93707e6dce84be94a4a586a394}{}\label{agilefox_2library_2src_2stm32f10x__tim_8c_ae9520f93707e6dce84be94a4a586a394}
+
+
+Definition at line 2389 of file stm32f10x\+\_\+tim.\+c.
+

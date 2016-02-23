@@ -1,0 +1,59 @@
+\hypertarget{openos_2scheduler_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/kernel/openos/scheduler.c File Reference}
+\label{openos_2scheduler_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/kernel/openos/scheduler.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/kernel/openos/scheduler.\+c}}
+{\ttfamily \#include \char`\"{}opendefs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}scheduler.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}debugpins.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leds.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{openos_2scheduler_8c_a05491cc55a1d82da41a834a919f2a8d6}{consume\+Task} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} task\+Id)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___scheduler_gab258cc2856e5f6bb125907cc23358fbd}{scheduler\+\_\+init} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___scheduler_ga6229a629147366d0af22ca2228612dc8}{scheduler\+\_\+start} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___scheduler_ga5613eda7e7cabb9412e590b8eb7fa778}{scheduler\+\_\+push\+\_\+task} (\hyperlink{group___scheduler_gad18d3f32b9193516d5f1849adc9d434e}{task\+\_\+cbt} cb, \hyperlink{group___scheduler_gaf646a0e571d9fb8ee8c4f7291d407965}{task\+\_\+prio\+\_\+t} prio)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structscheduler__vars__t}{scheduler\+\_\+vars\+\_\+t} \hyperlink{openos_2scheduler_8c_ad9c283c8f95de33ffee63e8a763811c8}{scheduler\+\_\+vars}
+\begin{DoxyCompactList}\small\item\em Open\+OS scheduler. \end{DoxyCompactList}\item 
+\hyperlink{structscheduler__dbg__t}{scheduler\+\_\+dbg\+\_\+t} \hyperlink{openos_2scheduler_8c_a2651c472c49e62b94206de22b7b9d7ae}{scheduler\+\_\+dbg}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{openos/scheduler.\+c@{openos/scheduler.\+c}!consume\+Task@{consume\+Task}}
+\index{consume\+Task@{consume\+Task}!openos/scheduler.\+c@{openos/scheduler.\+c}}
+\subsubsection[{\texorpdfstring{consume\+Task(uint8\+\_\+t task\+Id)}{consumeTask(uint8_t taskId)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} consume\+Task (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{task\+Id}
+\end{DoxyParamCaption}
+)}\hypertarget{openos_2scheduler_8c_a05491cc55a1d82da41a834a919f2a8d6}{}\label{openos_2scheduler_8c_a05491cc55a1d82da41a834a919f2a8d6}
+
+
+\subsection{Variable Documentation}
+\index{openos/scheduler.\+c@{openos/scheduler.\+c}!scheduler\+\_\+dbg@{scheduler\+\_\+dbg}}
+\index{scheduler\+\_\+dbg@{scheduler\+\_\+dbg}!openos/scheduler.\+c@{openos/scheduler.\+c}}
+\subsubsection[{\texorpdfstring{scheduler\+\_\+dbg}{scheduler_dbg}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf scheduler\+\_\+dbg\+\_\+t} scheduler\+\_\+dbg}\hypertarget{openos_2scheduler_8c_a2651c472c49e62b94206de22b7b9d7ae}{}\label{openos_2scheduler_8c_a2651c472c49e62b94206de22b7b9d7ae}
+
+
+Definition at line 16 of file scheduler.\+c.
+
+\index{openos/scheduler.\+c@{openos/scheduler.\+c}!scheduler\+\_\+vars@{scheduler\+\_\+vars}}
+\index{scheduler\+\_\+vars@{scheduler\+\_\+vars}!openos/scheduler.\+c@{openos/scheduler.\+c}}
+\subsubsection[{\texorpdfstring{scheduler\+\_\+vars}{scheduler_vars}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf scheduler\+\_\+vars\+\_\+t} scheduler\+\_\+vars}\hypertarget{openos_2scheduler_8c_ad9c283c8f95de33ffee63e8a763811c8}{}\label{openos_2scheduler_8c_ad9c283c8f95de33ffee63e8a763811c8}
+
+
+Open\+OS scheduler. 
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, February 2012. 
+\end{DoxyAuthor}
+
+
+Definition at line 15 of file scheduler.\+c.
+

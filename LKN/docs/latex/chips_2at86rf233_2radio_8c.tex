@@ -1,0 +1,158 @@
+\hypertarget{chips_2at86rf233_2radio_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/chips/at86rf233/radio.c File Reference}
+\label{chips_2at86rf233_2radio_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/chips/at86rf233/radio.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/chips/at86rf233/radio.\+c}}
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}radio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}at86rf233.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}spi.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}radiotimer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}debugpins.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leds.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structradio__vars__t}{radio\+\_\+vars\+\_\+t}
+\begin{DoxyCompactList}\small\item\em derfmega definition of the \char`\"{}radio\char`\"{} bsp module. Adapted from the A\+T86\+R\+F231 code since its the same register layout and all \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{chips_2at86rf233_2radio_8c_af48b632eafed8fda19f47feb811eb3a9}{radio\+\_\+spi\+Write\+Reg} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} reg\+\_\+addr, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} reg\+\_\+setting)
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{chips_2at86rf233_2radio_8c_a1d897c1dc13e97beefd3baa3e24e41e4}{radio\+\_\+spi\+Read\+Reg} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} reg\+\_\+addr)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{chips_2at86rf233_2radio_8c_a615dbd190d787d024de36c94464eabd2}{radio\+\_\+spi\+Write\+Tx\+Fifo} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$buf\+To\+Write, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} len\+To\+Write)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{chips_2at86rf233_2radio_8c_ac2061cd56a8c74ac67adacc73de8cfb5}{radio\+\_\+spi\+Read\+Rx\+Fifo} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$p\+Buf\+Read, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$p\+Len\+Read, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} max\+Buf\+Len, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$p\+Lqi)
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{chips_2at86rf233_2radio_8c_a823382016e8bdee1a85a723ac96d934c}{radio\+\_\+spi\+Read\+Radio\+Info} ()
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{chips_2at86rf233_2radio_8c_a414c729c9a46fe23bfae05c8055dab5d}{trx\+\_\+reg\+\_\+read} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} addr)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_gacfb21351bb3f0146635745bfacfe26a8}{radio\+\_\+init} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_gaac2272f2a27534c5223d20f7eb4dbb26}{radio\+\_\+set\+Overflow\+Cb} (\hyperlink{group__radiotimer_ga62b602325e65023c91b784f20cd2d6bc}{radiotimer\+\_\+compare\+\_\+cbt} cb)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_ga49e8fc5745ce8569b6d2616883579062}{radio\+\_\+set\+Compare\+Cb} (\hyperlink{group__radiotimer_ga62b602325e65023c91b784f20cd2d6bc}{radiotimer\+\_\+compare\+\_\+cbt} cb)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_ga7efe6846c7583e300a67ef3a336c187c}{radio\+\_\+set\+Start\+Frame\+Cb} (\hyperlink{group__radiotimer_gac7da641d0774aa21bfabefd560e42acf}{radiotimer\+\_\+capture\+\_\+cbt} cb)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_gabb885551de090c751381377762ae3c7c}{radio\+\_\+set\+End\+Frame\+Cb} (\hyperlink{group__radiotimer_gac7da641d0774aa21bfabefd560e42acf}{radiotimer\+\_\+capture\+\_\+cbt} cb)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_gaf181029cf06b94f0f4ceaafec1c3f209}{radio\+\_\+reset} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_ga03e630aa7be3394bc7e0607dc85d50c8}{radio\+\_\+start\+Timer} (\hyperlink{z1_2board__info_8h_abe66b9c1c60db84f2a99f2b827275f24}{P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} period)
+\item 
+\hyperlink{z1_2board__info_8h_abe66b9c1c60db84f2a99f2b827275f24}{P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} \hyperlink{group__radio_ga9d6377834514a8ebf0b5987bb15daa2e}{radio\+\_\+get\+Timer\+Value} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_gaef86051d9ade0d9bd75070237447f83c}{radio\+\_\+set\+Timer\+Period} (\hyperlink{z1_2board__info_8h_abe66b9c1c60db84f2a99f2b827275f24}{P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} period)
+\item 
+\hyperlink{z1_2board__info_8h_abe66b9c1c60db84f2a99f2b827275f24}{P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} \hyperlink{group__radio_ga7845450951762209c4879ad10bf160e6}{radio\+\_\+get\+Timer\+Period} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_gaa062a57421da7b960a2613e4f65d3a11}{radio\+\_\+set\+Frequency} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} frequency)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_gac01e153ff02faec0d39efa095d6e5837}{radio\+\_\+rf\+On} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_gaebe8cf9401340cd8bfaabfb8e465a0e9}{radio\+\_\+rf\+Off} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_ga9adb1e30e5a3aaed77829b231e54700e}{radio\+\_\+load\+Packet} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$packet, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} len)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_ga23b8b3278db30bc9cec95510b584b3c7}{radio\+\_\+tx\+Enable} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_ga913f5f6cecb9bdde24278b4692850888}{radio\+\_\+tx\+Now} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_ga61f398fe7a5d131ef2d30e2d09424705}{radio\+\_\+rx\+Enable} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_ga332cd3358e1d2598d42716d702684473}{radio\+\_\+rx\+Now} ()
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radio_ga1ba47d80eee0a4a3b6d23cfde6b94c9e}{radio\+\_\+get\+Received\+Frame} (\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$p\+Buf\+Read, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$p\+Len\+Read, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} max\+Buf\+Len, \hyperlink{_p_e___types_8h_aef44329758059c91c76d334e8fc09700}{int8\+\_\+t} $\ast$p\+Rssi, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$p\+Lqi, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$p\+Crc)
+\item 
+\hyperlink{group__board_gac9ebdcc0a4f3c8422f5f4f0fbbe0ded0}{kick\+\_\+scheduler\+\_\+t} \hyperlink{group__radio_ga42deb4291adeb8f9d6607133422f6023}{radio\+\_\+isr} ()
+\begin{DoxyCompactList}\small\item\em Stub function for the C\+C2538. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structradio__vars__t}{radio\+\_\+vars\+\_\+t} \hyperlink{chips_2at86rf233_2radio_8c_a9c243c87287c9b1043c251aae61fd656}{radio\+\_\+vars}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{chips/at86rf233/radio.\+c@{chips/at86rf233/radio.\+c}!radio\+\_\+spi\+Read\+Radio\+Info@{radio\+\_\+spi\+Read\+Radio\+Info}}
+\index{radio\+\_\+spi\+Read\+Radio\+Info@{radio\+\_\+spi\+Read\+Radio\+Info}!chips/at86rf233/radio.\+c@{chips/at86rf233/radio.\+c}}
+\subsubsection[{\texorpdfstring{radio\+\_\+spi\+Read\+Radio\+Info()}{radio_spiReadRadioInfo()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} radio\+\_\+spi\+Read\+Radio\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{chips_2at86rf233_2radio_8c_a823382016e8bdee1a85a723ac96d934c}{}\label{chips_2at86rf233_2radio_8c_a823382016e8bdee1a85a723ac96d934c}
+
+
+Definition at line 276 of file radio.\+c.
+
+\index{chips/at86rf233/radio.\+c@{chips/at86rf233/radio.\+c}!radio\+\_\+spi\+Read\+Reg@{radio\+\_\+spi\+Read\+Reg}}
+\index{radio\+\_\+spi\+Read\+Reg@{radio\+\_\+spi\+Read\+Reg}!chips/at86rf233/radio.\+c@{chips/at86rf233/radio.\+c}}
+\subsubsection[{\texorpdfstring{radio\+\_\+spi\+Read\+Reg(uint8\+\_\+t reg\+\_\+addr)}{radio_spiReadReg(uint8_t reg_addr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} radio\+\_\+spi\+Read\+Reg (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{reg\+\_\+addr}
+\end{DoxyParamCaption}
+)}\hypertarget{chips_2at86rf233_2radio_8c_a1d897c1dc13e97beefd3baa3e24e41e4}{}\label{chips_2at86rf233_2radio_8c_a1d897c1dc13e97beefd3baa3e24e41e4}
+
+
+Definition at line 315 of file radio.\+c.
+
+\index{chips/at86rf233/radio.\+c@{chips/at86rf233/radio.\+c}!radio\+\_\+spi\+Read\+Rx\+Fifo@{radio\+\_\+spi\+Read\+Rx\+Fifo}}
+\index{radio\+\_\+spi\+Read\+Rx\+Fifo@{radio\+\_\+spi\+Read\+Rx\+Fifo}!chips/at86rf233/radio.\+c@{chips/at86rf233/radio.\+c}}
+\subsubsection[{\texorpdfstring{radio\+\_\+spi\+Read\+Rx\+Fifo(uint8\+\_\+t $\ast$p\+Buf\+Read, uint8\+\_\+t $\ast$p\+Len\+Read, uint8\+\_\+t max\+Buf\+Len, uint8\+\_\+t $\ast$p\+Lqi)}{radio_spiReadRxFifo(uint8_t *pBufRead, uint8_t *pLenRead, uint8_t maxBufLen, uint8_t *pLqi)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} radio\+\_\+spi\+Read\+Rx\+Fifo (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t} $\ast$}]{p\+Buf\+Read, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{p\+Len\+Read, }
+\item[{{\bf uint8\+\_\+t}}]{max\+Buf\+Len, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{p\+Lqi}
+\end{DoxyParamCaption}
+)}\hypertarget{chips_2at86rf233_2radio_8c_ac2061cd56a8c74ac67adacc73de8cfb5}{}\label{chips_2at86rf233_2radio_8c_ac2061cd56a8c74ac67adacc73de8cfb5}
+
+
+Definition at line 362 of file radio.\+c.
+
+\index{chips/at86rf233/radio.\+c@{chips/at86rf233/radio.\+c}!radio\+\_\+spi\+Write\+Reg@{radio\+\_\+spi\+Write\+Reg}}
+\index{radio\+\_\+spi\+Write\+Reg@{radio\+\_\+spi\+Write\+Reg}!chips/at86rf233/radio.\+c@{chips/at86rf233/radio.\+c}}
+\subsubsection[{\texorpdfstring{radio\+\_\+spi\+Write\+Reg(uint8\+\_\+t reg\+\_\+addr, uint8\+\_\+t reg\+\_\+setting)}{radio_spiWriteReg(uint8_t reg_addr, uint8_t reg_setting)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} radio\+\_\+spi\+Write\+Reg (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{reg\+\_\+addr, }
+\item[{{\bf uint8\+\_\+t}}]{reg\+\_\+setting}
+\end{DoxyParamCaption}
+)}\hypertarget{chips_2at86rf233_2radio_8c_af48b632eafed8fda19f47feb811eb3a9}{}\label{chips_2at86rf233_2radio_8c_af48b632eafed8fda19f47feb811eb3a9}
+
+
+Definition at line 299 of file radio.\+c.
+
+\index{chips/at86rf233/radio.\+c@{chips/at86rf233/radio.\+c}!radio\+\_\+spi\+Write\+Tx\+Fifo@{radio\+\_\+spi\+Write\+Tx\+Fifo}}
+\index{radio\+\_\+spi\+Write\+Tx\+Fifo@{radio\+\_\+spi\+Write\+Tx\+Fifo}!chips/at86rf233/radio.\+c@{chips/at86rf233/radio.\+c}}
+\subsubsection[{\texorpdfstring{radio\+\_\+spi\+Write\+Tx\+Fifo(uint8\+\_\+t $\ast$buf\+To\+Write, uint8\+\_\+t len\+To\+Write)}{radio_spiWriteTxFifo(uint8_t *bufToWrite, uint8_t lenToWrite)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} radio\+\_\+spi\+Write\+Tx\+Fifo (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t} $\ast$}]{buf\+To\+Write, }
+\item[{{\bf uint8\+\_\+t}}]{len\+To\+Write}
+\end{DoxyParamCaption}
+)}\hypertarget{chips_2at86rf233_2radio_8c_a615dbd190d787d024de36c94464eabd2}{}\label{chips_2at86rf233_2radio_8c_a615dbd190d787d024de36c94464eabd2}
+for testing purposes, remove if not needed anymore 
+
+Definition at line 336 of file radio.\+c.
+
+\index{chips/at86rf233/radio.\+c@{chips/at86rf233/radio.\+c}!trx\+\_\+reg\+\_\+read@{trx\+\_\+reg\+\_\+read}}
+\index{trx\+\_\+reg\+\_\+read@{trx\+\_\+reg\+\_\+read}!chips/at86rf233/radio.\+c@{chips/at86rf233/radio.\+c}}
+\subsubsection[{\texorpdfstring{trx\+\_\+reg\+\_\+read(uint8\+\_\+t addr)}{trx_reg_read(uint8_t addr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} trx\+\_\+reg\+\_\+read (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\+\_\+t}}]{addr}
+\end{DoxyParamCaption}
+)}\hypertarget{chips_2at86rf233_2radio_8c_a414c729c9a46fe23bfae05c8055dab5d}{}\label{chips_2at86rf233_2radio_8c_a414c729c9a46fe23bfae05c8055dab5d}
+
+
+Definition at line 88 of file spi\+\_\+drv.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{chips/at86rf233/radio.\+c@{chips/at86rf233/radio.\+c}!radio\+\_\+vars@{radio\+\_\+vars}}
+\index{radio\+\_\+vars@{radio\+\_\+vars}!chips/at86rf233/radio.\+c@{chips/at86rf233/radio.\+c}}
+\subsubsection[{\texorpdfstring{radio\+\_\+vars}{radio_vars}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf radio\+\_\+vars\+\_\+t} radio\+\_\+vars}\hypertarget{chips_2at86rf233_2radio_8c_a9c243c87287c9b1043c251aae61fd656}{}\label{chips_2at86rf233_2radio_8c_a9c243c87287c9b1043c251aae61fd656}
+
+
+Definition at line 53 of file radio.\+c.
+

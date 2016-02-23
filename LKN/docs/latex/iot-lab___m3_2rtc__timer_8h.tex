@@ -1,0 +1,123 @@
+\hypertarget{iot-lab___m3_2rtc__timer_8h}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.h File Reference}
+\label{iot-lab___m3_2rtc__timer_8h}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h}}
+{\ttfamily \#include \char`\"{}stdint.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\\*
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}($\ast$ \hyperlink{iot-lab___m3_2rtc__timer_8h_a3854a3297c7095644b61891e55d5e717}{rtc\+\_\+timer\+\_\+alarm\+\_\+cbt}) (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em openmote\+S\+T\+M32 declaration \char`\"{}rtctimer\char`\"{} bsp module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2rtc__timer_8h_ab3506e4fdd605af503d5b02e24049336}{rtc\+\_\+timer\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2rtc__timer_8h_a76ad10e60d7fd22eedc47abfb9099501}{rtc\+\_\+timer\+\_\+set\+Alarm\+Cb} (\hyperlink{openmotestm_2rtc__timer_8h_ae333b9179d396f03c9fc63b5692bc33a}{rtc\+\_\+timer\+\_\+alarm\+\_\+cbt} cb)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2rtc__timer_8h_a016c61490a05f2bb2ab2f09a56cd5df0}{rtc\+\_\+timer\+\_\+start} (\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} alarm\+Value)
+\item 
+\hyperlink{z1_2board__info_8h_abe66b9c1c60db84f2a99f2b827275f24}{P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} \hyperlink{iot-lab___m3_2rtc__timer_8h_aa535123fefb4e057294fe97b8a7b0428}{rtc\+\_\+timer\+\_\+get\+Alarm} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2rtc__timer_8h_a35ff8c653b9f6f7d3a778dc96426a18f}{rtc\+\_\+timer\+\_\+reset\+Counter} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{z1_2board__info_8h_abe66b9c1c60db84f2a99f2b827275f24}{P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} \hyperlink{iot-lab___m3_2rtc__timer_8h_a7a7f9bc5c49caefcd735852957228d91}{rtc\+\_\+timer\+\_\+get\+Captured\+Time} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{iot-lab___m3_2rtc__timer_8h_a0740af4c3e47f2bdf233e4798eda203e}{rtc\+\_\+timer\+\_\+isr} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\index{iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h@{iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h}!rtc\+\_\+timer\+\_\+alarm\+\_\+cbt@{rtc\+\_\+timer\+\_\+alarm\+\_\+cbt}}
+\index{rtc\+\_\+timer\+\_\+alarm\+\_\+cbt@{rtc\+\_\+timer\+\_\+alarm\+\_\+cbt}!iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h@{iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h}}
+\subsubsection[{\texorpdfstring{rtc\+\_\+timer\+\_\+alarm\+\_\+cbt}{rtc_timer_alarm_cbt}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf void}($\ast$ rtc\+\_\+timer\+\_\+alarm\+\_\+cbt) ({\bf void})}\hypertarget{iot-lab___m3_2rtc__timer_8h_a3854a3297c7095644b61891e55d5e717}{}\label{iot-lab___m3_2rtc__timer_8h_a3854a3297c7095644b61891e55d5e717}
+
+
+openmote\+S\+T\+M32 declaration \char`\"{}rtctimer\char`\"{} bsp module. 
+
+\begin{DoxyAuthor}{Author}
+Chang Tengfei \href{mailto:tengfei.chang@gmail.com}{\tt tengfei.\+chang@gmail.\+com}, July 2012. 
+\end{DoxyAuthor}
+
+
+Definition at line 17 of file rtc\+\_\+timer.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h@{iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h}!rtc\+\_\+timer\+\_\+get\+Alarm@{rtc\+\_\+timer\+\_\+get\+Alarm}}
+\index{rtc\+\_\+timer\+\_\+get\+Alarm@{rtc\+\_\+timer\+\_\+get\+Alarm}!iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h@{iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h}}
+\subsubsection[{\texorpdfstring{rtc\+\_\+timer\+\_\+get\+Alarm(void)}{rtc_timer_getAlarm(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} rtc\+\_\+timer\+\_\+get\+Alarm (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2rtc__timer_8h_aa535123fefb4e057294fe97b8a7b0428}{}\label{iot-lab___m3_2rtc__timer_8h_aa535123fefb4e057294fe97b8a7b0428}
+
+
+Definition at line 98 of file rtc\+\_\+timer.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h@{iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h}!rtc\+\_\+timer\+\_\+get\+Captured\+Time@{rtc\+\_\+timer\+\_\+get\+Captured\+Time}}
+\index{rtc\+\_\+timer\+\_\+get\+Captured\+Time@{rtc\+\_\+timer\+\_\+get\+Captured\+Time}!iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h@{iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h}}
+\subsubsection[{\texorpdfstring{rtc\+\_\+timer\+\_\+get\+Captured\+Time(void)}{rtc_timer_getCapturedTime(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} rtc\+\_\+timer\+\_\+get\+Captured\+Time (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2rtc__timer_8h_a7a7f9bc5c49caefcd735852957228d91}{}\label{iot-lab___m3_2rtc__timer_8h_a7a7f9bc5c49caefcd735852957228d91}
+
+
+Definition at line 110 of file rtc\+\_\+timer.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h@{iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h}!rtc\+\_\+timer\+\_\+init@{rtc\+\_\+timer\+\_\+init}}
+\index{rtc\+\_\+timer\+\_\+init@{rtc\+\_\+timer\+\_\+init}!iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h@{iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h}}
+\subsubsection[{\texorpdfstring{rtc\+\_\+timer\+\_\+init(void)}{rtc_timer_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} rtc\+\_\+timer\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2rtc__timer_8h_ab3506e4fdd605af503d5b02e24049336}{}\label{iot-lab___m3_2rtc__timer_8h_ab3506e4fdd605af503d5b02e24049336}
+
+
+Definition at line 29 of file rtc\+\_\+timer.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h@{iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h}!rtc\+\_\+timer\+\_\+isr@{rtc\+\_\+timer\+\_\+isr}}
+\index{rtc\+\_\+timer\+\_\+isr@{rtc\+\_\+timer\+\_\+isr}!iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h@{iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h}}
+\subsubsection[{\texorpdfstring{rtc\+\_\+timer\+\_\+isr(void)}{rtc_timer_isr(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} rtc\+\_\+timer\+\_\+isr (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2rtc__timer_8h_a0740af4c3e47f2bdf233e4798eda203e}{}\label{iot-lab___m3_2rtc__timer_8h_a0740af4c3e47f2bdf233e4798eda203e}
+
+
+Definition at line 121 of file rtc\+\_\+timer.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h@{iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h}!rtc\+\_\+timer\+\_\+reset\+Counter@{rtc\+\_\+timer\+\_\+reset\+Counter}}
+\index{rtc\+\_\+timer\+\_\+reset\+Counter@{rtc\+\_\+timer\+\_\+reset\+Counter}!iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h@{iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h}}
+\subsubsection[{\texorpdfstring{rtc\+\_\+timer\+\_\+reset\+Counter(void)}{rtc_timer_resetCounter(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} rtc\+\_\+timer\+\_\+reset\+Counter (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2rtc__timer_8h_a35ff8c653b9f6f7d3a778dc96426a18f}{}\label{iot-lab___m3_2rtc__timer_8h_a35ff8c653b9f6f7d3a778dc96426a18f}
+
+
+Definition at line 103 of file rtc\+\_\+timer.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h@{iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h}!rtc\+\_\+timer\+\_\+set\+Alarm\+Cb@{rtc\+\_\+timer\+\_\+set\+Alarm\+Cb}}
+\index{rtc\+\_\+timer\+\_\+set\+Alarm\+Cb@{rtc\+\_\+timer\+\_\+set\+Alarm\+Cb}!iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h@{iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h}}
+\subsubsection[{\texorpdfstring{rtc\+\_\+timer\+\_\+set\+Alarm\+Cb(rtc\+\_\+timer\+\_\+alarm\+\_\+cbt cb)}{rtc_timer_setAlarmCb(rtc_timer_alarm_cbt cb)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} rtc\+\_\+timer\+\_\+set\+Alarm\+Cb (
+\begin{DoxyParamCaption}
+\item[{{\bf rtc\+\_\+timer\+\_\+alarm\+\_\+cbt}}]{cb}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2rtc__timer_8h_a76ad10e60d7fd22eedc47abfb9099501}{}\label{iot-lab___m3_2rtc__timer_8h_a76ad10e60d7fd22eedc47abfb9099501}
+
+
+Definition at line 34 of file rtc\+\_\+timer.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h@{iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h}!rtc\+\_\+timer\+\_\+start@{rtc\+\_\+timer\+\_\+start}}
+\index{rtc\+\_\+timer\+\_\+start@{rtc\+\_\+timer\+\_\+start}!iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h@{iot-\/lab\+\_\+\+M3/rtc\+\_\+timer.\+h}}
+\subsubsection[{\texorpdfstring{rtc\+\_\+timer\+\_\+start(u32 alarm\+Value)}{rtc_timer_start(u32 alarmValue)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} rtc\+\_\+timer\+\_\+start (
+\begin{DoxyParamCaption}
+\item[{{\bf u32}}]{alarm\+Value}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2rtc__timer_8h_a016c61490a05f2bb2ab2f09a56cd5df0}{}\label{iot-lab___m3_2rtc__timer_8h_a016c61490a05f2bb2ab2f09a56cd5df0}
+
+
+Definition at line 38 of file rtc\+\_\+timer.\+c.
+

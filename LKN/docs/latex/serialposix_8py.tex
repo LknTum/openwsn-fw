@@ -1,0 +1,90 @@
+\hypertarget{serialposix_8py}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bootloader/telosb/lib/serial/serialposix.py File Reference}
+\label{serialposix_8py}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bootloader/telosb/lib/serial/serialposix.\+py@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bootloader/telosb/lib/serial/serialposix.\+py}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classserial_1_1serialposix_1_1_serial}{serial.\+serialposix.\+Serial}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceserial_1_1serialposix}{serial.\+serialposix}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceserial_1_1serialposix_a0e42e4e4fb1a72460235aae2f97fc86d}{serial.\+serialposix.\+device} (\hyperlink{z1_2i2c_8c_a9f33b3195a1fecb0b114222456959431}{port})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{namespaceserial_1_1serialposix_ae5b92bdc83f9cab4a0f9541ea2e09fa5}{serial.\+serialposix.\+V\+E\+R\+S\+I\+ON} = \char`\"{}\$Revision\+: 1.\+5 \$\char`\"{}
+\item 
+\hyperlink{namespaceserial_1_1serialposix_aa5b7b60904211b474e9013237532ec87}{serial.\+serialposix.\+P\+A\+R\+I\+T\+Y\+\_\+\+N\+O\+NE}
+\item 
+\hyperlink{namespaceserial_1_1serialposix_a592654b61618195fda85a78121744765}{serial.\+serialposix.\+P\+A\+R\+I\+T\+Y\+\_\+\+E\+V\+EN}
+\item 
+\hyperlink{namespaceserial_1_1serialposix_a67b92a3ff04918b300f44bcffa25a684}{serial.\+serialposix.\+P\+A\+R\+I\+T\+Y\+\_\+\+O\+DD}
+\item 
+\hyperlink{namespaceserial_1_1serialposix_a5e4bbb80f58a3f018286e96819b644f3}{serial.\+serialposix.\+S\+T\+O\+P\+B\+I\+T\+S\+\_\+\+O\+NE}
+\item 
+\hyperlink{namespaceserial_1_1serialposix_a2df2804b6c5576b2043e6ca2a55e3f9f}{serial.\+serialposix.\+S\+T\+O\+P\+B\+I\+T\+S\+\_\+\+T\+WO}
+\item 
+\hyperlink{namespaceserial_1_1serialposix_ae35e9f19b0bcb55905ee62e57ebe2265}{serial.\+serialposix.\+F\+I\+V\+E\+B\+I\+TS}
+\item 
+\hyperlink{namespaceserial_1_1serialposix_a55e881fb29c15325b550f3d360e3de9a}{serial.\+serialposix.\+S\+I\+X\+B\+I\+TS}
+\item 
+\hyperlink{namespaceserial_1_1serialposix_a57c1890beed95c6676d08513807eee10}{serial.\+serialposix.\+S\+E\+V\+E\+N\+B\+I\+TS}
+\item 
+\hyperlink{namespaceserial_1_1serialposix_a13bbd9cdf28bc7e65e994437f952a586}{serial.\+serialposix.\+E\+I\+G\+H\+T\+B\+I\+TS}
+\item 
+\hyperlink{namespaceserial_1_1serialposix_ad56e7a51b0acdb47ce56707e4b7560b8}{serial.\+serialposix.\+T\+E\+R\+M\+I\+OS} = termios
+\item 
+\hyperlink{namespaceserial_1_1serialposix_a7392962531296ddfa3cf96d9844e5190}{serial.\+serialposix.\+F\+C\+N\+TL} = fcntl
+\item 
+\hyperlink{namespaceserial_1_1serialposix_aa4040a06e7e1b372ab5bcb9b9be9494b}{serial.\+serialposix.\+plat} = string.\+lower(sys.\+platform)
+\item 
+string \hyperlink{namespaceserial_1_1serialposix_a7fb418820b365d6dbde6236e6cf518f1}{serial.\+serialposix.\+info} = \char`\"{}sys.\+platform = \%r\textbackslash{}nos.\+name = \%r\textbackslash{}nserialposix.\+py version = \%s\char`\"{}
+\item 
+dictionary \hyperlink{namespaceserial_1_1serialposix_a1855bda11053e332f5ad0dceca40b73b}{serial.\+serialposix.\+baud\+Enum\+To\+Int} = \{\}
+\item 
+dictionary \hyperlink{namespaceserial_1_1serialposix_a21ccb7e53208b3eee4b6dc87ed48d5e1}{serial.\+serialposix.\+baud\+Int\+To\+Enum} = \{\}
+\item 
+\hyperlink{namespaceserial_1_1serialposix_a0a55a600be14d50e8adc01088215bbb1}{serial.\+serialposix.\+i} = eval(\textquotesingle{}\hyperlink{adc16_8h_a111da81ae5883147168bbb8366377b10}{T\+E\+R\+M\+I\+O\+S.\+B}\textquotesingle{}+str(rate))
+\item 
+int \hyperlink{namespaceserial_1_1serialposix_a98ced6ed92112069444b366824052568}{serial.\+serialposix.\+T\+I\+O\+C\+M\+G\+ET} = hasattr(T\+E\+R\+M\+I\+OS, \textquotesingle{}T\+I\+O\+C\+M\+G\+ET\textquotesingle{})and\+T\+E\+R\+M\+I\+O\+S.\+T\+I\+O\+C\+M\+G\+E\+Tor0x5415
+\item 
+int \hyperlink{namespaceserial_1_1serialposix_a8550ed18ae30f22650f58a9b19b9c0be}{serial.\+serialposix.\+T\+I\+O\+C\+M\+B\+IS} = hasattr(T\+E\+R\+M\+I\+OS, \textquotesingle{}T\+I\+O\+C\+M\+B\+IS\textquotesingle{})and\+T\+E\+R\+M\+I\+O\+S.\+T\+I\+O\+C\+M\+B\+I\+Sor0x5416
+\item 
+int \hyperlink{namespaceserial_1_1serialposix_a7e20eafe4028f98d5e1c113d59234514}{serial.\+serialposix.\+T\+I\+O\+C\+M\+B\+IC} = hasattr(T\+E\+R\+M\+I\+OS, \textquotesingle{}T\+I\+O\+C\+M\+B\+IC\textquotesingle{})and\+T\+E\+R\+M\+I\+O\+S.\+T\+I\+O\+C\+M\+B\+I\+Cor0x5417
+\item 
+int \hyperlink{namespaceserial_1_1serialposix_aae5eff0b04208edfd40f9c0ea5f8d306}{serial.\+serialposix.\+T\+I\+O\+C\+M\+S\+ET} = hasattr(T\+E\+R\+M\+I\+OS, \textquotesingle{}T\+I\+O\+C\+M\+S\+ET\textquotesingle{})and\+T\+E\+R\+M\+I\+O\+S.\+T\+I\+O\+C\+M\+S\+E\+Tor0x5418
+\item 
+int \hyperlink{namespaceserial_1_1serialposix_a3671470f6e68d32ece2b66e4de3f6e1f}{serial.\+serialposix.\+T\+I\+O\+C\+M\+\_\+\+D\+TR} = hasattr(T\+E\+R\+M\+I\+OS, \textquotesingle{}T\+I\+O\+C\+M\+\_\+\+D\+TR\textquotesingle{})and\+T\+E\+R\+M\+I\+O\+S.\+T\+I\+O\+C\+M\+\_\+\+D\+T\+Ror0x002
+\item 
+int \hyperlink{namespaceserial_1_1serialposix_aa1c828134bbab0d78000cf1e03f4eb71}{serial.\+serialposix.\+T\+I\+O\+C\+M\+\_\+\+R\+TS} = hasattr(T\+E\+R\+M\+I\+OS, \textquotesingle{}T\+I\+O\+C\+M\+\_\+\+R\+TS\textquotesingle{})and\+T\+E\+R\+M\+I\+O\+S.\+T\+I\+O\+C\+M\+\_\+\+R\+T\+Sor0x004
+\item 
+int \hyperlink{namespaceserial_1_1serialposix_ae0c61e1ac0b3c8c3f038f00f0fafc055}{serial.\+serialposix.\+T\+I\+O\+C\+M\+\_\+\+C\+TS} = hasattr(T\+E\+R\+M\+I\+OS, \textquotesingle{}T\+I\+O\+C\+M\+\_\+\+C\+TS\textquotesingle{})and\+T\+E\+R\+M\+I\+O\+S.\+T\+I\+O\+C\+M\+\_\+\+C\+T\+Sor0x020
+\item 
+int \hyperlink{namespaceserial_1_1serialposix_a39249ce5d46f12bdd4e54d2da1405d31}{serial.\+serialposix.\+T\+I\+O\+C\+M\+\_\+\+C\+AR} = hasattr(T\+E\+R\+M\+I\+OS, \textquotesingle{}T\+I\+O\+C\+M\+\_\+\+C\+AR\textquotesingle{})and\+T\+E\+R\+M\+I\+O\+S.\+T\+I\+O\+C\+M\+\_\+\+C\+A\+Ror0x040
+\item 
+int \hyperlink{namespaceserial_1_1serialposix_a95c1ec661ce3749f6b0893557861ad16}{serial.\+serialposix.\+T\+I\+O\+C\+M\+\_\+\+R\+NG} = hasattr(T\+E\+R\+M\+I\+OS, \textquotesingle{}T\+I\+O\+C\+M\+\_\+\+R\+NG\textquotesingle{})and\+T\+E\+R\+M\+I\+O\+S.\+T\+I\+O\+C\+M\+\_\+\+R\+N\+Gor0x080
+\item 
+int \hyperlink{namespaceserial_1_1serialposix_a3b74007c7564c28114277c258b1c2e6f}{serial.\+serialposix.\+T\+I\+O\+C\+M\+\_\+\+D\+SR} = hasattr(T\+E\+R\+M\+I\+OS, \textquotesingle{}T\+I\+O\+C\+M\+\_\+\+D\+SR\textquotesingle{})and\+T\+E\+R\+M\+I\+O\+S.\+T\+I\+O\+C\+M\+\_\+\+D\+S\+Ror0x100
+\item 
+\hyperlink{namespaceserial_1_1serialposix_a5250edc9016f47b5efd626675bb9adee}{serial.\+serialposix.\+T\+I\+O\+C\+M\+\_\+\+CD} = hasattr(T\+E\+R\+M\+I\+OS, \textquotesingle{}T\+I\+O\+C\+M\+\_\+\+CD\textquotesingle{})and\+T\+E\+R\+M\+I\+O\+S.\+T\+I\+O\+C\+M\+\_\+\+C\+Dor\+T\+I\+O\+C\+M\+\_\+\+C\+AR
+\item 
+\hyperlink{namespaceserial_1_1serialposix_a25b961f0b21e0237dd842ac4065d54e2}{serial.\+serialposix.\+T\+I\+O\+C\+M\+\_\+\+RI} = hasattr(T\+E\+R\+M\+I\+OS, \textquotesingle{}T\+I\+O\+C\+M\+\_\+\+RI\textquotesingle{})and\+T\+E\+R\+M\+I\+O\+S.\+T\+I\+O\+C\+M\+\_\+\+R\+Ior\+T\+I\+O\+C\+M\+\_\+\+R\+NG
+\item 
+int \hyperlink{namespaceserial_1_1serialposix_a0e101a9083b270263a12c1f446ee36bf}{serial.\+serialposix.\+T\+I\+O\+C\+I\+NQ} = hasattr(T\+E\+R\+M\+I\+OS, \textquotesingle{}F\+I\+O\+N\+R\+E\+AD\textquotesingle{})and\+T\+E\+R\+M\+I\+O\+S.\+F\+I\+O\+N\+R\+E\+A\+Dor0x541B
+\item 
+\hyperlink{namespaceserial_1_1serialposix_a7ae33190740ea5e2996788536d37a312}{serial.\+serialposix.\+T\+I\+O\+C\+M\+\_\+zero\+\_\+str} = struct.\+pack(\textquotesingle{}I\textquotesingle{}, 0)
+\item 
+\hyperlink{namespaceserial_1_1serialposix_ab7163a1c4589cb90c66933ee66028984}{serial.\+serialposix.\+T\+I\+O\+C\+M\+\_\+\+R\+T\+S\+\_\+str} = struct.\+pack(\textquotesingle{}I\textquotesingle{}, T\+I\+O\+C\+M\+\_\+\+R\+TS)
+\item 
+\hyperlink{namespaceserial_1_1serialposix_a5e9a73c38202157cb437228348e421fc}{serial.\+serialposix.\+T\+I\+O\+C\+M\+\_\+\+D\+T\+R\+\_\+str} = struct.\+pack(\textquotesingle{}I\textquotesingle{}, T\+I\+O\+C\+M\+\_\+\+D\+TR)
+\item 
+\hyperlink{namespaceserial_1_1serialposix_abbf54b033525de3ce2c3bc3dd427c572}{serial.\+serialposix.\+port\+Not\+Open\+Error} = Value\+Error(\textquotesingle{}\hyperlink{z1_2i2c_8c_a9f33b3195a1fecb0b114222456959431}{port} not open\textquotesingle{})
+\item 
+\hyperlink{namespaceserial_1_1serialposix_af9c46eecd92c16ec0132591690404e3a}{serial.\+serialposix.\+s}
+\end{DoxyCompactItemize}

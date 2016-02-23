@@ -1,0 +1,484 @@
+\hypertarget{uarthal_8h}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/source/uarthal.h File Reference}
+\label{uarthal_8h}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/source/uarthal.\+h@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/source/uarthal.\+h}}
+{\ttfamily \#include $<$headers/hw\+\_\+types.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{uarthal_8h_a06b239c29b2e80d1e8ef7babbf54660a}{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+9\+B\+IT}~0x1000
+\item 
+\#define \hyperlink{uarthal_8h_ab9c41a9362abfd4e9546f1c70f3a05a9}{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+OE}~0x400
+\item 
+\#define \hyperlink{uarthal_8h_aa8660bdf26ac08961125a6c950f4b76a}{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+BE}~0x200
+\item 
+\#define \hyperlink{uarthal_8h_ab944f4625a878ef1df89a7a6fd790cab}{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+PE}~0x100
+\item 
+\#define \hyperlink{uarthal_8h_ab3da31fe08d3dbc7e40c8beb01ea1607}{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+FE}~0x080
+\item 
+\#define \hyperlink{uarthal_8h_a6d6d4d5d9fd23170c5f48fefa14e147c}{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+RT}~0x040
+\item 
+\#define \hyperlink{uarthal_8h_a5edf87050364febe668e42a5f973dd1a}{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+TX}~0x020
+\item 
+\#define \hyperlink{uarthal_8h_a62a4b9cc83e120b3eee5a0a7636b558c}{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+RX}~0x010
+\item 
+\#define \hyperlink{uarthal_8h_a472c99c1eb574eec1fc60231358939b2}{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+C\+TS}~0x002
+\item 
+\#define \hyperlink{uarthal_8h_aaefa9a300dceb6adf3d639b16bdd7555}{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+\+M\+A\+SK}~0x00000060
+\item 
+\#define \hyperlink{uarthal_8h_a00030434646d741635d32f955eb9460c}{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+8}~0x00000060
+\item 
+\#define \hyperlink{uarthal_8h_a07e4ba186b8f4a590395efbf2802cbf9}{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+7}~0x00000040
+\item 
+\#define \hyperlink{uarthal_8h_a936fb9f59d6cac65e5137a820e82b5d4}{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+6}~0x00000020
+\item 
+\#define \hyperlink{uarthal_8h_a8c5bfbc758a5a22ec714c7cca68242d2}{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+5}~0x00000000
+\item 
+\#define \hyperlink{uarthal_8h_ad4cadaf06e574cad80e5a954dcfe7ee7}{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+T\+O\+P\+\_\+\+M\+A\+SK}~0x00000008
+\item 
+\#define \hyperlink{uarthal_8h_af7c4abbd28a43e145c39404aeba2043c}{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+T\+O\+P\+\_\+\+O\+NE}~0x00000000
+\item 
+\#define \hyperlink{uarthal_8h_a952e6af1351d0c9bf65faf91c86f8c55}{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+T\+O\+P\+\_\+\+T\+WO}~0x00000008
+\item 
+\#define \hyperlink{uarthal_8h_a324205f2700c2ac03b35be45e84523f1}{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+M\+A\+SK}~0x00000086
+\item 
+\#define \hyperlink{uarthal_8h_a195d4b28a36df1b8588ca5380a442174}{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+N\+O\+NE}~0x00000000
+\item 
+\#define \hyperlink{uarthal_8h_ab0b5949051df64b22671181391963e95}{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+E\+V\+EN}~0x00000006
+\item 
+\#define \hyperlink{uarthal_8h_a539811fccbd8e4bf55e4041a7fdfb3d8}{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+O\+DD}~0x00000002
+\item 
+\#define \hyperlink{uarthal_8h_a8f41997eb87d51c953d48fcfce366be7}{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+O\+NE}~0x00000082
+\item 
+\#define \hyperlink{uarthal_8h_a47e9212c4de4dc69d2febced118e12ca}{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+Z\+E\+RO}~0x00000086
+\item 
+\#define \hyperlink{uarthal_8h_aa84f336878fba36489b6f7d690f6bc16}{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X1\+\_\+8}~0x00000000
+\item 
+\#define \hyperlink{uarthal_8h_a5e621861446c6a7de8cef41c7f1e936d}{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X2\+\_\+8}~0x00000001
+\item 
+\#define \hyperlink{uarthal_8h_a8d6363e555d9e21d654872b8574d45d2}{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X4\+\_\+8}~0x00000002
+\item 
+\#define \hyperlink{uarthal_8h_aebb138573237035b69119a730c57c6b7}{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X6\+\_\+8}~0x00000003
+\item 
+\#define \hyperlink{uarthal_8h_aa14091d971253a08b2c47f5faacaf360}{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X7\+\_\+8}~0x00000004
+\item 
+\#define \hyperlink{uarthal_8h_ad896f5a0717ed18124fb2b50d96574bb}{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X1\+\_\+8}~0x00000000
+\item 
+\#define \hyperlink{uarthal_8h_a07c48011bc25cbeae8e703acb5b706b6}{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X2\+\_\+8}~0x00000008
+\item 
+\#define \hyperlink{uarthal_8h_a616d7e565df3677a59e03bedf2dd63a2}{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X4\+\_\+8}~0x00000010
+\item 
+\#define \hyperlink{uarthal_8h_a4f965a6624b8163d8d9ab9754bb74003}{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X6\+\_\+8}~0x00000018
+\item 
+\#define \hyperlink{uarthal_8h_ab55741e5b10b29d7449f37ee4a32ad68}{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X7\+\_\+8}~0x00000020
+\item 
+\#define \hyperlink{uarthal_8h_aed2d39213aef902d0f39ea2e9045d1a0}{U\+A\+R\+T\+\_\+\+D\+M\+A\+\_\+\+E\+R\+R\+\_\+\+R\+X\+S\+T\+OP}~0x00000004
+\item 
+\#define \hyperlink{uarthal_8h_a603226a03ece38ce150462172182d797}{U\+A\+R\+T\+\_\+\+D\+M\+A\+\_\+\+TX}~0x00000002
+\item 
+\#define \hyperlink{uarthal_8h_a3e101ab29814742381777e3524d5d48a}{U\+A\+R\+T\+\_\+\+D\+M\+A\+\_\+\+RX}~0x00000001
+\item 
+\#define \hyperlink{uarthal_8h_a7a2562de4e5843df65241e89c3ecf703}{U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+O\+V\+E\+R\+R\+UN}~0x00000008
+\item 
+\#define \hyperlink{uarthal_8h_a0095e719c755e72b325c60807bfc2947}{U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+B\+R\+E\+AK}~0x00000004
+\item 
+\#define \hyperlink{uarthal_8h_a090520942aaf297184dd074bfc24dc49}{U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+I\+TY}~0x00000002
+\item 
+\#define \hyperlink{uarthal_8h_ad55c474de785d45b840305e81fadcb91}{U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+F\+R\+A\+M\+I\+NG}~0x00000001
+\item 
+\#define \hyperlink{uarthal_8h_ab5ee365017c3faaaf210815bf9b60ca8}{U\+A\+R\+T\+\_\+\+T\+X\+I\+N\+T\+\_\+\+M\+O\+D\+E\+\_\+\+F\+I\+FO}~0x00000000
+\item 
+\#define \hyperlink{uarthal_8h_a358737e51b37be564b0cf5b9ef1b2f0c}{U\+A\+R\+T\+\_\+\+T\+X\+I\+N\+T\+\_\+\+M\+O\+D\+E\+\_\+\+E\+OT}~0x00000010
+\item 
+\#define \hyperlink{uarthal_8h_acfef087398127ca44d933786ac25c2bd}{U\+A\+R\+T\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+S\+T\+EM}~0x00000000
+\item 
+\#define \hyperlink{uarthal_8h_afda4351f4f20c6552da5c1d0d2dc96e9}{U\+A\+R\+T\+\_\+\+C\+L\+O\+C\+K\+\_\+\+P\+I\+O\+SC}~0x00000001
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_gacd54a0a57df52618d1ebf5581b5927bf}{U\+A\+R\+T\+Parity\+Mode\+Set} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Parity)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__uart__api_ga8ee93b49e449bc738b01eb680b00e1f0}{U\+A\+R\+T\+Parity\+Mode\+Get} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_gae8dd6aeabd442a4cd231bd618897e503}{U\+A\+R\+T\+F\+I\+F\+O\+Level\+Set} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Tx\+Level, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Rx\+Level)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga41337038041a625f3030b16a4efa287c}{U\+A\+R\+T\+F\+I\+F\+O\+Level\+Get} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Tx\+Level, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Rx\+Level)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_gaacfccbb6fb7e3e3138573bfc4835250b}{U\+A\+R\+T\+Config\+Set\+Exp\+Clk} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+U\+A\+R\+T\+Clk, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Baud, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Config)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga14340c8b74b16af630653226007f2cce}{U\+A\+R\+T\+Config\+Get\+Exp\+Clk} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+U\+A\+R\+T\+Clk, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Baud, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} $\ast$pui32\+Config)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga93ba793d082da8ceb2ddab3ddc650a35}{U\+A\+R\+T\+Enable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga24b7349b5fd44c56e552d2d3fa2e4057}{U\+A\+R\+T\+Disable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_gac6ea9357292a6a51f949d0d2cd85d95a}{U\+A\+R\+T\+F\+I\+F\+O\+Enable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga33ec41720030e24957edf7927174e1c5}{U\+A\+R\+T\+F\+I\+F\+O\+Disable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga7a49f55b28b43b69809866d46db02d32}{U\+A\+R\+T\+Enable\+S\+IR} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} b\+Low\+Power)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_gabb22356aed40380e7d862e5d0ca6cb89}{U\+A\+R\+T\+Disable\+S\+IR} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group__uart__api_ga4ef85e7bc642ef7169d6641cfa5265c6}{U\+A\+R\+T\+Chars\+Avail} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group__uart__api_ga7ef168edf854186daeafd031b7d55311}{U\+A\+R\+T\+Space\+Avail} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{_p_e___types_8h_adb828ef50c2dbb783109824e94cf6c47}{int32\+\_\+t} \hyperlink{group__uart__api_gaad338221fc820412b005653855cedaf7}{U\+A\+R\+T\+Char\+Get\+Non\+Blocking} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{_p_e___types_8h_adb828ef50c2dbb783109824e94cf6c47}{int32\+\_\+t} \hyperlink{group__uart__api_gafc065333d747a8f71331c4fa2b5ace9e}{U\+A\+R\+T\+Char\+Get} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group__uart__api_ga0649824c67ebbfd57e9a09abfd7c0943}{U\+A\+R\+T\+Char\+Put\+Non\+Blocking} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Data)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga047dde8396fa77bdc8648bea8875c7b9}{U\+A\+R\+T\+Char\+Put} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Data)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga7c544618ac872b85cec285fdeaa50c3b}{U\+A\+R\+T\+Break\+Ctl} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} b\+Break\+State)
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group__uart__api_ga43a13071cb9466b4ecf184a12abd1dc6}{U\+A\+R\+T\+Busy} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga29c627a9df14328949ba6db3e96af135}{U\+A\+R\+T\+Int\+Register} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}($\ast$pfn\+Handler)(\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}))
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_gab78d6c76209cb913dc81750de40d803e}{U\+A\+R\+T\+Int\+Unregister} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga2348192170cdf1bb031fa4ce88c35495}{U\+A\+R\+T\+Int\+Enable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Int\+Flags)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga8bf8b88b433464885d46455bc3a536c4}{U\+A\+R\+T\+Int\+Disable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Int\+Flags)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__uart__api_ga7a204fab5a079529d9ed4a69d13e119e}{U\+A\+R\+T\+Int\+Status} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} b\+Masked)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga1bd3174cd85cc338aba82883c09df981}{U\+A\+R\+T\+Int\+Clear} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Int\+Flags)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_gaac1b6edea28af97be22f5f788312145b}{U\+A\+R\+T\+D\+M\+A\+Enable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+D\+M\+A\+Flags)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga858997600c2e00c63711a340770d2d63}{U\+A\+R\+T\+D\+M\+A\+Disable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+D\+M\+A\+Flags)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__uart__api_gadc2c2c4a69942640cdf3334a35e90c23}{U\+A\+R\+T\+Rx\+Error\+Get} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga68600e26bbe630602ed674190259d74c}{U\+A\+R\+T\+Rx\+Error\+Clear} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_gae3b173446db0912f8d04dd1270833169}{U\+A\+R\+T\+Tx\+Int\+Mode\+Set} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Mode)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__uart__api_gabdf3ce387c17f9dee88b45ac7b15ad8c}{U\+A\+R\+T\+Tx\+Int\+Mode\+Get} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga9aa412a7fe9755f7f7e3e98c95a44ef7}{U\+A\+R\+T\+Clock\+Source\+Set} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Source)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__uart__api_gaa9f25b4ba8b610bb0aa0b2090b6b2cd3}{U\+A\+R\+T\+Clock\+Source\+Get} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_gaa6c67f6e29e12e6ec879e4a0c47ccf6f}{U\+A\+R\+T9\+Bit\+Enable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga0ad87ddcc9c6669238817943349bd1e0}{U\+A\+R\+T9\+Bit\+Disable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga263536398c9ac3d4e786d9e750838531}{U\+A\+R\+T9\+Bit\+Addr\+Set} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Addr, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Mask)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__uart__api_ga9dd2bd298377af8968ac56ce2ce7968e}{U\+A\+R\+T9\+Bit\+Addr\+Send} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Base, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Addr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+C\+L\+O\+C\+K\+\_\+\+P\+I\+O\+SC@{U\+A\+R\+T\+\_\+\+C\+L\+O\+C\+K\+\_\+\+P\+I\+O\+SC}}
+\index{U\+A\+R\+T\+\_\+\+C\+L\+O\+C\+K\+\_\+\+P\+I\+O\+SC@{U\+A\+R\+T\+\_\+\+C\+L\+O\+C\+K\+\_\+\+P\+I\+O\+SC}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+C\+L\+O\+C\+K\+\_\+\+P\+I\+O\+SC}{UART_CLOCK_PIOSC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+C\+L\+O\+C\+K\+\_\+\+P\+I\+O\+SC~0x00000001}\hypertarget{uarthal_8h_afda4351f4f20c6552da5c1d0d2dc96e9}{}\label{uarthal_8h_afda4351f4f20c6552da5c1d0d2dc96e9}
+
+
+Definition at line 156 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+S\+T\+EM@{U\+A\+R\+T\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+S\+T\+EM}}
+\index{U\+A\+R\+T\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+S\+T\+EM@{U\+A\+R\+T\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+S\+T\+EM}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+S\+T\+EM}{UART_CLOCK_SYSTEM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+S\+T\+EM~0x00000000}\hypertarget{uarthal_8h_acfef087398127ca44d933786ac25c2bd}{}\label{uarthal_8h_acfef087398127ca44d933786ac25c2bd}
+
+
+Definition at line 155 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+E\+V\+EN@{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+E\+V\+EN}}
+\index{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+E\+V\+EN@{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+E\+V\+EN}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+E\+V\+EN}{UART_CONFIG_PAR_EVEN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+E\+V\+EN~0x00000006}\hypertarget{uarthal_8h_ab0b5949051df64b22671181391963e95}{}\label{uarthal_8h_ab0b5949051df64b22671181391963e95}
+
+
+Definition at line 92 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+M\+A\+SK@{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+M\+A\+SK}}
+\index{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+M\+A\+SK@{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+M\+A\+SK}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+M\+A\+SK}{UART_CONFIG_PAR_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+M\+A\+SK~0x00000086}\hypertarget{uarthal_8h_a324205f2700c2ac03b35be45e84523f1}{}\label{uarthal_8h_a324205f2700c2ac03b35be45e84523f1}
+
+
+Definition at line 90 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+N\+O\+NE@{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+N\+O\+NE}}
+\index{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+N\+O\+NE@{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+N\+O\+NE}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+N\+O\+NE}{UART_CONFIG_PAR_NONE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+N\+O\+NE~0x00000000}\hypertarget{uarthal_8h_a195d4b28a36df1b8588ca5380a442174}{}\label{uarthal_8h_a195d4b28a36df1b8588ca5380a442174}
+
+
+Definition at line 91 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+O\+DD@{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+O\+DD}}
+\index{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+O\+DD@{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+O\+DD}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+O\+DD}{UART_CONFIG_PAR_ODD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+O\+DD~0x00000002}\hypertarget{uarthal_8h_a539811fccbd8e4bf55e4041a7fdfb3d8}{}\label{uarthal_8h_a539811fccbd8e4bf55e4041a7fdfb3d8}
+
+
+Definition at line 93 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+O\+NE@{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+O\+NE}}
+\index{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+O\+NE@{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+O\+NE}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+O\+NE}{UART_CONFIG_PAR_ONE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+O\+NE~0x00000082}\hypertarget{uarthal_8h_a8f41997eb87d51c953d48fcfce366be7}{}\label{uarthal_8h_a8f41997eb87d51c953d48fcfce366be7}
+
+
+Definition at line 94 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+Z\+E\+RO@{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+Z\+E\+RO}}
+\index{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+Z\+E\+RO@{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+Z\+E\+RO}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+Z\+E\+RO}{UART_CONFIG_PAR_ZERO}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+R\+\_\+\+Z\+E\+RO~0x00000086}\hypertarget{uarthal_8h_a47e9212c4de4dc69d2febced118e12ca}{}\label{uarthal_8h_a47e9212c4de4dc69d2febced118e12ca}
+
+
+Definition at line 95 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+T\+O\+P\+\_\+\+M\+A\+SK@{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+T\+O\+P\+\_\+\+M\+A\+SK}}
+\index{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+T\+O\+P\+\_\+\+M\+A\+SK@{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+T\+O\+P\+\_\+\+M\+A\+SK}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+T\+O\+P\+\_\+\+M\+A\+SK}{UART_CONFIG_STOP_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+T\+O\+P\+\_\+\+M\+A\+SK~0x00000008}\hypertarget{uarthal_8h_ad4cadaf06e574cad80e5a954dcfe7ee7}{}\label{uarthal_8h_ad4cadaf06e574cad80e5a954dcfe7ee7}
+
+
+Definition at line 87 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+T\+O\+P\+\_\+\+O\+NE@{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+T\+O\+P\+\_\+\+O\+NE}}
+\index{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+T\+O\+P\+\_\+\+O\+NE@{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+T\+O\+P\+\_\+\+O\+NE}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+T\+O\+P\+\_\+\+O\+NE}{UART_CONFIG_STOP_ONE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+T\+O\+P\+\_\+\+O\+NE~0x00000000}\hypertarget{uarthal_8h_af7c4abbd28a43e145c39404aeba2043c}{}\label{uarthal_8h_af7c4abbd28a43e145c39404aeba2043c}
+
+
+Definition at line 88 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+T\+O\+P\+\_\+\+T\+WO@{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+T\+O\+P\+\_\+\+T\+WO}}
+\index{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+T\+O\+P\+\_\+\+T\+WO@{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+T\+O\+P\+\_\+\+T\+WO}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+T\+O\+P\+\_\+\+T\+WO}{UART_CONFIG_STOP_TWO}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+T\+O\+P\+\_\+\+T\+WO~0x00000008}\hypertarget{uarthal_8h_a952e6af1351d0c9bf65faf91c86f8c55}{}\label{uarthal_8h_a952e6af1351d0c9bf65faf91c86f8c55}
+
+
+Definition at line 89 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+5@{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+5}}
+\index{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+5@{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+5}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+5}{UART_CONFIG_WLEN_5}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+5~0x00000000}\hypertarget{uarthal_8h_a8c5bfbc758a5a22ec714c7cca68242d2}{}\label{uarthal_8h_a8c5bfbc758a5a22ec714c7cca68242d2}
+
+
+Definition at line 86 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+6@{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+6}}
+\index{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+6@{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+6}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+6}{UART_CONFIG_WLEN_6}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+6~0x00000020}\hypertarget{uarthal_8h_a936fb9f59d6cac65e5137a820e82b5d4}{}\label{uarthal_8h_a936fb9f59d6cac65e5137a820e82b5d4}
+
+
+Definition at line 85 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+7@{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+7}}
+\index{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+7@{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+7}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+7}{UART_CONFIG_WLEN_7}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+7~0x00000040}\hypertarget{uarthal_8h_a07e4ba186b8f4a590395efbf2802cbf9}{}\label{uarthal_8h_a07e4ba186b8f4a590395efbf2802cbf9}
+
+
+Definition at line 84 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+8@{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+8}}
+\index{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+8@{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+8}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+8}{UART_CONFIG_WLEN_8}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+8~0x00000060}\hypertarget{uarthal_8h_a00030434646d741635d32f955eb9460c}{}\label{uarthal_8h_a00030434646d741635d32f955eb9460c}
+
+
+Definition at line 83 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+\+M\+A\+SK@{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+\+M\+A\+SK}}
+\index{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+\+M\+A\+SK@{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+\+M\+A\+SK}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+\+M\+A\+SK}{UART_CONFIG_WLEN_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+L\+E\+N\+\_\+\+M\+A\+SK~0x00000060}\hypertarget{uarthal_8h_aaefa9a300dceb6adf3d639b16bdd7555}{}\label{uarthal_8h_aaefa9a300dceb6adf3d639b16bdd7555}
+
+
+Definition at line 82 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+D\+M\+A\+\_\+\+E\+R\+R\+\_\+\+R\+X\+S\+T\+OP@{U\+A\+R\+T\+\_\+\+D\+M\+A\+\_\+\+E\+R\+R\+\_\+\+R\+X\+S\+T\+OP}}
+\index{U\+A\+R\+T\+\_\+\+D\+M\+A\+\_\+\+E\+R\+R\+\_\+\+R\+X\+S\+T\+OP@{U\+A\+R\+T\+\_\+\+D\+M\+A\+\_\+\+E\+R\+R\+\_\+\+R\+X\+S\+T\+OP}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+D\+M\+A\+\_\+\+E\+R\+R\+\_\+\+R\+X\+S\+T\+OP}{UART_DMA_ERR_RXSTOP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+D\+M\+A\+\_\+\+E\+R\+R\+\_\+\+R\+X\+S\+T\+OP~0x00000004}\hypertarget{uarthal_8h_aed2d39213aef902d0f39ea2e9045d1a0}{}\label{uarthal_8h_aed2d39213aef902d0f39ea2e9045d1a0}
+
+
+Definition at line 126 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+D\+M\+A\+\_\+\+RX@{U\+A\+R\+T\+\_\+\+D\+M\+A\+\_\+\+RX}}
+\index{U\+A\+R\+T\+\_\+\+D\+M\+A\+\_\+\+RX@{U\+A\+R\+T\+\_\+\+D\+M\+A\+\_\+\+RX}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+D\+M\+A\+\_\+\+RX}{UART_DMA_RX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+D\+M\+A\+\_\+\+RX~0x00000001}\hypertarget{uarthal_8h_a3e101ab29814742381777e3524d5d48a}{}\label{uarthal_8h_a3e101ab29814742381777e3524d5d48a}
+
+
+Definition at line 128 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+D\+M\+A\+\_\+\+TX@{U\+A\+R\+T\+\_\+\+D\+M\+A\+\_\+\+TX}}
+\index{U\+A\+R\+T\+\_\+\+D\+M\+A\+\_\+\+TX@{U\+A\+R\+T\+\_\+\+D\+M\+A\+\_\+\+TX}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+D\+M\+A\+\_\+\+TX}{UART_DMA_TX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+D\+M\+A\+\_\+\+TX~0x00000002}\hypertarget{uarthal_8h_a603226a03ece38ce150462172182d797}{}\label{uarthal_8h_a603226a03ece38ce150462172182d797}
+
+
+Definition at line 127 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X1\+\_\+8@{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X1\+\_\+8}}
+\index{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X1\+\_\+8@{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X1\+\_\+8}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X1\+\_\+8}{UART_FIFO_RX1_8}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X1\+\_\+8~0x00000000}\hypertarget{uarthal_8h_ad896f5a0717ed18124fb2b50d96574bb}{}\label{uarthal_8h_ad896f5a0717ed18124fb2b50d96574bb}
+
+
+Definition at line 115 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X2\+\_\+8@{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X2\+\_\+8}}
+\index{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X2\+\_\+8@{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X2\+\_\+8}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X2\+\_\+8}{UART_FIFO_RX2_8}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X2\+\_\+8~0x00000008}\hypertarget{uarthal_8h_a07c48011bc25cbeae8e703acb5b706b6}{}\label{uarthal_8h_a07c48011bc25cbeae8e703acb5b706b6}
+
+
+Definition at line 116 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X4\+\_\+8@{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X4\+\_\+8}}
+\index{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X4\+\_\+8@{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X4\+\_\+8}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X4\+\_\+8}{UART_FIFO_RX4_8}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X4\+\_\+8~0x00000010}\hypertarget{uarthal_8h_a616d7e565df3677a59e03bedf2dd63a2}{}\label{uarthal_8h_a616d7e565df3677a59e03bedf2dd63a2}
+
+
+Definition at line 117 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X6\+\_\+8@{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X6\+\_\+8}}
+\index{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X6\+\_\+8@{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X6\+\_\+8}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X6\+\_\+8}{UART_FIFO_RX6_8}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X6\+\_\+8~0x00000018}\hypertarget{uarthal_8h_a4f965a6624b8163d8d9ab9754bb74003}{}\label{uarthal_8h_a4f965a6624b8163d8d9ab9754bb74003}
+
+
+Definition at line 118 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X7\+\_\+8@{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X7\+\_\+8}}
+\index{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X7\+\_\+8@{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X7\+\_\+8}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X7\+\_\+8}{UART_FIFO_RX7_8}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+R\+X7\+\_\+8~0x00000020}\hypertarget{uarthal_8h_ab55741e5b10b29d7449f37ee4a32ad68}{}\label{uarthal_8h_ab55741e5b10b29d7449f37ee4a32ad68}
+
+
+Definition at line 119 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X1\+\_\+8@{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X1\+\_\+8}}
+\index{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X1\+\_\+8@{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X1\+\_\+8}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X1\+\_\+8}{UART_FIFO_TX1_8}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X1\+\_\+8~0x00000000}\hypertarget{uarthal_8h_aa84f336878fba36489b6f7d690f6bc16}{}\label{uarthal_8h_aa84f336878fba36489b6f7d690f6bc16}
+
+
+Definition at line 103 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X2\+\_\+8@{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X2\+\_\+8}}
+\index{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X2\+\_\+8@{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X2\+\_\+8}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X2\+\_\+8}{UART_FIFO_TX2_8}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X2\+\_\+8~0x00000001}\hypertarget{uarthal_8h_a5e621861446c6a7de8cef41c7f1e936d}{}\label{uarthal_8h_a5e621861446c6a7de8cef41c7f1e936d}
+
+
+Definition at line 104 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X4\+\_\+8@{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X4\+\_\+8}}
+\index{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X4\+\_\+8@{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X4\+\_\+8}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X4\+\_\+8}{UART_FIFO_TX4_8}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X4\+\_\+8~0x00000002}\hypertarget{uarthal_8h_a8d6363e555d9e21d654872b8574d45d2}{}\label{uarthal_8h_a8d6363e555d9e21d654872b8574d45d2}
+
+
+Definition at line 105 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X6\+\_\+8@{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X6\+\_\+8}}
+\index{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X6\+\_\+8@{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X6\+\_\+8}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X6\+\_\+8}{UART_FIFO_TX6_8}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X6\+\_\+8~0x00000003}\hypertarget{uarthal_8h_aebb138573237035b69119a730c57c6b7}{}\label{uarthal_8h_aebb138573237035b69119a730c57c6b7}
+
+
+Definition at line 106 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X7\+\_\+8@{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X7\+\_\+8}}
+\index{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X7\+\_\+8@{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X7\+\_\+8}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X7\+\_\+8}{UART_FIFO_TX7_8}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+F\+I\+F\+O\+\_\+\+T\+X7\+\_\+8~0x00000004}\hypertarget{uarthal_8h_aa14091d971253a08b2c47f5faacaf360}{}\label{uarthal_8h_aa14091d971253a08b2c47f5faacaf360}
+
+
+Definition at line 107 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+9\+B\+IT@{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+9\+B\+IT}}
+\index{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+9\+B\+IT@{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+9\+B\+IT}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+9\+B\+IT}{UART_INT_9BIT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+9\+B\+IT~0x1000}\hypertarget{uarthal_8h_a06b239c29b2e80d1e8ef7babbf54660a}{}\label{uarthal_8h_a06b239c29b2e80d1e8ef7babbf54660a}
+
+
+Definition at line 62 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+BE@{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+BE}}
+\index{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+BE@{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+BE}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+BE}{UART_INT_BE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+BE~0x200}\hypertarget{uarthal_8h_aa8660bdf26ac08961125a6c950f4b76a}{}\label{uarthal_8h_aa8660bdf26ac08961125a6c950f4b76a}
+
+
+Definition at line 64 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+C\+TS@{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+C\+TS}}
+\index{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+C\+TS@{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+C\+TS}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+C\+TS}{UART_INT_CTS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+C\+TS~0x002}\hypertarget{uarthal_8h_a472c99c1eb574eec1fc60231358939b2}{}\label{uarthal_8h_a472c99c1eb574eec1fc60231358939b2}
+
+
+Definition at line 70 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+FE@{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+FE}}
+\index{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+FE@{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+FE}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+FE}{UART_INT_FE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+FE~0x080}\hypertarget{uarthal_8h_ab3da31fe08d3dbc7e40c8beb01ea1607}{}\label{uarthal_8h_ab3da31fe08d3dbc7e40c8beb01ea1607}
+
+
+Definition at line 66 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+OE@{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+OE}}
+\index{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+OE@{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+OE}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+OE}{UART_INT_OE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+OE~0x400}\hypertarget{uarthal_8h_ab9c41a9362abfd4e9546f1c70f3a05a9}{}\label{uarthal_8h_ab9c41a9362abfd4e9546f1c70f3a05a9}
+
+
+Definition at line 63 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+PE@{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+PE}}
+\index{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+PE@{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+PE}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+PE}{UART_INT_PE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+PE~0x100}\hypertarget{uarthal_8h_ab944f4625a878ef1df89a7a6fd790cab}{}\label{uarthal_8h_ab944f4625a878ef1df89a7a6fd790cab}
+
+
+Definition at line 65 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+RT@{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+RT}}
+\index{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+RT@{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+RT}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+RT}{UART_INT_RT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+RT~0x040}\hypertarget{uarthal_8h_a6d6d4d5d9fd23170c5f48fefa14e147c}{}\label{uarthal_8h_a6d6d4d5d9fd23170c5f48fefa14e147c}
+
+
+Definition at line 67 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+RX@{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+RX}}
+\index{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+RX@{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+RX}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+RX}{UART_INT_RX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+RX~0x010}\hypertarget{uarthal_8h_a62a4b9cc83e120b3eee5a0a7636b558c}{}\label{uarthal_8h_a62a4b9cc83e120b3eee5a0a7636b558c}
+
+
+Definition at line 69 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+TX@{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+TX}}
+\index{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+TX@{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+TX}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+TX}{UART_INT_TX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+TX~0x020}\hypertarget{uarthal_8h_a5edf87050364febe668e42a5f973dd1a}{}\label{uarthal_8h_a5edf87050364febe668e42a5f973dd1a}
+
+
+Definition at line 68 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+B\+R\+E\+AK@{U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+B\+R\+E\+AK}}
+\index{U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+B\+R\+E\+AK@{U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+B\+R\+E\+AK}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+B\+R\+E\+AK}{UART_RXERROR_BREAK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+B\+R\+E\+AK~0x00000004}\hypertarget{uarthal_8h_a0095e719c755e72b325c60807bfc2947}{}\label{uarthal_8h_a0095e719c755e72b325c60807bfc2947}
+
+
+Definition at line 136 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+F\+R\+A\+M\+I\+NG@{U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+F\+R\+A\+M\+I\+NG}}
+\index{U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+F\+R\+A\+M\+I\+NG@{U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+F\+R\+A\+M\+I\+NG}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+F\+R\+A\+M\+I\+NG}{UART_RXERROR_FRAMING}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+F\+R\+A\+M\+I\+NG~0x00000001}\hypertarget{uarthal_8h_ad55c474de785d45b840305e81fadcb91}{}\label{uarthal_8h_ad55c474de785d45b840305e81fadcb91}
+
+
+Definition at line 138 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+O\+V\+E\+R\+R\+UN@{U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+O\+V\+E\+R\+R\+UN}}
+\index{U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+O\+V\+E\+R\+R\+UN@{U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+O\+V\+E\+R\+R\+UN}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+O\+V\+E\+R\+R\+UN}{UART_RXERROR_OVERRUN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+O\+V\+E\+R\+R\+UN~0x00000008}\hypertarget{uarthal_8h_a7a2562de4e5843df65241e89c3ecf703}{}\label{uarthal_8h_a7a2562de4e5843df65241e89c3ecf703}
+
+
+Definition at line 135 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+I\+TY@{U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+I\+TY}}
+\index{U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+I\+TY@{U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+I\+TY}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+I\+TY}{UART_RXERROR_PARITY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+R\+X\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+I\+TY~0x00000002}\hypertarget{uarthal_8h_a090520942aaf297184dd074bfc24dc49}{}\label{uarthal_8h_a090520942aaf297184dd074bfc24dc49}
+
+
+Definition at line 137 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+T\+X\+I\+N\+T\+\_\+\+M\+O\+D\+E\+\_\+\+E\+OT@{U\+A\+R\+T\+\_\+\+T\+X\+I\+N\+T\+\_\+\+M\+O\+D\+E\+\_\+\+E\+OT}}
+\index{U\+A\+R\+T\+\_\+\+T\+X\+I\+N\+T\+\_\+\+M\+O\+D\+E\+\_\+\+E\+OT@{U\+A\+R\+T\+\_\+\+T\+X\+I\+N\+T\+\_\+\+M\+O\+D\+E\+\_\+\+E\+OT}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+T\+X\+I\+N\+T\+\_\+\+M\+O\+D\+E\+\_\+\+E\+OT}{UART_TXINT_MODE_EOT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+T\+X\+I\+N\+T\+\_\+\+M\+O\+D\+E\+\_\+\+E\+OT~0x00000010}\hypertarget{uarthal_8h_a358737e51b37be564b0cf5b9ef1b2f0c}{}\label{uarthal_8h_a358737e51b37be564b0cf5b9ef1b2f0c}
+
+
+Definition at line 147 of file uarthal.\+h.
+
+\index{uarthal.\+h@{uarthal.\+h}!U\+A\+R\+T\+\_\+\+T\+X\+I\+N\+T\+\_\+\+M\+O\+D\+E\+\_\+\+F\+I\+FO@{U\+A\+R\+T\+\_\+\+T\+X\+I\+N\+T\+\_\+\+M\+O\+D\+E\+\_\+\+F\+I\+FO}}
+\index{U\+A\+R\+T\+\_\+\+T\+X\+I\+N\+T\+\_\+\+M\+O\+D\+E\+\_\+\+F\+I\+FO@{U\+A\+R\+T\+\_\+\+T\+X\+I\+N\+T\+\_\+\+M\+O\+D\+E\+\_\+\+F\+I\+FO}!uarthal.\+h@{uarthal.\+h}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+T\+X\+I\+N\+T\+\_\+\+M\+O\+D\+E\+\_\+\+F\+I\+FO}{UART_TXINT_MODE_FIFO}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+A\+R\+T\+\_\+\+T\+X\+I\+N\+T\+\_\+\+M\+O\+D\+E\+\_\+\+F\+I\+FO~0x00000000}\hypertarget{uarthal_8h_ab5ee365017c3faaaf210815bf9b60ca8}{}\label{uarthal_8h_ab5ee365017c3faaaf210815bf9b60ca8}
+
+
+Definition at line 146 of file uarthal.\+h.
+

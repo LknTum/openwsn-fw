@@ -1,0 +1,94 @@
+\hypertarget{c6t_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openapps/c6t/c6t.c File Reference}
+\label{c6t_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openapps/c6t/c6t.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/openapps/c6t/c6t.\+c}}
+{\ttfamily \#include \char`\"{}opendefs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}c6t.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sixtop.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}idmanager.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}openqueue.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}neighbors.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{c6t_8c_a0fdd29984fac72bd58a10d2d4f4509b6}{c6t\+\_\+receive} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{structcoap__header__iht}{coap\+\_\+header\+\_\+iht} $\ast$coap\+\_\+header, \hyperlink{structcoap__option__iht}{coap\+\_\+option\+\_\+iht} $\ast$coap\+\_\+options)
+\begin{DoxyCompactList}\small\item\em Receives a command and a list of items to be used by the command. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{c6t_8c_ac893e1a21fc97f494100ee27da703165}{c6t\+\_\+send\+Done} (\hyperlink{struct_open_queue_entry__t}{Open\+Queue\+Entry\+\_\+t} $\ast$msg, \hyperlink{opendefs_8h_af20b7c3ed9d2ba19e56a309ad9314803}{owerror\+\_\+t} \hyperlink{disk_8c_ad018a3100b2dabad325a0800152db297}{error})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__c6t_ga385edeca06da93427fc630b6bb21bd4e}{c6t\+\_\+init} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{c6t_8c_a984b29a529c47e10645ad8e74140320b}{c6t\+\_\+path0} \mbox{[}$\,$\mbox{]} = \char`\"{}6t\char`\"{}
+\begin{DoxyCompactList}\small\item\em Co\+AP 6top application. \end{DoxyCompactList}\item 
+\hyperlink{structc6t__vars__t}{c6t\+\_\+vars\+\_\+t} \hyperlink{c6t_8c_abb9a266173d11ef403f673c6710e3560}{c6t\+\_\+vars}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{c6t.\+c@{c6t.\+c}!c6t\+\_\+receive@{c6t\+\_\+receive}}
+\index{c6t\+\_\+receive@{c6t\+\_\+receive}!c6t.\+c@{c6t.\+c}}
+\subsubsection[{\texorpdfstring{c6t\+\_\+receive(\+Open\+Queue\+Entry\+\_\+t $\ast$msg, coap\+\_\+header\+\_\+iht $\ast$coap\+\_\+header, coap\+\_\+option\+\_\+iht $\ast$coap\+\_\+options)}{c6t_receive(OpenQueueEntry_t *msg, coap_header_iht *coap_header, coap_option_iht *coap_options)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf owerror\+\_\+t} c6t\+\_\+receive (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg, }
+\item[{{\bf coap\+\_\+header\+\_\+iht} $\ast$}]{coap\+\_\+header, }
+\item[{{\bf coap\+\_\+option\+\_\+iht} $\ast$}]{coap\+\_\+options}
+\end{DoxyParamCaption}
+)}\hypertarget{c6t_8c_a0fdd29984fac72bd58a10d2d4f4509b6}{}\label{c6t_8c_a0fdd29984fac72bd58a10d2d4f4509b6}
+
+
+Receives a command and a list of items to be used by the command. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em msg} & The received message. Co\+AP header and options already parsed. \\
+\hline
+\mbox{\tt in}  & {\em coap\+\_\+header} & The Co\+AP header contained in the message. \\
+\hline
+\mbox{\tt in}  & {\em coap\+\_\+options} & The Co\+AP options contained in the message.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the response is prepared successfully. 
+\end{DoxyReturn}
+
+
+Definition at line 65 of file c6t.\+c.
+
+\index{c6t.\+c@{c6t.\+c}!c6t\+\_\+send\+Done@{c6t\+\_\+send\+Done}}
+\index{c6t\+\_\+send\+Done@{c6t\+\_\+send\+Done}!c6t.\+c@{c6t.\+c}}
+\subsubsection[{\texorpdfstring{c6t\+\_\+send\+Done(\+Open\+Queue\+Entry\+\_\+t $\ast$msg, owerror\+\_\+t error)}{c6t_sendDone(OpenQueueEntry_t *msg, owerror_t error)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} c6t\+\_\+send\+Done (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Queue\+Entry\+\_\+t} $\ast$}]{msg, }
+\item[{{\bf owerror\+\_\+t}}]{error}
+\end{DoxyParamCaption}
+)}\hypertarget{c6t_8c_ac893e1a21fc97f494100ee27da703165}{}\label{c6t_8c_ac893e1a21fc97f494100ee27da703165}
+
+
+Definition at line 143 of file c6t.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{c6t.\+c@{c6t.\+c}!c6t\+\_\+path0@{c6t\+\_\+path0}}
+\index{c6t\+\_\+path0@{c6t\+\_\+path0}!c6t.\+c@{c6t.\+c}}
+\subsubsection[{\texorpdfstring{c6t\+\_\+path0}{c6t_path0}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint8\+\_\+t} c6t\+\_\+path0\mbox{[}$\,$\mbox{]} = \char`\"{}6t\char`\"{}}\hypertarget{c6t_8c_a984b29a529c47e10645ad8e74140320b}{}\label{c6t_8c_a984b29a529c47e10645ad8e74140320b}
+
+
+Co\+AP 6top application. 
+
+\begin{DoxyAuthor}{Author}
+Xavi Vilajosana \href{mailto:xvilajosana@eecs.berkeley.edu}{\tt xvilajosana@eecs.\+berkeley.\+edu}, February 2013. 
+
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, July 2014 
+\end{DoxyAuthor}
+
+
+Definition at line 17 of file c6t.\+c.
+
+\index{c6t.\+c@{c6t.\+c}!c6t\+\_\+vars@{c6t\+\_\+vars}}
+\index{c6t\+\_\+vars@{c6t\+\_\+vars}!c6t.\+c@{c6t.\+c}}
+\subsubsection[{\texorpdfstring{c6t\+\_\+vars}{c6t_vars}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf c6t\+\_\+vars\+\_\+t} c6t\+\_\+vars}\hypertarget{c6t_8c_abb9a266173d11ef403f673c6710e3560}{}\label{c6t_8c_abb9a266173d11ef403f673c6710e3560}
+
+
+Definition at line 21 of file c6t.\+c.
+

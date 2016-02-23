@@ -1,0 +1,111 @@
+\hypertarget{openmotestm_2library_2src_2stm32f10x__systick_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/openmotestm/library/src/stm32f10x\+\_\+systick.c File Reference}
+\label{openmotestm_2library_2src_2stm32f10x__systick_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/openmotestm/library/src/stm32f10x\+\_\+systick.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/openmotestm/library/src/stm32f10x\+\_\+systick.\+c}}
+{\ttfamily \#include \char`\"{}stm32f10x\+\_\+systick.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{openmotestm_2library_2src_2stm32f10x__systick_8c_afb19bed035671f21e27b4160f863afae}{C\+T\+R\+L\+\_\+\+T\+I\+C\+K\+I\+N\+T\+\_\+\+Set}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x00000002)
+\item 
+\#define \hyperlink{openmotestm_2library_2src_2stm32f10x__systick_8c_a0434b8aacde3e943e9f113f08fc3a66a}{C\+T\+R\+L\+\_\+\+T\+I\+C\+K\+I\+N\+T\+\_\+\+Reset}~((\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})0x\+F\+F\+F\+F\+F\+F\+F\+D)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{openmotestm_2library_2src_2stm32f10x__systick_8c_a7c5c0c8cdf21200a0eba6068529c2866}{Sys\+Tick\+\_\+\+C\+L\+K\+Source\+Config} (\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} Sys\+Tick\+\_\+\+C\+L\+K\+Source)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{openmotestm_2library_2src_2stm32f10x__systick_8c_a28988d77d81c7170ed3ec968b2c1c514}{Sys\+Tick\+\_\+\+Set\+Reload} (\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} Reload)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{openmotestm_2library_2src_2stm32f10x__systick_8c_aae892930ceee90709fe3ca17964ec544}{Sys\+Tick\+\_\+\+Counter\+Cmd} (\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} Sys\+Tick\+\_\+\+Counter)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{openmotestm_2library_2src_2stm32f10x__systick_8c_ac83893ecca74bee5f027a8e96ee9aecb}{Sys\+Tick\+\_\+\+I\+T\+Config} (\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_ac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} New\+State)
+\item 
+\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{openmotestm_2library_2src_2stm32f10x__systick_8c_aaef393504acff47b9e8c357c503a265d}{Sys\+Tick\+\_\+\+Get\+Counter} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_a89136caac2e14c55151f527ac02daaff}{Flag\+Status} \hyperlink{openmotestm_2library_2src_2stm32f10x__systick_8c_a64803903406cbf747636a9cd71f3071f}{Sys\+Tick\+\_\+\+Get\+Flag\+Status} (\hyperlink{agilefox_2library_2inc_2stm32f10x__type_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Sys\+Tick\+\_\+\+F\+L\+AG)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{openmotestm/library/src/stm32f10x\+\_\+systick.\+c@{openmotestm/library/src/stm32f10x\+\_\+systick.\+c}!C\+T\+R\+L\+\_\+\+T\+I\+C\+K\+I\+N\+T\+\_\+\+Reset@{C\+T\+R\+L\+\_\+\+T\+I\+C\+K\+I\+N\+T\+\_\+\+Reset}}
+\index{C\+T\+R\+L\+\_\+\+T\+I\+C\+K\+I\+N\+T\+\_\+\+Reset@{C\+T\+R\+L\+\_\+\+T\+I\+C\+K\+I\+N\+T\+\_\+\+Reset}!openmotestm/library/src/stm32f10x\+\_\+systick.\+c@{openmotestm/library/src/stm32f10x\+\_\+systick.\+c}}
+\subsubsection[{\texorpdfstring{C\+T\+R\+L\+\_\+\+T\+I\+C\+K\+I\+N\+T\+\_\+\+Reset}{CTRL_TICKINT_Reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+T\+R\+L\+\_\+\+T\+I\+C\+K\+I\+N\+T\+\_\+\+Reset~(({\bf u32})0x\+F\+F\+F\+F\+F\+F\+F\+D)}\hypertarget{openmotestm_2library_2src_2stm32f10x__systick_8c_a0434b8aacde3e943e9f113f08fc3a66a}{}\label{openmotestm_2library_2src_2stm32f10x__systick_8c_a0434b8aacde3e943e9f113f08fc3a66a}
+
+
+Definition at line 24 of file stm32f10x\+\_\+systick.\+c.
+
+\index{openmotestm/library/src/stm32f10x\+\_\+systick.\+c@{openmotestm/library/src/stm32f10x\+\_\+systick.\+c}!C\+T\+R\+L\+\_\+\+T\+I\+C\+K\+I\+N\+T\+\_\+\+Set@{C\+T\+R\+L\+\_\+\+T\+I\+C\+K\+I\+N\+T\+\_\+\+Set}}
+\index{C\+T\+R\+L\+\_\+\+T\+I\+C\+K\+I\+N\+T\+\_\+\+Set@{C\+T\+R\+L\+\_\+\+T\+I\+C\+K\+I\+N\+T\+\_\+\+Set}!openmotestm/library/src/stm32f10x\+\_\+systick.\+c@{openmotestm/library/src/stm32f10x\+\_\+systick.\+c}}
+\subsubsection[{\texorpdfstring{C\+T\+R\+L\+\_\+\+T\+I\+C\+K\+I\+N\+T\+\_\+\+Set}{CTRL_TICKINT_Set}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+T\+R\+L\+\_\+\+T\+I\+C\+K\+I\+N\+T\+\_\+\+Set~(({\bf u32})0x00000002)}\hypertarget{openmotestm_2library_2src_2stm32f10x__systick_8c_afb19bed035671f21e27b4160f863afae}{}\label{openmotestm_2library_2src_2stm32f10x__systick_8c_afb19bed035671f21e27b4160f863afae}
+
+
+Definition at line 23 of file stm32f10x\+\_\+systick.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{openmotestm/library/src/stm32f10x\+\_\+systick.\+c@{openmotestm/library/src/stm32f10x\+\_\+systick.\+c}!Sys\+Tick\+\_\+\+C\+L\+K\+Source\+Config@{Sys\+Tick\+\_\+\+C\+L\+K\+Source\+Config}}
+\index{Sys\+Tick\+\_\+\+C\+L\+K\+Source\+Config@{Sys\+Tick\+\_\+\+C\+L\+K\+Source\+Config}!openmotestm/library/src/stm32f10x\+\_\+systick.\+c@{openmotestm/library/src/stm32f10x\+\_\+systick.\+c}}
+\subsubsection[{\texorpdfstring{Sys\+Tick\+\_\+\+C\+L\+K\+Source\+Config(u32 Sys\+Tick\+\_\+\+C\+L\+K\+Source)}{SysTick_CLKSourceConfig(u32 SysTick_CLKSource)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Sys\+Tick\+\_\+\+C\+L\+K\+Source\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf u32}}]{Sys\+Tick\+\_\+\+C\+L\+K\+Source}
+\end{DoxyParamCaption}
+)}\hypertarget{openmotestm_2library_2src_2stm32f10x__systick_8c_a7c5c0c8cdf21200a0eba6068529c2866}{}\label{openmotestm_2library_2src_2stm32f10x__systick_8c_a7c5c0c8cdf21200a0eba6068529c2866}
+
+
+Definition at line 43 of file stm32f10x\+\_\+systick.\+c.
+
+\index{openmotestm/library/src/stm32f10x\+\_\+systick.\+c@{openmotestm/library/src/stm32f10x\+\_\+systick.\+c}!Sys\+Tick\+\_\+\+Counter\+Cmd@{Sys\+Tick\+\_\+\+Counter\+Cmd}}
+\index{Sys\+Tick\+\_\+\+Counter\+Cmd@{Sys\+Tick\+\_\+\+Counter\+Cmd}!openmotestm/library/src/stm32f10x\+\_\+systick.\+c@{openmotestm/library/src/stm32f10x\+\_\+systick.\+c}}
+\subsubsection[{\texorpdfstring{Sys\+Tick\+\_\+\+Counter\+Cmd(u32 Sys\+Tick\+\_\+\+Counter)}{SysTick_CounterCmd(u32 SysTick_Counter)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Sys\+Tick\+\_\+\+Counter\+Cmd (
+\begin{DoxyParamCaption}
+\item[{{\bf u32}}]{Sys\+Tick\+\_\+\+Counter}
+\end{DoxyParamCaption}
+)}\hypertarget{openmotestm_2library_2src_2stm32f10x__systick_8c_aae892930ceee90709fe3ca17964ec544}{}\label{openmotestm_2library_2src_2stm32f10x__systick_8c_aae892930ceee90709fe3ca17964ec544}
+
+
+Definition at line 85 of file stm32f10x\+\_\+systick.\+c.
+
+\index{openmotestm/library/src/stm32f10x\+\_\+systick.\+c@{openmotestm/library/src/stm32f10x\+\_\+systick.\+c}!Sys\+Tick\+\_\+\+Get\+Counter@{Sys\+Tick\+\_\+\+Get\+Counter}}
+\index{Sys\+Tick\+\_\+\+Get\+Counter@{Sys\+Tick\+\_\+\+Get\+Counter}!openmotestm/library/src/stm32f10x\+\_\+systick.\+c@{openmotestm/library/src/stm32f10x\+\_\+systick.\+c}}
+\subsubsection[{\texorpdfstring{Sys\+Tick\+\_\+\+Get\+Counter(void)}{SysTick_GetCounter(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32} Sys\+Tick\+\_\+\+Get\+Counter (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{openmotestm_2library_2src_2stm32f10x__systick_8c_aaef393504acff47b9e8c357c503a265d}{}\label{openmotestm_2library_2src_2stm32f10x__systick_8c_aaef393504acff47b9e8c357c503a265d}
+
+
+Definition at line 134 of file stm32f10x\+\_\+systick.\+c.
+
+\index{openmotestm/library/src/stm32f10x\+\_\+systick.\+c@{openmotestm/library/src/stm32f10x\+\_\+systick.\+c}!Sys\+Tick\+\_\+\+Get\+Flag\+Status@{Sys\+Tick\+\_\+\+Get\+Flag\+Status}}
+\index{Sys\+Tick\+\_\+\+Get\+Flag\+Status@{Sys\+Tick\+\_\+\+Get\+Flag\+Status}!openmotestm/library/src/stm32f10x\+\_\+systick.\+c@{openmotestm/library/src/stm32f10x\+\_\+systick.\+c}}
+\subsubsection[{\texorpdfstring{Sys\+Tick\+\_\+\+Get\+Flag\+Status(u8 Sys\+Tick\+\_\+\+F\+L\+A\+G)}{SysTick_GetFlagStatus(u8 SysTick_FLAG)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Flag\+Status} Sys\+Tick\+\_\+\+Get\+Flag\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{Sys\+Tick\+\_\+\+F\+L\+AG}
+\end{DoxyParamCaption}
+)}\hypertarget{openmotestm_2library_2src_2stm32f10x__systick_8c_a64803903406cbf747636a9cd71f3071f}{}\label{openmotestm_2library_2src_2stm32f10x__systick_8c_a64803903406cbf747636a9cd71f3071f}
+
+
+Definition at line 150 of file stm32f10x\+\_\+systick.\+c.
+
+\index{openmotestm/library/src/stm32f10x\+\_\+systick.\+c@{openmotestm/library/src/stm32f10x\+\_\+systick.\+c}!Sys\+Tick\+\_\+\+I\+T\+Config@{Sys\+Tick\+\_\+\+I\+T\+Config}}
+\index{Sys\+Tick\+\_\+\+I\+T\+Config@{Sys\+Tick\+\_\+\+I\+T\+Config}!openmotestm/library/src/stm32f10x\+\_\+systick.\+c@{openmotestm/library/src/stm32f10x\+\_\+systick.\+c}}
+\subsubsection[{\texorpdfstring{Sys\+Tick\+\_\+\+I\+T\+Config(\+Functional\+State New\+State)}{SysTick_ITConfig(FunctionalState NewState)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Sys\+Tick\+\_\+\+I\+T\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf Functional\+State}}]{New\+State}
+\end{DoxyParamCaption}
+)}\hypertarget{openmotestm_2library_2src_2stm32f10x__systick_8c_ac83893ecca74bee5f027a8e96ee9aecb}{}\label{openmotestm_2library_2src_2stm32f10x__systick_8c_ac83893ecca74bee5f027a8e96ee9aecb}
+
+
+Definition at line 112 of file stm32f10x\+\_\+systick.\+c.
+
+\index{openmotestm/library/src/stm32f10x\+\_\+systick.\+c@{openmotestm/library/src/stm32f10x\+\_\+systick.\+c}!Sys\+Tick\+\_\+\+Set\+Reload@{Sys\+Tick\+\_\+\+Set\+Reload}}
+\index{Sys\+Tick\+\_\+\+Set\+Reload@{Sys\+Tick\+\_\+\+Set\+Reload}!openmotestm/library/src/stm32f10x\+\_\+systick.\+c@{openmotestm/library/src/stm32f10x\+\_\+systick.\+c}}
+\subsubsection[{\texorpdfstring{Sys\+Tick\+\_\+\+Set\+Reload(u32 Reload)}{SysTick_SetReload(u32 Reload)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Sys\+Tick\+\_\+\+Set\+Reload (
+\begin{DoxyParamCaption}
+\item[{{\bf u32}}]{Reload}
+\end{DoxyParamCaption}
+)}\hypertarget{openmotestm_2library_2src_2stm32f10x__systick_8c_a28988d77d81c7170ed3ec968b2c1c514}{}\label{openmotestm_2library_2src_2stm32f10x__systick_8c_a28988d77d81c7170ed3ec968b2c1c514}
+
+
+Definition at line 66 of file stm32f10x\+\_\+systick.\+c.
+

@@ -1,0 +1,109 @@
+\hypertarget{sysinit_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/k20/cpu/sysinit.c File Reference}
+\label{sysinit_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/k20/cpu/sysinit.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/k20/cpu/sysinit.\+c}}
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sysinit.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}uart.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}mcg.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{sysinit_8c_af5852e0e4dd65bfb8be84a12f02906a7}{sysinit} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{sysinit_8c_a23bf287d2d63fc44b0bf46d29cbe3c07}{trace\+\_\+clk\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{sysinit_8c_af9bccf6fd4d3682da8b3a22ae34f22c4}{fb\+\_\+clk\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{sysinit_8c_a5383539a3a607e05906f71be0fd4f4af}{mcg\+\_\+clk\+\_\+hz}
+\begin{DoxyCompactList}\small\item\em K20-\/specific definition of the \char`\"{}board\char`\"{} bsp module. \end{DoxyCompactList}\item 
+int \hyperlink{sysinit_8c_a147d9f2b0cb61752bb5c764775d9b022}{mcg\+\_\+clk\+\_\+khz}
+\item 
+int \hyperlink{sysinit_8c_a7fa854056a09162506d2e1e8ca57fd6d}{core\+\_\+clk\+\_\+khz}
+\item 
+int \hyperlink{sysinit_8c_a6f715a53bd9a9f41a3101a4c9025dcac}{core\+\_\+clk\+\_\+mhz}
+\item 
+int \hyperlink{sysinit_8c_a59867450eec8beb54994d135314cd392}{periph\+\_\+clk\+\_\+khz}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{sysinit.\+c@{sysinit.\+c}!fb\+\_\+clk\+\_\+init@{fb\+\_\+clk\+\_\+init}}
+\index{fb\+\_\+clk\+\_\+init@{fb\+\_\+clk\+\_\+init}!sysinit.\+c@{sysinit.\+c}}
+\subsubsection[{\texorpdfstring{fb\+\_\+clk\+\_\+init(void)}{fb_clk_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} fb\+\_\+clk\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{sysinit_8c_af9bccf6fd4d3682da8b3a22ae34f22c4}{}\label{sysinit_8c_af9bccf6fd4d3682da8b3a22ae34f22c4}
+
+
+Definition at line 227 of file sysinit.\+c.
+
+\index{sysinit.\+c@{sysinit.\+c}!sysinit@{sysinit}}
+\index{sysinit@{sysinit}!sysinit.\+c@{sysinit.\+c}}
+\subsubsection[{\texorpdfstring{sysinit(void)}{sysinit(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sysinit (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{sysinit_8c_af5852e0e4dd65bfb8be84a12f02906a7}{}\label{sysinit_8c_af5852e0e4dd65bfb8be84a12f02906a7}
+
+
+Definition at line 25 of file sysinit.\+c.
+
+\index{sysinit.\+c@{sysinit.\+c}!trace\+\_\+clk\+\_\+init@{trace\+\_\+clk\+\_\+init}}
+\index{trace\+\_\+clk\+\_\+init@{trace\+\_\+clk\+\_\+init}!sysinit.\+c@{sysinit.\+c}}
+\subsubsection[{\texorpdfstring{trace\+\_\+clk\+\_\+init(void)}{trace_clk_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} trace\+\_\+clk\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{sysinit_8c_a23bf287d2d63fc44b0bf46d29cbe3c07}{}\label{sysinit_8c_a23bf287d2d63fc44b0bf46d29cbe3c07}
+
+
+Definition at line 217 of file sysinit.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{sysinit.\+c@{sysinit.\+c}!core\+\_\+clk\+\_\+khz@{core\+\_\+clk\+\_\+khz}}
+\index{core\+\_\+clk\+\_\+khz@{core\+\_\+clk\+\_\+khz}!sysinit.\+c@{sysinit.\+c}}
+\subsubsection[{\texorpdfstring{core\+\_\+clk\+\_\+khz}{core_clk_khz}}]{\setlength{\rightskip}{0pt plus 5cm}int core\+\_\+clk\+\_\+khz}\hypertarget{sysinit_8c_a7fa854056a09162506d2e1e8ca57fd6d}{}\label{sysinit_8c_a7fa854056a09162506d2e1e8ca57fd6d}
+
+
+Definition at line 20 of file sysinit.\+c.
+
+\index{sysinit.\+c@{sysinit.\+c}!core\+\_\+clk\+\_\+mhz@{core\+\_\+clk\+\_\+mhz}}
+\index{core\+\_\+clk\+\_\+mhz@{core\+\_\+clk\+\_\+mhz}!sysinit.\+c@{sysinit.\+c}}
+\subsubsection[{\texorpdfstring{core\+\_\+clk\+\_\+mhz}{core_clk_mhz}}]{\setlength{\rightskip}{0pt plus 5cm}int core\+\_\+clk\+\_\+mhz}\hypertarget{sysinit_8c_a6f715a53bd9a9f41a3101a4c9025dcac}{}\label{sysinit_8c_a6f715a53bd9a9f41a3101a4c9025dcac}
+
+
+Definition at line 21 of file sysinit.\+c.
+
+\index{sysinit.\+c@{sysinit.\+c}!mcg\+\_\+clk\+\_\+hz@{mcg\+\_\+clk\+\_\+hz}}
+\index{mcg\+\_\+clk\+\_\+hz@{mcg\+\_\+clk\+\_\+hz}!sysinit.\+c@{sysinit.\+c}}
+\subsubsection[{\texorpdfstring{mcg\+\_\+clk\+\_\+hz}{mcg_clk_hz}}]{\setlength{\rightskip}{0pt plus 5cm}int mcg\+\_\+clk\+\_\+hz}\hypertarget{sysinit_8c_a5383539a3a607e05906f71be0fd4f4af}{}\label{sysinit_8c_a5383539a3a607e05906f71be0fd4f4af}
+
+
+K20-\/specific definition of the \char`\"{}board\char`\"{} bsp module. 
+
+\begin{DoxyAuthor}{Author}
+Xavi Vilajosana \href{mailto:xvilajosana@eecs.berkeley.edu}{\tt xvilajosana@eecs.\+berkeley.\+edu}, May 2012. 
+\end{DoxyAuthor}
+
+
+Definition at line 18 of file sysinit.\+c.
+
+\index{sysinit.\+c@{sysinit.\+c}!mcg\+\_\+clk\+\_\+khz@{mcg\+\_\+clk\+\_\+khz}}
+\index{mcg\+\_\+clk\+\_\+khz@{mcg\+\_\+clk\+\_\+khz}!sysinit.\+c@{sysinit.\+c}}
+\subsubsection[{\texorpdfstring{mcg\+\_\+clk\+\_\+khz}{mcg_clk_khz}}]{\setlength{\rightskip}{0pt plus 5cm}int mcg\+\_\+clk\+\_\+khz}\hypertarget{sysinit_8c_a147d9f2b0cb61752bb5c764775d9b022}{}\label{sysinit_8c_a147d9f2b0cb61752bb5c764775d9b022}
+
+
+Definition at line 19 of file sysinit.\+c.
+
+\index{sysinit.\+c@{sysinit.\+c}!periph\+\_\+clk\+\_\+khz@{periph\+\_\+clk\+\_\+khz}}
+\index{periph\+\_\+clk\+\_\+khz@{periph\+\_\+clk\+\_\+khz}!sysinit.\+c@{sysinit.\+c}}
+\subsubsection[{\texorpdfstring{periph\+\_\+clk\+\_\+khz}{periph_clk_khz}}]{\setlength{\rightskip}{0pt plus 5cm}int periph\+\_\+clk\+\_\+khz}\hypertarget{sysinit_8c_a59867450eec8beb54994d135314cd392}{}\label{sysinit_8c_a59867450eec8beb54994d135314cd392}
+
+
+Definition at line 22 of file sysinit.\+c.
+

@@ -1,0 +1,359 @@
+\hypertarget{_open_mote-_c_c2538_2board_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/board.c File Reference}
+\label{_open_mote-_c_c2538_2board_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/board.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/board.\+c}}
+{\ttfamily \#include $<$headers/hw\+\_\+ioc.\+h$>$}\\*
+{\ttfamily \#include $<$headers/hw\+\_\+memmap.\+h$>$}\\*
+{\ttfamily \#include $<$headers/hw\+\_\+ssi.\+h$>$}\\*
+{\ttfamily \#include $<$headers/hw\+\_\+sys\+\_\+ctrl.\+h$>$}\\*
+{\ttfamily \#include $<$headers/hw\+\_\+types.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leds.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ioc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gpio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gptimer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sys\+\_\+ctrl.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}interrupt.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bsp\+\_\+timer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}radiotimer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}debugpins.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}uart.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}radio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}flash.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}i2c.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sensors.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_open_mote-_c_c2538_2board_8c_a54e79aca09ca603b2bd7dde3ba7dfdfe}{B\+S\+P\+\_\+\+A\+N\+T\+E\+N\+N\+A\+\_\+\+B\+A\+SE}~( \hyperlink{hw__memmap_8h_a1eb15743fd9e3c8f13e6c72e6e3d9a8e}{G\+P\+I\+O\+\_\+\+D\+\_\+\+B\+A\+SE} )
+\item 
+\#define \hyperlink{_open_mote-_c_c2538_2board_8c_a9c2bcacb625334d0a7282da5a34245fa}{B\+S\+P\+\_\+\+A\+N\+T\+E\+N\+N\+A\+\_\+\+I\+NT}~( \hyperlink{_open_mote-_c_c2538_2source_2gpio_8h_a01cc9ed93f6fd12fd3403362779aaa18}{G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+5} )
+\item 
+\#define \hyperlink{_open_mote-_c_c2538_2board_8c_a728eeba6fdbe78edaa67c6c433073d33}{B\+S\+P\+\_\+\+A\+N\+T\+E\+N\+N\+A\+\_\+\+E\+XT}~( \hyperlink{_open_mote-_c_c2538_2source_2gpio_8h_ab3871e35868deecd260e586ad70d4b83}{G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+4} )
+\item 
+\#define \hyperlink{_open_mote-_c_c2538_2board_8c_a876f677fffd3533f28860ab84a553928}{B\+S\+P\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+B\+A\+SE}~( \hyperlink{hw__memmap_8h_a35eb93c001f3b576606bb177393085ea}{G\+P\+I\+O\+\_\+\+C\+\_\+\+B\+A\+SE} )
+\item 
+\#define \hyperlink{_open_mote-_c_c2538_2board_8c_af2595f0cc04689506e596f7d8898b664}{B\+S\+P\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+U\+S\+ER}~( \hyperlink{_open_mote-_c_c2538_2source_2gpio_8h_adcaf899c018a0dde572b5af783565c62}{G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+3} )
+\item 
+\#define \hyperlink{_open_mote-_c_c2538_2board_8c_a4aff7defd67d17a3dc718c3961fbc684}{C\+C2538\+\_\+\+F\+L\+A\+S\+H\+\_\+\+A\+D\+D\+R\+E\+SS}~( 0x0027\+F800 )
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_open_mote-_c_c2538_2board_8c_a69f1b944e439c245a9909f3c8e9e2837}{antenna\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_open_mote-_c_c2538_2board_8c_a086cf02844ade3768ae250a9fc74b3fe}{antenna\+\_\+internal} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_open_mote-_c_c2538_2board_8c_ae28280d8705fceeb722c55991aee6e99}{antenna\+\_\+external} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{_open_mote-_c_c2538_2board_8c_a1086b4b191966b7ce146d45d22274101}{board\+\_\+timer\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{_open_mote-_c_c2538_2board_8c_a1409dd4554f2fa814490c8d500eb4236}{board\+\_\+timer\+\_\+get} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{_open_mote-_c_c2538_2board_8c_a7c18a2cb1673d859694a0b42bb7378b5}{board\+\_\+timer\+\_\+expired} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} future)
+\item 
+int \hyperlink{_open_mote-_c_c2538_2board_8c_ad0caa506af897a3ebe6699aa0c0da367}{mote\+\_\+main} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em The program starts executing here. \end{DoxyCompactList}\item 
+int \hyperlink{_open_mote-_c_c2538_2board_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__board_ga916f2adc2080b4fe88034086d107a8dc}{board\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em E\+L\+D\+O\+R\+A\+D\+O-\/specific definition of the \char`\"{}board\char`\"{} bsp module. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__board_ga052cfe534a52d7f046e311d4adec00a8}{board\+\_\+sleep} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__board_gafbd0c8dccf10506bd3912960c8cba369}{board\+\_\+reset} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{Open\+Mote-\/\+C\+C2538/board.\+c@{Open\+Mote-\/\+C\+C2538/board.\+c}!B\+S\+P\+\_\+\+A\+N\+T\+E\+N\+N\+A\+\_\+\+B\+A\+SE@{B\+S\+P\+\_\+\+A\+N\+T\+E\+N\+N\+A\+\_\+\+B\+A\+SE}}
+\index{B\+S\+P\+\_\+\+A\+N\+T\+E\+N\+N\+A\+\_\+\+B\+A\+SE@{B\+S\+P\+\_\+\+A\+N\+T\+E\+N\+N\+A\+\_\+\+B\+A\+SE}!Open\+Mote-\/\+C\+C2538/board.\+c@{Open\+Mote-\/\+C\+C2538/board.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+A\+N\+T\+E\+N\+N\+A\+\_\+\+B\+A\+SE}{BSP_ANTENNA_BASE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+A\+N\+T\+E\+N\+N\+A\+\_\+\+B\+A\+SE~( {\bf G\+P\+I\+O\+\_\+\+D\+\_\+\+B\+A\+SE} )}\hypertarget{_open_mote-_c_c2538_2board_8c_a54e79aca09ca603b2bd7dde3ba7dfdfe}{}\label{_open_mote-_c_c2538_2board_8c_a54e79aca09ca603b2bd7dde3ba7dfdfe}
+Author\+: Xavier Vilajosana (\href{mailto:xvilajosana@eecs.berkeley.edu}{\tt xvilajosana@eecs.\+berkeley.\+edu}) Pere Tuset (\href{mailto:peretuset@openmote.com}{\tt peretuset@openmote.\+com}) Date\+: July 2013 Description\+: C\+C2538-\/specific definition of the \char`\"{}board\char`\"{} bsp module. 
+
+Definition at line 32 of file board.\+c.
+
+\index{Open\+Mote-\/\+C\+C2538/board.\+c@{Open\+Mote-\/\+C\+C2538/board.\+c}!B\+S\+P\+\_\+\+A\+N\+T\+E\+N\+N\+A\+\_\+\+E\+XT@{B\+S\+P\+\_\+\+A\+N\+T\+E\+N\+N\+A\+\_\+\+E\+XT}}
+\index{B\+S\+P\+\_\+\+A\+N\+T\+E\+N\+N\+A\+\_\+\+E\+XT@{B\+S\+P\+\_\+\+A\+N\+T\+E\+N\+N\+A\+\_\+\+E\+XT}!Open\+Mote-\/\+C\+C2538/board.\+c@{Open\+Mote-\/\+C\+C2538/board.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+A\+N\+T\+E\+N\+N\+A\+\_\+\+E\+XT}{BSP_ANTENNA_EXT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+A\+N\+T\+E\+N\+N\+A\+\_\+\+E\+XT~( {\bf G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+4} )}\hypertarget{_open_mote-_c_c2538_2board_8c_a728eeba6fdbe78edaa67c6c433073d33}{}\label{_open_mote-_c_c2538_2board_8c_a728eeba6fdbe78edaa67c6c433073d33}
+
+
+Definition at line 34 of file board.\+c.
+
+\index{Open\+Mote-\/\+C\+C2538/board.\+c@{Open\+Mote-\/\+C\+C2538/board.\+c}!B\+S\+P\+\_\+\+A\+N\+T\+E\+N\+N\+A\+\_\+\+I\+NT@{B\+S\+P\+\_\+\+A\+N\+T\+E\+N\+N\+A\+\_\+\+I\+NT}}
+\index{B\+S\+P\+\_\+\+A\+N\+T\+E\+N\+N\+A\+\_\+\+I\+NT@{B\+S\+P\+\_\+\+A\+N\+T\+E\+N\+N\+A\+\_\+\+I\+NT}!Open\+Mote-\/\+C\+C2538/board.\+c@{Open\+Mote-\/\+C\+C2538/board.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+A\+N\+T\+E\+N\+N\+A\+\_\+\+I\+NT}{BSP_ANTENNA_INT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+A\+N\+T\+E\+N\+N\+A\+\_\+\+I\+NT~( {\bf G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+5} )}\hypertarget{_open_mote-_c_c2538_2board_8c_a9c2bcacb625334d0a7282da5a34245fa}{}\label{_open_mote-_c_c2538_2board_8c_a9c2bcacb625334d0a7282da5a34245fa}
+
+
+Definition at line 33 of file board.\+c.
+
+\index{Open\+Mote-\/\+C\+C2538/board.\+c@{Open\+Mote-\/\+C\+C2538/board.\+c}!B\+S\+P\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+B\+A\+SE@{B\+S\+P\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+B\+A\+SE}}
+\index{B\+S\+P\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+B\+A\+SE@{B\+S\+P\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+B\+A\+SE}!Open\+Mote-\/\+C\+C2538/board.\+c@{Open\+Mote-\/\+C\+C2538/board.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+B\+A\+SE}{BSP_BUTTON_BASE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+B\+A\+SE~( {\bf G\+P\+I\+O\+\_\+\+C\+\_\+\+B\+A\+SE} )}\hypertarget{_open_mote-_c_c2538_2board_8c_a876f677fffd3533f28860ab84a553928}{}\label{_open_mote-_c_c2538_2board_8c_a876f677fffd3533f28860ab84a553928}
+
+
+Definition at line 36 of file board.\+c.
+
+\index{Open\+Mote-\/\+C\+C2538/board.\+c@{Open\+Mote-\/\+C\+C2538/board.\+c}!B\+S\+P\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+U\+S\+ER@{B\+S\+P\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+U\+S\+ER}}
+\index{B\+S\+P\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+U\+S\+ER@{B\+S\+P\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+U\+S\+ER}!Open\+Mote-\/\+C\+C2538/board.\+c@{Open\+Mote-\/\+C\+C2538/board.\+c}}
+\subsubsection[{\texorpdfstring{B\+S\+P\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+U\+S\+ER}{BSP_BUTTON_USER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+S\+P\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+U\+S\+ER~( {\bf G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+3} )}\hypertarget{_open_mote-_c_c2538_2board_8c_af2595f0cc04689506e596f7d8898b664}{}\label{_open_mote-_c_c2538_2board_8c_af2595f0cc04689506e596f7d8898b664}
+
+
+Definition at line 37 of file board.\+c.
+
+\index{Open\+Mote-\/\+C\+C2538/board.\+c@{Open\+Mote-\/\+C\+C2538/board.\+c}!C\+C2538\+\_\+\+F\+L\+A\+S\+H\+\_\+\+A\+D\+D\+R\+E\+SS@{C\+C2538\+\_\+\+F\+L\+A\+S\+H\+\_\+\+A\+D\+D\+R\+E\+SS}}
+\index{C\+C2538\+\_\+\+F\+L\+A\+S\+H\+\_\+\+A\+D\+D\+R\+E\+SS@{C\+C2538\+\_\+\+F\+L\+A\+S\+H\+\_\+\+A\+D\+D\+R\+E\+SS}!Open\+Mote-\/\+C\+C2538/board.\+c@{Open\+Mote-\/\+C\+C2538/board.\+c}}
+\subsubsection[{\texorpdfstring{C\+C2538\+\_\+\+F\+L\+A\+S\+H\+\_\+\+A\+D\+D\+R\+E\+SS}{CC2538_FLASH_ADDRESS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+C2538\+\_\+\+F\+L\+A\+S\+H\+\_\+\+A\+D\+D\+R\+E\+SS~( 0x0027\+F800 )}\hypertarget{_open_mote-_c_c2538_2board_8c_a4aff7defd67d17a3dc718c3961fbc684}{}\label{_open_mote-_c_c2538_2board_8c_a4aff7defd67d17a3dc718c3961fbc684}
+
+
+Definition at line 39 of file board.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{Open\+Mote-\/\+C\+C2538/board.\+c@{Open\+Mote-\/\+C\+C2538/board.\+c}!antenna\+\_\+external@{antenna\+\_\+external}}
+\index{antenna\+\_\+external@{antenna\+\_\+external}!Open\+Mote-\/\+C\+C2538/board.\+c@{Open\+Mote-\/\+C\+C2538/board.\+c}}
+\subsubsection[{\texorpdfstring{antenna\+\_\+external(void)}{antenna_external(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} antenna\+\_\+external (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_open_mote-_c_c2538_2board_8c_ae28280d8705fceeb722c55991aee6e99}{}\label{_open_mote-_c_c2538_2board_8c_ae28280d8705fceeb722c55991aee6e99}
+Selects the external (connector) antenna 
+
+Definition at line 169 of file board.\+c.
+
+\index{Open\+Mote-\/\+C\+C2538/board.\+c@{Open\+Mote-\/\+C\+C2538/board.\+c}!antenna\+\_\+init@{antenna\+\_\+init}}
+\index{antenna\+\_\+init@{antenna\+\_\+init}!Open\+Mote-\/\+C\+C2538/board.\+c@{Open\+Mote-\/\+C\+C2538/board.\+c}}
+\subsubsection[{\texorpdfstring{antenna\+\_\+init(void)}{antenna_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} antenna\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_open_mote-_c_c2538_2board_8c_a69f1b944e439c245a9909f3c8e9e2837}{}\label{_open_mote-_c_c2538_2board_8c_a69f1b944e439c245a9909f3c8e9e2837}
+Configures the antenna using a RF switch I\+NT is the internal antenna (chip) configured through A\+N\+T1\+\_\+\+S\+EL (V1) E\+XT is the external antenna (connector) configured through A\+N\+T2\+\_\+\+S\+EL (V2) 
+
+Definition at line 156 of file board.\+c.
+
+\index{Open\+Mote-\/\+C\+C2538/board.\+c@{Open\+Mote-\/\+C\+C2538/board.\+c}!antenna\+\_\+internal@{antenna\+\_\+internal}}
+\index{antenna\+\_\+internal@{antenna\+\_\+internal}!Open\+Mote-\/\+C\+C2538/board.\+c@{Open\+Mote-\/\+C\+C2538/board.\+c}}
+\subsubsection[{\texorpdfstring{antenna\+\_\+internal(void)}{antenna_internal(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} antenna\+\_\+internal (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_open_mote-_c_c2538_2board_8c_a086cf02844ade3768ae250a9fc74b3fe}{}\label{_open_mote-_c_c2538_2board_8c_a086cf02844ade3768ae250a9fc74b3fe}
+Selects the internal (chip) antenna 
+
+Definition at line 177 of file board.\+c.
+
+\index{Open\+Mote-\/\+C\+C2538/board.\+c@{Open\+Mote-\/\+C\+C2538/board.\+c}!board\+\_\+timer\+\_\+expired@{board\+\_\+timer\+\_\+expired}}
+\index{board\+\_\+timer\+\_\+expired@{board\+\_\+timer\+\_\+expired}!Open\+Mote-\/\+C\+C2538/board.\+c@{Open\+Mote-\/\+C\+C2538/board.\+c}}
+\subsubsection[{\texorpdfstring{board\+\_\+timer\+\_\+expired(uint32\+\_\+t future)}{board_timer_expired(uint32_t future)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} board\+\_\+timer\+\_\+expired (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{future}
+\end{DoxyParamCaption}
+)}\hypertarget{_open_mote-_c_c2538_2board_8c_a7c18a2cb1673d859694a0b42bb7378b5}{}\label{_open_mote-_c_c2538_2board_8c_a7c18a2cb1673d859694a0b42bb7378b5}
+Returns true if the timer has expired The timer is divided by 32, whichs gives a 1 microsecond ticks 
+
+Definition at line 129 of file board.\+c.
+
+\index{Open\+Mote-\/\+C\+C2538/board.\+c@{Open\+Mote-\/\+C\+C2538/board.\+c}!board\+\_\+timer\+\_\+get@{board\+\_\+timer\+\_\+get}}
+\index{board\+\_\+timer\+\_\+get@{board\+\_\+timer\+\_\+get}!Open\+Mote-\/\+C\+C2538/board.\+c@{Open\+Mote-\/\+C\+C2538/board.\+c}}
+\subsubsection[{\texorpdfstring{board\+\_\+timer\+\_\+get(void)}{board_timer_get(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} board\+\_\+timer\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_open_mote-_c_c2538_2board_8c_a1409dd4554f2fa814490c8d500eb4236}{}\label{_open_mote-_c_c2538_2board_8c_a1409dd4554f2fa814490c8d500eb4236}
+Returns the current value of the timer The timer is divided by 32, whichs gives a 1 microsecond ticks 
+
+Definition at line 117 of file board.\+c.
+
+\index{Open\+Mote-\/\+C\+C2538/board.\+c@{Open\+Mote-\/\+C\+C2538/board.\+c}!board\+\_\+timer\+\_\+init@{board\+\_\+timer\+\_\+init}}
+\index{board\+\_\+timer\+\_\+init@{board\+\_\+timer\+\_\+init}!Open\+Mote-\/\+C\+C2538/board.\+c@{Open\+Mote-\/\+C\+C2538/board.\+c}}
+\subsubsection[{\texorpdfstring{board\+\_\+timer\+\_\+init(void)}{board_timer_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} board\+\_\+timer\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_open_mote-_c_c2538_2board_8c_a1086b4b191966b7ce146d45d22274101}{}\label{_open_mote-_c_c2538_2board_8c_a1086b4b191966b7ce146d45d22274101}
+Timer runs at 32 M\+Hz and is 32-\/bit wide The timer is divided by 32, whichs gives a 1 microsecond ticks 
+
+Definition at line 105 of file board.\+c.
+
+\index{Open\+Mote-\/\+C\+C2538/board.\+c@{Open\+Mote-\/\+C\+C2538/board.\+c}!main@{main}}
+\index{main@{main}!Open\+Mote-\/\+C\+C2538/board.\+c@{Open\+Mote-\/\+C\+C2538/board.\+c}}
+\subsubsection[{\texorpdfstring{main(void)}{main(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_open_mote-_c_c2538_2board_8c_a840291bc02cba5474a4cb46a9b9566fe}{}\label{_open_mote-_c_c2538_2board_8c_a840291bc02cba5474a4cb46a9b9566fe}
+
+
+Definition at line 67 of file board.\+c.
+
+\index{Open\+Mote-\/\+C\+C2538/board.\+c@{Open\+Mote-\/\+C\+C2538/board.\+c}!mote\+\_\+main@{mote\+\_\+main}}
+\index{mote\+\_\+main@{mote\+\_\+main}!Open\+Mote-\/\+C\+C2538/board.\+c@{Open\+Mote-\/\+C\+C2538/board.\+c}}
+\subsubsection[{\texorpdfstring{mote\+\_\+main(void)}{mote_main(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int mote\+\_\+main (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_open_mote-_c_c2538_2board_8c_ad0caa506af897a3ebe6699aa0c0da367}{}\label{_open_mote-_c_c2538_2board_8c_ad0caa506af897a3ebe6699aa0c0da367}
+
+
+The program starts executing here. 
+
+iot-\/lab\+\_\+\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+iot-\/lab\+\_\+\+A8-\/\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+G\+I\+N\+A-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+e\+Z430-\/\+R\+F2500-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+iot-\/lab\+\_\+\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+iot-\/lab\+\_\+\+A8-\/\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+G\+I\+N\+A-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+e\+Z430-\/\+R\+F2500-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+The program starts executing here.
+
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+\begin{DoxyNote}{Note}
+\+: Since the bsp modules for different platforms have the same declaration, you can use this project with any platform.
+\end{DoxyNote}
+Load this program on your boards. The L\+E\+Ds should start blinking furiously.
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, February 2012 The program starts executing here.
+\end{DoxyAuthor}
+iot-\/lab\+\_\+\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+iot-\/lab\+\_\+\+A8-\/\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+G\+I\+N\+A-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+e\+Z430-\/\+R\+F2500-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+The program starts executing here.
+
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+iot-\/lab\+\_\+\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+iot-\/lab\+\_\+\+A8-\/\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+G\+I\+N\+A-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+e\+Z430-\/\+R\+F2500-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+The program starts executing here.
+
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+Since the driver modules for different platforms have the same declaration, you can use this project with any platform.
+
+This application allows you to verify the correct functioning of the opentimers drivers. It starts 3 periodic timers, with periods A\+P\+P\+\_\+\+D\+L\+Y\+\_\+\+T\+I\+M\+E\+R0\+\_\+ms, A\+P\+P\+\_\+\+D\+L\+Y\+\_\+\+T\+I\+M\+E\+R1\+\_\+ms and A\+P\+P\+\_\+\+D\+L\+Y\+\_\+\+T\+I\+M\+E\+R2\+\_\+ms. Each timer is attached an L\+ED (error. radio and sync). When you run the application, you should see the L\+E\+Ds \char`\"{}counting\char`\"{}.
+
+\begin{DoxyAuthor}{Author}
+Pere Tuset \href{mailto:peretuset@openmote.com}{\tt peretuset@openmote.\+com}, January 2015.
+\end{DoxyAuthor}
+iot-\/lab\+\_\+\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+iot-\/lab\+\_\+\+A8-\/\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+G\+I\+N\+A-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+e\+Z430-\/\+R\+F2500-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+The program starts executing here.
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, February 2012. 
+
+Chang Tengfei \href{mailto:tengfei.chang@gmail.com}{\tt tengfei.\+chang@gmail.\+com}, July 2012. 
+
+Alaeddine Weslati \href{mailto:alaeddine.weslati@inria.fr}{\tt alaeddine.\+weslati@inria.\+fr}, August 2013.
+\end{DoxyAuthor}
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+\begin{DoxyNote}{Note}
+\+: Since the bsp modules for different platforms have the same declaration, you can use this project with any platform.
+\end{DoxyNote}
+Load this program on your boards. The L\+E\+Ds should start blinking furiously.
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, February 2012 The program starts executing here.
+\end{DoxyAuthor}
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+Since the driver modules for different platforms have the same declaration, you can use this project with any platform.
+
+This application allows you to verify the correct functioning of the opentimers drivers. It starts 3 periodic timers, with periods A\+P\+P\+\_\+\+D\+L\+Y\+\_\+\+T\+I\+M\+E\+R0\+\_\+ms, A\+P\+P\+\_\+\+D\+L\+Y\+\_\+\+T\+I\+M\+E\+R1\+\_\+ms and A\+P\+P\+\_\+\+D\+L\+Y\+\_\+\+T\+I\+M\+E\+R2\+\_\+ms. Each timer is attached an L\+ED (error. radio and sync). When you run the application, you should see the L\+E\+Ds \char`\"{}counting\char`\"{}.
+
+\begin{DoxyAuthor}{Author}
+Pere Tuset \href{mailto:peretuset@openmote.com}{\tt peretuset@openmote.\+com}, January 2015.
+\end{DoxyAuthor}
+iot-\/lab\+\_\+\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+iot-\/lab\+\_\+\+A8-\/\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+G\+I\+N\+A-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+e\+Z430-\/\+R\+F2500-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+The program starts executing here.
+
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, August 2010
+\end{DoxyAuthor}
+iot-\/lab\+\_\+\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+iot-\/lab\+\_\+\+A8-\/\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+G\+I\+N\+A-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+e\+Z430-\/\+R\+F2500-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+The program starts executing here.
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, February 2012. 
+
+Chang Tengfei \href{mailto:tengfei.chang@gmail.com}{\tt tengfei.\+chang@gmail.\+com}, July 2012. 
+
+Alaeddine Weslati \href{mailto:alaeddine.weslati@inria.fr}{\tt alaeddine.\+weslati@inria.\+fr}, August 2013.
+\end{DoxyAuthor}
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+\begin{DoxyNote}{Note}
+\+: Since the bsp modules for different platforms have the same declaration, you can use this project with any platform.
+\end{DoxyNote}
+Load this program on your boards. The L\+E\+Ds should start blinking furiously.
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, February 2012 The program starts executing here.
+\end{DoxyAuthor}
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+Since the driver modules for different platforms have the same declaration, you can use this project with any platform.
+
+This application allows you to verify the correct functioning of the opentimers drivers. It starts 3 periodic timers, with periods A\+P\+P\+\_\+\+D\+L\+Y\+\_\+\+T\+I\+M\+E\+R0\+\_\+ms, A\+P\+P\+\_\+\+D\+L\+Y\+\_\+\+T\+I\+M\+E\+R1\+\_\+ms and A\+P\+P\+\_\+\+D\+L\+Y\+\_\+\+T\+I\+M\+E\+R2\+\_\+ms. Each timer is attached an L\+ED (error. radio and sync). When you run the application, you should see the L\+E\+Ds \char`\"{}counting\char`\"{}.
+
+\begin{DoxyAuthor}{Author}
+Pere Tuset \href{mailto:peretuset@openmote.com}{\tt peretuset@openmote.\+com}, January 2015.
+\end{DoxyAuthor}
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, August 2010 
+\end{DoxyAuthor}
+
+
+Definition at line 83 of file 00std\+\_\+low\+\_\+power\+\_\+mode.\+c.
+

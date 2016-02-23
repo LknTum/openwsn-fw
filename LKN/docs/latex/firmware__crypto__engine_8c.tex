@@ -1,0 +1,45 @@
+\hypertarget{firmware__crypto__engine_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/common/firmware\+\_\+crypto\+\_\+engine.c File Reference}
+\label{firmware__crypto__engine_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/common/firmware\+\_\+crypto\+\_\+engine.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/common/firmware\+\_\+crypto\+\_\+engine.\+c}}
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}opendefs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}firmware\+\_\+crypto\+\_\+engine.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}aes\+\_\+ccms.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}aes\+\_\+ctr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}aes\+\_\+cbc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}aes\+\_\+ecb.\+h\char`\"{}}\\*
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const struct \hyperlink{structcrypto__engine}{crypto\+\_\+engine} \hyperlink{firmware__crypto__engine_8c_ab5677122564159d265a166161ada14da}{firmware\+\_\+crypto\+\_\+engine}
+\begin{DoxyCompactList}\small\item\em Definitions for crypto engine initialization. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\index{firmware\+\_\+crypto\+\_\+engine.\+c@{firmware\+\_\+crypto\+\_\+engine.\+c}!firmware\+\_\+crypto\+\_\+engine@{firmware\+\_\+crypto\+\_\+engine}}
+\index{firmware\+\_\+crypto\+\_\+engine@{firmware\+\_\+crypto\+\_\+engine}!firmware\+\_\+crypto\+\_\+engine.\+c@{firmware\+\_\+crypto\+\_\+engine.\+c}}
+\subsubsection[{\texorpdfstring{firmware\+\_\+crypto\+\_\+engine}{firmware_crypto_engine}}]{\setlength{\rightskip}{0pt plus 5cm}const struct {\bf crypto\+\_\+engine} firmware\+\_\+crypto\+\_\+engine}\hypertarget{firmware__crypto__engine_8c_ab5677122564159d265a166161ada14da}{}\label{firmware__crypto__engine_8c_ab5677122564159d265a166161ada14da}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+   \hyperlink{aes__ccms_8c_a561def8d04b8095512cbce4b891113de}{aes\_ccms\_enc},
+   \hyperlink{aes__ccms_8c_adf203bc4a925617afa32b4d128a547f5}{aes\_ccms\_dec},
+   \hyperlink{aes__cbc_8c_a20b56d3dc861324f1e853dd0fd24211b}{aes\_cbc\_enc\_raw},
+   \hyperlink{aes__ctr_8c_aeeaf9d02dae4c78aa2aa82a667bb3bdc}{aes\_ctr\_enc\_raw},
+   \hyperlink{aes__ecb_8c_aba63ddbf1839aa5b19ec3a9ba8923b8e}{aes\_ecb\_enc},
+   \hyperlink{test__fuelgauge_8c_a2858154e2009b0e6e616f313177762bc}{init},
+\}
+\end{DoxyCode}
+
+
+Definitions for crypto engine initialization. 
+
+\begin{DoxyAuthor}{Author}
+Marcelo Barros de Almeida \href{mailto:marcelobarrosalmeida@gmail.com}{\tt marcelobarrosalmeida@gmail.\+com}, March 2015. 
+
+Malisa Vucinic \href{mailto:malishav@gmail.com}{\tt malishav@gmail.\+com}, March 2015. 
+\end{DoxyAuthor}
+
+
+Definition at line 21 of file firmware\+\_\+crypto\+\_\+engine.\+c.
+

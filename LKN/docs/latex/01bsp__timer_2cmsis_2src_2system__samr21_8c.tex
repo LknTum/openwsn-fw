@@ -1,0 +1,40 @@
+\hypertarget{01bsp__timer_2cmsis_2src_2system__samr21_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/samr21\+\_\+xpro/01bsp\+\_\+timer/cmsis/src/system\+\_\+samr21.c File Reference}
+\label{01bsp__timer_2cmsis_2src_2system__samr21_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/samr21\+\_\+xpro/01bsp\+\_\+timer/cmsis/src/system\+\_\+samr21.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/samr21\+\_\+xpro/01bsp\+\_\+timer/cmsis/src/system\+\_\+samr21.\+c}}
+
+
+Low-\/level initialization functions called upon chip startup.  
+
+
+{\ttfamily \#include \char`\"{}samr21.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{01bsp__timer_2cmsis_2src_2system__samr21_8c_a16323f44d2b5b11ef3972f71339cbd39}{\+\_\+\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+CK}~(1000000)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___s_t_m32_f10x___system___exported___functions_ga93f514700ccf00d08dbdcff7f1224eb2}{System\+Init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Setup the microcontroller system. Initialize the System and update the System\+Core\+Clock variable. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group___s_t_m32_f10x___system___exported___functions_gae0c36a9591fe6e9c45ecb21a794f0f0f}{System\+Core\+Clock\+Update} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Updates the System\+Core\+Clock with current core Clock retrieved from cpu registers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group___s_t_m32_f10x___system___exported__types_gaa3cd3e43291e81e795d642b79b6088e6}{System\+Core\+Clock} = \hyperlink{03oos__openwsn_2cmsis_2src_2system__samr21_8c_a16323f44d2b5b11ef3972f71339cbd39}{\+\_\+\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+CK}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Low-\/level initialization functions called upon chip startup. 
+
+Copyright (c) 2014 Atmel Corporation. All rights reserved.
+
+\subsection{Macro Definition Documentation}
+\index{01bsp\+\_\+timer/cmsis/src/system\+\_\+samr21.\+c@{01bsp\+\_\+timer/cmsis/src/system\+\_\+samr21.\+c}!\+\_\+\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+CK@{\+\_\+\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+CK}}
+\index{\+\_\+\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+CK@{\+\_\+\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+CK}!01bsp\+\_\+timer/cmsis/src/system\+\_\+samr21.\+c@{01bsp\+\_\+timer/cmsis/src/system\+\_\+samr21.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+CK}{__SYSTEM_CLOCK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+CK~(1000000)}\hypertarget{01bsp__timer_2cmsis_2src_2system__samr21_8c_a16323f44d2b5b11ef3972f71339cbd39}{}\label{01bsp__timer_2cmsis_2src_2system__samr21_8c_a16323f44d2b5b11ef3972f71339cbd39}
+Initial system clock frequency. The System RC Oscillator (R\+C\+S\+YS) provides the source for the main clock at chip startup. 
+
+Definition at line 50 of file system\+\_\+samr21.\+c.
+

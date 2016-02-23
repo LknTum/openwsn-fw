@@ -1,0 +1,299 @@
+\hypertarget{semphr_8h}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/kernel/freertos/\+Free\+R\+T\+O\+S\+V8.1.2/\+Free\+R\+T\+O\+S/\+Source/include/semphr.h File Reference}
+\label{semphr_8h}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/kernel/freertos/\+Free\+R\+T\+O\+S\+V8.\+1.\+2/\+Free\+R\+T\+O\+S/\+Source/include/semphr.\+h@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/kernel/freertos/\+Free\+R\+T\+O\+S\+V8.\+1.\+2/\+Free\+R\+T\+O\+S/\+Source/include/semphr.\+h}}
+{\ttfamily \#include \char`\"{}queue.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{semphr_8h_a73cfd14cf25a13f8dd4dc1d74b7fc04a}{sem\+B\+I\+N\+A\+R\+Y\+\_\+\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+L\+E\+N\+G\+TH}~( ( \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ) 1\+U )
+\item 
+\#define \hyperlink{semphr_8h_a93bd07e28aed3084bdafa1f4e99700b2}{sem\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+I\+T\+E\+M\+\_\+\+L\+E\+N\+G\+TH}~( ( \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ) 0\+U )
+\item 
+\#define \hyperlink{semphr_8h_a124bb5bd7805baa06fbd3239840d6803}{sem\+G\+I\+V\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+I\+ME}~( ( \hyperlink{_g_c_c_2_a_r_m___c_m3_2portmacro_8h_aa69c48c6e902ce54f70886e6573c92a9}{Tick\+Type\+\_\+t} ) 0\+U )
+\item 
+\#define \hyperlink{semphr_8h_ae10bffadd26fbd5bcce76bf33a83ef30}{v\+Semaphore\+Create\+Binary}(x\+Semaphore)
+\item 
+\#define \hyperlink{semphr_8h_acba963695e4f159d9bfa2394cae5badc}{x\+Semaphore\+Create\+Binary}()~\hyperlink{queue_8c_ac999cdfbb09fff396fa818bb9a30b4e5}{x\+Queue\+Generic\+Create}( ( \hyperlink{_g_c_c_2_a_r_m___c_m3_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{U\+Base\+Type\+\_\+t} ) 1, \hyperlink{semphr_8h_a93bd07e28aed3084bdafa1f4e99700b2}{sem\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+I\+T\+E\+M\+\_\+\+L\+E\+N\+G\+TH}, \hyperlink{queue_8h_a8af9c6a83fce59c386da4f22248b56ae}{queue\+Q\+U\+E\+U\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+S\+E\+M\+A\+P\+H\+O\+RE} )
+\item 
+\#define \hyperlink{semphr_8h_af116e436d2a5ae5bd72dbade2b5ea930}{x\+Semaphore\+Take}(x\+Semaphore,  x\+Block\+Time)~\hyperlink{queue_8c_ace632b55c3955bacae20978e261129a6}{x\+Queue\+Generic\+Receive}( ( \hyperlink{queue_8h_aaf19d499892a4ce1409326ece00f5264}{Queue\+Handle\+\_\+t} ) ( x\+Semaphore ), \hyperlink{group___l_p_c___types___public___macros_ga070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}, ( x\+Block\+Time ), \hyperlink{projdefs_8h_aa56260e937e7e203026707e5ba944273}{pd\+F\+A\+L\+SE} )
+\item 
+\#define \hyperlink{semphr_8h_ad395f4bba51eea6af3397d72bc079e4d}{x\+Semaphore\+Take\+Recursive}(x\+Mutex,  x\+Block\+Time)~\hyperlink{queue_8h_a74e27d539a884589ebbbdfcc371a48cd}{x\+Queue\+Take\+Mutex\+Recursive}( ( x\+Mutex ), ( x\+Block\+Time ) )
+\item 
+\#define \hyperlink{semphr_8h_ae999c79808cd06356d58e2ead90d8e1f}{x\+Semaphore\+Alt\+Take}(x\+Semaphore,  x\+Block\+Time)~\hyperlink{queue_8h_a16a4ee97200f60e38037b5e08344ba0b}{x\+Queue\+Alt\+Generic\+Receive}( ( \hyperlink{queue_8h_aaf19d499892a4ce1409326ece00f5264}{Queue\+Handle\+\_\+t} ) ( x\+Semaphore ), \hyperlink{group___l_p_c___types___public___macros_ga070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}, ( x\+Block\+Time ), \hyperlink{projdefs_8h_aa56260e937e7e203026707e5ba944273}{pd\+F\+A\+L\+SE} )
+\item 
+\#define \hyperlink{semphr_8h_aae55761cabfa9bf85c8f4430f78c0953}{x\+Semaphore\+Give}(x\+Semaphore)~\hyperlink{queue_8c_acb67c81366c00896b21cd826e07d885d}{x\+Queue\+Generic\+Send}( ( \hyperlink{queue_8h_aaf19d499892a4ce1409326ece00f5264}{Queue\+Handle\+\_\+t} ) ( x\+Semaphore ), \hyperlink{group___l_p_c___types___public___macros_ga070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}, \hyperlink{semphr_8h_a124bb5bd7805baa06fbd3239840d6803}{sem\+G\+I\+V\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+I\+ME}, \hyperlink{queue_8h_a4d78fa863fbeb90425a2dda08fae8b12}{queue\+S\+E\+N\+D\+\_\+\+T\+O\+\_\+\+B\+A\+CK} )
+\item 
+\#define \hyperlink{semphr_8h_a398d66b17856c22dd49d39aaac42f105}{x\+Semaphore\+Give\+Recursive}(x\+Mutex)~\hyperlink{queue_8h_ac72c90f499bd0a5b5a90d1d3b05cb0ca}{x\+Queue\+Give\+Mutex\+Recursive}( ( x\+Mutex ) )
+\item 
+\#define \hyperlink{semphr_8h_a5489341c35be2350d3e164ea1520d094}{x\+Semaphore\+Alt\+Give}(x\+Semaphore)~\hyperlink{queue_8h_ab5fefba429230f324d298c4f8ec8e01c}{x\+Queue\+Alt\+Generic\+Send}( ( \hyperlink{queue_8h_aaf19d499892a4ce1409326ece00f5264}{Queue\+Handle\+\_\+t} ) ( x\+Semaphore ), \hyperlink{group___l_p_c___types___public___macros_ga070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}, \hyperlink{semphr_8h_a124bb5bd7805baa06fbd3239840d6803}{sem\+G\+I\+V\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+I\+ME}, \hyperlink{queue_8h_a4d78fa863fbeb90425a2dda08fae8b12}{queue\+S\+E\+N\+D\+\_\+\+T\+O\+\_\+\+B\+A\+CK} )
+\item 
+\#define \hyperlink{semphr_8h_a68aa43df8b2a0dbe17d05fad74670ef0}{x\+Semaphore\+Give\+From\+I\+SR}(x\+Semaphore,  px\+Higher\+Priority\+Task\+Woken)~\hyperlink{queue_8c_a0fb58b25eb396a5cf8e1688b7e1a56cb}{x\+Queue\+Generic\+Send\+From\+I\+SR}( ( \hyperlink{queue_8h_aaf19d499892a4ce1409326ece00f5264}{Queue\+Handle\+\_\+t} ) ( x\+Semaphore ), \hyperlink{group___l_p_c___types___public___macros_ga070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}, ( px\+Higher\+Priority\+Task\+Woken ), \hyperlink{queue_8h_a4d78fa863fbeb90425a2dda08fae8b12}{queue\+S\+E\+N\+D\+\_\+\+T\+O\+\_\+\+B\+A\+CK} )
+\item 
+\#define \hyperlink{semphr_8h_a076419b58e072655686939016e7ca3c5}{x\+Semaphore\+Take\+From\+I\+SR}(x\+Semaphore,  px\+Higher\+Priority\+Task\+Woken)~\hyperlink{queue_8c_ac61ec62828e70ed35d18559a35550462}{x\+Queue\+Receive\+From\+I\+SR}( ( \hyperlink{queue_8h_aaf19d499892a4ce1409326ece00f5264}{Queue\+Handle\+\_\+t} ) ( x\+Semaphore ), \hyperlink{group___l_p_c___types___public___macros_ga070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}, ( px\+Higher\+Priority\+Task\+Woken ) )
+\item 
+\#define \hyperlink{semphr_8h_aa6a00aa9b91a9e5b3ebe4ae1c3f115c6}{x\+Semaphore\+Create\+Mutex}()~\hyperlink{queue_8h_acac7df114346b4219bc2aab79cac35b5}{x\+Queue\+Create\+Mutex}( \hyperlink{queue_8h_ae9c10f504e758fb69271024dc8d8a8c9}{queue\+Q\+U\+E\+U\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+U\+T\+EX} )
+\item 
+\#define \hyperlink{semphr_8h_a1bbc843be5a41ea83d2693b2189fc0f8}{x\+Semaphore\+Create\+Recursive\+Mutex}()~\hyperlink{queue_8h_acac7df114346b4219bc2aab79cac35b5}{x\+Queue\+Create\+Mutex}( \hyperlink{queue_8h_a6f68aa65394f83b57e34061d9ff44b47}{queue\+Q\+U\+E\+U\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+E\+C\+U\+R\+S\+I\+V\+E\+\_\+\+M\+U\+T\+EX} )
+\item 
+\#define \hyperlink{semphr_8h_a7764616a918a46115403569a88148ad4}{x\+Semaphore\+Create\+Counting}(ux\+Max\+Count,  ux\+Initial\+Count)~\hyperlink{queue_8h_ac74677a8d243c76843c25fdb06436043}{x\+Queue\+Create\+Counting\+Semaphore}( ( ux\+Max\+Count ), ( ux\+Initial\+Count ) )
+\item 
+\#define \hyperlink{semphr_8h_acd7d0eda0923d7caeeaaee9202c43eab}{v\+Semaphore\+Delete}(x\+Semaphore)~\hyperlink{queue_8c_a35c0b4f9a0e940cb3a86ca4c5e84c41c}{v\+Queue\+Delete}( ( \hyperlink{queue_8h_aaf19d499892a4ce1409326ece00f5264}{Queue\+Handle\+\_\+t} ) ( x\+Semaphore ) )
+\item 
+\#define \hyperlink{semphr_8h_a7403bfbc06fb8449b2334f55d939a4c4}{x\+Semaphore\+Get\+Mutex\+Holder}(x\+Semaphore)~\hyperlink{queue_8h_ac0db78cd3f300adcf29d618d7a0ec6fa}{x\+Queue\+Get\+Mutex\+Holder}( ( x\+Semaphore ) )
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{queue_8h_aaf19d499892a4ce1409326ece00f5264}{Queue\+Handle\+\_\+t} \hyperlink{semphr_8h_ad88c6df4a04beedeac782918c8a332f5}{Semaphore\+Handle\+\_\+t}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{semphr.\+h@{semphr.\+h}!sem\+B\+I\+N\+A\+R\+Y\+\_\+\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+L\+E\+N\+G\+TH@{sem\+B\+I\+N\+A\+R\+Y\+\_\+\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+L\+E\+N\+G\+TH}}
+\index{sem\+B\+I\+N\+A\+R\+Y\+\_\+\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+L\+E\+N\+G\+TH@{sem\+B\+I\+N\+A\+R\+Y\+\_\+\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+L\+E\+N\+G\+TH}!semphr.\+h@{semphr.\+h}}
+\subsubsection[{\texorpdfstring{sem\+B\+I\+N\+A\+R\+Y\+\_\+\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+L\+E\+N\+G\+TH}{semBINARY_SEMAPHORE_QUEUE_LENGTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sem\+B\+I\+N\+A\+R\+Y\+\_\+\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+L\+E\+N\+G\+TH~( ( {\bf uint8\+\_\+t} ) 1\+U )}\hypertarget{semphr_8h_a73cfd14cf25a13f8dd4dc1d74b7fc04a}{}\label{semphr_8h_a73cfd14cf25a13f8dd4dc1d74b7fc04a}
+
+
+Definition at line 77 of file semphr.\+h.
+
+\index{semphr.\+h@{semphr.\+h}!sem\+G\+I\+V\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+I\+ME@{sem\+G\+I\+V\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+I\+ME}}
+\index{sem\+G\+I\+V\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+I\+ME@{sem\+G\+I\+V\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+I\+ME}!semphr.\+h@{semphr.\+h}}
+\subsubsection[{\texorpdfstring{sem\+G\+I\+V\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+I\+ME}{semGIVE_BLOCK_TIME}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sem\+G\+I\+V\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+I\+ME~( ( {\bf Tick\+Type\+\_\+t} ) 0\+U )}\hypertarget{semphr_8h_a124bb5bd7805baa06fbd3239840d6803}{}\label{semphr_8h_a124bb5bd7805baa06fbd3239840d6803}
+
+
+Definition at line 79 of file semphr.\+h.
+
+\index{semphr.\+h@{semphr.\+h}!sem\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+I\+T\+E\+M\+\_\+\+L\+E\+N\+G\+TH@{sem\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+I\+T\+E\+M\+\_\+\+L\+E\+N\+G\+TH}}
+\index{sem\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+I\+T\+E\+M\+\_\+\+L\+E\+N\+G\+TH@{sem\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+I\+T\+E\+M\+\_\+\+L\+E\+N\+G\+TH}!semphr.\+h@{semphr.\+h}}
+\subsubsection[{\texorpdfstring{sem\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+I\+T\+E\+M\+\_\+\+L\+E\+N\+G\+TH}{semSEMAPHORE_QUEUE_ITEM_LENGTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sem\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+I\+T\+E\+M\+\_\+\+L\+E\+N\+G\+TH~( ( {\bf uint8\+\_\+t} ) 0\+U )}\hypertarget{semphr_8h_a93bd07e28aed3084bdafa1f4e99700b2}{}\label{semphr_8h_a93bd07e28aed3084bdafa1f4e99700b2}
+
+
+Definition at line 78 of file semphr.\+h.
+
+\index{semphr.\+h@{semphr.\+h}!v\+Semaphore\+Create\+Binary@{v\+Semaphore\+Create\+Binary}}
+\index{v\+Semaphore\+Create\+Binary@{v\+Semaphore\+Create\+Binary}!semphr.\+h@{semphr.\+h}}
+\subsubsection[{\texorpdfstring{v\+Semaphore\+Create\+Binary}{vSemaphoreCreateBinary}}]{\setlength{\rightskip}{0pt plus 5cm}\#define v\+Semaphore\+Create\+Binary(
+\begin{DoxyParamCaption}
+\item[{}]{x\+Semaphore}
+\end{DoxyParamCaption}
+)}\hypertarget{semphr_8h_ae10bffadd26fbd5bcce76bf33a83ef30}{}\label{semphr_8h_ae10bffadd26fbd5bcce76bf33a83ef30}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                                                                                                                   
+      \(\backslash\)
+        ( xSemaphore ) = \hyperlink{queue_8h_a74fb40ea6a869143597ca91ce90c99c2}{xQueueGenericCreate}( ( \hyperlink{_g_c_c_2_a_r_m___c_m3_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{UBaseType\_t} ) 1, 
+      \hyperlink{semphr_8h_a93bd07e28aed3084bdafa1f4e99700b2}{semSEMAPHORE\_QUEUE\_ITEM\_LENGTH}, 
+      \hyperlink{queue_8h_a8af9c6a83fce59c386da4f22248b56ae}{queueQUEUE\_TYPE\_BINARY\_SEMAPHORE} ); \(\backslash\)
+        if( ( xSemaphore ) != \hyperlink{arm__cm4_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL} )                                                                                                    
+      \(\backslash\)
+        \{                                                                                                                               
+      \(\backslash\)
+            ( \hyperlink{usb__class_8h_a01521ffcd95694815654ab9667693b8a}{void} ) \hyperlink{semphr_8h_aae55761cabfa9bf85c8f4430f78c0953}{xSemaphoreGive}( ( xSemaphore ) );                                                                                    
+      \(\backslash\)
+        \}                                                                                                                               
+      \(\backslash\)
+    \}
+\end{DoxyCode}
+
+
+Definition at line 127 of file semphr.\+h.
+
+\index{semphr.\+h@{semphr.\+h}!v\+Semaphore\+Delete@{v\+Semaphore\+Delete}}
+\index{v\+Semaphore\+Delete@{v\+Semaphore\+Delete}!semphr.\+h@{semphr.\+h}}
+\subsubsection[{\texorpdfstring{v\+Semaphore\+Delete}{vSemaphoreDelete}}]{\setlength{\rightskip}{0pt plus 5cm}\#define v\+Semaphore\+Delete(
+\begin{DoxyParamCaption}
+\item[{}]{x\+Semaphore}
+\end{DoxyParamCaption}
+)~{\bf v\+Queue\+Delete}( ( {\bf Queue\+Handle\+\_\+t} ) ( x\+Semaphore ) )}\hypertarget{semphr_8h_acd7d0eda0923d7caeeaaee9202c43eab}{}\label{semphr_8h_acd7d0eda0923d7caeeaaee9202c43eab}
+
+
+Definition at line 821 of file semphr.\+h.
+
+\index{semphr.\+h@{semphr.\+h}!x\+Semaphore\+Alt\+Give@{x\+Semaphore\+Alt\+Give}}
+\index{x\+Semaphore\+Alt\+Give@{x\+Semaphore\+Alt\+Give}!semphr.\+h@{semphr.\+h}}
+\subsubsection[{\texorpdfstring{x\+Semaphore\+Alt\+Give}{xSemaphoreAltGive}}]{\setlength{\rightskip}{0pt plus 5cm}\#define x\+Semaphore\+Alt\+Give(
+\begin{DoxyParamCaption}
+\item[{}]{x\+Semaphore}
+\end{DoxyParamCaption}
+)~{\bf x\+Queue\+Alt\+Generic\+Send}( ( {\bf Queue\+Handle\+\_\+t} ) ( x\+Semaphore ), {\bf N\+U\+LL}, {\bf sem\+G\+I\+V\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+I\+ME}, {\bf queue\+S\+E\+N\+D\+\_\+\+T\+O\+\_\+\+B\+A\+CK} )}\hypertarget{semphr_8h_a5489341c35be2350d3e164ea1520d094}{}\label{semphr_8h_a5489341c35be2350d3e164ea1520d094}
+
+
+Definition at line 517 of file semphr.\+h.
+
+\index{semphr.\+h@{semphr.\+h}!x\+Semaphore\+Alt\+Take@{x\+Semaphore\+Alt\+Take}}
+\index{x\+Semaphore\+Alt\+Take@{x\+Semaphore\+Alt\+Take}!semphr.\+h@{semphr.\+h}}
+\subsubsection[{\texorpdfstring{x\+Semaphore\+Alt\+Take}{xSemaphoreAltTake}}]{\setlength{\rightskip}{0pt plus 5cm}\#define x\+Semaphore\+Alt\+Take(
+\begin{DoxyParamCaption}
+\item[{}]{x\+Semaphore, }
+\item[{}]{x\+Block\+Time}
+\end{DoxyParamCaption}
+)~{\bf x\+Queue\+Alt\+Generic\+Receive}( ( {\bf Queue\+Handle\+\_\+t} ) ( x\+Semaphore ), {\bf N\+U\+LL}, ( x\+Block\+Time ), {\bf pd\+F\+A\+L\+SE} )}\hypertarget{semphr_8h_ae999c79808cd06356d58e2ead90d8e1f}{}\label{semphr_8h_ae999c79808cd06356d58e2ead90d8e1f}
+
+
+Definition at line 356 of file semphr.\+h.
+
+\index{semphr.\+h@{semphr.\+h}!x\+Semaphore\+Create\+Binary@{x\+Semaphore\+Create\+Binary}}
+\index{x\+Semaphore\+Create\+Binary@{x\+Semaphore\+Create\+Binary}!semphr.\+h@{semphr.\+h}}
+\subsubsection[{\texorpdfstring{x\+Semaphore\+Create\+Binary}{xSemaphoreCreateBinary}}]{\setlength{\rightskip}{0pt plus 5cm}\#define x\+Semaphore\+Create\+Binary(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf x\+Queue\+Generic\+Create}( ( {\bf U\+Base\+Type\+\_\+t} ) 1, {\bf sem\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+I\+T\+E\+M\+\_\+\+L\+E\+N\+G\+TH}, {\bf queue\+Q\+U\+E\+U\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+S\+E\+M\+A\+P\+H\+O\+RE} )}\hypertarget{semphr_8h_acba963695e4f159d9bfa2394cae5badc}{}\label{semphr_8h_acba963695e4f159d9bfa2394cae5badc}
+
+
+Definition at line 181 of file semphr.\+h.
+
+\index{semphr.\+h@{semphr.\+h}!x\+Semaphore\+Create\+Counting@{x\+Semaphore\+Create\+Counting}}
+\index{x\+Semaphore\+Create\+Counting@{x\+Semaphore\+Create\+Counting}!semphr.\+h@{semphr.\+h}}
+\subsubsection[{\texorpdfstring{x\+Semaphore\+Create\+Counting}{xSemaphoreCreateCounting}}]{\setlength{\rightskip}{0pt plus 5cm}\#define x\+Semaphore\+Create\+Counting(
+\begin{DoxyParamCaption}
+\item[{}]{ux\+Max\+Count, }
+\item[{}]{ux\+Initial\+Count}
+\end{DoxyParamCaption}
+)~{\bf x\+Queue\+Create\+Counting\+Semaphore}( ( ux\+Max\+Count ), ( ux\+Initial\+Count ) )}\hypertarget{semphr_8h_a7764616a918a46115403569a88148ad4}{}\label{semphr_8h_a7764616a918a46115403569a88148ad4}
+
+
+Definition at line 807 of file semphr.\+h.
+
+\index{semphr.\+h@{semphr.\+h}!x\+Semaphore\+Create\+Mutex@{x\+Semaphore\+Create\+Mutex}}
+\index{x\+Semaphore\+Create\+Mutex@{x\+Semaphore\+Create\+Mutex}!semphr.\+h@{semphr.\+h}}
+\subsubsection[{\texorpdfstring{x\+Semaphore\+Create\+Mutex}{xSemaphoreCreateMutex}}]{\setlength{\rightskip}{0pt plus 5cm}\#define x\+Semaphore\+Create\+Mutex(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf x\+Queue\+Create\+Mutex}( {\bf queue\+Q\+U\+E\+U\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+U\+T\+EX} )}\hypertarget{semphr_8h_aa6a00aa9b91a9e5b3ebe4ae1c3f115c6}{}\label{semphr_8h_aa6a00aa9b91a9e5b3ebe4ae1c3f115c6}
+
+
+Definition at line 689 of file semphr.\+h.
+
+\index{semphr.\+h@{semphr.\+h}!x\+Semaphore\+Create\+Recursive\+Mutex@{x\+Semaphore\+Create\+Recursive\+Mutex}}
+\index{x\+Semaphore\+Create\+Recursive\+Mutex@{x\+Semaphore\+Create\+Recursive\+Mutex}!semphr.\+h@{semphr.\+h}}
+\subsubsection[{\texorpdfstring{x\+Semaphore\+Create\+Recursive\+Mutex}{xSemaphoreCreateRecursiveMutex}}]{\setlength{\rightskip}{0pt plus 5cm}\#define x\+Semaphore\+Create\+Recursive\+Mutex(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf x\+Queue\+Create\+Mutex}( {\bf queue\+Q\+U\+E\+U\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+E\+C\+U\+R\+S\+I\+V\+E\+\_\+\+M\+U\+T\+EX} )}\hypertarget{semphr_8h_a1bbc843be5a41ea83d2693b2189fc0f8}{}\label{semphr_8h_a1bbc843be5a41ea83d2693b2189fc0f8}
+
+
+Definition at line 744 of file semphr.\+h.
+
+\index{semphr.\+h@{semphr.\+h}!x\+Semaphore\+Get\+Mutex\+Holder@{x\+Semaphore\+Get\+Mutex\+Holder}}
+\index{x\+Semaphore\+Get\+Mutex\+Holder@{x\+Semaphore\+Get\+Mutex\+Holder}!semphr.\+h@{semphr.\+h}}
+\subsubsection[{\texorpdfstring{x\+Semaphore\+Get\+Mutex\+Holder}{xSemaphoreGetMutexHolder}}]{\setlength{\rightskip}{0pt plus 5cm}\#define x\+Semaphore\+Get\+Mutex\+Holder(
+\begin{DoxyParamCaption}
+\item[{}]{x\+Semaphore}
+\end{DoxyParamCaption}
+)~{\bf x\+Queue\+Get\+Mutex\+Holder}( ( x\+Semaphore ) )}\hypertarget{semphr_8h_a7403bfbc06fb8449b2334f55d939a4c4}{}\label{semphr_8h_a7403bfbc06fb8449b2334f55d939a4c4}
+\hyperlink{semphr_8h}{semphr.\+h} 
+\begin{DoxyPre}TaskHandle\_t \hyperlink{semphr_8h_a7403bfbc06fb8449b2334f55d939a4c4}{xSemaphoreGetMutexHolder( SemaphoreHandle\_t xMutex )};\end{DoxyPre}
+
+
+If x\+Mutex is indeed a mutex type semaphore, return the current mutex holder. If x\+Mutex is not a mutex type semaphore, or the mutex is available (not held by a task), return N\+U\+LL.
+
+Note\+: This is a good way of determining if the calling task is the mutex holder, but not a good way of determining the identity of the mutex holder as the holder may change between the function exiting and the returned value being tested. 
+
+Definition at line 836 of file semphr.\+h.
+
+\index{semphr.\+h@{semphr.\+h}!x\+Semaphore\+Give@{x\+Semaphore\+Give}}
+\index{x\+Semaphore\+Give@{x\+Semaphore\+Give}!semphr.\+h@{semphr.\+h}}
+\subsubsection[{\texorpdfstring{x\+Semaphore\+Give}{xSemaphoreGive}}]{\setlength{\rightskip}{0pt plus 5cm}\#define x\+Semaphore\+Give(
+\begin{DoxyParamCaption}
+\item[{}]{x\+Semaphore}
+\end{DoxyParamCaption}
+)~{\bf x\+Queue\+Generic\+Send}( ( {\bf Queue\+Handle\+\_\+t} ) ( x\+Semaphore ), {\bf N\+U\+LL}, {\bf sem\+G\+I\+V\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+I\+ME}, {\bf queue\+S\+E\+N\+D\+\_\+\+T\+O\+\_\+\+B\+A\+CK} )}\hypertarget{semphr_8h_aae55761cabfa9bf85c8f4430f78c0953}{}\label{semphr_8h_aae55761cabfa9bf85c8f4430f78c0953}
+
+
+Definition at line 419 of file semphr.\+h.
+
+\index{semphr.\+h@{semphr.\+h}!x\+Semaphore\+Give\+From\+I\+SR@{x\+Semaphore\+Give\+From\+I\+SR}}
+\index{x\+Semaphore\+Give\+From\+I\+SR@{x\+Semaphore\+Give\+From\+I\+SR}!semphr.\+h@{semphr.\+h}}
+\subsubsection[{\texorpdfstring{x\+Semaphore\+Give\+From\+I\+SR}{xSemaphoreGiveFromISR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define x\+Semaphore\+Give\+From\+I\+SR(
+\begin{DoxyParamCaption}
+\item[{}]{x\+Semaphore, }
+\item[{}]{px\+Higher\+Priority\+Task\+Woken}
+\end{DoxyParamCaption}
+)~{\bf x\+Queue\+Generic\+Send\+From\+I\+SR}( ( {\bf Queue\+Handle\+\_\+t} ) ( x\+Semaphore ), {\bf N\+U\+LL}, ( px\+Higher\+Priority\+Task\+Woken ), {\bf queue\+S\+E\+N\+D\+\_\+\+T\+O\+\_\+\+B\+A\+CK} )}\hypertarget{semphr_8h_a68aa43df8b2a0dbe17d05fad74670ef0}{}\label{semphr_8h_a68aa43df8b2a0dbe17d05fad74670ef0}
+
+
+Definition at line 608 of file semphr.\+h.
+
+\index{semphr.\+h@{semphr.\+h}!x\+Semaphore\+Give\+Recursive@{x\+Semaphore\+Give\+Recursive}}
+\index{x\+Semaphore\+Give\+Recursive@{x\+Semaphore\+Give\+Recursive}!semphr.\+h@{semphr.\+h}}
+\subsubsection[{\texorpdfstring{x\+Semaphore\+Give\+Recursive}{xSemaphoreGiveRecursive}}]{\setlength{\rightskip}{0pt plus 5cm}\#define x\+Semaphore\+Give\+Recursive(
+\begin{DoxyParamCaption}
+\item[{}]{x\+Mutex}
+\end{DoxyParamCaption}
+)~{\bf x\+Queue\+Give\+Mutex\+Recursive}( ( x\+Mutex ) )}\hypertarget{semphr_8h_a398d66b17856c22dd49d39aaac42f105}{}\label{semphr_8h_a398d66b17856c22dd49d39aaac42f105}
+
+
+Definition at line 503 of file semphr.\+h.
+
+\index{semphr.\+h@{semphr.\+h}!x\+Semaphore\+Take@{x\+Semaphore\+Take}}
+\index{x\+Semaphore\+Take@{x\+Semaphore\+Take}!semphr.\+h@{semphr.\+h}}
+\subsubsection[{\texorpdfstring{x\+Semaphore\+Take}{xSemaphoreTake}}]{\setlength{\rightskip}{0pt plus 5cm}\#define x\+Semaphore\+Take(
+\begin{DoxyParamCaption}
+\item[{}]{x\+Semaphore, }
+\item[{}]{x\+Block\+Time}
+\end{DoxyParamCaption}
+)~{\bf x\+Queue\+Generic\+Receive}( ( {\bf Queue\+Handle\+\_\+t} ) ( x\+Semaphore ), {\bf N\+U\+LL}, ( x\+Block\+Time ), {\bf pd\+F\+A\+L\+SE} )}\hypertarget{semphr_8h_af116e436d2a5ae5bd72dbade2b5ea930}{}\label{semphr_8h_af116e436d2a5ae5bd72dbade2b5ea930}
+
+
+Definition at line 248 of file semphr.\+h.
+
+\index{semphr.\+h@{semphr.\+h}!x\+Semaphore\+Take\+From\+I\+SR@{x\+Semaphore\+Take\+From\+I\+SR}}
+\index{x\+Semaphore\+Take\+From\+I\+SR@{x\+Semaphore\+Take\+From\+I\+SR}!semphr.\+h@{semphr.\+h}}
+\subsubsection[{\texorpdfstring{x\+Semaphore\+Take\+From\+I\+SR}{xSemaphoreTakeFromISR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define x\+Semaphore\+Take\+From\+I\+SR(
+\begin{DoxyParamCaption}
+\item[{}]{x\+Semaphore, }
+\item[{}]{px\+Higher\+Priority\+Task\+Woken}
+\end{DoxyParamCaption}
+)~{\bf x\+Queue\+Receive\+From\+I\+SR}( ( {\bf Queue\+Handle\+\_\+t} ) ( x\+Semaphore ), {\bf N\+U\+LL}, ( px\+Higher\+Priority\+Task\+Woken ) )}\hypertarget{semphr_8h_a076419b58e072655686939016e7ca3c5}{}\label{semphr_8h_a076419b58e072655686939016e7ca3c5}
+semphr. h 
+\begin{DoxyPre}
+xSemaphoreTakeFromISR(
+                         SemaphoreHandle\_t xSemaphore,
+                         BaseType\_t *pxHigherPriorityTaskWoken
+                     )\end{DoxyPre}
+
+
+{\itshape Macro} to take a semaphore from an I\+SR. The semaphore must have previously been created with a call to \hyperlink{semphr_8h_ae10bffadd26fbd5bcce76bf33a83ef30}{v\+Semaphore\+Create\+Binary()} or \hyperlink{semphr_8h_a7764616a918a46115403569a88148ad4}{x\+Semaphore\+Create\+Counting()}.
+
+Mutex type semaphores (those created using a call to \hyperlink{semphr_8h_aa6a00aa9b91a9e5b3ebe4ae1c3f115c6}{x\+Semaphore\+Create\+Mutex()}) must not be used with this macro.
+
+This macro can be used from an I\+SR, however taking a semaphore from an I\+SR is not a common operation. It is likely to only be useful when taking a counting semaphore when an interrupt is obtaining an object from a resource pool (when the semaphore count indicates the number of resources available).
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+Semaphore} & A handle to the semaphore being taken. This is the handle returned when the semaphore was created.\\
+\hline
+{\em px\+Higher\+Priority\+Task\+Woken} & \hyperlink{semphr_8h_a076419b58e072655686939016e7ca3c5}{x\+Semaphore\+Take\+From\+I\+S\+R()} will set $\ast$px\+Higher\+Priority\+Task\+Woken to pd\+T\+R\+UE if taking the semaphore caused a task to unblock, and the unblocked task has a priority higher than the currently running task. If \hyperlink{semphr_8h_a076419b58e072655686939016e7ca3c5}{x\+Semaphore\+Take\+From\+I\+S\+R()} sets this value to pd\+T\+R\+UE then a context switch should be requested before the interrupt is exited.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pd\+T\+R\+UE if the semaphore was successfully taken, otherwise pd\+F\+A\+L\+SE 
+\end{DoxyReturn}
+
+
+Definition at line 642 of file semphr.\+h.
+
+\index{semphr.\+h@{semphr.\+h}!x\+Semaphore\+Take\+Recursive@{x\+Semaphore\+Take\+Recursive}}
+\index{x\+Semaphore\+Take\+Recursive@{x\+Semaphore\+Take\+Recursive}!semphr.\+h@{semphr.\+h}}
+\subsubsection[{\texorpdfstring{x\+Semaphore\+Take\+Recursive}{xSemaphoreTakeRecursive}}]{\setlength{\rightskip}{0pt plus 5cm}\#define x\+Semaphore\+Take\+Recursive(
+\begin{DoxyParamCaption}
+\item[{}]{x\+Mutex, }
+\item[{}]{x\+Block\+Time}
+\end{DoxyParamCaption}
+)~{\bf x\+Queue\+Take\+Mutex\+Recursive}( ( x\+Mutex ), ( x\+Block\+Time ) )}\hypertarget{semphr_8h_ad395f4bba51eea6af3397d72bc079e4d}{}\label{semphr_8h_ad395f4bba51eea6af3397d72bc079e4d}
+
+
+Definition at line 341 of file semphr.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\index{semphr.\+h@{semphr.\+h}!Semaphore\+Handle\+\_\+t@{Semaphore\+Handle\+\_\+t}}
+\index{Semaphore\+Handle\+\_\+t@{Semaphore\+Handle\+\_\+t}!semphr.\+h@{semphr.\+h}}
+\subsubsection[{\texorpdfstring{Semaphore\+Handle\+\_\+t}{SemaphoreHandle_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Queue\+Handle\+\_\+t} {\bf Semaphore\+Handle\+\_\+t}}\hypertarget{semphr_8h_ad88c6df4a04beedeac782918c8a332f5}{}\label{semphr_8h_ad88c6df4a04beedeac782918c8a332f5}
+
+
+Definition at line 75 of file semphr.\+h.
+

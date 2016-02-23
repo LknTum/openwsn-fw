@@ -1,0 +1,172 @@
+\hypertarget{openmotestm_201bsp__flash_2application_201bsp__flash_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.c File Reference}
+\label{openmotestm_201bsp__flash_2application_201bsp__flash_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/projects/openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c}}
+{\ttfamily \#include \char`\"{}stdint.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stdio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leds.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}flash.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}uart.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{openmotestm_201bsp__flash_2application_201bsp__flash_8c_a91b56a2379182308eb64cc2e5110b98e}{P\+A\+G\+E255\+\_\+\+A\+D\+D\+R\+E\+SS}~0x0807\+F800
+\item 
+\#define \hyperlink{openmotestm_201bsp__flash_2application_201bsp__flash_8c_a4394326cae1c8f63e68f25db0bb53e41}{I\+D\+\_\+\+A\+D\+D\+R\+E\+SS}~0x0807\+F\+F\+F0
+\item 
+\#define \hyperlink{openmotestm_201bsp__flash_2application_201bsp__flash_8c_a74cd4c8a601dffc9976cb2016f09dd0d}{I\+D\+\_\+\+L\+E\+N\+G\+TH}~8
+\item 
+\#define \hyperlink{openmotestm_201bsp__flash_2application_201bsp__flash_8c_aa7721ea5424a845ffc650ee7b8364bd5}{W\+R\+P3\+\_\+\+A\+D\+D\+R\+E\+SS}~0x1\+F\+F\+F\+F80E
+\item 
+\#define \hyperlink{openmotestm_201bsp__flash_2application_201bsp__flash_8c_a1e23ae9a7b3fd9f6329b06e1d463fbfb}{n\+W\+R\+P3\+\_\+\+V\+A\+L\+UE}~0x\+FF
+\item 
+\#define \hyperlink{openmotestm_201bsp__flash_2application_201bsp__flash_8c_aeff0b7b28acbde3de1f63218137724db}{H\+E\+A\+D\+B\+Y\+T\+E\+\_\+\+F\+IR}~0x1514
+\item 
+\#define \hyperlink{openmotestm_201bsp__flash_2application_201bsp__flash_8c_a1614e6bbf822232b9d73785695b98d26}{H\+E\+A\+D\+B\+Y\+T\+E\+\_\+\+S\+EC}~0x0592
+\item 
+\#define \hyperlink{openmotestm_201bsp__flash_2application_201bsp__flash_8c_a8ff7b114120fb0d7050857b11bc5e386}{H\+E\+A\+D\+B\+Y\+T\+E\+\_\+\+T\+HR}~0x0101
+\item 
+\#define \hyperlink{openmotestm_201bsp__flash_2application_201bsp__flash_8c_a1bf87dda4ae43401783360d221246e4c}{H\+E\+A\+D\+B\+Y\+T\+E\+\_\+\+F\+OU}~0x0100
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{openmotestm_201bsp__flash_2application_201bsp__flash_8c_ad0caa506af897a3ebe6699aa0c0da367}{mote\+\_\+main} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c@{openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c}!H\+E\+A\+D\+B\+Y\+T\+E\+\_\+\+F\+IR@{H\+E\+A\+D\+B\+Y\+T\+E\+\_\+\+F\+IR}}
+\index{H\+E\+A\+D\+B\+Y\+T\+E\+\_\+\+F\+IR@{H\+E\+A\+D\+B\+Y\+T\+E\+\_\+\+F\+IR}!openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c@{openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c}}
+\subsubsection[{\texorpdfstring{H\+E\+A\+D\+B\+Y\+T\+E\+\_\+\+F\+IR}{HEADBYTE_FIR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\+E\+A\+D\+B\+Y\+T\+E\+\_\+\+F\+IR~0x1514}\hypertarget{openmotestm_201bsp__flash_2application_201bsp__flash_8c_aeff0b7b28acbde3de1f63218137724db}{}\label{openmotestm_201bsp__flash_2application_201bsp__flash_8c_aeff0b7b28acbde3de1f63218137724db}
+
+
+Definition at line 24 of file 01bsp\+\_\+flash.\+c.
+
+\index{openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c@{openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c}!H\+E\+A\+D\+B\+Y\+T\+E\+\_\+\+F\+OU@{H\+E\+A\+D\+B\+Y\+T\+E\+\_\+\+F\+OU}}
+\index{H\+E\+A\+D\+B\+Y\+T\+E\+\_\+\+F\+OU@{H\+E\+A\+D\+B\+Y\+T\+E\+\_\+\+F\+OU}!openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c@{openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c}}
+\subsubsection[{\texorpdfstring{H\+E\+A\+D\+B\+Y\+T\+E\+\_\+\+F\+OU}{HEADBYTE_FOU}}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\+E\+A\+D\+B\+Y\+T\+E\+\_\+\+F\+OU~0x0100}\hypertarget{openmotestm_201bsp__flash_2application_201bsp__flash_8c_a1bf87dda4ae43401783360d221246e4c}{}\label{openmotestm_201bsp__flash_2application_201bsp__flash_8c_a1bf87dda4ae43401783360d221246e4c}
+
+
+Definition at line 27 of file 01bsp\+\_\+flash.\+c.
+
+\index{openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c@{openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c}!H\+E\+A\+D\+B\+Y\+T\+E\+\_\+\+S\+EC@{H\+E\+A\+D\+B\+Y\+T\+E\+\_\+\+S\+EC}}
+\index{H\+E\+A\+D\+B\+Y\+T\+E\+\_\+\+S\+EC@{H\+E\+A\+D\+B\+Y\+T\+E\+\_\+\+S\+EC}!openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c@{openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c}}
+\subsubsection[{\texorpdfstring{H\+E\+A\+D\+B\+Y\+T\+E\+\_\+\+S\+EC}{HEADBYTE_SEC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\+E\+A\+D\+B\+Y\+T\+E\+\_\+\+S\+EC~0x0592}\hypertarget{openmotestm_201bsp__flash_2application_201bsp__flash_8c_a1614e6bbf822232b9d73785695b98d26}{}\label{openmotestm_201bsp__flash_2application_201bsp__flash_8c_a1614e6bbf822232b9d73785695b98d26}
+
+
+Definition at line 25 of file 01bsp\+\_\+flash.\+c.
+
+\index{openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c@{openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c}!H\+E\+A\+D\+B\+Y\+T\+E\+\_\+\+T\+HR@{H\+E\+A\+D\+B\+Y\+T\+E\+\_\+\+T\+HR}}
+\index{H\+E\+A\+D\+B\+Y\+T\+E\+\_\+\+T\+HR@{H\+E\+A\+D\+B\+Y\+T\+E\+\_\+\+T\+HR}!openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c@{openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c}}
+\subsubsection[{\texorpdfstring{H\+E\+A\+D\+B\+Y\+T\+E\+\_\+\+T\+HR}{HEADBYTE_THR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\+E\+A\+D\+B\+Y\+T\+E\+\_\+\+T\+HR~0x0101}\hypertarget{openmotestm_201bsp__flash_2application_201bsp__flash_8c_a8ff7b114120fb0d7050857b11bc5e386}{}\label{openmotestm_201bsp__flash_2application_201bsp__flash_8c_a8ff7b114120fb0d7050857b11bc5e386}
+
+
+Definition at line 26 of file 01bsp\+\_\+flash.\+c.
+
+\index{openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c@{openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c}!I\+D\+\_\+\+A\+D\+D\+R\+E\+SS@{I\+D\+\_\+\+A\+D\+D\+R\+E\+SS}}
+\index{I\+D\+\_\+\+A\+D\+D\+R\+E\+SS@{I\+D\+\_\+\+A\+D\+D\+R\+E\+SS}!openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c@{openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c}}
+\subsubsection[{\texorpdfstring{I\+D\+\_\+\+A\+D\+D\+R\+E\+SS}{ID_ADDRESS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+D\+\_\+\+A\+D\+D\+R\+E\+SS~0x0807\+F\+F\+F0}\hypertarget{openmotestm_201bsp__flash_2application_201bsp__flash_8c_a4394326cae1c8f63e68f25db0bb53e41}{}\label{openmotestm_201bsp__flash_2application_201bsp__flash_8c_a4394326cae1c8f63e68f25db0bb53e41}
+
+
+Definition at line 17 of file 01bsp\+\_\+flash.\+c.
+
+\index{openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c@{openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c}!I\+D\+\_\+\+L\+E\+N\+G\+TH@{I\+D\+\_\+\+L\+E\+N\+G\+TH}}
+\index{I\+D\+\_\+\+L\+E\+N\+G\+TH@{I\+D\+\_\+\+L\+E\+N\+G\+TH}!openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c@{openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c}}
+\subsubsection[{\texorpdfstring{I\+D\+\_\+\+L\+E\+N\+G\+TH}{ID_LENGTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+D\+\_\+\+L\+E\+N\+G\+TH~8}\hypertarget{openmotestm_201bsp__flash_2application_201bsp__flash_8c_a74cd4c8a601dffc9976cb2016f09dd0d}{}\label{openmotestm_201bsp__flash_2application_201bsp__flash_8c_a74cd4c8a601dffc9976cb2016f09dd0d}
+
+
+Definition at line 18 of file 01bsp\+\_\+flash.\+c.
+
+\index{openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c@{openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c}!n\+W\+R\+P3\+\_\+\+V\+A\+L\+UE@{n\+W\+R\+P3\+\_\+\+V\+A\+L\+UE}}
+\index{n\+W\+R\+P3\+\_\+\+V\+A\+L\+UE@{n\+W\+R\+P3\+\_\+\+V\+A\+L\+UE}!openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c@{openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c}}
+\subsubsection[{\texorpdfstring{n\+W\+R\+P3\+\_\+\+V\+A\+L\+UE}{nWRP3_VALUE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define n\+W\+R\+P3\+\_\+\+V\+A\+L\+UE~0x\+FF}\hypertarget{openmotestm_201bsp__flash_2application_201bsp__flash_8c_a1e23ae9a7b3fd9f6329b06e1d463fbfb}{}\label{openmotestm_201bsp__flash_2application_201bsp__flash_8c_a1e23ae9a7b3fd9f6329b06e1d463fbfb}
+
+
+Definition at line 21 of file 01bsp\+\_\+flash.\+c.
+
+\index{openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c@{openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c}!P\+A\+G\+E255\+\_\+\+A\+D\+D\+R\+E\+SS@{P\+A\+G\+E255\+\_\+\+A\+D\+D\+R\+E\+SS}}
+\index{P\+A\+G\+E255\+\_\+\+A\+D\+D\+R\+E\+SS@{P\+A\+G\+E255\+\_\+\+A\+D\+D\+R\+E\+SS}!openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c@{openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c}}
+\subsubsection[{\texorpdfstring{P\+A\+G\+E255\+\_\+\+A\+D\+D\+R\+E\+SS}{PAGE255_ADDRESS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+A\+G\+E255\+\_\+\+A\+D\+D\+R\+E\+SS~0x0807\+F800}\hypertarget{openmotestm_201bsp__flash_2application_201bsp__flash_8c_a91b56a2379182308eb64cc2e5110b98e}{}\label{openmotestm_201bsp__flash_2application_201bsp__flash_8c_a91b56a2379182308eb64cc2e5110b98e}
+\begin{DoxyNote}{Note}
+\+: Since the bsp modules for different platforms have the same declaration, you can use this project with any platform. 
+\end{DoxyNote}
+
+
+Definition at line 16 of file 01bsp\+\_\+flash.\+c.
+
+\index{openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c@{openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c}!W\+R\+P3\+\_\+\+A\+D\+D\+R\+E\+SS@{W\+R\+P3\+\_\+\+A\+D\+D\+R\+E\+SS}}
+\index{W\+R\+P3\+\_\+\+A\+D\+D\+R\+E\+SS@{W\+R\+P3\+\_\+\+A\+D\+D\+R\+E\+SS}!openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c@{openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c}}
+\subsubsection[{\texorpdfstring{W\+R\+P3\+\_\+\+A\+D\+D\+R\+E\+SS}{WRP3_ADDRESS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\+R\+P3\+\_\+\+A\+D\+D\+R\+E\+SS~0x1\+F\+F\+F\+F80E}\hypertarget{openmotestm_201bsp__flash_2application_201bsp__flash_8c_aa7721ea5424a845ffc650ee7b8364bd5}{}\label{openmotestm_201bsp__flash_2application_201bsp__flash_8c_aa7721ea5424a845ffc650ee7b8364bd5}
+
+
+Definition at line 20 of file 01bsp\+\_\+flash.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c@{openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c}!mote\+\_\+main@{mote\+\_\+main}}
+\index{mote\+\_\+main@{mote\+\_\+main}!openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c@{openmotestm/01bsp\+\_\+flash/application/01bsp\+\_\+flash.\+c}}
+\subsubsection[{\texorpdfstring{mote\+\_\+main(void)}{mote_main(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int mote\+\_\+main (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{openmotestm_201bsp__flash_2application_201bsp__flash_8c_ad0caa506af897a3ebe6699aa0c0da367}{}\label{openmotestm_201bsp__flash_2application_201bsp__flash_8c_ad0caa506af897a3ebe6699aa0c0da367}
+
+
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module. 
+
+Z1-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+W\+S\+N430v13b-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+Telos\+B-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+Python-\/based emulation of the mote\textquotesingle{}s power supply.
+
+iot-\/lab\+\_\+\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+iot-\/lab\+\_\+\+A8-\/\+M3 definition of the \char`\"{}board\char`\"{} bsp module.
+
+G\+I\+N\+A-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+e\+Z430-\/\+R\+F2500-\/specific definition of the \char`\"{}board\char`\"{} bsp module.
+
+The program starts executing here.
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, February 2012. 
+
+Chang Tengfei \href{mailto:tengfei.chang@gmail.com}{\tt tengfei.\+chang@gmail.\+com}, July 2012. 
+
+Alaeddine Weslati \href{mailto:alaeddine.weslati@inria.fr}{\tt alaeddine.\+weslati@inria.\+fr}, August 2013.
+\end{DoxyAuthor}
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+\begin{DoxyNote}{Note}
+\+: Since the bsp modules for different platforms have the same declaration, you can use this project with any platform.
+\end{DoxyNote}
+Load this program on your boards. The L\+E\+Ds should start blinking furiously.
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, February 2012 The program starts executing here.
+\end{DoxyAuthor}
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+Since the driver modules for different platforms have the same declaration, you can use this project with any platform.
+
+This application allows you to verify the correct functioning of the opentimers drivers. It starts 3 periodic timers, with periods A\+P\+P\+\_\+\+D\+L\+Y\+\_\+\+T\+I\+M\+E\+R0\+\_\+ms, A\+P\+P\+\_\+\+D\+L\+Y\+\_\+\+T\+I\+M\+E\+R1\+\_\+ms and A\+P\+P\+\_\+\+D\+L\+Y\+\_\+\+T\+I\+M\+E\+R2\+\_\+ms. Each timer is attached an L\+ED (error. radio and sync). When you run the application, you should see the L\+E\+Ds \char`\"{}counting\char`\"{}.
+
+\begin{DoxyAuthor}{Author}
+Pere Tuset \href{mailto:peretuset@openmote.com}{\tt peretuset@openmote.\+com}, January 2015.
+\end{DoxyAuthor}
+openmote\+S\+T\+M32 definition of the \char`\"{}board\char`\"{} bsp module.
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, August 2010 
+\end{DoxyAuthor}
+
+
+Definition at line 33 of file 01bsp\+\_\+flash.\+c.
+

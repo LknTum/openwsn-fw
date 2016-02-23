@@ -1,0 +1,915 @@
+\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.c File Reference}
+\label{iot-lab___m3_2configure_2stm32f10x__it_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+{\ttfamily \#include \char`\"{}stm32f10x\+\_\+it.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leds.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bsp\+\_\+timer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}radiotimer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}spi.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}radio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}rtc\+\_\+timer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}uart.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}debugpins.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}rcc.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_ad549e4ec16df2485e6e707683d4a515d}{N\+M\+I\+Exception} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a6f039c94ce7261fad979460013bae858}{Hard\+Fault\+Exception} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_ad5485236f678f71be03a793f7831e06a}{Mem\+Manage\+Exception} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a054e000b5f5cff3bfea7ede44d5400b3}{Bus\+Fault\+Exception} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_ab97314afc4d766d7a8b47255195650d5}{Usage\+Fault\+Exception} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_ac09df099b4f6b3b705a0ae875036cb01}{Debug\+Monitor} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_ace595fe28b011a55b6b0bb831c09cd47}{S\+V\+C\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_aefe405e5ecd67e05a3c7898577e8472a}{Pend\+S\+VC} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a737b0e743a1e6278e22d292c02925189}{Sys\+Tick\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a049e27b7d5d0d36a331e6ef5e78e1fc5}{W\+W\+D\+G\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a63228cf68d44f021736001cc85c56e3b}{P\+V\+D\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a7c3a797b8a96b02429140c4efe38b7ac}{T\+A\+M\+P\+E\+R\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_ab86b9dd0d7b4eacfe38086e1fa4c2312}{R\+T\+C\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_ae5c044ed8d30b13cb7eb9df52586c64d}{F\+L\+A\+S\+H\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a485ab398adc303a0ca68885dddcbfe07}{R\+C\+C\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a17e9789a29a87d2df54f12b94dd1a0b6}{E\+X\+T\+I0\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a49cfdd46eb8d0ef3e1987514aa9343dc}{E\+X\+T\+I1\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_ab5a1d9e9c8ef50e0cb9ddb5745a20a14}{E\+X\+T\+I2\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a30c045de96d18ec9c67a7b9e4350920f}{E\+X\+T\+I3\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a290cb997018c8d85d4b965b4a242842f}{E\+X\+T\+I4\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a7b6fac3d670a4860ebec8a961d5c4a73}{D\+M\+A1\+\_\+\+Channel1\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a0c3390d4dc5cfceccbeda71aa672d99d}{D\+M\+A1\+\_\+\+Channel2\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_aadb8937353693c94b0d8e32fc6f18fc2}{D\+M\+A1\+\_\+\+Channel3\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a9b75ef44037d7ed50a1078c024ae853a}{D\+M\+A1\+\_\+\+Channel4\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_abd16b3391557c4a3a8020d675e2c452f}{D\+M\+A1\+\_\+\+Channel5\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_ab74311855aee10304ffc57c319c91ed3}{D\+M\+A1\+\_\+\+Channel6\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a7a964205d5b1ce4b9c69ae6a105145ca}{D\+M\+A1\+\_\+\+Channel7\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a3e8fca6e2f18e433a9fbc3d2dcc0b411}{A\+D\+C1\+\_\+2\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a800532e86d7abe0bc34a57167d13e5ad}{U\+S\+B\+\_\+\+H\+P\+\_\+\+C\+A\+N\+\_\+\+T\+X\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a6543c7b9f9bdb00685db956a0e7c560b}{U\+S\+B\+\_\+\+L\+P\+\_\+\+C\+A\+N\+\_\+\+R\+X0\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_ad8dd583ca045a1f77ec52880be0f70c3}{C\+A\+N\+\_\+\+R\+X1\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a65fed1e67588930062fcf01b4af5d4d8}{C\+A\+N\+\_\+\+S\+C\+E\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a7b2096b8b2643286dc3a7e5110e5ae85}{E\+X\+T\+I9\+\_\+5\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_ac932fa89be69a5610d5b3a1ee6f6aed7}{T\+I\+M1\+\_\+\+B\+R\+K\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a51741dbf9b0de1b8b56b5a6f1ef2e694}{T\+I\+M1\+\_\+\+U\+P\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a9ca55e77c801001298d93229cbd2d837}{T\+I\+M1\+\_\+\+T\+R\+G\+\_\+\+C\+O\+M\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_ae8a61b27afdb07c70d6b863c44284ca6}{T\+I\+M1\+\_\+\+C\+C\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a38ad4725462bdc5e86c4ead4f04b9fc2}{T\+I\+M2\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_ac8e51d2183b5230cbd5481f8867adce9}{T\+I\+M3\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a7133f3f78767503641d307386e68bd28}{T\+I\+M4\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a272ffa65eb8ff5c4a065b0d3473611cd}{I2\+C1\+\_\+\+E\+V\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_ad25274aece51e7f5b821f5d32b31bddf}{I2\+C1\+\_\+\+E\+R\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_abdb05db0781544b33e806a12940d062c}{I2\+C2\+\_\+\+E\+V\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_aecd40b8012604ac4236bda3f65857c37}{I2\+C2\+\_\+\+E\+R\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a9bbd8c17ce4f49adcca47d11f482aab6}{S\+P\+I1\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a68d8880cd80cb17a2501487c3d649ea1}{S\+P\+I2\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a7139cd4baabbbcbab0c1fe6d7d4ae1cc}{U\+S\+A\+R\+T1\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a0ca6fd0e6f77921dd1123539857ba0a8}{U\+S\+A\+R\+T2\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a0d108a3468b2051548183ee5ca2158a0}{U\+S\+A\+R\+T3\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a738473a5b43f6c92b80ce1d3d6f77ed9}{E\+X\+T\+I15\+\_\+10\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_aefbc016ded9975fe115f44a848b99dfb}{R\+T\+C\+Alarm\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_ab2b0674cedda310639e2bd51e701d590}{U\+S\+B\+Wake\+Up\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_aa2754c1d099a614d954b4b449fd5ea19}{T\+I\+M8\+\_\+\+B\+R\+K\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a255e5267ee3275b665940ed1a61ae3ce}{T\+I\+M8\+\_\+\+U\+P\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a5e1addc9f7d3e0ffa4ed6ca284123043}{T\+I\+M8\+\_\+\+T\+R\+G\+\_\+\+C\+O\+M\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a96e44d6fe80524f038da6254514316a4}{T\+I\+M8\+\_\+\+C\+C\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a8d30f5245550cc82fecb7a11e60fbfd4}{A\+D\+C3\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_adef82358f2bfdf2d58734922b618d481}{F\+S\+M\+C\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_adb3e01a3e924c7c52cad43949a43e9c7}{S\+D\+I\+O\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a5e66446caf21dd90191dc07a13ce2378}{T\+I\+M5\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a82987561e28d02b184ecb0515a5e5d2b}{S\+P\+I3\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a88774889b903ae43403cd7e7a11a8f4f}{U\+A\+R\+T4\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_aa1c474cac5abda23ebbe8a9e8f4d7551}{U\+A\+R\+T5\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a0453d4621224d4aed7b6f727f12657b2}{T\+I\+M6\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a98cff83252098363b2dbca9608df964e}{T\+I\+M7\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a51ffa654c18679a6e437027eeaea5bed}{D\+M\+A2\+\_\+\+Channel1\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a5387957d667639fdc36a98493fc6a121}{D\+M\+A2\+\_\+\+Channel2\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a66857fec7bb282eed8204a690f4ce5ae}{D\+M\+A2\+\_\+\+Channel3\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{iot-lab___m3_2configure_2stm32f10x__it_8c_a58abb4e9afa908a638fe3b5cebdee2a1}{D\+M\+A2\+\_\+\+Channel4\+\_\+5\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!A\+D\+C1\+\_\+2\+\_\+\+I\+R\+Q\+Handler@{A\+D\+C1\+\_\+2\+\_\+\+I\+R\+Q\+Handler}}
+\index{A\+D\+C1\+\_\+2\+\_\+\+I\+R\+Q\+Handler@{A\+D\+C1\+\_\+2\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{A\+D\+C1\+\_\+2\+\_\+\+I\+R\+Q\+Handler(void)}{ADC1_2_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} A\+D\+C1\+\_\+2\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a3e8fca6e2f18e433a9fbc3d2dcc0b411}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a3e8fca6e2f18e433a9fbc3d2dcc0b411}
+
+
+Definition at line 374 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!A\+D\+C3\+\_\+\+I\+R\+Q\+Handler@{A\+D\+C3\+\_\+\+I\+R\+Q\+Handler}}
+\index{A\+D\+C3\+\_\+\+I\+R\+Q\+Handler@{A\+D\+C3\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{A\+D\+C3\+\_\+\+I\+R\+Q\+Handler(void)}{ADC3_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} A\+D\+C3\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a8d30f5245550cc82fecb7a11e60fbfd4}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a8d30f5245550cc82fecb7a11e60fbfd4}
+
+
+Definition at line 737 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!Bus\+Fault\+Exception@{Bus\+Fault\+Exception}}
+\index{Bus\+Fault\+Exception@{Bus\+Fault\+Exception}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{Bus\+Fault\+Exception(void)}{BusFaultException(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Bus\+Fault\+Exception (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a054e000b5f5cff3bfea7ede44d5400b3}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a054e000b5f5cff3bfea7ede44d5400b3}
+
+
+Definition at line 85 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!C\+A\+N\+\_\+\+R\+X1\+\_\+\+I\+R\+Q\+Handler@{C\+A\+N\+\_\+\+R\+X1\+\_\+\+I\+R\+Q\+Handler}}
+\index{C\+A\+N\+\_\+\+R\+X1\+\_\+\+I\+R\+Q\+Handler@{C\+A\+N\+\_\+\+R\+X1\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{C\+A\+N\+\_\+\+R\+X1\+\_\+\+I\+R\+Q\+Handler(void)}{CAN_RX1_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C\+A\+N\+\_\+\+R\+X1\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_ad8dd583ca045a1f77ec52880be0f70c3}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_ad8dd583ca045a1f77ec52880be0f70c3}
+
+
+Definition at line 409 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!C\+A\+N\+\_\+\+S\+C\+E\+\_\+\+I\+R\+Q\+Handler@{C\+A\+N\+\_\+\+S\+C\+E\+\_\+\+I\+R\+Q\+Handler}}
+\index{C\+A\+N\+\_\+\+S\+C\+E\+\_\+\+I\+R\+Q\+Handler@{C\+A\+N\+\_\+\+S\+C\+E\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{C\+A\+N\+\_\+\+S\+C\+E\+\_\+\+I\+R\+Q\+Handler(void)}{CAN_SCE_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C\+A\+N\+\_\+\+S\+C\+E\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a65fed1e67588930062fcf01b4af5d4d8}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a65fed1e67588930062fcf01b4af5d4d8}
+
+
+Definition at line 420 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!Debug\+Monitor@{Debug\+Monitor}}
+\index{Debug\+Monitor@{Debug\+Monitor}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{Debug\+Monitor(void)}{DebugMonitor(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Debug\+Monitor (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_ac09df099b4f6b3b705a0ae875036cb01}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_ac09df099b4f6b3b705a0ae875036cb01}
+
+
+Definition at line 115 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!D\+M\+A1\+\_\+\+Channel1\+\_\+\+I\+R\+Q\+Handler@{D\+M\+A1\+\_\+\+Channel1\+\_\+\+I\+R\+Q\+Handler}}
+\index{D\+M\+A1\+\_\+\+Channel1\+\_\+\+I\+R\+Q\+Handler@{D\+M\+A1\+\_\+\+Channel1\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{D\+M\+A1\+\_\+\+Channel1\+\_\+\+I\+R\+Q\+Handler(void)}{DMA1_Channel1_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} D\+M\+A1\+\_\+\+Channel1\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a7b6fac3d670a4860ebec8a961d5c4a73}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a7b6fac3d670a4860ebec8a961d5c4a73}
+
+
+Definition at line 297 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!D\+M\+A1\+\_\+\+Channel2\+\_\+\+I\+R\+Q\+Handler@{D\+M\+A1\+\_\+\+Channel2\+\_\+\+I\+R\+Q\+Handler}}
+\index{D\+M\+A1\+\_\+\+Channel2\+\_\+\+I\+R\+Q\+Handler@{D\+M\+A1\+\_\+\+Channel2\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{D\+M\+A1\+\_\+\+Channel2\+\_\+\+I\+R\+Q\+Handler(void)}{DMA1_Channel2_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} D\+M\+A1\+\_\+\+Channel2\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a0c3390d4dc5cfceccbeda71aa672d99d}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a0c3390d4dc5cfceccbeda71aa672d99d}
+
+
+Definition at line 308 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!D\+M\+A1\+\_\+\+Channel3\+\_\+\+I\+R\+Q\+Handler@{D\+M\+A1\+\_\+\+Channel3\+\_\+\+I\+R\+Q\+Handler}}
+\index{D\+M\+A1\+\_\+\+Channel3\+\_\+\+I\+R\+Q\+Handler@{D\+M\+A1\+\_\+\+Channel3\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{D\+M\+A1\+\_\+\+Channel3\+\_\+\+I\+R\+Q\+Handler(void)}{DMA1_Channel3_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} D\+M\+A1\+\_\+\+Channel3\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_aadb8937353693c94b0d8e32fc6f18fc2}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_aadb8937353693c94b0d8e32fc6f18fc2}
+
+
+Definition at line 319 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!D\+M\+A1\+\_\+\+Channel4\+\_\+\+I\+R\+Q\+Handler@{D\+M\+A1\+\_\+\+Channel4\+\_\+\+I\+R\+Q\+Handler}}
+\index{D\+M\+A1\+\_\+\+Channel4\+\_\+\+I\+R\+Q\+Handler@{D\+M\+A1\+\_\+\+Channel4\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{D\+M\+A1\+\_\+\+Channel4\+\_\+\+I\+R\+Q\+Handler(void)}{DMA1_Channel4_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} D\+M\+A1\+\_\+\+Channel4\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a9b75ef44037d7ed50a1078c024ae853a}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a9b75ef44037d7ed50a1078c024ae853a}
+
+
+Definition at line 330 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!D\+M\+A1\+\_\+\+Channel5\+\_\+\+I\+R\+Q\+Handler@{D\+M\+A1\+\_\+\+Channel5\+\_\+\+I\+R\+Q\+Handler}}
+\index{D\+M\+A1\+\_\+\+Channel5\+\_\+\+I\+R\+Q\+Handler@{D\+M\+A1\+\_\+\+Channel5\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{D\+M\+A1\+\_\+\+Channel5\+\_\+\+I\+R\+Q\+Handler(void)}{DMA1_Channel5_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} D\+M\+A1\+\_\+\+Channel5\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_abd16b3391557c4a3a8020d675e2c452f}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_abd16b3391557c4a3a8020d675e2c452f}
+
+
+Definition at line 341 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!D\+M\+A1\+\_\+\+Channel6\+\_\+\+I\+R\+Q\+Handler@{D\+M\+A1\+\_\+\+Channel6\+\_\+\+I\+R\+Q\+Handler}}
+\index{D\+M\+A1\+\_\+\+Channel6\+\_\+\+I\+R\+Q\+Handler@{D\+M\+A1\+\_\+\+Channel6\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{D\+M\+A1\+\_\+\+Channel6\+\_\+\+I\+R\+Q\+Handler(void)}{DMA1_Channel6_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} D\+M\+A1\+\_\+\+Channel6\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_ab74311855aee10304ffc57c319c91ed3}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_ab74311855aee10304ffc57c319c91ed3}
+
+
+Definition at line 352 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!D\+M\+A1\+\_\+\+Channel7\+\_\+\+I\+R\+Q\+Handler@{D\+M\+A1\+\_\+\+Channel7\+\_\+\+I\+R\+Q\+Handler}}
+\index{D\+M\+A1\+\_\+\+Channel7\+\_\+\+I\+R\+Q\+Handler@{D\+M\+A1\+\_\+\+Channel7\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{D\+M\+A1\+\_\+\+Channel7\+\_\+\+I\+R\+Q\+Handler(void)}{DMA1_Channel7_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} D\+M\+A1\+\_\+\+Channel7\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a7a964205d5b1ce4b9c69ae6a105145ca}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a7a964205d5b1ce4b9c69ae6a105145ca}
+
+
+Definition at line 363 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!D\+M\+A2\+\_\+\+Channel1\+\_\+\+I\+R\+Q\+Handler@{D\+M\+A2\+\_\+\+Channel1\+\_\+\+I\+R\+Q\+Handler}}
+\index{D\+M\+A2\+\_\+\+Channel1\+\_\+\+I\+R\+Q\+Handler@{D\+M\+A2\+\_\+\+Channel1\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{D\+M\+A2\+\_\+\+Channel1\+\_\+\+I\+R\+Q\+Handler(void)}{DMA2_Channel1_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} D\+M\+A2\+\_\+\+Channel1\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a51ffa654c18679a6e437027eeaea5bed}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a51ffa654c18679a6e437027eeaea5bed}
+
+
+Definition at line 836 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!D\+M\+A2\+\_\+\+Channel2\+\_\+\+I\+R\+Q\+Handler@{D\+M\+A2\+\_\+\+Channel2\+\_\+\+I\+R\+Q\+Handler}}
+\index{D\+M\+A2\+\_\+\+Channel2\+\_\+\+I\+R\+Q\+Handler@{D\+M\+A2\+\_\+\+Channel2\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{D\+M\+A2\+\_\+\+Channel2\+\_\+\+I\+R\+Q\+Handler(void)}{DMA2_Channel2_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} D\+M\+A2\+\_\+\+Channel2\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a5387957d667639fdc36a98493fc6a121}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a5387957d667639fdc36a98493fc6a121}
+
+
+Definition at line 847 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!D\+M\+A2\+\_\+\+Channel3\+\_\+\+I\+R\+Q\+Handler@{D\+M\+A2\+\_\+\+Channel3\+\_\+\+I\+R\+Q\+Handler}}
+\index{D\+M\+A2\+\_\+\+Channel3\+\_\+\+I\+R\+Q\+Handler@{D\+M\+A2\+\_\+\+Channel3\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{D\+M\+A2\+\_\+\+Channel3\+\_\+\+I\+R\+Q\+Handler(void)}{DMA2_Channel3_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} D\+M\+A2\+\_\+\+Channel3\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a66857fec7bb282eed8204a690f4ce5ae}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a66857fec7bb282eed8204a690f4ce5ae}
+
+
+Definition at line 858 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!D\+M\+A2\+\_\+\+Channel4\+\_\+5\+\_\+\+I\+R\+Q\+Handler@{D\+M\+A2\+\_\+\+Channel4\+\_\+5\+\_\+\+I\+R\+Q\+Handler}}
+\index{D\+M\+A2\+\_\+\+Channel4\+\_\+5\+\_\+\+I\+R\+Q\+Handler@{D\+M\+A2\+\_\+\+Channel4\+\_\+5\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{D\+M\+A2\+\_\+\+Channel4\+\_\+5\+\_\+\+I\+R\+Q\+Handler(void)}{DMA2_Channel4_5_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} D\+M\+A2\+\_\+\+Channel4\+\_\+5\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a58abb4e9afa908a638fe3b5cebdee2a1}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a58abb4e9afa908a638fe3b5cebdee2a1}
+
+
+Definition at line 870 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!E\+X\+T\+I0\+\_\+\+I\+R\+Q\+Handler@{E\+X\+T\+I0\+\_\+\+I\+R\+Q\+Handler}}
+\index{E\+X\+T\+I0\+\_\+\+I\+R\+Q\+Handler@{E\+X\+T\+I0\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{E\+X\+T\+I0\+\_\+\+I\+R\+Q\+Handler(void)}{EXTI0_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} E\+X\+T\+I0\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a17e9789a29a87d2df54f12b94dd1a0b6}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a17e9789a29a87d2df54f12b94dd1a0b6}
+
+
+Definition at line 230 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!E\+X\+T\+I15\+\_\+10\+\_\+\+I\+R\+Q\+Handler@{E\+X\+T\+I15\+\_\+10\+\_\+\+I\+R\+Q\+Handler}}
+\index{E\+X\+T\+I15\+\_\+10\+\_\+\+I\+R\+Q\+Handler@{E\+X\+T\+I15\+\_\+10\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{E\+X\+T\+I15\+\_\+10\+\_\+\+I\+R\+Q\+Handler(void)}{EXTI15_10_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} E\+X\+T\+I15\+\_\+10\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a738473a5b43f6c92b80ce1d3d6f77ed9}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a738473a5b43f6c92b80ce1d3d6f77ed9}
+
+
+Definition at line 651 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!E\+X\+T\+I1\+\_\+\+I\+R\+Q\+Handler@{E\+X\+T\+I1\+\_\+\+I\+R\+Q\+Handler}}
+\index{E\+X\+T\+I1\+\_\+\+I\+R\+Q\+Handler@{E\+X\+T\+I1\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{E\+X\+T\+I1\+\_\+\+I\+R\+Q\+Handler(void)}{EXTI1_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} E\+X\+T\+I1\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a49cfdd46eb8d0ef3e1987514aa9343dc}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a49cfdd46eb8d0ef3e1987514aa9343dc}
+
+
+Definition at line 241 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!E\+X\+T\+I2\+\_\+\+I\+R\+Q\+Handler@{E\+X\+T\+I2\+\_\+\+I\+R\+Q\+Handler}}
+\index{E\+X\+T\+I2\+\_\+\+I\+R\+Q\+Handler@{E\+X\+T\+I2\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{E\+X\+T\+I2\+\_\+\+I\+R\+Q\+Handler(void)}{EXTI2_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} E\+X\+T\+I2\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_ab5a1d9e9c8ef50e0cb9ddb5745a20a14}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_ab5a1d9e9c8ef50e0cb9ddb5745a20a14}
+
+
+Definition at line 253 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!E\+X\+T\+I3\+\_\+\+I\+R\+Q\+Handler@{E\+X\+T\+I3\+\_\+\+I\+R\+Q\+Handler}}
+\index{E\+X\+T\+I3\+\_\+\+I\+R\+Q\+Handler@{E\+X\+T\+I3\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{E\+X\+T\+I3\+\_\+\+I\+R\+Q\+Handler(void)}{EXTI3_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} E\+X\+T\+I3\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a30c045de96d18ec9c67a7b9e4350920f}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a30c045de96d18ec9c67a7b9e4350920f}
+
+
+Definition at line 264 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!E\+X\+T\+I4\+\_\+\+I\+R\+Q\+Handler@{E\+X\+T\+I4\+\_\+\+I\+R\+Q\+Handler}}
+\index{E\+X\+T\+I4\+\_\+\+I\+R\+Q\+Handler@{E\+X\+T\+I4\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{E\+X\+T\+I4\+\_\+\+I\+R\+Q\+Handler(void)}{EXTI4_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} E\+X\+T\+I4\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a290cb997018c8d85d4b965b4a242842f}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a290cb997018c8d85d4b965b4a242842f}
+
+
+Definition at line 275 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!E\+X\+T\+I9\+\_\+5\+\_\+\+I\+R\+Q\+Handler@{E\+X\+T\+I9\+\_\+5\+\_\+\+I\+R\+Q\+Handler}}
+\index{E\+X\+T\+I9\+\_\+5\+\_\+\+I\+R\+Q\+Handler@{E\+X\+T\+I9\+\_\+5\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{E\+X\+T\+I9\+\_\+5\+\_\+\+I\+R\+Q\+Handler(void)}{EXTI9_5_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} E\+X\+T\+I9\+\_\+5\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a7b2096b8b2643286dc3a7e5110e5ae85}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a7b2096b8b2643286dc3a7e5110e5ae85}
+
+
+Definition at line 431 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!F\+L\+A\+S\+H\+\_\+\+I\+R\+Q\+Handler@{F\+L\+A\+S\+H\+\_\+\+I\+R\+Q\+Handler}}
+\index{F\+L\+A\+S\+H\+\_\+\+I\+R\+Q\+Handler@{F\+L\+A\+S\+H\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{F\+L\+A\+S\+H\+\_\+\+I\+R\+Q\+Handler(void)}{FLASH_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} F\+L\+A\+S\+H\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_ae5c044ed8d30b13cb7eb9df52586c64d}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_ae5c044ed8d30b13cb7eb9df52586c64d}
+
+
+Definition at line 208 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!F\+S\+M\+C\+\_\+\+I\+R\+Q\+Handler@{F\+S\+M\+C\+\_\+\+I\+R\+Q\+Handler}}
+\index{F\+S\+M\+C\+\_\+\+I\+R\+Q\+Handler@{F\+S\+M\+C\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{F\+S\+M\+C\+\_\+\+I\+R\+Q\+Handler(void)}{FSMC_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} F\+S\+M\+C\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_adef82358f2bfdf2d58734922b618d481}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_adef82358f2bfdf2d58734922b618d481}
+
+
+Definition at line 748 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!Hard\+Fault\+Exception@{Hard\+Fault\+Exception}}
+\index{Hard\+Fault\+Exception@{Hard\+Fault\+Exception}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{Hard\+Fault\+Exception(void)}{HardFaultException(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Hard\+Fault\+Exception (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a6f039c94ce7261fad979460013bae858}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a6f039c94ce7261fad979460013bae858}
+
+
+Definition at line 55 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!I2\+C1\+\_\+\+E\+R\+\_\+\+I\+R\+Q\+Handler@{I2\+C1\+\_\+\+E\+R\+\_\+\+I\+R\+Q\+Handler}}
+\index{I2\+C1\+\_\+\+E\+R\+\_\+\+I\+R\+Q\+Handler@{I2\+C1\+\_\+\+E\+R\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{I2\+C1\+\_\+\+E\+R\+\_\+\+I\+R\+Q\+Handler(void)}{I2C1_ER_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I2\+C1\+\_\+\+E\+R\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_ad25274aece51e7f5b821f5d32b31bddf}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_ad25274aece51e7f5b821f5d32b31bddf}
+
+
+Definition at line 544 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!I2\+C1\+\_\+\+E\+V\+\_\+\+I\+R\+Q\+Handler@{I2\+C1\+\_\+\+E\+V\+\_\+\+I\+R\+Q\+Handler}}
+\index{I2\+C1\+\_\+\+E\+V\+\_\+\+I\+R\+Q\+Handler@{I2\+C1\+\_\+\+E\+V\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{I2\+C1\+\_\+\+E\+V\+\_\+\+I\+R\+Q\+Handler(void)}{I2C1_EV_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I2\+C1\+\_\+\+E\+V\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a272ffa65eb8ff5c4a065b0d3473611cd}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a272ffa65eb8ff5c4a065b0d3473611cd}
+
+
+Definition at line 533 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!I2\+C2\+\_\+\+E\+R\+\_\+\+I\+R\+Q\+Handler@{I2\+C2\+\_\+\+E\+R\+\_\+\+I\+R\+Q\+Handler}}
+\index{I2\+C2\+\_\+\+E\+R\+\_\+\+I\+R\+Q\+Handler@{I2\+C2\+\_\+\+E\+R\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{I2\+C2\+\_\+\+E\+R\+\_\+\+I\+R\+Q\+Handler(void)}{I2C2_ER_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I2\+C2\+\_\+\+E\+R\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_aecd40b8012604ac4236bda3f65857c37}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_aecd40b8012604ac4236bda3f65857c37}
+
+
+Definition at line 566 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!I2\+C2\+\_\+\+E\+V\+\_\+\+I\+R\+Q\+Handler@{I2\+C2\+\_\+\+E\+V\+\_\+\+I\+R\+Q\+Handler}}
+\index{I2\+C2\+\_\+\+E\+V\+\_\+\+I\+R\+Q\+Handler@{I2\+C2\+\_\+\+E\+V\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{I2\+C2\+\_\+\+E\+V\+\_\+\+I\+R\+Q\+Handler(void)}{I2C2_EV_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} I2\+C2\+\_\+\+E\+V\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_abdb05db0781544b33e806a12940d062c}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_abdb05db0781544b33e806a12940d062c}
+
+
+Definition at line 555 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!Mem\+Manage\+Exception@{Mem\+Manage\+Exception}}
+\index{Mem\+Manage\+Exception@{Mem\+Manage\+Exception}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{Mem\+Manage\+Exception(void)}{MemManageException(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Mem\+Manage\+Exception (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_ad5485236f678f71be03a793f7831e06a}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_ad5485236f678f71be03a793f7831e06a}
+
+
+Definition at line 70 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!N\+M\+I\+Exception@{N\+M\+I\+Exception}}
+\index{N\+M\+I\+Exception@{N\+M\+I\+Exception}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{N\+M\+I\+Exception(void)}{NMIException(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} N\+M\+I\+Exception (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_ad549e4ec16df2485e6e707683d4a515d}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_ad549e4ec16df2485e6e707683d4a515d}
+
+
+Definition at line 44 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!Pend\+S\+VC@{Pend\+S\+VC}}
+\index{Pend\+S\+VC@{Pend\+S\+VC}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{Pend\+S\+V\+C(void)}{PendSVC(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Pend\+S\+VC (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_aefe405e5ecd67e05a3c7898577e8472a}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_aefe405e5ecd67e05a3c7898577e8472a}
+
+
+Definition at line 137 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!P\+V\+D\+\_\+\+I\+R\+Q\+Handler@{P\+V\+D\+\_\+\+I\+R\+Q\+Handler}}
+\index{P\+V\+D\+\_\+\+I\+R\+Q\+Handler@{P\+V\+D\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{P\+V\+D\+\_\+\+I\+R\+Q\+Handler(void)}{PVD_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} P\+V\+D\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a63228cf68d44f021736001cc85c56e3b}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a63228cf68d44f021736001cc85c56e3b}
+
+
+Definition at line 170 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!R\+C\+C\+\_\+\+I\+R\+Q\+Handler@{R\+C\+C\+\_\+\+I\+R\+Q\+Handler}}
+\index{R\+C\+C\+\_\+\+I\+R\+Q\+Handler@{R\+C\+C\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{R\+C\+C\+\_\+\+I\+R\+Q\+Handler(void)}{RCC_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} R\+C\+C\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a485ab398adc303a0ca68885dddcbfe07}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a485ab398adc303a0ca68885dddcbfe07}
+
+
+Definition at line 219 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!R\+T\+C\+\_\+\+I\+R\+Q\+Handler@{R\+T\+C\+\_\+\+I\+R\+Q\+Handler}}
+\index{R\+T\+C\+\_\+\+I\+R\+Q\+Handler@{R\+T\+C\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{R\+T\+C\+\_\+\+I\+R\+Q\+Handler(void)}{RTC_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} R\+T\+C\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_ab86b9dd0d7b4eacfe38086e1fa4c2312}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_ab86b9dd0d7b4eacfe38086e1fa4c2312}
+
+
+Definition at line 192 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!R\+T\+C\+Alarm\+\_\+\+I\+R\+Q\+Handler@{R\+T\+C\+Alarm\+\_\+\+I\+R\+Q\+Handler}}
+\index{R\+T\+C\+Alarm\+\_\+\+I\+R\+Q\+Handler@{R\+T\+C\+Alarm\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{R\+T\+C\+Alarm\+\_\+\+I\+R\+Q\+Handler(void)}{RTCAlarm_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} R\+T\+C\+Alarm\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_aefbc016ded9975fe115f44a848b99dfb}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_aefbc016ded9975fe115f44a848b99dfb}
+
+
+Definition at line 662 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!S\+D\+I\+O\+\_\+\+I\+R\+Q\+Handler@{S\+D\+I\+O\+\_\+\+I\+R\+Q\+Handler}}
+\index{S\+D\+I\+O\+\_\+\+I\+R\+Q\+Handler@{S\+D\+I\+O\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{S\+D\+I\+O\+\_\+\+I\+R\+Q\+Handler(void)}{SDIO_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} S\+D\+I\+O\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_adb3e01a3e924c7c52cad43949a43e9c7}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_adb3e01a3e924c7c52cad43949a43e9c7}
+
+
+Definition at line 759 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!S\+P\+I1\+\_\+\+I\+R\+Q\+Handler@{S\+P\+I1\+\_\+\+I\+R\+Q\+Handler}}
+\index{S\+P\+I1\+\_\+\+I\+R\+Q\+Handler@{S\+P\+I1\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{S\+P\+I1\+\_\+\+I\+R\+Q\+Handler(void)}{SPI1_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} S\+P\+I1\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a9bbd8c17ce4f49adcca47d11f482aab6}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a9bbd8c17ce4f49adcca47d11f482aab6}
+
+
+Definition at line 577 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!S\+P\+I2\+\_\+\+I\+R\+Q\+Handler@{S\+P\+I2\+\_\+\+I\+R\+Q\+Handler}}
+\index{S\+P\+I2\+\_\+\+I\+R\+Q\+Handler@{S\+P\+I2\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{S\+P\+I2\+\_\+\+I\+R\+Q\+Handler(void)}{SPI2_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} S\+P\+I2\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a68d8880cd80cb17a2501487c3d649ea1}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a68d8880cd80cb17a2501487c3d649ea1}
+
+
+Definition at line 594 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!S\+P\+I3\+\_\+\+I\+R\+Q\+Handler@{S\+P\+I3\+\_\+\+I\+R\+Q\+Handler}}
+\index{S\+P\+I3\+\_\+\+I\+R\+Q\+Handler@{S\+P\+I3\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{S\+P\+I3\+\_\+\+I\+R\+Q\+Handler(void)}{SPI3_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} S\+P\+I3\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a82987561e28d02b184ecb0515a5e5d2b}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a82987561e28d02b184ecb0515a5e5d2b}
+
+
+Definition at line 781 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!S\+V\+C\+Handler@{S\+V\+C\+Handler}}
+\index{S\+V\+C\+Handler@{S\+V\+C\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{S\+V\+C\+Handler(void)}{SVCHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} S\+V\+C\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_ace595fe28b011a55b6b0bb831c09cd47}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_ace595fe28b011a55b6b0bb831c09cd47}
+
+
+Definition at line 126 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!Sys\+Tick\+Handler@{Sys\+Tick\+Handler}}
+\index{Sys\+Tick\+Handler@{Sys\+Tick\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{Sys\+Tick\+Handler(void)}{SysTickHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Sys\+Tick\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a737b0e743a1e6278e22d292c02925189}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a737b0e743a1e6278e22d292c02925189}
+
+
+Definition at line 148 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!T\+A\+M\+P\+E\+R\+\_\+\+I\+R\+Q\+Handler@{T\+A\+M\+P\+E\+R\+\_\+\+I\+R\+Q\+Handler}}
+\index{T\+A\+M\+P\+E\+R\+\_\+\+I\+R\+Q\+Handler@{T\+A\+M\+P\+E\+R\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{T\+A\+M\+P\+E\+R\+\_\+\+I\+R\+Q\+Handler(void)}{TAMPER_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+A\+M\+P\+E\+R\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a7c3a797b8a96b02429140c4efe38b7ac}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a7c3a797b8a96b02429140c4efe38b7ac}
+
+
+Definition at line 181 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!T\+I\+M1\+\_\+\+B\+R\+K\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M1\+\_\+\+B\+R\+K\+\_\+\+I\+R\+Q\+Handler}}
+\index{T\+I\+M1\+\_\+\+B\+R\+K\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M1\+\_\+\+B\+R\+K\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M1\+\_\+\+B\+R\+K\+\_\+\+I\+R\+Q\+Handler(void)}{TIM1_BRK_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M1\+\_\+\+B\+R\+K\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_ac932fa89be69a5610d5b3a1ee6f6aed7}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_ac932fa89be69a5610d5b3a1ee6f6aed7}
+
+
+Definition at line 442 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!T\+I\+M1\+\_\+\+C\+C\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M1\+\_\+\+C\+C\+\_\+\+I\+R\+Q\+Handler}}
+\index{T\+I\+M1\+\_\+\+C\+C\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M1\+\_\+\+C\+C\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M1\+\_\+\+C\+C\+\_\+\+I\+R\+Q\+Handler(void)}{TIM1_CC_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M1\+\_\+\+C\+C\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_ae8a61b27afdb07c70d6b863c44284ca6}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_ae8a61b27afdb07c70d6b863c44284ca6}
+
+
+Definition at line 477 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!T\+I\+M1\+\_\+\+T\+R\+G\+\_\+\+C\+O\+M\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M1\+\_\+\+T\+R\+G\+\_\+\+C\+O\+M\+\_\+\+I\+R\+Q\+Handler}}
+\index{T\+I\+M1\+\_\+\+T\+R\+G\+\_\+\+C\+O\+M\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M1\+\_\+\+T\+R\+G\+\_\+\+C\+O\+M\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M1\+\_\+\+T\+R\+G\+\_\+\+C\+O\+M\+\_\+\+I\+R\+Q\+Handler(void)}{TIM1_TRG_COM_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M1\+\_\+\+T\+R\+G\+\_\+\+C\+O\+M\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a9ca55e77c801001298d93229cbd2d837}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a9ca55e77c801001298d93229cbd2d837}
+
+
+Definition at line 466 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!T\+I\+M1\+\_\+\+U\+P\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M1\+\_\+\+U\+P\+\_\+\+I\+R\+Q\+Handler}}
+\index{T\+I\+M1\+\_\+\+U\+P\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M1\+\_\+\+U\+P\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M1\+\_\+\+U\+P\+\_\+\+I\+R\+Q\+Handler(void)}{TIM1_UP_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M1\+\_\+\+U\+P\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a51741dbf9b0de1b8b56b5a6f1ef2e694}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a51741dbf9b0de1b8b56b5a6f1ef2e694}
+
+
+Definition at line 454 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!T\+I\+M2\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M2\+\_\+\+I\+R\+Q\+Handler}}
+\index{T\+I\+M2\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M2\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M2\+\_\+\+I\+R\+Q\+Handler(void)}{TIM2_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M2\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a38ad4725462bdc5e86c4ead4f04b9fc2}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a38ad4725462bdc5e86c4ead4f04b9fc2}
+
+
+Definition at line 488 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!T\+I\+M3\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M3\+\_\+\+I\+R\+Q\+Handler}}
+\index{T\+I\+M3\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M3\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M3\+\_\+\+I\+R\+Q\+Handler(void)}{TIM3_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M3\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_ac8e51d2183b5230cbd5481f8867adce9}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_ac8e51d2183b5230cbd5481f8867adce9}
+
+
+Definition at line 507 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!T\+I\+M4\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M4\+\_\+\+I\+R\+Q\+Handler}}
+\index{T\+I\+M4\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M4\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M4\+\_\+\+I\+R\+Q\+Handler(void)}{TIM4_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M4\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a7133f3f78767503641d307386e68bd28}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a7133f3f78767503641d307386e68bd28}
+
+
+Definition at line 522 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!T\+I\+M5\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M5\+\_\+\+I\+R\+Q\+Handler}}
+\index{T\+I\+M5\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M5\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M5\+\_\+\+I\+R\+Q\+Handler(void)}{TIM5_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M5\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a5e66446caf21dd90191dc07a13ce2378}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a5e66446caf21dd90191dc07a13ce2378}
+
+
+Definition at line 770 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!T\+I\+M6\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M6\+\_\+\+I\+R\+Q\+Handler}}
+\index{T\+I\+M6\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M6\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M6\+\_\+\+I\+R\+Q\+Handler(void)}{TIM6_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M6\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a0453d4621224d4aed7b6f727f12657b2}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a0453d4621224d4aed7b6f727f12657b2}
+
+
+Definition at line 814 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!T\+I\+M7\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M7\+\_\+\+I\+R\+Q\+Handler}}
+\index{T\+I\+M7\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M7\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M7\+\_\+\+I\+R\+Q\+Handler(void)}{TIM7_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M7\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a98cff83252098363b2dbca9608df964e}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a98cff83252098363b2dbca9608df964e}
+
+
+Definition at line 825 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!T\+I\+M8\+\_\+\+B\+R\+K\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M8\+\_\+\+B\+R\+K\+\_\+\+I\+R\+Q\+Handler}}
+\index{T\+I\+M8\+\_\+\+B\+R\+K\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M8\+\_\+\+B\+R\+K\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M8\+\_\+\+B\+R\+K\+\_\+\+I\+R\+Q\+Handler(void)}{TIM8_BRK_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M8\+\_\+\+B\+R\+K\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_aa2754c1d099a614d954b4b449fd5ea19}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_aa2754c1d099a614d954b4b449fd5ea19}
+
+
+Definition at line 691 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!T\+I\+M8\+\_\+\+C\+C\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M8\+\_\+\+C\+C\+\_\+\+I\+R\+Q\+Handler}}
+\index{T\+I\+M8\+\_\+\+C\+C\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M8\+\_\+\+C\+C\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M8\+\_\+\+C\+C\+\_\+\+I\+R\+Q\+Handler(void)}{TIM8_CC_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M8\+\_\+\+C\+C\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a96e44d6fe80524f038da6254514316a4}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a96e44d6fe80524f038da6254514316a4}
+
+
+Definition at line 726 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!T\+I\+M8\+\_\+\+T\+R\+G\+\_\+\+C\+O\+M\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M8\+\_\+\+T\+R\+G\+\_\+\+C\+O\+M\+\_\+\+I\+R\+Q\+Handler}}
+\index{T\+I\+M8\+\_\+\+T\+R\+G\+\_\+\+C\+O\+M\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M8\+\_\+\+T\+R\+G\+\_\+\+C\+O\+M\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M8\+\_\+\+T\+R\+G\+\_\+\+C\+O\+M\+\_\+\+I\+R\+Q\+Handler(void)}{TIM8_TRG_COM_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M8\+\_\+\+T\+R\+G\+\_\+\+C\+O\+M\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a5e1addc9f7d3e0ffa4ed6ca284123043}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a5e1addc9f7d3e0ffa4ed6ca284123043}
+
+
+Definition at line 715 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!T\+I\+M8\+\_\+\+U\+P\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M8\+\_\+\+U\+P\+\_\+\+I\+R\+Q\+Handler}}
+\index{T\+I\+M8\+\_\+\+U\+P\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M8\+\_\+\+U\+P\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M8\+\_\+\+U\+P\+\_\+\+I\+R\+Q\+Handler(void)}{TIM8_UP_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} T\+I\+M8\+\_\+\+U\+P\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a255e5267ee3275b665940ed1a61ae3ce}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a255e5267ee3275b665940ed1a61ae3ce}
+
+
+Definition at line 703 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!U\+A\+R\+T4\+\_\+\+I\+R\+Q\+Handler@{U\+A\+R\+T4\+\_\+\+I\+R\+Q\+Handler}}
+\index{U\+A\+R\+T4\+\_\+\+I\+R\+Q\+Handler@{U\+A\+R\+T4\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T4\+\_\+\+I\+R\+Q\+Handler(void)}{UART4_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T4\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a88774889b903ae43403cd7e7a11a8f4f}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a88774889b903ae43403cd7e7a11a8f4f}
+
+
+Definition at line 792 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!U\+A\+R\+T5\+\_\+\+I\+R\+Q\+Handler@{U\+A\+R\+T5\+\_\+\+I\+R\+Q\+Handler}}
+\index{U\+A\+R\+T5\+\_\+\+I\+R\+Q\+Handler@{U\+A\+R\+T5\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T5\+\_\+\+I\+R\+Q\+Handler(void)}{UART5_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+A\+R\+T5\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_aa1c474cac5abda23ebbe8a9e8f4d7551}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_aa1c474cac5abda23ebbe8a9e8f4d7551}
+
+
+Definition at line 803 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!Usage\+Fault\+Exception@{Usage\+Fault\+Exception}}
+\index{Usage\+Fault\+Exception@{Usage\+Fault\+Exception}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{Usage\+Fault\+Exception(void)}{UsageFaultException(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Usage\+Fault\+Exception (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_ab97314afc4d766d7a8b47255195650d5}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_ab97314afc4d766d7a8b47255195650d5}
+
+
+Definition at line 100 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!U\+S\+A\+R\+T1\+\_\+\+I\+R\+Q\+Handler@{U\+S\+A\+R\+T1\+\_\+\+I\+R\+Q\+Handler}}
+\index{U\+S\+A\+R\+T1\+\_\+\+I\+R\+Q\+Handler@{U\+S\+A\+R\+T1\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+A\+R\+T1\+\_\+\+I\+R\+Q\+Handler(void)}{USART1_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+S\+A\+R\+T1\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a7139cd4baabbbcbab0c1fe6d7d4ae1cc}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a7139cd4baabbbcbab0c1fe6d7d4ae1cc}
+
+
+Definition at line 605 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!U\+S\+A\+R\+T2\+\_\+\+I\+R\+Q\+Handler@{U\+S\+A\+R\+T2\+\_\+\+I\+R\+Q\+Handler}}
+\index{U\+S\+A\+R\+T2\+\_\+\+I\+R\+Q\+Handler@{U\+S\+A\+R\+T2\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+A\+R\+T2\+\_\+\+I\+R\+Q\+Handler(void)}{USART2_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+S\+A\+R\+T2\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a0ca6fd0e6f77921dd1123539857ba0a8}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a0ca6fd0e6f77921dd1123539857ba0a8}
+
+
+Definition at line 629 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!U\+S\+A\+R\+T3\+\_\+\+I\+R\+Q\+Handler@{U\+S\+A\+R\+T3\+\_\+\+I\+R\+Q\+Handler}}
+\index{U\+S\+A\+R\+T3\+\_\+\+I\+R\+Q\+Handler@{U\+S\+A\+R\+T3\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+A\+R\+T3\+\_\+\+I\+R\+Q\+Handler(void)}{USART3_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+S\+A\+R\+T3\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a0d108a3468b2051548183ee5ca2158a0}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a0d108a3468b2051548183ee5ca2158a0}
+
+
+Definition at line 640 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!U\+S\+B\+\_\+\+H\+P\+\_\+\+C\+A\+N\+\_\+\+T\+X\+\_\+\+I\+R\+Q\+Handler@{U\+S\+B\+\_\+\+H\+P\+\_\+\+C\+A\+N\+\_\+\+T\+X\+\_\+\+I\+R\+Q\+Handler}}
+\index{U\+S\+B\+\_\+\+H\+P\+\_\+\+C\+A\+N\+\_\+\+T\+X\+\_\+\+I\+R\+Q\+Handler@{U\+S\+B\+\_\+\+H\+P\+\_\+\+C\+A\+N\+\_\+\+T\+X\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+H\+P\+\_\+\+C\+A\+N\+\_\+\+T\+X\+\_\+\+I\+R\+Q\+Handler(void)}{USB_HP_CAN_TX_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+S\+B\+\_\+\+H\+P\+\_\+\+C\+A\+N\+\_\+\+T\+X\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a800532e86d7abe0bc34a57167d13e5ad}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a800532e86d7abe0bc34a57167d13e5ad}
+
+
+Definition at line 386 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!U\+S\+B\+\_\+\+L\+P\+\_\+\+C\+A\+N\+\_\+\+R\+X0\+\_\+\+I\+R\+Q\+Handler@{U\+S\+B\+\_\+\+L\+P\+\_\+\+C\+A\+N\+\_\+\+R\+X0\+\_\+\+I\+R\+Q\+Handler}}
+\index{U\+S\+B\+\_\+\+L\+P\+\_\+\+C\+A\+N\+\_\+\+R\+X0\+\_\+\+I\+R\+Q\+Handler@{U\+S\+B\+\_\+\+L\+P\+\_\+\+C\+A\+N\+\_\+\+R\+X0\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+L\+P\+\_\+\+C\+A\+N\+\_\+\+R\+X0\+\_\+\+I\+R\+Q\+Handler(void)}{USB_LP_CAN_RX0_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+S\+B\+\_\+\+L\+P\+\_\+\+C\+A\+N\+\_\+\+R\+X0\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a6543c7b9f9bdb00685db956a0e7c560b}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a6543c7b9f9bdb00685db956a0e7c560b}
+
+
+Definition at line 398 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!U\+S\+B\+Wake\+Up\+\_\+\+I\+R\+Q\+Handler@{U\+S\+B\+Wake\+Up\+\_\+\+I\+R\+Q\+Handler}}
+\index{U\+S\+B\+Wake\+Up\+\_\+\+I\+R\+Q\+Handler@{U\+S\+B\+Wake\+Up\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+Wake\+Up\+\_\+\+I\+R\+Q\+Handler(void)}{USBWakeUp_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} U\+S\+B\+Wake\+Up\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_ab2b0674cedda310639e2bd51e701d590}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_ab2b0674cedda310639e2bd51e701d590}
+
+
+Definition at line 680 of file stm32f10x\+\_\+it.\+c.
+
+\index{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}!W\+W\+D\+G\+\_\+\+I\+R\+Q\+Handler@{W\+W\+D\+G\+\_\+\+I\+R\+Q\+Handler}}
+\index{W\+W\+D\+G\+\_\+\+I\+R\+Q\+Handler@{W\+W\+D\+G\+\_\+\+I\+R\+Q\+Handler}!iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c@{iot-\/lab\+\_\+\+M3/configure/stm32f10x\+\_\+it.\+c}}
+\subsubsection[{\texorpdfstring{W\+W\+D\+G\+\_\+\+I\+R\+Q\+Handler(void)}{WWDG_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} W\+W\+D\+G\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iot-lab___m3_2configure_2stm32f10x__it_8c_a049e27b7d5d0d36a331e6ef5e78e1fc5}{}\label{iot-lab___m3_2configure_2stm32f10x__it_8c_a049e27b7d5d0d36a331e6ef5e78e1fc5}
+
+
+Definition at line 159 of file stm32f10x\+\_\+it.\+c.
+

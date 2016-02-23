@@ -1,0 +1,177 @@
+\hypertarget{flash___f_t_f_l_8h}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bootloader/k20/disk\+\_\+flash\+\_\+utils/flash\+\_\+\+F\+T\+FL.h File Reference}
+\label{flash___f_t_f_l_8h}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bootloader/k20/disk\+\_\+flash\+\_\+utils/flash\+\_\+\+F\+T\+F\+L.\+h@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bootloader/k20/disk\+\_\+flash\+\_\+utils/flash\+\_\+\+F\+T\+F\+L.\+h}}
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{flash___f_t_f_l_8h_a110486b66396c0177650ebf5b1f0fc70}{Flash\+\_\+\+OK}~0x00
+\begin{DoxyCompactList}\small\item\em The file includes flash routines. Based on Freescale Flash driver. \end{DoxyCompactList}\item 
+\#define \hyperlink{flash___f_t_f_l_8h_a7aaecd2c1f72840535f20bab85cbb315}{Flash\+\_\+\+F\+A\+C\+C\+E\+RR}~0x01
+\item 
+\#define \hyperlink{flash___f_t_f_l_8h_aa0fcc143cfeea30b9b548f4653ad82fc}{Flash\+\_\+\+F\+P\+V\+I\+OL}~0x02
+\item 
+\#define \hyperlink{flash___f_t_f_l_8h_a00b3e33718a3ff52f9a6315ceaf11c62}{Flash\+\_\+\+M\+G\+S\+T\+A\+T0}~0x04
+\item 
+\#define \hyperlink{flash___f_t_f_l_8h_a28827d2920381be2bd8fa8f7b0c30fe8}{Flash\+\_\+\+R\+D\+C\+O\+L\+E\+RR}~0x08
+\item 
+\#define \hyperlink{flash___f_t_f_l_8h_a48dbaecb87ee7514e0dc627fbd2aa143}{Flash\+\_\+\+N\+O\+T\+\_\+\+E\+R\+A\+S\+ED}~0x10
+\item 
+\#define \hyperlink{flash___f_t_f_l_8h_a17d4378c7c828e75cbf9ade6a6cefd4b}{Flash\+\_\+\+C\+O\+N\+T\+E\+N\+T\+E\+RR}~0x11
+\item 
+\#define \hyperlink{flash___f_t_f_l_8h_adca74fdd60a6f7581379c8eff599d6bc}{Flash\+Cmd\+\_\+\+Program\+Long\+Word}~0x06
+\item 
+\#define \hyperlink{flash___f_t_f_l_8h_ac284dbc9c3a7977a9158c61d40c3a1c0}{Flash\+Cmd\+\_\+\+Sector\+Erase}~0x09
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{flash___f_t_f_l_8h_a3a01e9b00ec5faf73f9337837a724cfc}{Flash\+\_\+\+Init} (unsigned char Flash\+Clock\+Div)
+\begin{DoxyCompactList}\small\item\em I The file includes flash routines. Based on Freescale Flash driver. \end{DoxyCompactList}\item 
+unsigned char \hyperlink{flash___f_t_f_l_8h_a94615041941ce762167bf4c8fa94ba4a}{Flash\+\_\+\+Sector\+Erase} (\hyperlink{types_8h_a5532400b872b4aa84e54335bf458a318}{uint\+\_\+32} Flash\+Ptr)
+\item 
+unsigned char \hyperlink{flash___f_t_f_l_8h_a67f75f5ad7212839d7177ca0a048cec2}{Flash\+\_\+\+Byte\+Program} (\hyperlink{types_8h_a5532400b872b4aa84e54335bf458a318}{uint\+\_\+32} Flash\+Start\+Add, \hyperlink{types_8h_a5532400b872b4aa84e54335bf458a318}{uint\+\_\+32} $\ast$Data\+Src\+Ptr, \hyperlink{types_8h_a5532400b872b4aa84e54335bf458a318}{uint\+\_\+32} Number\+Of\+Bytes)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{flash___f_t_f_l_8h_a557a0cb9e5b013a49f730d88714ce9a0}{Sp\+Sub} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{flash___f_t_f_l_8h_ac6740e6f40e7c74eab1fff77e8360ffa}{Sp\+Sub\+End} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{flash\+\_\+\+F\+T\+F\+L.\+h@{flash\+\_\+\+F\+T\+F\+L.\+h}!Flash\+\_\+\+C\+O\+N\+T\+E\+N\+T\+E\+RR@{Flash\+\_\+\+C\+O\+N\+T\+E\+N\+T\+E\+RR}}
+\index{Flash\+\_\+\+C\+O\+N\+T\+E\+N\+T\+E\+RR@{Flash\+\_\+\+C\+O\+N\+T\+E\+N\+T\+E\+RR}!flash\+\_\+\+F\+T\+F\+L.\+h@{flash\+\_\+\+F\+T\+F\+L.\+h}}
+\subsubsection[{\texorpdfstring{Flash\+\_\+\+C\+O\+N\+T\+E\+N\+T\+E\+RR}{Flash_CONTENTERR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Flash\+\_\+\+C\+O\+N\+T\+E\+N\+T\+E\+RR~0x11}\hypertarget{flash___f_t_f_l_8h_a17d4378c7c828e75cbf9ade6a6cefd4b}{}\label{flash___f_t_f_l_8h_a17d4378c7c828e75cbf9ade6a6cefd4b}
+
+
+Definition at line 24 of file flash\+\_\+\+F\+T\+F\+L.\+h.
+
+\index{flash\+\_\+\+F\+T\+F\+L.\+h@{flash\+\_\+\+F\+T\+F\+L.\+h}!Flash\+\_\+\+F\+A\+C\+C\+E\+RR@{Flash\+\_\+\+F\+A\+C\+C\+E\+RR}}
+\index{Flash\+\_\+\+F\+A\+C\+C\+E\+RR@{Flash\+\_\+\+F\+A\+C\+C\+E\+RR}!flash\+\_\+\+F\+T\+F\+L.\+h@{flash\+\_\+\+F\+T\+F\+L.\+h}}
+\subsubsection[{\texorpdfstring{Flash\+\_\+\+F\+A\+C\+C\+E\+RR}{Flash_FACCERR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Flash\+\_\+\+F\+A\+C\+C\+E\+RR~0x01}\hypertarget{flash___f_t_f_l_8h_a7aaecd2c1f72840535f20bab85cbb315}{}\label{flash___f_t_f_l_8h_a7aaecd2c1f72840535f20bab85cbb315}
+
+
+Definition at line 19 of file flash\+\_\+\+F\+T\+F\+L.\+h.
+
+\index{flash\+\_\+\+F\+T\+F\+L.\+h@{flash\+\_\+\+F\+T\+F\+L.\+h}!Flash\+\_\+\+F\+P\+V\+I\+OL@{Flash\+\_\+\+F\+P\+V\+I\+OL}}
+\index{Flash\+\_\+\+F\+P\+V\+I\+OL@{Flash\+\_\+\+F\+P\+V\+I\+OL}!flash\+\_\+\+F\+T\+F\+L.\+h@{flash\+\_\+\+F\+T\+F\+L.\+h}}
+\subsubsection[{\texorpdfstring{Flash\+\_\+\+F\+P\+V\+I\+OL}{Flash_FPVIOL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Flash\+\_\+\+F\+P\+V\+I\+OL~0x02}\hypertarget{flash___f_t_f_l_8h_aa0fcc143cfeea30b9b548f4653ad82fc}{}\label{flash___f_t_f_l_8h_aa0fcc143cfeea30b9b548f4653ad82fc}
+
+
+Definition at line 20 of file flash\+\_\+\+F\+T\+F\+L.\+h.
+
+\index{flash\+\_\+\+F\+T\+F\+L.\+h@{flash\+\_\+\+F\+T\+F\+L.\+h}!Flash\+\_\+\+M\+G\+S\+T\+A\+T0@{Flash\+\_\+\+M\+G\+S\+T\+A\+T0}}
+\index{Flash\+\_\+\+M\+G\+S\+T\+A\+T0@{Flash\+\_\+\+M\+G\+S\+T\+A\+T0}!flash\+\_\+\+F\+T\+F\+L.\+h@{flash\+\_\+\+F\+T\+F\+L.\+h}}
+\subsubsection[{\texorpdfstring{Flash\+\_\+\+M\+G\+S\+T\+A\+T0}{Flash_MGSTAT0}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Flash\+\_\+\+M\+G\+S\+T\+A\+T0~0x04}\hypertarget{flash___f_t_f_l_8h_a00b3e33718a3ff52f9a6315ceaf11c62}{}\label{flash___f_t_f_l_8h_a00b3e33718a3ff52f9a6315ceaf11c62}
+
+
+Definition at line 21 of file flash\+\_\+\+F\+T\+F\+L.\+h.
+
+\index{flash\+\_\+\+F\+T\+F\+L.\+h@{flash\+\_\+\+F\+T\+F\+L.\+h}!Flash\+\_\+\+N\+O\+T\+\_\+\+E\+R\+A\+S\+ED@{Flash\+\_\+\+N\+O\+T\+\_\+\+E\+R\+A\+S\+ED}}
+\index{Flash\+\_\+\+N\+O\+T\+\_\+\+E\+R\+A\+S\+ED@{Flash\+\_\+\+N\+O\+T\+\_\+\+E\+R\+A\+S\+ED}!flash\+\_\+\+F\+T\+F\+L.\+h@{flash\+\_\+\+F\+T\+F\+L.\+h}}
+\subsubsection[{\texorpdfstring{Flash\+\_\+\+N\+O\+T\+\_\+\+E\+R\+A\+S\+ED}{Flash_NOT_ERASED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Flash\+\_\+\+N\+O\+T\+\_\+\+E\+R\+A\+S\+ED~0x10}\hypertarget{flash___f_t_f_l_8h_a48dbaecb87ee7514e0dc627fbd2aa143}{}\label{flash___f_t_f_l_8h_a48dbaecb87ee7514e0dc627fbd2aa143}
+
+
+Definition at line 23 of file flash\+\_\+\+F\+T\+F\+L.\+h.
+
+\index{flash\+\_\+\+F\+T\+F\+L.\+h@{flash\+\_\+\+F\+T\+F\+L.\+h}!Flash\+\_\+\+OK@{Flash\+\_\+\+OK}}
+\index{Flash\+\_\+\+OK@{Flash\+\_\+\+OK}!flash\+\_\+\+F\+T\+F\+L.\+h@{flash\+\_\+\+F\+T\+F\+L.\+h}}
+\subsubsection[{\texorpdfstring{Flash\+\_\+\+OK}{Flash_OK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Flash\+\_\+\+OK~0x00}\hypertarget{flash___f_t_f_l_8h_a110486b66396c0177650ebf5b1f0fc70}{}\label{flash___f_t_f_l_8h_a110486b66396c0177650ebf5b1f0fc70}
+
+
+The file includes flash routines. Based on Freescale Flash driver. 
+
+\begin{DoxyAuthor}{Author}
+Xavi Vilajosana \href{mailto:xvilajosana@eecs.berkeley.edu}{\tt xvilajosana@eecs.\+berkeley.\+edu}, June 2012. 
+\end{DoxyAuthor}
+
+
+Definition at line 18 of file flash\+\_\+\+F\+T\+F\+L.\+h.
+
+\index{flash\+\_\+\+F\+T\+F\+L.\+h@{flash\+\_\+\+F\+T\+F\+L.\+h}!Flash\+\_\+\+R\+D\+C\+O\+L\+E\+RR@{Flash\+\_\+\+R\+D\+C\+O\+L\+E\+RR}}
+\index{Flash\+\_\+\+R\+D\+C\+O\+L\+E\+RR@{Flash\+\_\+\+R\+D\+C\+O\+L\+E\+RR}!flash\+\_\+\+F\+T\+F\+L.\+h@{flash\+\_\+\+F\+T\+F\+L.\+h}}
+\subsubsection[{\texorpdfstring{Flash\+\_\+\+R\+D\+C\+O\+L\+E\+RR}{Flash_RDCOLERR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Flash\+\_\+\+R\+D\+C\+O\+L\+E\+RR~0x08}\hypertarget{flash___f_t_f_l_8h_a28827d2920381be2bd8fa8f7b0c30fe8}{}\label{flash___f_t_f_l_8h_a28827d2920381be2bd8fa8f7b0c30fe8}
+
+
+Definition at line 22 of file flash\+\_\+\+F\+T\+F\+L.\+h.
+
+\index{flash\+\_\+\+F\+T\+F\+L.\+h@{flash\+\_\+\+F\+T\+F\+L.\+h}!Flash\+Cmd\+\_\+\+Program\+Long\+Word@{Flash\+Cmd\+\_\+\+Program\+Long\+Word}}
+\index{Flash\+Cmd\+\_\+\+Program\+Long\+Word@{Flash\+Cmd\+\_\+\+Program\+Long\+Word}!flash\+\_\+\+F\+T\+F\+L.\+h@{flash\+\_\+\+F\+T\+F\+L.\+h}}
+\subsubsection[{\texorpdfstring{Flash\+Cmd\+\_\+\+Program\+Long\+Word}{FlashCmd_ProgramLongWord}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Flash\+Cmd\+\_\+\+Program\+Long\+Word~0x06}\hypertarget{flash___f_t_f_l_8h_adca74fdd60a6f7581379c8eff599d6bc}{}\label{flash___f_t_f_l_8h_adca74fdd60a6f7581379c8eff599d6bc}
+
+
+Definition at line 27 of file flash\+\_\+\+F\+T\+F\+L.\+h.
+
+\index{flash\+\_\+\+F\+T\+F\+L.\+h@{flash\+\_\+\+F\+T\+F\+L.\+h}!Flash\+Cmd\+\_\+\+Sector\+Erase@{Flash\+Cmd\+\_\+\+Sector\+Erase}}
+\index{Flash\+Cmd\+\_\+\+Sector\+Erase@{Flash\+Cmd\+\_\+\+Sector\+Erase}!flash\+\_\+\+F\+T\+F\+L.\+h@{flash\+\_\+\+F\+T\+F\+L.\+h}}
+\subsubsection[{\texorpdfstring{Flash\+Cmd\+\_\+\+Sector\+Erase}{FlashCmd_SectorErase}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Flash\+Cmd\+\_\+\+Sector\+Erase~0x09}\hypertarget{flash___f_t_f_l_8h_ac284dbc9c3a7977a9158c61d40c3a1c0}{}\label{flash___f_t_f_l_8h_ac284dbc9c3a7977a9158c61d40c3a1c0}
+
+
+Definition at line 28 of file flash\+\_\+\+F\+T\+F\+L.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{flash\+\_\+\+F\+T\+F\+L.\+h@{flash\+\_\+\+F\+T\+F\+L.\+h}!Flash\+\_\+\+Byte\+Program@{Flash\+\_\+\+Byte\+Program}}
+\index{Flash\+\_\+\+Byte\+Program@{Flash\+\_\+\+Byte\+Program}!flash\+\_\+\+F\+T\+F\+L.\+h@{flash\+\_\+\+F\+T\+F\+L.\+h}}
+\subsubsection[{\texorpdfstring{Flash\+\_\+\+Byte\+Program(uint\+\_\+32 Flash\+Start\+Add, uint\+\_\+32 $\ast$\+Data\+Src\+Ptr, uint\+\_\+32 Number\+Of\+Bytes)}{Flash_ByteProgram(uint_32 FlashStartAdd, uint_32 *DataSrcPtr, uint_32 NumberOfBytes)}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Flash\+\_\+\+Byte\+Program (
+\begin{DoxyParamCaption}
+\item[{{\bf uint\+\_\+32}}]{Flash\+Start\+Add, }
+\item[{{\bf uint\+\_\+32} $\ast$}]{Data\+Src\+Ptr, }
+\item[{{\bf uint\+\_\+32}}]{Number\+Of\+Bytes}
+\end{DoxyParamCaption}
+)}\hypertarget{flash___f_t_f_l_8h_a67f75f5ad7212839d7177ca0a048cec2}{}\label{flash___f_t_f_l_8h_a67f75f5ad7212839d7177ca0a048cec2}
+
+
+Definition at line 138 of file flash\+\_\+\+F\+T\+F\+L.\+c.
+
+\index{flash\+\_\+\+F\+T\+F\+L.\+h@{flash\+\_\+\+F\+T\+F\+L.\+h}!Flash\+\_\+\+Init@{Flash\+\_\+\+Init}}
+\index{Flash\+\_\+\+Init@{Flash\+\_\+\+Init}!flash\+\_\+\+F\+T\+F\+L.\+h@{flash\+\_\+\+F\+T\+F\+L.\+h}}
+\subsubsection[{\texorpdfstring{Flash\+\_\+\+Init(unsigned char Flash\+Clock\+Div)}{Flash_Init(unsigned char FlashClockDiv)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Flash\+\_\+\+Init (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{Flash\+Clock\+Div}
+\end{DoxyParamCaption}
+)}\hypertarget{flash___f_t_f_l_8h_a3a01e9b00ec5faf73f9337837a724cfc}{}\label{flash___f_t_f_l_8h_a3a01e9b00ec5faf73f9337837a724cfc}
+
+
+I The file includes flash routines. Based on Freescale Flash driver. 
+
+\begin{DoxyAuthor}{Author}
+Xavi Vilajosana \href{mailto:xvilajosana@eecs.berkeley.edu}{\tt xvilajosana@eecs.\+berkeley.\+edu}, June 2012. 
+\end{DoxyAuthor}
+
+
+Definition at line 36 of file flash\+\_\+\+F\+T\+F\+L.\+c.
+
+\index{flash\+\_\+\+F\+T\+F\+L.\+h@{flash\+\_\+\+F\+T\+F\+L.\+h}!Flash\+\_\+\+Sector\+Erase@{Flash\+\_\+\+Sector\+Erase}}
+\index{Flash\+\_\+\+Sector\+Erase@{Flash\+\_\+\+Sector\+Erase}!flash\+\_\+\+F\+T\+F\+L.\+h@{flash\+\_\+\+F\+T\+F\+L.\+h}}
+\subsubsection[{\texorpdfstring{Flash\+\_\+\+Sector\+Erase(uint\+\_\+32 Flash\+Ptr)}{Flash_SectorErase(uint_32 FlashPtr)}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Flash\+\_\+\+Sector\+Erase (
+\begin{DoxyParamCaption}
+\item[{{\bf uint\+\_\+32}}]{Flash\+Ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{flash___f_t_f_l_8h_a94615041941ce762167bf4c8fa94ba4a}{}\label{flash___f_t_f_l_8h_a94615041941ce762167bf4c8fa94ba4a}
+
+
+Definition at line 75 of file flash\+\_\+\+F\+T\+F\+L.\+c.
+
+\index{flash\+\_\+\+F\+T\+F\+L.\+h@{flash\+\_\+\+F\+T\+F\+L.\+h}!Sp\+Sub@{Sp\+Sub}}
+\index{Sp\+Sub@{Sp\+Sub}!flash\+\_\+\+F\+T\+F\+L.\+h@{flash\+\_\+\+F\+T\+F\+L.\+h}}
+\subsubsection[{\texorpdfstring{Sp\+Sub(void)}{SpSub(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Sp\+Sub (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{flash___f_t_f_l_8h_a557a0cb9e5b013a49f730d88714ce9a0}{}\label{flash___f_t_f_l_8h_a557a0cb9e5b013a49f730d88714ce9a0}
+
+
+Definition at line 229 of file flash\+\_\+\+F\+T\+F\+L.\+c.
+
+\index{flash\+\_\+\+F\+T\+F\+L.\+h@{flash\+\_\+\+F\+T\+F\+L.\+h}!Sp\+Sub\+End@{Sp\+Sub\+End}}
+\index{Sp\+Sub\+End@{Sp\+Sub\+End}!flash\+\_\+\+F\+T\+F\+L.\+h@{flash\+\_\+\+F\+T\+F\+L.\+h}}
+\subsubsection[{\texorpdfstring{Sp\+Sub\+End(void)}{SpSubEnd(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Sp\+Sub\+End (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{flash___f_t_f_l_8h_ac6740e6f40e7c74eab1fff77e8360ffa}{}\label{flash___f_t_f_l_8h_ac6740e6f40e7c74eab1fff77e8360ffa}
+
+
+Definition at line 239 of file flash\+\_\+\+F\+T\+F\+L.\+c.
+

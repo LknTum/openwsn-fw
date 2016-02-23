@@ -1,0 +1,59 @@
+\hypertarget{udma_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/source/udma.c File Reference}
+\label{udma_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/source/udma.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/\+Open\+Mote-\/\+C\+C2538/source/udma.\+c}}
+{\ttfamily \#include $<$headers/hw\+\_\+sys\+\_\+ctrl.\+h$>$}\\*
+{\ttfamily \#include $<$headers/hw\+\_\+udma.\+h$>$}\\*
+{\ttfamily \#include $<$headers/hw\+\_\+udmachctl.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}debug.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}interrupt.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}udma.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__udma__api_ga9c2c43120f113a79cbabf894f5503f41}{u\+D\+M\+A\+Enable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__udma__api_ga850808381da300573a6101e5a27f4675}{u\+D\+M\+A\+Disable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__udma__api_gad01185c0d570c65da3642e6c60ea4973}{u\+D\+M\+A\+Error\+Status\+Get} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__udma__api_ga875220775201c33cd3c97ebcbca83ac2}{u\+D\+M\+A\+Error\+Status\+Clear} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__udma__api_ga41e21189773539bbc5f302863cd5bf06}{u\+D\+M\+A\+Channel\+Enable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Channel\+Num)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__udma__api_ga28ded922b57dbc5772036ddcbb8f28d6}{u\+D\+M\+A\+Channel\+Disable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Channel\+Num)
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group__udma__api_ga71a15b561a538ff126aabac85ee311b2}{u\+D\+M\+A\+Channel\+Is\+Enabled} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Channel\+Num)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__udma__api_ga9c94fd8f9422abb5231dacb6d51934bb}{u\+D\+M\+A\+Control\+Base\+Set} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} $\ast$p\+Control\+Table)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} $\ast$ \hyperlink{group__udma__api_ga09c51018a10f41216497396e4ec5a6fd}{u\+D\+M\+A\+Control\+Base\+Get} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} $\ast$ \hyperlink{group__udma__api_ga3d755ac6e59821949a57d1ceca7082ae}{u\+D\+M\+A\+Control\+Alternate\+Base\+Get} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__udma__api_ga1020903cbcc5a03434c3f5c13f252a72}{u\+D\+M\+A\+Channel\+Request} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Channel\+Num)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__udma__api_gadcd88d930702b3773952214e27bba3f6}{u\+D\+M\+A\+Channel\+Attribute\+Enable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Channel\+Num, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Attr)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__udma__api_ga687745cb1ba10bcfbaac4bf0bbfd4132}{u\+D\+M\+A\+Channel\+Attribute\+Disable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Channel\+Num, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Attr)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__udma__api_ga741cac245ca559d1a1112077a7f46b8c}{u\+D\+M\+A\+Channel\+Attribute\+Get} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Channel\+Num)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__udma__api_ga6f73ab006ff6a593eeeb947130bbdf6f}{u\+D\+M\+A\+Channel\+Control\+Set} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Channel\+Struct\+Index, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Control)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__udma__api_ga938c21dc70cb6e11e6eb826de0fa21c3}{u\+D\+M\+A\+Channel\+Transfer\+Set} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Channel\+Struct\+Index, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Mode, \hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} $\ast$pv\+Src\+Addr, \hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} $\ast$pv\+Dst\+Addr, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Transfer\+Size)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__udma__api_gaac152bd620c5edc6d2d348ac7771c882}{u\+D\+M\+A\+Channel\+Scatter\+Gather\+Set} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Channel\+Num, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Task\+Count, \hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} $\ast$pv\+Task\+List, \hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Is\+Periph\+SG)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__udma__api_ga52908962d5fdc8ad21d14a3ebb19c0b9}{u\+D\+M\+A\+Channel\+Size\+Get} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Channel\+Struct\+Index)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__udma__api_ga84a74cc2b06a6a59506dcdfabd0c7972}{u\+D\+M\+A\+Channel\+Mode\+Get} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Channel\+Struct\+Index)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__udma__api_ga38e714509554e38d29563bf7832f7098}{u\+D\+M\+A\+Int\+Register} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Int\+Channel, \hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}($\ast$pfn\+Handler)(\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}))
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__udma__api_ga8728732286c8948fd715e58ca04dbd84}{u\+D\+M\+A\+Int\+Unregister} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Int\+Channel)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__udma__api_gaf3ef981569462dff3ebcf00f327be60b}{u\+D\+M\+A\+Int\+Status} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__udma__api_gaf06b67b4b30df8188540cd06634c9bb9}{u\+D\+M\+A\+Int\+Clear} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Chan\+Mask)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__udma__api_gaa3c73411a7305843059d0984efaf7770}{u\+D\+M\+A\+Channel\+Assign} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Mapping)
+\end{DoxyCompactItemize}

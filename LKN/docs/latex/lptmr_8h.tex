@@ -1,0 +1,90 @@
+\hypertarget{lptmr_8h}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/k20/bsp\+\_\+ext/lptmr.h File Reference}
+\label{lptmr_8h}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/k20/bsp\+\_\+ext/lptmr.\+h@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/k20/bsp\+\_\+ext/lptmr.\+h}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{lptmr_8h_ad4c054b54b86e2e76aa67e84801cfdc9}{L\+P\+T\+M\+R\+\_\+\+U\+S\+E\+\_\+\+I\+R\+C\+LK}~0
+\item 
+\#define \hyperlink{lptmr_8h_af79ae96b0a1f8a9e9da1c3d5f60ef6ee}{L\+P\+T\+M\+R\+\_\+\+U\+S\+E\+\_\+\+L\+P\+O\+C\+LK}~1
+\item 
+\#define \hyperlink{lptmr_8h_aa2d482ea6762cfa0811c19c1710458db}{L\+P\+T\+M\+R\+\_\+\+U\+S\+E\+\_\+\+E\+R\+C\+L\+K32}~2
+\item 
+\#define \hyperlink{lptmr_8h_a7945fbe8b0d44f37a47d2a61978dd34c}{L\+P\+T\+M\+R\+\_\+\+U\+S\+E\+\_\+\+O\+S\+C\+E\+R\+C\+LK}~3
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{lptmr_8h_abc96a64d0b4c381ad838dfc94a222de5}{time\+\_\+delay\+\_\+ms} (\hyperlink{arm__cm4_8h_a9560e25c315bae45d1ed4e2ce49ce55a}{uint32})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{lptmr_8h_adf9173a36cd117a72e3e627035c6058f}{lptmr\+\_\+isr} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{lptmr_8h_a7d09e9b493a29ead9144d746b8a5d2cb}{lptmr\+\_\+init} (int count, int clock\+\_\+source)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{lptmr.\+h@{lptmr.\+h}!L\+P\+T\+M\+R\+\_\+\+U\+S\+E\+\_\+\+E\+R\+C\+L\+K32@{L\+P\+T\+M\+R\+\_\+\+U\+S\+E\+\_\+\+E\+R\+C\+L\+K32}}
+\index{L\+P\+T\+M\+R\+\_\+\+U\+S\+E\+\_\+\+E\+R\+C\+L\+K32@{L\+P\+T\+M\+R\+\_\+\+U\+S\+E\+\_\+\+E\+R\+C\+L\+K32}!lptmr.\+h@{lptmr.\+h}}
+\subsubsection[{\texorpdfstring{L\+P\+T\+M\+R\+\_\+\+U\+S\+E\+\_\+\+E\+R\+C\+L\+K32}{LPTMR_USE_ERCLK32}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+P\+T\+M\+R\+\_\+\+U\+S\+E\+\_\+\+E\+R\+C\+L\+K32~2}\hypertarget{lptmr_8h_aa2d482ea6762cfa0811c19c1710458db}{}\label{lptmr_8h_aa2d482ea6762cfa0811c19c1710458db}
+
+
+Definition at line 16 of file lptmr.\+h.
+
+\index{lptmr.\+h@{lptmr.\+h}!L\+P\+T\+M\+R\+\_\+\+U\+S\+E\+\_\+\+I\+R\+C\+LK@{L\+P\+T\+M\+R\+\_\+\+U\+S\+E\+\_\+\+I\+R\+C\+LK}}
+\index{L\+P\+T\+M\+R\+\_\+\+U\+S\+E\+\_\+\+I\+R\+C\+LK@{L\+P\+T\+M\+R\+\_\+\+U\+S\+E\+\_\+\+I\+R\+C\+LK}!lptmr.\+h@{lptmr.\+h}}
+\subsubsection[{\texorpdfstring{L\+P\+T\+M\+R\+\_\+\+U\+S\+E\+\_\+\+I\+R\+C\+LK}{LPTMR_USE_IRCLK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+P\+T\+M\+R\+\_\+\+U\+S\+E\+\_\+\+I\+R\+C\+LK~0}\hypertarget{lptmr_8h_ad4c054b54b86e2e76aa67e84801cfdc9}{}\label{lptmr_8h_ad4c054b54b86e2e76aa67e84801cfdc9}
+
+
+Definition at line 14 of file lptmr.\+h.
+
+\index{lptmr.\+h@{lptmr.\+h}!L\+P\+T\+M\+R\+\_\+\+U\+S\+E\+\_\+\+L\+P\+O\+C\+LK@{L\+P\+T\+M\+R\+\_\+\+U\+S\+E\+\_\+\+L\+P\+O\+C\+LK}}
+\index{L\+P\+T\+M\+R\+\_\+\+U\+S\+E\+\_\+\+L\+P\+O\+C\+LK@{L\+P\+T\+M\+R\+\_\+\+U\+S\+E\+\_\+\+L\+P\+O\+C\+LK}!lptmr.\+h@{lptmr.\+h}}
+\subsubsection[{\texorpdfstring{L\+P\+T\+M\+R\+\_\+\+U\+S\+E\+\_\+\+L\+P\+O\+C\+LK}{LPTMR_USE_LPOCLK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+P\+T\+M\+R\+\_\+\+U\+S\+E\+\_\+\+L\+P\+O\+C\+LK~1}\hypertarget{lptmr_8h_af79ae96b0a1f8a9e9da1c3d5f60ef6ee}{}\label{lptmr_8h_af79ae96b0a1f8a9e9da1c3d5f60ef6ee}
+
+
+Definition at line 15 of file lptmr.\+h.
+
+\index{lptmr.\+h@{lptmr.\+h}!L\+P\+T\+M\+R\+\_\+\+U\+S\+E\+\_\+\+O\+S\+C\+E\+R\+C\+LK@{L\+P\+T\+M\+R\+\_\+\+U\+S\+E\+\_\+\+O\+S\+C\+E\+R\+C\+LK}}
+\index{L\+P\+T\+M\+R\+\_\+\+U\+S\+E\+\_\+\+O\+S\+C\+E\+R\+C\+LK@{L\+P\+T\+M\+R\+\_\+\+U\+S\+E\+\_\+\+O\+S\+C\+E\+R\+C\+LK}!lptmr.\+h@{lptmr.\+h}}
+\subsubsection[{\texorpdfstring{L\+P\+T\+M\+R\+\_\+\+U\+S\+E\+\_\+\+O\+S\+C\+E\+R\+C\+LK}{LPTMR_USE_OSCERCLK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+P\+T\+M\+R\+\_\+\+U\+S\+E\+\_\+\+O\+S\+C\+E\+R\+C\+LK~3}\hypertarget{lptmr_8h_a7945fbe8b0d44f37a47d2a61978dd34c}{}\label{lptmr_8h_a7945fbe8b0d44f37a47d2a61978dd34c}
+
+
+Definition at line 17 of file lptmr.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{lptmr.\+h@{lptmr.\+h}!lptmr\+\_\+init@{lptmr\+\_\+init}}
+\index{lptmr\+\_\+init@{lptmr\+\_\+init}!lptmr.\+h@{lptmr.\+h}}
+\subsubsection[{\texorpdfstring{lptmr\+\_\+init(int count, int clock\+\_\+source)}{lptmr_init(int count, int clock_source)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} lptmr\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{int}]{count, }
+\item[{int}]{clock\+\_\+source}
+\end{DoxyParamCaption}
+)}\hypertarget{lptmr_8h_a7d09e9b493a29ead9144d746b8a5d2cb}{}\label{lptmr_8h_a7d09e9b493a29ead9144d746b8a5d2cb}
+
+
+Definition at line 76 of file lptmr.\+c.
+
+\index{lptmr.\+h@{lptmr.\+h}!lptmr\+\_\+isr@{lptmr\+\_\+isr}}
+\index{lptmr\+\_\+isr@{lptmr\+\_\+isr}!lptmr.\+h@{lptmr.\+h}}
+\subsubsection[{\texorpdfstring{lptmr\+\_\+isr(void)}{lptmr_isr(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} lptmr\+\_\+isr (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{lptmr_8h_adf9173a36cd117a72e3e627035c6058f}{}\label{lptmr_8h_adf9173a36cd117a72e3e627035c6058f}
+
+
+Definition at line 120 of file sctimer.\+c.
+
+\index{lptmr.\+h@{lptmr.\+h}!time\+\_\+delay\+\_\+ms@{time\+\_\+delay\+\_\+ms}}
+\index{time\+\_\+delay\+\_\+ms@{time\+\_\+delay\+\_\+ms}!lptmr.\+h@{lptmr.\+h}}
+\subsubsection[{\texorpdfstring{time\+\_\+delay\+\_\+ms(uint32)}{time_delay_ms(uint32)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} time\+\_\+delay\+\_\+ms (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{lptmr_8h_abc96a64d0b4c381ad838dfc94a222de5}{}\label{lptmr_8h_abc96a64d0b4c381ad838dfc94a222de5}
+
+
+Definition at line 31 of file lptmr.\+c.
+

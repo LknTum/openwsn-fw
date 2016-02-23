@@ -1,0 +1,71 @@
+\hypertarget{samr21__xpro_2flash_8h}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/samr21\+\_\+xpro/flash.h File Reference}
+\label{samr21__xpro_2flash_8h}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/samr21\+\_\+xpro/flash.\+h@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/samr21\+\_\+xpro/flash.\+h}}
+{\ttfamily \#include \char`\"{}base\+\_\+type.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{samr21__xpro_2flash_8h_a4394326cae1c8f63e68f25db0bb53e41}{I\+D\+\_\+\+A\+D\+D\+R\+E\+SS}~(0x804008)
+\item 
+\#define \hyperlink{samr21__xpro_2flash_8h_a74cd4c8a601dffc9976cb2016f09dd0d}{I\+D\+\_\+\+L\+E\+N\+G\+TH}~8
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{samr21__xpro_2flash_8h_a99adfef26bf4e325590584a0f6ca48a8}{flash\+\_\+write\+\_\+\+ID} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{samr21__xpro_2flash_8h_a754b5317d5dab28c686246f41e21abd4}{flash\+\_\+read\+\_\+\+ID} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{samr21\+\_\+xpro/flash.\+h@{samr21\+\_\+xpro/flash.\+h}!I\+D\+\_\+\+A\+D\+D\+R\+E\+SS@{I\+D\+\_\+\+A\+D\+D\+R\+E\+SS}}
+\index{I\+D\+\_\+\+A\+D\+D\+R\+E\+SS@{I\+D\+\_\+\+A\+D\+D\+R\+E\+SS}!samr21\+\_\+xpro/flash.\+h@{samr21\+\_\+xpro/flash.\+h}}
+\subsubsection[{\texorpdfstring{I\+D\+\_\+\+A\+D\+D\+R\+E\+SS}{ID_ADDRESS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+D\+\_\+\+A\+D\+D\+R\+E\+SS~(0x804008)}\hypertarget{samr21__xpro_2flash_8h_a4394326cae1c8f63e68f25db0bb53e41}{}\label{samr21__xpro_2flash_8h_a4394326cae1c8f63e68f25db0bb53e41}
+Copyright (c) 2014 Atmel Corporation. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item The name of Atmel may not be used to endorse or promote products derived from this software without specific prior written permission.
+\item This software may only be redistributed and used in connection with an Atmel microcontroller product.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE. 
+
+Definition at line 41 of file flash.\+h.
+
+\index{samr21\+\_\+xpro/flash.\+h@{samr21\+\_\+xpro/flash.\+h}!I\+D\+\_\+\+L\+E\+N\+G\+TH@{I\+D\+\_\+\+L\+E\+N\+G\+TH}}
+\index{I\+D\+\_\+\+L\+E\+N\+G\+TH@{I\+D\+\_\+\+L\+E\+N\+G\+TH}!samr21\+\_\+xpro/flash.\+h@{samr21\+\_\+xpro/flash.\+h}}
+\subsubsection[{\texorpdfstring{I\+D\+\_\+\+L\+E\+N\+G\+TH}{ID_LENGTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+D\+\_\+\+L\+E\+N\+G\+TH~8}\hypertarget{samr21__xpro_2flash_8h_a74cd4c8a601dffc9976cb2016f09dd0d}{}\label{samr21__xpro_2flash_8h_a74cd4c8a601dffc9976cb2016f09dd0d}
+
+
+Definition at line 42 of file flash.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{samr21\+\_\+xpro/flash.\+h@{samr21\+\_\+xpro/flash.\+h}!flash\+\_\+read\+\_\+\+ID@{flash\+\_\+read\+\_\+\+ID}}
+\index{flash\+\_\+read\+\_\+\+ID@{flash\+\_\+read\+\_\+\+ID}!samr21\+\_\+xpro/flash.\+h@{samr21\+\_\+xpro/flash.\+h}}
+\subsubsection[{\texorpdfstring{flash\+\_\+read\+\_\+\+I\+D(void)}{flash_read_ID(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} flash\+\_\+read\+\_\+\+ID (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{samr21__xpro_2flash_8h_a754b5317d5dab28c686246f41e21abd4}{}\label{samr21__xpro_2flash_8h_a754b5317d5dab28c686246f41e21abd4}
+
+
+Definition at line 43 of file flash.\+c.
+
+\index{samr21\+\_\+xpro/flash.\+h@{samr21\+\_\+xpro/flash.\+h}!flash\+\_\+write\+\_\+\+ID@{flash\+\_\+write\+\_\+\+ID}}
+\index{flash\+\_\+write\+\_\+\+ID@{flash\+\_\+write\+\_\+\+ID}!samr21\+\_\+xpro/flash.\+h@{samr21\+\_\+xpro/flash.\+h}}
+\subsubsection[{\texorpdfstring{flash\+\_\+write\+\_\+\+I\+D(void)}{flash_write_ID(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} flash\+\_\+write\+\_\+\+ID (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{samr21__xpro_2flash_8h_a99adfef26bf4e325590584a0f6ca48a8}{}\label{samr21__xpro_2flash_8h_a99adfef26bf4e325590584a0f6ca48a8}
+
+
+Definition at line 33 of file flash.\+c.
+

@@ -1,0 +1,135 @@
+\hypertarget{radio__timer_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/samr21\+\_\+xpro/radio\+\_\+timer.c File Reference}
+\label{radio__timer_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/samr21\+\_\+xpro/radio\+\_\+timer.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/samr21\+\_\+xpro/radio\+\_\+timer.\+c}}
+{\ttfamily \#include \char`\"{}samr21\+\_\+timer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}radiotimer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}board\+\_\+info.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leds.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}debugpins.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gpio.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structradiotimer__vars__t}{radiotimer\+\_\+vars\+\_\+t}
+\begin{DoxyCompactList}\small\item\em derfmega-\/specific definition of the \char`\"{}radiotimer\char`\"{} bsp module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{radio__timer_8c_a658cb4ca609e4aaaf59289dc391c818d}{R\+A\+D\+I\+O\+\_\+\+T\+I\+M\+E\+R\+\_\+\+P\+E\+R\+I\+OD}~U\+I\+N\+T16\+\_\+\+M\+AX
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radiotimer_ga9a5ab332f81d5e2a74143ad62ef6a2f7}{radiotimer\+\_\+init} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em Clears the hardware timer and the current data structures, i.\+e. resets everything. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{radio__timer_8c_a01b66ec69541870ae71d219c085e65aa}{tc4\+\_\+ovf\+\_\+callback} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\begin{DoxyCompactList}\small\item\em timer3\+\_\+init This will initialize the timer3 with default value \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{radio__timer_8c_adb7b66be4ba4797fc6b919a2b60b183d}{tc4\+\_\+cca1\+\_\+callback} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radiotimer_gab892e556a83f22551ff4e4551bd488f7}{radiotimer\+\_\+set\+Overflow\+Cb} (\hyperlink{group__radiotimer_ga62b602325e65023c91b784f20cd2d6bc}{radiotimer\+\_\+compare\+\_\+cbt} cb)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radiotimer_gaf4d7c5df5b6c28462c5104df496ae584}{radiotimer\+\_\+set\+Compare\+Cb} (\hyperlink{group__radiotimer_ga62b602325e65023c91b784f20cd2d6bc}{radiotimer\+\_\+compare\+\_\+cbt} cb)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radiotimer_gad6bae4a356aa6856a48dd247eea43f84}{radiotimer\+\_\+set\+Start\+Frame\+Cb} (\hyperlink{group__radiotimer_gac7da641d0774aa21bfabefd560e42acf}{radiotimer\+\_\+capture\+\_\+cbt} cb)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radiotimer_ga54531cf0f173f07f760d24aeacbc6fe3}{radiotimer\+\_\+set\+End\+Frame\+Cb} (\hyperlink{group__radiotimer_gac7da641d0774aa21bfabefd560e42acf}{radiotimer\+\_\+capture\+\_\+cbt} cb)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radiotimer_ga5afd5ed18d32fb118dca4ea99d181e35}{radiotimer\+\_\+start} (\hyperlink{z1_2board__info_8h_ac16e02aadd749b2d27638bed1a805a59}{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} period)
+\item 
+\hyperlink{z1_2board__info_8h_ac16e02aadd749b2d27638bed1a805a59}{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} \hyperlink{group__radiotimer_ga763b0da72c3bbf926f5a74283de1003c}{radiotimer\+\_\+get\+Value} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radiotimer_gaa976e43c1c475e9ff23b26ed06fa6918}{radiotimer\+\_\+set\+Period} (\hyperlink{z1_2board__info_8h_ac16e02aadd749b2d27638bed1a805a59}{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} period)
+\item 
+\hyperlink{z1_2board__info_8h_ac16e02aadd749b2d27638bed1a805a59}{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} \hyperlink{group__radiotimer_ga6e96a37a1a07cb7ec7639bfb44759437}{radiotimer\+\_\+get\+Period} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radiotimer_ga137a48c413a18f689b328b2be259704c}{radiotimer\+\_\+schedule} (\hyperlink{z1_2board__info_8h_ac16e02aadd749b2d27638bed1a805a59}{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} offset)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__radiotimer_ga87b29bd5be3a34ea714da11d244e43f2}{radiotimer\+\_\+cancel} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{z1_2board__info_8h_ac16e02aadd749b2d27638bed1a805a59}{P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+TH} \hyperlink{group__radiotimer_ga3f869c34f63741cf1aa6e43321662f78}{radiotimer\+\_\+get\+Captured\+Time} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structradiotimer__vars__t}{radiotimer\+\_\+vars\+\_\+t} \hyperlink{radio__timer_8c_ab0c3b58ed0e35f2c17645ac3b1406635}{radiotimer\+\_\+vars}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{radio\+\_\+timer.\+c@{radio\+\_\+timer.\+c}!R\+A\+D\+I\+O\+\_\+\+T\+I\+M\+E\+R\+\_\+\+P\+E\+R\+I\+OD@{R\+A\+D\+I\+O\+\_\+\+T\+I\+M\+E\+R\+\_\+\+P\+E\+R\+I\+OD}}
+\index{R\+A\+D\+I\+O\+\_\+\+T\+I\+M\+E\+R\+\_\+\+P\+E\+R\+I\+OD@{R\+A\+D\+I\+O\+\_\+\+T\+I\+M\+E\+R\+\_\+\+P\+E\+R\+I\+OD}!radio\+\_\+timer.\+c@{radio\+\_\+timer.\+c}}
+\subsubsection[{\texorpdfstring{R\+A\+D\+I\+O\+\_\+\+T\+I\+M\+E\+R\+\_\+\+P\+E\+R\+I\+OD}{RADIO_TIMER_PERIOD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+A\+D\+I\+O\+\_\+\+T\+I\+M\+E\+R\+\_\+\+P\+E\+R\+I\+OD~U\+I\+N\+T16\+\_\+\+M\+AX}\hypertarget{radio__timer_8c_a658cb4ca609e4aaaf59289dc391c818d}{}\label{radio__timer_8c_a658cb4ca609e4aaaf59289dc391c818d}
+Copyright (c) 2014 Atmel Corporation. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item The name of Atmel may not be used to endorse or promote products derived from this software without specific prior written permission.
+\item This software may only be redistributed and used in connection with an Atmel microcontroller product.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE. 
+
+Definition at line 44 of file radio\+\_\+timer.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{radio\+\_\+timer.\+c@{radio\+\_\+timer.\+c}!tc4\+\_\+cca1\+\_\+callback@{tc4\+\_\+cca1\+\_\+callback}}
+\index{tc4\+\_\+cca1\+\_\+callback@{tc4\+\_\+cca1\+\_\+callback}!radio\+\_\+timer.\+c@{radio\+\_\+timer.\+c}}
+\subsubsection[{\texorpdfstring{tc4\+\_\+cca1\+\_\+callback(void)}{tc4_cca1_callback(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} tc4\+\_\+cca1\+\_\+callback (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{radio__timer_8c_adb7b66be4ba4797fc6b919a2b60b183d}{}\label{radio__timer_8c_adb7b66be4ba4797fc6b919a2b60b183d}
+
+
+Definition at line 95 of file radio\+\_\+timer.\+c.
+
+\index{radio\+\_\+timer.\+c@{radio\+\_\+timer.\+c}!tc4\+\_\+ovf\+\_\+callback@{tc4\+\_\+ovf\+\_\+callback}}
+\index{tc4\+\_\+ovf\+\_\+callback@{tc4\+\_\+ovf\+\_\+callback}!radio\+\_\+timer.\+c@{radio\+\_\+timer.\+c}}
+\subsubsection[{\texorpdfstring{tc4\+\_\+ovf\+\_\+callback(void)}{tc4_ovf_callback(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} tc4\+\_\+ovf\+\_\+callback (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{radio__timer_8c_a01b66ec69541870ae71d219c085e65aa}{}\label{radio__timer_8c_a01b66ec69541870ae71d219c085e65aa}
+
+
+timer3\+\_\+init This will initialize the timer3 with default value 
+
+Copyright (c) 2014 Atmel Corporation. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item The name of Atmel may not be used to endorse or promote products derived from this software without specific prior written permission.
+\item This software may only be redistributed and used in connection with an Atmel microcontroller product.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE.
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 78 of file radio\+\_\+timer.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{radio\+\_\+timer.\+c@{radio\+\_\+timer.\+c}!radiotimer\+\_\+vars@{radiotimer\+\_\+vars}}
+\index{radiotimer\+\_\+vars@{radiotimer\+\_\+vars}!radio\+\_\+timer.\+c@{radio\+\_\+timer.\+c}}
+\subsubsection[{\texorpdfstring{radiotimer\+\_\+vars}{radiotimer_vars}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf radiotimer\+\_\+vars\+\_\+t} radiotimer\+\_\+vars}\hypertarget{radio__timer_8c_ab0c3b58ed0e35f2c17645ac3b1406635}{}\label{radio__timer_8c_ab0c3b58ed0e35f2c17645ac3b1406635}
+
+
+Definition at line 55 of file radio\+\_\+timer.\+c.
+

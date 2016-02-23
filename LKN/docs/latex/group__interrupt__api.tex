@@ -1,0 +1,410 @@
+\hypertarget{group__interrupt__api}{}\section{Interrupt\+\_\+api}
+\label{group__interrupt__api}\index{Interrupt\+\_\+api@{Interrupt\+\_\+api}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group__interrupt__api_gae3724c6b65b8461cf0441f09b13fadf5}{Int\+Master\+Disable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Interrupt, \hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}($\ast$pfn\+Handler)(\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void}))
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__interrupt__api_ga5dffc81c27c005f83e9bfc30f775982a}{Int\+Unregister} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Interrupt)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__interrupt__api_ga341c2244311b2c8c84b0a5546fc3dff1}{Int\+Priority\+Grouping\+Set} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Bits)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__interrupt__api_ga86595146bc7ea51280d5abbb45fcf02a}{Int\+Priority\+Grouping\+Get} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__interrupt__api_ga0432ddf52557352ac987f7dd211c2017}{Int\+Priority\+Set} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Interrupt, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} ui8\+Priority)
+\item 
+\hyperlink{_p_e___types_8h_adb828ef50c2dbb783109824e94cf6c47}{int32\+\_\+t} \hyperlink{group__interrupt__api_gac6a7849e23f4a84c1bcaad2e9bcc27b2}{Int\+Priority\+Get} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Interrupt)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__interrupt__api_ga49fc9c3d1a0f8c42a20249f8c5d360ce}{Int\+Enable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Interrupt)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__interrupt__api_ga9af6b00884dc44e92b3d05ff821b5334}{Int\+Disable} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Interrupt)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__interrupt__api_gafe17b56764bff1bcb95bd53acde4ac98}{Int\+Pend\+Set} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Interrupt)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__interrupt__api_gab708e168ca0f1f554bb141e5b0fd1bdc}{Int\+Pend\+Clear} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Interrupt)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__interrupt__api_ga61b8f34d64c588f632509406b50e4f68}{Int\+Priority\+Mask\+Set} (\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} ui32\+Priority\+Mask)
+\item 
+\hyperlink{_p_e___types_8h_a33594304e786b158f3fb30289278f5af}{uint32\+\_\+t} \hyperlink{group__interrupt__api_gad39b7d4927274abf42c57767218af279}{Int\+Priority\+Mask\+Get} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__interrupt__api_gaed713eb279610590f58f1c92fad1e470}{Int\+Alt\+Map\+Enable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{group__interrupt__api_gac3ded0b0930ee1dd48bf3c76b2f606b7}{Int\+Alt\+Map\+Disable} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\item 
+\hyperlink{_p_e___types_8h_a97a80ca1602ebf2303258971a2c938e2}{bool} \hyperlink{group__interrupt__api_ga82a249100f849b2880421db4ee4b312d}{Int\+Alt\+Map\+Is\+Enabled} (\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{Interrupt\+\_\+api@{Interrupt\+\_\+api}!Int\+Alt\+Map\+Disable@{Int\+Alt\+Map\+Disable}}
+\index{Int\+Alt\+Map\+Disable@{Int\+Alt\+Map\+Disable}!Interrupt\+\_\+api@{Interrupt\+\_\+api}}
+\subsubsection[{\texorpdfstring{Int\+Alt\+Map\+Disable(void)}{IntAltMapDisable(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Int\+Alt\+Map\+Disable (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__interrupt__api_gac3ded0b0930ee1dd48bf3c76b2f606b7}{}\label{group__interrupt__api_gac3ded0b0930ee1dd48bf3c76b2f606b7}
+Disable the alternate interrupt mapping
+
+This function disables the alternate (that is, smaller) interrupt map.
+
+\begin{DoxySeeAlso}{See also}
+See also \hyperlink{group__interrupt__api_gac3ded0b0930ee1dd48bf3c76b2f606b7}{Int\+Alt\+Map\+Disable()} and \hyperlink{group__interrupt__api_ga82a249100f849b2880421db4ee4b312d}{Int\+Alt\+Map\+Is\+Enabled()}.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 797 of file interrupt.\+c.
+
+\index{Interrupt\+\_\+api@{Interrupt\+\_\+api}!Int\+Alt\+Map\+Enable@{Int\+Alt\+Map\+Enable}}
+\index{Int\+Alt\+Map\+Enable@{Int\+Alt\+Map\+Enable}!Interrupt\+\_\+api@{Interrupt\+\_\+api}}
+\subsubsection[{\texorpdfstring{Int\+Alt\+Map\+Enable(void)}{IntAltMapEnable(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Int\+Alt\+Map\+Enable (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__interrupt__api_gaed713eb279610590f58f1c92fad1e470}{}\label{group__interrupt__api_gaed713eb279610590f58f1c92fad1e470}
+Enables the alternate interrupt mapping
+
+This function enables the alternate (that is, smaller) interrupt map.
+
+\begin{DoxySeeAlso}{See also}
+See also \hyperlink{group__interrupt__api_gac3ded0b0930ee1dd48bf3c76b2f606b7}{Int\+Alt\+Map\+Disable()} and \hyperlink{group__interrupt__api_ga82a249100f849b2880421db4ee4b312d}{Int\+Alt\+Map\+Is\+Enabled()}.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 781 of file interrupt.\+c.
+
+\index{Interrupt\+\_\+api@{Interrupt\+\_\+api}!Int\+Alt\+Map\+Is\+Enabled@{Int\+Alt\+Map\+Is\+Enabled}}
+\index{Int\+Alt\+Map\+Is\+Enabled@{Int\+Alt\+Map\+Is\+Enabled}!Interrupt\+\_\+api@{Interrupt\+\_\+api}}
+\subsubsection[{\texorpdfstring{Int\+Alt\+Map\+Is\+Enabled(void)}{IntAltMapIsEnabled(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Int\+Alt\+Map\+Is\+Enabled (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__interrupt__api_ga82a249100f849b2880421db4ee4b312d}{}\label{group__interrupt__api_ga82a249100f849b2880421db4ee4b312d}
+Checks to see if the Alternate Interrupt Mapping is in use
+
+\begin{DoxySeeAlso}{See also}
+See also \hyperlink{group__interrupt__api_gac3ded0b0930ee1dd48bf3c76b2f606b7}{Int\+Alt\+Map\+Disable()} and \hyperlink{group__interrupt__api_ga82a249100f849b2880421db4ee4b312d}{Int\+Alt\+Map\+Is\+Enabled()}.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+Returns {\bfseries true} if the Alternate Mapping is in use and {\bfseries false} otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 812 of file interrupt.\+c.
+
+\index{Interrupt\+\_\+api@{Interrupt\+\_\+api}!Int\+Disable@{Int\+Disable}}
+\index{Int\+Disable@{Int\+Disable}!Interrupt\+\_\+api@{Interrupt\+\_\+api}}
+\subsubsection[{\texorpdfstring{Int\+Disable(uint32\+\_\+t ui32\+Interrupt)}{IntDisable(uint32_t ui32Interrupt)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Int\+Disable (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Interrupt}
+\end{DoxyParamCaption}
+)}\hypertarget{group__interrupt__api_ga9af6b00884dc44e92b3d05ff821b5334}{}\label{group__interrupt__api_ga9af6b00884dc44e92b3d05ff821b5334}
+Disables an interrupt
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Interrupt} & specifies the interrupt to be disabled.\\
+\hline
+\end{DoxyParams}
+This function disables specified interrupt in the interrupt controller. Other enables for the interrupt (such as at the peripheral level) are unaffected by this function.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 559 of file interrupt.\+c.
+
+\index{Interrupt\+\_\+api@{Interrupt\+\_\+api}!Int\+Enable@{Int\+Enable}}
+\index{Int\+Enable@{Int\+Enable}!Interrupt\+\_\+api@{Interrupt\+\_\+api}}
+\subsubsection[{\texorpdfstring{Int\+Enable(uint32\+\_\+t ui32\+Interrupt)}{IntEnable(uint32_t ui32Interrupt)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Int\+Enable (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Interrupt}
+\end{DoxyParamCaption}
+)}\hypertarget{group__interrupt__api_ga49fc9c3d1a0f8c42a20249f8c5d360ce}{}\label{group__interrupt__api_ga49fc9c3d1a0f8c42a20249f8c5d360ce}
+Enables an interrupt
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Interrupt} & specifies the interrupt to be enabled.\\
+\hline
+\end{DoxyParams}
+This function enables the specified interrupt in the interrupt controller. Other enables for the interrupt (such as at the peripheral level) are unaffected by this function.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 497 of file interrupt.\+c.
+
+\index{Interrupt\+\_\+api@{Interrupt\+\_\+api}!Int\+Master\+Disable@{Int\+Master\+Disable}}
+\index{Int\+Master\+Disable@{Int\+Master\+Disable}!Interrupt\+\_\+api@{Interrupt\+\_\+api}}
+\subsubsection[{\texorpdfstring{Int\+Master\+Disable(void)}{IntMasterDisable(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Int\+Master\+Disable (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__interrupt__api_gae3724c6b65b8461cf0441f09b13fadf5}{}\label{group__interrupt__api_gae3724c6b65b8461cf0441f09b13fadf5}
+Disables the processor interrupt
+
+This function prevents the processor from receiving interrupts. This does not affect the set of interrupts enabled in the interrupt controller; it just gates the single interrupt from the controller to the processor.
+
+\begin{DoxyReturn}{Returns}
+Returns {\bfseries true} if interrupts were already disabled when the function was called or {\bfseries false} if they were initially enabled. 
+\end{DoxyReturn}
+
+
+Definition at line 211 of file interrupt.\+c.
+
+\index{Interrupt\+\_\+api@{Interrupt\+\_\+api}!Int\+Pend\+Clear@{Int\+Pend\+Clear}}
+\index{Int\+Pend\+Clear@{Int\+Pend\+Clear}!Interrupt\+\_\+api@{Interrupt\+\_\+api}}
+\subsubsection[{\texorpdfstring{Int\+Pend\+Clear(uint32\+\_\+t ui32\+Interrupt)}{IntPendClear(uint32_t ui32Interrupt)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Int\+Pend\+Clear (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Interrupt}
+\end{DoxyParamCaption}
+)}\hypertarget{group__interrupt__api_gab708e168ca0f1f554bb141e5b0fd1bdc}{}\label{group__interrupt__api_gab708e168ca0f1f554bb141e5b0fd1bdc}
+Unpends an interrupt
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Interrupt} & specifies the interrupt to be unpended.\\
+\hline
+\end{DoxyParams}
+This function unpends the specified interrupt in the interrupt controller. This will cause any previously generated interrupts that have not been handled yet (due to higher priority interrupts or the interrupt no having been enabled yet) to be discarded.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 681 of file interrupt.\+c.
+
+\index{Interrupt\+\_\+api@{Interrupt\+\_\+api}!Int\+Pend\+Set@{Int\+Pend\+Set}}
+\index{Int\+Pend\+Set@{Int\+Pend\+Set}!Interrupt\+\_\+api@{Interrupt\+\_\+api}}
+\subsubsection[{\texorpdfstring{Int\+Pend\+Set(uint32\+\_\+t ui32\+Interrupt)}{IntPendSet(uint32_t ui32Interrupt)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Int\+Pend\+Set (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Interrupt}
+\end{DoxyParamCaption}
+)}\hypertarget{group__interrupt__api_gafe17b56764bff1bcb95bd53acde4ac98}{}\label{group__interrupt__api_gafe17b56764bff1bcb95bd53acde4ac98}
+Pends an interrupt
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Interrupt} & specifies the interrupt to be pended.\\
+\hline
+\end{DoxyParams}
+This function pends the specified interrupt in the interrupt controller. This causes the interrupt controller to execute the corresponding interrupt handler at the next available time, based on the current interrupt state priorities. For example, if called by a higher priority interrupt handler, the specified interrupt handler is not called until after the current interrupt handler executes. The interrupt must have been enabled for it to be called.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 625 of file interrupt.\+c.
+
+\index{Interrupt\+\_\+api@{Interrupt\+\_\+api}!Int\+Priority\+Get@{Int\+Priority\+Get}}
+\index{Int\+Priority\+Get@{Int\+Priority\+Get}!Interrupt\+\_\+api@{Interrupt\+\_\+api}}
+\subsubsection[{\texorpdfstring{Int\+Priority\+Get(uint32\+\_\+t ui32\+Interrupt)}{IntPriorityGet(uint32_t ui32Interrupt)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\+\_\+t} Int\+Priority\+Get (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Interrupt}
+\end{DoxyParamCaption}
+)}\hypertarget{group__interrupt__api_gac6a7849e23f4a84c1bcaad2e9bcc27b2}{}\label{group__interrupt__api_gac6a7849e23f4a84c1bcaad2e9bcc27b2}
+Gets the priority of an interrupt
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Interrupt} & specifies the interrupt in question.\\
+\hline
+\end{DoxyParams}
+This function gets the priority of an interrupt. See \hyperlink{group__interrupt__api_ga0432ddf52557352ac987f7dd211c2017}{Int\+Priority\+Set()} for a definition of the priority value.
+
+\begin{DoxyReturn}{Returns}
+Returns the interrupt priority, or -\/1 if an invalid interrupt was specified 
+\end{DoxyReturn}
+
+
+Definition at line 469 of file interrupt.\+c.
+
+\index{Interrupt\+\_\+api@{Interrupt\+\_\+api}!Int\+Priority\+Grouping\+Get@{Int\+Priority\+Grouping\+Get}}
+\index{Int\+Priority\+Grouping\+Get@{Int\+Priority\+Grouping\+Get}!Interrupt\+\_\+api@{Interrupt\+\_\+api}}
+\subsubsection[{\texorpdfstring{Int\+Priority\+Grouping\+Get(void)}{IntPriorityGroupingGet(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} Int\+Priority\+Grouping\+Get (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__interrupt__api_ga86595146bc7ea51280d5abbb45fcf02a}{}\label{group__interrupt__api_ga86595146bc7ea51280d5abbb45fcf02a}
+Gets the priority grouping of the interrupt controller
+
+This function returns the split between preemptable priority levels and subpriority levels in the interrupt priority specification.
+
+\begin{DoxyReturn}{Returns}
+Returns the number of bits of preemptable priority 
+\end{DoxyReturn}
+
+
+Definition at line 381 of file interrupt.\+c.
+
+\index{Interrupt\+\_\+api@{Interrupt\+\_\+api}!Int\+Priority\+Grouping\+Set@{Int\+Priority\+Grouping\+Set}}
+\index{Int\+Priority\+Grouping\+Set@{Int\+Priority\+Grouping\+Set}!Interrupt\+\_\+api@{Interrupt\+\_\+api}}
+\subsubsection[{\texorpdfstring{Int\+Priority\+Grouping\+Set(uint32\+\_\+t ui32\+Bits)}{IntPriorityGroupingSet(uint32_t ui32Bits)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Int\+Priority\+Grouping\+Set (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Bits}
+\end{DoxyParamCaption}
+)}\hypertarget{group__interrupt__api_ga341c2244311b2c8c84b0a5546fc3dff1}{}\label{group__interrupt__api_ga341c2244311b2c8c84b0a5546fc3dff1}
+Sets the priority grouping of the interrupt controller
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Bits} & specifies the number of bits of preemptable priority.\\
+\hline
+\end{DoxyParams}
+This function specifies the split between preemptable priority levels and subpriority levels in the interrupt priority specification. The range of the grouping values depend on the hardware implementation; on the C\+C2538 device family, 3 bits are available for hardware interrupt prioritization and therefore priority grouping values of three through seven have the same effect.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 357 of file interrupt.\+c.
+
+\index{Interrupt\+\_\+api@{Interrupt\+\_\+api}!Int\+Priority\+Mask\+Get@{Int\+Priority\+Mask\+Get}}
+\index{Int\+Priority\+Mask\+Get@{Int\+Priority\+Mask\+Get}!Interrupt\+\_\+api@{Interrupt\+\_\+api}}
+\subsubsection[{\texorpdfstring{Int\+Priority\+Mask\+Get(void)}{IntPriorityMaskGet(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\+\_\+t} Int\+Priority\+Mask\+Get (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__interrupt__api_gad39b7d4927274abf42c57767218af279}{}\label{group__interrupt__api_gad39b7d4927274abf42c57767218af279}
+Gets the priority masking level
+
+This function gets the current setting of the interrupt priority masking level. The value returned is the priority level such that all interrupts of that priority and lesser priorities are masked. A value of 0 disables priority masking.
+
+Smaller numbers correspond to higher interrupt priorities. For example, a priority level mask of 4 allows interrupts of priority level 0-\/3, and interrupts with a numerical priority of 4 and greater will be blocked.
+
+The hardware priority mechanism looks only at the upper N bits of the priority level (where N is 3 for the C\+C2538 device family), so any prioritization must be performed in those bits.
+
+\begin{DoxyReturn}{Returns}
+Returns the value of the interrupt priority level mask 
+\end{DoxyReturn}
+
+
+Definition at line 765 of file interrupt.\+c.
+
+\index{Interrupt\+\_\+api@{Interrupt\+\_\+api}!Int\+Priority\+Mask\+Set@{Int\+Priority\+Mask\+Set}}
+\index{Int\+Priority\+Mask\+Set@{Int\+Priority\+Mask\+Set}!Interrupt\+\_\+api@{Interrupt\+\_\+api}}
+\subsubsection[{\texorpdfstring{Int\+Priority\+Mask\+Set(uint32\+\_\+t ui32\+Priority\+Mask)}{IntPriorityMaskSet(uint32_t ui32PriorityMask)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Int\+Priority\+Mask\+Set (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Priority\+Mask}
+\end{DoxyParamCaption}
+)}\hypertarget{group__interrupt__api_ga61b8f34d64c588f632509406b50e4f68}{}\label{group__interrupt__api_ga61b8f34d64c588f632509406b50e4f68}
+Sets the priority masking level
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Priority\+Mask} & is the priority level that will be masked.\\
+\hline
+\end{DoxyParams}
+This function sets the interrupt priority masking level so that all interrupts at the specified or lesser priority level is masked. This can be used to globally disable a set of interrupts with priority below a predetermined threshold. A value of 0 disables priority masking.
+
+Smaller numbers correspond to higher interrupt priorities. For example, a priority level mask of 4 allows interrupts of priority level 0-\/3, and interrupts with a numerical priority of 4 and greater are blocked.
+
+The hardware priority mechanism looks only at the upper N bits of the priority level (where N is 3 for the C\+C2538 device family), so any prioritization must be performed in those bits.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 739 of file interrupt.\+c.
+
+\index{Interrupt\+\_\+api@{Interrupt\+\_\+api}!Int\+Priority\+Set@{Int\+Priority\+Set}}
+\index{Int\+Priority\+Set@{Int\+Priority\+Set}!Interrupt\+\_\+api@{Interrupt\+\_\+api}}
+\subsubsection[{\texorpdfstring{Int\+Priority\+Set(uint32\+\_\+t ui32\+Interrupt, uint8\+\_\+t ui8\+Priority)}{IntPrioritySet(uint32_t ui32Interrupt, uint8_t ui8Priority)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Int\+Priority\+Set (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Interrupt, }
+\item[{{\bf uint8\+\_\+t}}]{ui8\+Priority}
+\end{DoxyParamCaption}
+)}\hypertarget{group__interrupt__api_ga0432ddf52557352ac987f7dd211c2017}{}\label{group__interrupt__api_ga0432ddf52557352ac987f7dd211c2017}
+Sets the priority of an interrupt
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Interrupt} & specifies the interrupt in question. \\
+\hline
+{\em ui8\+Priority} & specifies the priority of the interrupt.\\
+\hline
+\end{DoxyParams}
+This function sets the priority of an interrupt. When multiple interrupts are asserted simultaneously, those with the highest priority are processed before the lower priority interrupts. Smaller numbers correspond to higher interrupt priorities; priority 0 is the highest interrupt priority.
+
+The hardware priority mechanism will looks only at the upper N bits of the priority level (where N is 3 for the C\+C2538 device family), so any prioritization must be performed in those bits. The remaining bits can be used to subprioritize the interrupt sources, and may be used by the hardware priority mechanism on a future part. This arrangement allows priorities to migrate to different N\+V\+IC implementations without changing the gross prioritization of the interrupts. Thus for C\+C2538 to set a priority of 3, the parameter {\itshape ui8\+Priority} must be set to (3$<$$<$5).
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 437 of file interrupt.\+c.
+
+\index{Interrupt\+\_\+api@{Interrupt\+\_\+api}!Int\+Register@{Int\+Register}}
+\index{Int\+Register@{Int\+Register}!Interrupt\+\_\+api@{Interrupt\+\_\+api}}
+\subsubsection[{\texorpdfstring{Int\+Register(uint32\+\_\+t ui32\+Interrupt, void($\ast$pfn\+Handler)(void))}{IntRegister(uint32_t ui32Interrupt, void(*pfnHandler)(void))}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Int\+Register (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Interrupt, }
+\item[{{\bf void}($\ast$)({\bf void})}]{pfn\+Handler}
+\end{DoxyParamCaption}
+)}\hypertarget{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{}\label{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}
+Registers a function to be called when an interrupt occurs
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Interrupt} & specifies the interrupt in question. \\
+\hline
+{\em pfn\+Handler} & is a pointer to the function to be called.\\
+\hline
+\end{DoxyParams}
+This function specifies the handler function to be called when the given interrupt is asserted to the processor. When the interrupt occurs, if it is enabled (through \hyperlink{group__interrupt__api_ga49fc9c3d1a0f8c42a20249f8c5d360ce}{Int\+Enable()}), the handler function is called in interrupt context. Because the handler function can preempt other code, care must be taken to protect memory or peripherals that are accessed by the handler and other nonhandler code.
+
+\begin{DoxyNote}{Note}
+This function (directly or indirectly through a peripheral driver interrupt register function) moves the interrupt vector table from flash to S\+R\+AM. Therefore, care must be taken when linking the application to ensure that the S\+R\+AM vector table is located at the beginning of S\+R\+AM; otherwise N\+V\+IC will not look in the correct portion of memory for the vector table (it requires the vector table be on a 1-\/kB memory alignment). Normally, the S\+R\+AM vector table is so placed through the use of linker scripts. See the discussion of compile-\/time versus runtime interrupt handler registration in the introduction to this chapter.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 247 of file interrupt.\+c.
+
+\index{Interrupt\+\_\+api@{Interrupt\+\_\+api}!Int\+Unregister@{Int\+Unregister}}
+\index{Int\+Unregister@{Int\+Unregister}!Interrupt\+\_\+api@{Interrupt\+\_\+api}}
+\subsubsection[{\texorpdfstring{Int\+Unregister(uint32\+\_\+t ui32\+Interrupt)}{IntUnregister(uint32_t ui32Interrupt)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Int\+Unregister (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\+\_\+t}}]{ui32\+Interrupt}
+\end{DoxyParamCaption}
+)}\hypertarget{group__interrupt__api_ga5dffc81c27c005f83e9bfc30f775982a}{}\label{group__interrupt__api_ga5dffc81c27c005f83e9bfc30f775982a}
+Unregisters the function to be called when an interrupt occurs
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Interrupt} & specifies the interrupt in question.\\
+\hline
+\end{DoxyParams}
+This function indicates that no handler should be called when the given interrupt is asserted to the processor. The interrupt source is automatically disabled (through \hyperlink{group__interrupt__api_ga9af6b00884dc44e92b3d05ff821b5334}{Int\+Disable()}) if necessary.
+
+\begin{DoxySeeAlso}{See also}
+See \hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()} for important information about registering \hyperlink{_g_c_c_2_m_s_p430_f449_2port_8c_ae0992854bdba99f7b163894433c32aef}{interrupt} handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 313 of file interrupt.\+c.
+

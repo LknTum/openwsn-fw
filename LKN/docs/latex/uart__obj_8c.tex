@@ -1,0 +1,180 @@
+\hypertarget{uart__obj_8c}{}\section{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/python/uart\+\_\+obj.c File Reference}
+\label{uart__obj_8c}\index{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/python/uart\+\_\+obj.\+c@{/home/lkn/off\+Cloud/\+Smartgrid-\/code/\+Git\+Hub/openwsn-\/fw/bsp/boards/python/uart\+\_\+obj.\+c}}
+{\ttfamily \#include \char`\"{}uart\+\_\+obj.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{uart__obj_8c_a816bb48bee27dfc3dd1550f31958a56b}{uart\+\_\+set\+Callbacks} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self, \hyperlink{group__uart_gae005b96f0b18aecb814f4979c3e33408}{uart\+\_\+tx\+\_\+cbt} tx\+Cb, \hyperlink{group__uart_gab8f8d6449d6a994dfb5ede3fca7ac4e2}{uart\+\_\+rx\+\_\+cbt} rx\+Cb)
+\begin{DoxyCompactList}\small\item\em Python-\/specific definition of the \char`\"{}uart\char`\"{} bsp module. \end{DoxyCompactList}\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{uart__obj_8c_a014f437d9da7bb17939e5811a223e21b}{uart\+\_\+init} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{uart__obj_8c_a5f8c66eebdfad122d68d9bdae84b3a6b}{uart\+\_\+enable\+Interrupts} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{uart__obj_8c_ae213a4b8c2ebb0e56edc32e28f762e47}{uart\+\_\+disable\+Interrupts} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{uart__obj_8c_a66e8ac3be2a45460704a0812dedbde39}{uart\+\_\+clear\+Rx\+Interrupts} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{uart__obj_8c_a5b2556e3a864010c1bdb33dd24300223}{uart\+\_\+clear\+Tx\+Interrupts} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{uart__obj_8c_a6a1d1001d03c5cad3799fd8088aea3da}{uart\+\_\+write\+Byte} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} byte\+To\+Write)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{uart__obj_8c_a01fa41d73d497edcc9e17b09f8d47956}{uart\+\_\+write\+Circular\+Buffer\+\_\+\+F\+A\+S\+T\+S\+IM} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$buffer, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$output\+Buf\+IdxR, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$output\+Buf\+IdxW)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{uart__obj_8c_a09339266902a9eb749dcd423f5d1164b}{uart\+\_\+write\+Buffer\+By\+Len\+\_\+\+F\+A\+S\+T\+S\+IM} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$buffer, \hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} len)
+\item 
+\hyperlink{_p_e___types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{uart__obj_8c_a92d78b7462220e969df9a533e722d6cd}{uart\+\_\+read\+Byte} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{uart__obj_8c_a3495bb45da852e44c7550bd085130a75}{uart\+\_\+intr\+\_\+tx} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self)
+\item 
+\hyperlink{usb__devapi_8h_afabf60e7f57651d6d595a02c75f07cd0}{void} \hyperlink{uart__obj_8c_a825a64bc7b0600b41cb74f48b535c411}{uart\+\_\+intr\+\_\+rx} (\hyperlink{struct_open_mote}{Open\+Mote} $\ast$self)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{uart\+\_\+obj.\+c@{uart\+\_\+obj.\+c}!uart\+\_\+clear\+Rx\+Interrupts@{uart\+\_\+clear\+Rx\+Interrupts}}
+\index{uart\+\_\+clear\+Rx\+Interrupts@{uart\+\_\+clear\+Rx\+Interrupts}!uart\+\_\+obj.\+c@{uart\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{uart\+\_\+clear\+Rx\+Interrupts(\+Open\+Mote $\ast$self)}{uart_clearRxInterrupts(OpenMote *self)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} uart\+\_\+clear\+Rx\+Interrupts (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{uart__obj_8c_a66e8ac3be2a45460704a0812dedbde39}{}\label{uart__obj_8c_a66e8ac3be2a45460704a0812dedbde39}
+
+
+Definition at line 93 of file uart\+\_\+obj.\+c.
+
+\index{uart\+\_\+obj.\+c@{uart\+\_\+obj.\+c}!uart\+\_\+clear\+Tx\+Interrupts@{uart\+\_\+clear\+Tx\+Interrupts}}
+\index{uart\+\_\+clear\+Tx\+Interrupts@{uart\+\_\+clear\+Tx\+Interrupts}!uart\+\_\+obj.\+c@{uart\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{uart\+\_\+clear\+Tx\+Interrupts(\+Open\+Mote $\ast$self)}{uart_clearTxInterrupts(OpenMote *self)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} uart\+\_\+clear\+Tx\+Interrupts (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{uart__obj_8c_a5b2556e3a864010c1bdb33dd24300223}{}\label{uart__obj_8c_a5b2556e3a864010c1bdb33dd24300223}
+
+
+Definition at line 113 of file uart\+\_\+obj.\+c.
+
+\index{uart\+\_\+obj.\+c@{uart\+\_\+obj.\+c}!uart\+\_\+disable\+Interrupts@{uart\+\_\+disable\+Interrupts}}
+\index{uart\+\_\+disable\+Interrupts@{uart\+\_\+disable\+Interrupts}!uart\+\_\+obj.\+c@{uart\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{uart\+\_\+disable\+Interrupts(\+Open\+Mote $\ast$self)}{uart_disableInterrupts(OpenMote *self)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} uart\+\_\+disable\+Interrupts (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{uart__obj_8c_ae213a4b8c2ebb0e56edc32e28f762e47}{}\label{uart__obj_8c_ae213a4b8c2ebb0e56edc32e28f762e47}
+
+
+Definition at line 73 of file uart\+\_\+obj.\+c.
+
+\index{uart\+\_\+obj.\+c@{uart\+\_\+obj.\+c}!uart\+\_\+enable\+Interrupts@{uart\+\_\+enable\+Interrupts}}
+\index{uart\+\_\+enable\+Interrupts@{uart\+\_\+enable\+Interrupts}!uart\+\_\+obj.\+c@{uart\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{uart\+\_\+enable\+Interrupts(\+Open\+Mote $\ast$self)}{uart_enableInterrupts(OpenMote *self)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} uart\+\_\+enable\+Interrupts (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{uart__obj_8c_a5f8c66eebdfad122d68d9bdae84b3a6b}{}\label{uart__obj_8c_a5f8c66eebdfad122d68d9bdae84b3a6b}
+
+
+Definition at line 53 of file uart\+\_\+obj.\+c.
+
+\index{uart\+\_\+obj.\+c@{uart\+\_\+obj.\+c}!uart\+\_\+init@{uart\+\_\+init}}
+\index{uart\+\_\+init@{uart\+\_\+init}!uart\+\_\+obj.\+c@{uart\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{uart\+\_\+init(\+Open\+Mote $\ast$self)}{uart_init(OpenMote *self)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} uart\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{uart__obj_8c_a014f437d9da7bb17939e5811a223e21b}{}\label{uart__obj_8c_a014f437d9da7bb17939e5811a223e21b}
+
+
+Definition at line 33 of file uart\+\_\+obj.\+c.
+
+\index{uart\+\_\+obj.\+c@{uart\+\_\+obj.\+c}!uart\+\_\+intr\+\_\+rx@{uart\+\_\+intr\+\_\+rx}}
+\index{uart\+\_\+intr\+\_\+rx@{uart\+\_\+intr\+\_\+rx}!uart\+\_\+obj.\+c@{uart\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{uart\+\_\+intr\+\_\+rx(\+Open\+Mote $\ast$self)}{uart_intr_rx(OpenMote *self)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} uart\+\_\+intr\+\_\+rx (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{uart__obj_8c_a825a64bc7b0600b41cb74f48b535c411}{}\label{uart__obj_8c_a825a64bc7b0600b41cb74f48b535c411}
+
+
+Definition at line 303 of file uart\+\_\+obj.\+c.
+
+\index{uart\+\_\+obj.\+c@{uart\+\_\+obj.\+c}!uart\+\_\+intr\+\_\+tx@{uart\+\_\+intr\+\_\+tx}}
+\index{uart\+\_\+intr\+\_\+tx@{uart\+\_\+intr\+\_\+tx}!uart\+\_\+obj.\+c@{uart\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{uart\+\_\+intr\+\_\+tx(\+Open\+Mote $\ast$self)}{uart_intr_tx(OpenMote *self)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} uart\+\_\+intr\+\_\+tx (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{uart__obj_8c_a3495bb45da852e44c7550bd085130a75}{}\label{uart__obj_8c_a3495bb45da852e44c7550bd085130a75}
+
+
+Definition at line 290 of file uart\+\_\+obj.\+c.
+
+\index{uart\+\_\+obj.\+c@{uart\+\_\+obj.\+c}!uart\+\_\+read\+Byte@{uart\+\_\+read\+Byte}}
+\index{uart\+\_\+read\+Byte@{uart\+\_\+read\+Byte}!uart\+\_\+obj.\+c@{uart\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{uart\+\_\+read\+Byte(\+Open\+Mote $\ast$self)}{uart_readByte(OpenMote *self)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} uart\+\_\+read\+Byte (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{uart__obj_8c_a92d78b7462220e969df9a533e722d6cd}{}\label{uart__obj_8c_a92d78b7462220e969df9a533e722d6cd}
+
+
+Definition at line 258 of file uart\+\_\+obj.\+c.
+
+\index{uart\+\_\+obj.\+c@{uart\+\_\+obj.\+c}!uart\+\_\+set\+Callbacks@{uart\+\_\+set\+Callbacks}}
+\index{uart\+\_\+set\+Callbacks@{uart\+\_\+set\+Callbacks}!uart\+\_\+obj.\+c@{uart\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{uart\+\_\+set\+Callbacks(\+Open\+Mote $\ast$self, uart\+\_\+tx\+\_\+cbt tx\+Cb, uart\+\_\+rx\+\_\+cbt rx\+Cb)}{uart_setCallbacks(OpenMote *self, uart_tx_cbt txCb, uart_rx_cbt rxCb)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} uart\+\_\+set\+Callbacks (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self, }
+\item[{{\bf uart\+\_\+tx\+\_\+cbt}}]{tx\+Cb, }
+\item[{{\bf uart\+\_\+rx\+\_\+cbt}}]{rx\+Cb}
+\end{DoxyParamCaption}
+)}\hypertarget{uart__obj_8c_a816bb48bee27dfc3dd1550f31958a56b}{}\label{uart__obj_8c_a816bb48bee27dfc3dd1550f31958a56b}
+
+
+Python-\/specific definition of the \char`\"{}uart\char`\"{} bsp module. 
+
+\begin{DoxyAuthor}{Author}
+Thomas Watteyne \href{mailto:watteyne@eecs.berkeley.edu}{\tt watteyne@eecs.\+berkeley.\+edu}, May 2013. 
+\end{DoxyAuthor}
+
+
+Definition at line 17 of file uart\+\_\+obj.\+c.
+
+\index{uart\+\_\+obj.\+c@{uart\+\_\+obj.\+c}!uart\+\_\+write\+Buffer\+By\+Len\+\_\+\+F\+A\+S\+T\+S\+IM@{uart\+\_\+write\+Buffer\+By\+Len\+\_\+\+F\+A\+S\+T\+S\+IM}}
+\index{uart\+\_\+write\+Buffer\+By\+Len\+\_\+\+F\+A\+S\+T\+S\+IM@{uart\+\_\+write\+Buffer\+By\+Len\+\_\+\+F\+A\+S\+T\+S\+IM}!uart\+\_\+obj.\+c@{uart\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{uart\+\_\+write\+Buffer\+By\+Len\+\_\+\+F\+A\+S\+T\+S\+I\+M(\+Open\+Mote $\ast$self, uint8\+\_\+t $\ast$buffer, uint8\+\_\+t len)}{uart_writeBufferByLen_FASTSIM(OpenMote *self, uint8_t *buffer, uint8_t len)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} uart\+\_\+write\+Buffer\+By\+Len\+\_\+\+F\+A\+S\+T\+S\+IM (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{buffer, }
+\item[{{\bf uint8\+\_\+t}}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{uart__obj_8c_a09339266902a9eb749dcd423f5d1164b}{}\label{uart__obj_8c_a09339266902a9eb749dcd423f5d1164b}
+
+
+Definition at line 213 of file uart\+\_\+obj.\+c.
+
+\index{uart\+\_\+obj.\+c@{uart\+\_\+obj.\+c}!uart\+\_\+write\+Byte@{uart\+\_\+write\+Byte}}
+\index{uart\+\_\+write\+Byte@{uart\+\_\+write\+Byte}!uart\+\_\+obj.\+c@{uart\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{uart\+\_\+write\+Byte(\+Open\+Mote $\ast$self, uint8\+\_\+t byte\+To\+Write)}{uart_writeByte(OpenMote *self, uint8_t byteToWrite)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} uart\+\_\+write\+Byte (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self, }
+\item[{{\bf uint8\+\_\+t}}]{byte\+To\+Write}
+\end{DoxyParamCaption}
+)}\hypertarget{uart__obj_8c_a6a1d1001d03c5cad3799fd8088aea3da}{}\label{uart__obj_8c_a6a1d1001d03c5cad3799fd8088aea3da}
+
+
+Definition at line 138 of file uart\+\_\+obj.\+c.
+
+\index{uart\+\_\+obj.\+c@{uart\+\_\+obj.\+c}!uart\+\_\+write\+Circular\+Buffer\+\_\+\+F\+A\+S\+T\+S\+IM@{uart\+\_\+write\+Circular\+Buffer\+\_\+\+F\+A\+S\+T\+S\+IM}}
+\index{uart\+\_\+write\+Circular\+Buffer\+\_\+\+F\+A\+S\+T\+S\+IM@{uart\+\_\+write\+Circular\+Buffer\+\_\+\+F\+A\+S\+T\+S\+IM}!uart\+\_\+obj.\+c@{uart\+\_\+obj.\+c}}
+\subsubsection[{\texorpdfstring{uart\+\_\+write\+Circular\+Buffer\+\_\+\+F\+A\+S\+T\+S\+I\+M(\+Open\+Mote $\ast$self, uint8\+\_\+t $\ast$buffer, uint8\+\_\+t $\ast$output\+Buf\+Idx\+R, uint8\+\_\+t $\ast$output\+Buf\+Idx\+W)}{uart_writeCircularBuffer_FASTSIM(OpenMote *self, uint8_t *buffer, uint8_t *outputBufIdxR, uint8_t *outputBufIdxW)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} uart\+\_\+write\+Circular\+Buffer\+\_\+\+F\+A\+S\+T\+S\+IM (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+Mote} $\ast$}]{self, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{buffer, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{output\+Buf\+IdxR, }
+\item[{{\bf uint8\+\_\+t} $\ast$}]{output\+Buf\+IdxW}
+\end{DoxyParamCaption}
+)}\hypertarget{uart__obj_8c_a01fa41d73d497edcc9e17b09f8d47956}{}\label{uart__obj_8c_a01fa41d73d497edcc9e17b09f8d47956}
+
+
+Definition at line 162 of file uart\+\_\+obj.\+c.
+
