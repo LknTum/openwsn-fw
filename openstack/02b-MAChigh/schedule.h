@@ -29,7 +29,7 @@ The superframe repears over time and can be arbitrarly long.
 
 #define SHARED FALSE
 
-//draft-ietf-6tisch-minimal-06 
+//draft-ietf-6tisch-minimal-06
 /// @lkn{Samu} MAXIMUM number is 13
 #define SCHEDULE_MINIMAL_6TISCH_ACTIVE_CELLS  SLOTFRAME_LENGTH-NUMSERIALRX-NUMSLOTSOFF//default 1
 /// @lkn{Samu} Default channel hopping offset set to 1
