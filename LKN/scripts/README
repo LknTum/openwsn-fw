@@ -5,11 +5,15 @@ CONTENTS OF THIS FILE
   * Build OpenWSN and run the GUI
   * References
 
-QUICK INSTALLATION
+QUICK START
 ---------------------
 0. Move to the scripts folder.
 1. Install the sources and libraries using './0-InstallPackages'
-2. Program the motes with './1b-BuildUploadHW.sh /dev/ttyUSBX' , where X is the number of the USB serial peripheral in your system.
+
+2a. Program the motes with './1b-BuildUploadHW.sh /dev/ttyUSBx' , where x is the number of the USB serial peripheral in your system.
+or
+2b. Execute 'python programMote.py /dev/ttyUSBx MOTE_ID IS_DAG', where x is the number of USB serial port, MOTE_ID is the desired mote id, IS_DAG is a flag indicating whether you want the mote to be DAG root or not
+
 3. Finally, run the GUI with ./StartGui
 
 
@@ -20,13 +24,13 @@ In order to install the proper Linux packages and clone the OpenWSN
 repositories, it is sufficient to run the script '0-InstallPackages.sh'.
 
 
-BUILD OPENWSN 
+BUILD OPENWSN
 --------------
 
 Once everything is set up, it is possible to build specific OpenWSN fw. In
 particular, by means of these scripts, it is possible to:
 
-  * Build OpenWSN and run simulated motes: 
+  * Build OpenWSN and run simulated motes:
 	To do so, it is sufficient to run the script '1a-BuildandRun_Simulator.sh'. This
 	script builds the simulated motes and starts the GUI using the web
 	interface.
