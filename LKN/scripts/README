@@ -11,10 +11,17 @@ QUICK START
 1. Install the sources and libraries using './0-InstallPackages'
 
 2a. Program the motes with './1b-BuildUploadHW.sh /dev/ttyUSBx' , where x is the number of the USB serial peripheral in your system.
-or
-2b. Execute 'python programMote.py /dev/ttyUSBx MOTE_ID IS_DAG', where x is the number of USB serial port, MOTE_ID is the desired mote id, IS_DAG is a flag indicating whether you want the mote to be DAG root or not
-
 3. Finally, run the GUI with ./StartGui
+
+MOTE PROGRAMMING
+--------------------
+To program one mote explicitly, use:
+'python programMote.py /dev/ttyUSBx MOTE_ID IS_DAG', where x is the number of USB serial port, MOTE_ID is the desired mote id, IS_DAG is a flag indicating whether you want the mote to be DAG root or not
+
+
+To program all motes with the ids in the range from START_ID to END_ID (optional) use:
+'python programMotes.py START_ID [END_ID]'
+If no end id specified only one mote will be programmed. Mote with id=1 will be programmed as DAG ROOT.
 
 
 OPENWSN INSTALLATION
@@ -63,4 +70,6 @@ The model of the OpenStack can be found here:
 
 
 
-20/11/2015											Samuele Zoppi
+Contributors:
+Samuele Zoppi
+Mikhail Vilgelm

@@ -15,11 +15,6 @@ def program(device, mote_id, is_dag):
 	assert(mote_id>0)
 
 
-	(devs, stderr) = Popen(['ls','/dev/'], stdout=PIPE).communicate()
-	#print(devs)
-
-	usbs = re.findall("(ttyUSB.)", devs)
-
 	# enable dag root
 	for line in fileinput.input(gl_openwsn_dir + 'inc/opendefs.h', 	inplace=True):
 
