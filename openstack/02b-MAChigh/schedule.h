@@ -11,23 +11,35 @@
 #include "opendefs.h"
 
 //=========================== define ==========================================
+/****LKN****/
 
 /**
 \brief The length of the superframe, in slots.
 
 The superframe repears over time and can be arbitrarly long.
-*/
-#define SLOTFRAME_LENGTH    11 //should be 101
 
-//draft-ietf-6tisch-minimal-06
-#define SCHEDULE_MINIMAL_6TISCH_ACTIVE_CELLS                      1
-#define SCHEDULE_MINIMAL_6TISCH_SLOTOFFSET                        0
-#define SCHEDULE_MINIMAL_6TISCH_CHANNELOFFSET                     0
+@lkn{Samu} Detailed descriprion of scheduling modification is in @ref TSCH_scheduling.
+
+*/
+
+/// @internal [LKN-scheduling-setting]
+#define SLOTFRAME_LENGTH    15
+#define NUMSERIALRX          1 ///< @lkn{Samu} Number of slots used for serial transmission
+#define NUMSLOTSOFF          1 ///< @lkn{Samu} Number of slots NOT used, they are probably used in for serial transmission anyway.
+
+#define SHARED FALSE
+
+//draft-ietf-6tisch-minimal-06 
+/// @lkn{Samu} MAXIMUM number is 13
+#define SCHEDULE_MINIMAL_6TISCH_ACTIVE_CELLS  SLOTFRAME_LENGTH-NUMSERIALRX-NUMSLOTSOFF//default 1
+/// @lkn{Samu} Default channel hopping offset set to 1
+#define SCHEDULE_MINIMAL_6TISCH_SLOTOFFSET                        1//deafult time slot 0
+/// @lkn{Samu} Default channel hopping offset set to 0
+#define SCHEDULE_MINIMAL_6TISCH_CHANNELOFFSET                     0//default freq channel 0
 #define SCHEDULE_MINIMAL_6TISCH_DEFAULT_SLOTFRAME_HANDLE          1 //id of slotframe
 #define SCHEDULE_MINIMAL_6TISCH_DEFAULT_SLOTFRAME_NUMBER          1 //1 slotframe by default.
 
-#define NUMSERIALRX          3
-#define NUMSLOTSOFF          3
+/// @internal [LKN-scheduling-setting]
 
 /**
 \brief Maximum number of active slots in a superframe.
@@ -61,7 +73,7 @@ See MINBE for an explanation of backoff.
 \brief a threshold used for triggering the maintaining process.uint: percent
 */
 #define PDR_THRESHOLD      80 // 80 means 80%
-#define MIN_NUMTX_FOR_PDR  50 // don't calculate PDR when numTx is lower than this value 
+#define MIN_NUMTX_FOR_PDR  50 // don't calculate PDR when numTx is lower than this value
 
 //=========================== typedef =========================================
 
@@ -149,7 +161,7 @@ owerror_t          schedule_addActiveSlot(
 );
 
 void               schedule_getSlotInfo(
-   slotOffset_t         slotOffset,                      
+   slotOffset_t         slotOffset,
    open_addr_t*         neighbor,
    slotinfo_element_t*  info
 );
@@ -163,16 +175,6 @@ owerror_t          schedule_removeActiveSlot(
 bool               schedule_isSlotOffsetAvailable(uint16_t slotOffset);
 // return the slot info which has a poor quality
 scheduleEntry_t*  schedule_statistic_poorLinkQuality(void);
-uint16_t          schedule_getCellsCounts(
-    uint8_t frameID,
-    cellType_t type,
-    open_addr_t* neighbor
-);
-void              schedule_removeAllCells(
-   uint8_t        slotframeID,
-   open_addr_t*   previousHop
-);
-scheduleEntry_t*  schedule_getCurrentScheduleEntry();
 
 // from IEEE802154E
 void               schedule_syncSlotOffset(slotOffset_t targetSlotOffset);
@@ -196,5 +198,5 @@ void               schedule_indicateTx(
 \}
 \}
 */
-          
+
 #endif

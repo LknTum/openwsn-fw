@@ -57,11 +57,16 @@ void schedule_init() {
 
 /**
 \brief Starting the DAGroot schedule propagation.
+
+@lkn{Samu} Modified to allow the DAG root to program the scheduling for the network
+
 */
 void schedule_startDAGroot() {
    slotOffset_t    start_slotOffset;
    slotOffset_t    running_slotOffset;
-   open_addr_t     temp_neighbor;
+   ///@lkn{Samu} variable used to iterate over the different #schedule_addActiveSlot
+   open_addr_t     temp_neighbor; 
+   uint8_t         addr_cnt;
    
    start_slotOffset = SCHEDULE_MINIMAL_6TISCH_SLOTOFFSET;
    // set frame length, handle and number (default 1 by now)
@@ -75,17 +80,34 @@ void schedule_startDAGroot() {
    schedule_setFrameNumber(SCHEDULE_MINIMAL_6TISCH_DEFAULT_SLOTFRAME_NUMBER);
 
    // shared TXRX anycast slot(s)
-   memset(&temp_neighbor,0,sizeof(temp_neighbor));
-   temp_neighbor.type             = ADDR_ANYCAST;
-   for (running_slotOffset=start_slotOffset;running_slotOffset<start_slotOffset+SCHEDULE_MINIMAL_6TISCH_ACTIVE_CELLS;running_slotOffset++) {
+   //memset(&temp_neighbor,0,sizeof(temp_neighbor));
+   //temp_neighbor.type             = ADDR_ANYCAST;
+    
+    //&temp_neighbor=idmanager_getMyID(ADDR_64B);
+    temp_neighbor.type         = ADDR_64B;
+    temp_neighbor.addr_64b[0]   = 0x14;
+    temp_neighbor.addr_64b[1]   = 0x15;
+    temp_neighbor.addr_64b[2]   = 0x92;
+    temp_neighbor.addr_64b[3]   = 0xcc;
+    temp_neighbor.addr_64b[4]   = 0x00;
+    temp_neighbor.addr_64b[5]   = 0x00;
+    temp_neighbor.addr_64b[6]   = 0x00;
+    temp_neighbor.addr_64b[7]   = 0x04;
+  /// @internal [LKN-DAG-scheduling]
+    addr_cnt=1;
+    for (running_slotOffset=start_slotOffset;running_slotOffset<start_slotOffset+SCHEDULE_MINIMAL_6TISCH_ACTIVE_CELLS;running_slotOffset++) {
+        temp_neighbor.addr_64b[7]   = addr_cnt;
+        addr_cnt++;
       schedule_addActiveSlot(
          running_slotOffset,                 // slot offset
          CELLTYPE_TXRX,                      // type of slot
-         TRUE,                               // shared?
-         SCHEDULE_MINIMAL_6TISCH_CHANNELOFFSET,    // channel offset
+         SHARED,                               // shared?
+         SCHEDULE_MINIMAL_6TISCH_CHANNELOFFSET,    // channel offset (default SCHEDULE_MINIMAL_6TISCH_CHANNELOFFSET) TODO try different offsets
          &temp_neighbor                      // neighbor
       );
+      debugPrint_schedule();
    }
+ /// @internal [LKN-DAG-scheduling]
 }
 
 /**
@@ -475,53 +497,6 @@ scheduleEntry_t* schedule_statistic_poorLinkQuality(){
        ENABLE_INTERRUPTS();
        return scheduleWalker;
    }
-}
-
-uint16_t  schedule_getCellsCounts(uint8_t frameID,cellType_t type, open_addr_t* neighbor){
-    uint16_t         count = 0;
-    scheduleEntry_t* scheduleWalker;
-   
-    INTERRUPT_DECLARATION();
-    DISABLE_INTERRUPTS();
-    
-    if (frameID != SCHEDULE_MINIMAL_6TISCH_DEFAULT_SLOTFRAME_HANDLE){
-        ENABLE_INTERRUPTS();
-        return 0;
-    }
-   
-    scheduleWalker = schedule_vars.currentScheduleEntry;
-    do {
-       if(
-          packetfunctions_sameAddress(&(scheduleWalker->neighbor),neighbor) &&
-          type == scheduleWalker->type
-       ){
-           count++;
-       }
-       scheduleWalker = scheduleWalker->next;
-    }while(scheduleWalker!=schedule_vars.currentScheduleEntry);
-   
-    ENABLE_INTERRUPTS();
-    return count;
-}
-void schedule_removeAllCells(
-    uint8_t        slotframeID,
-    open_addr_t*   previousHop
-    ){
-    uint8_t i;
-    
-    // remove all entries in schedule with previousHop address
-    for(i=0;i<MAXACTIVESLOTS;i++){
-        if (packetfunctions_sameAddress(&(schedule_vars.scheduleBuf[i].neighbor),previousHop)){
-           schedule_removeActiveSlot(
-              schedule_vars.scheduleBuf[i].slotOffset,
-              previousHop
-           );
-        }
-    }
-}
-
-scheduleEntry_t* schedule_getCurrentScheduleEntry(){
-    return schedule_vars.currentScheduleEntry;
 }
 
 //=== from IEEE802154E: reading the schedule and updating statistics

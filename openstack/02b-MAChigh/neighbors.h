@@ -12,7 +12,10 @@
 
 //=========================== define ==========================================
 
-#define MAXNUMNEIGHBORS           10
+/// @lkn{Samu} We increased the number of allowed neighbors in the neighbor table
+/// @internal [LKN-neighbor-table]
+#define MAXNUMNEIGHBORS           12
+/// @internal [LKN-neighbor-table]
 #define MAXPREFERENCE             2
 #define BADNEIGHBORMAXRSSI        -80 //dBm
 #define GOODNEIGHBORMINRSSI       -90 //dBm
@@ -56,12 +59,12 @@ typedef struct {
    int8_t          rssi;
    uint8_t         parentPreference;
    dagrank_t       DAGrank;
-   uint16_t        asn; 
+   uint16_t        asn;
 } netDebugNeigborEntry_t;
 END_PACK
 
 //=========================== module variables ================================
-   
+
 typedef struct {
    neighborRow_t        neighbors[MAXNUMNEIGHBORS];
    dagrank_t            myDAGrank;
