@@ -10,18 +10,21 @@
 
 #include "opentimers.h"
 
-//=========================== define ==========================================
 
-#define UINJECT_PERIOD_MS 30000
+
+//=========================== define ==========================================
+///@lkn{LKN-Samu} Application periodicity
+///@internal [LKN-uinject-settings]
+#define UINJECT_PERIOD_MS 700
 
 //=========================== typedef =========================================
-
-//=========================== variables =======================================
 
 typedef struct {
    opentimer_id_t       timerId;  ///< periodic timer which triggers transmission
    uint16_t             counter;  ///< incrementing counter which is written into the packet
 } uinject_vars_t;
+
+///@internal [LKN-uinject-settings]
 
 //=========================== prototypes ======================================
 

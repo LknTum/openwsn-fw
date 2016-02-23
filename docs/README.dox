@@ -97,6 +97,26 @@ Here, we store the value of the retransmission counter, once it is updated:
 Here, we store the value of the received packet's RSSI:
 @snippet openstack/02a-MAClow/IEEE802154E.c LKN-dataRX-RSSI
 
+
+=======
+@section Uinject_application Uinject custom application
+In order to properly test the behavior of the network, we developed a simple application that sends uplink traffic periodically. Additionally, we designed the application to allocate payload bytes in order to track additional information about the packets that are sent.
+
+First, we modified the @ref openapps.c and @ref openstack.c in order to allow the initialization of the @ref uinject_init.
+ 
+Then, we defined in @ref uinject.h the periodicity @ref UINJECT_PERIOD_MS, a data structure that contains a timer variable and a counter used to add numeration to the packets that are generated.
+
+@snippet openapps/uinject/uinject.h LKN-uinject-settings
+
+Furthermore, we set the destination address of our application to the DAG root address.
+
+@snippet openapps/uinject/uinject.c LKN-uinject-dest-addr
+
+Finally, here we report the code containg the details of the application that is exevuted in @ref uinject_task_cb. Once the header of the packet is set, we increment the packet counter, and we reserve space for 5 bytes of additional information that will be stored later during the MAC layer operations.
+ 
+@snippet openapps/uinject/uinject.c LKN-uinject-app
+
+
 =======
 @section Serial_compression Serial compression
 "Compress" the packets on serial interface in order to enable forwarding the packets to the openvisualizer faster. The "compression" only forwards part of the pkt id and its payload to the openvisualizer. Serial drivers are modified: @ref openserial.c and @ref openserial.h
@@ -104,6 +124,7 @@ Here, we store the value of the received packet's RSSI:
 @snippet drivers/common/openserial.c LKN-compression
 
 @snippet drivers/common/openserial.h LKN-compression
+
 
 =======
 @section Minor_changes Minor changes
