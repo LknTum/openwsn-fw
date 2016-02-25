@@ -1,0 +1,13 @@
+HOW TO APPLY THE Z1 FIX FOR OPENWSN
+-----------------------------------
+In order to properly upload OpenWSN code on the Zolertia Z1 mote, it is sufficient to run
+
+$ ./applyFix.sh
+
+It will copy the proper files in the in the firmware and software of OpenWSN.
+
+WARNING
+It assumes that the two folders "openwsn-fw" and "openwsn-sw" are in the same directory.
+
+
+25/02/2016																	Samuele Zoppi

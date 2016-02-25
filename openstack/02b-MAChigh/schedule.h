@@ -23,7 +23,7 @@ The superframe repears over time and can be arbitrarly long.
 */
 
 /// @internal [LKN-scheduling-setting]
-#define SLOTFRAME_LENGTH    15
+#define SLOTFRAME_LENGTH    16
 #define NUMSERIALRX          1 ///< @lkn{Samu} Number of slots used for serial transmission
 #define NUMSLOTSOFF          1 ///< @lkn{Samu} Number of slots NOT used, they are probably used in for serial transmission anyway.
 

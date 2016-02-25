@@ -151,5 +151,17 @@ We modified the define in @ref opendefs.h in order to enable the DAG root state 
 @snippet inc/opendefs.h LKN-DAG-state
 
 
+=======
+@section Useful_scripts Useful scripts
+In the LKN folder it is possible to find useful scripts that were using during the development of the process to speed up the operations of installation, building and programming of the motes.
+
+@subsection Bash_scripts Bash scripts
+We are currently using the following scripts:
+
+- @ref 0-InstallPackages.sh
+- @ref 1a-BuildandRun_Simulator.sh
+- @ref 1b-BuildUploadHW.sh
+- @ref 2-StartGUI.sh
+
 */
 
