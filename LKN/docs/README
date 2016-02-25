@@ -1,0 +1,55 @@
+Documentation Instruction
+--------------------------
+
+This file contains the instruction on how to BUILD and MODIFY the Doxygen documentation.
+
+
+BUILD
+------
+
+In order to build the documentation just follow these steps:
+
+1. Open the terminal and move in the folder containing the file "Doxyfile"
+2. From the terminal run one of the two commands
+   
+   - $ doxygen Doxyfile -> generates the folders containing the documentation
+   OR
+   - $ doxywizard Doxyfile -> opens the wizard, useful if the previus command has errors
+
+3. The default documentation is generated into different folders:
+   - html/index.html
+   - latex/refman.tex
+
+
+MODIFY
+-------
+The LKN documentation was build using the following guidelines.
+
+The Doxygen documentation is divided in different HTML pages:
+
+- 'Main Page': contains the high level description of the project, and contains link to pages (also available in the section 'Related Pages').
+ - 'LKN contribution': Provides a full description of the project's modifications, it is divided into topic related sections
+ - 'LKN code edits': provides a list view of the LKN code modifications.
+
+The pages 'Main Page' and 'LKN contribution' are defined in the "README.dox" file. From there, it is possible to structure the pages and the sections in a Latex-like way. The main commands used in this files are:
+
+- @ref <name>: reference to the code's member <name> (function, variable, enum,...), it provides a link to the element
+- @snippet PATH_FROM_HOME_FOLDER <CODE_SNIPPET_TAG>: Includes the code of the file at location PATH_FROM_HOME_FOLDER that is contained between TWO tags in the following way:
+  ///@internal [CODE_SNIPPET_TAG]
+  My code
+  ///@internal [CODE_SNIPPET_TAG]
+
+The page 'LKN code edits' is built automatically by using the ad-hoc command:
+  /// @lkn{EDITOR_NAME} Description of the edit
+
+The command refers and links to any definition that FOLLOWS the tag.
+
+The command is enabled defining the following ALIAS:
+
+- From the doxywizard, in the section 'Expert->Topic->Project->ALIASES', add the line
+  lkn{1}= \xrefitem LKN_code_edits "LKN-\1"  "LKN code edits" 
+
+The setup of this command is already contained in the Doxyfile, it should work automatically using this Doxygen setup.
+
+More information about these and new commands can be found at the Doxygen manual page, following this link:
+http://www.stack.nl/~dimitri/doxygen/manual/commands.html

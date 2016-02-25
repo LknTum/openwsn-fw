@@ -1,0 +1,75 @@
+CONTENTS OF THIS FILE
+---------------------
+  * Quick installation
+  * OpenWSN installation
+  * Build OpenWSN and run the GUI
+  * References
+
+QUICK START
+---------------------
+0. Move to the scripts folder.
+1. Install the sources and libraries using './0-InstallPackages'
+
+2a. Program the motes with './1b-BuildUploadHW.sh /dev/ttyUSBx' , where x is the number of the USB serial peripheral in your system.
+3. Finally, run the GUI with ./StartGui
+
+MOTE PROGRAMMING
+--------------------
+To program one mote explicitly, use:
+'python programMote.py /dev/ttyUSBx MOTE_ID IS_DAG', where x is the number of USB serial port, MOTE_ID is the desired mote id, IS_DAG is a flag indicating whether you want the mote to be DAG root or not
+
+
+To program all motes with the ids in the range from START_ID to END_ID (optional) use:
+'python programMotes.py START_ID [END_ID]'
+If no end id specified only one mote will be programmed. Mote with id=1 will be programmed as DAG ROOT.
+
+
+OPENWSN INSTALLATION
+---------------------
+
+In order to install the proper Linux packages and clone the OpenWSN
+repositories, it is sufficient to run the script '0-InstallPackages.sh'.
+
+
+BUILD OPENWSN
+--------------
+
+Once everything is set up, it is possible to build specific OpenWSN fw. In
+particular, by means of these scripts, it is possible to:
+
+  * Build OpenWSN and run simulated motes:
+	To do so, it is sufficient to run the script '1a-BuildandRun_Simulator.sh'. This
+	script builds the simulated motes and starts the GUI using the web
+	interface.
+
+  * To build and upload the firmware run '1b-BuildUploadHW.sh'. It is
+	possible to modify the the serial port where to upload the fw
+	modifying the 'bootload=' option. Additionally, it is possible to
+	modify the name of the project ('oos_openwsn' by default) by choosing
+	a different project name as last parameter of the 'scons' command.
+
+	Finally, it is sufficient to run the script '2-StartGUI.sh' to start the
+	GUI. It is possible to switch between the python GUI ('rungui') and
+	web GUI ('runweb') by inserting/removing comments in the script.
+
+
+REFERENCES
+-----------
+
+The commands used in the scripts are taken from the following webpage:
+
+  * https://openwsn.atlassian.net/wiki/display/OW/Kickstart+Linux
+
+The Z1 bootloader fix was written using this thread:
+
+  * https://openwsn.atlassian.net/browse/FW-117
+
+The model of the OpenStack can be found here:
+
+  * https://openwsn.atlassian.net/wiki/display/OW/Stack
+
+
+
+Contributors:
+Samuele Zoppi
+Mikhail Vilgelm

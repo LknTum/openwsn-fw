@@ -43,16 +43,6 @@ if env['noadaptivesync']==1:
     env.Append(CPPDEFINES    = 'NOADAPTIVESYNC')
 if env['cryptoengine']:
     env.Append(CPPDEFINES    = {'CRYPTO_ENGINE_SCONS' : env['cryptoengine']})
-if env['l2_security']==1:
-    env.Append(CPPDEFINES    = 'L2_SECURITY_ACTIVE')
-if env['goldenImage']=='sniffer':
-    env.Append(CPPDEFINES    = 'GOLDEN_IMAGE_SNIFFER')
-else:
-    if env['goldenImage']=='root':
-        env.Append(CPPDEFINES    = 'GOLDEN_IMAGE_ROOT')
-    else:
-        env.Append(CPPDEFINES    = 'GOLDEN_IMAGE_NONE')
-        
 
 if   env['toolchain']=='mspgcc':
     
@@ -534,6 +524,49 @@ def IotLabM3_bootload(target, source, env):
     for t in bootloadThreads:
         countingSem.acquire()
 
+
+class z1_bootloadThread(threading.Thread):
+    def __init__(self,comPort,hexFile,countingSem):
+        
+        # store params
+        self.comPort         = comPort
+        self.hexFile         = hexFile
+        self.countingSem     = countingSem
+        
+        # initialize parent class
+        threading.Thread.__init__(self)
+        self.name            = 'z1_bootloadThread_{0}'.format(self.comPort)
+    
+    def run(self):
+        print 'starting bootloading on {0}'.format(self.comPort)
+        subprocess.call(
+            'python '+os.path.join('bootloader','z1','z1-bsl-nopic')+' --z1 -c {0} -r -e -I -p "{1}"'.format(self.comPort,self.hexFile), #using z1-bsl had no effect
+            shell=True
+        )
+        print 'done bootloading on {0}'.format(self.comPort)
+        
+        # indicate done
+        self.countingSem.release()
+
+def z1_bootload(target, source, env):
+    bootloadThreads = []
+    countingSem     = threading.Semaphore(0)
+    # create threads
+    for comPort in env['bootload'].split(','):
+        bootloadThreads += [
+            z1_bootloadThread(
+                comPort      = comPort,
+                hexFile      = source[0],
+                countingSem  = countingSem,
+            )
+        ]
+    # start threads
+    for t in bootloadThreads:
+        t.start()
+    # wait for threads to finish
+    for t in bootloadThreads:
+        countingSem.acquire()
+
 # bootload
 def BootloadFunc():
     if   env['board']=='telosb':
@@ -554,6 +587,12 @@ def BootloadFunc():
             suffix      = '.phonyupload',
             src_suffix  = ''
          )
+    elif env['board']=='z1':	# add case for z1
+    	return Builder(
+    		action      = z1_bootload,
+    		suffix      = '.phonyupload',
+    		src_suffix  = '.ihex',
+    	)
     else:
         raise SystemError('bootloading on board={0} unsupported.'.format(env['board']))
 if env['bootload']:

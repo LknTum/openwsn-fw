@@ -1,0 +1,155 @@
+/**
+@mainpage OpenWSN Aircraft TSCH testbed
+
+@author Samuele Zoppi
+@author Mikhail Vilgelm
+
+These document includes the documentation to the main modifications performed on the OpenWSN firmware to enable it to run with Zolertia Z1 motes, and to be able to schedule the different motes over the TSCH time/hopping resources.
+
+For more detailed information, please, visit the following pages.
+- Full documentation @ref LKN_contribution
+- List of LKN code modifications @ref LKN_code_edits
+
+*/
+
+/**
+@page LKN_contribution LKN contribution
+\tableofcontents
+
+We apported several modification to the firmware, in order to program the Zolertia Z1 motes for our TSCH Airplane testbed.
+
+
+=======
+@section TSCH_scheduling TSCH scheduling
+We enabled a DAG root based scheduling by modifying the files @ref schedule.c and @ref schedule.h .
+
+The setup applied in @ref schedule.h by modifying the following frame parameters:
+@snippet openstack/02b-MAChigh/schedule.h LKN-scheduling-setting
+
+The scheduling of the network is computed by the DAG root. In the function @ref schedule_startDAGroot the scheduling is applied iteratively in this way:
+
+@snippet openstack/02b-MAChigh/schedule.c LKN-DAG-scheduling
+
+
+=======
+@section IE_processing IE processing
+In order to spread the DAG root scheduling over the whole network, we enabled the trasmission of link-specific address information and link settings.
+
+In particular, we modified the functions @ref processIE_prependSlotframeLinkIE, @ref processIE_retrieveSlotframeLinkIE in @ref processIE.c such that is possible to associate the address of a specific mote to the IE link scheduling parameter. Furthermore, the value of the SHARED flag is also transmitted and retrieved.
+
+In @ref processIE_prependSlotframeLinkIE, we enabled the transmission of the address and the link option parameters in this way:
+@snippet openstack/02b-MAChigh/processIE.c LKN-prepend-link-scheduling
+
+In @ref processIE_retrieveSlotframeLinkIE, the opposite mechanism is implemented and properly enables the receiver to store the information into the next active slot:
+@snippet openstack/02b-MAChigh/processIE.c LKN-retrieve-link-scheduling
+
+
+=======
+@section MAC_behavior MAC behavior
+The scope of our project is to enable proper link scheduling in TSCH. To this end, we modified the minimal version of the 802.15.4e MAC layer in order to support our scheduling mechanism. 
+
+All the parameters concerning the MAC layer can be set in @ref IEEE802154E.h. The channel hopping temnplate that we used is the following:
+
+@snippet openstack/02a-MAClow/IEEE802154E.h LKN-hopping-sequence
+
+Additionally, these are the MAC layer parameters that we used in our project:
+
+@snippet openstack/02a-MAClow/IEEE802154E.h LKN-MAC-settings
+
+
+In order to enable address-specific scheduling parameters, we need to apport several major modifications in the file @ref IEEE802154E.c. The 802.15.4E code structure is summerized here: <a href="https://www.mindmeister.com/656557809/ieee802154e-code-structure" target="_blank">IEEE802154E code structure</a> by <a href="https://www.mindmeister.com/users/channel/12733408" target="_blank">Samuele Zoppi</a></div>
+
+
+First, we modified the main function of the MAC scheme, it determines the behavior during the current Time Slot, i.e., it enables the reception and/or transmission of packets.
+
+We modified the function such that the mote can transmit or receive only if it is its own Time Slot. 
+At the beginning, we set the value canTX to FALSE, then we turn it to TRUE by testing its address with respect of the current time slot. 
+- DAG root is always allowed to receive and transmit.
+- Motes are not allowed either to RX or TX in a Time Slot that doesn't match their address.
+
+@snippet openstack/02a-MAClow/IEEE802154E.c LKN-TXRX-address-selection
+
+Furthermore, we modified the behavior of the function @ref calculateFrequency sucht that the calculation of the next frequency hop is enabled by the variable #HOPPING. Otherwise, the next frequency is always set to the common @ref SYNCHRONIZING_CHANNEL.
+
+@snippet openstack/02a-MAClow/IEEE802154E.c LKN-calculateFreq
+
+
+Another major modification involves the management of the current Slot Offset. Previously, its cycle was based on a predefined value of the Frame Length, our contribution enables Slot Offset incraments and synchronization over arbitrary Frame Length lengths.
+
+Here, we modify the function @ref incrementAsnOffset to allow arbitrary values of Frame Length. 
+@snippet openstack/02a-MAClow/IEEE802154E.c LKN-slotOffset-increment
+
+Then, the function @ref  ieee154e_syncSlotOffset was implemented. It allows the synchronization of the Slot Offset based on the current value of ASN.
+@snippet openstack/02a-MAClow/IEEE802154E.c LKN-slotOffset-synch
+
+The methods are then used in @ref ieee154e_processIEs to properly adapt the Slot Offset upon arrival of a new ASN value.
+@snippet openstack/02a-MAClow/IEEE802154E.c LKN-slotOffsetCorrection-processIE
+
+
+Finally, we stored the contents of different parameters under interest in the payload of our application. This allows us to collect packet-related information and analyze them in a second place.
+
+Here, we store the value of the frequency used for transmission:
+@snippet openstack/02a-MAClow/IEEE802154E.c LKN-TX-freq
+
+Here, we store the value of the retransmission counter, once it is updated:
+@snippet openstack/02a-MAClow/IEEE802154E.c LKN-reTX-counter
+
+Here, we store the value of the received packet's RSSI:
+@snippet openstack/02a-MAClow/IEEE802154E.c LKN-dataRX-RSSI
+
+
+=======
+@section Uinject_application Uinject custom application
+In order to properly test the behavior of the network, we developed a simple application that sends uplink traffic periodically. Additionally, we designed the application to allocate payload bytes in order to track additional information about the packets that are sent.
+
+First, we modified the @ref openapps.c and @ref openstack.c in order to allow the initialization of the @ref uinject_init.
+ 
+Then, we defined in @ref uinject.h the periodicity @ref UINJECT_PERIOD_MS, a data structure that contains a timer variable and a counter used to add numeration to the packets that are generated.
+
+@snippet openapps/uinject/uinject.h LKN-uinject-settings
+
+Furthermore, we set the destination address of our application to the DAG root address.
+
+@snippet openapps/uinject/uinject.c LKN-uinject-dest-addr
+
+Finally, here we report the code containg the details of the application that is exevuted in @ref uinject_task_cb. Once the header of the packet is set, we increment the packet counter, and we reserve space for 5 bytes of additional information that will be stored later during the MAC layer operations.
+ 
+@snippet openapps/uinject/uinject.c LKN-uinject-app
+
+
+=======
+@section Serial_compression Serial compression
+"Compress" the packets on serial interface in order to enable forwarding the packets to the openvisualizer faster. The "compression" only forwards part of the pkt id and its payload to the openvisualizer. Serial drivers are modified: @ref openserial.c and @ref openserial.h
+
+@snippet drivers/common/openserial.c LKN-compression
+
+@snippet drivers/common/openserial.h LKN-compression
+
+
+=======
+@section Minor_changes Minor changes
+
+@subsection Addr_edits Mote addressing
+In the function @ref idmanager_init we modify the address of the motes.
+
+The address of the device is set in this way:
+@snippet openstack/cross-layers/idmanager.c LKN-addr
+
+If the device is DAG-root, then the prefix of the device is set in the following way:
+@snippet openstack/cross-layers/idmanager.c LKN-DAG-prefix
+
+@subsection Radio_edits Changes in the Radio driver
+The radio was hardcoded set to 0. In our code we set the PA_LEVEL  in @ref radio_reset to 31.
+@snippet bsp/chips/cc2420/radio.c LKN-radio
+
+@subsection Neighbor_edits Changes in the Neighbor table
+In our code we set the @ref MAXNUMNEIGHBORS to 12 to enable a larger network.
+@snippet openstack/02b-MAChigh/neighbors.h LKN-neighbor-table
+
+@subsection DAG_root DAG root setup
+We modified the define in @ref opendefs.h in order to enable the DAG root state from the firmware.
+@snippet inc/opendefs.h LKN-DAG-state
+
+
+*/
+

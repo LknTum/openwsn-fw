@@ -14,6 +14,14 @@ idmanager_vars_t idmanager_vars;
 
 //=========================== public ==========================================
 
+/**
+@brief Used to initialize the Identifier of the device.
+
+It defines both PAN identifier (myPANID) and IPv6 address (myPrefix).
+
+*/
+
+
 void idmanager_init() {
    
    // reset local variables
@@ -33,7 +41,9 @@ void idmanager_init() {
    
    // myPrefix
    idmanager_vars.myPrefix.type        = ADDR_PREFIX;
-#ifdef DAGROOT
+#ifdef DAGROOT 
+   /****LKN****/
+   /// @internal [LKN-DAG-prefix]
    idmanager_vars.myPrefix.prefix[0]   = 0xbb;
    idmanager_vars.myPrefix.prefix[1]   = 0xbb;
    idmanager_vars.myPrefix.prefix[2]   = 0x00;
@@ -42,14 +52,27 @@ void idmanager_init() {
    idmanager_vars.myPrefix.prefix[5]   = 0x00;
    idmanager_vars.myPrefix.prefix[6]   = 0x00;
    idmanager_vars.myPrefix.prefix[7]   = 0x00;
+ /// @internal [LKN-DAG-prefix]
 #else
    memset(&idmanager_vars.myPrefix.prefix[0], 0x00, sizeof(idmanager_vars.myPrefix.prefix));
 #endif
    
    // my64bID
+
+   /****LKN****/
+   ///@lkn{Samu} Modification of the IPv6 assignment of the device. Here both adresses are hardcoded and programmed using the script @ref PROGRAMMING_SCRIPT.
+   /// @internal [LKN-addr] 
    idmanager_vars.my64bID.type         = ADDR_64B;
-   eui64_get(idmanager_vars.my64bID.addr_64b);
-   
+   idmanager_vars.my64bID.addr_64b[0]   = 0x14;
+   idmanager_vars.my64bID.addr_64b[1]   = 0x15;
+   idmanager_vars.my64bID.addr_64b[2]   = 0x92;
+   idmanager_vars.my64bID.addr_64b[3]   = 0xcc;
+   idmanager_vars.my64bID.addr_64b[4]   = 0x00;
+   idmanager_vars.my64bID.addr_64b[5]   = 0x00;
+   idmanager_vars.my64bID.addr_64b[6]   = 0x00;
+   idmanager_vars.my64bID.addr_64b[7]   = 1;
+   /// @internal [LKN-addr]
+
    // my16bID
    packetfunctions_mac64bToMac16b(&idmanager_vars.my64bID,&idmanager_vars.my16bID);
 }

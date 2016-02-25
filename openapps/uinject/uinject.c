@@ -13,10 +13,22 @@
 
 uinject_vars_t uinject_vars;
 
+#if 1
+///@lkn{Samu} Application destination address set to the DAG root 
+///@internal [LKN-uinject-dest-addr]
 static const uint8_t uinject_dst_addr[]   = {
    0xbb, 0xbb, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01
-}; 
+};
+///@internal [LKN-uinject-dest-addr]
+#endif
+
+#if 0
+static const uint8_t uinject_dst_addr[]   = {
+   0xbb, 0xbb, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+   0x14, 0x15, 0x92, 0xcc, 0x00, 0x00, 0x00, 0x01
+};
+#endif
 
 //=========================== prototypes ======================================
 
@@ -26,10 +38,11 @@ void uinject_task_cb(void);
 //=========================== public ==========================================
 
 void uinject_init() {
-   
+
    // clear local variables
    memset(&uinject_vars,0,sizeof(uinject_vars_t));
-   
+   uinject_vars.counter=0;
+
    // start periodic timer
    uinject_vars.timerId                    = opentimers_start(
       UINJECT_PERIOD_MS,
@@ -43,9 +56,9 @@ void uinject_sendDone(OpenQueueEntry_t* msg, owerror_t error) {
 }
 
 void uinject_receive(OpenQueueEntry_t* pkt) {
-   
+
    openqueue_freePacketBuffer(pkt);
-   
+
    openserial_printError(
       COMPONENT_UINJECT,
       ERR_RCVD_ECHO_REPLY,
@@ -56,41 +69,42 @@ void uinject_receive(OpenQueueEntry_t* pkt) {
 
 //=========================== private =========================================
 
-/**
-\note timer fired, but we don't want to execute task in ISR mode instead, push
-   task to scheduler with CoAP priority, and let scheduler take care of it.
-*/
 void uinject_timer_cb(opentimer_id_t id){
-   
    scheduler_push_task(uinject_task_cb,TASKPRIO_COAP);
 }
 
+/**
+@brief Executes the core code the uninject application once the timer expires.
+
+@lkn{Samu} Once the header of the packet is set, we increment the packet counter, and we reserve space for 5 bytes of additional information that will be stored later during the MAC layer operations.
+
+\note timer fired, but we don't want to execute task in ISR mode instead, push
+   task to scheduler with CoAP priority, and let scheduler take care of it.
+*/
+
 void uinject_task_cb() {
    OpenQueueEntry_t*    pkt;
-   
+
    // don't run if not synch
    if (ieee154e_isSynch() == FALSE) return;
-   
+
    // don't run on dagroot
    if (idmanager_getIsDAGroot()) {
       opentimers_stop(uinject_vars.timerId);
       return;
    }
-   
+
    // if you get here, send a packet
-   
+
    // get a free packet buffer
    pkt = openqueue_getFreePacketBuffer(COMPONENT_UINJECT);
    if (pkt==NULL) {
-      openserial_printError(
-         COMPONENT_UINJECT,
-         ERR_NO_FREE_PACKET_BUFFER,
-         (errorparameter_t)0,
-         (errorparameter_t)0
-      );
+      openserial_printInfo(COMPONENT_UINJECT,ERR_NO_FREE_PACKET_BUFFER,
+                               (errorparameter_t)0,
+                               (errorparameter_t)0);
       return;
    }
-   
+
    pkt->owner                         = COMPONENT_UINJECT;
    pkt->creator                       = COMPONENT_UINJECT;
    pkt->l4_protocol                   = IANA_UDP;
@@ -99,10 +113,27 @@ void uinject_task_cb() {
    pkt->l3_destinationAdd.type        = ADDR_128B;
    memcpy(&pkt->l3_destinationAdd.addr_128b[0],uinject_dst_addr,16);
    
-   packetfunctions_reserveHeaderSize(pkt,sizeof(uint16_t));
-   *((uint16_t*)&pkt->payload[0]) = uinject_vars.counter++;
+   ///@internal [LKN-uinject-app]
+   uinject_vars.counter++;
    
+   packetfunctions_reserveHeaderSize(pkt,5*sizeof(uint8_t));
+   *((uint8_t*)&pkt->payload[0]) = TXRETRIES+1;
+   *((uint8_t*)&pkt->payload[1]) = uinject_vars.counter>>8;
+   *((uint8_t*)&pkt->payload[2]) = uinject_vars.counter;
+   *((uint8_t*)&pkt->payload[3]) = 0; //reserverd for frequency
+   *((uint8_t*)&pkt->payload[4]) = 0; //reserved for RSSI
+
    if ((openudp_send(pkt))==E_FAIL) {
       openqueue_freePacketBuffer(pkt);
    }
+   ///@internal [LKN-uinject-app]
+   /*
+   else{
+      openserial_printInfo(COMPONENT_ICMPv6ECHO,ERR_UNEXPECTED_SENDDONE,
+                               (errorparameter_t)4,
+                               (errorparameter_t)4);
+   }*/
+
 }
+
+

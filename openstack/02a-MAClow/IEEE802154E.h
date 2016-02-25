@@ -16,23 +16,53 @@
 //=========================== debug define ====================================
 
 //=========================== static ==========================================
+
+
+#if 1
+///@internal [LKN-hopping-sequence]
+static const uint8_t chTemplate_default[] = {
+   5,9,12,7,15,4,14,11,8,0,1,2,13,3,6,10
+};
+///@internal [LKN-hopping-sequence]
+#endif
+
+#if 0
 static const uint8_t chTemplate_default[] = {
    5,6,12,7,15,4,14,11,8,0,1,2,13,3,9,10
 };
 
-//=========================== define ==========================================
+#endif
 
+#if 0
+static const uint8_t chTemplate_default[] = {
+   9,14,15,4,9,14,15,4,9,14,15,4,9,14,15,4
+};
+
+#endif
+
+#if 0
+static const uint8_t chTemplate_default[] = {
+   9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9
+};
+
+#endif
+//=========================== define ==========================================
+///@internal [LKN-MAC-settings]
+#define LKN_RECORD_RSSI               1 //enable recording rssi into the packet payload
+#define HOPPING			             1 // Boolean value for enabling freq. hopping
 #define SYNCHRONIZING_CHANNEL       20 // channel the mote listens on to synchronize
-#define TXRETRIES                    3 // number of MAC retries before declaring failed
-#define TX_POWER                    31 // 1=-25dBm, 31=0dBm (max value)
+#define TXRETRIES                    2 // number of MAC retries before declaring failed
+///@warning the TX_POWER value is not set anywhere, it is necessary to change it from the @ref radio.c file in the device drivers
+#define TX_POWER                     19 // 1=-25dBm, 31=0dBm (max value)
 #define RESYNCHRONIZATIONGUARD       5 // in 32kHz ticks. min distance to the end of the slot to successfully synchronize
 #define US_PER_TICK                 30 // number of us per 32kHz clock tick
-#define EBPERIOD                    30 // in seconds: sending EB every 30 seconds
+#define EBPERIOD                    10 // in seconds: sending EB every 30 seconds
 #define MAXKAPERIOD               2000 // in slots: @15ms per slot -> ~30 seconds. Max value used by adaptive synchronization.
 #define DESYNCTIMEOUT             2333 // in slots: @15ms per slot -> ~35 seconds. A larger DESYNCTIMEOUT is needed if using a larger KATIMEOUT.
 #define LIMITLARGETIMECORRECTION     5 // threshold number of ticks to declare a timeCorrection "large"
-#define LENGTH_IEEE154_MAX         128 // max length of a valid radio packet  
+#define LENGTH_IEEE154_MAX         128 // max length of a valid radio packet
 #define DUTY_CYCLE_WINDOW_LIMIT    (0xFFFFFFFF>>1) // limit of the dutycycle window
+///@internal [LKN-MAC-settings]
 
 //15.4e information elements related
 #define IEEE802154E_PAYLOAD_DESC_LEN_SHIFT                 0x04
@@ -145,7 +175,7 @@ enum ieee154e_atomicdurations_enum {
    TsTxOffset                =   70,                  //  2120us
    TsLongGT                  =   36,                  //  1100us
    TsTxAckDelay              =   33,                  //  1000us
-   TsShortGT                 =    9,                  //   500us, The standardlized value for this is 400/2=200us(7ticks). Currectly 7 doesn't work for short packet, change it back to 7 when found the problem.
+   TsShortGT                 =    7,                  //   500us
 #else
    TsTxOffset                =  131,                  //  4000us
    TsLongGT                  =   43,                  //  1300us
@@ -178,7 +208,7 @@ enum ieee154e_linkOption_enum {
    FLAG_TX_S                 = 0,
    FLAG_RX_S                 = 1,
    FLAG_SHARED_S             = 2,
-   FLAG_TIMEKEEPING_S        = 3,   
+   FLAG_TIMEKEEPING_S        = 3,
 };
 
 // FSM timer durations (combinations of atomic durations)
@@ -240,18 +270,18 @@ typedef struct {
    // template ID
    uint8_t                   tsTemplateId;            // timeslot template id
    uint8_t                   chTemplateId;            // channel hopping tempalte id
-   
+
    PORT_RADIOTIMER_WIDTH     radioOnInit;             // when within the slot the radio turns on
    PORT_RADIOTIMER_WIDTH     radioOnTics;             // how many tics within the slot the radio is on
    bool                      radioOnThisSlot;         // to control if the radio has been turned on in a slot.
-   
+
    //control
    bool                      isAckEnabled;            // whether reply for ack, used for synchronization test
    bool                      isSecurityEnabled;       // whether security is applied
    // time correction
    int16_t                   timeCorrection;          // store the timeCorrection, prepend and retrieve it inside of frame header
-   
-   uint16_t                  slotDuration;            // 
+   bool			     my_couldSendEB;
+    uint16_t                  slotDuration;
 } ieee154e_vars_t;
 
 BEGIN_PACK
@@ -285,7 +315,6 @@ void               ieee154e_setIsAckEnabled(bool isEnabled);
 void               ieee154e_setSingleChannel(uint8_t channel);
 void               ieee154e_setIsSecurityEnabled(bool isEnabled);
 void               ieee154e_setSlotDuration(uint16_t duration);
-uint16_t           ieee154e_getSlotDuration();
 
 uint16_t           ieee154e_getTimeCorrection(void);
 // events

@@ -36,6 +36,7 @@
 #include "opencoap.h"
 //===== applications
 #include "openapps.h"
+#include "uinject.h"
 
 //=========================== variables =======================================
 
@@ -49,7 +50,6 @@ void openstack_init(void) {
    
    //===== drivers
    openserial_init();
-   
    //===== stack
    //-- cross-layer
    idmanager_init();    // call first since initializes EUI64 and isDAGroot
@@ -78,7 +78,9 @@ void openstack_init(void) {
    opencoap_init();     // initialize before any of the CoAP applications
    
    //===== applications
-   openapps_init();
+   //openapps_init();
+/// @lkn{Samu} We enabled the initialization of uinject from the stack initialization.
+   uinject_init();
    
    openserial_printInfo(
       COMPONENT_OPENWSN,ERR_BOOTED,
