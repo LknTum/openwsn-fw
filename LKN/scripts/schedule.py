@@ -73,6 +73,7 @@ def generate_schedule(fname, path_to_schedule, path_to_schedule_params):
     f.write("}\n")
     f.close()
 
+
 def generate_schedule_parameters(path_to_schedule_params, slotframe_length, numserialrx, numslotoff):
     """
     Change schedule configuration parameters
@@ -102,7 +103,6 @@ def generate_schedule_parameters(path_to_schedule_params, slotframe_length, nums
         sys.stdout.write(line)
 
     fileinput.close()
-
 
 
 if __name__ == "__main__":
