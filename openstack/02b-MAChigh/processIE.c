@@ -204,6 +204,10 @@ port_INLINE uint8_t processIE_prepend_sixCelllist(
 
 @lkn{Samu} We modified the function such that additional parameters concerning the link options and target address could be added to the packet. In particular, the 6-th element of the payload (payload[5]) will be used to store the address of the link-scheduling, and the @ref linkOption contains meaningful information about the link state.
 
+@warning Hardcoded based on our current scheduling
+@todo implement dynamic loading of the schedule
+
+
 @param Packet that is going to be sent.
 */
 port_INLINE uint8_t processIE_prependSlotframeLinkIE(OpenQueueEntry_t* pkt){
