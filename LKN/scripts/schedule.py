@@ -10,6 +10,7 @@ import json
 import datetime
 import fileinput
 import sys
+import __main__
 from pprint import pprint
 
 
@@ -50,7 +51,8 @@ def generate_schedule(fname, path_to_schedule, path_to_schedule_params):
 
     f = open(path_to_schedule, "w")
 
-    f.write("/**\n\\brief Automatically generated from schedule.py\n\\%s\n*/\n" % str(datetime.datetime.now()))
+    f.write("/**\n\\brief Automatically generated from %s using %s\n\\%s\n\\@lkn{mvilgelm}\n*/\n" %
+            (fname, __main__.__file__, str(datetime.datetime.now())))
     f.write("\n\n")
     f.write("#include \"schedule.h\"\n\n")
     f.write("void init_slotinfo();\n\n")

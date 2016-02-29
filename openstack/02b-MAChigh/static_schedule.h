@@ -1,6 +1,7 @@
 /**
-\brief Automatically generated from schedule.py
-\2016-02-29 12:14:03.331208
+\brief Automatically generated from schedule.json using schedule.py
+\2016-02-29 12:26:32.020196
+\@lkn{mvilgelm}
 */
 
 
