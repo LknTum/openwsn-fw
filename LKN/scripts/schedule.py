@@ -8,11 +8,8 @@ __author__ = 'Mikhail Vilgelm'
 
 import json
 import datetime
+import sys
 from pprint import pprint
-
-
-config_file = "schedule.json"
-path_to_schedule = "../../openstack/02b-MAChigh/static_schedule.h"
 
 
 def read_config(fname):
@@ -47,13 +44,13 @@ def generate_schedule(fname, path_to_schedule):
     f.write("void init_slotinfo(){\n\n")
 
     for idx, entry in enumerate(entries):
-        f.write("entries[%d].slotOffset = %s;\n" % (idx, entry["slotOffset"]))
-        f.write("entries[%d].link_type = %s;\n" % (idx, entry["link_type"]))
-        f.write("entries[%d].shared = %s;\n" % (idx, entry["shared"]))
-        f.write("entries[%d].channelOffset = %s;\n" % (idx, entry["channelOffset"]))
+        f.write("\tentries[%d].slotOffset = %s;\n" % (idx, entry["slotOffset"]))
+        f.write("\tentries[%d].link_type = %s;\n" % (idx, entry["link_type"]))
+        f.write("\tentries[%d].shared = %s;\n" % (idx, entry["shared"]))
+        f.write("\tentries[%d].channelOffset = %s;\n" % (idx, entry["channelOffset"]))
 
         for idx_addr, addr in enumerate(entry["address"].split(":")):
-            f.write("entries[%d].address[%d] = %s;\n" % (idx, idx_addr, addr))
+            f.write("\tentries[%d].address[%d] = %s;\n" % (idx, idx_addr, addr))
 
         f.write("\n\n")
 
@@ -63,4 +60,16 @@ def generate_schedule(fname, path_to_schedule):
 
 if __name__ == "__main__":
 
+    # parse command-line arguments, if any
+    if len(sys.argv) == 1:
+        # use default values
+        config_file = "schedule.json"
+        path_to_schedule = "../../openstack/02b-MAChigh/static_schedule.h"
+    else:
+        if len(sys.argv) != 3:
+            exit("Usage: %s [config_file [output_file]]" % sys.argv[0])
+        config_file = sys.argv[1]
+        path_to_schedule = sys.argv[2]
+
+    # do the work
     generate_schedule(config_file, path_to_schedule)
