@@ -6,7 +6,7 @@ from programMote import program
 
 def program_all(min_range, max_range):
 	"""
-
+    Program a range of motes
 	"""
 	(devs, stderr) = Popen(['ls','/dev/'], stdout=PIPE).communicate()
 

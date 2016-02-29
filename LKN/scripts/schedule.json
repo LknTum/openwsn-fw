@@ -1,3 +1,7 @@
+{
+  "numserialrx": 2,
+  "numslotoff": 2,
+  "active_slots":
 [
   {"slotOffset":1,
   "link_type":"CELLTYPE_TXRX",
@@ -11,3 +15,4 @@
    "channelOffset":1,
    "address":"21:146:204:00:00:00:00:04"}
 ]
+}
