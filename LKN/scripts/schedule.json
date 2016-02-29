@@ -1,0 +1,13 @@
+[
+  {"slotOffset":1,
+  "link_type":"CELLTYPE_TXRX",
+  "shared":"FALSE",
+  "channelOffset":1,
+  "address":"21:146:204:00:00:00:00:04"},
+
+ {"slotOffset":1,
+   "link_type":"CELLTYPE_TXRX",
+   "shared":"FALSE",
+   "channelOffset":1,
+   "address":"21:146:204:00:00:00:00:04"}
+]
