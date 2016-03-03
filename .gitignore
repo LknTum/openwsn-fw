@@ -17,3 +17,6 @@ settings
 *.map
 *.lst
 *~
+*.sublime-project
+*.sublime-workspace
+openwsn-fw

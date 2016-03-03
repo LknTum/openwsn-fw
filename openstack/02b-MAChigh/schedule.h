@@ -23,13 +23,14 @@ The superframe repears over time and can be arbitrarly long.
 */
 
 /// @internal [LKN-scheduling-setting]
-#define SLOTFRAME_LENGTH    15
-#define NUMSERIALRX          1 ///< @lkn{Samu} Number of slots used for serial transmission
-#define NUMSLOTSOFF          1 ///< @lkn{Samu} Number of slots NOT used, they are probably used in for serial transmission anyway.
+/// @lkn{mvilgelm} following configuration lines are generated automatically from configuration file LKN/scripts/schedule.json
+#define SLOTFRAME_LENGTH	6
+#define NUMSERIALRX	2	///< @lkn{Samu} Number of slots used for serial transmission
+#define NUMSLOTSOFF	2	///< @lkn{Samu} Number of slots NOT used,             they are probably used in for serial transmission anyway.
 
 #define SHARED FALSE
 
-//draft-ietf-6tisch-minimal-06 
+//draft-ietf-6tisch-minimal-06
 /// @lkn{Samu} MAXIMUM number is 13
 #define SCHEDULE_MINIMAL_6TISCH_ACTIVE_CELLS  SLOTFRAME_LENGTH-NUMSERIALRX-NUMSLOTSOFF//default 1
 /// @lkn{Samu} Default channel hopping offset set to 1
