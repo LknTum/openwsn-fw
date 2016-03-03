@@ -25,9 +25,6 @@ void schedule_resetEntry(scheduleEntry_t* pScheduleEntry);
 \brief Initialize this module.
 
 \post Call this function before calling any other function in this module.
-
-@lkn{Samu} Modified such that the static schedule is loaded into Active Slots.
-
 */
 void schedule_init() {
    slotOffset_t    start_slotOffset;
@@ -41,15 +38,16 @@ void schedule_init() {
    }
    schedule_vars.backoffExponent = MINBE-1;
    schedule_vars.maxActiveSlots = MAXACTIVESLOTS;
+   
+   init_slotinfo();
 
    start_slotOffset = SCHEDULE_MINIMAL_6TISCH_SLOTOFFSET;
-   
-   init_slotinfo();/// lkn{Samu} load the entries in the global variable
-   LKNschedule_addActiveSlots(); /// lkn{Samu} load the ACTIVE entries in the schedule vars
-   
    if (idmanager_getIsDAGroot()==TRUE) {
       schedule_startDAGroot();
    }
+
+
+   //LKNschedule_addActiveSlots(); /// lkn{Samu} load the ACTIVE entries in the schedule vars
 
    // serial RX slot(s)
    start_slotOffset += SCHEDULE_MINIMAL_6TISCH_ACTIVE_CELLS;
@@ -65,11 +63,10 @@ void schedule_init() {
    }
 }
 
-
 /**
-\brief Performs DAGroot basic settings.
+\brief Starting the DAGroot schedule propagation.
 
-@lkn{Samu} Modified to inhibit the DAG root to program the scheduling for the network
+@lkn{Samu} Modified to allow the DAG root to program the scheduling for the network
 
 */
 void schedule_startDAGroot() {
@@ -89,10 +86,40 @@ void schedule_startDAGroot() {
    }
    schedule_setFrameHandle(SCHEDULE_MINIMAL_6TISCH_DEFAULT_SLOTFRAME_HANDLE);
    schedule_setFrameNumber(SCHEDULE_MINIMAL_6TISCH_DEFAULT_SLOTFRAME_NUMBER);
+   
+   LKNschedule_addActiveSlots();
+#if 0
+   // shared TXRX anycast slot(s)
+   //memset(&temp_neighbor,0,sizeof(temp_neighbor));
+   //temp_neighbor.type             = ADDR_ANYCAST;
 
-	/// @lkn{Samu} Schedule programming from DAG root disabled
+    //&temp_neighbor=idmanager_getMyID(ADDR_64B);
+    temp_neighbor.type         = ADDR_64B;
+    temp_neighbor.addr_64b[0]   = 0x14;
+    temp_neighbor.addr_64b[1]   = 0x15;
+    temp_neighbor.addr_64b[2]   = 0x92;
+    temp_neighbor.addr_64b[3]   = 0xcc;
+    temp_neighbor.addr_64b[4]   = 0x00;
+    temp_neighbor.addr_64b[5]   = 0x00;
+    temp_neighbor.addr_64b[6]   = 0x00;
+    temp_neighbor.addr_64b[7]   = 0x04;
+  /// @internal [LKN-DAG-scheduling]
+    addr_cnt=1;
+    for (running_slotOffset=start_slotOffset;running_slotOffset<start_slotOffset+SCHEDULE_MINIMAL_6TISCH_ACTIVE_CELLS;running_slotOffset++) {
+        temp_neighbor.addr_64b[7]   = addr_cnt;
+        addr_cnt++;
+      schedule_addActiveSlot(
+         running_slotOffset,                 // slot offset
+         CELLTYPE_TXRX,                      // type of slot
+         SHARED,                               // shared?
+         SCHEDULE_MINIMAL_6TISCH_CHANNELOFFSET,    // channel offset (default SCHEDULE_MINIMAL_6TISCH_CHANNELOFFSET) TODO try different offsets
+         &temp_neighbor                      // neighbor
+      );
+      debugPrint_schedule();
+   }
+ /// @internal [LKN-DAG-scheduling]
+ #endif
 }
-
 
 /**
 \brief Trigger this module to print status information, over serial.
@@ -303,7 +330,6 @@ void LKNschedule_addActiveSlots(){
 		cnt++;
    }
 }
-
 
 /**
 \brief Add a new active slot into the schedule.

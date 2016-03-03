@@ -1,6 +1,6 @@
 /**
 \brief Automatically generated from schedule.json using schedule.py
-\2016-02-29 14:54:11.931559
+\2016-03-01 10:24:54.245418
 \@lkn{mvilgelm}
 */
 
@@ -8,9 +8,8 @@
 #include "schedule.h"
 
 void init_slotinfo();
-void LKNschedule_addActiveSlots();
 
-slotinfo_element_t entries[2]; /// @lkn{Samu} Number of entries must be equal the number of SCHEDULE_MINIMAL_6TISCH_ACTIVE_CELLS
+slotinfo_element_t entries[2];
 
 
 void init_slotinfo(){
@@ -26,20 +25,21 @@ void init_slotinfo(){
 	entries[0].address[4] = 00;
 	entries[0].address[5] = 00;
 	entries[0].address[6] = 00;
-	entries[0].address[7] = 0x03;
+	entries[0].address[7] = 0x01;
 
 
 	entries[1].slotOffset = 2;
 	entries[1].link_type = CELLTYPE_TXRX;
 	entries[1].shared = FALSE;
 	entries[1].channelOffset = 2;
-	entries[1].address[0] = 21;
-	entries[1].address[1] = 146;
-	entries[1].address[2] = 204;
-	entries[1].address[3] = 00;
+	entries[1].address[0] = 0x14;
+	entries[1].address[1] = 0x15;
+	entries[1].address[2] = 0x92;
+	entries[1].address[3] = 0xcc;
 	entries[1].address[4] = 00;
 	entries[1].address[5] = 00;
 	entries[1].address[6] = 00;
-	entries[1].address[7] = 7;
+	entries[1].address[7] = 0x02;
+
 
 }

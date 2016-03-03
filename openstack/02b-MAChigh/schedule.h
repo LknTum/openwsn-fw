@@ -143,6 +143,9 @@ typedef struct {
 
 //=========================== prototypes ======================================
 
+//LKN
+void LKNschedule_addActiveSlots();
+
 // admin
 void               schedule_init(void);
 void               schedule_startDAGroot(void);

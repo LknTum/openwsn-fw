@@ -445,12 +445,6 @@ port_INLINE uint8_t processIE_prependBandwidthIE(
    return len;
 }
 
-/**
-@brief Prepends the incremental UPDATE of the schedule
-
-@lkn{Samu} Storing of the schedule in the IE DISABLED. For the moment, it prepends NOTHING
-@TODO Implementation of the incremental update of the schedule.
-*/
 port_INLINE uint8_t processIE_prependScheduleIE(
       OpenQueueEntry_t* pkt,
       uint8_t           type,
@@ -467,7 +461,6 @@ port_INLINE uint8_t processIE_prependScheduleIE(
    len        = 0;
    numOfCells = 0;
 
-#if 0
    //===== cell list
 
    for(i=0;i<SCHEDULEIEMAXNUMCELLS;i++) {
@@ -564,17 +557,16 @@ port_INLINE uint8_t processIE_prependScheduleIE(
    pkt->payload[1] = (mlme_subHeader.length_subID_type >> 8)& 0xFF;
 
    len+=2;
-#endif
+
    return len;
 }
 
 //===== retrieve IEs
 
 /**
-@brief Retrieves the incremental update of the link scheduling from a EB packet
+@brief Retrieves the link scheduling from a given packet
 
-@lkn{Samu} Retrieving the schedule from the IE DISABLED. For the moment, it retrieves NOTHING
-@TODO Retrieve the incremental update of the link scheduling from a EB packet
+@lkn{Samu} Our modification enables the extraction of the @ref neighAddr and @ref linkInfo information, previously included in the IE. In this way, we add to every new active slot the information about the target mote's address and link options.
 
 @param Packet where to extract the link scheduling from
 @return New scheduling information as active slots
@@ -595,9 +587,7 @@ port_INLINE void processIE_retrieveSlotframeLinkIE(
    uint8_t neighAddr;
 
    localptr = *ptr;
-   localptr+=0; /// @lkn{Samu} maybe need to be adjusted to the real value
 
-#if 0
    // number of slot frames 1B
    numSlotFrames = *((uint8_t*)(pkt->payload)+localptr);
    localptr++;
@@ -628,7 +618,7 @@ port_INLINE void processIE_retrieveSlotframeLinkIE(
       localptr++;
 
       if (oldFrameLength == 0) {
-
+#if 0
          for (j=0;j<sfInfo.numlinks;j++){
 
             // [2B] TimeSlot
@@ -673,11 +663,13 @@ port_INLINE void processIE_retrieveSlotframeLinkIE(
             );
  	   		/// @internal [LKN-retrieve-link-scheduling]
          }
+#endif
+		LKNschedule_addActiveSlots();
       }
       i++;
       break; //TODO: this break is put since a single slotframe is managed
    }
-#endif
+	
    *ptr=localptr;
 }
 
