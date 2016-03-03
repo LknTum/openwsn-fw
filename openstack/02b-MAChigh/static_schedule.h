@@ -1,6 +1,6 @@
 /**
 \brief Automatically generated from schedule.json using schedule.py
-\2016-02-29 14:54:11.931559
+\2016-03-03 15:35:58.225204
 \@lkn{mvilgelm}
 */
 
@@ -25,7 +25,7 @@ void init_slotinfo(){
 	entries[0].address[4] = 00;
 	entries[0].address[5] = 00;
 	entries[0].address[6] = 00;
-	entries[0].address[7] = 0x03;
+	entries[0].address[7] = 0x01;
 
 
 	entries[1].slotOffset = 1;
@@ -39,7 +39,7 @@ void init_slotinfo(){
 	entries[1].address[4] = 00;
 	entries[1].address[5] = 00;
 	entries[1].address[6] = 00;
-	entries[1].address[7] = 0x04;
+	entries[1].address[7] = 0x02;
 
 
 }
