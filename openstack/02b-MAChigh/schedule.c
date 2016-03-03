@@ -98,6 +98,8 @@ void schedule_startDAGroot() {
     for (running_slotOffset=start_slotOffset;running_slotOffset<start_slotOffset+SCHEDULE_MINIMAL_6TISCH_ACTIVE_CELLS;running_slotOffset++) {
         temp_neighbor.addr_64b[7]   = addr_cnt;
         addr_cnt++;
+	//muratdebug
+	debugPrint_schedule();
       schedule_addActiveSlot(
          running_slotOffset,                 // slot offset
          CELLTYPE_TXRX,                      // type of slot
