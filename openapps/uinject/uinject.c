@@ -12,7 +12,8 @@
 //=========================== variables =======================================
 
 uinject_vars_t uinject_vars;
-
+    static uint8_t flag=1;
+    static uint32_t	counter=-1;  ///< incrementing counter for burst	
 #if 1
 ///@lkn{Samu} Application destination address set to the DAG root 
 ///@internal [LKN-uinject-dest-addr]
@@ -38,14 +39,43 @@ void uinject_task_cb(void);
 //=========================== public ==========================================
 
 void uinject_init() {
+static uint32_t 	APP_BASED_PERIOD_MS;  ///< msg periodicity constant
 
    // clear local variables
    memset(&uinject_vars,0,sizeof(uinject_vars_t));
    uinject_vars.counter=0;
+   ///@internal [LKN-uinject-timer]
+	if (APPFLAG==1) {
+		if (flag==1) {
+			APP_BASED_PERIOD_MS=BURST_SILENCE_MS;
+			
+			flag=0;
+				
+		}
+		else{
+			APP_BASED_PERIOD_MS=BURST_PERIOD_MS;
+			
+			flag=1;
+		}
+	}
+	else if (APPFLAG==2){
+		//srand(1) is assumed to be called here.
+		APP_BASED_PERIOD_MS=UINJECT_PERIOD_MS;
+		APP_BASED_PERIOD_MS=rand()%APP_BASED_PERIOD_MS;
+		APP_BASED_PERIOD_MS+=UINJECT_PERIOD_MS/2;
+			
+	}
+	
+	else if	(APPFLAG==3)
+		APP_BASED_PERIOD_MS=UINJECT_PERIOD_MS;	
+	else
+		APP_BASED_PERIOD_MS=UINJECT_PERIOD_MS;
+	
 
+   ///@internal [LKN-uinject-timer]
    // start periodic timer
    uinject_vars.timerId                    = opentimers_start(
-      UINJECT_PERIOD_MS,
+      APP_BASED_PERIOD_MS,
       TIMER_PERIODIC,TIME_MS,
       uinject_timer_cb
    );
@@ -84,12 +114,16 @@ void uinject_timer_cb(opentimer_id_t id){
 
 void uinject_task_cb() {
    OpenQueueEntry_t*    pkt;
+   // Debug Message
+   //openserial_printData(pkt,40);
 
    // don't run if not synch
-   if (ieee154e_isSynch() == FALSE) return;
+   if (ieee154e_isSynch() == FALSE){ 
+
+return;}
 
    // don't run on dagroot
-   if (idmanager_getIsDAGroot()) {
+  if (idmanager_getIsDAGroot()) {
       opentimers_stop(uinject_vars.timerId);
       return;
    }
@@ -104,7 +138,7 @@ void uinject_task_cb() {
                                (errorparameter_t)0);
       return;
    }
-
+	
    pkt->owner                         = COMPONENT_UINJECT;
    pkt->creator                       = COMPONENT_UINJECT;
    pkt->l4_protocol                   = IANA_UDP;
@@ -115,7 +149,28 @@ void uinject_task_cb() {
    
    ///@internal [LKN-uinject-app]
    uinject_vars.counter++;
-   
+// Control the packet generation timer
+// Non-periodic have to generate a new timer after each packet   
+   if (APPFLAG==2){
+	opentimers_stop(uinject_vars.timerId);
+	uinject_init();
+	}
+// Trigger burst after a silence period packet by modifying the timer parameter.
+   else if (counter==-1 && APPFLAG==1){
+	counter=BURST_DURATION_MS/BURST_PERIOD_MS;
+	opentimers_stop(uinject_vars.timerId);
+	uinject_init();
+        }
+// Count down till burst period ends
+   else if (counter!=0 && APPFLAG==1){
+	counter--;
+        }
+// Reset to silence after burst ends
+   else if (APPFLAG==1){
+	counter=-1; 
+	opentimers_stop(uinject_vars.timerId);
+	uinject_init();
+        }
    packetfunctions_reserveHeaderSize(pkt,5*sizeof(uint8_t));
    *((uint8_t*)&pkt->payload[0]) = TXRETRIES+1;
    *((uint8_t*)&pkt->payload[1]) = uinject_vars.counter>>8;
