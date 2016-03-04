@@ -234,27 +234,22 @@ port_INLINE uint8_t processIE_prependSlotframeLinkIE(OpenQueueEntry_t* pkt){
 #if LKN_INCREMENTAL_UPDATES
    /// @lkn{mvilgelm} propagate only updated schedule entries
 
-   if (idmanager_getIsDAGroot()==TRUE) {
+   linkOption = (1<<FLAG_TX_S)|(1<<FLAG_RX_S)|(1<<FLAG_SHARED_S)|(1<<FLAG_TIMEKEEPING_S);
+   i=1;
+   for (uint8_t id = 0; id<SCHEDULE_MINIMAL_6TISCH_ACTIVE_CELLS; id++ ){
+      if (entries[id].isUpdated){
+        packetfunctions_reserveHeaderSize(pkt,5);
+        pkt->payload[0]   = (entries[id].slotOffset-1) & 0xFF;          // slotOffset
+        pkt->payload[1]   = ((entries[id].slotOffset-1) >> 8) & 0xFF;   //slotOffset
 
-     linkOption = (1<<FLAG_TX_S)|(1<<FLAG_RX_S)|(1<<FLAG_SHARED_S)|(1<<FLAG_TIMEKEEPING_S);
-     i=1;
-     for (uint8_t id = 0; id<SCHEDULE_MINIMAL_6TISCH_ACTIVE_CELLS; id++ ){
-        if (entries[id].isUpdated){
-          packetfunctions_reserveHeaderSize(pkt,6);
-          pkt->payload[0]   = (entries[id].slotOffset-1) & 0xFF;          // slotOffset
-          pkt->payload[1]   = ((entries[id].slotOffset-1) >> 8) & 0xFF;       //
-          pkt->payload[2]   = SCHEDULE_MINIMAL_6TISCH_CHANNELOFFSET;    // channel offset
-          pkt->payload[3]   = 0x00;
-          pkt->payload[4]   = linkOption;                             // linkOption bitmap
-          pkt->payload[5]   = entries[id].address[7];                 // Address value only last byte
-          i++;
-          len+=6;
-        }
-     }
+        pkt->payload[2]   = SCHEDULE_MINIMAL_6TISCH_CHANNELOFFSET;    // channel offset
+        pkt->payload[3]   = 0x00;                                     // channel offset
 
-   }
-   else {
-    // TODO not DAG root
+        // pkt->payload[4]   = linkOption;                             // linkOption bitmap
+        pkt->payload[4]   = entries[id].address[7];                 // Address value only last byte
+        i++;
+        len+=5;
+      }
    }
 
 #elif
@@ -702,30 +697,37 @@ port_INLINE void processIE_retrieveSlotframeLinkIE(
 #endif
 		static_schedule_addActiveSlots();
 
-		//for every incremental change->ask mikhail how it is actually coded
-		// Time Slot
-		t = *((uint8_t*)(pkt->payload)+localptr);
-        localptr++;
-        t  |= (*((uint8_t*)(pkt->payload)+localptr))<<8;
-        localptr++;
+    for (j=0;j<sfInfo.numlinks;j++){
+  		//for every incremental change->ask mikhail how it is actually coded
+  		// Time Slot
+  		    t = *((uint8_t*)(pkt->payload)+localptr);
+          localptr++;
+          t  |= (*((uint8_t*)(pkt->payload)+localptr))<<8;
+          localptr++;
 
-        // Frequency offset
-        f = *((uint8_t*)(pkt->payload)+localptr);
-        localptr++;
-        f  |= (*((uint8_t*)(pkt->payload)+localptr))<<8;
-        localptr++;
+          // Frequency offset
+          f = *((uint8_t*)(pkt->payload)+localptr);
+          localptr++;
+          f  |= (*((uint8_t*)(pkt->payload)+localptr))<<8;
+          localptr++;
 
-        // Address
-        addr = *((uint8_t*)(pkt->payload)+localptr);
-        localptr++;
-        addr  |= (*((uint8_t*)(pkt->payload)+localptr))<<8;
-        localptr++;
+          // Address
+          addr = *((uint8_t*)(pkt->payload)+localptr);
+          localptr++;
+          addr  |= (*((uint8_t*)(pkt->payload)+localptr))<<8;
+          localptr++;
+
+
+        }
 
         /// @lkn{Samu} Applies the incremental updates
         static_schedule_incrementalUpdate(t,f,addr);
-      }
+
+        // TODO if not DAG root -> store the info somewhere
+
       i++;
       break; //TODO: this break is put since a single slotframe is managed
+    }
    }
 
    *ptr=localptr;

@@ -18,6 +18,7 @@ void init_slotinfo(){
 	entries[0].link_type = CELLTYPE_TXRX;
 	entries[0].shared = FALSE;
 	entries[0].channelOffset = 1;
+	entries[0].isUpdated = FALSE;
 	entries[0].address[0] = 0x14;
 	entries[0].address[1] = 0x15;
 	entries[0].address[2] = 0x92;
@@ -32,6 +33,7 @@ void init_slotinfo(){
 	entries[1].link_type = CELLTYPE_TXRX;
 	entries[1].shared = FALSE;
 	entries[1].channelOffset = 2;
+	entries[1].isUpdated = TRUE;
 	entries[1].address[0] = 0x14;
 	entries[1].address[1] = 0x15;
 	entries[1].address[2] = 0x92;
@@ -43,3 +45,4 @@ void init_slotinfo(){
 
 
 }
+
