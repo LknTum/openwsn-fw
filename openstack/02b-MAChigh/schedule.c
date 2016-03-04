@@ -5,6 +5,7 @@
 #include "packetfunctions.h"
 #include "sixtop.h"
 #include "idmanager.h"
+#include "idmanager.c"
 
 /// @lkn{mvilgelm} include automatically generated schedule information
 #include "static_schedule.h"
@@ -287,6 +288,35 @@ uint16_t  schedule_getMaxActiveSlots() {
    return schedule_vars.maxActiveSlots;
 }
 
+void static_schedule_incrementalUpdate(uint8_t t,uint8_t f,uint8_t addr){
+	uint8_t i;
+	uint8_t myAddr;
+	scheduleEntry_t* iteratorScheduleEntry;
+
+	iteratorScheduleEntry=&schedule_vars.scheduleBuf[0];
+	myAddr=idmanager_vars.my64bID.addr_64b[7];
+
+	for(i=0;i<MAXACTIVESLOTS;i++){
+		iteratorScheduleEntry++;
+
+		if(iteratorScheduleEntry->neighbor.addr_64b[7]==addr || iteratorScheduleEntry->slotOffset==t){
+
+			if(iteratorScheduleEntry->slotOffset==t){
+
+				if(iteratorScheduleEntry->neighbor.addr_64b[7]!=addr){// then it's the new entry (same time different addr), change freq and ownership
+					iteratorScheduleEntry->channelOffset=f;
+					iteratorScheduleEntry->neighbor.addr_64b[7]=myAddr;
+				}
+
+			}else{ //it's the old one (same addr, different time), change ownership to dummyAddr
+				iteratorScheduleEntry->neighbor.addr_64b[7]=0x99;
+			}
+		}
+	}
+}
+
+
+
 /**
 @brief Load the entries from the static schedule in the @ref schedule_vars.
 
@@ -312,6 +342,7 @@ void static_schedule_addActiveSlots(){
     my_addr.addr_64b[6]   = 0x00;
     my_addr.addr_64b[7]   = 0x04;
   	//*/
+
 	cnt=0;
 	start_slotOffset = SCHEDULE_MINIMAL_6TISCH_SLOTOFFSET;
 
@@ -320,10 +351,10 @@ void static_schedule_addActiveSlots(){
 		//my_addr.addr_64b[7]   = entries[cnt].address[7];
       	schedule_addActiveSlot(
         	entries[cnt].slotOffset,	// slotOffset number
-			entries[cnt].link_type,		// TX/RX/TXRX
-			entries[cnt].shared,		// FALSE/TRUE
-			entries[cnt].channelOffset,	// channelOffset number
-			&my_addr					// address of the scheduled mote
+					entries[cnt].link_type,		// TX/RX/TXRX
+					entries[cnt].shared,		// FALSE/TRUE
+					entries[cnt].channelOffset,	// channelOffset number
+					&my_addr					// address of the scheduled mote
       	);
 		cnt++;
    }

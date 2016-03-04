@@ -16,9 +16,9 @@
 ///@lkn{LKN-Samu} Application periodicity
 ///@internal [LKN-uinject-settings]
 #define UINJECT_PERIOD_MS 1000
-#define BURST_SILENCE_MS 180000    
-#define BURST_DURATION_MS 120000	
-#define BURST_PERIOD_MS 300	///< interval for sending burst packets
+#define BURST_SILENCE_MS 10000    
+#define BURST_DURATION_MS 10000	
+#define BURST_PERIOD_MS 400	///< interval for sending burst packets
 // Too low values such as 100 creates problems
 ///@lkn{LKN-Murat} Application type 1-Burst 2-Non-Periodic 3-Periodic
 ///@internal [LKN-uinject-settings]

@@ -22,7 +22,7 @@
 /****LKN****/
 /// @lkn{Samu} DAG root definition
 /// @internal [LKN-DAG-state]
-//#define DAGROOT 1
+#define DAGROOT 1
 /// @internal [LKN-DAG-state]
 
 static const uint8_t infoStackName[] = "OpenWSN ";

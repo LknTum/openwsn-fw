@@ -615,7 +615,12 @@ port_INLINE void processIE_retrieveSlotframeLinkIE(
    open_addr_t          temp_neighbor;
    frameLength_t        oldFrameLength;
    bool my_shared;
-   uint8_t neighAddr;
+   //uint8_t neighAddr;
+
+   /// @lkn{Samu} Incremental updates variables
+   uint8_t				t;
+   uint8_t				f;
+   uint8_t				addr;
 
    localptr = *ptr;
 
@@ -696,6 +701,28 @@ port_INLINE void processIE_retrieveSlotframeLinkIE(
          }
 #endif
 		static_schedule_addActiveSlots();
+
+		//for every incremental change->ask mikhail how it is actually coded
+		// Time Slot
+		t = *((uint8_t*)(pkt->payload)+localptr);
+        localptr++;
+        t  |= (*((uint8_t*)(pkt->payload)+localptr))<<8;
+        localptr++;
+
+        // Frequency offset
+        f = *((uint8_t*)(pkt->payload)+localptr);
+        localptr++;
+        f  |= (*((uint8_t*)(pkt->payload)+localptr))<<8;
+        localptr++;
+
+        // Address
+        addr = *((uint8_t*)(pkt->payload)+localptr);
+        localptr++;
+        addr  |= (*((uint8_t*)(pkt->payload)+localptr))<<8;
+        localptr++;
+
+        /// @lkn{Samu} Applies the incremental updates
+        static_schedule_incrementalUpdate(t,f,addr);
       }
       i++;
       break; //TODO: this break is put since a single slotframe is managed

@@ -58,7 +58,7 @@ in your schedule, so not to waste RAM.
 
 /**
 \brief Minimum backoff exponent.
-
+build/z1_mspgcc/openstack/02b-MAChigh/static_schedule.h:10:1:
 Backoff is used only in slots that are marked as shared in the schedule. When
 not shared, the mote assumes that schedule is collision-free, and therefore
 does not use any backoff mechanism when a transmission fails.
@@ -148,6 +148,7 @@ typedef struct {
 
 //LKN
 void LKNschedule_addActiveSlots();
+void static_schedule_incrementalUpdate(uint8_t t,uint8_t f,uint8_t addr);
 
 // admin
 void               schedule_init(void);
