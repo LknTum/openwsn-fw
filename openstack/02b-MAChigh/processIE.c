@@ -618,7 +618,7 @@ port_INLINE void processIE_retrieveSlotframeLinkIE(
       localptr++;
 
       if (oldFrameLength == 0) {
-
+#if 0
          for (j=0;j<sfInfo.numlinks;j++){
 
             // [2B] TimeSlot
@@ -663,11 +663,13 @@ port_INLINE void processIE_retrieveSlotframeLinkIE(
             );
  	   		/// @internal [LKN-retrieve-link-scheduling]
          }
+#endif
+		LKNschedule_addActiveSlots();
       }
       i++;
       break; //TODO: this break is put since a single slotframe is managed
    }
-
+	
    *ptr=localptr;
 }
 

@@ -28,10 +28,10 @@ void init_slotinfo(){
 	entries[0].address[7] = 0x01;
 
 
-	entries[1].slotOffset = 1;
+	entries[1].slotOffset = 2;
 	entries[1].link_type = CELLTYPE_TXRX;
 	entries[1].shared = FALSE;
-	entries[1].channelOffset = 1;
+	entries[1].channelOffset = 2;
 	entries[1].address[0] = 0x14;
 	entries[1].address[1] = 0x15;
 	entries[1].address[2] = 0x92;

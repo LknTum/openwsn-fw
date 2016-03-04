@@ -38,13 +38,16 @@ void schedule_init() {
    }
    schedule_vars.backoffExponent = MINBE-1;
    schedule_vars.maxActiveSlots = MAXACTIVESLOTS;
+   
+   init_slotinfo();
 
    start_slotOffset = SCHEDULE_MINIMAL_6TISCH_SLOTOFFSET;
    if (idmanager_getIsDAGroot()==TRUE) {
       schedule_startDAGroot();
    }
 
-   init_slotinfo();
+
+   //LKNschedule_addActiveSlots(); /// lkn{Samu} load the ACTIVE entries in the schedule vars
 
    // serial RX slot(s)
    start_slotOffset += SCHEDULE_MINIMAL_6TISCH_ACTIVE_CELLS;
@@ -83,7 +86,9 @@ void schedule_startDAGroot() {
    }
    schedule_setFrameHandle(SCHEDULE_MINIMAL_6TISCH_DEFAULT_SLOTFRAME_HANDLE);
    schedule_setFrameNumber(SCHEDULE_MINIMAL_6TISCH_DEFAULT_SLOTFRAME_NUMBER);
-
+   
+   LKNschedule_addActiveSlots();
+#if 0
    // shared TXRX anycast slot(s)
    //memset(&temp_neighbor,0,sizeof(temp_neighbor));
    //temp_neighbor.type             = ADDR_ANYCAST;
@@ -113,6 +118,7 @@ void schedule_startDAGroot() {
       debugPrint_schedule();
    }
  /// @internal [LKN-DAG-scheduling]
+ #endif
 }
 
 /**
@@ -281,6 +287,48 @@ void  schedule_getSlotInfo(
 */
 uint16_t  schedule_getMaxActiveSlots() {
    return schedule_vars.maxActiveSlots;
+}
+
+/**
+@brief Load the entries from the static schedule in the @ref schedule_vars.
+
+@lkn{Samu} Function implementation. It loads the harcoded entries, assuming that the number of entries is equal the number of SCHEDULE_MINIMAL_6TISCH_ACTIVE_CELLS
+
+*/
+void LKNschedule_addActiveSlots(){
+	slotOffset_t start_slotOffset;
+	slotOffset_t running_slotOffset;
+	uint8_t cnt;
+	open_addr_t my_addr;
+	
+	memset(&my_addr,0,sizeof(my_addr));
+	my_addr.type         = ADDR_64B;
+
+	/*
+    my_addr.addr_64b[0]   = 0x14;
+    my_addr.addr_64b[1]   = 0x15;
+    my_addr.addr_64b[2]   = 0x92;
+    my_addr.addr_64b[3]   = 0xcc;
+    my_addr.addr_64b[4]   = 0x00;
+    my_addr.addr_64b[5]   = 0x00;
+    my_addr.addr_64b[6]   = 0x00;
+    my_addr.addr_64b[7]   = 0x04;
+  	//*/  	
+	cnt=0;
+	start_slotOffset = SCHEDULE_MINIMAL_6TISCH_SLOTOFFSET;
+
+	for (running_slotOffset=start_slotOffset;running_slotOffset<start_slotOffset+SCHEDULE_MINIMAL_6TISCH_ACTIVE_CELLS;running_slotOffset++) {
+		memcpy(&(my_addr.addr_64b[0]) , &(entries[cnt].address[0]) , LENGTH_ADDR64b);
+		//my_addr.addr_64b[7]   = entries[cnt].address[7];
+      	schedule_addActiveSlot(
+        	entries[cnt].slotOffset,	// slotOffset number
+			entries[cnt].link_type,		// TX/RX/TXRX
+			entries[cnt].shared,		// FALSE/TRUE
+			entries[cnt].channelOffset,	// channelOffset number
+			&my_addr					// address of the scheduled mote 
+      	);
+		cnt++;
+   }
 }
 
 /**
