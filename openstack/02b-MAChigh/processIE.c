@@ -231,7 +231,29 @@ port_INLINE uint8_t processIE_prependSlotframeLinkIE(OpenQueueEntry_t* pkt){
    // - [2B] timeslot
    // - [3B] Neighbour value -NEW
 
-   //===== shared cells
+#if LKN_INCREMENTAL_UPDATES
+   /// @lkn{mvilgelm} propagate only updated schedule entries
+   linkOption = (1<<FLAG_TX_S)|(1<<FLAG_RX_S)|(1<<FLAG_SHARED_S)|(1<<FLAG_TIMEKEEPING_S);
+   i=1;
+   // TODO if DAG root
+   for (uint8_t id = 0; id<SCHEDULE_MINIMAL_6TISCH_ACTIVE_CELLS; id++ ){
+      if (entries[id].isUpdated){
+        packetfunctions_reserveHeaderSize(pkt,6);
+        pkt->payload[0]   = entries[id].slotOffset & 0xFF; //(slotOffset-1)        & 0xFF;       // slotOffset
+        pkt->payload[1]   = entries[id].slotOffset; //((slotOffset-1) >> 8) & 0xFF;       //
+        pkt->payload[2]   = SCHEDULE_MINIMAL_6TISCH_CHANNELOFFSET;    // channel offset
+        pkt->payload[3]   = 0x00;
+        pkt->payload[4]   = linkOption;                             // linkOption bitmap
+        pkt->payload[5]   = entries[id].address[7];                 // Address value
+        i++;
+        len+=6;
+      }
+   }
+   // TODO not DAG root
+
+
+#elif
+    //===== shared cells
    linkOption = (1<<FLAG_TX_S)|(1<<FLAG_RX_S)|(1<<FLAG_SHARED_S)|(1<<FLAG_TIMEKEEPING_S);
    i=1;
    for (slotOffset=lastSlotOffset;slotOffset>SCHEDULE_MINIMAL_6TISCH_SLOTOFFSET;slotOffset--) {
@@ -245,7 +267,10 @@ port_INLINE uint8_t processIE_prependSlotframeLinkIE(OpenQueueEntry_t* pkt){
 	  i++;
       len+=6;
    }
+#endif
+
    /// @internal [LKN-prepend-link-scheduling]
+
 
    //===== slotframe IE header
 
@@ -258,7 +283,8 @@ port_INLINE uint8_t processIE_prependSlotframeLinkIE(OpenQueueEntry_t* pkt){
    pkt->payload[1] = schedule_getFrameHandle();
    pkt->payload[2] =  frameLength       & 0xFF;
    pkt->payload[3] = (frameLength >> 8) & 0xFF;
-   pkt->payload[4] = SCHEDULE_MINIMAL_6TISCH_ACTIVE_CELLS; //number of links
+   //pkt->payload[4] = SCHEDULE_MINIMAL_6TISCH_ACTIVE_CELLS; //number of links
+   pkt->payload[4] = SCHEDULE_MINIMAL_6TISCH_ACTIVE_CELLS; /// TODO @lkn{mvilgelm} number of updated links
 
    len+=5;
 
@@ -664,12 +690,12 @@ port_INLINE void processIE_retrieveSlotframeLinkIE(
  	   		/// @internal [LKN-retrieve-link-scheduling]
          }
 #endif
-		LKNschedule_addActiveSlots();
+		static_schedule_addActiveSlots();
       }
       i++;
       break; //TODO: this break is put since a single slotframe is managed
    }
-	
+
    *ptr=localptr;
 }
 

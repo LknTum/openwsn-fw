@@ -30,6 +30,8 @@ The superframe repears over time and can be arbitrarly long.
 
 #define SHARED FALSE
 
+#define LKN_INCREMENTAL_UPDATES 1 ///< @lkn{mvilgelm} enable sending only incremental updates in the beacon
+
 //draft-ietf-6tisch-minimal-06
 /// @lkn{Samu} MAXIMUM number is 13
 #define SCHEDULE_MINIMAL_6TISCH_ACTIVE_CELLS  SLOTFRAME_LENGTH-NUMSERIALRX-NUMSLOTSOFF//default 1
@@ -125,6 +127,7 @@ typedef struct {
   bool             shared;
   slotOffset_t     slotOffset;
   channelOffset_t  channelOffset;
+  bool isUpdated;/// @lkn{mvilgelm} flag to indicate updated entry
 }slotinfo_element_t;
 
 //=========================== variables =======================================
