@@ -56,18 +56,18 @@ def generate_schedule(fname, path_to_schedule, path_to_schedule_params):
     f.write("\n\n")
     f.write("#include \"schedule.h\"\n\n")
     f.write("void init_slotinfo();\n\n")
-    f.write("slotinfo_element_t entries[%d];\n\n\n" % len(active_slots))
+    f.write("slotinfo_element_t static_schedule_entries[%d];\n\n\n" % len(active_slots))
     f.write("void init_slotinfo(){\n\n")
 
     for idx, slot in enumerate(active_slots):
-        f.write("\tentries[%d].slotOffset = %s;\n" % (idx, slot["slotOffset"]))
-        f.write("\tentries[%d].link_type = %s;\n" % (idx, slot["link_type"]))
-        f.write("\tentries[%d].shared = %s;\n" % (idx, slot["shared"]))
-        f.write("\tentries[%d].channelOffset = %s;\n" % (idx, slot["channelOffset"]))
-        f.write("\tentries[%d].isUpdated = %s;\n" % (idx, slot["isUpdated"]))
+        f.write("\tstatic_schedule_entries[%d].slotOffset = %s;\n" % (idx, slot["slotOffset"]))
+        f.write("\tstatic_schedule_entries[%d].link_type = %s;\n" % (idx, slot["link_type"]))
+        f.write("\tstatic_schedule_entries[%d].shared = %s;\n" % (idx, slot["shared"]))
+        f.write("\tstatic_schedule_entries[%d].channelOffset = %s;\n" % (idx, slot["channelOffset"]))
+        f.write("\tstatic_schedule_entries[%d].isUpdated = %s;\n" % (idx, slot["isUpdated"]))
 
         for idx_addr, addr in enumerate(slot["address"].split(":")):
-            f.write("\tentries[%d].address[%d] = %s;\n" % (idx, idx_addr, addr))
+            f.write("\tstatic_schedule_entries[%d].address[%d] = %s;\n" % (idx, idx_addr, addr))
 
         f.write("\n\n")
 

@@ -324,22 +324,22 @@ void static_schedule_incrementalUpdateEntry(uint8_t t,uint8_t f,uint8_t addr){
 	myAddr=idmanager_vars.my64bID.addr_64b[7];
 
 	for(i=0;i<MAXACTIVESLOTS;i++){
-		if(entries[i].address[7]==addr){ //I already have it
+		if(static_schedule_entries[i].address[7]==addr){ //I already have it
 			found=i;
 		 	break;
 		}
-		if(entries[i].address[7]!=myAddr && entries[i].isUpdated==FALSE){ //I found an harcoded entry that is not mine, I can use it to store an update
+		if(static_schedule_entries[i].address[7]!=myAddr && static_schedule_entries[i].isUpdated==FALSE){ //I found an harcoded entry that is not mine, I can use it to store an update
 			tmp=i;
 		}
 	}
 	if(found<MAXACTIVESLOTS){
-		entries[found].slotOffset = t;
-		entries[found].channelOffset = f;
-		entries[found].isUpdated = TRUE;
+		static_schedule_entries[found].slotOffset = t;
+		static_schedule_entries[found].channelOffset = f;
+		static_schedule_entries[found].isUpdated = TRUE;
 	}else{ // update a previous hardcoded entry (isUpdated=FALSE)
-		entries[tmp].slotOffset = t;
-		entries[tmp].channelOffset = f;
-		entries[tmp].isUpdated = TRUE;
+		static_schedule_entries[tmp].slotOffset = t;
+		static_schedule_entries[tmp].channelOffset = f;
+		static_schedule_entries[tmp].isUpdated = TRUE;
 	}
 }
 
@@ -374,13 +374,13 @@ void static_schedule_addActiveSlots(){
 	start_slotOffset = SCHEDULE_MINIMAL_6TISCH_SLOTOFFSET;
 
 	for (running_slotOffset=start_slotOffset; running_slotOffset<start_slotOffset+SCHEDULE_MINIMAL_6TISCH_ACTIVE_CELLS; running_slotOffset++) {
-		memcpy(&(my_addr.addr_64b[0]) , &(entries[cnt].address[0]) , LENGTH_ADDR64b);
+		memcpy(&(my_addr.addr_64b[0]) , &(static_schedule_entries[cnt].address[0]) , LENGTH_ADDR64b);
 		//my_addr.addr_64b[7]   = entries[cnt].address[7];
       	schedule_addActiveSlot(
-        	entries[cnt].slotOffset,	// slotOffset number
-					entries[cnt].link_type,		// TX/RX/TXRX
-					entries[cnt].shared,		// FALSE/TRUE
-					entries[cnt].channelOffset,	// channelOffset number
+        	static_schedule_entries[cnt].slotOffset,	// slotOffset number
+					static_schedule_entries[cnt].link_type,		// TX/RX/TXRX
+					static_schedule_entries[cnt].shared,		// FALSE/TRUE
+					static_schedule_entries[cnt].channelOffset,	// channelOffset number
 					&my_addr					// address of the scheduled mote
       	);
 		cnt++;
@@ -944,5 +944,5 @@ void schedule_resetEntry(scheduleEntry_t* e) {
 }
 
 slotinfo_element_t * getStaticScheduleEntries(){
-  return entries;
+  return static_schedule_entries;
 }
