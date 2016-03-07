@@ -21,7 +21,7 @@ def program(device, mote_id, is_dag):
 			if is_dag:
 				newline = '#define DAGROOT 1\n'
 			else:
-				newline = '#define DAGROOT 0\n'
+				newline = '//#define DAGROOT \n'
 			line = line.replace(line, newline)
 
 		sys.stdout.write(line)
