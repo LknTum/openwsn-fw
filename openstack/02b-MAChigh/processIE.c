@@ -716,14 +716,17 @@ port_INLINE void processIE_retrieveSlotframeLinkIE(
           localptr++;
           addr  |= (*((uint8_t*)(pkt->payload)+localptr))<<8;
           localptr++;
-
-
-        }
-
+          
         /// @lkn{Samu} Applies the incremental updates
         static_schedule_incrementalUpdate(t,f,addr);
 
-        // TODO if not DAG root -> store the info somewhere
+        // @lkn{Samu} Store the updated info in my entries to propagate it in the beacon
+        if(!DAGroot){
+	        static_schedule_incrementalUpdateEntry(t,f,addr);
+	    }
+    }
+
+        
 
       i++;
       break; //TODO: this break is put since a single slotframe is managed
