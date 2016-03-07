@@ -11,6 +11,8 @@
 #include "scheduler.h"
 #include "packetfunctions.h"
 
+//#include "static_schedule.h"
+
 //=========================== variables =======================================
 
 //=========================== public ==========================================
@@ -236,23 +238,27 @@ port_INLINE uint8_t processIE_prependSlotframeLinkIE(OpenQueueEntry_t* pkt){
 
    linkOption = (1<<FLAG_TX_S)|(1<<FLAG_RX_S)|(1<<FLAG_SHARED_S)|(1<<FLAG_TIMEKEEPING_S);
    i=1;
-   for (uint8_t id = 0; id<SCHEDULE_MINIMAL_6TISCH_ACTIVE_CELLS; id++ ){
-      if (entries[id].isUpdated){
+   uint8_t id = 0;
+
+   slotinfo_element_t * schedule_entries = getStaticScheduleEntries();
+
+   for (id = 0; id<SCHEDULE_MINIMAL_6TISCH_ACTIVE_CELLS; id++ ){
+      if (schedule_entries[id].isUpdated){
         packetfunctions_reserveHeaderSize(pkt,5);
-        pkt->payload[0]   = (entries[id].slotOffset-1) & 0xFF;          // slotOffset
-        pkt->payload[1]   = ((entries[id].slotOffset-1) >> 8) & 0xFF;   //slotOffset
+        pkt->payload[0]   = (schedule_entries[id].slotOffset-1) & 0xFF;          // slotOffset
+        pkt->payload[1]   = ((schedule_entries[id].slotOffset-1) >> 8) & 0xFF;   //slotOffset
 
         pkt->payload[2]   = SCHEDULE_MINIMAL_6TISCH_CHANNELOFFSET;    // channel offset
         pkt->payload[3]   = 0x00;                                     // channel offset
 
         // pkt->payload[4]   = linkOption;                             // linkOption bitmap
-        pkt->payload[4]   = entries[id].address[7];                 // Address value only last byte
+        pkt->payload[4]   = schedule_entries[id].address[7];                 // Address value only last byte
         i++;
         len+=5;
       }
    }
-
-#elif
+#endif
+#if 0
     //===== shared cells
    linkOption = (1<<FLAG_TX_S)|(1<<FLAG_RX_S)|(1<<FLAG_SHARED_S)|(1<<FLAG_TIMEKEEPING_S);
    i=1;

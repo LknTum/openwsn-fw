@@ -915,3 +915,7 @@ void schedule_resetEntry(scheduleEntry_t* e) {
    e->lastUsedAsn.byte4      = 0;
    e->next                   = NULL;
 }
+
+slotinfo_element_t * getStaticScheduleEntries(){
+  return entries;
+}

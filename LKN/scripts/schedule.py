@@ -64,6 +64,7 @@ def generate_schedule(fname, path_to_schedule, path_to_schedule_params):
         f.write("\tentries[%d].link_type = %s;\n" % (idx, slot["link_type"]))
         f.write("\tentries[%d].shared = %s;\n" % (idx, slot["shared"]))
         f.write("\tentries[%d].channelOffset = %s;\n" % (idx, slot["channelOffset"]))
+        f.write("\tentries[%d].isUpdated = %s;\n" % (idx, slot["isUpdated"]))
 
         for idx_addr, addr in enumerate(slot["address"].split(":")):
             f.write("\tentries[%d].address[%d] = %s;\n" % (idx, idx_addr, addr))

@@ -24,7 +24,7 @@ The superframe repears over time and can be arbitrarly long.
 
 /// @internal [LKN-scheduling-setting]
 /// @lkn{mvilgelm} following configuration lines are generated automatically from configuration file LKN/scripts/schedule.json
-#define SLOTFRAME_LENGTH	6
+#define SLOTFRAME_LENGTH	10
 #define NUMSERIALRX	2	///< @lkn{Samu} Number of slots used for serial transmission
 #define NUMSLOTSOFF	2	///< @lkn{Samu} Number of slots NOT used,             they are probably used in for serial transmission anyway.
 
@@ -147,7 +147,7 @@ typedef struct {
 //=========================== prototypes ======================================
 
 //LKN
-void LKNschedule_addActiveSlots();
+void static_schedule_addActiveSlots();
 void static_schedule_incrementalUpdate(uint8_t t,uint8_t f,uint8_t addr);
 
 // admin
@@ -212,6 +212,8 @@ void               schedule_indicateTx(
                         asn_t*    asnTimestamp,
                         bool      succesfullTx
                    );
+
+slotinfo_element_t * getStaticScheduleEntries();
 
 /**
 \}
