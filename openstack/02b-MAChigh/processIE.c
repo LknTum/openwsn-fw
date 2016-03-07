@@ -727,7 +727,7 @@ port_INLINE void processIE_retrieveSlotframeLinkIE(
         static_schedule_incrementalUpdate(t,f,addr);
 
         // @lkn{Samu} Store the updated info in my entries to propagate it in the beacon
-        if(!DAGroot){
+        if(!DAGROOT){
 	        static_schedule_incrementalUpdateEntry(t,f,addr);
 	    }
     }

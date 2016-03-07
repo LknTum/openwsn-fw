@@ -328,7 +328,7 @@ void static_schedule_incrementalUpdateEntry(uint8_t t,uint8_t f,uint8_t addr){
 			found=i;
 		 	break;
 		}
-		if(entries[i].address[7]!=myAddr &&entries[i].isUpdated = FALSE){ //I found an harcoded entry that is not mine, I can use it to store an update
+		if(entries[i].address[7]!=myAddr && entries[i].isUpdated==FALSE){ //I found an harcoded entry that is not mine, I can use it to store an update
 			tmp=i;
 		}
 	}
