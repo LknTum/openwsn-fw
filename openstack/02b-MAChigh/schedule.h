@@ -149,6 +149,7 @@ typedef struct {
 //LKN
 void static_schedule_addActiveSlots();
 void static_schedule_incrementalUpdate(uint8_t t,uint8_t f,uint8_t addr);
+void static_schedule_incrementalUpdateEntry(uint8_t t,uint8_t f,uint8_t addr);
 
 // admin
 void               schedule_init(void);

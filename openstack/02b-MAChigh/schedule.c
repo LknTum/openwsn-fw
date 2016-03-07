@@ -315,6 +315,33 @@ void static_schedule_incrementalUpdate(uint8_t t,uint8_t f,uint8_t addr){
 	}
 }
 
+void static_schedule_incrementalUpdateEntry(uint8_t t,uint8_t f,uint8_t addr){
+	uint8_t i,found,tmp;
+	uint8_t myAddr;
+	found=MAXACTIVESLOTS+1; //not logical valid value
+	tmp=MAXACTIVESLOTS+1;
+
+	myAddr=idmanager_vars.my64bID.addr_64b[7];
+
+	for(i=0;i<MAXACTIVESLOTS;i++){
+		if(entries[i].address[7]==addr){ //I already have it
+			found=i;
+		 	break;
+		}
+		if(entries[i].address[7]!=myAddr &&entries[i].isUpdated = FALSE){ //I found an harcoded entry that is not mine, I can use it to store an update
+			tmp=i;
+		}
+	}
+	if(found<MAXACTIVESLOTS){
+		entries[found].slotOffset = t;
+		entries[found].channelOffset = f;
+		entries[found].isUpdated = TRUE;
+	}else{ // update a previous hardcoded entry (isUpdated=FALSE)
+		entries[tmp].slotOffset = t;
+		entries[tmp].channelOffset = f;
+		entries[tmp].isUpdated = TRUE;
+	}
+}
 
 
 /**
