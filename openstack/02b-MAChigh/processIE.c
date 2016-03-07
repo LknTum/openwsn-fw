@@ -219,7 +219,6 @@ port_INLINE uint8_t processIE_prependSlotframeLinkIE(OpenQueueEntry_t* pkt){
    slotOffset_t      slotOffset;
    slotOffset_t      lastSlotOffset;
    frameLength_t     frameLength;
-   uint8_t i;
 
    len            = 0;
    linkOption     = 0;
@@ -237,7 +236,7 @@ port_INLINE uint8_t processIE_prependSlotframeLinkIE(OpenQueueEntry_t* pkt){
    /// @lkn{mvilgelm} propagate only updated schedule entries
 
    linkOption = (1<<FLAG_TX_S)|(1<<FLAG_RX_S)|(1<<FLAG_SHARED_S)|(1<<FLAG_TIMEKEEPING_S);
-   i=1;
+
    uint8_t id = 0;
 
    slotinfo_element_t * schedule_entries = getStaticScheduleEntries();
@@ -245,18 +244,20 @@ port_INLINE uint8_t processIE_prependSlotframeLinkIE(OpenQueueEntry_t* pkt){
    for (id = 0; id<SCHEDULE_MINIMAL_6TISCH_ACTIVE_CELLS; id++ ){
       if (schedule_entries[id].isUpdated){
         packetfunctions_reserveHeaderSize(pkt,5);
-        pkt->payload[0]   = (schedule_entries[id].slotOffset-1) & 0xFF;          // slotOffset
-        pkt->payload[1]   = ((schedule_entries[id].slotOffset-1) >> 8) & 0xFF;   //slotOffset
+        pkt->payload[0]   = (schedule_entries[id].slotOffset) & 0xFF;          // slotOffset
+        pkt->payload[1]   = ((schedule_entries[id].slotOffset) >> 8) & 0xFF;   //slotOffset
 
         pkt->payload[2]   = SCHEDULE_MINIMAL_6TISCH_CHANNELOFFSET;    // channel offset
         pkt->payload[3]   = 0x00;                                     // channel offset
 
         // pkt->payload[4]   = linkOption;                             // linkOption bitmap
-        pkt->payload[4]   = schedule_entries[id].address[7];                 // Address value only last byte
-        i++;
+        pkt->payload[4]   = schedule_entries[id].address[7] ;                 // Address value only last byte	 
+        //openserial_printError(COMPONENT_IEEE802154E,ERR_WRONG_STATE_IN_STARTSLOT,(errorparameter_t)pkt->payload[0],(errorparameter_t)pkt->payload[4]);
+
         len+=5;
       }
    }
+   
 #endif
 #if 0
     //===== shared cells
@@ -720,15 +721,15 @@ port_INLINE void processIE_retrieveSlotframeLinkIE(
           // Address
           addr = *((uint8_t*)(pkt->payload)+localptr);
           localptr++;
-          addr  |= (*((uint8_t*)(pkt->payload)+localptr))<<8;
-          localptr++;
+          
+          openserial_printError(COMPONENT_IEEE802154E,ERR_WRONG_STATE_IN_STARTSLOT,(errorparameter_t)t,(errorparameter_t)addr);
 
-        /// @lkn{Samu} Applies the incremental updates
-        static_schedule_incrementalUpdate(t,f,addr);
 
-        // @lkn{Samu} Store the updated info in my entries to propagate it in the beacon
         if(!idmanager_getIsDAGroot()){
-	        static_schedule_incrementalUpdateEntry(t,f,addr);
+        	/// @lkn{Samu} Applies the incremental updates
+        	//static_schedule_incrementalUpdate(t,f,addr);
+	        // @lkn{Samu} Store the updated info in my entries to propagate it in the beacon
+	        //static_schedule_incrementalUpdateEntry(t,f,addr);
 	    }
     }
 

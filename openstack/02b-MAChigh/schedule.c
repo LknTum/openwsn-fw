@@ -297,21 +297,20 @@ void static_schedule_incrementalUpdate(uint8_t t,uint8_t f,uint8_t addr){
 	myAddr=idmanager_vars.my64bID.addr_64b[7];
 
 	for(i=0;i<MAXACTIVESLOTS;i++){
-		iteratorScheduleEntry++;
-
-		if(iteratorScheduleEntry->neighbor.addr_64b[7]==addr || iteratorScheduleEntry->slotOffset==t){
+		//if(iteratorScheduleEntry->neighbor.addr_64b[7]==addr || iteratorScheduleEntry->slotOffset==t){
 
 			if(iteratorScheduleEntry->slotOffset==t){
 
-				if(iteratorScheduleEntry->neighbor.addr_64b[7]!=addr){// then it's the new entry (same time different addr), change freq and ownership
+				//if(iteratorScheduleEntry->neighbor.addr_64b[7]!=addr){// then it's the new entry (same time different addr), change freq and ownership
 					iteratorScheduleEntry->channelOffset=f;
-					iteratorScheduleEntry->neighbor.addr_64b[7]=myAddr;
-				}
+					iteratorScheduleEntry->neighbor.addr_64b[7]=addr;
+				//}
 
-			}else{ //it's the old one (same addr, different time), change ownership to dummyAddr
-				iteratorScheduleEntry->neighbor.addr_64b[7]=0x99;
-			}
-		}
+			}//else{ //it's the old one (same addr, different time), change ownership to dummyAddr
+				//iteratorScheduleEntry->neighbor.addr_64b[7]=0x99;
+			//}
+		//}
+		iteratorScheduleEntry++;
 	}
 }
 
