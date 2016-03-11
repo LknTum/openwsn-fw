@@ -1035,6 +1035,17 @@ port_INLINE void activity_ti2() {
    //Set the tx frequency in the packet
    ieee154e_vars.dataToSend->l4_payload[3] = ieee154e_vars.freq;
 
+
+   ///@internal [LKN-hop-count]
+   //increases the hop count
+   //saves the forwarder address that is realted to the hop count
+   if (ieee154e_vars.dataToSend->l4_payload[5]!=0 && ieee154e_vars.dataToSend->l4_payload[5]<5){
+      ieee154e_vars.dataToSend->l4_payload[5+ieee154e_vars.dataToSend->l4_payload[5]] = (idmanager_getMyID(ADDR_64B))->addr_64b[8];  
+      ieee154e_vars.dataToSend->l4_payload[5]++; 
+   }
+
+
+
    // configure the radio for that frequency
 	if(!ieee154e_vars.my_couldSendEB){
 		radio_setFrequency(ieee154e_vars.freq);

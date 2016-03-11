@@ -171,13 +171,18 @@ return;}
 	opentimers_stop(uinject_vars.timerId);
 	uinject_init();
         }
-   packetfunctions_reserveHeaderSize(pkt,5*sizeof(uint8_t));
+   packetfunctions_reserveHeaderSize(pkt,11*sizeof(uint8_t));
    *((uint8_t*)&pkt->payload[0]) = TXRETRIES+1;
    *((uint8_t*)&pkt->payload[1]) = uinject_vars.counter>>8;
    *((uint8_t*)&pkt->payload[2]) = uinject_vars.counter;
    *((uint8_t*)&pkt->payload[3]) = 0; //reserverd for frequency
    *((uint8_t*)&pkt->payload[4]) = 0; //reserved for RSSI
-
+   *((uint8_t*)&pkt->payload[5]) = 0; //reserved for hop count
+   *((uint8_t*)&pkt->payload[6]) = 0; //reserved for hop 1
+   *((uint8_t*)&pkt->payload[7]) = 0; //reserved for hop 2
+   *((uint8_t*)&pkt->payload[8]) = 0; //reserved for hop 3
+   *((uint8_t*)&pkt->payload[9]) = 0; //reserved for hop 4
+   *((uint8_t*)&pkt->payload[10]) = 0; //reserved for hop 5
    if ((openudp_send(pkt))==E_FAIL) {
       openqueue_freePacketBuffer(pkt);
    }

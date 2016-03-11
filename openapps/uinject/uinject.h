@@ -15,10 +15,12 @@
 //=========================== define ==========================================
 ///@lkn{LKN-Samu} Application periodicity
 ///@internal [LKN-uinject-settings]
-#define UINJECT_PERIOD_MS 1000
-#define BURST_SILENCE_MS 10000
-#define BURST_DURATION_MS 10000
-#define BURST_PERIOD_MS 400	///< interval for sending burst packets
+#define UINJECT_PERIOD_MS 5000  // periodicity for periodic application
+	// variance and mean for the non-periodic application
+#define BURST_SILENCE_MS 10000  // The duration of silence before a burst occurs no packet is sent under silence mode 
+#define BURST_DURATION_MS 10000 // The duration of the burst mode
+	//In total a cycle for bursty application is BURST_SILENCE_MS + BURST_DURATION_MS
+#define BURST_PERIOD_MS 400	///< packet sending period in burst mode
 // Too low values such as 100 creates problems
 ///@lkn{LKN-Murat} Application type 1-Burst 2-Non-Periodic 3-Periodic
 ///@internal [LKN-uinject-settings]

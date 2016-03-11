@@ -42,6 +42,6 @@ void openapps_init(void) {
    // UDP
    uecho_init();
 /// @lkn{Samu} We enabled the initialization of uinject.
-   //uinject_init();
+   uinject_init();
 
 }
