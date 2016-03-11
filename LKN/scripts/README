@@ -9,11 +9,11 @@ CONTENTS OF THIS FILE
 QUICK START
 ---------------------
 0. Move to the scripts folder.
-1. Install the sources and libraries using './0-InstallPackages'
+1. Install the sources and libraries using './0-InstallPackages.sh'
 
 2. Program the motes with './1b-BuildUploadHW.sh /dev/ttyUSBx' , where x is the number of the USB serial peripheral in your system.
 
-3. Finally, run the GUI with ./StartGui
+3. Finally, run the GUI with ./2-StartGUI.sh
 
 MOTE PROGRAMMING
 --------------------
