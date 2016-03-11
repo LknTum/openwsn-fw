@@ -17,13 +17,14 @@ def program(device, mote_id, is_dag):
 	# enable dag root
 	for line in fileinput.input(gl_openwsn_dir + 'inc/opendefs.h', 	inplace=True):
 
+		"""
 		if '#define DAGROOT' in line:
 			if is_dag:
 				newline = '#define DAGROOT 1\n'
 			else:
 				newline = '//#define DAGROOT \n'
 			line = line.replace(line, newline)
-
+		"""
 		sys.stdout.write(line)
 
 	# change id
