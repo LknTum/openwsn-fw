@@ -908,16 +908,16 @@ port_INLINE void activity_ti1ORri1() {
 		///@internal [LKN-TXRX-address-selection]
 		  //Here checks the address
       	  schedule_getNeighbor(&cell_neighbor);
-		  if(!idmanager_isMyAddress(&cell_neighbor) /*&& cell_neighbor.type!=ADDR_ANYCAST*/){
+		  if(!idmanager_isMyAddress(&cell_neighbor)){
            /// @lkn{mvilgelm} let all motes send all the time
-				/*if(idmanager_getIsDAGroot()==FALSE){
-		      		// this is NOT MY active slot, end the slot
+				/*if (idmanager_getIsDAGroot()==FALSE){
+               // this is NOT MY active slot, end the slot
 		      		openserial_stop();
 		      		endSlot();
 		      		//start outputing serial
 		      		openserial_startOutput();
 		      		return;
-      	  		}else{
+      	  	}else{
 					//I am DAG root but I don't need to TX
 				}*/
 		  }else{

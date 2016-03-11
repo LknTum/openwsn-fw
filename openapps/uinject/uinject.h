@@ -23,6 +23,7 @@
 ///@lkn{LKN-Murat} Application type 1-Burst 2-Non-Periodic 3-Periodic
 ///@internal [LKN-uinject-settings]
 #define APPFLAG 3
+#define ENABLE_APPS TRUE
 //=========================== typedef =========================================
 
 typedef struct {
