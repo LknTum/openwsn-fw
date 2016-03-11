@@ -39,5 +39,4 @@ if __name__=='__main__':
 		min_range = int(sys.argv[1])
 		max_range = int(sys.argv[2])
 
-	os.system("pkill -9 StartGUI.sh")
 	program_all(min_range, max_range)
