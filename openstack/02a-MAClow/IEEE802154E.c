@@ -668,7 +668,7 @@ port_INLINE void activity_synchronize_endOfFrame(PORT_RADIOTIMER_WIDTH capturedT
 }
 
 /**
-@brief Retrieves the information from the EB message. 
+@brief Retrieves the information from the EB message.
 
 @lkn{Samu} We modified the function by correcting the calculation of the current SlotOffset. Thanks to the newly implemented #ieee154e_syncSlotOffset(), it is now possible to adapt to a dynamic range of frame length values.
 */
@@ -821,13 +821,13 @@ port_INLINE bool ieee154e_processIEs(OpenQueueEntry_t* pkt, uint16_t* lenIE) {
 /**
 @brief Main function of the MAC scheme. It determines the behavior during the current Time Slot, i.e., it enables the reception and/or transmission of packets.
 
-@lkn{Samu} We modified the function such that the mote can transmit or receive only if it is its own Time Slot. 
-At the beginning, we set the value canTX to FALSE, then we turn it to TRUE by testing its address with respect of the current time slot. 
+@lkn{Samu} We modified the function such that the mote can transmit or receive only if it is its own Time Slot.
+At the beginning, we set the value canTX to FALSE, then we turn it to TRUE by testing its address with respect of the current time slot.
 - DAG root is always allowed to receive and transmit.
 - Motes are not allowed either to RX or TX in a Time Slot that doesn't match their address.
 
 @warning breaks are not used in the main switch!
- 
+
 */
 port_INLINE void activity_ti1ORri1() {
    cellType_t  cellType;
@@ -908,8 +908,9 @@ port_INLINE void activity_ti1ORri1() {
 		///@internal [LKN-TXRX-address-selection]
 		  //Here checks the address
       	  schedule_getNeighbor(&cell_neighbor);
-		  if(!idmanager_isMyAddress(&cell_neighbor)){
-				if(idmanager_getIsDAGroot()==FALSE){
+		  if(!idmanager_isMyAddress(&cell_neighbor) && cell_neighbor.type!=ADDR_ANYCAST){
+           /// @lkn{mvilgelm} let all motes send all the time
+				/*if(idmanager_getIsDAGroot()==FALSE){
 		      		// this is NOT MY active slot, end the slot
 		      		openserial_stop();
 		      		endSlot();
@@ -918,7 +919,7 @@ port_INLINE void activity_ti1ORri1() {
 		      		return;
       	  		}else{
 					//I am DAG root but I don't need to TX
-				}
+				}*/
 		  }else{
 				//It is my address
 				canTX=TRUE;
@@ -1033,7 +1034,7 @@ port_INLINE void activity_ti2() {
    ///@internal [LKN-TX-freq]
    //Set the tx frequency in the packet
    ieee154e_vars.dataToSend->l4_payload[3] = ieee154e_vars.freq;
-   
+
    // configure the radio for that frequency
 	if(!ieee154e_vars.my_couldSendEB){
 		radio_setFrequency(ieee154e_vars.freq);
@@ -1974,7 +1975,7 @@ port_INLINE void asnStoreFromEB(uint8_t* asn) {
 @brief Enables the synchronization of the slotOffset upon receiving a new ASN value. The slotOffset is stored in a 4 bytes variable.
 
 @lkn{Samu} Implementation of the function based on the original function @ref ieee154e_syncAsnOffset
-*/ 
+*/
 
 ///@internal [LKN-slotOffset-synch]
 port_INLINE void ieee154e_syncSlotOffset() {
@@ -2252,7 +2253,7 @@ port_INLINE uint8_t calculateFrequency(uint8_t channelOffset) {
         // channel hopping enabled, use the channel depending on hopping template
         return 11 + ieee154e_vars.chTemplate[(ieee154e_vars.asnOffset+channelOffset)%16];
     }//*/
-    
+
     ///@internal [LKN-calculateFreq]
 	if(HOPPING){
 		return 11 + ieee154e_vars.chTemplate[(ieee154e_vars.asnOffset+channelOffset)%16]; //channel hopping

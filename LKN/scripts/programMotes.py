@@ -20,7 +20,7 @@ def program_all(min_range, max_range):
 
 		# mote with id 1
 		if min_range == 1 and idx == 0:
-			program('/dev/'+usb, min_range+idx, 1)
+			program('/dev/'+usb, min_range+idx, 0)
 		else:
 			program('/dev/'+usb, min_range+idx, 0)
 
@@ -39,5 +39,5 @@ if __name__=='__main__':
 		min_range = int(sys.argv[1])
 		max_range = int(sys.argv[2])
 
-
+	os.system("pkill -9 StartGUI.sh")
 	program_all(min_range, max_range)

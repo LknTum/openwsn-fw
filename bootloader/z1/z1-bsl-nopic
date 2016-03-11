@@ -1348,7 +1348,7 @@ class BootStrapLoader(LowLevel):
                     a, l)                   #args are coded in adr and len
         time.sleep(0.010)                   #recomended delay
         # @lkn{mvilgelm} changed the call to be compliant to new pyserial API
-        if '3.' in serial.VERSION:
+        if serial.VERSION.startswith('3.'):
             self.serialport.baudrate = baudrate
         else:
             self.serialport.setBaudrate(baudrate)

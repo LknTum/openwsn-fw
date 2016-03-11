@@ -251,13 +251,13 @@ port_INLINE uint8_t processIE_prependSlotframeLinkIE(OpenQueueEntry_t* pkt){
         pkt->payload[3]   = 0x00;                                     // channel offset
 
         // pkt->payload[4]   = linkOption;                             // linkOption bitmap
-        pkt->payload[4]   = schedule_entries[id].address[7] ;                 // Address value only last byte	 
+        pkt->payload[4]   = schedule_entries[id].address[7] ;                 // Address value only last byte
         //openserial_printError(COMPONENT_IEEE802154E,ERR_WRONG_STATE_IN_STARTSLOT,(errorparameter_t)pkt->payload[0],(errorparameter_t)pkt->payload[4]);
 
         len+=5;
       }
    }
-   
+
 #endif
 #if 0
     //===== shared cells
@@ -721,8 +721,8 @@ port_INLINE void processIE_retrieveSlotframeLinkIE(
           // Address
           addr = *((uint8_t*)(pkt->payload)+localptr);
           localptr++;
-          
-          openserial_printError(COMPONENT_IEEE802154E,ERR_WRONG_STATE_IN_STARTSLOT,(errorparameter_t)t,(errorparameter_t)addr);
+
+          //openserial_printError(COMPONENT_IEEE802154E,ERR_WRONG_STATE_IN_STARTSLOT,(errorparameter_t)t,(errorparameter_t)addr);
 
 
         if(!idmanager_getIsDAGroot()){

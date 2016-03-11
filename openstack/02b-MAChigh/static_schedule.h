@@ -76,7 +76,7 @@ void init_slotinfo(){
 
 	static_schedule_entries[4].slotOffset = 5;
 	static_schedule_entries[4].link_type = CELLTYPE_TXRX;
-	static_schedule_entries[4].shared = FALSE;
+	static_schedule_entries[4].shared = TRUE;
 	static_schedule_entries[4].channelOffset = 5;
 	static_schedule_entries[4].isUpdated = TRUE;
 	static_schedule_entries[4].address[0] = 0x14;
@@ -91,7 +91,7 @@ void init_slotinfo(){
 
 	static_schedule_entries[5].slotOffset = 6;
 	static_schedule_entries[5].link_type = CELLTYPE_TXRX;
-	static_schedule_entries[5].shared = FALSE;
+	static_schedule_entries[5].shared = TRUE;
 	static_schedule_entries[5].channelOffset = 6;
 	static_schedule_entries[5].isUpdated = TRUE;
 	static_schedule_entries[5].address[0] = 0x14;

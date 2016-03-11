@@ -375,13 +375,25 @@ void static_schedule_addActiveSlots(){
 	for (running_slotOffset=start_slotOffset; running_slotOffset<start_slotOffset+SCHEDULE_MINIMAL_6TISCH_ACTIVE_CELLS; running_slotOffset++) {
 		memcpy(&(my_addr.addr_64b[0]) , &(static_schedule_entries[cnt].address[0]) , LENGTH_ADDR64b);
 		//my_addr.addr_64b[7]   = entries[cnt].address[7];
+    if (my_addr.addr_64b[7]==6){
+        my_addr.type = ADDR_ANYCAST;
       	schedule_addActiveSlot(
         	static_schedule_entries[cnt].slotOffset,	// slotOffset number
 					static_schedule_entries[cnt].link_type,		// TX/RX/TXRX
-					static_schedule_entries[cnt].shared,		// FALSE/TRUE
+					TRUE,		// FALSE/TRUE
 					static_schedule_entries[cnt].channelOffset,	// channelOffset number
 					&my_addr					// address of the scheduled mote
       	);
+    }
+    else {
+    schedule_addActiveSlot(
+          static_schedule_entries[cnt].slotOffset,  // slotOffset number
+          static_schedule_entries[cnt].link_type,   // TX/RX/TXRX
+          static_schedule_entries[cnt].shared,    // FALSE/TRUE
+          static_schedule_entries[cnt].channelOffset, // channelOffset number
+          &my_addr          // address of the scheduled mote
+        );
+    }
 		cnt++;
    }
 }

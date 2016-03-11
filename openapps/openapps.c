@@ -30,9 +30,6 @@
 
 void openapps_init(void) {
    // CoAP
-openserial_printInfo(COMPONENT_ICMPv6ECHO,ERR_UNEXPECTED_SENDDONE,
-                               (errorparameter_t)0,
-                               (errorparameter_t)0);
    c6t_init();
    cinfo_init();
    //cexample_init();
@@ -45,8 +42,6 @@ openserial_printInfo(COMPONENT_ICMPv6ECHO,ERR_UNEXPECTED_SENDDONE,
    // UDP
    uecho_init();
 /// @lkn{Samu} We enabled the initialization of uinject.
-   uinject_init(); 
-openserial_printInfo(COMPONENT_ICMPv6ECHO,ERR_UNEXPECTED_SENDDONE,
-                               (errorparameter_t)0,
-                               (errorparameter_t)0);
+   //uinject_init();
+
 }
