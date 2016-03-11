@@ -13,9 +13,9 @@
 
 uinject_vars_t uinject_vars;
     static uint8_t flag=1;
-    static uint32_t	counter=-1;  ///< incrementing counter for burst	
+    static uint32_t	counter=-1;  ///< incrementing counter for burst
 #if 1
-///@lkn{Samu} Application destination address set to the DAG root 
+///@lkn{Samu} Application destination address set to the DAG root
 ///@internal [LKN-uinject-dest-addr]
 static const uint8_t uinject_dst_addr[]   = {
    0xbb, 0xbb, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -48,13 +48,13 @@ static uint32_t 	APP_BASED_PERIOD_MS;  ///< msg periodicity constant
 	if (APPFLAG==1) {
 		if (flag==1) {
 			APP_BASED_PERIOD_MS=BURST_SILENCE_MS;
-			
+
 			flag=0;
-				
+
 		}
 		else{
 			APP_BASED_PERIOD_MS=BURST_PERIOD_MS;
-			
+
 			flag=1;
 		}
 	}
@@ -63,14 +63,14 @@ static uint32_t 	APP_BASED_PERIOD_MS;  ///< msg periodicity constant
 		APP_BASED_PERIOD_MS=UINJECT_PERIOD_MS;
 		APP_BASED_PERIOD_MS=rand()%APP_BASED_PERIOD_MS;
 		APP_BASED_PERIOD_MS+=UINJECT_PERIOD_MS/2;
-			
+
 	}
-	
+
 	else if	(APPFLAG==3)
-		APP_BASED_PERIOD_MS=UINJECT_PERIOD_MS;	
+		APP_BASED_PERIOD_MS=UINJECT_PERIOD_MS;
 	else
 		APP_BASED_PERIOD_MS=UINJECT_PERIOD_MS;
-	
+
 
    ///@internal [LKN-uinject-timer]
    // start periodic timer
@@ -118,7 +118,7 @@ void uinject_task_cb() {
    //openserial_printData(pkt,40);
 
    // don't run if not synch
-   if (ieee154e_isSynch() == FALSE){ 
+   if (ieee154e_isSynch() == FALSE){
 
 return;}
 
@@ -138,7 +138,7 @@ return;}
                                (errorparameter_t)0);
       return;
    }
-	
+
    pkt->owner                         = COMPONENT_UINJECT;
    pkt->creator                       = COMPONENT_UINJECT;
    pkt->l4_protocol                   = IANA_UDP;
@@ -146,11 +146,11 @@ return;}
    pkt->l4_sourcePortORicmpv6Type     = WKP_UDP_INJECT;
    pkt->l3_destinationAdd.type        = ADDR_128B;
    memcpy(&pkt->l3_destinationAdd.addr_128b[0],uinject_dst_addr,16);
-   
+
    ///@internal [LKN-uinject-app]
    uinject_vars.counter++;
 // Control the packet generation timer
-// Non-periodic have to generate a new timer after each packet   
+// Non-periodic have to generate a new timer after each packet
    if (APPFLAG==2){
 	opentimers_stop(uinject_vars.timerId);
 	uinject_init();
@@ -167,7 +167,7 @@ return;}
         }
 // Reset to silence after burst ends
    else if (APPFLAG==1){
-	counter=-1; 
+	counter=-1;
 	opentimers_stop(uinject_vars.timerId);
 	uinject_init();
         }

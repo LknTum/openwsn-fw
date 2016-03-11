@@ -47,7 +47,7 @@
 //=========================== private =========================================
 
 void openstack_init(void) {
-   
+
    //===== drivers
    openserial_init();
    //===== stack
@@ -76,12 +76,13 @@ void openstack_init(void) {
    opentcp_init();
    openudp_init();
    opencoap_init();     // initialize before any of the CoAP applications
-   
+
    //===== applications
    //openapps_init();
 /// @lkn{Samu} We enabled the initialization of uinject from the stack initialization.
-   uinject_init();
-   
+   if (ENABLE_APPS)
+      uinject_init();
+
    openserial_printInfo(
       COMPONENT_OPENWSN,ERR_BOOTED,
       (errorparameter_t)0,
