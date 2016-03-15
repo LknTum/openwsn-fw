@@ -298,31 +298,34 @@ In either case the entry should be used for writing/updating retx and frequency 
 
 @lkn{mvilgelm}
 */
-uint8_t measurement_findNextHopInfo(measurement_vars_t* m){
+uint8_t measurement_findNextHopInfo(measurement_vars_t* m, bool reception){
 	uint8_t i;
 	//TODO check asn OR add hop count
 
 	//if(ieee154e_asnDiff(&m->asn)!=0)
 	for(i=0;i<MAX_HOPS;i++){
     // check whether it is my address. If yes, return the entry
-    if ((m->hopInfos[i].addr==0) || (m->hopInfos[i].addr==(idmanager_getMyID(ADDR_64B)->addr_64b[7])))
+    if (reception){
+      if ((m->hopInfos[i].addr!=0) && (m->hopInfos[i].addr!=(idmanager_getMyID(ADDR_64B)->addr_64b[7])))
         break;
+
+    } else {
+      if ((m->hopInfos[i].addr==0) || (m->hopInfos[i].addr==(idmanager_getMyID(ADDR_64B)->addr_64b[7])))
+          break;
 
 		/*if((m->hopInfos[i].addr==0) && (m->hopInfos[i].freq==0) &&
 		  (m->hopInfos[i].reTx_cnt==0) && (m->hopInfos[i].rssi==0)){
       // found the first non-zero entry
 			break;
 		}*/
+    }
 	}
 
 	if(i==MAX_HOPS){
 		return HOP_OVVERIDE_INDEX;
-	}else if (i==0){
-    // check whether I'm the sender
-		return i;
 	}
   else {
-    return i
+    return i;
   }
 }
 

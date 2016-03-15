@@ -78,7 +78,7 @@ void measurements_setAsn(OpenQueueEntry_t* pkt, asn_t asn);
 void measurements_setSeqNum(OpenQueueEntry_t* pkt, uint16_t seqNum);
 
 //=========================== Private prototypes ======================================
-uint8_t measurement_findNextHopInfo();
+uint8_t measurement_findNextHopInfo(measurement_vars_t* m, bool reception);
 
 
 
