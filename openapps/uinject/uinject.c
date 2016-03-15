@@ -45,6 +45,9 @@ static uint32_t 	APP_BASED_PERIOD_MS;  ///< msg periodicity constant
    memset(&uinject_vars,0,sizeof(uinject_vars_t));
    uinject_vars.counter=0;
    ///@internal [LKN-uinject-timer]
+  if (APPFLAG==4) {
+    return;
+  }
 	if (APPFLAG==1) {
 		if (flag==1) {
 			APP_BASED_PERIOD_MS=BURST_SILENCE_MS;
@@ -171,6 +174,7 @@ return;}
 	opentimers_stop(uinject_vars.timerId);
 	uinject_init();
         }
+
    packetfunctions_reserveHeaderSize(pkt,11*sizeof(uint8_t));
    *((uint8_t*)&pkt->payload[0]) = TXRETRIES+1;
    *((uint8_t*)&pkt->payload[1]) = uinject_vars.counter>>8;
