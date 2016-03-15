@@ -1947,7 +1947,7 @@ bool isValidJoin(OpenQueueEntry_t* eb, ieee802154_header_iht *parsedHeader) {
    packetfunctions_tossHeader(eb, parsedHeader->headerLength);
 
    // process IEs
-   // at this stage, this can work only if EB is authenticated but not encrypted
+   // at this stage, this can work only if EB is authenticated but not encryieee154e_vars.dataToSendpted
    lenIE = 0;
    if (
          (

@@ -70,7 +70,7 @@ void idmanager_init() {
    idmanager_vars.my64bID.addr_64b[4]   = 0x00;
    idmanager_vars.my64bID.addr_64b[5]   = 0x00;
    idmanager_vars.my64bID.addr_64b[6]   = 0x00;
-   idmanager_vars.my64bID.addr_64b[7]   = 2;
+   idmanager_vars.my64bID.addr_64b[7]   = 5;
    /// @internal [LKN-addr]
 
    // my16bID
