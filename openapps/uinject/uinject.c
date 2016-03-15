@@ -212,7 +212,7 @@ void measurements_allocate(OpenQueueEntry_t* pkt){
 	memset(&m,0,sizeof(measurement_vars_t));
 	packetfunctions_reserveHeaderSize(pkt,sizeof(measurement_vars_t));
 	*((measurement_vars_t*)&pkt->payload[0])=m;
-	
+
 	return;
 }
 
@@ -292,22 +292,37 @@ void measurements_setSeqNum(OpenQueueEntry_t* pkt, uint16_t seqNum){
 
 
 //=========================== private =========================================
+/**
+@brief The function returns a entry which has address 0 or my address.
+In either case the entry should be used for writing/updating retx and frequency (if sent), and rssi and address (if received).
+
+@lkn{mvilgelm}
+*/
 uint8_t measurement_findNextHopInfo(measurement_vars_t* m){
 	uint8_t i;
 	//TODO check asn OR add hop count
 
 	//if(ieee154e_asnDiff(&m->asn)!=0)
 	for(i=0;i<MAX_HOPS;i++){
-		if((m->hopInfos[i].addr==0) && (m->hopInfos[i].freq==0)
-			&& (m->hopInfos[i].reTx_cnt==0) && (m->hopInfos[i].rssi==0)){
+    // check whether it is my address. If yes, return the entry
+    if ((m->hopInfos[i].addr==0) || (m->hopInfos[i].addr==(idmanager_getMyID(ADDR_64B)->addr_64b[7])))
+        break;
+
+		/*if((m->hopInfos[i].addr==0) && (m->hopInfos[i].freq==0) &&
+		  (m->hopInfos[i].reTx_cnt==0) && (m->hopInfos[i].rssi==0)){
+      // found the first non-zero entry
 			break;
-		}
+		}*/
 	}
 
 	if(i==MAX_HOPS){
 		return HOP_OVVERIDE_INDEX;
-	}else{
+	}else if (i==0){
+    // check whether I'm the sender
 		return i;
 	}
+  else {
+    return i
+  }
 }
 
