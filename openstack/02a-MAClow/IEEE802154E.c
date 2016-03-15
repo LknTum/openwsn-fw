@@ -1033,16 +1033,16 @@ port_INLINE void activity_ti2() {
 
    ///@internal [LKN-TX-freq]
    //Set the tx frequency in the packet
-   //ieee154e_vars.dataToSend->l4_payload[3] = ieee154e_vars.freq;
-   measurements_setHopFreq(ieee154e_vars.dataToSend, ieee154e_vars.freq);
+   ieee154e_vars.dataToSend->l4_payload[3] = ieee154e_vars.freq;
+   //measurements_setHopFreq(ieee154e_vars.dataToSend, ieee154e_vars.freq);
 
    ///@internal [LKN-hop-count]
    //saves the forwarder address that is realted to the hop count
-   measurements_setHopAddr(ieee154e_vars.dataToSend, (idmanager_getMyID(ADDR_64B))->addr_64b[8]);
-   /*if (ieee154e_vars.dataToSend->l4_payload[5]!=0 && ieee154e_vars.dataToSend->l4_payload[5]<5){
+   //measurements_setHopAddr(ieee154e_vars.dataToSend, (idmanager_getMyID(ADDR_64B))->addr_64b[8]);
+   if (ieee154e_vars.dataToSend->l4_payload[5]!=0 && ieee154e_vars.dataToSend->l4_payload[5]<5){
       ieee154e_vars.dataToSend->l4_payload[5+ieee154e_vars.dataToSend->l4_payload[5]] = (idmanager_getMyID(ADDR_64B))->addr_64b[8];
       ieee154e_vars.dataToSend->l4_payload[5]++;
-   }*/
+   }
 
    // configure the radio for that frequency
 	if(!ieee154e_vars.my_couldSendEB){
@@ -1236,8 +1236,8 @@ port_INLINE void activity_tie5() {
    ieee154e_vars.dataToSend->l2_retriesLeft--;
 
    //Sets a retransmission counter variable in the packet
-   measurements_setHopReTxCnt(ieee154e_vars.dataToSend, ieee154e_vars.dataToSend->l2_retriesLeft);
-   //ieee154e_vars.dataToSend->l4_payload[0] = ieee154e_vars.dataToSend->l2_retriesLeft;
+   //measurements_setHopReTxCnt(ieee154e_vars.dataToSend, ieee154e_vars.dataToSend->l2_retriesLeft);
+   ieee154e_vars.dataToSend->l4_payload[0] = ieee154e_vars.dataToSend->l2_retriesLeft;
  	///@internal [LKN-TXfreq-selection]
 
    //openserial_printInfo(COMPONENT_ICMPv6ECHO,ERR_UNEXPECTED_SENDDONE,
@@ -1544,8 +1544,8 @@ port_INLINE void activity_ri5(PORT_RADIOTIMER_WIDTH capturedTime) {
                                    &ieee154e_vars.dataReceived->l1_crc);
 
       ///@internal [LKN-dataRX-RSSI]
-      //ieee154e_vars.dataReceived->payload[ieee154e_vars.dataReceived->length-3] = 0xff - ieee154e_vars.dataReceived->l1_rssi + 1;
-      measurements_setHopRssi(ieee154e_vars.dataReceived, 0xff - ieee154e_vars.dataReceived->l1_rssi + 1);
+      ieee154e_vars.dataReceived->payload[ieee154e_vars.dataReceived->length-3] = 0xff - ieee154e_vars.dataReceived->l1_rssi + 1;
+      //measurements_setHopRssi(ieee154e_vars.dataReceived, 0xff - ieee154e_vars.dataReceived->l1_rssi + 1);
       ///@internal [LKN-dataRX-RSSI]
 
 	  //openserial_printError(COMPONENT_IEEE802154E,ERR_MAXRXACKPREPARE_OVERFLOWS,
@@ -2373,8 +2373,8 @@ void endSlot() {
       //decrement transmits left counter
       ieee154e_vars.dataToSend->l2_retriesLeft--;
 
-      //ieee154e_vars.dataToSend->l4_payload[0] = ieee154e_vars.dataToSend->l2_retriesLeft;
-      measurements_setHopReTxCnt(ieee154e_vars.dataToSend, ieee154e_vars.dataToSend->l2_retriesLeft);
+      ieee154e_vars.dataToSend->l4_payload[0] = ieee154e_vars.dataToSend->l2_retriesLeft;
+      //measurements_setHopReTxCnt(ieee154e_vars.dataToSend, ieee154e_vars.dataToSend->l2_retriesLeft);
 
       if (ieee154e_vars.dataToSend->l2_retriesLeft==0) {
          // indicate tx fail if no more retries left
