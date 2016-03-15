@@ -45,9 +45,6 @@ static uint32_t 	APP_BASED_PERIOD_MS;  ///< msg periodicity constant
    memset(&uinject_vars,0,sizeof(uinject_vars_t));
    uinject_vars.counter=0;
    ///@internal [LKN-uinject-timer]
-  if (APPFLAG==4) {
-    return;
-  }
 	if (APPFLAG==1) {
 		if (flag==1) {
 			APP_BASED_PERIOD_MS=BURST_SILENCE_MS;
@@ -117,6 +114,7 @@ void uinject_timer_cb(opentimer_id_t id){
 
 void uinject_task_cb() {
    OpenQueueEntry_t*    pkt;
+   measurement_vars_t* m;
    // Debug Message
    //openserial_printData(pkt,40);
 
@@ -173,8 +171,12 @@ return;}
 	counter=-1;
 	opentimers_stop(uinject_vars.timerId);
 	uinject_init();
-        }
-
+   }
+   
+   measurements_allocate(pkt);
+   measurements_setSeqNum(pkt, uinject_vars.counter);
+   
+   /* OLD MEASUREMENT DATA MECHANISM
    packetfunctions_reserveHeaderSize(pkt,11*sizeof(uint8_t));
    *((uint8_t*)&pkt->payload[0]) = TXRETRIES+1;
    *((uint8_t*)&pkt->payload[1]) = uinject_vars.counter>>8;
@@ -189,7 +191,8 @@ return;}
    *((uint8_t*)&pkt->payload[10]) = 0; //reserved for hop 5
    if ((openudp_send(pkt))==E_FAIL) {
       openqueue_freePacketBuffer(pkt);
-   }
+   }*/
+   
    ///@internal [LKN-uinject-app]
    /*
    else{
@@ -200,4 +203,96 @@ return;}
 
 }
 
+
+
+//=========================== public ==========================================
+void measurements_allocate(OpenQueueEntry_t* pkt){
+	packetfunctions_reserveHeaderSize(pkt,sizeof(measurement_vars_t));
+	return;
+}
+
+measurement_vars_t* measurement_retrievePointer(OpenQueueEntry_t* pkt){
+	return (measurement_vars_t*) pkt->l4_payload[0];
+}
+
+void measurements_setHopAddr(OpenQueueEntry_t* pkt, uint8_t a){
+	uint8_t index;
+	measurement_vars_t* m;
+	
+	m=measurement_retrievePointer(pkt);
+	index=measurement_findNextHopInfo(m);
+	m->hopInfos[index].addr=a;
+	
+	return;
+}
+
+void measurements_setHopReTxCnt(OpenQueueEntry_t* pkt, uint8_t reTx){
+	uint8_t index;
+	measurement_vars_t* m;
+	
+	m=measurement_retrievePointer(pkt);
+	index=measurement_findNextHopInfo(m);
+	m->hopInfos[index].reTx_cnt=reTx;
+	
+	return;
+}
+
+void measurements_setHopFreq(OpenQueueEntry_t* pkt, uint8_t f){
+	uint8_t index;
+	measurement_vars_t* m;
+	
+	m=measurement_retrievePointer(pkt);
+	index=measurement_findNextHopInfo(m);
+	m->hopInfos[index].freq=f;
+	
+	return;
+}
+
+void measurements_setHopRssi(OpenQueueEntry_t* pkt, uint8_t r){
+	uint8_t index;
+	measurement_vars_t* m;
+	
+	m=measurement_retrievePointer(pkt);
+	index=measurement_findNextHopInfo(m);
+	m->hopInfos[index].rssi=r;
+
+	return;
+}
+
+void measurements_setAsn(OpenQueueEntry_t* pkt, asn_t a){
+	measurement_vars_t* m;
+	
+	m=measurement_retrievePointer(pkt);
+	m->asn=a;
+	return;
+}
+
+void measurements_setSeqNum(OpenQueueEntry_t* pkt, uint16_t seqNum){
+	measurement_vars_t* m;
+	
+	m=measurement_retrievePointer(pkt);
+	m->seqNumber=seqNum;
+	return;
+}
+
+
+//=========================== private =========================================
+uint8_t measurement_findNextHopInfo(measurement_vars_t* m){
+	uint8_t i;
+	//TODO check asn OR add hop count
+	
+	if(ieee154e_asnDiff(&m.asn)!=0)
+	for(i=0;i<MAX_HOPS;i++){
+		if((m->hopInfos[i].addr==0) && (m->hopInfos[i].freq==0) 
+			&& (m->hopInfos[i].reTx_cnt==0) && (m->hopInfos[i].rssi==0)){
+			break;
+		}
+	}
+	
+	if(i==MAX_HOPS){
+		return HOP_OVVERIDE_INDEX;
+	}else{
+		return i;
+	}
+}
 
