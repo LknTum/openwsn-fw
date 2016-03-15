@@ -1033,10 +1033,6 @@ port_INLINE void activity_ti2() {
 
    ///@internal [LKN-TX-freq]
    //Set the tx frequency in the packet
-<<<<<<< HEAD
-
-   ieee154e_vars.dataToSend->l4_payload[3] = ieee154e_vars.freq;
-=======
    //ieee154e_vars.dataToSend->l4_payload[3] = ieee154e_vars.freq;
    measurements_setHopFreq(ieee154e_vars.dataToSend, ieee154e_vars.freq);
 
@@ -1044,10 +1040,9 @@ port_INLINE void activity_ti2() {
    //saves the forwarder address that is realted to the hop count
    measurements_setHopAddr(ieee154e_vars.dataToSend, (idmanager_getMyID(ADDR_64B))->addr_64b[8]);
    /*if (ieee154e_vars.dataToSend->l4_payload[5]!=0 && ieee154e_vars.dataToSend->l4_payload[5]<5){
-      ieee154e_vars.dataToSend->l4_payload[5+ieee154e_vars.dataToSend->l4_payload[5]] = (idmanager_getMyID(ADDR_64B))->addr_64b[8];  
-      ieee154e_vars.dataToSend->l4_payload[5]++; 
+      ieee154e_vars.dataToSend->l4_payload[5+ieee154e_vars.dataToSend->l4_payload[5]] = (idmanager_getMyID(ADDR_64B))->addr_64b[8];
+      ieee154e_vars.dataToSend->l4_payload[5]++;
    }*/
->>>>>>> 0a988cad99aab26dae92ee0c51639d990b019369
 
    // configure the radio for that frequency
 	if(!ieee154e_vars.my_couldSendEB){
