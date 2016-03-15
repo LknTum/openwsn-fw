@@ -1033,6 +1033,7 @@ port_INLINE void activity_ti2() {
 
    ///@internal [LKN-TX-freq]
    //Set the tx frequency in the packet
+
    ieee154e_vars.dataToSend->l4_payload[3] = ieee154e_vars.freq;
 
    // configure the radio for that frequency
