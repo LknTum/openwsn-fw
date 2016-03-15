@@ -45,7 +45,6 @@ void uinject_receive(OpenQueueEntry_t* msg);
 
 #define MAX_HOPS 4 /// @lkn{Samu} Maximum number of hops of the network
 #define HOP_OVVERIDE_INDEX MAX_HOPS-1 /// @lkn{Samu} setup to ovveride the lastest hopInfo in case of lack of memory
-
 //=========================== typedef =========================================
 
 /*

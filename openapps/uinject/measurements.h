@@ -11,7 +11,7 @@
 //=========================== typedef =========================================
 
 /*
-	@lkn{Samu} definition of a structure data type fore measurements information. 
+	@lkn{Samu} definition of a structure data type fore measurements information.
 	The total size of the data strucure is: 5+2+MAX_HOPS(=4)*4B=23B
 */
 
@@ -19,7 +19,7 @@ typedef struct {
 	uint8_t addr;
 	uint8_t reTx_cnt;
 	uint8_t freq;
-	uint8_t rssi;	
+	uint8_t rssi;
 } hopInfo_vars_t; //4B
 
 typedef struct {
