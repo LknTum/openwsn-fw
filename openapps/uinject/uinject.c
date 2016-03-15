@@ -114,7 +114,8 @@ void uinject_timer_cb(opentimer_id_t id){
 
 void uinject_task_cb() {
    OpenQueueEntry_t*    pkt;
-   measurement_vars_t* m;
+   asn_t current_asn;
+   
    // Debug Message
    //openserial_printData(pkt,40);
 
@@ -174,8 +175,12 @@ return;}
    }
 
    measurements_allocate(pkt);
+   
    measurements_setSeqNum(pkt, uinject_vars.counter);
-
+   
+   ieee154e_getAsn(&current_asn);
+   measurements_setAsn(pkt,current_asn);
+   
    /*// OLD MEASUREMENT DATA MECHANISM
    packetfunctions_reserveHeaderSize(pkt,11*sizeof(uint8_t));
    *((uint8_t*)&pkt->payload[0]) = TXRETRIES+1;
@@ -216,76 +221,67 @@ void measurements_allocate(OpenQueueEntry_t* pkt){
 	return;
 }
 
-measurement_vars_t* measurement_retrievePointer(OpenQueueEntry_t* pkt){
+/*measurement_vars_t* measurement_retrievePointer(OpenQueueEntry_t* pkt){
 	return (measurement_vars_t*) pkt->payload;
-}
+}*/
 
 void measurements_setHopAddr(OpenQueueEntry_t* pkt, uint8_t a){
-/*
 	uint8_t index;
 	measurement_vars_t* m;
 
-	m=measurement_retrievePointer(pkt);
+	m=(measurement_vars_t*) pkt->l4_payload;
 	index=measurement_findNextHopInfo(m);
 	m->hopInfos[index].addr=a;
-
+	
 	return;
-*/
 }
 
 void measurements_setHopReTxCnt(OpenQueueEntry_t* pkt, uint8_t reTx){
-/*
 	uint8_t index;
 	measurement_vars_t* m;
-
-	m=measurement_retrievePointer(pkt);
+                     
+	m=(measurement_vars_t*) pkt->l4_payload;
 	index=measurement_findNextHopInfo(m);
 	m->hopInfos[index].reTx_cnt=reTx;
-
+	
 	return;
-	*/
 }
 
 void measurements_setHopFreq(OpenQueueEntry_t* pkt, uint8_t f){
-/*
 	uint8_t index;
 	measurement_vars_t* m;
 
-	m=measurement_retrievePointer(pkt);
+	m=(measurement_vars_t*) pkt->l4_payload;
 	index=measurement_findNextHopInfo(m);
 	m->hopInfos[index].freq=f;
 
 	return;
-	*/
 }
 
-void measurements_setHopRssi(OpenQueueEntry_t* pkt, uint8_t r){
-	/*
+void measurements_setHopRssi(OpenQueueEntry_t* pkt, uint8_t packet_length ,uint8_t r){
 	uint8_t index;
 	measurement_vars_t* m;
 
-	m=measurement_retrievePointer(pkt);
+	m=(measurement_vars_t*) pkt->payload[packet_length-1];
 	index=measurement_findNextHopInfo(m);
 	m->hopInfos[index].rssi=r;
 
 	return;
-	*/
 }
 
 void measurements_setAsn(OpenQueueEntry_t* pkt, asn_t a){
-/*
+
 	measurement_vars_t* m;
 
-	m=measurement_retrievePointer(pkt);
+	m=(measurement_vars_t*) pkt->payload;
 	m->asn=a;
 	return;
-	*/
 }
 
 void measurements_setSeqNum(OpenQueueEntry_t* pkt, uint16_t seqNum){
 	measurement_vars_t* m;
 
-	m=measurement_retrievePointer(pkt);
+	m=(measurement_vars_t*) pkt->payload;
 	m->seqNumber=seqNum;
 	return;
 }
@@ -296,7 +292,7 @@ uint8_t measurement_findNextHopInfo(measurement_vars_t* m){
 	uint8_t i;
 	//TODO check asn OR add hop count
 
-	//if(ieee154e_asnDiff(&m->asn)!=0)
+	/*if(ieee154e_asnDiff(&m->asn)!=0)
 	for(i=0;i<MAX_HOPS;i++){
 		if((m->hopInfos[i].addr==0) && (m->hopInfos[i].freq==0)
 			&& (m->hopInfos[i].reTx_cnt==0) && (m->hopInfos[i].rssi==0)){
@@ -308,6 +304,7 @@ uint8_t measurement_findNextHopInfo(measurement_vars_t* m){
 		return HOP_OVVERIDE_INDEX;
 	}else{
 		return i;
-	}
+	}*/
+	return MAX_HOPS-1;
 }
 

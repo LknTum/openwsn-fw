@@ -67,12 +67,12 @@ typedef struct {
 } measurement_vars_t;
 
 void measurements_allocate(OpenQueueEntry_t* pkt);
-measurement_vars_t* measurement_retrievePointer(OpenQueueEntry_t* pkt);
+//measurement_vars_t* measurement_retrievePointer(OpenQueueEntry_t* pkt);
 
 void measurements_setHopAddr(OpenQueueEntry_t* pkt, uint8_t addr);
 void measurements_setHopReTxCnt(OpenQueueEntry_t* pkt, uint8_t addr);
 void measurements_setHopFreq(OpenQueueEntry_t* pkt, uint8_t freq);
-void measurements_setHopRssi(OpenQueueEntry_t* pkt, uint8_t rssi);
+void measurements_setHopRssi(OpenQueueEntry_t* pkt, uint8_t packet_length, uint8_t rssi);
 
 void measurements_setAsn(OpenQueueEntry_t* pkt, asn_t asn);
 void measurements_setSeqNum(OpenQueueEntry_t* pkt, uint16_t seqNum);
