@@ -14,7 +14,7 @@
 
 /// @lkn{Samu} We increased the number of allowed neighbors in the neighbor table
 /// @internal [LKN-neighbor-table]
-#define MAXNUMNEIGHBORS           12
+#define MAXNUMNEIGHBORS           20
 /// @internal [LKN-neighbor-table]
 #define MAXPREFERENCE             2
 #define BADNEIGHBORMAXRSSI        -80 //dBm
