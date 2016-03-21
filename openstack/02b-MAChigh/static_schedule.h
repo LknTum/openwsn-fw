@@ -1,6 +1,6 @@
 /**
 \brief Automatically generated from schedule.json using schedule.py
-\2016-03-11 15:28:21.462118
+\2016-03-21 11:31:49.419893
 \@lkn{mvilgelm}
 */
 
@@ -32,7 +32,7 @@ void init_slotinfo(){
 	static_schedule_entries[1].slotOffset = 2;
 	static_schedule_entries[1].link_type = CELLTYPE_TXRX;
 	static_schedule_entries[1].shared = FALSE;
-	static_schedule_entries[1].channelOffset = 2;
+	static_schedule_entries[1].channelOffset = 1;
 	static_schedule_entries[1].isUpdated = FALSE;
 	static_schedule_entries[1].address[0] = 0x14;
 	static_schedule_entries[1].address[1] = 0x15;
@@ -47,7 +47,7 @@ void init_slotinfo(){
 	static_schedule_entries[2].slotOffset = 3;
 	static_schedule_entries[2].link_type = CELLTYPE_TXRX;
 	static_schedule_entries[2].shared = FALSE;
-	static_schedule_entries[2].channelOffset = 3;
+	static_schedule_entries[2].channelOffset = 1;
 	static_schedule_entries[2].isUpdated = FALSE;
 	static_schedule_entries[2].address[0] = 0x14;
 	static_schedule_entries[2].address[1] = 0x15;
@@ -62,7 +62,7 @@ void init_slotinfo(){
 	static_schedule_entries[3].slotOffset = 4;
 	static_schedule_entries[3].link_type = CELLTYPE_TXRX;
 	static_schedule_entries[3].shared = FALSE;
-	static_schedule_entries[3].channelOffset = 4;
+	static_schedule_entries[3].channelOffset = 1;
 	static_schedule_entries[3].isUpdated = FALSE;
 	static_schedule_entries[3].address[0] = 0x14;
 	static_schedule_entries[3].address[1] = 0x15;
@@ -77,7 +77,7 @@ void init_slotinfo(){
 	static_schedule_entries[4].slotOffset = 5;
 	static_schedule_entries[4].link_type = CELLTYPE_TXRX;
 	static_schedule_entries[4].shared = FALSE;
-	static_schedule_entries[4].channelOffset = 5;
+	static_schedule_entries[4].channelOffset = 1;
 	static_schedule_entries[4].isUpdated = FALSE;
 	static_schedule_entries[4].address[0] = 0x14;
 	static_schedule_entries[4].address[1] = 0x15;
@@ -92,7 +92,7 @@ void init_slotinfo(){
 	static_schedule_entries[5].slotOffset = 6;
 	static_schedule_entries[5].link_type = CELLTYPE_TXRX;
 	static_schedule_entries[5].shared = FALSE;
-	static_schedule_entries[5].channelOffset = 6;
+	static_schedule_entries[5].channelOffset = 1;
 	static_schedule_entries[5].isUpdated = FALSE;
 	static_schedule_entries[5].address[0] = 0x14;
 	static_schedule_entries[5].address[1] = 0x15;
@@ -107,7 +107,7 @@ void init_slotinfo(){
 	static_schedule_entries[6].slotOffset = 7;
 	static_schedule_entries[6].link_type = CELLTYPE_TXRX;
 	static_schedule_entries[6].shared = FALSE;
-	static_schedule_entries[6].channelOffset = 7;
+	static_schedule_entries[6].channelOffset = 1;
 	static_schedule_entries[6].isUpdated = FALSE;
 	static_schedule_entries[6].address[0] = 0x14;
 	static_schedule_entries[6].address[1] = 0x15;
@@ -122,7 +122,7 @@ void init_slotinfo(){
 	static_schedule_entries[7].slotOffset = 8;
 	static_schedule_entries[7].link_type = CELLTYPE_TXRX;
 	static_schedule_entries[7].shared = FALSE;
-	static_schedule_entries[7].channelOffset = 8;
+	static_schedule_entries[7].channelOffset = 1;
 	static_schedule_entries[7].isUpdated = FALSE;
 	static_schedule_entries[7].address[0] = 0x14;
 	static_schedule_entries[7].address[1] = 0x15;
@@ -137,7 +137,7 @@ void init_slotinfo(){
 	static_schedule_entries[8].slotOffset = 9;
 	static_schedule_entries[8].link_type = CELLTYPE_TXRX;
 	static_schedule_entries[8].shared = FALSE;
-	static_schedule_entries[8].channelOffset = 9;
+	static_schedule_entries[8].channelOffset = 1;
 	static_schedule_entries[8].isUpdated = FALSE;
 	static_schedule_entries[8].address[0] = 0x14;
 	static_schedule_entries[8].address[1] = 0x15;
@@ -152,7 +152,7 @@ void init_slotinfo(){
 	static_schedule_entries[9].slotOffset = 10;
 	static_schedule_entries[9].link_type = CELLTYPE_TXRX;
 	static_schedule_entries[9].shared = FALSE;
-	static_schedule_entries[9].channelOffset = 10;
+	static_schedule_entries[9].channelOffset = 1;
 	static_schedule_entries[9].isUpdated = FALSE;
 	static_schedule_entries[9].address[0] = 0x14;
 	static_schedule_entries[9].address[1] = 0x15;
@@ -167,7 +167,7 @@ void init_slotinfo(){
 	static_schedule_entries[10].slotOffset = 11;
 	static_schedule_entries[10].link_type = CELLTYPE_TXRX;
 	static_schedule_entries[10].shared = FALSE;
-	static_schedule_entries[10].channelOffset = 11;
+	static_schedule_entries[10].channelOffset = 1;
 	static_schedule_entries[10].isUpdated = FALSE;
 	static_schedule_entries[10].address[0] = 0x14;
 	static_schedule_entries[10].address[1] = 0x15;
@@ -182,7 +182,7 @@ void init_slotinfo(){
 	static_schedule_entries[11].slotOffset = 12;
 	static_schedule_entries[11].link_type = CELLTYPE_TXRX;
 	static_schedule_entries[11].shared = FALSE;
-	static_schedule_entries[11].channelOffset = 12;
+	static_schedule_entries[11].channelOffset = 1;
 	static_schedule_entries[11].isUpdated = FALSE;
 	static_schedule_entries[11].address[0] = 0x14;
 	static_schedule_entries[11].address[1] = 0x15;
@@ -197,7 +197,7 @@ void init_slotinfo(){
 	static_schedule_entries[12].slotOffset = 13;
 	static_schedule_entries[12].link_type = CELLTYPE_TXRX;
 	static_schedule_entries[12].shared = FALSE;
-	static_schedule_entries[12].channelOffset = 13;
+	static_schedule_entries[12].channelOffset = 1;
 	static_schedule_entries[12].isUpdated = FALSE;
 	static_schedule_entries[12].address[0] = 0x14;
 	static_schedule_entries[12].address[1] = 0x15;
@@ -212,7 +212,7 @@ void init_slotinfo(){
 	static_schedule_entries[13].slotOffset = 14;
 	static_schedule_entries[13].link_type = CELLTYPE_TXRX;
 	static_schedule_entries[13].shared = FALSE;
-	static_schedule_entries[13].channelOffset = 12;
+	static_schedule_entries[13].channelOffset = 1;
 	static_schedule_entries[13].isUpdated = FALSE;
 	static_schedule_entries[13].address[0] = 0x14;
 	static_schedule_entries[13].address[1] = 0x15;
@@ -227,7 +227,7 @@ void init_slotinfo(){
 	static_schedule_entries[14].slotOffset = 15;
 	static_schedule_entries[14].link_type = CELLTYPE_TXRX;
 	static_schedule_entries[14].shared = FALSE;
-	static_schedule_entries[14].channelOffset = 13;
+	static_schedule_entries[14].channelOffset = 1;
 	static_schedule_entries[14].isUpdated = FALSE;
 	static_schedule_entries[14].address[0] = 0x14;
 	static_schedule_entries[14].address[1] = 0x15;
@@ -242,7 +242,7 @@ void init_slotinfo(){
 	static_schedule_entries[15].slotOffset = 16;
 	static_schedule_entries[15].link_type = CELLTYPE_TXRX;
 	static_schedule_entries[15].shared = FALSE;
-	static_schedule_entries[15].channelOffset = 12;
+	static_schedule_entries[15].channelOffset = 1;
 	static_schedule_entries[15].isUpdated = FALSE;
 	static_schedule_entries[15].address[0] = 0x14;
 	static_schedule_entries[15].address[1] = 0x15;
@@ -257,7 +257,7 @@ void init_slotinfo(){
 	static_schedule_entries[16].slotOffset = 17;
 	static_schedule_entries[16].link_type = CELLTYPE_TXRX;
 	static_schedule_entries[16].shared = FALSE;
-	static_schedule_entries[16].channelOffset = 13;
+	static_schedule_entries[16].channelOffset = 1;
 	static_schedule_entries[16].isUpdated = FALSE;
 	static_schedule_entries[16].address[0] = 0x14;
 	static_schedule_entries[16].address[1] = 0x15;
@@ -272,7 +272,7 @@ void init_slotinfo(){
 	static_schedule_entries[17].slotOffset = 18;
 	static_schedule_entries[17].link_type = CELLTYPE_TXRX;
 	static_schedule_entries[17].shared = FALSE;
-	static_schedule_entries[17].channelOffset = 13;
+	static_schedule_entries[17].channelOffset = 1;
 	static_schedule_entries[17].isUpdated = FALSE;
 	static_schedule_entries[17].address[0] = 0x14;
 	static_schedule_entries[17].address[1] = 0x15;
@@ -287,7 +287,7 @@ void init_slotinfo(){
 	static_schedule_entries[18].slotOffset = 19;
 	static_schedule_entries[18].link_type = CELLTYPE_TXRX;
 	static_schedule_entries[18].shared = FALSE;
-	static_schedule_entries[18].channelOffset = 12;
+	static_schedule_entries[18].channelOffset = 1;
 	static_schedule_entries[18].isUpdated = FALSE;
 	static_schedule_entries[18].address[0] = 0x14;
 	static_schedule_entries[18].address[1] = 0x15;
@@ -302,7 +302,7 @@ void init_slotinfo(){
 	static_schedule_entries[19].slotOffset = 20;
 	static_schedule_entries[19].link_type = CELLTYPE_TXRX;
 	static_schedule_entries[19].shared = FALSE;
-	static_schedule_entries[19].channelOffset = 13;
+	static_schedule_entries[19].channelOffset = 1;
 	static_schedule_entries[19].isUpdated = FALSE;
 	static_schedule_entries[19].address[0] = 0x14;
 	static_schedule_entries[19].address[1] = 0x15;
