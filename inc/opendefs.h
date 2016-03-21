@@ -16,7 +16,6 @@
 #include <stdint.h>               // needed for uin8_t, uint16_t
 #include "toolchain_defs.h"
 #include "board_info.h"
-
 //=========================== define ==========================================
 
 /****LKN****/
@@ -48,6 +47,8 @@ static const uint8_t infoStackName[] = "OpenWSN ";
 #define LENGTH_ADDR64b  8
 #define LENGTH_ADDR128b 16
 
+//typedef struct hopInfo_vars_t hopInfo_vars_t;
+//typedef struct measurement_vars_t measurement_vars_t;
 
 enum {
    E_SUCCESS                           = 0,
@@ -343,5 +344,6 @@ typedef struct {
 //=========================== variables =======================================
 
 //=========================== prototypes ======================================
+
 
 #endif

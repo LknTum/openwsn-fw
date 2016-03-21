@@ -45,9 +45,6 @@ static uint32_t 	APP_BASED_PERIOD_MS;  ///< msg periodicity constant
    memset(&uinject_vars,0,sizeof(uinject_vars_t));
    uinject_vars.counter=0;
    ///@internal [LKN-uinject-timer]
-  if (APPFLAG==4) {
-    return;
-  }
 	if (APPFLAG==1) {
 		if (flag==1) {
 			APP_BASED_PERIOD_MS=BURST_SILENCE_MS;
@@ -117,6 +114,8 @@ void uinject_timer_cb(opentimer_id_t id){
 
 void uinject_task_cb() {
    OpenQueueEntry_t*    pkt;
+   asn_t current_asn;
+   
    // Debug Message
    //openserial_printData(pkt,40);
 
@@ -173,8 +172,16 @@ return;}
 	counter=-1;
 	opentimers_stop(uinject_vars.timerId);
 	uinject_init();
-        }
+   }
 
+   measurements_allocate(pkt);
+   
+   measurements_setSeqNum(pkt, uinject_vars.counter);
+   
+   ieee154e_getAsn(&current_asn);
+   measurements_setAsn(pkt,current_asn);
+   
+   /*// OLD MEASUREMENT DATA MECHANISM
    packetfunctions_reserveHeaderSize(pkt,11*sizeof(uint8_t));
    *((uint8_t*)&pkt->payload[0]) = TXRETRIES+1;
    *((uint8_t*)&pkt->payload[1]) = uinject_vars.counter>>8;
@@ -187,9 +194,11 @@ return;}
    *((uint8_t*)&pkt->payload[8]) = 0; //reserved for hop 3
    *((uint8_t*)&pkt->payload[9]) = 0; //reserved for hop 4
    *((uint8_t*)&pkt->payload[10]) = 0; //reserved for hop 5
+   //*/
    if ((openudp_send(pkt))==E_FAIL) {
       openqueue_freePacketBuffer(pkt);
    }
+
    ///@internal [LKN-uinject-app]
    /*
    else{
@@ -200,4 +209,123 @@ return;}
 
 }
 
+
+
+//=========================== public ==========================================
+void measurements_allocate(OpenQueueEntry_t* pkt){
+	measurement_vars_t m;
+	memset(&m,0,sizeof(measurement_vars_t));
+	packetfunctions_reserveHeaderSize(pkt,sizeof(measurement_vars_t));
+	*((measurement_vars_t*)&pkt->payload[0])=m;
+
+	return;
+}
+
+/*measurement_vars_t* measurement_retrievePointer(OpenQueueEntry_t* pkt){
+	return (measurement_vars_t*) pkt->payload;
+}*/
+
+void measurements_setHopAddr(OpenQueueEntry_t* pkt, uint8_t a){
+	if(pkt->creator == COMPONENT_UINJECT){
+		uint8_t index;
+		measurement_vars_t* m;
+
+		m=(measurement_vars_t*) pkt->l4_payload;
+		index=measurement_findNextHopInfo(m,FALSE);
+		m->hopInfos[index].addr=a;
+	}
+	return;
+}
+
+void measurements_setHopReTxCnt(OpenQueueEntry_t* pkt, uint8_t reTx){
+	if(pkt->creator == COMPONENT_UINJECT){
+		uint8_t index;
+		measurement_vars_t* m;
+		                 
+		m=(measurement_vars_t*) pkt->l4_payload;
+		index=measurement_findNextHopInfo(m,FALSE);
+		m->hopInfos[index].reTx_cnt=reTx;
+	}	
+	return;
+}
+
+void measurements_setHopFreq(OpenQueueEntry_t* pkt, uint8_t f){
+	if(pkt->creator == COMPONENT_UINJECT){
+		uint8_t index;
+		measurement_vars_t* m;
+
+		m=(measurement_vars_t*) pkt->l4_payload;
+		index=measurement_findNextHopInfo(m,FALSE);
+		m->hopInfos[index].freq=f;
+	}
+	return;
+}
+
+void measurements_setHopRssi(OpenQueueEntry_t* pkt, uint8_t packet_length ,uint8_t r){
+	/*uint8_t index;
+	measurement_vars_t* m;
+
+	m=(measurement_vars_t*) pkt->payload[packet_length-1];
+	index=measurement_findNextHopInfo(m,TRUE);
+	m->hopInfos[index].rssi=r;
+
+	return;*/
+}
+
+void measurements_setAsn(OpenQueueEntry_t* pkt, asn_t a){
+	if(pkt->creator == COMPONENT_UINJECT){
+		measurement_vars_t* m;
+		m=(measurement_vars_t*) pkt->payload;
+		m->asn=a;
+	}
+	return;
+}
+
+void measurements_setSeqNum(OpenQueueEntry_t* pkt, uint16_t seqNum){
+	if(pkt->creator == COMPONENT_UINJECT){
+		measurement_vars_t* m;
+
+		m=(measurement_vars_t*) pkt->payload;
+		m->seqNumber=seqNum;
+	}
+	return;
+}
+
+
+//=========================== private =========================================
+/**
+@brief The function returns a entry which has address 0 or my address.
+In either case the entry should be used for writing/updating retx and frequency (if sent), and rssi and address (if received).
+
+@lkn{mvilgelm}
+*/
+uint8_t measurement_findNextHopInfo(measurement_vars_t* m, bool reception){
+	uint8_t i;
+	//TODO check asn OR add hop count
+
+	for(i=0;i<MAX_HOPS;i++){
+    // check whether it is my address. If yes, return the entry
+    if (reception){
+      if ((m->hopInfos[i].addr!=0) && (m->hopInfos[i].addr!=(idmanager_getMyID(ADDR_64B)->addr_64b[7])))
+        break;
+
+    } else {
+      if ((m->hopInfos[i].addr==0) || (m->hopInfos[i].addr==(idmanager_getMyID(ADDR_64B)->addr_64b[7])))
+          break;
+
+		/*if((m->hopInfos[i].addr==0) && (m->hopInfos[i].freq==0) &&
+		  (m->hopInfos[i].reTx_cnt==0) && (m->hopInfos[i].rssi==0)){
+      // found the first non-zero entry
+			break;
+		}*/
+    }
+	}
+
+	if(i==MAX_HOPS){
+		return HOP_OVVERIDE_INDEX;
+	}
+  else {
+    return i;
+  }
+}
 

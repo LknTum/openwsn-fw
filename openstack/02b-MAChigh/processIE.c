@@ -620,8 +620,8 @@ port_INLINE void processIE_retrieveSlotframeLinkIE(
    //uint8_t neighAddr;
 
    /// @lkn{Samu} Incremental updates variables
-   uint8_t				t;
-   uint8_t				f;
+   uint16_t				t;
+   uint16_t				f;
    uint8_t				addr;
 
    localptr = *ptr;
@@ -707,7 +707,7 @@ port_INLINE void processIE_retrieveSlotframeLinkIE(
     for (j=0;j<sfInfo.numlinks;j++){
   		//for every incremental change->ask mikhail how it is actually coded
   		// Time Slot
-  		    t = *((uint8_t*)(pkt->payload)+localptr);
+  		  t = *((uint8_t*)(pkt->payload)+localptr);
           localptr++;
           t  |= (*((uint8_t*)(pkt->payload)+localptr))<<8;
           localptr++;
