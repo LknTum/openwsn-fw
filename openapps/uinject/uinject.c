@@ -261,14 +261,10 @@ void measurements_setHopFreq(OpenQueueEntry_t* pkt, uint8_t f){
 	return;
 }
 
-void measurements_setHopRssi(OpenQueueEntry_t* pkt, uint8_t packet_length ,uint8_t r){
+void measurements_setHopRssi(OpenQueueEntry_t* pkt,uint8_t r){
 	uint8_t index;
 	measurement_vars_t* m;
 	
-	   openserial_printError(COMPONENT_IEEE802154E,ERR_WDDATADURATION_OVERFLOWS,
-                         (errorparameter_t)packet_length,
-                         (errorparameter_t)r);
-
 	m=(measurement_vars_t*) pkt->payload+2; //completely found by luck, but works
 	index=measurement_findNextHopInfo(m,TRUE);
 	m->hopInfos[index].rssi=r;

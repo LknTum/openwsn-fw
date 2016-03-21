@@ -1558,7 +1558,7 @@ port_INLINE void activity_ri5(PORT_RADIOTIMER_WIDTH capturedTime) {
 
       ///@internal [LKN-dataRX-RSSI]
       //ieee154e_vars.dataReceived->payload[ieee154e_vars.dataReceived->length-3] = 0xff - ieee154e_vars.dataReceived->l1_rssi + 1;
-      measurements_setHopRssi(ieee154e_vars.dataReceived, ieee154e_vars.dataReceived->length, 0xff - ieee154e_vars.dataReceived->l1_rssi + 1);
+      measurements_setHopRssi(ieee154e_vars.dataReceived, 0xff - ieee154e_vars.dataReceived->l1_rssi + 1);
       ///@internal [LKN-dataRX-RSSI]
 
 	  //openserial_printError(COMPONENT_IEEE802154E,ERR_MAXRXACKPREPARE_OVERFLOWS,
