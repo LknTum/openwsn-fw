@@ -262,14 +262,18 @@ void measurements_setHopFreq(OpenQueueEntry_t* pkt, uint8_t f){
 }
 
 void measurements_setHopRssi(OpenQueueEntry_t* pkt, uint8_t packet_length ,uint8_t r){
-	/*uint8_t index;
+	uint8_t index;
 	measurement_vars_t* m;
+	
+	   openserial_printError(COMPONENT_IEEE802154E,ERR_WDDATADURATION_OVERFLOWS,
+                         (errorparameter_t)packet_length,
+                         (errorparameter_t)r);
 
-	m=(measurement_vars_t*) pkt->payload[packet_length-1];
+	m=(measurement_vars_t*) pkt->payload+2; //completely found by luck, but works
 	index=measurement_findNextHopInfo(m,TRUE);
 	m->hopInfos[index].rssi=r;
 
-	return;*/
+	return;
 }
 
 void measurements_setAsn(OpenQueueEntry_t* pkt, asn_t a){
@@ -302,7 +306,7 @@ In either case the entry should be used for writing/updating retx and frequency 
 uint8_t measurement_findNextHopInfo(measurement_vars_t* m, bool reception){
 	uint8_t i;
 	//TODO check asn OR add hop count
-
+#if 0
 	for(i=0;i<MAX_HOPS;i++){
     // check whether it is my address. If yes, return the entry
     if (reception){
@@ -327,5 +331,8 @@ uint8_t measurement_findNextHopInfo(measurement_vars_t* m, bool reception){
   else {
     return i;
   }
+  #endif
+  
+  return 0;
 }
 

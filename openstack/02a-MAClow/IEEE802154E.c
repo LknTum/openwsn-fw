@@ -192,11 +192,6 @@ void isr_ieee154e_newSlot() {
       if (idmanager_getIsDAGroot()==TRUE) {
          changeIsSync(TRUE);
          incrementAsnOffset();
-               if (idmanager_getIsDAGroot()==FALSE) {
-    openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXDATAPREPARE_OVERFLOW,
-                         (errorparameter_t)ieee154e_vars.asnOffset,
-                         (errorparameter_t)6);
-	}
          ieee154e_syncSlotOffset();
          ieee154e_vars.nextActiveSlotOffset = schedule_getNextActiveSlotOffset();
       } else {
@@ -478,12 +473,6 @@ port_INLINE void activity_synchronize_newSlot() {
    // increment ASN (used only to schedule serial activity)
    incrementAsnOffset();
    
-         if (idmanager_getIsDAGroot()==FALSE) {
-    openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXDATAPREPARE_OVERFLOW,
-                         (errorparameter_t)ieee154e_vars.asnOffset,
-                         (errorparameter_t)5);
-	}
-
    // to be able to receive and transmist serial even when not synchronized
    // take turns every 8 slots sending and receiving
    if        ((ieee154e_vars.asn.bytes0and1&0x000f)==0x0000) {
@@ -814,11 +803,6 @@ port_INLINE bool ieee154e_processIEs(OpenQueueEntry_t* pkt, uint16_t* lenIE) {
             }
             ieee154e_vars.asnOffset = i - schedule_getChannelOffset();*/
 	    	
-	    	if (idmanager_getIsDAGroot()==FALSE) {
-    openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXDATAPREPARE_OVERFLOW,
-                         (errorparameter_t)ieee154e_vars.asnOffset,
-                         (errorparameter_t)9);
-	}
 	    	
          }
 		///@internal [LKN-slotOffsetCorrection-processIE]
@@ -867,20 +851,6 @@ port_INLINE void activity_ti1ORri1() {
    // increment ASN (do this first so debug pins are in sync)
    incrementAsnOffset();
    
-/*   
-   if (idmanager_getIsDAGroot()==FALSE) {
-    openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXDATAPREPARE_OVERFLOW,
-                         (errorparameter_t)ieee154e_vars.slotOffset,
-                         (errorparameter_t)ieee154e_vars.asnOffset);
-	}
-*/
-   
-   /*   if (idmanager_getIsDAGroot()==FALSE) {
-    openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXDATAPREPARE_OVERFLOW,
-                         (errorparameter_t)ieee154e_vars.asnOffset,
-                         (errorparameter_t)1);
-	}*/
-
    // wiggle debug pins
    debugpins_slot_toggle();
    if (ieee154e_vars.slotOffset==0) {
@@ -1037,13 +1007,7 @@ port_INLINE void activity_ti1ORri1() {
             schedule_advanceSlot();
             // find the next one
             ieee154e_vars.nextActiveSlotOffset = schedule_getNextActiveSlotOffset();
-
-                  if (idmanager_getIsDAGroot()==FALSE) {
-    openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXDATAPREPARE_OVERFLOW,
-                         (errorparameter_t)ieee154e_vars.asnOffset,
-                         (errorparameter_t)4);
-	}
-         }
+		 }
 #ifdef ADAPTIVE_SYNC
          // deal with the case when schedule multi slots
          adaptive_sync_countCompensationTimeout_compoundSlots(NUMSERIALRX-1);
@@ -1080,12 +1044,6 @@ port_INLINE void activity_ti2() {
    // calculate the frequency to transmit on
    ieee154e_vars.freq = calculateFrequency(schedule_getChannelOffset());
    
-   if (idmanager_getIsDAGroot()==FALSE) {
-    openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXDATAPREPARE_OVERFLOW,
-                         (errorparameter_t)ieee154e_vars.asnOffset,
-                         (errorparameter_t)2);
-	}
-
    ///@internal [LKN-TX-freq]
    //Set the tx frequency in the packet
    //ieee154e_vars.dataToSend->l4_payload[3] = ieee154e_vars.freq;
@@ -1703,6 +1661,10 @@ port_INLINE void activity_ri5(PORT_RADIOTIMER_WIDTH capturedTime) {
 
    // clear local variable
    ieee154e_vars.dataReceived = NULL;
+   
+   openserial_printError(COMPONENT_IEEE802154E,ERR_NO_FREE_PACKET_BUFFER,
+                            (errorparameter_t)7,
+                            (errorparameter_t)7);
 
    // abort
    endSlot();
@@ -2141,11 +2103,6 @@ void synchronizePacket(PORT_RADIOTIMER_WIDTH timeReceived) {
    if (currentValue<timeReceived || currentPeriod-currentValue<RESYNCHRONIZATIONGUARD) {
       newPeriod                  +=  TsSlotDuration;
       incrementAsnOffset();
-          if (idmanager_getIsDAGroot()==FALSE) {
-    openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXDATAPREPARE_OVERFLOW,
-                         (errorparameter_t)ieee154e_vars.asnOffset,
-                         (errorparameter_t)3);
-	}
    }
    newPeriod                      =  (PORT_RADIOTIMER_WIDTH)((PORT_SIGNED_INT_WIDTH)newPeriod+timeCorrection);
 
