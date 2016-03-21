@@ -192,6 +192,11 @@ void isr_ieee154e_newSlot() {
       if (idmanager_getIsDAGroot()==TRUE) {
          changeIsSync(TRUE);
          incrementAsnOffset();
+               if (idmanager_getIsDAGroot()==FALSE) {
+    openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXDATAPREPARE_OVERFLOW,
+                         (errorparameter_t)ieee154e_vars.asnOffset,
+                         (errorparameter_t)6);
+	}
          ieee154e_syncSlotOffset();
          ieee154e_vars.nextActiveSlotOffset = schedule_getNextActiveSlotOffset();
       } else {
@@ -472,6 +477,12 @@ port_INLINE void activity_synchronize_newSlot() {
 
    // increment ASN (used only to schedule serial activity)
    incrementAsnOffset();
+   
+         if (idmanager_getIsDAGroot()==FALSE) {
+    openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXDATAPREPARE_OVERFLOW,
+                         (errorparameter_t)ieee154e_vars.asnOffset,
+                         (errorparameter_t)5);
+	}
 
    // to be able to receive and transmist serial even when not synchronized
    // take turns every 8 slots sending and receiving
@@ -795,6 +806,20 @@ port_INLINE bool ieee154e_processIEs(OpenQueueEntry_t* pkt, uint16_t* lenIE) {
             ieee154e_vars.nextActiveSlotOffset = schedule_getNextActiveSlotOffset();
 
 	    	ieee154e_syncAsnOffset();
+	    	
+	    	  /*for (i=0;i<16;i++){
+                if ((ieee154e_vars.freq - 11)==ieee154e_vars.chTemplate[i]){
+                    break;
+                }
+            }
+            ieee154e_vars.asnOffset = i - schedule_getChannelOffset();*/
+	    	
+	    	if (idmanager_getIsDAGroot()==FALSE) {
+    openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXDATAPREPARE_OVERFLOW,
+                         (errorparameter_t)ieee154e_vars.asnOffset,
+                         (errorparameter_t)9);
+	}
+	    	
          }
 		///@internal [LKN-slotOffsetCorrection-processIE]
          break;
@@ -841,6 +866,20 @@ port_INLINE void activity_ti1ORri1() {
 
    // increment ASN (do this first so debug pins are in sync)
    incrementAsnOffset();
+   
+/*   
+   if (idmanager_getIsDAGroot()==FALSE) {
+    openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXDATAPREPARE_OVERFLOW,
+                         (errorparameter_t)ieee154e_vars.slotOffset,
+                         (errorparameter_t)ieee154e_vars.asnOffset);
+	}
+*/
+   
+   /*   if (idmanager_getIsDAGroot()==FALSE) {
+    openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXDATAPREPARE_OVERFLOW,
+                         (errorparameter_t)ieee154e_vars.asnOffset,
+                         (errorparameter_t)1);
+	}*/
 
    // wiggle debug pins
    debugpins_slot_toggle();
@@ -994,6 +1033,16 @@ port_INLINE void activity_ti1ORri1() {
          //increase ASN by NUMSERIALRX-1 slots as at this slot is already incremented by 1
          for (i=0;i<NUMSERIALRX-1;i++){
             incrementAsnOffset();
+            // advance the schedule
+            schedule_advanceSlot();
+            // find the next one
+            ieee154e_vars.nextActiveSlotOffset = schedule_getNextActiveSlotOffset();
+
+                  if (idmanager_getIsDAGroot()==FALSE) {
+    openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXDATAPREPARE_OVERFLOW,
+                         (errorparameter_t)ieee154e_vars.asnOffset,
+                         (errorparameter_t)4);
+	}
          }
 #ifdef ADAPTIVE_SYNC
          // deal with the case when schedule multi slots
@@ -1030,6 +1079,12 @@ port_INLINE void activity_ti2() {
 
    // calculate the frequency to transmit on
    ieee154e_vars.freq = calculateFrequency(schedule_getChannelOffset());
+   
+   if (idmanager_getIsDAGroot()==FALSE) {
+    openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXDATAPREPARE_OVERFLOW,
+                         (errorparameter_t)ieee154e_vars.asnOffset,
+                         (errorparameter_t)2);
+	}
 
    ///@internal [LKN-TX-freq]
    //Set the tx frequency in the packet
@@ -1886,11 +1941,6 @@ port_INLINE bool isValidAck(ieee802154_header_iht* ieee802514_header, OpenQueueE
 
 //======= ASN handling
 
-/**
-@brief This function is used to increment the ASN value over 5 bytes. Additionally, also the value of the slotOffset is incremented.
-
-@lkn{Samu} We extended the function such that the slotOffset increment depends on the variable frameLength size, instead of the predefined value of 16.
-*/
 port_INLINE void incrementAsnOffset() {
    frameLength_t frameLength;
 
@@ -1903,7 +1953,6 @@ port_INLINE void incrementAsnOffset() {
       }
    }
 
-	///@internal [LKN-slotOffset-increment]
    // increment the offsets
    frameLength = schedule_getFrameLength();
    if (frameLength == 0) {
@@ -1911,7 +1960,6 @@ port_INLINE void incrementAsnOffset() {
    } else {
       ieee154e_vars.slotOffset  = (ieee154e_vars.slotOffset+1)%frameLength;
    }
-	///@internal [LKN-slotOffset-increment]
    ieee154e_vars.asnOffset   = (ieee154e_vars.asnOffset+1)%16;
 }
 
@@ -1985,10 +2033,8 @@ port_INLINE void asnStoreFromEB(uint8_t* asn) {
 /**
 @brief Enables the synchronization of the slotOffset upon receiving a new ASN value. The slotOffset is stored in a 4 bytes variable.
 
-@lkn{Samu} Implementation of the function based on the original function @ref ieee154e_syncAsnOffset
 */
 
-///@internal [LKN-slotOffset-synch]
 port_INLINE void ieee154e_syncSlotOffset() {
    frameLength_t frameLength;
    uint32_t slotOffset;
@@ -2007,7 +2053,13 @@ port_INLINE void ieee154e_syncSlotOffset() {
 
    ieee154e_vars.slotOffset       = (slotOffset_t) slotOffset;
 }
-///@internal [LKN-slotOffset-synch]
+
+/**
+@brief This function is used to increment the asnOffset value.
+
+@lkn{Samu} We created the function such that the asnOffset increment depends on the number of channels.
+*/
+///@internal [LKN-asnOffset-synch]
 
 port_INLINE void ieee154e_syncAsnOffset(void) {
    frameLength_t availableChannels;
@@ -2027,6 +2079,7 @@ port_INLINE void ieee154e_syncAsnOffset(void) {
 
    ieee154e_vars.asnOffset = (uint8_t) asnOffset;
 }
+///@internal [LKN-asnOffset-synch]
 
 
 void ieee154e_setIsAckEnabled(bool isEnabled){
@@ -2088,6 +2141,11 @@ void synchronizePacket(PORT_RADIOTIMER_WIDTH timeReceived) {
    if (currentValue<timeReceived || currentPeriod-currentValue<RESYNCHRONIZATIONGUARD) {
       newPeriod                  +=  TsSlotDuration;
       incrementAsnOffset();
+          if (idmanager_getIsDAGroot()==FALSE) {
+    openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXDATAPREPARE_OVERFLOW,
+                         (errorparameter_t)ieee154e_vars.asnOffset,
+                         (errorparameter_t)3);
+	}
    }
    newPeriod                      =  (PORT_RADIOTIMER_WIDTH)((PORT_SIGNED_INT_WIDTH)newPeriod+timeCorrection);
 

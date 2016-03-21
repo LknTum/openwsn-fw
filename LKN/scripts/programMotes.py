@@ -39,4 +39,5 @@ if __name__=='__main__':
 		min_range = int(sys.argv[1])
 		max_range = int(sys.argv[2])
 
+	os.system("python schedule.py")
 	program_all(min_range, max_range)
