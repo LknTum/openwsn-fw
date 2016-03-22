@@ -472,7 +472,6 @@ port_INLINE void activity_synchronize_newSlot() {
 
    // increment ASN (used only to schedule serial activity)
    incrementAsnOffset();
-
    // to be able to receive and transmist serial even when not synchronized
    // take turns every 8 slots sending and receiving
    if        ((ieee154e_vars.asn.bytes0and1&0x000f)==0x0000) {
@@ -796,13 +795,6 @@ port_INLINE bool ieee154e_processIEs(OpenQueueEntry_t* pkt, uint16_t* lenIE) {
 
 	    	ieee154e_syncAsnOffset();
 
-	    	  /*for (i=0;i<16;i++){
-                if ((ieee154e_vars.freq - 11)==ieee154e_vars.chTemplate[i]){
-                    break;
-                }
-            }
-            ieee154e_vars.asnOffset = i - schedule_getChannelOffset();*/
-
          }
 		///@internal [LKN-slotOffsetCorrection-processIE]
          break;
@@ -849,21 +841,6 @@ port_INLINE void activity_ti1ORri1() {
 
    // increment ASN (do this first so debug pins are in sync)
    incrementAsnOffset();
-
-/*
-   if (idmanager_getIsDAGroot()==FALSE) {
-    openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXDATAPREPARE_OVERFLOW,
-                         (errorparameter_t)ieee154e_vars.slotOffset,
-                         (errorparameter_t)ieee154e_vars.asnOffset);
-	}
-*/
-
-   /*   if (idmanager_getIsDAGroot()==FALSE) {
-    openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXDATAPREPARE_OVERFLOW,
-                         (errorparameter_t)ieee154e_vars.asnOffset,
-                         (errorparameter_t)1);
-	}*/
-
    // wiggle debug pins
    debugpins_slot_toggle();
    if (ieee154e_vars.slotOffset==0) {
@@ -1020,7 +997,6 @@ port_INLINE void activity_ti1ORri1() {
             schedule_advanceSlot();
             // find the next one
             ieee154e_vars.nextActiveSlotOffset = schedule_getNextActiveSlotOffset();
-
          }
 #ifdef ADAPTIVE_SYNC
          // deal with the case when schedule multi slots
@@ -1576,7 +1552,7 @@ port_INLINE void activity_ri5(PORT_RADIOTIMER_WIDTH capturedTime) {
 
       ///@internal [LKN-dataRX-RSSI]
       //ieee154e_vars.dataReceived->payload[ieee154e_vars.dataReceived->length-3] = 0xff - ieee154e_vars.dataReceived->l1_rssi + 1;
-      measurements_setHopRssi(ieee154e_vars.dataReceived, ieee154e_vars.dataReceived->length, 0xff - ieee154e_vars.dataReceived->l1_rssi + 1);
+      measurements_setHopRssi(ieee154e_vars.dataReceived, 0xff - ieee154e_vars.dataReceived->l1_rssi + 1);
       ///@internal [LKN-dataRX-RSSI]
 
 	  //openserial_printError(COMPONENT_IEEE802154E,ERR_MAXRXACKPREPARE_OVERFLOWS,
@@ -1679,6 +1655,10 @@ port_INLINE void activity_ri5(PORT_RADIOTIMER_WIDTH capturedTime) {
 
    // clear local variable
    ieee154e_vars.dataReceived = NULL;
+
+   openserial_printError(COMPONENT_IEEE802154E,ERR_NO_FREE_PACKET_BUFFER,
+                            (errorparameter_t)7,
+                            (errorparameter_t)7);
 
    // abort
    endSlot();
