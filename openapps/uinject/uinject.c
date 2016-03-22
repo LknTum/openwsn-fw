@@ -289,19 +289,22 @@ void measurements_setHopFreq(OpenQueueEntry_t* pkt, uint8_t length, uint8_t f){
 
 void measurements_setHopRssi(uint8_t* payload, uint8_t length, uint8_t r){
 
-  // TODO add a check for uinject packets
-  if (length==78 || length==79){
+if (length>70 && length<80){
+
 	uint8_t index;
 	measurement_vars_t* m;
 
   m = (measurement_vars_t*) &payload[length - sizeof(measurement_vars_t) - 2];
 
 	m->hopInfos[measurement_findNextHopInfo(m, TRUE)].rssi=r;
+
 }
 else {
+
 /*    openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXDATAPREPARE_OVERFLOW,
-                     (errorparameter_t)0x99,
-                     (errorparameter_t)16);*/
+                     (errorparameter_t)99,
+                     (errorparameter_t)99);
+*/
 }
 	return;
 }
@@ -339,16 +342,8 @@ uint8_t measurement_findNextHopInfo(measurement_vars_t* m, bool reception){
 #if 1
 	for(i=0;i<MAX_HOPS;i++){
     // check whether it is my address. If yes, return the entry
-    if (reception){
-      if ((m->hopInfos[i].addr!=0) && (m->hopInfos[i].addr!=(idmanager_getMyID(ADDR_64B)->addr_64b[7])))
-        break;
-
-    } else {
       if ((m->hopInfos[i].addr==0) || (m->hopInfos[i].addr==(idmanager_getMyID(ADDR_64B)->addr_64b[7])))
           break;
-
-
-    }
 	}
 
   /*openserial_printInfo(COMPONENT_ICMPv6ECHO,ERR_UNEXPECTED_SENDDONE,
@@ -359,7 +354,10 @@ uint8_t measurement_findNextHopInfo(measurement_vars_t* m, bool reception){
 		return HOP_OVVERIDE_INDEX;
 	}
   else {
-    return i;
+    if (reception)
+      return i-1;
+    else
+      return i;
   }
   #endif
 
