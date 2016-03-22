@@ -99,7 +99,7 @@ void radio_reset(void) {
    /****LKN****/
    /// @lkn{Samu} Power level set to predefined value 31 during our tests.
    /// @internal [LKN-radio]
-   cc2420_TXCTRL_reg.PA_LEVEL               = 31; //31 max. TX power (~0dBm)
+   cc2420_TXCTRL_reg.PA_LEVEL               = 21; //31 max. TX power (~0dBm)
    /// @internal [LKN-radio]
    cc2420_TXCTRL_reg.reserved_w1            = 1;
    cc2420_TXCTRL_reg.PA_CURRENT             = 3;

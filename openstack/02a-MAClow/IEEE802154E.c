@@ -1036,14 +1036,14 @@ port_INLINE void activity_ti2() {
    ///@internal [LKN-TX-freq]
    //Set the tx frequency in the packet
    //ieee154e_vars.dataToSend->l4_payload[3] = ieee154e_vars.freq;
-   measurements_setHopFreq(ieee154e_vars.dataToSend, ieee154e_vars.freq);
-   measurements_setHopReTxCnt(ieee154e_vars.dataToSend,TXRETRIES+1);
-#if 0
+   #if 0
    openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXDATAPREPARE_OVERFLOW,
                      (errorparameter_t)22,
                      (errorparameter_t)1);
-#endif
-   measurements_setHopAddr(ieee154e_vars.dataToSend, ieee154e_vars.dataToSend->l4_length,(idmanager_getMyID(ADDR_64B))->addr_64b[7]);
+   #endif
+   measurements_setHopFreq(ieee154e_vars.dataToSend, ieee154e_vars.dataToSend->length, ieee154e_vars.freq);
+   measurements_setHopReTxCnt(ieee154e_vars.dataToSend, ieee154e_vars.dataToSend->length, TXRETRIES+1);
+   measurements_setHopAddr(ieee154e_vars.dataToSend, ieee154e_vars.dataToSend->length,(idmanager_getMyID(ADDR_64B))->addr_64b[7]);
    ///@internal [LKN-hop-count]
    //saves the forwarder address that is realted to the hop count
    /*if (ieee154e_vars.dataToSend->l4_payload[5]!=0 && ieee154e_vars.dataToSend->l4_payload[5]<5){
@@ -1243,7 +1243,7 @@ port_INLINE void activity_tie5() {
    ieee154e_vars.dataToSend->l2_retriesLeft--;
 
    //Sets a retransmission counter variable in the packet
-   measurements_setHopReTxCnt(ieee154e_vars.dataToSend, ieee154e_vars.dataToSend->l2_retriesLeft);
+   measurements_setHopReTxCnt(ieee154e_vars.dataToSend, ieee154e_vars.dataToSend->length, ieee154e_vars.dataToSend->l2_retriesLeft);
    //ieee154e_vars.dataToSend->l4_payload[0] = ieee154e_vars.dataToSend->l2_retriesLeft;
  	///@internal [LKN-TXfreq-selection]
 
@@ -2376,7 +2376,7 @@ void endSlot() {
       ieee154e_vars.dataToSend->l2_retriesLeft--;
 
       //ieee154e_vars.dataToSend->l4_payload[0] = ieee154e_vars.dataToSend->l2_retriesLeft;
-      measurements_setHopReTxCnt(ieee154e_vars.dataToSend, ieee154e_vars.dataToSend->l2_retriesLeft);
+      measurements_setHopReTxCnt(ieee154e_vars.dataToSend, ieee154e_vars.dataToSend->length, ieee154e_vars.dataToSend->l2_retriesLeft);
 
       if (ieee154e_vars.dataToSend->l2_retriesLeft==0) {
          // indicate tx fail if no more retries left

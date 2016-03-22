@@ -238,15 +238,22 @@ bool measurements_checkIfUinjectDst(open_addr_t * pkt_dst){
     return FALSE;
 }
 
-void measurements_setHopAddr(OpenQueueEntry_t* pkt, uint8_t l4_length, uint8_t a){
+void measurements_setHopAddr(OpenQueueEntry_t* pkt, uint8_t length, uint8_t a){
 
   if(measurements_checkIfUinjectDst(&pkt->l3_destinationAdd)){
   	uint8_t index;
 		measurement_vars_t* m;
 
-		m=(measurement_vars_t*) pkt->l4_payload;
+		m=(measurement_vars_t*) &pkt->payload[length - sizeof(measurement_vars_t)];
+
+    //pkt->payload[length - 3] = 0x99;
 
 		index=measurement_findNextHopInfo(m,FALSE);
+
+ /*   openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXACKPREPARE_OVERFLOWS,
+                         (errorparameter_t)index,
+                         (errorparameter_t)77);*/
+
 		m->hopInfos[index].addr=a;
 	}
   else {
@@ -254,24 +261,26 @@ void measurements_setHopAddr(OpenQueueEntry_t* pkt, uint8_t l4_length, uint8_t a
 	return;
 }
 
-void measurements_setHopReTxCnt(OpenQueueEntry_t* pkt, uint8_t reTx){
+void measurements_setHopReTxCnt(OpenQueueEntry_t* pkt, uint8_t length, uint8_t reTx){
   if(measurements_checkIfUinjectDst(&pkt->l3_destinationAdd)){
 		uint8_t index;
 		measurement_vars_t* m;
 
-		m=(measurement_vars_t*) pkt->l4_payload;
+		m=(measurement_vars_t*) &pkt->payload[length - sizeof(measurement_vars_t)];
+
 		index=measurement_findNextHopInfo(m,FALSE);
 		m->hopInfos[index].reTx_cnt=reTx;
 	}
 	return;
 }
 
-void measurements_setHopFreq(OpenQueueEntry_t* pkt, uint8_t f){
+void measurements_setHopFreq(OpenQueueEntry_t* pkt, uint8_t length, uint8_t f){
 	if(measurements_checkIfUinjectDst(&pkt->l3_destinationAdd)){
 		uint8_t index;
 		measurement_vars_t* m;
 
-		m=(measurement_vars_t*) pkt->l4_payload;
+		m=(measurement_vars_t*) &pkt->payload[length - sizeof(measurement_vars_t)];
+
 		index=measurement_findNextHopInfo(m,FALSE);
 		m->hopInfos[index].freq=f;
 	}
@@ -287,7 +296,7 @@ void measurements_setHopRssi(uint8_t* payload, uint8_t length, uint8_t r){
 
   m = (measurement_vars_t*) &payload[length - sizeof(measurement_vars_t) - 2];
 
-	m->hopInfos[0].rssi=r;
+	m->hopInfos[measurement_findNextHopInfo(m, TRUE)].rssi=r;
 }
 else {
 /*    openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXDATAPREPARE_OVERFLOW,
@@ -338,13 +347,13 @@ uint8_t measurement_findNextHopInfo(measurement_vars_t* m, bool reception){
       if ((m->hopInfos[i].addr==0) || (m->hopInfos[i].addr==(idmanager_getMyID(ADDR_64B)->addr_64b[7])))
           break;
 
-		/*if((m->hopInfos[i].addr==0) && (m->hopInfos[i].freq==0) &&
-		  (m->hopInfos[i].reTx_cnt==0) && (m->hopInfos[i].rssi==0)){
-      // found the first non-zero entry
-			break;
-		}*/
+
     }
 	}
+
+  /*openserial_printInfo(COMPONENT_ICMPv6ECHO,ERR_UNEXPECTED_SENDDONE,
+                      (errorparameter_t)i,
+                      (errorparameter_t)77);*/
 
 	if(i==MAX_HOPS){
 		return HOP_OVVERIDE_INDEX;
@@ -354,7 +363,7 @@ uint8_t measurement_findNextHopInfo(measurement_vars_t* m, bool reception){
   }
   #endif
 
-  //return 0;
+  //return 1;
 }
 
 
