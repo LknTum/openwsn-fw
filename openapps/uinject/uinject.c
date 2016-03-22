@@ -278,21 +278,21 @@ void measurements_setHopFreq(OpenQueueEntry_t* pkt, uint8_t f){
 	return;
 }
 
-void measurements_setHopRssi(OpenQueueEntry_t* pkt, uint8_t length, uint8_t r){
+void measurements_setHopRssi(uint8_t* payload, uint8_t length, uint8_t r){
 
   // TODO add a check for uinject packets
   if (length==78 || length==79){
 	uint8_t index;
 	measurement_vars_t* m;
 
-	m=(measurement_vars_t*) pkt->payload+2; //completely found by luck, but works
-	//index=measurement_findNextHopInfo(m,TRUE);
-	m->hopInfos[0].rssi=0x99;
+  m = (measurement_vars_t*) &payload[length - sizeof(measurement_vars_t) - 2];
+
+	m->hopInfos[0].rssi=r;
 }
 else {
-    openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXDATAPREPARE_OVERFLOW,
-                     (errorparameter_t),
-                     (errorparameter_t)16);
+/*    openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXDATAPREPARE_OVERFLOW,
+                     (errorparameter_t)0x99,
+                     (errorparameter_t)16);*/
 }
 	return;
 }

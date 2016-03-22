@@ -1560,6 +1560,11 @@ port_INLINE void activity_ri5(PORT_RADIOTIMER_WIDTH capturedTime) {
          break;
       }
 
+      ///@internal [LKN-dataRX-RSSI]
+      //ieee154e_vars.dataReceived->payload[ieee154e_vars.dataReceived->length-3] = 0xff - ieee154e_vars.dataReceived->l1_rssi + 1;
+      measurements_setHopRssi(ieee154e_vars.dataReceived->payload, ieee154e_vars.dataReceived->length, 0xff - ieee154e_vars.dataReceived->l1_rssi + 1);
+      ///@internal [LKN-dataRX-RSSI]
+
       // toss CRC (2 last bytes)
       packetfunctions_tossFooter(   ieee154e_vars.dataReceived, LENGTH_CRC);
 
@@ -1619,11 +1624,6 @@ port_INLINE void activity_ri5(PORT_RADIOTIMER_WIDTH capturedTime) {
 
       // record the timeCorrection and print out at end of slot
       ieee154e_vars.dataReceived->l2_timeCorrection = (PORT_SIGNED_INT_WIDTH)((PORT_SIGNED_INT_WIDTH)TsTxOffset-(PORT_SIGNED_INT_WIDTH)ieee154e_vars.syncCapturedTime);
-
-      ///@internal [LKN-dataRX-RSSI]
-      //ieee154e_vars.dataReceived->payload[ieee154e_vars.dataReceived->length-3] = 0xff - ieee154e_vars.dataReceived->l1_rssi + 1;
-      measurements_setHopRssi(ieee154e_vars.dataReceived, ieee154e_vars.dataReceived->length, 0xff - ieee154e_vars.dataReceived->l1_rssi + 1);
-      ///@internal [LKN-dataRX-RSSI]
 
       // check if ack requested
       if (ieee802514_header.ackRequested==1 && ieee154e_vars.isAckEnabled == TRUE) {
