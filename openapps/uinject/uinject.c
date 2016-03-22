@@ -225,25 +225,37 @@ void measurements_allocate(OpenQueueEntry_t* pkt){
 	return (measurement_vars_t*) pkt->payload;
 }*/
 
-void measurements_setHopAddr(OpenQueueEntry_t* pkt, uint8_t l4_length,uint8_t a){
-	//if(pkt->creator == COMPONENT_UINJECT){
-		uint8_t index;
+bool measurements_checkIfUinjectDst(open_addr_t * pkt_dst){
+
+  open_addr_t dst_addr;
+  memset(&dst_addr, 0, sizeof(open_addr_t));
+
+  packetfunctions_readAddress(uinject_dst_addr, ADDR_128B, &dst_addr, FALSE);
+
+  if(packetfunctions_sameAddress( pkt_dst, &dst_addr))
+    return TRUE;
+  else
+    return FALSE;
+}
+
+void measurements_setHopAddr(OpenQueueEntry_t* pkt, uint8_t l4_length, uint8_t a){
+
+  if(measurements_checkIfUinjectDst(&pkt->l3_destinationAdd)){
+  	uint8_t index;
 		measurement_vars_t* m;
 
 		m=(measurement_vars_t*) pkt->l4_payload;
 
-    openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXDATAPREPARE_OVERFLOW,
-                     (errorparameter_t)l4_length,
-                     (errorparameter_t)8);
-
 		index=measurement_findNextHopInfo(m,FALSE);
 		m->hopInfos[index].addr=a;
-	//}
+	}
+  else {
+}
 	return;
 }
 
 void measurements_setHopReTxCnt(OpenQueueEntry_t* pkt, uint8_t reTx){
-	if(pkt->creator == COMPONENT_UINJECT){
+  if(measurements_checkIfUinjectDst(&pkt->l3_destinationAdd)){
 		uint8_t index;
 		measurement_vars_t* m;
 
@@ -255,7 +267,7 @@ void measurements_setHopReTxCnt(OpenQueueEntry_t* pkt, uint8_t reTx){
 }
 
 void measurements_setHopFreq(OpenQueueEntry_t* pkt, uint8_t f){
-	if(pkt->creator == COMPONENT_UINJECT){
+	if(measurements_checkIfUinjectDst(&pkt->l3_destinationAdd)){
 		uint8_t index;
 		measurement_vars_t* m;
 
@@ -266,19 +278,27 @@ void measurements_setHopFreq(OpenQueueEntry_t* pkt, uint8_t f){
 	return;
 }
 
-void measurements_setHopRssi(OpenQueueEntry_t* pkt,uint8_t r){
+void measurements_setHopRssi(OpenQueueEntry_t* pkt, uint8_t length, uint8_t r){
+
+  // TODO add a check for uinject packets
+  if (length==78 || length==79){
 	uint8_t index;
 	measurement_vars_t* m;
-	
-	m=(measurement_vars_t*) pkt->payload+2; //completely found by luck, but works
-	index=measurement_findNextHopInfo(m,TRUE);
-	m->hopInfos[index].rssi=r;
 
+	m=(measurement_vars_t*) pkt->payload+2; //completely found by luck, but works
+	//index=measurement_findNextHopInfo(m,TRUE);
+	m->hopInfos[0].rssi=0x99;
+}
+else {
+    openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXDATAPREPARE_OVERFLOW,
+                     (errorparameter_t),
+                     (errorparameter_t)16);
+}
 	return;
 }
 
 void measurements_setAsn(OpenQueueEntry_t* pkt, asn_t a){
-	if(pkt->creator == COMPONENT_UINJECT){
+	if(measurements_checkIfUinjectDst(&pkt->l3_destinationAdd)){
 		measurement_vars_t* m;
 		m=(measurement_vars_t*) pkt->payload;
 		m->asn=a;
@@ -287,7 +307,7 @@ void measurements_setAsn(OpenQueueEntry_t* pkt, asn_t a){
 }
 
 void measurements_setSeqNum(OpenQueueEntry_t* pkt, uint16_t seqNum){
-	if(pkt->creator == COMPONENT_UINJECT){
+	if(measurements_checkIfUinjectDst(&pkt->l3_destinationAdd)){
 		measurement_vars_t* m;
 
 		m=(measurement_vars_t*) pkt->payload;
@@ -307,7 +327,7 @@ In either case the entry should be used for writing/updating retx and frequency 
 uint8_t measurement_findNextHopInfo(measurement_vars_t* m, bool reception){
 	uint8_t i;
 	//TODO check asn OR add hop count
-#if 0
+#if 1
 	for(i=0;i<MAX_HOPS;i++){
     // check whether it is my address. If yes, return the entry
     if (reception){
@@ -333,7 +353,8 @@ uint8_t measurement_findNextHopInfo(measurement_vars_t* m, bool reception){
     return i;
   }
   #endif
-  
-  return 0;
+
+  //return 0;
 }
+
 

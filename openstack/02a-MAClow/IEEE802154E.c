@@ -1038,7 +1038,7 @@ port_INLINE void activity_ti2() {
    //ieee154e_vars.dataToSend->l4_payload[3] = ieee154e_vars.freq;
    measurements_setHopFreq(ieee154e_vars.dataToSend, ieee154e_vars.freq);
    measurements_setHopReTxCnt(ieee154e_vars.dataToSend,TXRETRIES+1);
-#ifdef FALSE
+#if 0
    openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXDATAPREPARE_OVERFLOW,
                      (errorparameter_t)22,
                      (errorparameter_t)1);
@@ -1550,14 +1550,6 @@ port_INLINE void activity_ri5(PORT_RADIOTIMER_WIDTH capturedTime) {
                                    &ieee154e_vars.dataReceived->l1_lqi,
                                    &ieee154e_vars.dataReceived->l1_crc);
 
-      ///@internal [LKN-dataRX-RSSI]
-      //ieee154e_vars.dataReceived->payload[ieee154e_vars.dataReceived->length-3] = 0xff - ieee154e_vars.dataReceived->l1_rssi + 1;
-      measurements_setHopRssi(ieee154e_vars.dataReceived, 0xff - ieee154e_vars.dataReceived->l1_rssi + 1);
-      ///@internal [LKN-dataRX-RSSI]
-
-	  //openserial_printError(COMPONENT_IEEE802154E,ERR_MAXRXACKPREPARE_OVERFLOWS,
-      //                    (errorparameter_t)ieee154e_vars.dataReceived->l4_payload[1],
-      //                    (errorparameter_t)6);
 
       // break if wrong length
       if (ieee154e_vars.dataReceived->length<LENGTH_CRC || ieee154e_vars.dataReceived->length>LENGTH_IEEE154_MAX ) {
@@ -1628,6 +1620,11 @@ port_INLINE void activity_ri5(PORT_RADIOTIMER_WIDTH capturedTime) {
       // record the timeCorrection and print out at end of slot
       ieee154e_vars.dataReceived->l2_timeCorrection = (PORT_SIGNED_INT_WIDTH)((PORT_SIGNED_INT_WIDTH)TsTxOffset-(PORT_SIGNED_INT_WIDTH)ieee154e_vars.syncCapturedTime);
 
+      ///@internal [LKN-dataRX-RSSI]
+      //ieee154e_vars.dataReceived->payload[ieee154e_vars.dataReceived->length-3] = 0xff - ieee154e_vars.dataReceived->l1_rssi + 1;
+      measurements_setHopRssi(ieee154e_vars.dataReceived, ieee154e_vars.dataReceived->length, 0xff - ieee154e_vars.dataReceived->l1_rssi + 1);
+      ///@internal [LKN-dataRX-RSSI]
+
       // check if ack requested
       if (ieee802514_header.ackRequested==1 && ieee154e_vars.isAckEnabled == TRUE) {
          // arm rt5
@@ -1655,10 +1652,6 @@ port_INLINE void activity_ri5(PORT_RADIOTIMER_WIDTH capturedTime) {
 
    // clear local variable
    ieee154e_vars.dataReceived = NULL;
-
-   openserial_printError(COMPONENT_IEEE802154E,ERR_NO_FREE_PACKET_BUFFER,
-                            (errorparameter_t)7,
-                            (errorparameter_t)7);
 
    // abort
    endSlot();
