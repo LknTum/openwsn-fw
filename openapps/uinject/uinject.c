@@ -115,7 +115,7 @@ void uinject_timer_cb(opentimer_id_t id){
 void uinject_task_cb() {
    OpenQueueEntry_t*    pkt;
    asn_t current_asn;
-   
+
    // Debug Message
    //openserial_printData(pkt,40);
 
@@ -175,12 +175,12 @@ return;}
    }
 
    measurements_allocate(pkt);
-   
+
    measurements_setSeqNum(pkt, uinject_vars.counter);
-   
+
    ieee154e_getAsn(&current_asn);
    measurements_setAsn(pkt,current_asn);
-   
+
    /*// OLD MEASUREMENT DATA MECHANISM
    packetfunctions_reserveHeaderSize(pkt,11*sizeof(uint8_t));
    *((uint8_t*)&pkt->payload[0]) = TXRETRIES+1;
@@ -225,15 +225,20 @@ void measurements_allocate(OpenQueueEntry_t* pkt){
 	return (measurement_vars_t*) pkt->payload;
 }*/
 
-void measurements_setHopAddr(OpenQueueEntry_t* pkt, uint8_t a){
-	if(pkt->creator == COMPONENT_UINJECT){
+void measurements_setHopAddr(OpenQueueEntry_t* pkt, uint8_t l4_length,uint8_t a){
+	//if(pkt->creator == COMPONENT_UINJECT){
 		uint8_t index;
 		measurement_vars_t* m;
 
 		m=(measurement_vars_t*) pkt->l4_payload;
+
+    openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXDATAPREPARE_OVERFLOW,
+                     (errorparameter_t)l4_length,
+                     (errorparameter_t)8);
+
 		index=measurement_findNextHopInfo(m,FALSE);
 		m->hopInfos[index].addr=a;
-	}
+	//}
 	return;
 }
 
@@ -241,11 +246,11 @@ void measurements_setHopReTxCnt(OpenQueueEntry_t* pkt, uint8_t reTx){
 	if(pkt->creator == COMPONENT_UINJECT){
 		uint8_t index;
 		measurement_vars_t* m;
-		                 
+
 		m=(measurement_vars_t*) pkt->l4_payload;
 		index=measurement_findNextHopInfo(m,FALSE);
 		m->hopInfos[index].reTx_cnt=reTx;
-	}	
+	}
 	return;
 }
 

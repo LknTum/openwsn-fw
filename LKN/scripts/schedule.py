@@ -24,7 +24,7 @@ def read_config(fname):
     with open(fname) as data_file:
         data = json.load(data_file)
 
-    pprint(data)
+    # pprint(data)
 
     return data
 
