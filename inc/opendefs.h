@@ -21,7 +21,7 @@
 /****LKN****/
 /// @lkn{Samu} DAG root definition
 /// @internal [LKN-DAG-state]
-//#define DAGROOT 
+//#define DAGROOT
 /// @internal [LKN-DAG-state]
 
 static const uint8_t infoStackName[] = "OpenWSN ";
@@ -340,6 +340,9 @@ typedef struct {
    //the packet
    uint8_t       packet[1+1+125+2+1];            // 1B spi address, 1B length, 125B data, 2B CRC, 1B LQI
 } OpenQueueEntry_t;
+
+
+
 
 //=========================== variables =======================================
 

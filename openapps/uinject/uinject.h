@@ -9,6 +9,7 @@
 */
 
 #include "opentimers.h"
+#include "opendefs.h"
 
 
 //=========================== define ==========================================
@@ -45,6 +46,21 @@ void uinject_receive(OpenQueueEntry_t* msg);
 
 #define MAX_HOPS 4 /// @lkn{Samu} Maximum number of hops of the network
 #define HOP_OVVERIDE_INDEX MAX_HOPS-1 /// @lkn{Samu} setup to ovveride the lastest hopInfo in case of lack of memory
+
+typedef struct {
+   uint8_t addr;
+   uint8_t reTx_cnt;
+   uint8_t freq;
+   uint8_t rssi;
+} hopInfo_vars_t; //4B
+
+typedef struct {
+   asn_t asn;  //5B
+   uint16_t seqNumber;  //2B
+   //asn_t asn_stop;    //5B
+   hopInfo_vars_t hopInfos[MAX_HOPS];  //MAX_HOPS*4B
+} measurement_vars_t;
+
 //=========================== typedef =========================================
 
 /*
@@ -52,19 +68,6 @@ void uinject_receive(OpenQueueEntry_t* msg);
 	The total size of the data strucure is: 5+2+MAX_HOPS(=4)*4B=23B
 */
 
-typedef struct {
-	uint8_t addr;
-	uint8_t reTx_cnt;
-	uint8_t freq;
-	uint8_t rssi;
-} hopInfo_vars_t; //4B
-
-typedef struct {
-	asn_t asn;	//5B
-	uint16_t seqNumber;	//2B
-	//asn_t asn_stop;		//5B
-	hopInfo_vars_t hopInfos[MAX_HOPS];	//MAX_HOPS*4B
-} measurement_vars_t;
 
 void measurements_allocate(OpenQueueEntry_t* pkt);
 //measurement_vars_t* measurement_retrievePointer(OpenQueueEntry_t* pkt);

@@ -59,7 +59,7 @@ enum {
 /***** LKN *****/
 /// @lkn{mvilgelm} Enable packet compression: allows to send more packets to the PC.
 /// @internal [LKN-compression]
-#define ENABLE_PKT_COMPRESSION 0
+#define ENABLE_PKT_COMPRESSION TRUE
 /// @internal [LKN-compression]
 
 //=========================== typedef =========================================

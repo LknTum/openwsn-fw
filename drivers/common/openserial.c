@@ -4,7 +4,7 @@
 \author Fabien Chraim <chraim@eecs.berkeley.edu>, March 2012.
 */
 
-#include "opendefs.h"
+//#include "opendefs.h"
 #include "openserial.h"
 #include "IEEE802154E.h"
 #include "neighbors.h"
@@ -164,21 +164,23 @@ owerror_t openserial_printData(uint8_t* buffer, uint8_t length) {
 
     //danger! durty solution! to be changed if the packet structure changes
 
-    //extract necessary data from buffer
+    //first write the source address
     uint8_t srcId = buffer[15];
-    uint8_t retx = buffer[length-5];
-    uint8_t seqN1 = buffer[length-4];
-    uint8_t seqN2 = buffer[length-3];
-    uint8_t freq = buffer[length-2];
-    uint8_t rssi = buffer[length-1];
     outputHdlcWrite(srcId);
-    outputHdlcWrite(retx);
-    outputHdlcWrite(seqN1);
-    outputHdlcWrite(seqN2);
-    outputHdlcWrite(freq);
-    outputHdlcWrite(rssi);
 
-   }
+    outputHdlcWrite(asn[0]);
+    outputHdlcWrite(asn[1]);
+    outputHdlcWrite(asn[2]);
+    outputHdlcWrite(asn[3]);
+    outputHdlcWrite(asn[4]);
+
+    //extract necessary data from buffer
+    uint8_t i;
+    for (i=(length-24 /* @warning worst solution ever! */); i<length; i++){
+      outputHdlcWrite(buffer[i]);
+    }
+
+  }
    else {
       outputHdlcWrite(isCompressed);
      outputHdlcWrite(asn[0]);
@@ -365,25 +367,29 @@ void openserial_startOutput() {
             break;
          }
       case STATUS_ASN:
-         if (debugPrint_asn()==TRUE) {
+         /*if (debugPrint_asn()==TRUE) {
             break;
-         }
+         }*/
+        break;
       case STATUS_MACSTATS:
-         if (debugPrint_macStats()==TRUE) {
+         /*if (debugPrint_macStats()==TRUE) {
             break;
-         }
+         }*/
+        break;
       case STATUS_SCHEDULE:
-         if(debugPrint_schedule()==TRUE) {
+         /*if(debugPrint_schedule()==TRUE) {
             break;
-         }
+         }*/
+        break;
       case STATUS_BACKOFF:
          if(debugPrint_backoff()==TRUE) {
             break;
          }
       case STATUS_QUEUE:
-         if(debugPrint_queue()==TRUE) {
+         /*if(debugPrint_queue()==TRUE) {
             break;
-         }
+         }*/
+        break;
       case STATUS_NEIGHBORS:
          if (debugPrint_neighbors()==TRUE) {
             break;
