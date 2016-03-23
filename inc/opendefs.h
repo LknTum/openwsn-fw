@@ -24,6 +24,9 @@
 //#define DAGROOT
 /// @internal [LKN-DAG-state]
 
+#define MAX_HOPS 6 /// @lkn{Samu} Maximum number of hops of the network
+#define HOP_OVVERIDE_INDEX MAX_HOPS-1 /// @lkn{Samu} setup to ovveride the lastest hopInfo in case of lack of memory
+
 static const uint8_t infoStackName[] = "OpenWSN ";
 #define OPENWSN_VERSION_MAJOR     1
 #define OPENWSN_VERSION_MINOR     9

@@ -44,9 +44,6 @@ void uinject_receive(OpenQueueEntry_t* msg);
 
 //=========================== define =========================================
 
-#define MAX_HOPS 4 /// @lkn{Samu} Maximum number of hops of the network
-#define HOP_OVVERIDE_INDEX MAX_HOPS-1 /// @lkn{Samu} setup to ovveride the lastest hopInfo in case of lack of memory
-
 typedef struct {
    uint8_t addr;
    uint8_t reTx_cnt;
@@ -83,6 +80,10 @@ void measurements_setSeqNum(OpenQueueEntry_t* pkt, uint16_t seqNum);
 //=========================== Private prototypes ======================================
 uint8_t measurement_findNextHopInfo(measurement_vars_t* m, bool reception);
 bool measurements_checkIfUinjectDst(open_addr_t * pkt_dst);
+bool measurements_checkL2Length(uint8_t length);
+bool measurements_checkL4Length(uint8_t length);
+
+void measurements_changeHopReTxCnt(OpenQueueEntry_t* pkt, uint8_t length, uint8_t reTx);
 
 
 

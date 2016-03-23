@@ -225,6 +225,20 @@ void measurements_allocate(OpenQueueEntry_t* pkt){
 	return (measurement_vars_t*) pkt->payload;
 }*/
 
+bool measurements_checkL2Length(uint8_t length){
+  if (length>78 && length<88)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool measurements_checkL4Length(uint8_t length){
+  if (length>25 && length<35)
+    return TRUE;
+  else
+    return FALSE;
+}
+
 bool measurements_checkIfUinjectDst(open_addr_t * pkt_dst){
 
   open_addr_t dst_addr;
@@ -262,7 +276,10 @@ void measurements_setHopAddr(OpenQueueEntry_t* pkt, uint8_t length, uint8_t a){
 }
 
 void measurements_setHopReTxCnt(OpenQueueEntry_t* pkt, uint8_t length, uint8_t reTx){
+
   if(measurements_checkIfUinjectDst(&pkt->l3_destinationAdd)){
+
+
 		uint8_t index;
 		measurement_vars_t* m;
 
@@ -270,8 +287,37 @@ void measurements_setHopReTxCnt(OpenQueueEntry_t* pkt, uint8_t length, uint8_t r
 
 		index=measurement_findNextHopInfo(m,FALSE);
 		m->hopInfos[index].reTx_cnt=reTx;
+
 	}
 	return;
+}
+
+void measurements_changeHopReTxCnt(OpenQueueEntry_t* pkt, uint8_t length, uint8_t reTx){
+
+  if(measurements_checkL4Length(length)){
+    uint8_t index;
+    measurement_vars_t* m;
+
+    m=(measurement_vars_t*) &pkt->l4_payload[length - 4];
+
+    openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXDATAPREPARE_OVERFLOW,
+           (errorparameter_t)m->seqNumber,
+           (errorparameter_t)79);
+
+    index=measurement_findNextHopInfo(m,FALSE);
+
+    openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXDATAPREPARE_OVERFLOW,
+                     (errorparameter_t)index,
+                     (errorparameter_t)80);
+
+
+    m->hopInfos[index].reTx_cnt=reTx;
+
+    openserial_printError(COMPONENT_IEEE802154E,ERR_MAXTXDATAPREPARE_OVERFLOW,
+                     (errorparameter_t)m->hopInfos[index].reTx_cnt,
+                     (errorparameter_t)81);
+  }
+  return;
 }
 
 void measurements_setHopFreq(OpenQueueEntry_t* pkt, uint8_t length, uint8_t f){
@@ -289,7 +335,7 @@ void measurements_setHopFreq(OpenQueueEntry_t* pkt, uint8_t length, uint8_t f){
 
 void measurements_setHopRssi(uint8_t* payload, uint8_t length, uint8_t r){
 
-if (length>70 && length<80){
+if (measurements_checkL2Length(length)){
 
 	uint8_t index;
 	measurement_vars_t* m;
