@@ -1,6 +1,6 @@
 /**
 \brief Automatically generated from schedule.json using schedule.py
-\2016-03-23 19:10:40.759227
+\2016-03-27 16:01:33.914782
 \@lkn{mvilgelm}
 */
 
@@ -9,7 +9,7 @@
 
 void init_slotinfo();
 
-slotinfo_element_t static_schedule_entries[20];
+slotinfo_element_t static_schedule_entries[13];
 
 
 void init_slotinfo(){
@@ -207,111 +207,6 @@ void init_slotinfo(){
 	static_schedule_entries[12].address[5] = 00;
 	static_schedule_entries[12].address[6] = 00;
 	static_schedule_entries[12].address[7] = 0x0d;
-
-
-	static_schedule_entries[13].slotOffset = 14;
-	static_schedule_entries[13].link_type = CELLTYPE_TXRX;
-	static_schedule_entries[13].shared = FALSE;
-	static_schedule_entries[13].channelOffset = 1;
-	static_schedule_entries[13].isUpdated = FALSE;
-	static_schedule_entries[13].address[0] = 0x14;
-	static_schedule_entries[13].address[1] = 0x15;
-	static_schedule_entries[13].address[2] = 0x92;
-	static_schedule_entries[13].address[3] = 0xcc;
-	static_schedule_entries[13].address[4] = 00;
-	static_schedule_entries[13].address[5] = 00;
-	static_schedule_entries[13].address[6] = 00;
-	static_schedule_entries[13].address[7] = 0x0e;
-
-
-	static_schedule_entries[14].slotOffset = 15;
-	static_schedule_entries[14].link_type = CELLTYPE_TXRX;
-	static_schedule_entries[14].shared = FALSE;
-	static_schedule_entries[14].channelOffset = 1;
-	static_schedule_entries[14].isUpdated = FALSE;
-	static_schedule_entries[14].address[0] = 0x14;
-	static_schedule_entries[14].address[1] = 0x15;
-	static_schedule_entries[14].address[2] = 0x92;
-	static_schedule_entries[14].address[3] = 0xcc;
-	static_schedule_entries[14].address[4] = 00;
-	static_schedule_entries[14].address[5] = 00;
-	static_schedule_entries[14].address[6] = 00;
-	static_schedule_entries[14].address[7] = 0x0f;
-
-
-	static_schedule_entries[15].slotOffset = 16;
-	static_schedule_entries[15].link_type = CELLTYPE_TXRX;
-	static_schedule_entries[15].shared = FALSE;
-	static_schedule_entries[15].channelOffset = 1;
-	static_schedule_entries[15].isUpdated = FALSE;
-	static_schedule_entries[15].address[0] = 0x14;
-	static_schedule_entries[15].address[1] = 0x15;
-	static_schedule_entries[15].address[2] = 0x92;
-	static_schedule_entries[15].address[3] = 0xcc;
-	static_schedule_entries[15].address[4] = 00;
-	static_schedule_entries[15].address[5] = 00;
-	static_schedule_entries[15].address[6] = 00;
-	static_schedule_entries[15].address[7] = 0x10;
-
-
-	static_schedule_entries[16].slotOffset = 17;
-	static_schedule_entries[16].link_type = CELLTYPE_TXRX;
-	static_schedule_entries[16].shared = FALSE;
-	static_schedule_entries[16].channelOffset = 1;
-	static_schedule_entries[16].isUpdated = FALSE;
-	static_schedule_entries[16].address[0] = 0x14;
-	static_schedule_entries[16].address[1] = 0x15;
-	static_schedule_entries[16].address[2] = 0x92;
-	static_schedule_entries[16].address[3] = 0xcc;
-	static_schedule_entries[16].address[4] = 00;
-	static_schedule_entries[16].address[5] = 00;
-	static_schedule_entries[16].address[6] = 00;
-	static_schedule_entries[16].address[7] = 0x11;
-
-
-	static_schedule_entries[17].slotOffset = 18;
-	static_schedule_entries[17].link_type = CELLTYPE_TXRX;
-	static_schedule_entries[17].shared = FALSE;
-	static_schedule_entries[17].channelOffset = 1;
-	static_schedule_entries[17].isUpdated = FALSE;
-	static_schedule_entries[17].address[0] = 0x14;
-	static_schedule_entries[17].address[1] = 0x15;
-	static_schedule_entries[17].address[2] = 0x92;
-	static_schedule_entries[17].address[3] = 0xcc;
-	static_schedule_entries[17].address[4] = 00;
-	static_schedule_entries[17].address[5] = 00;
-	static_schedule_entries[17].address[6] = 00;
-	static_schedule_entries[17].address[7] = 0x12;
-
-
-	static_schedule_entries[18].slotOffset = 19;
-	static_schedule_entries[18].link_type = CELLTYPE_TXRX;
-	static_schedule_entries[18].shared = FALSE;
-	static_schedule_entries[18].channelOffset = 1;
-	static_schedule_entries[18].isUpdated = FALSE;
-	static_schedule_entries[18].address[0] = 0x14;
-	static_schedule_entries[18].address[1] = 0x15;
-	static_schedule_entries[18].address[2] = 0x92;
-	static_schedule_entries[18].address[3] = 0xcc;
-	static_schedule_entries[18].address[4] = 00;
-	static_schedule_entries[18].address[5] = 00;
-	static_schedule_entries[18].address[6] = 00;
-	static_schedule_entries[18].address[7] = 0x13;
-
-
-	static_schedule_entries[19].slotOffset = 20;
-	static_schedule_entries[19].link_type = CELLTYPE_TXRX;
-	static_schedule_entries[19].shared = FALSE;
-	static_schedule_entries[19].channelOffset = 1;
-	static_schedule_entries[19].isUpdated = FALSE;
-	static_schedule_entries[19].address[0] = 0x14;
-	static_schedule_entries[19].address[1] = 0x15;
-	static_schedule_entries[19].address[2] = 0x92;
-	static_schedule_entries[19].address[3] = 0xcc;
-	static_schedule_entries[19].address[4] = 00;
-	static_schedule_entries[19].address[5] = 00;
-	static_schedule_entries[19].address[6] = 00;
-	static_schedule_entries[19].address[7] = 0x14;
 
 
 }

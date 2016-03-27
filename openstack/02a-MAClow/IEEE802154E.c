@@ -792,9 +792,7 @@ port_INLINE bool ieee154e_processIEs(OpenQueueEntry_t* pkt, uint16_t* lenIE) {
             ieee154e_syncSlotOffset();
             schedule_syncSlotOffset(ieee154e_vars.slotOffset);
             ieee154e_vars.nextActiveSlotOffset = schedule_getNextActiveSlotOffset();
-
-	    	ieee154e_syncAsnOffset();
-
+	    	   ieee154e_syncAsnOffset();
          }
 		///@internal [LKN-slotOffsetCorrection-processIE]
          break;

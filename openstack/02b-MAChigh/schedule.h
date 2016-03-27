@@ -24,8 +24,8 @@ The superframe repears over time and can be arbitrarly long.
 
 /// @internal [LKN-scheduling-setting]
 /// @lkn{mvilgelm} following configuration lines are generated automatically from configuration file LKN/scripts/schedule.json
-#define SLOTFRAME_LENGTH	25
-#define NUMSERIALRX	3	///< @lkn{Samu} Number of slots used for serial transmission
+#define SLOTFRAME_LENGTH	17
+#define NUMSERIALRX	2	///< @lkn{Samu} Number of slots used for serial transmission
 #define NUMSLOTSOFF	2	///< @lkn{Samu} Number of slots NOT used,             they are probably used in for serial transmission anyway.
 
 #define SHARED FALSE
