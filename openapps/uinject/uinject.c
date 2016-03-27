@@ -39,37 +39,44 @@ void uinject_task_cb(void);
 //=========================== public ==========================================
 
 void uinject_init() {
-static uint32_t 	APP_BASED_PERIOD_MS;  ///< msg periodicity constant
+  // clear local variables
+  memset(&uinject_vars,0,sizeof(uinject_vars_t));
 
-   // clear local variables
-   memset(&uinject_vars,0,sizeof(uinject_vars_t));
-   uinject_vars.counter=0;
+  uinject_vars.counter=0; //do not set it to zero - it is anyways memset already
+
+  uinject_restart();
+
+}
+
+void uinject_restart() {
+  static uint32_t   APP_BASED_PERIOD_MS;  ///< msg periodicity constant
+
    ///@internal [LKN-uinject-timer]
-	if (APPFLAG==1) {
-		if (flag==1) {
-			APP_BASED_PERIOD_MS=BURST_SILENCE_MS;
+  if (APPFLAG==1) {
+    if (flag==1) {
+      APP_BASED_PERIOD_MS=BURST_SILENCE_MS;
 
-			flag=0;
+      flag=0;
 
-		}
-		else{
-			APP_BASED_PERIOD_MS=BURST_PERIOD_MS;
+    }
+    else{
+      APP_BASED_PERIOD_MS=BURST_PERIOD_MS;
 
-			flag=1;
-		}
-	}
-	else if (APPFLAG==2){
-		//srand(1) is assumed to be called here.
-		APP_BASED_PERIOD_MS=UINJECT_PERIOD_MS;
-		APP_BASED_PERIOD_MS=rand()%APP_BASED_PERIOD_MS;
-		APP_BASED_PERIOD_MS+=UINJECT_PERIOD_MS/2;
+      flag=1;
+    }
+  }
+  else if (APPFLAG==2){
+    //srand(1) is assumed to be called here.
+    APP_BASED_PERIOD_MS=UINJECT_PERIOD_MS;
+    APP_BASED_PERIOD_MS=rand()%APP_BASED_PERIOD_MS;
+    APP_BASED_PERIOD_MS+=UINJECT_PERIOD_MS/2;
 
-	}
+  }
 
-	else if	(APPFLAG==3)
-		APP_BASED_PERIOD_MS=UINJECT_PERIOD_MS;
-	else
-		APP_BASED_PERIOD_MS=UINJECT_PERIOD_MS;
+  else if (APPFLAG==3)
+    APP_BASED_PERIOD_MS=UINJECT_PERIOD_MS;
+  else
+    APP_BASED_PERIOD_MS=UINJECT_PERIOD_MS;
 
 
    ///@internal [LKN-uinject-timer]
@@ -153,25 +160,25 @@ return;}
    uinject_vars.counter++;
 // Control the packet generation timer
 // Non-periodic have to generate a new timer after each packet
-   if (APPFLAG==2){
-	opentimers_stop(uinject_vars.timerId);
-	uinject_init();
+  if (APPFLAG==2){
+	 opentimers_stop(uinject_vars.timerId);
+	 uinject_restart();
 	}
 // Trigger burst after a silence period packet by modifying the timer parameter.
-   else if (counter==-1 && APPFLAG==1){
-	counter=BURST_DURATION_MS/BURST_PERIOD_MS;
-	opentimers_stop(uinject_vars.timerId);
-	uinject_init();
-        }
+  else if (counter==-1 && APPFLAG==1){
+    	counter=BURST_DURATION_MS/BURST_PERIOD_MS;
+    	opentimers_stop(uinject_vars.timerId);
+    	uinject_restart();
+  }
 // Count down till burst period ends
    else if (counter!=0 && APPFLAG==1){
 	counter--;
         }
 // Reset to silence after burst ends
    else if (APPFLAG==1){
-	counter=-1;
-	opentimers_stop(uinject_vars.timerId);
-	uinject_init();
+	 counter=-1;
+	 opentimers_stop(uinject_vars.timerId);
+	 uinject_restart();
    }
 
    measurements_allocate(pkt);
@@ -211,7 +218,8 @@ return;}
 
 
 
-//=========================== public ==========================================
+//=========================== measurement packet functions ==========================================
+
 void measurements_allocate(OpenQueueEntry_t* pkt){
 	measurement_vars_t m;
 	memset(&m,0,sizeof(measurement_vars_t));
