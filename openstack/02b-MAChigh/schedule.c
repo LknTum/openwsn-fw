@@ -803,6 +803,27 @@ channelOffset_t schedule_getChannelOffset() {
 }
 
 /**
+\brief Get the shared value of the current schedule entry.
+
+@lkn{szoppi} Implemented to test this condition in the activity_ti1ORri1 
+
+\returns The shared value of the current schedule entry.
+*/
+
+bool schedule_isShared(void){
+   bool returnVal;
+
+   INTERRUPT_DECLARATION();
+   DISABLE_INTERRUPTS();
+
+   returnVal = schedule_vars.currentScheduleEntry->shared;
+
+   ENABLE_INTERRUPTS();
+
+   return returnVal;
+}
+
+/**
 \brief Check whether I can send on this slot.
 
 This function is called at the beginning of every TX slot.

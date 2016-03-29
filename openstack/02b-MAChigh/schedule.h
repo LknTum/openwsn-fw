@@ -213,6 +213,8 @@ void               schedule_indicateTx(
                         asn_t*    asnTimestamp,
                         bool      succesfullTx
                    );
+bool               schedule_isShared(void); /// @lkn{szoppi} LKN implementation
+                 
 
 slotinfo_element_t * getStaticScheduleEntries();
 

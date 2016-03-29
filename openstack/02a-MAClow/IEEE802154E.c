@@ -905,7 +905,7 @@ port_INLINE void activity_ti1ORri1() {
 		///@internal [LKN-TXRX-address-selection]
 		  //Here checks the address
       	  schedule_getNeighbor(&cell_neighbor);
-		  if(!idmanager_isMyAddress(&cell_neighbor)){
+		  if(!idmanager_isMyAddress(&cell_neighbor) && !schedule_isShared()){
            /// @lkn{mvilgelm} let all motes send all the time
 				/*if (idmanager_getIsDAGroot()==FALSE){
                // this is NOT MY active slot, end the slot
@@ -918,8 +918,11 @@ port_INLINE void activity_ti1ORri1() {
 					//I am DAG root but I don't need to TX
 				}*/
 		  }else{
-				//It is my address
+				//It is my address or it is a shared slot
 				canTX=TRUE;
+				openserial_printCritical(COMPONENT_IEEE802154E,ERR_WRONG_CELLTYPE,
+                               (errorparameter_t)schedule_isShared(),
+                               (errorparameter_t)66);
 		  }
 
 		 if(canTX){
