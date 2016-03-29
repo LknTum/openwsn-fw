@@ -920,9 +920,6 @@ port_INLINE void activity_ti1ORri1() {
 		  }else{
 				//It is my address or it is a shared slot
 				canTX=TRUE;
-				openserial_printCritical(COMPONENT_IEEE802154E,ERR_WRONG_CELLTYPE,
-                               (errorparameter_t)schedule_isShared(),
-                               (errorparameter_t)66);
 		  }
 
 		 if(canTX){

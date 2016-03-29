@@ -25,7 +25,7 @@
 // Too low values such as 100 creates problems
 ///@lkn{LKN-Murat} Application type 1-Burst 2-Non-Periodic 3-Periodic
 #define APPFLAG 1
-#define ENABLE_APPS FALSE
+#define ENABLE_APPS TRUE
 //=========================== typedef =========================================
 
 typedef struct {
