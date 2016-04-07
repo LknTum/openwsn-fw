@@ -363,45 +363,37 @@ void openserial_startOutput() {
             break;
          }
       case STATUS_DAGRANK:
-         if (debugPrint_myDAGrank()==TRUE) {
+         //if (debugPrint_myDAGrank()==TRUE) {
             break;
-         }
+         //}
       case STATUS_OUTBUFFERINDEXES:
-         if (debugPrint_outBufferIndexes()==TRUE) {
+         //if (debugPrint_outBufferIndexes()==TRUE) {
             break;
-         }
+         //}
       case STATUS_ASN:
-         ///*
-         if (debugPrint_asn()==TRUE) {
+         //if (debugPrint_asn()==TRUE) {
             break;
-         }//*/
-        break;
+         //}
       case STATUS_MACSTATS:
-         ///*
-         if (debugPrint_macStats()==TRUE) {
+         //if (debugPrint_macStats()==TRUE) {
             break;
-         }//*/
-        break;
+         //}
       case STATUS_SCHEDULE:
-         ///*
-         if(debugPrint_schedule()==TRUE) {
+         //if(debugPrint_schedule()==TRUE) {
             break;
-         }//*/
-        break;
+         //}
       case STATUS_BACKOFF:
-         if(debugPrint_backoff()==TRUE) {
+         //if(debugPrint_backoff()==TRUE) {
             break;
-         }
+         //}
       case STATUS_QUEUE:
-         ///*
-         if(debugPrint_queue()==TRUE) {
+         //if(debugPrint_queue()==TRUE) {
             break;
-         }//*/
-        break;
+         //}
       case STATUS_NEIGHBORS:
-         if (debugPrint_neighbors()==TRUE) {
+         //if (debugPrint_neighbors()==TRUE) {
             break;
-         }
+         //}
       case STATUS_KAPERIOD:
          if (debugPrint_kaPeriod()==TRUE) {
             break;
