@@ -901,48 +901,71 @@ port_INLINE void activity_ti1ORri1() {
    switch (cellType) {
       case CELLTYPE_TXRX:
       case CELLTYPE_TX:
-
-		///@internal [LKN-TXRX-address-selection]
-		  //Here checks the address
-      	  schedule_getNeighbor(&cell_neighbor);
-		  if(!idmanager_isMyAddress(&cell_neighbor) && !schedule_isShared()){
-           /// @lkn{mvilgelm} let all motes send all the time
-				/*if (idmanager_getIsDAGroot()==FALSE){
-               // this is NOT MY active slot, end the slot
-		      		openserial_stop();
-		      		endSlot();
-		      		//start outputing serial
-		      		openserial_startOutput();
-		      		return;
-      	  	}else{
-					//I am DAG root but I don't need to TX
-				}*/
-		  }else{
-				//It is my address or it is a shared slot
-				canTX=TRUE;
-		  }
-
-		 if(canTX){
-		     // stop using serial
-		     openserial_stop();
-		     // assuming that there is nothing to send
-		     ieee154e_vars.dataToSend = NULL;
-		     // check whether we can send
-		     if (schedule_getOkToSend()) {
-		        memset(&neighbor,0,sizeof(neighbor));
+      
+  		///@internal [LKN-TXRX-address-selection]
+		if(idmanager_getIsDAGroot()==TRUE){
+			// stop using serial
+		    openserial_stop();
+			
+		    if (schedule_getOkToSend()) {
+		    	memset(&neighbor,0,sizeof(neighbor));
 		        neighbor.type             = ADDR_ANYCAST;//Allows to send a packet to ANYONE
-		        ieee154e_vars.dataToSend = openqueue_macGetDataPacket(&neighbor);
+		        
+				if(ieee154e_vars.slotOffset==1){ //send the beacon
+					couldSendEB=TRUE;
+				    ieee154e_vars.my_couldSendEB=TRUE;
+				    // look for an EB packet in the queue
+		            ieee154e_vars.dataToSend = openqueue_macGetEBPacket();
+				}else{
+					ieee154e_vars.dataToSend = openqueue_macGetDataPacket(&neighbor);
+				}
+			}
+		}else{ //non DAGroot
+			schedule_getNeighbor(&cell_neighbor);
+		  	if(!idmanager_isMyAddress(&cell_neighbor) && !schedule_isShared()){
+		  		//do not allow to transmit
+		  		
+		  		//but not stop to receive either
+		  		/*
+		  		openserial_stop();
+	      		endSlot();
+	      		//start outputing serial
+	      		openserial_startOutput();
+	      		return;
+	      		*/
+	      		
+	      		if(ieee154e_vars.slotOffset!=1){ //send the beacon
+					couldSendEB=TRUE;
+				    ieee154e_vars.my_couldSendEB=TRUE;
+				    // look for an EB packet in the queue
+		            ieee154e_vars.dataToSend = openqueue_macGetEBPacket();
+				}
+				
+		  	}else{
+		  		//It is my address-slot or it is a shared slot -> ALLOWED to transmit
+		  		
+				openserial_stop();
+		     	// assuming that there is nothing to send
+		     	ieee154e_vars.dataToSend = NULL;
+		     	// check whether we can send
+		     	if (schedule_getOkToSend()) {
+		        	memset(&neighbor,0,sizeof(neighbor));
+		        	neighbor.type             = ADDR_ANYCAST;//Allows to send a packet to ANYONE
+		        	ieee154e_vars.dataToSend = openqueue_macGetDataPacket(&neighbor);
+	         		if ((ieee154e_vars.dataToSend==NULL) && (cellType==CELLTYPE_TXRX)){
+		           		couldSendEB=TRUE;
+				   		ieee154e_vars.my_couldSendEB=TRUE;
+           				// look for an EB packet in the queue
+		           		ieee154e_vars.dataToSend = openqueue_macGetEBPacket();
+	        		}
+		     	}
+	  		}
+  		}
 		///@internal [LKN-TXRX-address-selection]
-		         if ((ieee154e_vars.dataToSend==NULL) && (cellType==CELLTYPE_TXRX)) {
-		           couldSendEB=TRUE;
-				   ieee154e_vars.my_couldSendEB=TRUE;
-		           // look for an EB packet in the queue
-		           ieee154e_vars.dataToSend = openqueue_macGetEBPacket();
-		        }
-		     }
-		 }
+
          if (ieee154e_vars.dataToSend==NULL) {
-            if (cellType==CELLTYPE_TX) {
+            if ((cellType==CELLTYPE_TX)||(idmanager_getIsDAGroot()==TRUE)) {
+               //disabled listening of the DAGroot, no ackonwledgement will be sent
                // abort
                endSlot();
                break;
@@ -1054,6 +1077,9 @@ port_INLINE void activity_ti2() {
 		radio_setFrequency(ieee154e_vars.freq);
 	}else{
 		radio_setFrequency(SYNCHRONIZING_CHANNEL);
+		openserial_printError(COMPONENT_IEEE802154E,ERR_INVALIDPACKETFROMRADIO,
+                            (errorparameter_t)ieee154e_vars.slotOffset,
+                            1);
 	}
    ///@internal [LKN-TX-freq]
 
@@ -1423,10 +1449,22 @@ port_INLINE void activity_ri2() {
    changeState(S_RXDATAPREPARE);
 
    // calculate the frequency to rx data on
-   ieee154e_vars.freq = calculateFrequency(schedule_getChannelOffset());
-
-   // configure the radio for that frequency
-   radio_setFrequency(ieee154e_vars.freq);
+	ieee154e_vars.freq = calculateFrequency(schedule_getChannelOffset());
+	
+   ///*
+   
+   ///@lkn{samu} If it is the first slot, listen to the SYNCH CHANNEL
+   if(ieee154e_vars.slotOffset==1){
+   	radio_setFrequency(SYNCHRONIZING_CHANNEL);
+   			//openserial_printError(COMPONENT_IEEE802154E,ERR_INVALIDPACKETFROMRADIO,
+              //              (errorparameter_t)ieee154e_vars.slotOffset,
+                //            2);
+   }else{
+	// configure the radio for that frequency
+	radio_setFrequency(ieee154e_vars.freq);
+   }
+   
+   //*/
 
    // enable the radio in Rx mode. The radio does not actively listen yet.
    radio_rxEnable();

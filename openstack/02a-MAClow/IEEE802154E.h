@@ -21,31 +21,11 @@
 #if 1
 ///@internal [LKN-hopping-sequence]
 static const uint8_t chTemplate_default[] = {
-   5,9,12,7,15,4,14,11,8,0,1,2,13,3,6,10
+	21,22,23,24,21,22,23,24,21,22,23,24,21,22,23,24
 };
 ///@internal [LKN-hopping-sequence]
 #endif
 
-#if 0
-static const uint8_t chTemplate_default[] = {
-   5,6,12,7,15,4,14,11,8,0,1,2,13,3,9,10
-};
-
-#endif
-
-#if 0
-static const uint8_t chTemplate_default[] = {
-   9,14,15,4,9,14,15,4,9,14,15,4,9,14,15,4
-};
-
-#endif
-
-#if 0
-static const uint8_t chTemplate_default[] = {
-   9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9
-};
-
-#endif
 //=========================== define ==========================================
 ///@internal [LKN-MAC-settings]
 #define LKN_RECORD_RSSI               1 //enable recording rssi into the packet payload

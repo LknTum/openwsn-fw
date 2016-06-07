@@ -14,7 +14,8 @@
 uinject_vars_t uinject_vars;
     static uint8_t flag=1;
     static uint32_t	counter=-1;  ///< incrementing counter for burst
-#if 1
+
+#if 0
 ///@lkn{Samu} Application destination address set to the DAG root
 ///@internal [LKN-uinject-dest-addr]
 static const uint8_t uinject_dst_addr[]   = {
@@ -24,12 +25,6 @@ static const uint8_t uinject_dst_addr[]   = {
 ///@internal [LKN-uinject-dest-addr]
 #endif
 
-#if 0
-static const uint8_t uinject_dst_addr[]   = {
-   0xbb, 0xbb, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-   0x14, 0x15, 0x92, 0xcc, 0x00, 0x00, 0x00, 0x01
-};
-#endif
 
 //=========================== prototypes ======================================
 
@@ -131,8 +126,8 @@ void uinject_task_cb() {
 
 return;}
 
-   // don't run on dagroot
-  if (idmanager_getIsDAGroot()) {
+   // don't run on dagroot or destination mote
+  if ((idmanager_getIsDAGroot())){//||(!idmanager_isMyAddress(&uinject_dst_addr)) {
       opentimers_stop(uinject_vars.timerId);
       return;
    }

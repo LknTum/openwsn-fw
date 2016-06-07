@@ -1,6 +1,7 @@
 {
   "numserialrx": 2,
   "numslotoff": 2,
+  "hopping_seq":"5,9,12,7,15,4,14,11,8,0,1,2,13,3,6,10",
   "active_slots":
 [
   {"slotOffset":1,

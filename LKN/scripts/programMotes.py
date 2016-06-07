@@ -29,15 +29,20 @@ def program_all(min_range, max_range):
 
 if __name__=='__main__':
 
-
+	schedule_file=""
 	if len(sys.argv)<2:
 		exit('Usage: %s START_ID [END_ID]' % sys.argv[0])
 	elif len(sys.argv)==2:
 		min_range = int(sys.argv[1])
 		max_range = int(sys.argv[1])
+	elif len(sys.argv)==4:
+		min_range = int(sys.argv[1])
+		max_range = int(sys.argv[2])
+		schedule_file = str(sys.argv[3])
+		print("Schedule file found: "+schedule_file)
 	else:
 		min_range = int(sys.argv[1])
 		max_range = int(sys.argv[2])
 
-	os.system("python schedule.py")
+	os.system("python schedule.py "+schedule_file+" ../../openstack/02b-MAChigh/static_schedule.h"+" ../../openstack/02b-MAChigh/schedule.h"+" ../../openstack/02a-MAClow/IEEE802154E.h"+" ../../openapps/uinject/uinject.h")
 	program_all(min_range, max_range)

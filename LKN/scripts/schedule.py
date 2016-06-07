@@ -29,7 +29,7 @@ def read_config(fname):
     return data
 
 
-def generate_schedule(fname, path_to_schedule, path_to_schedule_params):
+def generate_schedule(fname, path_to_schedule, path_to_schedule_params,path_to_hopping_seq,path_to_application):
     """
 
     :param fname: input file in json format
@@ -48,6 +48,14 @@ def generate_schedule(fname, path_to_schedule, path_to_schedule_params):
     slotframe_length = len(active_slots) + numserialrx + numslotoff
 
     generate_schedule_parameters(path_to_schedule_params, slotframe_length, numserialrx, numslotoff)
+    
+    hopping_sequence=config["hopping_seq"]
+    generate_hopping_sequence(path_to_hopping_seq, hopping_sequence)
+
+    app_enabled = config["app_enabled"]
+    app_type = config["app_type"]
+    app_dest_addr = config["app_dest_addr"]
+    generate_application(path_to_application,app_enabled,app_type,app_dest_addr)
 
     f = open(path_to_schedule, "w")
 
@@ -104,7 +112,59 @@ def generate_schedule_parameters(path_to_schedule_params, slotframe_length, nums
         sys.stdout.write(line)
 
     fileinput.close()
+    
+    
+def generate_hopping_sequence(path_to_hopping_seq, hopping_sequence):
+    """
+    Change hopping sequence
+    :param path_to_hopping_seq: file to be changed
+    :param hopping_sequence:
+    :return:
+    """
+    found=0
+    for line in fileinput.input(path_to_hopping_seq, inplace=True):
+        if found==1:
+            newline = '\t%s\n' % hopping_sequence
+            line = line.replace(line, newline)
+            found=0
 
+        if 'static const uint8_t chTemplate_default[] = {' in line:
+            found=1
+
+        sys.stdout.write(line)
+
+    fileinput.close()
+
+def generate_application(path_to_application, app_enabled, app_type, app_dest_addr):
+    """
+    Change hopping sequence
+    :param path_to_application: file to be changed
+    :param app_enabled: application enabling flag
+    :param app_type: type of application (periodic, bursty...)
+    :param app_dest_addr: IPv6 destination address of the app messages
+    :return:
+    """
+    found=0
+    for line in fileinput.input(path_to_application, inplace=True):
+        if found==1:
+            newline = '\t%s\n' % app_dest_addr
+            line = line.replace(line, newline)
+            found=0
+
+        elif 'static const uint8_t uinject_dst_addr[]   = {' in line:
+            found=1
+
+        elif '#define APPFLAG' in line:
+            newline = '#define APPFLAG\t%d\n' % app_type
+            line = line.replace(line, newline)
+
+        elif '#define ENABLE_APPS' in line:
+            newline = '#define ENABLE_APPS\t%s\n' % app_enabled
+            line = line.replace(line, newline)
+
+        sys.stdout.write(line)
+
+    fileinput.close()
 
 if __name__ == "__main__":
 
@@ -114,12 +174,17 @@ if __name__ == "__main__":
         config_file = "schedule.json"
         path_to_schedule = "../../openstack/02b-MAChigh/static_schedule.h"
         path_to_schedule_params = "../../openstack/02b-MAChigh/schedule.h"
+        path_to_hopping_seq = "../../openstack/02a-MAClow/IEEE802154E.h"
+        path_to_application = "../../openapps/uinject/uinject.h"
+
     else:
-        if len(sys.argv) != 4:
-            exit("Usage: %s [config_file output_file_static output_file_schedule_params]" % sys.argv[0])
+        if len(sys.argv) != 6:
+            exit("Usage: %s [config_file output_file_static output_file_schedule_params output_file_hopping_seq]" % sys.argv[0])
         config_file = sys.argv[1]
         path_to_schedule = sys.argv[2]
         path_to_schedule_params = sys.argv[3]
+        path_to_hopping_seq = sys.argv[4]
+        path_to_application = sys.argv[5]
 
     # do the work
-    generate_schedule(config_file, path_to_schedule, path_to_schedule_params)
+    generate_schedule(config_file, path_to_schedule, path_to_schedule_params,path_to_hopping_seq,path_to_application)
