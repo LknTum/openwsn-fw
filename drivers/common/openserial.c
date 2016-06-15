@@ -138,6 +138,73 @@ owerror_t openserial_printInfoErrorCritical(
    return E_SUCCESS;
 }
 
+
+/*owerror_t openserial_printData(uint8_t* buffer, uint8_t length) {
+   uint8_t  i;
+  uint8_t  asn[5];
+   INTERRUPT_DECLARATION();
+
+   // retrieve ASN
+   ieee154e_getAsn(asn);// byte01,byte23,byte4
+
+   if (length>75 && length<82){ // it is RPL -- we don't send it
+
+     DISABLE_INTERRUPTS();
+     openserial_vars.outputBufFilled  = TRUE;
+     outputHdlcOpen();
+     outputHdlcWrite(SERFRAME_MOTE2PC_DATA);
+     outputHdlcWrite(idmanager_getMyID(ADDR_16B)->addr_16b[1]);
+     outputHdlcWrite(idmanager_getMyID(ADDR_16B)->addr_16b[0]);
+
+  /***** LKN *****/
+  /// @lkn{mvilgelm} Enable packet compression: allows to send more packets to the PC. We use the knowledge about the packet structure to print only necessary data from the packets, such as source id (address, shortened to uint8_t), payload (retransmission count, pkt sequence number, rssi and sending frequency). Also a frag byte "isCompressed" is printed for proper parsing by openvisualizer.
+  /// @internal [LKN-compression]
+
+/*    uint8_t isCompressed = 0;
+     if (ENABLE_PKT_COMPRESSION){
+      uint8_t isCompressed = 1;
+      outputHdlcWrite(isCompressed);
+
+      //danger! durty solution! to be changed if the packet structure changes
+
+      //first write the source address
+//      outputHdlcWrite(length);
+
+        uint8_t srcId = buffer[15];
+        outputHdlcWrite(srcId);
+
+        outputHdlcWrite(asn[0]);
+        outputHdlcWrite(asn[1]);
+        outputHdlcWrite(asn[2]);
+        outputHdlcWrite(asn[3]);
+        outputHdlcWrite(asn[4]);
+
+        //extract necessary data from buffer
+        uint8_t i;
+        for (i=(length-(MAX_HOPS*4+8) /* @warning worst solution ever! */ /*); i<length; i++){
+          outputHdlcWrite(buffer[i]);
+        }
+    }
+     else {
+        outputHdlcWrite(isCompressed);
+       outputHdlcWrite(asn[0]);
+       outputHdlcWrite(asn[1]);
+       outputHdlcWrite(asn[2]);
+       outputHdlcWrite(asn[3]);
+       outputHdlcWrite(asn[4]);
+       for (i=0;i<length;i++){
+          outputHdlcWrite(buffer[i]);
+       }
+     }
+
+  /// @internal [LKN-compression]
+     outputHdlcClose();
+     ENABLE_INTERRUPTS();
+   }
+
+   return E_SUCCESS;
+}*/
+
 owerror_t openserial_printData(uint8_t* buffer, uint8_t length) {
    uint8_t  i;
    uint8_t  asn[5];
@@ -145,8 +212,6 @@ owerror_t openserial_printData(uint8_t* buffer, uint8_t length) {
 
    // retrieve ASN
    ieee154e_getAsn(asn);// byte01,byte23,byte4
-
-   if (length>75 && length<82){ // it is RPL -- we don't send it
 
      DISABLE_INTERRUPTS();
      openserial_vars.outputBufFilled  = TRUE;
@@ -199,7 +264,6 @@ owerror_t openserial_printData(uint8_t* buffer, uint8_t length) {
   /// @internal [LKN-compression]
      outputHdlcClose();
      ENABLE_INTERRUPTS();
-   }
 
    return E_SUCCESS;
 }
