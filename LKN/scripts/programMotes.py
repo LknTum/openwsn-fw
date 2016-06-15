@@ -4,7 +4,7 @@ from subprocess import Popen, PIPE
 from programMote import program
 
 
-def program_all(min_range, max_range):
+def program_all(min_range, max_range, check_range=True):
 	"""
     Program a range of motes
 	"""
