@@ -27,7 +27,7 @@
    "address":"0x14:0x15:0x92:0xcc:00:00:00:0x02"},
 {"slotOffset":4,
    "link_type":"CELLTYPE_TXRX",
-   "shared":"FALSE",
+   "shared":"TRUE",
    "channelOffset":1,
    "isUpdated":"FALSE",
    "address":"0x14:0x15:0x92:0xcc:00:00:00:0x099"}

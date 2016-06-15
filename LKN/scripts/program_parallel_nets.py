@@ -36,11 +36,8 @@ def program_all_networks(num_networks, schedule_folder):
 		schedule_file = None
 		for f in schedule_files:
 			if f.startswith("%d-" % (n+1)):
-<<<<<<< HEAD
-				schedule_file = schedule_folder +"/"+ f
-=======
+
 				schedule_file = schedule_folder+"/"+f
->>>>>>> 046ffbb67f062d31c563d4befb6edac11f453db7
 				break
 
 		if schedule_file is None:
