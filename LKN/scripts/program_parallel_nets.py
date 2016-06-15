@@ -22,7 +22,7 @@ def program_all_networks(num_networks, schedule_folder):
 	usbs = re.findall("(ttyUSB.)", devs.decode("utf-8"))
 	print(usbs)
 
-	if len(usbs) != num_networks*2:
+	if len(usbs) != num_networks*2+1:
 		exit("USB number mismatch!")
 
 	# assume two nodes per network
@@ -36,7 +36,11 @@ def program_all_networks(num_networks, schedule_folder):
 		schedule_file = None
 		for f in schedule_files:
 			if f.startswith("%d-" % (n+1)):
+<<<<<<< HEAD
 				schedule_file = schedule_folder +"/"+ f
+=======
+				schedule_file = schedule_folder+"/"+f
+>>>>>>> 046ffbb67f062d31c563d4befb6edac11f453db7
 				break
 
 		if schedule_file is None:
@@ -49,6 +53,8 @@ def program_all_networks(num_networks, schedule_folder):
 		os.system("python schedule.py "+schedule_file+" ../../openstack/02b-MAChigh/static_schedule.h"+" ../../openstack/02b-MAChigh/schedule.h"+" ../../openstack/02a-MAClow/IEEE802154E.h"+" ../../openapps/uinject/uinject.h")
 
 		program_network([sender_id, receiver_id], usbs[sender_id-1:sender_id+1])
+
+	programMote('/dev/'+usbs[-1], 2*num_networks+1, 0)
 
 
 
