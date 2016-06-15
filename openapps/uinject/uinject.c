@@ -118,6 +118,9 @@ void uinject_task_cb() {
    OpenQueueEntry_t*    pkt;
    asn_t current_asn;
 
+   open_addr_t dst_addr;
+   memcpy(&dst_addr,uinject_dst_addr,16);
+
    // Debug Message
    //openserial_printData(pkt,40);
 
@@ -127,7 +130,7 @@ void uinject_task_cb() {
 return;}
 
    // don't run on dagroot or destination mote
-  if ((idmanager_getIsDAGroot())){//||(!idmanager_isMyAddress(&uinject_dst_addr)) {
+  if ((idmanager_getIsDAGroot())||(!idmanager_isMyAddress(&dst_addr))) {
       opentimers_stop(uinject_vars.timerId);
       return;
    }

@@ -1,6 +1,6 @@
 /**
-\brief Automatically generated from tests/schedule_net1.json using schedule.py
-\2016-06-15 15:03:14.368911
+\brief Automatically generated from ./tests/schedule_net1.json using schedule.py
+\2016-06-15 16:29:06.187932
 \@lkn{mvilgelm}
 */
 
