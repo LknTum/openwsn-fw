@@ -89,7 +89,7 @@ void uinject_sendDone(OpenQueueEntry_t* msg, owerror_t error) {
 
 void uinject_receive(OpenQueueEntry_t* pkt) {
 
-   openserial_printData(pkt->payload, pkt->length)
+   openserial_printData(pkt->payload, pkt->length);
 
    openqueue_freePacketBuffer(pkt);
 
