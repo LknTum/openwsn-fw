@@ -21,7 +21,7 @@
 #if 1
 ///@internal [LKN-hopping-sequence]
 static const uint8_t chTemplate_default[] = {
-	21,22,23,24,21,22,23,24,21,22,23,24,21,22,23,24
+	11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26
 };
 ///@internal [LKN-hopping-sequence]
 #endif
