@@ -26,7 +26,7 @@ def program_all_networks(num_networks, schedule_folder):
 		exit("USB number mismatch!")
 
 	# assume two nodes per network
-	schedule_files = [f for f in os.listdir(schedule_folder) if (isfile(join(mypath, f)) and "json" in f)]
+	schedule_files = [f for f in os.listdir(schedule_folder) if (isfile(join(schedule_folder, f)) and "json" in f)]
 
 	print("Schedule files: ")
 	print(schedule_files)
@@ -36,7 +36,7 @@ def program_all_networks(num_networks, schedule_folder):
 		schedule_file = None
 		for f in schedule_files:
 			if f.startswith("%d-" % (n+1)):
-				schedule_file = f
+				schedule_file = schedule_folder +"/"+ f
 				break
 
 		if schedule_file is None:
