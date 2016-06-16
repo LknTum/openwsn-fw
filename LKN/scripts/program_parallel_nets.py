@@ -19,14 +19,14 @@ def program_all_networks(num_networks, schedule_folder):
 	# check if we have enough usbs
 	(devs, stderr) = Popen(['ls','/dev/'], stdout=PIPE).communicate()
 
-	usbs = re.findall("(ttyUSB.)", devs.decode("utf-8"))
+	usbs = re.findall("(ttyUSB.+)", devs.decode("utf-8"))
 	print(usbs)
 
 	if len(usbs) != num_networks*2+1:
 		exit("USB number mismatch!")
 
 	# assume two nodes per network
-	schedule_files = [f for f in os.listdir(schedule_folder) if (isfile(join(schedule_folder, f)) and "json" in f)]
+	schedule_files = [f for f in os.listdir(schedule_folder) if (isfile(join(schedule_folder, f)) and ("json" in f) and ("~" not in f))]
 
 	print("Schedule files: ")
 	print(schedule_files)
@@ -51,7 +51,7 @@ def program_all_networks(num_networks, schedule_folder):
 
 		program_network([sender_id, receiver_id], usbs[sender_id-1:sender_id+1])
 
-	programMote('/dev/'+usbs[-1], 2*num_networks+1, 0)
+	program('/dev/'+usbs[-1], 2*num_networks+1, 0)
 
 
 

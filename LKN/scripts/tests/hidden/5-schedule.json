@@ -16,14 +16,20 @@
  {"slotOffset":2,
    "link_type":"CELLTYPE_TXRX",
    "shared":"FALSE",
-   "channelOffset":5,
+   "channelOffset":2,
    "isUpdated":"FALSE",
    "address":"0x14:0x15:0x92:0xcc:00:00:00:0x09"},
  {"slotOffset":3,
    "link_type":"CELLTYPE_TXRX",
    "shared":"FALSE",
-   "channelOffset":5,
+   "channelOffset":2,
    "isUpdated":"FALSE",
-   "address":"0x14:0x15:0x92:0xcc:00:00:00:0x10"}
+   "address":"0x14:0x15:0x92:0xcc:00:00:00:0x10"},
+{"slotOffset":4,
+   "link_type":"CELLTYPE_TXRX",
+   "shared":"TRUE",
+   "channelOffset":1,
+   "isUpdated":"FALSE",
+   "address":"0x14:0x15:0x92:0xcc:00:00:00:0x099"}
 ]
 }
