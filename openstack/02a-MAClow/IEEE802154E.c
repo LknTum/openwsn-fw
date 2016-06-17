@@ -912,12 +912,29 @@ port_INLINE void activity_ti1ORri1() {
 		        neighbor.type             = ADDR_ANYCAST;//Allows to send a packet to ANYONE
 		        
 				if(ieee154e_vars.slotOffset==1){ //send the beacon
-					couldSendEB=TRUE;
-				    ieee154e_vars.my_couldSendEB=TRUE;
+					//couldSendEB=TRUE;
+				    //ieee154e_vars.my_couldSendEB=TRUE;
 				    // look for an EB packet in the queue
-		            ieee154e_vars.dataToSend = openqueue_macGetEBPacket();
+		            ieee154e_vars.dataToSend = openqueue_macGetDataPacket(&neighbor);
+                  if (ieee154e_vars.dataToSend==NULL){
+                     couldSendEB=TRUE;
+                     ieee154e_vars.my_couldSendEB=TRUE;
+                     // look for an EB packet in the queue
+                     ieee154e_vars.dataToSend = openqueue_macGetEBPacket();
+                     //openserial_printError(COMPONENT_IEEE802154E,ERR_INVALIDPACKETFROMRADIO,
+                       //     (errorparameter_t)ieee154e_vars.slotOffset,
+                         //   9);
+
+                  }else{
+                     couldSendEB=FALSE;
+                     ieee154e_vars.my_couldSendEB=FALSE;
+                     // look for an EB packet in the queue
+                     openserial_printError(COMPONENT_IEEE802154E,ERR_INVALIDPACKETFROMRADIO,
+                            (errorparameter_t)ieee154e_vars.slotOffset,
+                            8);
+                  }
 				}else{
-					ieee154e_vars.dataToSend = openqueue_macGetDataPacket(&neighbor);
+					//ieee154e_vars.dataToSend = openqueue_macGetDataPacket(&neighbor);
 				}
 			}
 		}else{ //non DAGroot
@@ -1073,13 +1090,10 @@ port_INLINE void activity_ti2() {
    }*/
 
    // configure the radio for that frequency
-	if(!ieee154e_vars.my_couldSendEB){
+	if(ieee154e_vars.slotOffset!=1){
 		radio_setFrequency(ieee154e_vars.freq);
 	}else{
 		radio_setFrequency(SYNCHRONIZING_CHANNEL);
-		openserial_printError(COMPONENT_IEEE802154E,ERR_INVALIDPACKETFROMRADIO,
-                            (errorparameter_t)ieee154e_vars.slotOffset,
-                            1);
 	}
    ///@internal [LKN-TX-freq]
 
