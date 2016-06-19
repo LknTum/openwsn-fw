@@ -941,6 +941,13 @@ port_INLINE void activity_ti1ORri1() {
 			schedule_getNeighbor(&cell_neighbor);
 		  	if(!idmanager_isMyAddress(&cell_neighbor) && !schedule_isShared()){
 		  		//do not allow to transmit
+		  		/*
+	      		if(ieee154e_vars.slotOffset!=1){ //send the beacon
+					couldSendEB=TRUE;
+				    ieee154e_vars.my_couldSendEB=TRUE;
+				    // look for an EB packet in the queue
+		            ieee154e_vars.dataToSend = openqueue_macGetEBPacket();
+				}*/
 		  		
 		  		//but not stop to receive either
 		  		/*
@@ -949,15 +956,7 @@ port_INLINE void activity_ti1ORri1() {
 	      		//start outputing serial
 	      		openserial_startOutput();
 	      		return;
-	      		*/
-	      		
-	      		if(ieee154e_vars.slotOffset!=1){ //send the beacon
-					couldSendEB=TRUE;
-				    ieee154e_vars.my_couldSendEB=TRUE;
-				    // look for an EB packet in the queue
-		            ieee154e_vars.dataToSend = openqueue_macGetEBPacket();
-				}
-				
+	      		*/				
 		  	}else{
 		  		//It is my address-slot or it is a shared slot -> ALLOWED to transmit
 		  		
@@ -969,12 +968,13 @@ port_INLINE void activity_ti1ORri1() {
 		        	memset(&neighbor,0,sizeof(neighbor));
 		        	neighbor.type             = ADDR_ANYCAST;//Allows to send a packet to ANYONE
 		        	ieee154e_vars.dataToSend = openqueue_macGetDataPacket(&neighbor);
+	         		/*
 	         		if ((ieee154e_vars.dataToSend==NULL) && (cellType==CELLTYPE_TXRX)){
 		           		couldSendEB=TRUE;
 				   		ieee154e_vars.my_couldSendEB=TRUE;
            				// look for an EB packet in the queue
 		           		ieee154e_vars.dataToSend = openqueue_macGetEBPacket();
-	        		}
+	        		}*/
 		     	}
 	  		}
   		}
