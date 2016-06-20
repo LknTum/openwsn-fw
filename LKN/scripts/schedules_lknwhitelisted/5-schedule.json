@@ -36,12 +36,6 @@
    "shared":"FALSE",
    "channelOffset":5,
    "isUpdated":"FALSE",
-   "address":"0x14:0x15:0x92:0xcc:00:00:00:0x18"},
- {"slotOffset":6,
-   "link_type":"CELLTYPE_TXRX",
-   "shared":"FALSE",
-   "channelOffset":5,
-   "isUpdated":"FALSE",
-   "address":"0x14:0x15:0x92:0xcc:00:00:00:0x19"}
+   "address":"0x14:0x15:0x92:0xcc:00:00:00:0x18"}
 ]
 }
