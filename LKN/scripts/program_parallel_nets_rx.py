@@ -41,7 +41,7 @@ def program_all_networks(num_networks, schedule_folder):
 
 		#program_network([receiver_id], usbs[n])
 		program('/dev/' + usbs[n], receiver_id, 0)
-	program('/dev/'+usbs[-1], num_networks+1, 0)
+	program('/dev/'+usbs[-1], 2*num_networks+1, 0)
 
 
 
