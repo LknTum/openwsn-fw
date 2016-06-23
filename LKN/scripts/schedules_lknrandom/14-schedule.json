@@ -24,18 +24,6 @@
    "shared":"FALSE",
    "channelOffset":14,
    "isUpdated":"FALSE",
-   "address":"0x14:0x15:0x92:0xcc:00:00:00:0x1b"},
- {"slotOffset":4,
-   "link_type":"CELLTYPE_TXRX",
-   "shared":"FALSE",
-   "channelOffset":14,
-   "isUpdated":"FALSE",
-   "address":"0x14:0x15:0x92:0xcc:00:00:00:0x1b"},
- {"slotOffset":5,
-   "link_type":"CELLTYPE_TXRX",
-   "shared":"FALSE",
-   "channelOffset":14,
-   "isUpdated":"FALSE",
-   "address":"0x14:0x15:0x92:0xcc:00:00:00:0x1b"}
+   "address":"0x14:0x15:0x92:0xcc:00:00:00:0x1c"}
 ]
 }

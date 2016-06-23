@@ -31,7 +31,7 @@ static const uint8_t chTemplate_default[] = {
 #define LKN_RECORD_RSSI               1 //enable recording rssi into the packet payload
 #define HOPPING			             1 // Boolean value for enabling freq. hopping
 #define SYNCHRONIZING_CHANNEL       20 // channel the mote listens on to synchronize
-#define TXRETRIES                    2 // number of MAC retries before declaring failed
+#define TXRETRIES                    3 // number of MAC retries before declaring failed
 ///@warning the TX_POWER value is not set anywhere, it is necessary to change it from the @ref radio.c file in the device drivers
 #define TX_POWER                     19 // 1=-25dBm, 31=0dBm (max value)
 #define RESYNCHRONIZATIONGUARD       5 // in 32kHz ticks. min distance to the end of the slot to successfully synchronize

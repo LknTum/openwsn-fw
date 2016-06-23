@@ -17,11 +17,11 @@
 ///@internal [LKN-uinject-settings]
 #define UINJECT_PERIOD_MS 2000  // periodicity for periodic application
 	// variance and mean for the non-periodic application
-#define BURST_SILENCE_MS 10000  // The duration of silence before a burst occurs no packet is sent under silence mode
-#define BURST_DURATION_MS 4000 // The duration of the burst mode
+#define BURST_SILENCE_MS 5000  // The duration of silence before a burst occurs no packet is sent under silence mode
+#define BURST_DURATION_MS 5000 // The duration of the burst mode
 
 //In total a cycle for bursty application is BURST_SILENCE_MS + BURST_DURATION_MS
-#define BURST_PERIOD_MS 2000	///< packet sending period in burst mode
+#define BURST_PERIOD_MS 500	///< packet sending period in burst mode
 // Too low values such as 100 creates problems
 ///@lkn{LKN-Murat} Application type 1-Burst 2-Non-Periodic 3-Periodic
 #define APPFLAG	1
@@ -31,7 +31,7 @@
 ///@lkn{Samu} Application destination address set to the DAG root
 ///@internal [LKN-uinject-dest-addr]
 static const uint8_t uinject_dst_addr[]   = {
-	0xbb,0xbb,0x00,0x00,0x00,0x00,0x00,0x00,0x14,0x15,0x92,0xcc,0x00,0x00,0x00,0x10
+	0xbb,0xbb,0x00,0x00,0x00,0x00,0x00,0x00,0x14,0x15,0x92,0xcc,0x00,0x00,0x00,0x20
 };
 ///@internal [LKN-uinject-dest-addr]
 #endif
