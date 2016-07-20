@@ -1,7 +1,7 @@
 {
   "numserialrx": 2,
   "numslotoff": 2,
-  "hopping_seq": "15,20,25,26,15,20,25,26,15,20,25,26,15,20,25,26",
+  "hopping_seq": "4,9,14,15,4,9,14,15,4,9,14,15,4,9,14,15",
   "app_enabled": "TRUE",
   "app_type": 1,
   "app_dest_addr":"0xbb,0xbb,0x00,0x00,0x00,0x00,0x00,0x00,0x14,0x15,0x92,0xcc,0x00,0x00,0x00,0x0a",

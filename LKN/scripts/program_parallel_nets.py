@@ -120,5 +120,5 @@ if __name__=='__main__':
 	if is_white:
 		program_white_networks(num_networks, schedule_folder, is_rx)
 	else:
-		program_all_networks(num_networks, schedule_folder)
+		program_all_networks(num_networks, schedule_folder,is_rx)
 	
